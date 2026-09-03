@@ -1,0 +1,9 @@
+Day 2 oversized-device model-bin failure (preserved)
+
+Attempted M3/M4 width: W=179.4248 um, L=0.8 um as a single SKY130 device.
+ngspice rejected the instance with "could not find a valid modelname" because
+the installed compact-model bin has wmax=100 um.
+
+Fix tested afterward: explicit parallel devices, each within the valid width
+bin.  That electrical implementation ran successfully but was not selected due
+to its large channel-area/parasitic cost and only modest ICMR improvement.

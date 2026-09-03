@@ -1,0 +1,137 @@
+* Day 2: M1-M5 NMOS-input differential first stage.
+* TT / 1.8 V / 27 C characterization with a 10-uA diode-connected bias reference.
+* M1-M5 start from the Day 1 sizing candidates.  The selected Day 2 headroom
+* iteration widens M1/M2 and M5, then changes the M3/M4 W/L for the VX/area
+* tradeoff; WB is adjusted so actual-circuit M5 current remains near 40 uA.
+
+.lib "@@MODEL_DECK@@" @@CORNER@@
+.temp 27
+
+.param VDDVAL=1.8 VCMVAL=0.9 IREFVAL=10u
+.param W12=16.83798 L12=0.5
+.param W34UNIT=25 L34=0.5
+.param W5=25.8754 L5=0.8
+.param WB=8.08605 LB=0.8
+
+VDD vdd 0 {VDDVAL}
+IREF vdd vbn {IREFVAL}
+VVCM vcm 0 DC {VCMVAL} AC 0
+VVDIFF vdiff 0 DC 0 AC 1 0
+BVINP vinp 0 V=V(vcm)+0.5*V(vdiff)
+BVINN vinn 0 V=V(vcm)-0.5*V(vdiff)
+
+* M1 senses VINN and M2 senses VINP so VX is an inverting first-stage output.
+XM1 nmir vinn tail 0 sky130_fd_pr__nfet_01v8 L={L12} W={W12} nf=1 mult=1
+XM2 vx   vinp tail 0 sky130_fd_pr__nfet_01v8 L={L12} W={W12} nf=1 mult=1
+* M3/M4 are explicit two-unit parallel banks (total W = 50 um each).
+* Explicit parallel devices avoid relying on hierarchy-multiplier semantics.
+XM3A nmir nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM3B nmir nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM4A vx   nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM4B vx   nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM5 tail vbn  0   0   sky130_fd_pr__nfet_01v8 L={L5} W={W5} nf=1 mult=1
+XMB vbn  vbn  0   0   sky130_fd_pr__nfet_01v8 L={LB} W={WB} nf=1 mult=1
+
+.save all
+.save @m.xm1.msky130_fd_pr__nfet_01v8[id]
+.save @m.xm1.msky130_fd_pr__nfet_01v8[gm]
+.save @m.xm1.msky130_fd_pr__nfet_01v8[gds]
+.save @m.xm1.msky130_fd_pr__nfet_01v8[vdsat]
+.save @m.xm2.msky130_fd_pr__nfet_01v8[id]
+.save @m.xm2.msky130_fd_pr__nfet_01v8[gm]
+.save @m.xm2.msky130_fd_pr__nfet_01v8[gds]
+.save @m.xm2.msky130_fd_pr__nfet_01v8[vdsat]
+.save @m.xm3a.msky130_fd_pr__pfet_01v8[id]
+.save @m.xm3a.msky130_fd_pr__pfet_01v8[gm]
+.save @m.xm3a.msky130_fd_pr__pfet_01v8[gds]
+.save @m.xm3a.msky130_fd_pr__pfet_01v8[vdsat]
+.save @m.xm3b.msky130_fd_pr__pfet_01v8[id]
+.save @m.xm3b.msky130_fd_pr__pfet_01v8[gm]
+.save @m.xm3b.msky130_fd_pr__pfet_01v8[gds]
+.save @m.xm4a.msky130_fd_pr__pfet_01v8[id]
+.save @m.xm4a.msky130_fd_pr__pfet_01v8[gm]
+.save @m.xm4a.msky130_fd_pr__pfet_01v8[gds]
+.save @m.xm4a.msky130_fd_pr__pfet_01v8[vdsat]
+.save @m.xm4b.msky130_fd_pr__pfet_01v8[id]
+.save @m.xm4b.msky130_fd_pr__pfet_01v8[gm]
+.save @m.xm4b.msky130_fd_pr__pfet_01v8[gds]
+.save @m.xm5.msky130_fd_pr__nfet_01v8[id]
+.save @m.xm5.msky130_fd_pr__nfet_01v8[gm]
+.save @m.xm5.msky130_fd_pr__nfet_01v8[gds]
+.save @m.xm5.msky130_fd_pr__nfet_01v8[vdsat]
+.save i(VDD)
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+
+op
+let m1_id=abs(@m.xm1.msky130_fd_pr__nfet_01v8[id])
+let m2_id=abs(@m.xm2.msky130_fd_pr__nfet_01v8[id])
+let m3_id=abs(@m.xm3a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xm3b.msky130_fd_pr__pfet_01v8[id])
+let m4_id=abs(@m.xm4a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xm4b.msky130_fd_pr__pfet_01v8[id])
+let m5_id=abs(@m.xm5.msky130_fd_pr__nfet_01v8[id])
+let m1_gm=abs(@m.xm1.msky130_fd_pr__nfet_01v8[gm])
+let m1_gds=abs(@m.xm1.msky130_fd_pr__nfet_01v8[gds])
+let m2_gm=abs(@m.xm2.msky130_fd_pr__nfet_01v8[gm])
+let m2_gds=abs(@m.xm2.msky130_fd_pr__nfet_01v8[gds])
+let m3_gm=abs(@m.xm3a.msky130_fd_pr__pfet_01v8[gm])+abs(@m.xm3b.msky130_fd_pr__pfet_01v8[gm])
+let m3_gds=abs(@m.xm3a.msky130_fd_pr__pfet_01v8[gds])+abs(@m.xm3b.msky130_fd_pr__pfet_01v8[gds])
+let m4_gm=abs(@m.xm4a.msky130_fd_pr__pfet_01v8[gm])+abs(@m.xm4b.msky130_fd_pr__pfet_01v8[gm])
+let m4_gds=abs(@m.xm4a.msky130_fd_pr__pfet_01v8[gds])+abs(@m.xm4b.msky130_fd_pr__pfet_01v8[gds])
+let m5_gm=abs(@m.xm5.msky130_fd_pr__nfet_01v8[gm])
+let m5_gds=abs(@m.xm5.msky130_fd_pr__nfet_01v8[gds])
+let m1_vdsat=abs(@m.xm1.msky130_fd_pr__nfet_01v8[vdsat])
+let m2_vdsat=abs(@m.xm2.msky130_fd_pr__nfet_01v8[vdsat])
+let m3_vdsat=abs(@m.xm3a.msky130_fd_pr__pfet_01v8[vdsat])
+let m4_vdsat=abs(@m.xm4a.msky130_fd_pr__pfet_01v8[vdsat])
+let m5_vdsat=abs(@m.xm5.msky130_fd_pr__nfet_01v8[vdsat])
+let idd=abs(i(VDD))
+wrdata results/raw/day2/first_stage_op.tsv v(vbn) v(tail) v(nmir) v(vx) m1_id m2_id m3_id m4_id m5_id m1_gm m1_gds m2_gm m2_gds m3_gm m3_gds m4_gm m4_gds m5_gm m5_gds m1_vdsat m2_vdsat m3_vdsat m4_vdsat m5_vdsat idd
+
+ac dec 100 1 10G
+let gain_db=db(v(vx))
+let phase_deg=180/pi*cph(v(vx))
+wrdata results/raw/day2/first_stage_ac.tsv gain_db phase_deg
+
+dc VVDIFF -0.02 0.02 0.0001
+let m1_id=abs(@m.xm1.msky130_fd_pr__nfet_01v8[id])
+let m2_id=abs(@m.xm2.msky130_fd_pr__nfet_01v8[id])
+let m5_id=abs(@m.xm5.msky130_fd_pr__nfet_01v8[id])
+wrdata results/raw/day2/first_stage_diff_dc.tsv v(vx) v(nmir) v(tail) m1_id m2_id m5_id
+
+dc VVCM 0 1.8 0.01
+let m1_id=abs(@m.xm1.msky130_fd_pr__nfet_01v8[id])
+let m2_id=abs(@m.xm2.msky130_fd_pr__nfet_01v8[id])
+let m3_id=abs(@m.xm3a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xm3b.msky130_fd_pr__pfet_01v8[id])
+let m4_id=abs(@m.xm4a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xm4b.msky130_fd_pr__pfet_01v8[id])
+let m5_id=abs(@m.xm5.msky130_fd_pr__nfet_01v8[id])
+let m1_sat=v(nmir)-v(tail)-abs(@m.xm1.msky130_fd_pr__nfet_01v8[vdsat])
+let m2_sat=v(vx)-v(tail)-abs(@m.xm2.msky130_fd_pr__nfet_01v8[vdsat])
+let m3_sat=v(vdd)-v(nmir)-abs(@m.xm3a.msky130_fd_pr__pfet_01v8[vdsat])
+let m4_sat=v(vdd)-v(vx)-abs(@m.xm4a.msky130_fd_pr__pfet_01v8[vdsat])
+let m5_sat=v(tail)-abs(@m.xm5.msky130_fd_pr__nfet_01v8[vdsat])
+wrdata results/raw/day2/first_stage_icmr.tsv v(vbn) v(tail) v(nmir) v(vx) m1_id m2_id m3_id m4_id m5_id m1_sat m2_sat m3_sat m4_sat m5_sat
+
+* Measure 1-Hz differential gain after recomputing the DC operating point at
+* every common-mode value.  This is the gain-based ICMR evidence; the DC sweep
+* above remains useful for inspecting operating-region boundaries.
+set appendwrite
+setplot const
+let vcm_iter=0
+dowhile vcm_iter le 1.800001
+  alter VVCM = $&vcm_iter
+  ac lin 1 1 1
+  let vcm_record=0*frequency+const.vcm_iter
+  let gain_db=db(v(vx))
+  wrdata results/raw/day2/first_stage_icmr_gain.tsv vcm_record gain_db
+  setplot const
+  let vcm_iter=vcm_iter+0.02
+end
+unset appendwrite
+
+quit
+.endc
+
+.end

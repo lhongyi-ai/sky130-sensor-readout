@@ -2,7 +2,7 @@
 
 **Revision:** 0.1  
 **Status:** Frozen for the five-day schematic-level project  
-**Results status:** Day 1 device/test-structure simulations complete; OTA metrics remain `NOT_RUN`
+**Results status:** Day 1 device/test-structure and Day 2 M1–M5 first-stage simulations are complete; the formal first-stage-only ICMR is 0.76–1.24 V (`FAIL` at 1.3 V), while every complete-OTA metric remains `NOT_RUN`
 
 This document is the authoritative source for pass/fail decisions. A target is
 not evidence that the design achieves it.

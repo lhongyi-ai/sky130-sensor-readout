@@ -1,10 +1,10 @@
 # Initial Design Calculations
 
-**Status:** Day 1 device characterization complete; circuit sizing remains
-initial.  
-**Important:** The widths below are characterization-based candidates, not
-final device sizes or achieved OTA results. They must be re-evaluated at the
-actual bias voltages, node voltages, and closed-loop operating points.
+**Status:** Day 2 M1–M5 first-stage dimensions selected and characterized at
+TT/1.8 V/27 °C; full-OTA sizing remains incomplete.
+**Important:** Day 1 values are characterization candidates and Day 2 values
+are selected only for the first-stage checkpoint. Neither constitutes final
+full-OTA dimensions or achieved OTA performance.
 
 ## 1. Initial design point
 
@@ -26,7 +26,8 @@ The following values are a first point for exploration, not a frozen result:
 | Intended inversion | moderate inversion |
 
 Use standard-threshold 1.8 V MOS devices. Day 1 lookup-table widths are recorded
-in Section 8; they are intentionally not frozen.
+in Section 8; the selected Day 2 M1–M5 implementation is recorded in Section
+10.
 
 ## 2. Transconductance and bandwidth budget
 
@@ -154,7 +155,8 @@ tables are under `results/raw/day1/`, and the combined visual review is
 The sizing method assumes current scales linearly with width at the sampled
 single-device point. It does not account for connected-circuit drain voltages,
 series resistance, mirror mismatch, parasitic capacitance, or layout choices.
-Day 2 must therefore verify every candidate with actual operating-point data.
+Day 2 subsequently verified and revised M1–M5 with actual operating-point data;
+the M6/M7 candidates remain to be checked in the complete OTA.
 
 ## 9. Day 1 current-mirror check
 
@@ -179,3 +181,82 @@ only a single compliance voltage. Evidence is in
 `results/plots/day1_current_mirror_compliance.png`. Provenance, log-validation
 status, and 45 SHA-256 records are retained in
 `results/day1_reproducibility_manifest.json`.
+
+## 10. Day 2 selected M1–M5 dimensions
+
+The connected-circuit checks showed that the Day 1 widths did not provide
+enough tail-source headroom. The selected Day 2 first stage is:
+
+| Group | Day 1 W/L | Selected Day 2 implementation | Selection purpose |
+|---|---:|---:|---|
+| M1/M2, each | 6.73519/0.5 µm | 16.83798/0.5 µm | 2.5× width lowers required VGS/VDSAT and recovers low-VCM headroom |
+| M3/M4, each side | 22.4281/0.8 µm | two explicit 25/0.5 µm units; total W = 50 µm | Places `VX` near 0.8 V while limiting area/parasitics and gain variation |
+| M5 | 10.7814/0.8 µm | 25.8754/0.8 µm | 2.4× width lowers tail-source VDSAT |
+| MB | 2.69535/0.8 µm | 8.08605/0.8 µm | Produces approximately 40 µA in widened M5 from the 10 µA reference |
+
+M3/M4 use explicit parallel subcircuit instances rather than relying on a
+hierarchical multiplier. This also keeps each device inside the installed
+compact-model width bins.
+
+At `VCM = 0.9 V`, the selected block's operating point is:
+
+| Quantity | Simulated value |
+|---|---:|
+| Supply current / first-stage power | 48.0713851 µA / 86.52849318 µW |
+| M5 current | 38.0713829 µA |
+| M1 current / M2 current | 19.0356918 / 19.0356918 µA |
+| `VBN` / tail / `VX` | 0.658036427 / 0.214664546 / 0.792073469 V |
+| M1 `gm/ID` / `gm/gds` | 20.07881048 V⁻¹ / 98.14990379 V/V |
+| M1/M2 saturation margin | 0.5028161704 V |
+| M3/M4 saturation margin | 0.9206745920 V |
+| M5 saturation margin | 0.1160701611 V |
+| AC gain at 1 Hz | 36.2697407 dB |
+| Near-zero differential-DC gain | 65.06995036 V/V (36.26760951 dB) |
+| First-stage 3 dB bandwidth | 45.524514446 MHz |
+| First-stage 0 dB crossing | 1.6936999222 GHz |
+
+The frequency rows describe the isolated, unloaded first-stage bench. They do
+not predict the complete OTA's UGB or phase margin after M6/M7, Miller
+compensation, and the frozen output load are added.
+
+## 11. Formal first-stage-only ICMR
+
+For each common-mode point, ngspice recomputed the DC bias and measured 1 Hz
+differential gain. A point is valid when gain is no more than 3 dB below its
+0.9 V value, every M1–M5 model saturation margin is nonnegative, and
+`0.05 V < VX < 1.75 V`. The largest contiguous valid interval containing
+0.9 V is **0.76–1.24 V** on the 20 mV VCM grid.
+
+| VCM | Gain relative to 0.9 V | Minimum saturation margin | Result |
+|---:|---:|---:|---|
+| 0.8 V | +0.3527407 dB | 0.0355600256 V | PASS |
+| 1.3 V | -4.2908617 dB | 0.163156821 V | FAIL — gain change exceeds 3 dB |
+
+Thus, 1.3 V fails even though the tracked devices remain saturated. The
+preliminary DC operating-region heuristic spans 0.76–1.49 V, but that check
+uses current/saturation/node-voltage limits without measuring gain flatness; it
+is diagnostic only and is not the formal ICMR. This first-stage result also
+cannot be substituted for the final loaded OTA's nominal ICMR.
+
+## 12. Selected area/bandwidth tradeoff
+
+The main comparison is between the selected PMOS load and the legal oversized
+explicit-parallel iteration:
+
+| Quantity | Selected M3/M4: 50 µm/side, L=0.5 µm | Oversized M3/M4: 179.4248 µm/side, L=0.8 µm |
+|---|---:|---:|
+| Channel-area proxy, `sum(W × L)` | 94.0071 µm² | 331.0868 µm² |
+| First-stage gain at 1 Hz | 36.2697 dB | 38.2056 dB |
+| First-stage 3 dB bandwidth | 45.524514446 MHz | 13.106718 MHz |
+| Formal first-stage ICMR | 0.76–1.24 V | 0.76–1.22 V |
+
+The selected design reduces the proxy by 71.6065% and raises bandwidth by
+3.473× while giving up 1.9359 dB of first-stage gain. The area proxy counts MOS
+channel `W × L` only; it is a relative sizing measure, not a layout area.
+
+Before the legal parallel implementation, a single PMOS with
+`W = 179.4248 µm, L = 0.8 µm` failed because it exceeded the installed model's
+`wmax = 100 µm`. That failure, the corrected legal implementation, the parser
+failure caused by ngspice's extra `wrdata` scale column, and all rejected sizing
+iterations are retained under `results/raw/day2/` and summarized in
+`results/day2_iteration_summary.csv`.

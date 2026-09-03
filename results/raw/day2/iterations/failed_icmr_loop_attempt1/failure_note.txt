@@ -1,0 +1,10 @@
+Day 2 ICMR gain-sweep post-processing failure (preserved)
+
+The ngspice electrical sweep completed and produced all 91 VCM points, but the
+first analyzer revision expected three numeric columns.  ngspice wrdata emitted
+four columns here: frequency, VCM record, constant-vector scale, and gain.
+The analyzer raised ValueError: "No numeric rows with 3 columns".
+
+Fix: explicitly parse the constant-vector scale column.  The retained raw TSV
+is the exact output that triggered the failure.  No electrical result was
+discarded or reclassified.

@@ -1,0 +1,5 @@
+device_group,role,day1_width_um,day1_length_um,selected_total_width_um,selected_unit_count,selected_unit_width_um,selected_length_um,reason
+M1/M2,NMOS differential input pair (each),6.73519,0.5,16.83798,1,16.83798,0.5,2.5x width lowers required VGS/VDSAT and recovers low-VCM headroom
+M3/M4,PMOS active-load mirror bank (each side),22.4281,0.8,50,2,25,0.5,sets VX near 0.8 V while shorter L limits area/parasitics and flattens gain versus VCM
+M5,NMOS tail current source,10.7814,0.8,25.8754,1,25.8754,0.8,2.4x width lowers tail-source VDSAT
+MB,10-uA diode-connected NMOS bias reference,2.69535,0.8,8.08605,1,8.08605,0.8,sets the actual-circuit M5 current near 40 uA with the widened tail device

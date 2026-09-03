@@ -4,12 +4,12 @@ Specification-driven design and robustness verification of a 1.8 V, two-stage,
 Miller-compensated CMOS operational transconductance amplifier using the
 open-source SKY130A PDK.
 
-> **Project status — Day 1 complete; OTA design not yet verified.** The SKY130A
-> toolchain and schematic-to-ngspice path passed a smoke test. TT/27 °C NFET and
-> PFET characterization, an NMOS current-mirror compliance sweep, and
-> characterization-based *initial* sizing candidates are reproducible. The OTA
-> schematic, closed-loop simulations, and all OTA performance/PVT fields remain
-> `NOT_RUN`; no achieved OTA performance is claimed yet.
+> **Project status — Days 1 and 2 complete; full OTA not yet verified.** The
+> SKY130A toolchain, device characterization, current-mirror test, and TT/1.8 V/
+> 27 °C M1–M5 first-stage characterization are reproducible. The selected first
+> stage has a formal block-level ICMR of 0.76–1.24 V and therefore **fails** the
+> intended 0.8–1.3 V range at its high end. M6/M7, compensation, closed-loop
+> tests, and all full-OTA/PVT result fields remain `NOT_RUN`.
 
 ## Objective
 
@@ -96,8 +96,52 @@ endpoints are quantized to the 10 mV sweep grid. These are test-structure
 results, not OTA results.
 
 The candidate dimensions derived from the lookup tables are explicitly tagged
-`INITIAL_CANDIDATE_NOT_FINAL`. They must still be checked at the actual OTA
-operating points and tuned against the frozen closed-loop specifications.
+`INITIAL_CANDIDATE_NOT_FINAL`. Day 2 checked and revised M1–M5 in the connected
+first stage; M6/M7 and every dimension in the complete OTA still require
+operating-point and closed-loop verification.
+
+### Day 2 first-stage evidence
+
+The selected M1–M5 block uses a 10 µA diode-connected NMOS bias reference and
+the following dimensions. M3/M4 are two explicit 25 µm units per side; the
+listed 50 µm is each side's total width.
+
+| Group | Selected implementation |
+|---|---|
+| M1/M2 | each `W/L = 16.83798/0.5 µm` |
+| M3/M4 | each side `2 × 25/0.5 µm`, total width 50 µm |
+| M5 | `W/L = 25.8754/0.8 µm` |
+| MB | `W/L = 8.08605/0.8 µm` |
+
+At TT/1.8 V/27 °C and `VCM = 0.9 V`, the block draws 48.0713851 µA
+(86.52849318 µW), with 38.0713829 µA in M5 and 19.0356918 µA in each input
+branch. `VBN = 0.658036427 V`, the tail node is 0.214664546 V, and
+`VX = 0.792073469 V`. All M1–M5 saturation margins are positive; M5 is the
+smallest at 0.1160701611 V. The first-stage-only gain is 36.2697407 dB at 1 Hz
+and its 3 dB bandwidth is 45.524514446 MHz.
+
+The formal first-stage-only ICMR criterion combines gain flatness (no more than
+3 dB below the 0.9 V reference), nonnegative M1–M5 saturation margins, and an
+unpinned `VX`. Its valid contiguous interval is **0.76–1.24 V**. At 1.3 V all
+devices remain saturated (minimum margin 0.163156821 V), but gain has changed
+by -4.2908617 dB, so 1.3 V is an honest `FAIL`. The looser DC operating-region
+diagnostic reaches 1.49 V but is not the formal ICMR result.
+
+The selected channel-area proxy is 94.0071 µm². A legal explicit-parallel
+iteration with 179.4248 µm total M3/M4 width per side at `L = 0.8 µm` used
+331.0868 µm² and reached only 13.106718 MHz, versus 45.524514446 MHz for the
+selected version. The selected compromise reduces that proxy by 71.6065% and
+raises bandwidth by 3.473×, at a 1.9359 dB first-stage-gain cost. It also moves
+the formal high ICMR boundary from 1.22 V to 1.24 V, though neither version
+covers 1.3 V.
+
+Evidence is retained in the [Day 2 summary](results/day2_first_stage_summary.csv),
+[operating-point table](results/day2_first_stage_operating_point.csv),
+[selected sizing](results/day2_first_stage_sizing.csv),
+[gain-based ICMR sweep](results/day2_icmr_gain_sweep.csv), and
+[iteration history](results/day2_iteration_summary.csv). Review figures are the
+[first-stage AC response](results/plots/day2_first_stage_ac.png) and
+[DC/ICMR checks](results/plots/day2_first_stage_dc_icmr.png).
 
 ### OTA result status
 
@@ -129,15 +173,19 @@ sky130-two-stage-ota/
 ├── environment/
 │   └── setup_notes.md
 ├── netlists/
-│   └── day1/
-│       ├── nfet_characterization.spice.in
-│       ├── pfet_characterization.spice.in
-│       └── nmos_current_mirror.spice.in
+│   ├── day1/
+│   │   ├── nfet_characterization.spice.in
+│   │   ├── pfet_characterization.spice.in
+│   │   └── nmos_current_mirror.spice.in
+│   └── day2/
+│       └── first_stage_characterization.spice.in
 ├── scripts/
 │   ├── render_netlists.py
 │   ├── analyze_day1.py
 │   ├── write_day1_manifest.py
 │   ├── run_day1.sh
+│   ├── analyze_day2.py
+│   ├── run_day2.sh
 │   └── start_eda_desktop.sh
 ├── docs/
 │   ├── specification.md
@@ -152,8 +200,14 @@ sky130-two-stage-ota/
     ├── device_sizing_candidates.csv
     ├── current_mirror_summary.csv
     ├── day1_reproducibility_manifest.json
+    ├── day2_first_stage_operating_point.csv
+    ├── day2_first_stage_sizing.csv
+    ├── day2_first_stage_summary.csv
+    ├── day2_icmr_gain_sweep.csv
+    ├── day2_iteration_summary.csv
     ├── plots/
     ├── raw/day1/
+    ├── raw/day2/
     └── smoke/xschem/
 ```
 
@@ -172,12 +226,22 @@ checksum manifest. To open the locally bound noVNC EDA desktop, use
 revisions, versions, mount paths, and the smoke-test failure/fix are documented
 in [`environment/setup_notes.md`](environment/setup_notes.md).
 
+Reproduce the selected Day 2 first-stage netlist, raw sweeps, summaries, and
+plots with:
+
+```sh
+./scripts/run_day2.sh
+```
+
+Day 2 is a block-level checkpoint; its gain, bandwidth, power, and ICMR numbers
+must not be reported as full-OTA performance.
+
 ## Limitations and claims
 
 This is a simulation-based educational IC-design project using an open-source
 PDK. It has not been fabricated or measured in silicon. At the current status,
-only the Day 1 device test structures and tool flow have verified
-schematic-level simulation results; the OTA itself does not.
+only the Day 1 device test structures and Day 2 M1–M5 first-stage block have
+verified schematic-level simulation results; the complete OTA does not.
 
 - Process corners do not model local device mismatch.
 - No Monte Carlo run means no mismatch, offset-distribution, or yield claim.
