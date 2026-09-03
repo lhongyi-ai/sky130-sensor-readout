@@ -21,11 +21,19 @@ __pycache__/
 *.log
 !results/smoke/xschem/*.log
 !results/smoke/xschem/**/*.log
+!experiments/day5/raw/*.log
+!experiments/day5/retained_failures/**/*.log
+experiments/day5/.run.lock/
+experiments/day5/.run-backup.*/
+experiments/day5/failed_runs/
 *.bak
 
 # Deterministically regenerated SPICE decks
 results/generated/*
 !results/generated/.gitkeep
+!results/generated/day4/
+results/generated/day4/*
+!results/generated/day4/day4_manifest.json
 
 # Layout/editor backup files
 *.mag~

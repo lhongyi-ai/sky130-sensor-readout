@@ -1,0 +1,24 @@
+* DAY5_MANIFEST_SHA256=89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e
+.lib "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.temp 27
+.include "experiments/day5/generated/dut_baseline.spice"
+
+VSSSUP VSS 0 DC 0 AC 1
+VDD VDD 0 DC 1.8 AC 0
+IREF VBP VSS 1e-05
+VINP VINP 0 DC 0.9 AC 0
+VINN VINN 0 DC 0.9 AC 0
+RLOAD VOUT VSS 100000
+CLOAD VOUT VSS 5e-12
+XOTA VDD VSS VINP VINN VOUT VBP OTA
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+ac lin 1 1k 1k
+let asupply=v(VOUT)/v(VSS)
+wrdata experiments/day5/raw/baseline_psrr_minus_1k.tsv asupply
+quit
+.endc
+.end

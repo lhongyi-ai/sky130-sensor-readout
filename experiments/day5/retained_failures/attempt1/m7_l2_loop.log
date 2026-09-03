@@ -1,0 +1,14 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: *lib "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Error on line 654 or its substitute:
+  m.xota.xm7.msky130_fd_pr__pfet_01v8 vout vbp vdd vdd sky130_fd_pr__pfet_01v8__model l=    1.600000000000000e+00     w=    1.444010000000000e+02     nf=    1.000000000000000e+00     ad=    0.000000000000000e+00     as=    0.000000000000000e+00     pd=    0.000000000000000e+00     ps=    0.000000000000000e+00     nrd=    0.000000000000000e+00     nrs=    0.000000000000000e+00     sa=    0.000000000000000e+00     sb=    0.000000000000000e+00     sd=    0.000000000000000e+00
+could not find a valid modelname
+    Simulation interrupted due to error!
+

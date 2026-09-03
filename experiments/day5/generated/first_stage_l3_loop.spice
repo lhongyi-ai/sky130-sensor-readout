@@ -1,0 +1,32 @@
+* DAY5_MANIFEST_SHA256=89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e
+.lib "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.temp 27
+.include "experiments/day5/generated/dut_first_stage_l3.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS 1.8
+IREF VBP VSS 1e-05
+VINP VINP VSS DC 0.9 AC 0
+VTEST VTEST VSS DC 0 AC 1
+LBREAK VOUT VINN 1G
+CBREAK VTEST VINN 1G
+RLOAD VOUT VSS 100000
+CLOAD VOUT VSS 5e-12
+XOTA VDD VSS VINP VINN VOUT VBP OTA
+.save all
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+let ivdd_signed=i(VDD)
+let idd=abs(ivdd_signed)
+wrdata experiments/day5/raw/first_stage_l3_loop_op.tsv v(VOUT) v(XOTA.VX) v(XOTA.VBN) v(VBP) v(XOTA.TAIL) v(XOTA.NMIR) ivdd_signed idd
+ac dec 120 1 1G
+let tloop=-v(VOUT)/v(VINN)
+let gain_db=db(tloop)
+let phase_raw_deg=180/pi*ph(tloop)
+wrdata experiments/day5/raw/first_stage_l3_loop.tsv gain_db phase_raw_deg
+quit
+.endc
+.end

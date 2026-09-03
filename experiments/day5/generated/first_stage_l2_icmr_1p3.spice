@@ -1,0 +1,48 @@
+* DAY5_MANIFEST_SHA256=89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e
+.lib "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.temp 27
+.include "experiments/day5/generated/dut_first_stage_l2.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS 1.8
+IREF VBP VSS 1e-05
+VINP VINP VSS DC 1.3 AC 0.5
+VNEG VNEG VSS DC 0 AC -0.5
+LBREAK VOUT VINN 1G
+CBREAK VNEG VINN 1G
+RLOAD VOUT VSS 100000
+CLOAD VOUT VSS 5e-12
+XOTA VDD VSS VINP VINN VOUT VBP OTA
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+let m1_id=abs(@m.xota.xm1.msky130_fd_pr__nfet_01v8[id])
+let m1_vdsat=abs(@m.xota.xm1.msky130_fd_pr__nfet_01v8[vdsat])
+let m2_id=abs(@m.xota.xm2.msky130_fd_pr__nfet_01v8[id])
+let m2_vdsat=abs(@m.xota.xm2.msky130_fd_pr__nfet_01v8[vdsat])
+let m3_id=abs(@m.xota.xm3a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xota.xm3b.msky130_fd_pr__pfet_01v8[id])
+let m3_vdsat=abs(@m.xota.xm3a.msky130_fd_pr__pfet_01v8[vdsat])
+let m4_id=abs(@m.xota.xm4a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xota.xm4b.msky130_fd_pr__pfet_01v8[id])
+let m4_vdsat=abs(@m.xota.xm4a.msky130_fd_pr__pfet_01v8[vdsat])
+let m5_id=abs(@m.xota.xm5.msky130_fd_pr__nfet_01v8[id])
+let m5_vdsat=abs(@m.xota.xm5.msky130_fd_pr__nfet_01v8[vdsat])
+let m6_id=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[id])
+let m6_vdsat=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[vdsat])
+let m7_id=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[id])
+let m7_vdsat=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[vdsat])
+let m8_id=abs(@m.xota.xm8.msky130_fd_pr__pfet_01v8[id])
+let m8_vdsat=abs(@m.xota.xm8.msky130_fd_pr__pfet_01v8[vdsat])
+let m9_id=abs(@m.xota.xm9.msky130_fd_pr__pfet_01v8[id])
+let m9_vdsat=abs(@m.xota.xm9.msky130_fd_pr__pfet_01v8[vdsat])
+let m10_id=abs(@m.xota.xm10.msky130_fd_pr__nfet_01v8[id])
+let m10_vdsat=abs(@m.xota.xm10.msky130_fd_pr__nfet_01v8[vdsat])
+wrdata experiments/day5/raw/first_stage_l2_icmr_1p3_op.tsv v(VOUT) v(XOTA.VX) v(XOTA.VBN) v(VBP) v(XOTA.TAIL) v(XOTA.NMIR) m1_id m1_vdsat m2_id m2_vdsat m3_id m3_vdsat m4_id m4_vdsat m5_id m5_vdsat m6_id m6_vdsat m7_id m7_vdsat m8_id m8_vdsat m9_id m9_vdsat m10_id m10_vdsat
+ac lin 1 1 1
+let vdiff=v(VINP)-v(VINN)
+let ad=v(VOUT)/vdiff
+wrdata experiments/day5/raw/first_stage_l2_icmr_1p3_ac.tsv ad
+quit
+.endc
+.end

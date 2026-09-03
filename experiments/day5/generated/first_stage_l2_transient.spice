@@ -1,0 +1,21 @@
+* DAY5_MANIFEST_SHA256=89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e
+.lib "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.temp 27
+.include "experiments/day5/generated/dut_first_stage_l2.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS 1.8
+IREF VBP VSS 1e-05
+VINP VINP VSS PULSE(0.8 1.2 1u 20n 20n 2u 5u)
+RLOAD VOUT VSS 100000
+CLOAD VOUT VSS 5e-12
+XOTA VDD VSS VINP VOUT VOUT VBP OTA
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 0.5n 5u
+wrdata experiments/day5/raw/first_stage_l2_transient.tsv v(VINP) v(VOUT)
+quit
+.endc
+.end

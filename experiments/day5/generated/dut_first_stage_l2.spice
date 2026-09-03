@@ -1,0 +1,19 @@
+* Day 5 isolated DUT: first_stage_l2
+* DAY5_MANIFEST_SHA256=89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e
+* Frozen topology; candidate geometry only. CC=3e-12 F; RZ=2000 ohm.
+.subckt OTA VDD VSS VINP VINN VOUT VBP
+XM8  VBP  VBP VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=7.22005 nf=1 mult=1
+XM9  VBN  VBP VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=7.22005 nf=1 mult=1
+XM10 VBN  VBN VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=8.08605 nf=1 mult=1
+XM1  NMIR VINN TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=33.67596 nf=1 mult=1
+XM2  VX   VINP TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=33.67596 nf=1 mult=1
+XM3A NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=50 nf=1 mult=1
+XM3B NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=50 nf=1 mult=1
+XM4A VX   NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=50 nf=1 mult=1
+XM4B VX   NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=50 nf=1 mult=1
+XM5  TAIL VBN  VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=25.8754 nf=1 mult=1
+XM6  VOUT VX   VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=8.83907427041 nf=1 mult=1
+XM7  VOUT VBP  VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=72.2005 nf=1 mult=1
+RZ1 VX NCC 2000
+CC1 NCC VOUT 3e-12
+.ends OTA

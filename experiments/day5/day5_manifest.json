@@ -1,0 +1,1015 @@
+{
+  "authorities": {
+    "day3_compensation_evidence": {
+      "after_pm_deg": 69.0829108,
+      "after_tag": "cc3p_rz2k",
+      "before_pm_deg": 33.2236432,
+      "before_tag": "cc3p_rz0",
+      "file_sha256": "4f43e96ef30c2cb8baf208e3592875a04899270b3e146ebaa6e6fd7ac7573540",
+      "path": "results/day3_compensation_before_after.csv",
+      "pm_improvement_deg": 35.8592675
+    },
+    "day3_selected_parameters": {
+      "file_sha256": "e45e8c82f8d709ae3cefb8cff315285783629bbaa86a04bdaa2db5fea0fda30b",
+      "path": "results/generated/day3/selected_parameters.json",
+      "selected_tag": "cc3p_rz2k"
+    },
+    "day4_manifest": {
+      "file_sha256": "35e95bff40400b418668d3f762a65b9ce8125d3e2b02848b65b1df6e58c5d7a0",
+      "internal_manifest_sha256": "6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab",
+      "path": "results/generated/day4/day4_manifest.json"
+    }
+  },
+  "baseline": {
+    "cc_f": 3e-12,
+    "external_ideal_iref_a": 1e-05,
+    "rz_ohm": 2000.0,
+    "sizes_um": {
+      "l10": 0.8,
+      "l12": 0.5,
+      "l34": 0.5,
+      "l5": 0.8,
+      "l6": 0.5,
+      "l7": 0.8,
+      "l8": 0.8,
+      "l9": 0.8,
+      "m7_mult": 1.0,
+      "w10": 8.08605,
+      "w12": 16.83798,
+      "w34": 25.0,
+      "w5": 25.8754,
+      "w6": 8.839074270408297,
+      "w7": 72.2005,
+      "w8": 7.22005,
+      "w9": 7.22005
+    }
+  },
+  "decision_policy": {
+    "adopted_optimization": "DAY3_ADD_RZ_2K_WITH_CC_3P",
+    "candidate_promotion_requires_full_day4_revalidation": true,
+    "production_design": "KEEP_FROZEN_DAY4_BASELINE"
+  },
+  "hash_definition": "SHA-256 of canonical JSON payload excluding manifest_sha256 and hash_definition",
+  "limitations": [
+    "schematic-level nominal reconnaissance only",
+    "no mismatch or Monte Carlo simulation",
+    "no layout or extracted parasitics",
+    "three ICMR checkpoints do not establish a continuous ICMR"
+  ],
+  "manifest_sha256": "89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e",
+  "metric_definitions": {
+    "icmr_checkpoint": "Day 4-equivalent 1-Hz gain no more than 3 dB below VCM=0.9 V, all M1-M10 margins nonnegative, output tracking error <=10 mV",
+    "psrr_1khz": "20*log10(abs(Ad/Asupply)) at the identical 1-kHz bias point",
+    "settling": "Day 4 earliest point remaining within +/-4 mV through the measurement window, referenced to input 50% crossing",
+    "slew": "Day 4 directed monotonic least-squares 20%-80% output fit",
+    "ugb": "unique non-boundary downward 0-dB return-ratio crossing"
+  },
+  "nominal": {
+    "corner": "tt",
+    "load_capacitance_f": 5e-12,
+    "load_resistance_ohm": 100000.0,
+    "load_return": "VSS",
+    "temperature_c": 27,
+    "vcm_v": 0.9,
+    "vdd_minus_vss_v": 1.8
+  },
+  "pdk": {
+    "library_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice",
+    "library_sha256": "17c208a699228f5acb87bf59c09c22a4c4d3937b6766b4957737d34e8e075f64",
+    "name": "SKY130A",
+    "revision": "026824c7969ce6f4fc9678e6ca04b0a06a596c4b"
+  },
+  "schema": "sky130-two-stage-ota/day5-recon-manifest/v2",
+  "test_contract": {
+    "executed_decks": [
+      "baseline_loop.spice",
+      "baseline_differential.spice",
+      "baseline_psrr_plus.spice",
+      "baseline_psrr_minus.spice",
+      "baseline_transient.spice",
+      "baseline_icmr_0p8.spice",
+      "baseline_icmr_0p9.spice",
+      "baseline_icmr_1p3.spice",
+      "first_stage_l2_loop.spice",
+      "first_stage_l2_differential.spice",
+      "first_stage_l2_psrr_plus.spice",
+      "first_stage_l2_psrr_minus.spice",
+      "first_stage_l2_transient.spice",
+      "first_stage_l2_icmr_0p8.spice",
+      "first_stage_l2_icmr_0p9.spice",
+      "first_stage_l2_icmr_1p3.spice",
+      "first_stage_l3_loop.spice",
+      "first_stage_l3_differential.spice",
+      "first_stage_l3_psrr_plus.spice",
+      "first_stage_l3_psrr_minus.spice",
+      "first_stage_l3_transient.spice",
+      "first_stage_l3_icmr_0p8.spice",
+      "first_stage_l3_icmr_0p9.spice",
+      "first_stage_l3_icmr_1p3.spice",
+      "m7_l2_loop.spice",
+      "m7_l2_differential.spice",
+      "m7_l2_psrr_plus.spice",
+      "m7_l2_psrr_minus.spice",
+      "m7_l2_transient.spice",
+      "m7_l2_icmr_0p8.spice",
+      "m7_l2_icmr_0p9.spice",
+      "m7_l2_icmr_1p3.spice"
+    ],
+    "expected_exit_code_count": 32,
+    "expected_log_count": 32,
+    "raw_tsv": {
+      "baseline_differential_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "baseline_icmr_0p8_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "baseline_icmr_0p8_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.8V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "baseline_icmr_0p9_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "baseline_icmr_0p9_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.9V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "baseline_icmr_1p3_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "baseline_icmr_1p3_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_1.3V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "baseline_loop.tsv": {
+        "columns": 3,
+        "grid": "AC_DEC_120_1HZ_1GHZ",
+        "header": [
+          "frequency",
+          "gain_db",
+          "phase_raw_deg"
+        ],
+        "rows": 1081
+      },
+      "baseline_loop_op.tsv": {
+        "columns": 9,
+        "grid": "OP_SINGLE_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "ivdd_signed",
+          "idd"
+        ],
+        "rows": 1
+      },
+      "baseline_psrr_minus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "baseline_psrr_plus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "baseline_transient.tsv": {
+        "columns": 3,
+        "grid": "TRAN_0_TO_5US_MAXSTEP_0P5NS",
+        "header": [
+          "time",
+          "v(VINP)",
+          "v(VOUT)"
+        ],
+        "rows": 10020
+      },
+      "first_stage_l2_differential_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_icmr_0p8_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_icmr_0p8_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.8V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_icmr_0p9_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_icmr_0p9_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.9V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_icmr_1p3_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_icmr_1p3_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_1.3V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_loop.tsv": {
+        "columns": 3,
+        "grid": "AC_DEC_120_1HZ_1GHZ",
+        "header": [
+          "frequency",
+          "gain_db",
+          "phase_raw_deg"
+        ],
+        "rows": 1081
+      },
+      "first_stage_l2_loop_op.tsv": {
+        "columns": 9,
+        "grid": "OP_SINGLE_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "ivdd_signed",
+          "idd"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_psrr_minus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_psrr_plus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "first_stage_l2_transient.tsv": {
+        "columns": 3,
+        "grid": "TRAN_0_TO_5US_MAXSTEP_0P5NS",
+        "header": [
+          "time",
+          "v(VINP)",
+          "v(VOUT)"
+        ],
+        "rows": 10020
+      },
+      "first_stage_l3_differential_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_icmr_0p8_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_icmr_0p8_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.8V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_icmr_0p9_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_icmr_0p9_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.9V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_icmr_1p3_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_icmr_1p3_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_1.3V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_loop.tsv": {
+        "columns": 3,
+        "grid": "AC_DEC_120_1HZ_1GHZ",
+        "header": [
+          "frequency",
+          "gain_db",
+          "phase_raw_deg"
+        ],
+        "rows": 1081
+      },
+      "first_stage_l3_loop_op.tsv": {
+        "columns": 9,
+        "grid": "OP_SINGLE_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "ivdd_signed",
+          "idd"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_psrr_minus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_psrr_plus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "first_stage_l3_transient.tsv": {
+        "columns": 3,
+        "grid": "TRAN_0_TO_5US_MAXSTEP_0P5NS",
+        "header": [
+          "time",
+          "v(VINP)",
+          "v(VOUT)"
+        ],
+        "rows": 10020
+      },
+      "m7_l2_differential_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "m7_l2_icmr_0p8_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "m7_l2_icmr_0p8_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.8V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "m7_l2_icmr_0p9_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "m7_l2_icmr_0p9_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_0.9V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "m7_l2_icmr_1p3_ac.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1HZ",
+        "header": [
+          "frequency",
+          "ad",
+          "ad"
+        ],
+        "rows": 1
+      },
+      "m7_l2_icmr_1p3_op.tsv": {
+        "columns": 27,
+        "grid": "OP_VCM_1.3V_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "m1_id",
+          "m1_vdsat",
+          "m2_id",
+          "m2_vdsat",
+          "m3_id",
+          "m3_vdsat",
+          "m4_id",
+          "m4_vdsat",
+          "m5_id",
+          "m5_vdsat",
+          "m6_id",
+          "m6_vdsat",
+          "m7_id",
+          "m7_vdsat",
+          "m8_id",
+          "m8_vdsat",
+          "m9_id",
+          "m9_vdsat",
+          "m10_id",
+          "m10_vdsat"
+        ],
+        "rows": 1
+      },
+      "m7_l2_loop.tsv": {
+        "columns": 3,
+        "grid": "AC_DEC_120_1HZ_1GHZ",
+        "header": [
+          "frequency",
+          "gain_db",
+          "phase_raw_deg"
+        ],
+        "rows": 1081
+      },
+      "m7_l2_loop_op.tsv": {
+        "columns": 9,
+        "grid": "OP_SINGLE_SCALE_ZERO",
+        "header": [
+          "vss",
+          "v(VOUT)",
+          "v(XOTA.VX)",
+          "v(XOTA.VBN)",
+          "v(VBP)",
+          "v(XOTA.TAIL)",
+          "v(XOTA.NMIR)",
+          "ivdd_signed",
+          "idd"
+        ],
+        "rows": 1
+      },
+      "m7_l2_psrr_minus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "m7_l2_psrr_plus_1k.tsv": {
+        "columns": 3,
+        "grid": "AC_SINGLE_1KHZ",
+        "header": [
+          "frequency",
+          "asupply",
+          "asupply"
+        ],
+        "rows": 1
+      },
+      "m7_l2_transient.tsv": {
+        "columns": 3,
+        "grid": "TRAN_0_TO_5US_MAXSTEP_0P5NS",
+        "header": [
+          "time",
+          "v(VINP)",
+          "v(VOUT)"
+        ],
+        "rows": 10020
+      }
+    }
+  },
+  "variants": [
+    {
+      "description": "Frozen Day 3/Day 4 geometry",
+      "sizes_um": {
+        "l10": 0.8,
+        "l12": 0.5,
+        "l34": 0.5,
+        "l5": 0.8,
+        "l6": 0.5,
+        "l7": 0.8,
+        "l8": 0.8,
+        "l9": 0.8,
+        "m7_mult": 1.0,
+        "w10": 8.08605,
+        "w12": 16.83798,
+        "w34": 25.0,
+        "w5": 25.8754,
+        "w6": 8.839074270408297,
+        "w7": 72.2005,
+        "w8": 7.22005,
+        "w9": 7.22005
+      },
+      "tag": "baseline"
+    },
+    {
+      "description": "Lengthen M1-M4 by 2x at constant W/L",
+      "sizes_um": {
+        "l10": 0.8,
+        "l12": 1.0,
+        "l34": 1.0,
+        "l5": 0.8,
+        "l6": 0.5,
+        "l7": 0.8,
+        "l8": 0.8,
+        "l9": 0.8,
+        "m7_mult": 1.0,
+        "w10": 8.08605,
+        "w12": 33.67596,
+        "w34": 50.0,
+        "w5": 25.8754,
+        "w6": 8.839074270408297,
+        "w7": 72.2005,
+        "w8": 7.22005,
+        "w9": 7.22005
+      },
+      "tag": "first_stage_l2"
+    },
+    {
+      "description": "Lengthen M1-M4 by 3x at constant W/L",
+      "sizes_um": {
+        "l10": 0.8,
+        "l12": 1.5,
+        "l34": 1.5,
+        "l5": 0.8,
+        "l6": 0.5,
+        "l7": 0.8,
+        "l8": 0.8,
+        "l9": 0.8,
+        "m7_mult": 1.0,
+        "w10": 8.08605,
+        "w12": 50.513940000000005,
+        "w34": 75.0,
+        "w5": 25.8754,
+        "w6": 8.839074270408297,
+        "w7": 72.2005,
+        "w8": 7.22005,
+        "w9": 7.22005
+      },
+      "tag": "first_stage_l3"
+    },
+    {
+      "description": "Lengthen only M7 by 2x at constant total W/L (mult=2)",
+      "sizes_um": {
+        "l10": 0.8,
+        "l12": 0.5,
+        "l34": 0.5,
+        "l5": 0.8,
+        "l6": 0.5,
+        "l7": 1.6,
+        "l8": 0.8,
+        "l9": 0.8,
+        "m7_mult": 2.0,
+        "w10": 8.08605,
+        "w12": 16.83798,
+        "w34": 25.0,
+        "w5": 25.8754,
+        "w6": 8.839074270408297,
+        "w7": 72.2005,
+        "w8": 7.22005,
+        "w9": 7.22005
+      },
+      "tag": "m7_l2"
+    }
+  ],
+  "workflow": {
+    "container_image": "hpretl/iic-osic-tools@sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7",
+    "recon_py_sha256": "14708a3fc3752df63c39cc7f0fd222c90092f6f99f878cb947f55607129ea462",
+    "run_sh_sha256": "26c4e4317c379c69c3cb21017b1c48e64ab6ef8f647ab43054ba807489c5b9c9",
+    "simulation_and_analysis_runtime": "same_digest_pinned_container"
+  }
+}

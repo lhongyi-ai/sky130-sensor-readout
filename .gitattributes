@@ -1,0 +1,3 @@
+# Simulator logs are immutable evidence; preserve their original whitespace.
+experiments/day5/raw/*.log -whitespace
+experiments/day5/retained_failures/**/*.log -whitespace

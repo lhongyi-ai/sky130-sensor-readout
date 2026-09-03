@@ -1,0 +1,163 @@
+{
+  "schema": "sky130-two-stage-ota/day4-manifest/v1",
+  "source_of_design_truth": "results/generated/day3/selected_parameters.json",
+  "source_sha256": "e45e8c82f8d709ae3cefb8cff315285783629bbaa86a04bdaa2db5fea0fda30b",
+  "pdk": {
+    "name": "SKY130A",
+    "revision": "026824c7969ce6f4fc9678e6ca04b0a06a596c4b",
+    "library_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice",
+    "library_sha256": "17c208a699228f5acb87bf59c09c22a4c4d3937b6766b4957737d34e8e075f64"
+  },
+  "dut": {
+    "device_sizes_um": {
+      "M1": {
+        "w": 16.83798,
+        "l": 0.5
+      },
+      "M2": {
+        "w": 16.83798,
+        "l": 0.5
+      },
+      "M3": {
+        "w_total": 50.0,
+        "unit_w": 25.0,
+        "units": 2,
+        "l": 0.5
+      },
+      "M4": {
+        "w_total": 50.0,
+        "unit_w": 25.0,
+        "units": 2,
+        "l": 0.5
+      },
+      "M5": {
+        "w": 25.8754,
+        "l": 0.8
+      },
+      "M6": {
+        "w": 8.839074270408297,
+        "l": 0.5
+      },
+      "M7": {
+        "w": 72.2005,
+        "l": 0.8
+      },
+      "M8": {
+        "w": 7.22005,
+        "l": 0.8
+      },
+      "M9": {
+        "w": 7.22005,
+        "l": 0.8
+      },
+      "M10": {
+        "w": 8.08605,
+        "l": 0.8
+      }
+    },
+    "miller_capacitance_f": 3e-12,
+    "nulling_resistance_ohm": 2000.0,
+    "external_ideal_iref_a": 1e-05
+  },
+  "nominal": {
+    "corner": "tt",
+    "vdd_minus_vss_v": 1.8,
+    "temperature_c": 27,
+    "vcm_v": 0.9,
+    "load_capacitance_f": 5e-12,
+    "load_resistance_ohm": 100000.0,
+    "load_return": "VSS"
+  },
+  "loop_break": {
+    "dc_inductance_h": 1000000000.0,
+    "ac_coupling_capacitance_f": 1000000000.0
+  },
+  "pvt_points": [
+    {
+      "point_id": "P01",
+      "process": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P02",
+      "process": "ff",
+      "vdd_v": 1.8,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P03",
+      "process": "ss",
+      "vdd_v": 1.8,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P04",
+      "process": "fs",
+      "vdd_v": 1.8,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P05",
+      "process": "sf",
+      "vdd_v": 1.8,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P06",
+      "process": "tt",
+      "vdd_v": 1.62,
+      "temp_c": -20
+    },
+    {
+      "point_id": "P07",
+      "process": "tt",
+      "vdd_v": 1.62,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P08",
+      "process": "tt",
+      "vdd_v": 1.62,
+      "temp_c": 85
+    },
+    {
+      "point_id": "P09",
+      "process": "tt",
+      "vdd_v": 1.8,
+      "temp_c": -20
+    },
+    {
+      "point_id": "P10",
+      "process": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 85
+    },
+    {
+      "point_id": "P11",
+      "process": "tt",
+      "vdd_v": 1.98,
+      "temp_c": -20
+    },
+    {
+      "point_id": "P12",
+      "process": "tt",
+      "vdd_v": 1.98,
+      "temp_c": 27
+    },
+    {
+      "point_id": "P13",
+      "process": "tt",
+      "vdd_v": 1.98,
+      "temp_c": 85
+    }
+  ],
+  "limitations": [
+    "schematic-level simulation only",
+    "external ideal 10-uA IREF; reference-generator variation is not modeled",
+    "no mismatch or Monte Carlo simulation",
+    "no extracted parasitics or layout"
+  ],
+  "manifest_sha256": "6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab",
+  "hash_definition": "SHA-256 of canonical JSON payload excluding manifest_sha256 and hash_definition"
+}
