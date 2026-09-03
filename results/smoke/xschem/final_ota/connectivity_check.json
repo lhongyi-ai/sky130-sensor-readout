@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "canonical_source": "netlists/ota/two_stage_ota_core.spice",
+  "xschem_source": "schematics/two_stage_ota.sch",
+  "xschem_generated_netlist": "results/smoke/xschem/final_ota/two_stage_ota.spice",
+  "canonical_pin_order": [
+    "VINP",
+    "VINN",
+    "VOUT",
+    "VDD",
+    "VSS",
+    "IREF"
+  ],
+  "xschem_pin_order": [
+    "VINP",
+    "VINN",
+    "VOUT",
+    "VDD",
+    "VSS",
+    "IREF"
+  ],
+  "matched_component_count": 14,
+  "expected_component_count": 14,
+  "external_testbench_elements_inside_core": [],
+  "comparison_scope": "connectivity, device model, W/L/nf/mult, RZ, and CC; Xschem-generated diffusion geometry is intentionally ignored"
+}

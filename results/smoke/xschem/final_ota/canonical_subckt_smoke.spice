@@ -1,0 +1,20 @@
+* Standalone operating-point smoke test for the canonical OTA subcircuit.
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /foss/designs/netlists/ota/two_stage_ota_core.spice
+.temp 27
+
+VDD vdd 0 1.8
+IREF iref 0 10u
+VINP vinp 0 0.9
+XOTA vinp vout vout vdd 0 iref sky130_two_stage_ota
+RLOAD vout 0 100k
+CLOAD vout 0 5p
+
+.control
+set noaskquit
+op
+print v(vout) v(xota.vx) v(xota.vbn) v(iref) abs(i(vdd))
+quit
+.endc
+
+.end

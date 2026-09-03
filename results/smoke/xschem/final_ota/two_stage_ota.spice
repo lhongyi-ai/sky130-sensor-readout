@@ -1,0 +1,36 @@
+** sch_path: /foss/designs/schematics/two_stage_ota.sch
+**.subckt two_stage_ota VINP VINN VOUT VDD VSS IREF
+*.ipin VINP
+*.ipin VINN
+*.opin VOUT
+*.iopin VDD
+*.iopin VSS
+*.ipin IREF
+XM8 IREF IREF VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=7.22005 nf=1 ad=2.0938145 as=2.0938145 pd=15.0201 ps=15.0201
++ nrd=0.0401659268287616 nrs=0.0401659268287616 sa=0 sb=0 sd=0 mult=1
+XM9 VBN IREF VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=7.22005 nf=1 ad=2.0938145 as=2.0938145 pd=15.0201 ps=15.0201
++ nrd=0.0401659268287616 nrs=0.0401659268287616 sa=0 sb=0 sd=0 mult=1
+XM10 VBN VBN VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=8.08605 nf=1 ad=2.3449545 as=2.3449545 pd=16.7521 ps=16.7521
++ nrd=0.0358642353188516 nrs=0.0358642353188516 sa=0 sb=0 sd=0 mult=1
+XM3A NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25 nf=1 ad=7.25 as=7.25 pd=50.58 ps=50.58 nrd=0.0116 nrs=0.0116 sa=0 sb=0
++ sd=0 mult=1
+XM3B NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25 nf=1 ad=7.25 as=7.25 pd=50.58 ps=50.58 nrd=0.0116 nrs=0.0116 sa=0 sb=0
++ sd=0 mult=1
+XM4A VX NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25 nf=1 ad=7.25 as=7.25 pd=50.58 ps=50.58 nrd=0.0116 nrs=0.0116 sa=0 sb=0
++ sd=0 mult=1
+XM4B VX NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25 nf=1 ad=7.25 as=7.25 pd=50.58 ps=50.58 nrd=0.0116 nrs=0.0116 sa=0 sb=0
++ sd=0 mult=1
+XM1 NMIR VINN TAIL VSS sky130_fd_pr__nfet_01v8 L=0.5 W=16.83798 nf=1 ad=4.8830142 as=4.8830142 pd=34.25596 ps=34.25596
++ nrd=0.0172229685508594 nrs=0.0172229685508594 sa=0 sb=0 sd=0 mult=1
+XM2 VX VINP TAIL VSS sky130_fd_pr__nfet_01v8 L=0.5 W=16.83798 nf=1 ad=4.8830142 as=4.8830142 pd=34.25596 ps=34.25596
++ nrd=0.0172229685508594 nrs=0.0172229685508594 sa=0 sb=0 sd=0 mult=1
+XM5 TAIL VBN VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=25.8754 nf=1 ad=7.503866 as=7.503866 pd=52.3308 ps=52.3308
++ nrd=0.0112075562116914 nrs=0.0112075562116914 sa=0 sb=0 sd=0 mult=1
+XM7 VOUT IREF VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=72.2005 nf=1 ad=20.938145 as=20.938145 pd=144.981 ps=144.981
++ nrd=0.00401659268287616 nrs=0.00401659268287616 sa=0 sb=0 sd=0 mult=1
+XM6 VOUT VX VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=8.83907427 nf=1 ad=2.5633315383 as=2.5633315383 pd=18.25814854 ps=18.25814854
++ nrd=0.0328088656279613 nrs=0.0328088656279613 sa=0 sb=0 sd=0 mult=1
+RZ1 VX NCOMP 2k
+CC1 NCOMP VOUT 3p
+**.ends
+.end

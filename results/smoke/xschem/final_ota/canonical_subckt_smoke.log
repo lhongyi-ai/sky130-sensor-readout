@@ -1,0 +1,20 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: * standalone operating-point smoke test for the canonical ota subcircuit.
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+v(vout) = 8.999992e-01
+v(xota.vx) = 7.920735e-01
+v(xota.vbn) = 6.579872e-01
+v(iref) = 6.327539e-01
+abs(i(vdd)) = 1.502983e-04
+ngspice-47 done
