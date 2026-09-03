@@ -2,7 +2,10 @@
 
 **Revision:** 0.1  
 **Status:** Frozen for the five-day schematic-level project  
-**Results status:** Day 3 nominal TT/1.8 V/27 °C complete-OTA gain, UGB, PM, power, frozen-definition SR, and settling are simulated; 13-point PVT and remaining nominal metrics remain `NOT_RUN`, and the Day 2 first-stage-only ICMR is 0.76–1.24 V (`FAIL` at 1.3 V)
+**Results status:** Day 4 characterization complete. All six core metrics pass
+at all 13 PVT points. Nominal settling, CMRR, output swing, and 1/2/5 pF load
+stability pass; PSRR+ and PSRR- fail, and the full-OTA 0.76–1.22 V ICMR fails
+the 1.3 V high endpoint. Noise is reported without a pass limit.
 
 This document is the authoritative source for pass/fail decisions. A target is
 not evidence that the design achieves it.
@@ -233,9 +236,13 @@ Core metrics are evaluated at exactly these 13 points:
    -20, 27, and 85 °C (nine points).
 3. The duplicated TT/1.80 V/27 °C point is counted once.
 
-The complete matrix is predeclared in `results/pvt_summary.csv`. Settling, CMRR,
+The complete matrix is populated in `results/pvt_summary.csv`. Settling, CMRR,
 PSRR, ICMR, output swing, and noise are nominal-only in this five-day scope;
-their worst-PVT fields must say `N/A_NOT_SWEPT`, not imply missing data.
+their worst-PVT fields say `N/A_NOT_SWEPT`, rather than implying missing data.
+The PVT transient benches may retain additional non-qualifying observations.
+In the completed campaign P06, P07, and P13 are
+`SETTLING_NOT_REACHED` under the absolute ±4 mV definition; these observations
+do not change the explicitly six-metric core-PVT pass policy.
 
 ## 7. Change control
 
@@ -246,3 +253,29 @@ or pass scope requires:
 2. a new specification revision;
 3. regeneration of every affected result;
 4. no comparison of results produced under incompatible revisions.
+
+## 8. Recorded qualification outcome
+
+This section records results under Revision 0.1; it does not change any target,
+definition, load, PVT point, or pass scope.
+
+| Metric | Recorded result | Status |
+|---|---:|---|
+| A0 across 13 PVT points | minimum 65.5351 dB (P08) | PASS |
+| UGB across 13 PVT points | minimum 14.5527 MHz (P08) | PASS |
+| PM across 13 PVT points | minimum 66.2452° (P13) | PASS |
+| Power across 13 PVT points | maximum 302.710 µW (P13) | PASS |
+| SR+ across 13 PVT points | minimum 7.97766 V/µs (P06) | PASS |
+| SR- across 13 PVT points | minimum 11.1958 V/µs (P08) | PASS |
+| Nominal 1% settling | 0.07475 µs | PASS |
+| Nominal CMRR at 1 kHz | 71.3222 dB | PASS |
+| Nominal PSRR+ / PSRR- at 1 kHz | 36.3313 / 36.2510 dB | FAIL / FAIL |
+| Nominal full-OTA ICMR | 0.76–1.22 V | FAIL — high endpoint |
+| Nominal output swing | 0.18–1.63 V | PASS |
+| Nominal input noise | 401.170 nV/√Hz at 1 kHz; 52.3016 µV RMS, 10 Hz–1 MHz | REPORTED |
+| Nominal load PM, CL=1/2/5 pF | 94.1626° / 86.2882° / 69.0829° | PASS |
+
+The result authority is `results/summary.csv`; detailed PVT rows are in
+`results/pvt_summary.csv`. The result set is schematic-level only, uses an
+ideal external 10 µA reference, and includes no mismatch/Monte Carlo, layout,
+extraction, post-layout, fabricated-device, or silicon-measurement evidence.

@@ -1,3 +1,6 @@
 # Simulator logs are immutable evidence; preserve their original whitespace.
 experiments/day5/raw/*.log -whitespace
 experiments/day5/retained_failures/**/*.log -whitespace
+
+# Treat generated reports as binary artifacts in diffs and whitespace checks.
+*.pdf binary

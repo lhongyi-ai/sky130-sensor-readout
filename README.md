@@ -4,14 +4,14 @@ Specification-driven design and robustness verification of a 1.8 V, two-stage,
 Miller-compensated CMOS operational transconductance amplifier using the
 open-source SKY130A PDK.
 
-> **Project status — Day 3 nominal checkpoint complete; PVT not run.** The
-> compact two-stage OTA with a single-`IREF` bias tree, M6/M7, and selected
-> `CC = 3 pF`, `RZ = 2 kΩ` passes the A0, UGB, PM, power, SR, and settling hard
-> and stretch screens at **TT/1.8 V/27 °C only** with the frozen 5 pF ||
-> 100 kΩ-to-VSS load. This is a
-> schematic-level simulation result, not a project-wide qualification: the
-> 13-point PVT matrix and remaining nominal metrics are still pending, and the
-> Day 2 first-stage-only ICMR limitation remains documented.
+> **Project status — all five planned days and the final report are complete.**
+> The frozen `CC = 3 pF`,
+> `RZ = 2 kΩ` design passes all six core requirements at all 13 PVT points.
+> Nominal settling, CMRR, output
+> swing, and 1/2/5 pF load stability pass. PSRR+ and PSRR- miss their 45 dB
+> limits, and the full-OTA ICMR reaches 0.76–1.22 V, so its 1.3 V high-end
+> requirement fails. These are schematic-level simulations with an ideal
+> external 10 µA reference, not layout-extracted or silicon results.
 
 ## Objective
 
@@ -59,18 +59,71 @@ The authoritative definitions and pass policy are in
 
 ## Five-day execution gates
 
-| Day | Work package | Exit evidence |
-|---|---|---|
-| 1 | Environment, PDK smoke test, NFET/PFET characterization, current mirror, specification and first calculations | Verified tool versions; runnable PDK device test; characterization plots/data; current-mirror error/compliance data |
-| 2 | Bias network and M1–M5 differential stage | Device operating-point table; reasonable saturation headroom; symmetric input currents; first-stage gain and ICMR sweep |
-| 3 | Second stage, Miller compensation, nominal tuning | Final nominal A0, UGB, PM, power, and a stable unity-gain transient response |
-| 4 | Full characterization and automated 13-point PVT sweep | Raw outputs, parsed summaries, failure-preserving PVT table, and final plots |
-| 5 | One documented optimization, final report, and repository polish | Before/after tradeoff, reproducible README, PDF report, limitations, resume bullets, and interview explanation |
+| Day | Work package | State | Exit evidence |
+|---|---|---|---|
+| 1 | Environment, PDK smoke test, NFET/PFET characterization, current mirror, specification and first calculations | COMPLETE | Verified tool versions; runnable PDK device test; characterization plots/data; current-mirror error/compliance data |
+| 2 | Bias network and M1–M5 differential stage | COMPLETE WITH KNOWN BLOCK-LEVEL ICMR FAIL | Device operating-point table; saturation headroom; symmetric input currents; first-stage gain and ICMR sweep |
+| 3 | Second stage, Miller compensation, nominal tuning | COMPLETE | Final nominal A0, UGB, PM, power, direct unity transient, and compensation before/after |
+| 4 | Full characterization and automated 13-point PVT sweep | COMPLETE WITH DOCUMENTED PSRR/ICMR FAILS | 171 audited runs, populated summaries, failure-preserving PVT table, and final plots |
+| 5 | One documented optimization, final report, and repository polish | COMPLETE | 3 pF-only → 3 pF + 2 kΩ formal optimization; 32/32 logs, 48/48 raw TSVs, and 9/9 CSVs audited; geometry variants rejected; six-page report published |
 
 Partial layout and DRC/LVS are optional stretch work only after all schematic-
 level exit gates have passed.
 
 ## Results
+
+### Final schematic and qualification snapshot
+
+The final four-terminal, explicit-rail schematic is available as the editable
+[Xschem source](schematics/two_stage_ota.sch) and as the rendered figure below.
+Every NMOS source/bulk and every load/reference return is tied to the documented
+`VSS`; PMOS bulks return to `VDD`.
+
+![Final two-stage OTA schematic](results/plots/final_two_stage_ota_schematic.png)
+
+The aggregate machine-readable results are
+[`results/summary.csv`](results/summary.csv) and
+[`results/pvt_summary.csv`](results/pvt_summary.csv). The complete specification
+closure is:
+
+| Metric | Scope | Result used for qualification | Hard target | Status |
+|---|---|---:|---:|---|
+| Open-loop gain | 13-point PVT | worst 65.5351 dB at P08 | ≥50 dB | PASS |
+| Unity-gain bandwidth | 13-point PVT | worst 14.5527 MHz at P08 | ≥5 MHz | PASS |
+| Phase margin | 13-point PVT | worst 66.2452° at P13 | ≥55° | PASS |
+| Quiescent power | 13-point PVT | worst 302.710 µW at P13 | ≤600 µW | PASS |
+| Positive slew rate | 13-point PVT | worst 7.97766 V/µs at P06 | ≥2 V/µs | PASS |
+| Negative slew rate | 13-point PVT | worst 11.1958 V/µs at P08 | ≥2 V/µs | PASS |
+| 1% settling | nominal | 0.07475 µs | ≤1.5 µs | PASS |
+| CMRR at 1 kHz | nominal | 71.3222 dB | ≥55 dB | PASS |
+| PSRR+ at 1 kHz | nominal | 36.3313 dB | ≥45 dB | **FAIL** |
+| PSRR- at 1 kHz | nominal | 36.2510 dB | ≥45 dB | **FAIL** |
+| Input common-mode range | nominal | 0.76–1.22 V | includes 0.8–1.3 V | **FAIL — high end** |
+| Output swing | nominal | 0.18–1.63 V | includes 0.3–1.5 V | PASS |
+| Input noise density | nominal | 401.170 nV/√Hz at 1 kHz | report | REPORTED |
+| Integrated input noise | nominal | 52.3016 µV RMS, 10 Hz–1 MHz | report | REPORTED |
+| Load stability, 1 pF | nominal | 94.1626° PM; no sustained/growing oscillation | ≥55° + stable | PASS |
+| Load stability, 2 pF | nominal | 86.2882° PM; no sustained/growing oscillation | ≥55° + stable | PASS |
+| Load stability, 5 pF | nominal | 69.0829° PM; no sustained/growing oscillation | ≥55° + stable | PASS |
+
+The core PVT rows all pass. The same transient was also characterized for
+settling at every corner: P06, P07, and P13 are explicitly
+`SETTLING_NOT_REACHED` because at least one direction does not remain inside
+the frozen absolute ±4 mV band. Settling is a nominal-only specification and
+is not one of the six PVT core gates, so these retained observations do not
+change the 13/13 core-PVT result.
+
+![Core metrics across 13 PVT points](results/plots/day4_pvt_summary.png)
+
+![CMRR and PSRR](results/plots/day4_cmrr_psrr.png)
+
+![Full-OTA input common-mode range](results/plots/day4_icmr.png)
+
+![Bidirectional output-swing verification](results/plots/day4_output_swing.png)
+
+![Input-referred noise](results/plots/day4_noise.png)
+
+![Load-stability comparison](results/plots/day4_load_stability.png)
 
 ### Day 1 evidence
 
@@ -200,23 +253,44 @@ Evidence is retained in the [nominal summary](results/day3_nominal_summary.csv),
 
 ### Qualification status
 
-The aggregate qualification templates remain `NOT_RUN` pending Day 4. Day 3
-nominal results are retained separately and do not establish worst-case PVT:
+Day 4 executed 171 required ngspice decks and retained every row. All logs have
+zero exit status and a completion marker: 51 are clean `PASS` and 120 are
+`PASS_WITH_DYNAMIC_GMIN`. The analysis release gate also checks finite required
+values, exact matrix size, unique non-boundary downward loop crossings, Day 3
+nominal correlation, and a single manifest hash. The complete Day 4 evidence
+uses manifest
+`6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab`.
 
-- [`results/summary.csv`](results/summary.csv)
-- [`results/pvt_summary.csv`](results/pvt_summary.csv)
+The six core PVT metrics pass at every point, but the design is not an
+all-specification pass: both supply-rejection targets and the ICMR high endpoint
+fail. The failure rows and raw evidence remain in the aggregate tables rather
+than being hidden or replaced with zeroes.
 
-When populated, each aggregate number must link to a retained raw simulation
-output and identify its testbench, process corner, voltage, temperature, and
-load. Failed or non-convergent runs must remain visible rather than being
-deleted from the summary.
+### Day 5 optimization decision
 
-Day 3 supplies nominal loop-gain and transient figures. Still required are:
+The formal optimization credited to Day 5 is the already validated Day 3
+compensation change: adding `RZ = 2 kΩ` to the 3 pF Miller capacitor. Relative
+to 3 pF alone, PM rises from 33.2236° to 69.0829° while UGB changes from
+17.2553 to 16.7454 MHz. This before/after comparison is backed by the retained
+[compensation table](results/day3_compensation_before_after.csv).
 
-1. annotated transistor-level schematic;
-2. complete-OTA ICMR/output-swing characterization;
-3. PVT comparison for gain, UGB, phase margin, power, and slew rate;
-4. CMRR, PSRR, load-stability, and input-referred-noise figures.
+The Day 5 `first_stage_l2`, `first_stage_l3`, and `m7_l2` geometry variants are
+nominal reconnaissance only. They are not production selections and cannot
+replace the Day 4-characterized, core-PVT-qualified baseline without rerunning
+the full 13-point PVT, 121-point ICMR, bidirectional output swing, rejection,
+noise, and load campaign.
+The current decision is therefore **keep the frozen Day 4 baseline**;
+`first_stage_l2` is specifically rejected despite improving PSRR+/- to
+72.419/67.315 dB: PM falls by 7.559° to 61.524°, while the Day 4-equivalent
+1 Hz ICMR gain delta at 1.3 V worsens from -4.935 dB to -7.361 dB
+(-2.425 dB). The total channel-area proxy grows to 2.195× baseline, and no PVT
+requalification was run. `first_stage_l3` and `m7_l2` regress the nominal hard
+PM limit. The bounded campaign completed 32/32 audited logs, 48/48 raw TSV
+contracts, and 9/9 result CSV checks under manifest
+`89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e`.
+See the [Day 5 experiment record](experiments/day5/README.md),
+[decision summary](experiments/day5/decision_summary.csv), and
+[reconnaissance table](experiments/day5/recon_summary.csv).
 
 ## Repository map
 
@@ -225,29 +299,23 @@ sky130-two-stage-ota/
 ├── README.md
 ├── LICENSE
 ├── environment/
-│   └── setup_notes.md
+│   ├── setup_notes.md
+│   └── tool_versions.txt
 ├── netlists/
-│   ├── day1/
-│   │   ├── nfet_characterization.spice.in
-│   │   ├── pfet_characterization.spice.in
-│   │   └── nmos_current_mirror.spice.in
-│   ├── day2/
-│   │   └── first_stage_characterization.spice.in
-│   └── day3/
-│       ├── second_stage_balance.spice.in
-│       ├── ota_loopgain.spice.in
-│       └── ota_transient.spice.in
+│   ├── day1/                 # device and mirror characterization
+│   ├── day2/                 # connected first-stage characterization
+│   ├── day3/                 # second-stage, loop, compensation, transient
+│   ├── day4/                 # PVT and nominal characterization templates
+│   └── ota/                  # shared final OTA core
 ├── scripts/
-│   ├── render_netlists.py
-│   ├── analyze_day1.py
-│   ├── write_day1_manifest.py
-│   ├── run_day1.sh
-│   ├── analyze_day2.py
-│   ├── run_day2.sh
-│   ├── render_day3.py
-│   ├── analyze_day3.py
-│   ├── run_day3.sh
+│   ├── run_day1.sh ... run_day4.sh
+│   ├── render_day*.py / analyze_day*.py
+│   ├── check_final_schematic.py
+│   ├── build_report.py
+│   ├── run_all.sh
 │   └── start_eda_desktop.sh
+├── experiments/
+│   └── day5/                 # isolated nominal reconnaissance and decision
 ├── docs/
 │   ├── specification.md
 │   ├── design_calculations.md
@@ -255,89 +323,69 @@ sky130-two-stage-ota/
 │   ├── project_log.md
 │   ├── design_log.md
 │   ├── results.md
-│   └── status.md
+│   ├── status.md
+│   ├── career_materials.md
+│   └── sky130_two_stage_ota_report.pdf
 ├── schematics/
+│   ├── two_stage_ota.sch
 │   └── README.md
 └── results/
     ├── summary.csv
     ├── pvt_summary.csv
-    ├── device_sizing_candidates.csv
-    ├── current_mirror_summary.csv
-    ├── day1_reproducibility_manifest.json
-    ├── day2_first_stage_operating_point.csv
-    ├── day2_first_stage_sizing.csv
-    ├── day2_first_stage_summary.csv
-    ├── day2_icmr_gain_sweep.csv
-    ├── day2_iteration_summary.csv
-    ├── day3_design_parameters.csv
-    ├── day3_m6_balance.csv
-    ├── day3_compensation_comparison.csv
-    ├── day3_compensation_before_after.csv
-    ├── day3_nominal_operating_point.csv
-    ├── day3_nominal_summary.csv
-    ├── day3_log_audit.csv
-    ├── plots/
-    ├── raw/day1/
-    ├── raw/day2/
-    ├── raw/day3/
+    ├── day1_*, day2_*, day3_*, day4_*
+    ├── plots/                 # schematic and review figures
+    ├── raw/day1/ ... raw/day4/
     └── smoke/xschem/
 ```
 
-From a running Colima/Docker environment, reproduce all Day 1 characterization
-data, summaries, and plots with:
+## Reproduction
+
+With Docker available and Colima running, reproduce all five stages and verify
+the final schematic with one command from the repository root:
 
 ```sh
-./scripts/run_day1.sh
+./scripts/run_all.sh
 ```
 
-The script defaults to the recorded IIC-OSIC-TOOLS image digest, renders fresh
-SPICE decks from the source templates, runs ngspice in the container, analyzes
-the retained tables, validates every successful-run log, and writes the
-checksum manifest. To open the locally bound noVNC EDA desktop, use
-`./scripts/start_eda_desktop.sh`. Exact
-revisions, versions, mount paths, and the smoke-test failure/fix are documented
+The orchestrator runs Day 1 through Day 4 in order, runs the isolated Day 5
+reconnaissance, and executes the schematic checker. Individual stages remain
+available as `./scripts/run_day1.sh`, `./scripts/run_day2.sh`,
+`./scripts/run_day3.sh`, `./scripts/run_day4.sh`, and
+`./experiments/day5/run.sh`. The runs use the project-pinned IIC-OSIC Docker
+image and SKY130A revision recorded in the manifests. Exact setup details are
 in [`environment/setup_notes.md`](environment/setup_notes.md).
 
-Reproduce the selected Day 2 first-stage netlist, raw sweeps, summaries, and
-plots with:
+The finished six-page portfolio report is
+[`docs/sky130_two_stage_ota_report.pdf`](docs/sky130_two_stage_ota_report.pdf),
+and truthful resume bullets, a 90-second project pitch, and interview prompts
+are in [`docs/career_materials.md`](docs/career_materials.md).
+
+To rebuild the PDF after rerunning the simulations:
 
 ```sh
-./scripts/run_day2.sh
+python3 -m pip install -r environment/report-requirements.txt
+./scripts/build_report.py
 ```
-
-Day 2 is a block-level checkpoint; its gain, bandwidth, power, and ICMR numbers
-must not be reported as full-OTA performance.
-
-Reproduce M6 balancing, all compensation candidates, the selected nominal
-loop-gain result, the unity-follower transient, plots, and the log audit with:
-
-```sh
-./scripts/run_day3.sh
-```
-
-The Day 3 runner uses the same digest-pinned container as Day 1. It deletes and
-regenerates only deterministic Day 3 generated decks and top-level raw outputs;
-retained Day 2 failure evidence is unaffected.
 
 ## Limitations and claims
 
 This is a simulation-based educational IC-design project using an open-source
-PDK. It has not been fabricated or measured in silicon. At the current status,
-the Day 1 device tests, Day 2 M1–M5 block, and Day 3 nominal complete OTA have
-verified schematic-level simulation results. Day 3 is TT-only and does not
-constitute PVT qualification.
+PDK. Day 4 establishes schematic-level corner results for the specified global
+process/voltage/temperature matrix; it does not establish production readiness.
 
 - Process corners do not model local device mismatch.
-- No Monte Carlo run means no mismatch, offset-distribution, or yield claim.
-- No extracted netlist means no post-layout performance claim.
-- Day 3 does not yet cover process/voltage/temperature corners, CMRR, PSRR,
-  complete-OTA ICMR or output swing, noise, or the 1/2/5 pF load sweep.
-- The nominal transient log records successful dynamic-gmin stepping; repeat
-  convergence checks remain part of corner verification.
-- Every Day 3 log contains the known PDK subcircuit multiplier-hierarchy
-  warning. The log audit found no fatal token and confirmed `ngspice-47 done`
-  in all 19 logs.
-- DRC/LVS may be claimed only for a block that actually passes both checks.
+- The external `IREF = 10 µA` source is ideal; reference-generator variation,
+  startup, and supply sensitivity are not modeled.
+- No Monte Carlo run means no mismatch, offset-distribution, yield, or input-
+  offset distribution claim.
+- No physical layout, DRC/LVS result, extracted parasitics, or post-layout
+  simulation is included.
+- The circuit has not been fabricated, packaged, or measured in silicon.
+- Day 5 geometry variants are nominal reconnaissance, not PVT-qualified
+  replacements for the frozen baseline.
+- PSRR± and the ICMR high endpoint are documented failures, not passes.
+- Dynamic-gmin use and the noise-model conductance-reset warnings remain
+  visible in the Day 4 log audit.
 - No result may be described as measured; the correct term is simulated.
 - No production-qualified, tapeout-ready, or silicon-validated claim is made.
 

@@ -1,0 +1,25 @@
+Verification date: 2026-09-03
+Host: macOS 26.5.1 (25F80), Apple Silicon ARM64
+Colima: 0.10.3 (vz / ARM64 / Docker / VirtioFS)
+Docker CLI: 29.7.2
+Docker Engine: 29.5.2
+IIC-OSIC-TOOLS source: db8e081b66e8b0fa22ffd1fc176154c30538ddd0
+IIC-OSIC-TOOLS image: hpretl/iic-osic-tools@sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7
+SKY130A PDK revision: 026824c7969ce6f4fc9678e6ca04b0a06a596c4b
+SKY130A model deck SHA-256: 17c208a699228f5acb87bf59c09c22a4c4d3937b6766b4957737d34e8e075f64
+Xschem: 3.4.8RC
+ngspice: 47
+Magic: 8.3.681 (available; not used for reported results)
+KLayout: 0.30.11 (available; not used for reported results)
+Netgen: 1.5.323 (available; not used for reported results)
+Container Python: 3.12.3
+Host analysis Python: 3.12.6
+NumPy: 2.3.2
+Pandas: 2.3.2
+Matplotlib: 3.10.6
+
+Authoritative machine-readable evidence:
+  results/day1_reproducibility_manifest.json
+
+Human-readable setup and smoke-test evidence:
+  environment/setup_notes.md

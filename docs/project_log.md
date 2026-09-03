@@ -3,6 +3,9 @@
 Use this log for decisions, failures, and quantitative design iterations. Do not
 rewrite unsuccessful runs out of the history.
 
+**Current state:** all five planned days, the final evidence audit, and the
+six-page report are complete; the Day 4-characterized baseline is retained.
+
 ## 2026-09-03 — Day 1: environment, characterization, and mirror gate
 
 ### Completed
@@ -73,18 +76,18 @@ OTA dimensions or achieved specifications.
   syntax. It is retained in the raw logs; no convergence or fatal error remains
   in the successful Day 1 batch.
 
-### Not yet started
+### Not yet started at this checkpoint
 
 - Final bias-network sizing and the M1–M5 first stage.
 - Full OTA schematic, compensation tuning, and closed-loop verification.
 - OTA performance extraction and the 13-point PVT sweep.
 
-### Next action
+### Next action recorded at this checkpoint
 
 - Build the Day 2 bias network and M1–M5 differential stage, then retain its
   operating-point table, differential gain, symmetry check, and ICMR sweep.
-- OTA-level `summary.csv` and `pvt_summary.csv` remain `NOT_RUN` until those
-  circuits are simulated.
+- At this Day 1 checkpoint, OTA-level `summary.csv` and `pvt_summary.csv` were
+  still `NOT_RUN`; Day 4 later populated both.
 
 ## 2026-09-03 — Day 2: M1–M5 first-stage selection and formal ICMR
 
@@ -183,7 +186,7 @@ it is not a placed-layout area claim.
 - Review plots: `results/plots/day2_first_stage_ac.png` and
   `results/plots/day2_first_stage_dc_icmr.png`
 
-### Next action
+### Next action recorded at this checkpoint
 
 - Add and bias M6/M7, then introduce Miller compensation and measure the
   complete OTA's nominal operating point, open-loop gain, UGB, phase margin,
@@ -272,8 +275,9 @@ its gain and UGB pass, but its PM misses the 55° hard limit.
 - Each log contains one known PDK multiplier-hierarchy warning.
 - Only `nominal_transient.log` used successful dynamic-gmin stepping; this is
   disclosed and must be rechecked at corners.
-- Results are TT-only and schematic-level. PVT, complete-OTA ICMR/output swing,
-  CMRR, PSRR, noise, and 1/2/5 pF load stability remain `NOT_RUN`.
+- At this Day 3 checkpoint, results were TT-only and PVT, complete-OTA
+  ICMR/output swing, CMRR, PSRR, noise, and 1/2/5 pF load stability were
+  `NOT_RUN`; Day 4 later completed them.
 - The Day 2 first-stage-only 0.76–1.24 V ICMR and 1.3 V failure remain known;
   Day 3 did not replace them with a complete-OTA ICMR result.
 
@@ -290,11 +294,121 @@ its gain and UGB pass, but its PM misses the 55° hard limit.
   `results/plots/day3_unity_follower_transient.png`
 - Raw decks/logs/data: `results/raw/day3/`
 
-### Next action
+### Next action recorded at this checkpoint (completed in Day 4)
 
 - Run the 13-point PVT matrix and remaining nominal/load-stability
   measurements, applying the same frozen SR/settling definitions.
 - Preserve nonconvergence and spec failures in the aggregate summaries.
+
+## 2026-09-03 — Day 4: full characterization and 13-point PVT
+
+### Completed
+
+- Rendered a shared explicit-`VSS` M1–M10 OTA from the Day 3 selected-parameter
+  JSON; embedded one canonical manifest hash in every deck and result row.
+- Validated Day 3 selection, nominal summary, and selected loop/transient deck
+  consistency before running.
+- Executed separate differential-gain, DC-closed/AC-open loop, operating-point,
+  and direct-follower transient analyses at all 13 frozen PVT points.
+- Completed nominal CMRR/PSRR± curves, a 121-point full-OTA ICMR sweep,
+  362-row bidirectional output-swing evidence, 10 Hz–1 MHz noise, and CL=1/2/5
+  pF loop/transient stability.
+- Preserved all 171 required log rows: 51 `PASS` and 120
+  `PASS_WITH_DYNAMIC_GMIN`; no required deck was omitted.
+- Correlated seven nominal Day 4 quantities to Day 3; every correlation row
+  passed.
+
+### Core PVT result — all six metrics pass at all 13 points
+
+| Metric | Worst result | Point | Hard limit | State |
+|---|---:|---|---:|---|
+| A0 | 65.5351 dB | P08 | ≥50 dB | PASS |
+| UGB | 14.5527 MHz | P08 | ≥5 MHz | PASS |
+| PM | 66.2452° | P13 | ≥55° | PASS |
+| Quiescent power | 302.710 µW | P13 | ≤600 µW | PASS |
+| SR+ | 7.97766 V/µs | P06 | ≥2 V/µs | PASS |
+| SR- | 11.1958 V/µs | P08 | ≥2 V/µs | PASS |
+
+Loop analysis accepts the first downward 0 dB crossing and rebuilds unwrapped
+phase from the complex return ratio. All PVT points have one non-boundary
+downward crossing. Power retains signed raw `I(VDD)` separately from its
+absolute magnitude.
+
+### Nominal characterization result
+
+| Metric | Result | State |
+|---|---:|---|
+| Worst 1% settling | 0.07475 µs | PASS |
+| CMRR at 1 kHz | 71.3222 dB | PASS |
+| PSRR+ at 1 kHz | 36.3313 dB | FAIL |
+| PSRR- at 1 kHz | 36.2510 dB | FAIL |
+| Full-OTA ICMR | 0.76–1.22 V | FAIL at 1.3 V high endpoint |
+| Output swing | 0.18–1.63 V | PASS |
+| Input noise at 1 kHz | 401.170 nV/√Hz | REPORTED |
+| Integrated noise, 10 Hz–1 MHz | 52.3016 µV RMS | REPORTED |
+| PM at CL=1/2/5 pF | 94.1626° / 86.2882° / 69.0829° | PASS |
+
+P06 and P13 do not remain within the absolute ±4 mV settling band in either
+direction; P07 misses the rising direction. Their blank numeric fields and
+`SETTLING_NOT_REACHED` states are retained. Settling is nominal-only and does
+not change the core PVT pass policy.
+
+### Failures and warnings retained
+
+- PSRR+ and PSRR- miss 45 dB and remain explicit failures.
+- Full-OTA ICMR low endpoint passes at 0.76 V, but the 1.22 V high endpoint
+  misses 1.3 V and remains an explicit failure.
+- Noise has no pass target; 24 model conductance-reset warnings are retained in
+  the audit.
+- Dynamic-gmin completion is represented by `PASS_WITH_DYNAMIC_GMIN`, not
+  rewritten as warning-free execution.
+
+### Evidence paths
+
+- Aggregate results: `results/summary.csv`, `results/pvt_summary.csv`
+- Nominal result index: `results/day4_nominal_summary.csv`
+- Audit and operating points: `results/day4_log_audit.csv`,
+  `results/day4_pvt_operating_points.csv`
+- Detailed sweeps: `results/day4_cmrr_psrr_curves.csv`,
+  `results/day4_icmr_sweep.csv`, `results/day4_output_swing_sweep.csv`,
+  `results/day4_noise_curve.csv`, `results/day4_load_stability.csv`
+- Figures: `results/plots/day4_*.png`
+
+## 2026-09-03 — Day 5: bounded optimization reconnaissance and report closure
+
+### Decision
+
+- Use the Day 3 3 pF-only versus 3 pF + 2 kΩ compensation change as the formal
+  optimization: PM improves 33.2236° → 69.0829° while UGB changes
+  17.2553 → 16.7454 MHz.
+- Keep the Day 4-characterized geometry and compensation as the reported result.
+- Treat `first_stage_l2`, `first_stage_l3`, and `m7_l2` as nominal
+  reconnaissance only, not replacements. The campaign completed 32/32 log,
+  48/48 raw-TSV, and 9/9 result-CSV contract checks under manifest
+  `89f886ce2a150b84945a5378f29c2d4ee3faa5ef832876aeb122deb05e01391e`.
+- Reject `first_stage_l2` despite moving PSRR+/- to 72.419/67.315 dB: PM drops
+  7.559° to 61.524°. At the Day 4-equivalent 1 Hz checkpoint, the 1.3 V ICMR
+  gain delta worsens from -4.935 dB to -7.361 dB (-2.425 dB), while total
+  channel-area proxy rises to 2.195×, and the full Day 4 campaign was not
+  repeated.
+- Reject `first_stage_l3` and `m7_l2` for nominal hard-PM regressions.
+
+### Closure
+
+- Published the six-page report at `docs/sky130_two_stage_ota_report.pdf` and
+  linked it from the repository navigation alongside the retained,
+  machine-readable evidence.
+- The reconnaissance runner is fail-closed; four first-attempt failures remain
+  retained, while all 32 corrected logs and 48 raw TSV contracts pass.
+- Do not use untracked generated decks as the sole evidence for a design
+  decision; cite stable summaries and the Day 3/Day 4 result tables.
+
+### Scope boundary
+
+The entire five-day project remains schematic-level simulation with an ideal
+external 10 µA `IREF`. No mismatch/Monte Carlo, physical layout, DRC/LVS,
+parasitic extraction, post-layout simulation, fabrication, packaging, or
+silicon measurement has been completed.
 
 ## Daily entry template
 

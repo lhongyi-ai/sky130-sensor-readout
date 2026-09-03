@@ -1,8 +1,9 @@
 # Architecture
 
-**Status:** Compact M1–M10 two-stage architecture and compensation are verified
-at the Day 3 nominal TT/1.8 V/27 °C schematic-level checkpoint. PVT and the
-remaining nominal characterization are not yet complete.
+**Status:** Compact M1–M10 two-stage architecture and 3 pF + 2 kΩ compensation
+are frozen. Day 4 completed the 13-point core-PVT and nominal characterization
+campaign. Day 5 retains this architecture after rejecting nominal-only geometry
+reconnaissance as an insufficient basis for promotion.
 
 ## 1. Signal path
 
@@ -24,7 +25,11 @@ IREF ---> M8 diode PMOS ---> VBP -------------+                v
 ```
 
 The diagram is functional, not a placed layout. The same compact dimensions are
-cross-checked in the selected loop-gain and transient production decks.
+cross-checked in the selected parameters, retained summaries, and raw loop/
+transient evidence.
+The final editable source is
+[`schematics/two_stage_ota.sch`](../schematics/two_stage_ota.sch), with a
+[rendered review figure](../results/plots/final_two_stage_ota_schematic.png).
 
 ## 2. Blocks and responsibilities
 
@@ -133,12 +138,60 @@ injects the 1 V AC test source while isolating it at DC. The return ratio is
 `T = -V(VOUT)/V(VINN)`. Its -0.00682757215° low-frequency phase is near zero,
 which validates the recorded sign convention.
 
-All M1–M10 model saturation checks pass at this one nominal point; M5 is the
-limiting device with 0.1161336635 V margin. These are TT-only schematic-level
-results. They do not establish PVT robustness, complete-OTA ICMR/output swing,
-load stability, rejection ratios, or noise.
+All M1–M10 model saturation checks pass at this nominal point; M5 is the
+limiting device with 0.1161336635 V margin. Day 4 independently correlates the
+nominal metrics and extends the same architecture across the frozen PVT and
+nominal-characterization benches.
 
-## 5. Named nodes and interfaces
+## 5. Day 4 architecture-level closure
+
+The shared Day 4 OTA subcircuit exposes `VDD` and `VSS` explicitly. All NMOS
+sources/bulks, the ideal `IREF` return, and `RL`/`CL` returns use `VSS`; PMOS
+bulks use `VDD`. This prevents a supply-rejection bench from accidentally
+shorting an implicit ground to the perturbed negative supply.
+
+At every PVT point, the architecture passes the six core hard limits. The
+worst values are 65.5351 dB A0 and 14.5527 MHz UGB at P08, 66.2452° PM and
+302.710 µW at P13, 7.97766 V/µs SR+ at P06, and 11.1958 V/µs SR- at P08.
+The return-ratio bench retains the validated 1 GH/1 GF DC-closed/AC-open loop
+break and finds one non-boundary downward 0 dB crossing at every point.
+
+The nominal characterization exposes the architecture’s actual tradeoffs:
+
+- CMRR is 71.3222 dB at 1 kHz and passes.
+- PSRR+ and PSRR- are 36.3313 and 36.2510 dB, respectively, so both fail the
+  45 dB hard limit. The ideal external bias and finite current-source output
+  resistances are part of this schematic-level behavior.
+- The complete-OTA ICMR is 0.76–1.22 V. The low endpoint passes, but the upper
+  end does not include the required 1.3 V.
+- Bidirectional offset-inverting sweeps establish 0.18–1.63 V output swing,
+  which covers the required 0.3–1.5 V interval.
+- CL=1/2/5 pF gives 94.1626°/86.2882°/69.0829° PM, with no sustained or growing
+  oscillation in the associated follower transients.
+- Input-referred noise is 401.170 nV/√Hz at 1 kHz and 52.3016 µV RMS integrated
+  from 10 Hz to 1 MHz; no noise pass limit is defined.
+
+P06, P07, and P13 additionally record `SETTLING_NOT_REACHED` under the frozen
+absolute ±4 mV band. Settling is a nominal-only metric; this information is
+retained without adding it to the six-metric PVT gate.
+
+## 6. Day 5 architectural decision
+
+The formal optimization is the Day 3 addition of a 2 kΩ series resistor to the
+3 pF Miller capacitor. It raises PM from 33.2236° to 69.0829° while changing
+UGB from 17.2553 to 16.7454 MHz. The selected network received the complete
+Day 4 characterization campaign and passed the six-metric core-PVT gate.
+
+Longer-channel `first_stage_l2`/`first_stage_l3` and `m7_l2` variants were
+screened only at nominal in a 32-run, 48-TSV audited campaign. They remain
+rejected reconnaissance. `first_stage_l2` improves PSRR+/- to
+72.419/67.315 dB, but lowers PM to 61.524° and worsens the Day 4-equivalent
+1 Hz ICMR gain delta at 1.3 V from -4.935 dB to -7.361 dB (-2.425 dB). It
+increases the total channel-area proxy to 2.195× and lacks a full PVT rerun.
+`first_stage_l3` and `m7_l2` fail the nominal 55° PM hard limit. The
+architecture therefore remains unchanged for reporting.
+
+## 7. Named nodes and interfaces
 
 | Name | Purpose |
 |---|---|
@@ -152,7 +205,7 @@ load stability, rejection ratios, or noise.
 Names must remain consistent across the schematic, testbenches, raw outputs,
 parsers, plots, and documentation.
 
-## 6. Design sequence
+## 8. Design sequence
 
 1. **Complete:** characterize individual NFET/PFET devices in the installed PDK.
 2. **Complete:** validate current mirrors and compliance ranges.
@@ -164,9 +217,12 @@ parsers, plots, and documentation.
    break, and tune nominal stability.
 7. **Complete at nominal:** select `RZ = 2 kΩ` from the retained compensation
    sweep.
-8. Complete nominal characterization and the 13-point core PVT matrix.
+8. **Complete:** nominal characterization and the 13-point core PVT matrix;
+   retain PSRR± and high-end ICMR failures.
+9. **Complete:** package the Day 5 report while keeping the core-PVT-qualified
+   baseline; no nominal-only reconnaissance result is promoted.
 
-## 7. Explicitly out of scope
+## 9. Explicitly out of scope
 
 - bandgap or precision on-chip reference design;
 - output buffer or rail-to-rail input stage;

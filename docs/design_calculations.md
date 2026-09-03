@@ -1,11 +1,12 @@
-# Initial Design Calculations
+# Design Calculations and Performance Closure
 
-**Status:** Day 3 compact M1–M10 sizing and compensation selected at the
-nominal TT/1.8 V/27 °C checkpoint; PVT sizing robustness remains unverified.
+**Status:** Day 3 compact M1–M10 sizing and compensation are frozen; Day 4
+completed the 13-point core-PVT and nominal characterization campaign. Day 5
+retains this baseline after bounded nominal geometry reconnaissance.
 **Important:** Day 1 values are characterization candidates and Day 2 values
 are selected only for the first-stage checkpoint. Day 3 dimensions are the
-current nominal complete-OTA choice, not a PVT-qualified or silicon-measured
-design.
+core-PVT-qualified schematic-level complete-OTA choice. No dimension is a
+layout-extracted or silicon-measured result.
 
 ## 1. Initial design point
 
@@ -84,8 +85,9 @@ may be reported as quiescent power.
 
 Day 3 closes this estimate at the nominal point: simulated supply current is
 150.298315 µA and power is 270.536967 µW, only 0.536967 µW above the initial
-paper estimate. This agreement is nominal-only and does not replace the PVT
-power sweep.
+paper estimate. Day 4 then completes the power sweep: the largest value is
+302.709619 µW at P13, still below both the 600 µW hard and 400 µW stretch
+limits.
 
 ## 5. Gain allocation
 
@@ -332,10 +334,82 @@ nominal stability tradeoff.
 | Rising overshoot | 74.99684 mV | reported; not a pass metric |
 | Minimum M1–M10 saturation margin | 0.1161336635 V | positive at nominal |
 
-These figures use the frozen 5 pF || 100 kΩ-to-VSS load. They are
-schematic-level TT results; no PVT, extracted-layout, fabricated, or measured
-claim is made. Settling is measured from the input 50% crossings at 1.01 µs
-rising and 3.03 µs falling.
+These figures use the frozen 5 pF || 100 kΩ-to-VSS load and were the Day 3
+nominal checkpoint. Day 4 subsequently reproduced them and supplied the PVT
+and remaining nominal evidence. Settling is measured from the input 50%
+crossings at 1.01 µs rising and 3.03 µs falling.
 The transient completed with dynamic-gmin stepping, which is retained in the
-log audit and must be rechecked across corners. SR is the frozen monotonic
+log audit and was rechecked across corners. SR is the frozen monotonic
 20–80% least-squares fit, not a maximum derivative.
+
+## 16. Day 4 robustness closure
+
+The exact 13-point sweep applies TT/FF/SS/FS/SF at 1.8 V and 27 °C, plus the
+TT combinations of 1.62/1.80/1.98 V and -20/27/85 °C, with the duplicate
+nominal point counted once. The 5 pF || 100 kΩ-to-VSS load and ideal external
+10 µA `IREF` remain unchanged.
+
+| Core quantity | Nominal | Worst PVT value | Condition | Hard target | Result |
+|---|---:|---:|---|---:|---|
+| A0 | 67.6760 dB | 65.5351 dB | P08 | ≥50 dB | PASS |
+| UGB | 16.7454 MHz | 14.5527 MHz | P08 | ≥5 MHz | PASS |
+| PM | 69.0829° | 66.2452° | P13 | ≥55° | PASS |
+| Power | 270.537 µW | 302.710 µW | P13 | ≤600 µW | PASS |
+| SR+ | 8.20203 V/µs | 7.97766 V/µs | P06 | ≥2 V/µs | PASS |
+| SR- | 11.51995 V/µs | 11.1958 V/µs | P08 | ≥2 V/µs | PASS |
+
+The gain denominator is the simulated differential input, and loop metrics use
+the first downward 0 dB crossing of the complex, unwrapped return ratio. Every
+PVT loop has one non-boundary downward crossing. Formal slew values use the
+directed 20–80% least-squares fit.
+
+The non-nominal transient extraction also applies the absolute ±4 mV settling
+band. P06 and P13 fail to enter it in either direction, while P07 fails on the
+rising direction; each is retained as `SETTLING_NOT_REACHED`. Since settling
+is nominal-only, this does not alter the six core PVT pass results. Nominal
+worst settling remains 0.07475 µs and passes.
+
+The remaining nominal calculations close as follows:
+
+| Quantity | Result | Interpretation |
+|---|---:|---|
+| CMRR at 1 kHz | 71.3222 dB | passes 55 dB hard limit |
+| PSRR+ / PSRR- at 1 kHz | 36.3313 / 36.2510 dB | both fail 45 dB hard limit |
+| Full-OTA ICMR | 0.76–1.22 V | low endpoint passes; 1.3 V high endpoint fails |
+| Output swing | 0.18–1.63 V | contains required 0.3–1.5 V interval |
+| Noise density at 1 kHz | 401.170 nV/√Hz | reported, no target |
+| Integrated noise, 10 Hz–1 MHz | 52.3016 µV RMS | reported, no target |
+| PM for CL=1/2/5 pF | 94.1626° / 86.2882° / 69.0829° | all pass; transients do not sustain/grow oscillation |
+
+These values are simulation outputs, not hand-estimate predictions. They are
+traceable through `results/summary.csv`, `results/pvt_summary.csv`, and the
+metric-specific Day 4 CSVs.
+
+## 17. Day 5 optimization accounting
+
+The project’s formal before/after optimization is the Day 3 compensation
+change at constant 3 pF:
+
+| Network | PM | UGB | Decision |
+|---|---:|---:|---|
+| 3 pF only | 33.2236° | 17.2553 MHz | stability baseline; FAIL |
+| 3 pF + 2 kΩ | 69.0829° | 16.7454 MHz | selected and core-PVT-qualified in Day 4 |
+
+Thus PM improves by 35.8593° for a 2.95495% UGB reduction. This is the formal
+optimization because the selected point received the complete Day 4 campaign.
+
+Day 5 also screens `first_stage_l2`, `first_stage_l3`, and `m7_l2` at nominal
+conditions in a 32-run, 48-TSV audited campaign. They are reconnaissance, not
+optimization selections. `first_stage_l2` changes PSRR+/- from
+36.331/36.251 dB to 72.419/67.315 dB, but PM falls from 69.083° to 61.524°.
+At the Day 4-equivalent 1 Hz checkpoint, the 1.3 V ICMR gain delta worsens
+from -4.935 dB to -7.361 dB (-2.425 dB), and total channel-area proxy rises to
+2.195× baseline. Without a 13-point rerun it is rejected.
+The longer `first_stage_l3` and `m7_l2` candidates also miss the nominal 55° PM
+hard limit. The reported choice therefore remains the frozen Day 4 geometry
+and compensation.
+
+All calculations and simulations share the following claim boundary: ideal
+external 10 µA `IREF`, schematic-level global PVT only, no local mismatch or
+Monte Carlo, no physical layout or extraction, no post-layout simulation, and
+no fabricated/silicon measurement.
