@@ -1,8 +1,8 @@
 # Architecture
 
-**Status:** Architecture selected; the Day 2 M1–M5 first-stage SPICE block is
-implemented and characterized. M6/M7, compensation, the loaded complete OTA,
-and its authoritative Xschem schematic are not yet verified.
+**Status:** Compact M1–M10 two-stage architecture and compensation are verified
+at the Day 3 nominal TT/1.8 V/27 °C schematic-level checkpoint. PVT and the
+remaining nominal characterization are not yet complete.
 
 ## 1. Signal path
 
@@ -12,22 +12,19 @@ VINP/VINN
     v
 M1/M2 NMOS differential pair ---> M3/M4 PMOS mirror load ---> VX
     |                                                          |
-M5 tail <--- VBN <--- MB diode NMOS <--- IREF                  |  Day 2 boundary
-                                                               |
-                                                  [complete OTA not yet verified]
-                                                               |
-                                                               v
+M5 tail <--- VBN <--- M10 diode NMOS <--- M9 PMOS              |
+                                           ^                   |
+IREF ---> M8 diode PMOS ---> VBP -------------+                v
                               M6 common-source stage ----> VOUT
                                       ^                      |
                                       |                      |
                               M7 PMOS current load            |
                                       |                      |
-                                      +---- CC [and RZ] <----+
+                                      +---- 3 pF + 2 kΩ <----+
 ```
 
-The diagram is functional, not a transistor-level schematic. The M1–M5 and MB
-connections have been verified in the Day 2 SPICE block; M6/M7 orientation and
-compensation polarity still require complete-OTA implementation and checking.
+The diagram is functional, not a placed layout. The same compact dimensions are
+cross-checked in the selected loop-gain and transient production decks.
 
 ## 2. Blocks and responsibilities
 
@@ -70,13 +67,22 @@ M5 carries 38.0713829 µA and has 0.1160701611 V saturation margin.
 - their current and `gm` influence output drive, nondominant-pole location, and
   power consumption.
 
-### CC and optional RZ — frequency compensation
+Day 3 uses M6 `W/L = 8.83907427/0.5 µm` and M7
+`W/L = 72.2005/0.8 µm`. At the nominal operating point, M6 sinks
+83.2666517 µA, M7 sources 92.2666438 µA, and the 100 kΩ-to-VSS load takes
+approximately 9 µA at `VOUT = 0.899999206 V`.
+
+### CC and RZ — frequency compensation
 
 - `CC` connects between `VOUT` and `VX` to create Miller pole splitting;
 - increasing `CC` generally improves stability but reduces UGB and can affect
   slew rate;
-- `RZ` is omitted initially and added only if the measured loop response shows
-  that zero placement is needed.
+- the selected Day 3 network is `CC = 3 pF` in series with `RZ = 2 kΩ`.
+
+The 3 pF capacitor alone gave only 33.2236432° phase margin. The selected
+resistor moves the nominal result to 69.0829108°, a 35.8592675° improvement,
+with UGB changing from 17.2553341 to 16.745448 MHz. The 3 pF/1 kΩ candidate is
+retained as a hard-limit failure at 52.2886533° phase margin.
 
 ### Bias network
 
@@ -85,10 +91,11 @@ M5 carries 38.0713829 µA and has 0.1160701611 V saturation margin.
 - ideal current sources may be used only for early block isolation, not for the
   final reported design under test.
 
-The implemented Day 2 tail-bias branch forces 10 µA through diode-connected
-NMOS MB (`W/L = 8.08605/0.8 µm`) to generate `VBN = 0.658036427 V`; M5 mirrors
-that bias into the first stage. This verifies the tail branch only. The
-second-stage PMOS bias required by M7 is still to be implemented.
+Day 3 uses one 10 µA external reference. Diode-connected PMOS M8 establishes
+`VBP`; matched PMOS M9 feeds diode-connected NMOS M10 at `VBN`, which biases
+M5. M8/M9 use `W/L = 7.22005/0.8 µm`; M10 uses
+`W/L = 8.08605/0.8 µm`. M7 shares `VBP`. At nominal, M8 carries
+9.99999882 µA, while M9/M10 carry 9.99144222/9.9914427 µA.
 
 ## 3. Day 2 first-stage checkpoint
 
@@ -109,7 +116,29 @@ channel-area proxy from 331.0868 to 94.0071 µm² and increases first-stage 3 dB
 bandwidth from 13.106718 to 45.524514446 MHz, while reducing gain from 38.2056 to
 36.2697 dB. Neither block covers the required 1.3 V high end.
 
-## 4. Named nodes and interfaces
+## 4. Day 3 nominal complete-OTA checkpoint
+
+The complete nominal signal path is present with the frozen 5 pF || 100 kΩ load
+to VSS. The selected circuit produces 67.6747747 dB open-loop gain,
+16.7454480155 MHz UGB, 69.0829107715° phase margin, and 270.536967 µW
+quiescent power. A direct unity follower gives 8.20202918/11.51994781 V/µs
+positive/negative slew and 0.07475 µs worst 1% settling for the 0.8↔1.2 V
+test. SR follows the frozen monotonic 20–80% least-squares method using 62/47
+rising/falling samples. Settling is referenced to the input 50% crossings at
+1.01 µs rising and 3.03 µs falling.
+
+Loop gain is measured with a DC-closed/AC-open break at the feedback input. A
+1 GH inductor preserves `VOUT`-to-`VINN` DC feedback; a 1 GF coupling capacitor
+injects the 1 V AC test source while isolating it at DC. The return ratio is
+`T = -V(VOUT)/V(VINN)`. Its -0.00682757215° low-frequency phase is near zero,
+which validates the recorded sign convention.
+
+All M1–M10 model saturation checks pass at this one nominal point; M5 is the
+limiting device with 0.1161336635 V margin. These are TT-only schematic-level
+results. They do not establish PVT robustness, complete-OTA ICMR/output swing,
+load stability, rejection ratios, or noise.
+
+## 5. Named nodes and interfaces
 
 | Name | Purpose |
 |---|---|
@@ -123,19 +152,21 @@ bandwidth from 13.106718 to 45.524514446 MHz, while reducing gain from 38.2056 t
 Names must remain consistent across the schematic, testbenches, raw outputs,
 parsers, plots, and documentation.
 
-## 5. Design sequence
+## 6. Design sequence
 
 1. **Complete:** characterize individual NFET/PFET devices in the installed PDK.
 2. **Complete:** validate current mirrors and compliance ranges.
 3. **Complete:** build M1–M5 with the diode-connected MB/M5 tail-bias mirror.
 4. **Complete with documented high-end ICMR failure:** verify first-stage bias,
    gain, symmetry, and common-mode range.
-5. Add M6/M7 and establish a valid quiescent output point.
-6. Add `CC`, create the loop-gain bench, and tune nominal stability.
-7. Add `RZ` only when supported by measured loop-gain evidence.
+5. **Complete at nominal:** add M6/M7 and establish a valid quiescent output.
+6. **Complete at nominal:** add `CC`, implement the DC-closed/AC-open loop
+   break, and tune nominal stability.
+7. **Complete at nominal:** select `RZ = 2 kΩ` from the retained compensation
+   sweep.
 8. Complete nominal characterization and the 13-point core PVT matrix.
 
-## 6. Explicitly out of scope
+## 7. Explicitly out of scope
 
 - bandgap or precision on-chip reference design;
 - output buffer or rail-to-rail input stage;

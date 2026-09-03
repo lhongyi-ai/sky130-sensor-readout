@@ -1,0 +1,54 @@
+* Day 3: nominal unity-gain follower large-signal transient.
+* Input is 0.8 -> 1.2 -> 0.8 V with 20-ns edges; load is 5 pF || 100 kohm to VSS.
+
+.lib "@@MODEL_DECK@@" @@CORNER@@
+.temp 27
+
+.param VDDVAL=1.8 IREFVAL=10u RLOAD=100k CLOAD=5p
+.param W12=16.83798 L12=0.5
+.param W34UNIT=25 L34=0.5
+.param W5=25.8754 L5=0.8
+.param W6=@@W6_UM@@ L6=0.5
+.param W7=72.2005 L7=0.8
+.param W8=7.22005 L8=0.8
+.param W9=7.22005 L9=0.8
+.param W10=8.08605 L10=0.8
+.param CC=@@CC_F@@ RZ=@@RZ_OHM@@
+
+VDD vdd 0 {VDDVAL}
+IREF vbp 0 {IREFVAL}
+VINP vinp 0 PULSE(0.8 1.2 1u 20n 20n 2u 5u)
+
+RLOAD1 vout 0 {RLOAD}
+CLOAD1 vout 0 {CLOAD}
+
+XM8  vbp  vbp vdd vdd sky130_fd_pr__pfet_01v8 L={L8}  W={W8}  nf=1 mult=1
+XM9  vbn  vbp vdd vdd sky130_fd_pr__pfet_01v8 L={L9}  W={W9}  nf=1 mult=1
+XM10 vbn  vbn 0   0   sky130_fd_pr__nfet_01v8 L={L10} W={W10} nf=1 mult=1
+
+* Direct unity feedback: M1's VINN gate is tied to VOUT.
+XM1 nmir vout tail 0 sky130_fd_pr__nfet_01v8 L={L12} W={W12} nf=1 mult=1
+XM2 vx   vinp tail 0 sky130_fd_pr__nfet_01v8 L={L12} W={W12} nf=1 mult=1
+XM3A nmir nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM3B nmir nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM4A vx   nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM4B vx   nmir vdd vdd sky130_fd_pr__pfet_01v8 L={L34} W={W34UNIT} nf=1 mult=1
+XM5 tail vbn  0   0   sky130_fd_pr__nfet_01v8 L={L5} W={W5} nf=1 mult=1
+XM6 vout vx  0   0   sky130_fd_pr__nfet_01v8 L={L6} W={W6} nf=1 mult=1
+XM7 vout vbp vdd vdd sky130_fd_pr__pfet_01v8 L={L7} W={W7} nf=1 mult=1
+
+RZ1 vx ncc {RZ}
+CC1 ncc vout {CC}
+
+.save all
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 0.5n 5u
+wrdata results/raw/day3/nominal_transient.tsv v(vinp) v(vout)
+quit
+.endc
+
+.end

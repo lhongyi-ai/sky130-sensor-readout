@@ -1,10 +1,11 @@
 # Initial Design Calculations
 
-**Status:** Day 2 M1–M5 first-stage dimensions selected and characterized at
-TT/1.8 V/27 °C; full-OTA sizing remains incomplete.
+**Status:** Day 3 compact M1–M10 sizing and compensation selected at the
+nominal TT/1.8 V/27 °C checkpoint; PVT sizing robustness remains unverified.
 **Important:** Day 1 values are characterization candidates and Day 2 values
-are selected only for the first-stage checkpoint. Neither constitutes final
-full-OTA dimensions or achieved OTA performance.
+are selected only for the first-stage checkpoint. Day 3 dimensions are the
+current nominal complete-OTA choice, not a PVT-qualified or silicon-measured
+design.
 
 ## 1. Initial design point
 
@@ -81,6 +82,11 @@ This estimate omits topology-dependent mirror branches, startup paths, and any
 other bias overhead. Only the final simulated current drawn from the VDD source
 may be reported as quiescent power.
 
+Day 3 closes this estimate at the nominal point: simulated supply current is
+150.298315 µA and power is 270.536967 µW, only 0.536967 µW above the initial
+paper estimate. This agreement is nominal-only and does not replace the PVT
+power sweep.
+
 ## 5. Gain allocation
 
 The 50 dB hard gain requirement is:
@@ -119,6 +125,12 @@ magnitude to explore is:
 Start with `CC` alone. Add `RZ` only after the uncompensated/CC-only loop-gain
 plot establishes the need, and log the before/after tradeoff.
 
+Day 3 gives M6 `gm = 835.556346 µS`, so `1/gm ≈ 1.19681 kΩ`. The explored
+3 pF/1 kΩ point nevertheless reaches only 52.2886533° phase margin and fails
+the 55° hard limit. The selected measured-loop result is 3 pF/2 kΩ with
+69.0829108° phase margin; the first-order `1/gm` estimate was therefore only a
+search scale, not the final resistor value.
+
 ## 7. Initial mirror ratios
 
 With `IREF = 10 µA`, the starting current ratios are:
@@ -155,8 +167,9 @@ tables are under `results/raw/day1/`, and the combined visual review is
 The sizing method assumes current scales linearly with width at the sampled
 single-device point. It does not account for connected-circuit drain voltages,
 series resistance, mirror mismatch, parasitic capacitance, or layout choices.
-Day 2 subsequently verified and revised M1–M5 with actual operating-point data;
-the M6/M7 candidates remain to be checked in the complete OTA.
+Day 2 subsequently verified and revised M1–M5 with actual operating-point data.
+Day 3 then checked the complete OTA at nominal TT, retained the M7 candidate,
+and rebalanced M6 to 8.83907427 µm; Sections 13–15 record that closure.
 
 ## 9. Day 1 current-mirror check
 
@@ -260,3 +273,69 @@ Before the legal parallel implementation, a single PMOS with
 failure caused by ngspice's extra `wrdata` scale column, and all rejected sizing
 iterations are retained under `results/raw/day2/` and summarized in
 `results/day2_iteration_summary.csv`.
+
+## 13. Day 3 second-stage balance and compact dimensions
+
+The second-stage sizing aid fixes `VX = 0.792073469 V`, clamps
+`VOUT = 0.9 V`, and includes the frozen resistive-load current explicitly:
+
+`IRL = 0.9 V / 100 kΩ = 9 µA`
+
+The root condition is `IM7 - IM6 - IRL = 0`. The residual is
++0.471056959 µA at `W6 = 8.8 µm` and -0.734485599 µA at 8.9 µm. Linear
+interpolation selects `W6 = 8.839074270408297 µm`, rendered as 8.83907427 µm
+at `L6 = 0.5 µm`.
+
+The complete nominal device set is:
+
+| Devices | Selected geometry |
+|---|---|
+| M1/M2 | each `16.83798/0.5 µm` |
+| M3/M4 | each side two `25/0.5 µm` units, 50 µm total width |
+| M5 | `25.8754/0.8 µm` |
+| M6 | `8.83907427/0.5 µm` |
+| M7 | `72.2005/0.8 µm` |
+| M8/M9 | each `7.22005/0.8 µm` |
+| M10 | `8.08605/0.8 µm` |
+
+At the final follower bias, M6 sinks 83.2666517 µA and M7 sources
+92.2666438 µA; the approximately 9 µA difference supplies the 100 kΩ load.
+
+## 14. Day 3 compensation closure
+
+The return-ratio bench retains DC unity feedback with a 1 GH inductor and
+injects AC through a 1 GF capacitor. It evaluates
+`T = -V(VOUT)/V(VINN)`. The selected 1 Hz phase is -0.00682757215°, confirming
+the intended near-zero low-frequency sign before phase-margin extraction.
+
+| Network | A0 | UGB | PM | Hard AC result |
+|---|---:|---:|---:|---|
+| 3 pF, `RZ ≈ 0` (`0.001 Ω`) | 67.6747747 dB | 17.2553341 MHz | 33.2236432° | FAIL |
+| 3 pF, 1 kΩ | 67.6747747 dB | 16.3621278 MHz | 52.2886533° | FAIL |
+| 3 pF, 2 kΩ | 67.6747747 dB | 16.7454480 MHz | 69.0829108° | PASS; selected |
+
+Adding the selected resistor improves phase margin by 35.8592675° versus the
+capacitor-only baseline, at a 2.95495% UGB reduction. This is the documented
+nominal stability tradeoff.
+
+## 15. Day 3 nominal budget closure
+
+| Quantity | Day 3 result | Interpretation |
+|---|---:|---|
+| A0 | 67.6747747 dB | hard and stretch pass at TT only |
+| UGB | 16.7454480155 MHz | hard and stretch pass at TT only |
+| PM | 69.0829107715° | hard and stretch pass at TT only |
+| Power | 270.536967 µW | hard and stretch pass at TT only |
+| SR+ / SR- | 8.20202918 / 11.51994781 V/µs | frozen-definition hard and stretch pass at TT only |
+| Slew fit samples, rise/fall | 62 / 47 | monotonic 20–80% least-squares fits |
+| Rise/fall 1% settling | 0.07475 / 0.04075 µs | hard and stretch worst-case pass at TT only |
+| Rising overshoot | 74.99684 mV | reported; not a pass metric |
+| Minimum M1–M10 saturation margin | 0.1161336635 V | positive at nominal |
+
+These figures use the frozen 5 pF || 100 kΩ-to-VSS load. They are
+schematic-level TT results; no PVT, extracted-layout, fabricated, or measured
+claim is made. Settling is measured from the input 50% crossings at 1.01 µs
+rising and 3.03 µs falling.
+The transient completed with dynamic-gmin stepping, which is retained in the
+log audit and must be rechecked across corners. SR is the frozen monotonic
+20–80% least-squares fit, not a maximum derivative.

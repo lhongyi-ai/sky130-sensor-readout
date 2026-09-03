@@ -1,0 +1,32 @@
+metric,value,unit,requirement_or_context,status
+stage_status,DAY3_NOMINAL_COMPLETE_PVT_NOT_RUN,,informational,INFO
+corner,tt,,nominal,INFO
+temperature_c,27,degC,nominal,INFO
+vdd_v,1.8,V,nominal,INFO
+vcm_v,0.9,V,nominal,INFO
+rload_to_vss_ohm,100000,ohm,fixed load,INFO
+cload_pf,5.0,pF,fixed load,INFO
+w6_um,8.839074270408297,um,M6 balance-selected,INFO
+cc_pf,3.0,pF,selected compensation,INFO
+rz_ohm,2000.0,ohm,selected compensation,INFO
+dc_output_v,0.899999206,V,unity-follower DC at VINP=0.9 V,PASS
+supply_current_ua,150.298315,uA,reported,INFO
+quiescent_power_uw,270.536967,uW,<=600 hard; <=400 stretch,PASS
+open_loop_gain_db,67.6747747,dB,>=50 hard; >=60 stretch,PASS
+unity_gain_bandwidth_mhz,16.745448015512064,MHz,>=5 hard; >=10 stretch,PASS
+phase_margin_deg,69.0829107715455,deg,>=55 hard; >=65 stretch,PASS
+loop_phase_at_1hz_deg,-0.006827572150000001,deg,near 0 confirms T sign,PASS
+slew_rate_positive_v_per_us,8.202029183242544,V/us,>=2 hard; >=4 stretch,PASS
+slew_rate_negative_v_per_us,11.519947805768885,V/us,>=2 hard; >=4 stretch,PASS
+slew_rate_positive_fit_points,62,samples,20%-80% least-squares fit; >=5,PASS
+slew_rate_negative_fit_points,47,samples,80%-20% least-squares fit; >=5,PASS
+rising_input_50pct_crossing_us,1.01,us,settling-time reference,INFO
+falling_input_50pct_crossing_us,3.03,us,settling-time reference,INFO
+rising_1pct_settling_us,0.07475000000000001,us,reported,INFO
+falling_1pct_settling_us,0.04075000000000042,us,reported,INFO
+worst_1pct_settling_us,0.07475000000000001,us,<=1.5 hard; <=1 stretch,PASS
+rising_overshoot_mv,74.99684000000006,mV,reported large-signal behavior,INFO
+falling_undershoot_mv,1.858472,mV,reported large-signal behavior,INFO
+all_m1_to_m10_saturated,True,,all model margins >=0,PASS
+minimum_device_saturation_margin_v,0.11613366350000001,V,>=0,PASS
+analysis_scope,schematic-level simulation,,no fabricated/measured claim,INFO

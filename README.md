@@ -4,12 +4,14 @@ Specification-driven design and robustness verification of a 1.8 V, two-stage,
 Miller-compensated CMOS operational transconductance amplifier using the
 open-source SKY130A PDK.
 
-> **Project status — Days 1 and 2 complete; full OTA not yet verified.** The
-> SKY130A toolchain, device characterization, current-mirror test, and TT/1.8 V/
-> 27 °C M1–M5 first-stage characterization are reproducible. The selected first
-> stage has a formal block-level ICMR of 0.76–1.24 V and therefore **fails** the
-> intended 0.8–1.3 V range at its high end. M6/M7, compensation, closed-loop
-> tests, and all full-OTA/PVT result fields remain `NOT_RUN`.
+> **Project status — Day 3 nominal checkpoint complete; PVT not run.** The
+> compact two-stage OTA with a single-`IREF` bias tree, M6/M7, and selected
+> `CC = 3 pF`, `RZ = 2 kΩ` passes the A0, UGB, PM, power, SR, and settling hard
+> and stretch screens at **TT/1.8 V/27 °C only** with the frozen 5 pF ||
+> 100 kΩ-to-VSS load. This is a
+> schematic-level simulation result, not a project-wide qualification: the
+> 13-point PVT matrix and remaining nominal metrics are still pending, and the
+> Day 2 first-stage-only ICMR limitation remains documented.
 
 ## Objective
 
@@ -97,8 +99,8 @@ results, not OTA results.
 
 The candidate dimensions derived from the lookup tables are explicitly tagged
 `INITIAL_CANDIDATE_NOT_FINAL`. Day 2 checked and revised M1–M5 in the connected
-first stage; M6/M7 and every dimension in the complete OTA still require
-operating-point and closed-loop verification.
+first stage; Day 3 then balanced M6, implemented the complete bias tree, and
+verified M1–M10 at the nominal operating point.
 
 ### Day 2 first-stage evidence
 
@@ -143,26 +145,78 @@ Evidence is retained in the [Day 2 summary](results/day2_first_stage_summary.csv
 [first-stage AC response](results/plots/day2_first_stage_ac.png) and
 [DC/ICMR checks](results/plots/day2_first_stage_dc_icmr.png).
 
-### OTA result status
+### Day 3 nominal two-stage OTA evidence
 
-The OTA result templates remain deliberately unpopulated/`NOT_RUN`:
+The compact nominal implementation keeps the Day 2 M1–M5 dimensions, selects
+`M6 = 8.83907427/0.5 µm`, and uses `M7 = 72.2005/0.8 µm`,
+`M8 = M9 = 7.22005/0.8 µm`, and `M10 = 8.08605/0.8 µm`. The M6 width comes
+from a 6–10 µm balance sweep at `VOUT = 0.9 V`: it interpolates the M6 sink
+against the M7 source after subtracting the explicit 9 µA current through the
+100 kΩ load to VSS.
+
+The selected compensation is `CC = 3 pF` in series with `RZ = 2 kΩ`. At
+TT/1.8 V/27 °C, `VCM = 0.9 V`, and 5 pF || 100 kΩ to VSS:
+
+| Metric | Nominal result | Target status |
+|---|---:|---|
+| DC follower output | 0.899999206 V | PASS |
+| Open-loop gain | 67.6747747 dB | hard + stretch PASS |
+| Unity-gain bandwidth | 16.7454480155 MHz | hard + stretch PASS |
+| Phase margin | 69.0829107715° | hard + stretch PASS |
+| Supply current / quiescent power | 150.298315 µA / 270.536967 µW | hard + stretch PASS |
+| Positive / negative slew rate | 8.20202918 / 11.51994781 V/µs | hard + stretch PASS |
+| Rising / falling 1% settling | 0.07475 / 0.04075 µs | hard + stretch PASS |
+| Minimum M1–M10 saturation margin | 0.1161336635 V | PASS |
+
+The rising transient has 74.99684 mV overshoot; the falling undershoot is
+1.858472 mV. SR uses the frozen 20–80% monotonic least-squares definition, with
+62 rising and 47 falling fit samples. The overshoot remains reported even
+though the waveform subsequently meets the 1% settling criterion. Settling is
+timed from the input 50% crossings at 1.01 µs rising and 3.03 µs falling, as
+required by the frozen definition.
+
+The loop was genuinely broken for AC while retaining its DC operating point:
+a 1 GH inductor closes `VOUT` to `VINN` at DC and opens it for AC, while a 1 GF
+coupling capacitor injects a 1 V AC test source into `VINN`. The analyzed return
+ratio is `T = -V(VOUT)/V(VINN)`; its 1 Hz phase of -0.00682757215° checks the
+sign convention. This is not a bandwidth estimate inferred from a closed-loop
+step response.
+
+With 3 pF and effectively zero series resistance, phase margin was only
+33.2236432°. Adding 2 kΩ increased it to 69.0829108° (+35.8592675°), while UGB
+changed from 17.2553341 to 16.745448 MHz. The explored 3 pF/1 kΩ point is kept
+as a failure: 67.6747747 dB gain and 16.3621278 MHz UGB pass, but
+52.2886533° phase margin misses the 55° hard limit.
+
+Evidence is retained in the [nominal summary](results/day3_nominal_summary.csv),
+[device operating-point table](results/day3_nominal_operating_point.csv),
+[final dimensions](results/day3_design_parameters.csv),
+[M6 balance sweep](results/day3_m6_balance.csv),
+[compensation sweep](results/day3_compensation_comparison.csv), and
+[before/after table](results/day3_compensation_before_after.csv). Review the
+[M6 balance plot](results/plots/day3_m6_balance.png),
+[loop-gain comparison](results/plots/day3_loop_gain_compensation.png), and
+[unity-follower transient](results/plots/day3_unity_follower_transient.png).
+
+### Qualification status
+
+The aggregate qualification templates remain `NOT_RUN` pending Day 4. Day 3
+nominal results are retained separately and do not establish worst-case PVT:
 
 - [`results/summary.csv`](results/summary.csv)
 - [`results/pvt_summary.csv`](results/pvt_summary.csv)
 
-When populated, each reported number must link to a retained raw simulation
+When populated, each aggregate number must link to a retained raw simulation
 output and identify its testbench, process corner, voltage, temperature, and
 load. Failed or non-convergent runs must remain visible rather than being
 deleted from the summary.
 
-Required final figures are:
+Day 3 supplies nominal loop-gain and transient figures. Still required are:
 
 1. annotated transistor-level schematic;
-2. loop-gain Bode plot with A0, UGB, and phase-margin markers;
-3. unity-gain step response with SR+, SR-, overshoot, and settling band;
-4. ICMR/output-swing characterization;
-5. PVT comparison for gain, UGB, phase margin, power, and slew rate;
-6. input-referred noise-density plot (recommended).
+2. complete-OTA ICMR/output-swing characterization;
+3. PVT comparison for gain, UGB, phase margin, power, and slew rate;
+4. CMRR, PSRR, load-stability, and input-referred-noise figures.
 
 ## Repository map
 
@@ -177,8 +231,12 @@ sky130-two-stage-ota/
 │   │   ├── nfet_characterization.spice.in
 │   │   ├── pfet_characterization.spice.in
 │   │   └── nmos_current_mirror.spice.in
-│   └── day2/
-│       └── first_stage_characterization.spice.in
+│   ├── day2/
+│   │   └── first_stage_characterization.spice.in
+│   └── day3/
+│       ├── second_stage_balance.spice.in
+│       ├── ota_loopgain.spice.in
+│       └── ota_transient.spice.in
 ├── scripts/
 │   ├── render_netlists.py
 │   ├── analyze_day1.py
@@ -186,12 +244,18 @@ sky130-two-stage-ota/
 │   ├── run_day1.sh
 │   ├── analyze_day2.py
 │   ├── run_day2.sh
+│   ├── render_day3.py
+│   ├── analyze_day3.py
+│   ├── run_day3.sh
 │   └── start_eda_desktop.sh
 ├── docs/
 │   ├── specification.md
 │   ├── design_calculations.md
 │   ├── architecture.md
-│   └── project_log.md
+│   ├── project_log.md
+│   ├── design_log.md
+│   ├── results.md
+│   └── status.md
 ├── schematics/
 │   └── README.md
 └── results/
@@ -205,9 +269,17 @@ sky130-two-stage-ota/
     ├── day2_first_stage_summary.csv
     ├── day2_icmr_gain_sweep.csv
     ├── day2_iteration_summary.csv
+    ├── day3_design_parameters.csv
+    ├── day3_m6_balance.csv
+    ├── day3_compensation_comparison.csv
+    ├── day3_compensation_before_after.csv
+    ├── day3_nominal_operating_point.csv
+    ├── day3_nominal_summary.csv
+    ├── day3_log_audit.csv
     ├── plots/
     ├── raw/day1/
     ├── raw/day2/
+    ├── raw/day3/
     └── smoke/xschem/
 ```
 
@@ -236,16 +308,35 @@ plots with:
 Day 2 is a block-level checkpoint; its gain, bandwidth, power, and ICMR numbers
 must not be reported as full-OTA performance.
 
+Reproduce M6 balancing, all compensation candidates, the selected nominal
+loop-gain result, the unity-follower transient, plots, and the log audit with:
+
+```sh
+./scripts/run_day3.sh
+```
+
+The Day 3 runner uses the same digest-pinned container as Day 1. It deletes and
+regenerates only deterministic Day 3 generated decks and top-level raw outputs;
+retained Day 2 failure evidence is unaffected.
+
 ## Limitations and claims
 
 This is a simulation-based educational IC-design project using an open-source
 PDK. It has not been fabricated or measured in silicon. At the current status,
-only the Day 1 device test structures and Day 2 M1–M5 first-stage block have
-verified schematic-level simulation results; the complete OTA does not.
+the Day 1 device tests, Day 2 M1–M5 block, and Day 3 nominal complete OTA have
+verified schematic-level simulation results. Day 3 is TT-only and does not
+constitute PVT qualification.
 
 - Process corners do not model local device mismatch.
 - No Monte Carlo run means no mismatch, offset-distribution, or yield claim.
 - No extracted netlist means no post-layout performance claim.
+- Day 3 does not yet cover process/voltage/temperature corners, CMRR, PSRR,
+  complete-OTA ICMR or output swing, noise, or the 1/2/5 pF load sweep.
+- The nominal transient log records successful dynamic-gmin stepping; repeat
+  convergence checks remain part of corner verification.
+- Every Day 3 log contains the known PDK subcircuit multiplier-hierarchy
+  warning. The log audit found no fatal token and confirmed `ngspice-47 done`
+  in all 19 logs.
 - DRC/LVS may be claimed only for a block that actually passes both checks.
 - No result may be described as measured; the correct term is simulated.
 - No production-qualified, tapeout-ready, or silicon-validated claim is made.

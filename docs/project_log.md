@@ -191,6 +191,111 @@ it is not a placed-layout area claim.
 - Preserve the Day 2 high-VCM failure as a known limitation; do not silently
   promote the first-stage-only interval to a full-OTA ICMR claim.
 
+## 2026-09-03 — Day 3: second stage, loop break, and nominal compensation
+
+### Completed
+
+- Added the M6 NMOS common-source stage, M7 PMOS load, and single-`IREF` M8–M10
+  bias tree while keeping the compact Day 2 M1–M5 sizes.
+- Balanced M6 against M7 and the explicit 100 kΩ-to-VSS load current.
+- Implemented a DC-closed/AC-open loop-gain testbench rather than inferring
+  loop gain from the follower response.
+- Retained 17 compensation candidates and selected `CC = 3 pF`, `RZ = 2 kΩ`.
+- Ran the selected direct-feedback unity follower with 5 pF || 100 kΩ to VSS.
+- Audited 19 top-level logs and produced the Day 3 summary, operating-point,
+  comparison, and plot artifacts.
+
+### Final compact nominal sizing
+
+| Device | Geometry |
+|---|---|
+| M1/M2 | each `16.83798/0.5 µm` |
+| M3/M4 | each side two `25/0.5 µm` units, 50 µm total width |
+| M5 | `25.8754/0.8 µm` |
+| M6 | `8.83907427/0.5 µm` |
+| M7 | `72.2005/0.8 µm` |
+| M8/M9 | each `7.22005/0.8 µm` |
+| M10 | `8.08605/0.8 µm` |
+
+The M6 balance residual `IM7 - IM6 - VOUT/100 kΩ` changes sign between
+8.8 µm (+0.471056959 µA) and 8.9 µm (-0.734485599 µA). Interpolation selects
+8.839074270408297 µm. At the final operating point, M6/M7 carry
+83.2666517/92.2666438 µA and the load takes approximately 9 µA.
+
+### Nominal result at TT/1.8 V/27 °C
+
+| Metric | Result | Interpretation |
+|---|---:|---|
+| DC follower output | 0.899999206 V | PASS |
+| Open-loop gain | 67.6747747 dB | hard + stretch PASS at nominal |
+| UGB | 16.7454480155 MHz | hard + stretch PASS at nominal |
+| Phase margin | 69.0829107715° | hard + stretch PASS at nominal |
+| Supply current / power | 150.298315 µA / 270.536967 µW | hard + stretch power PASS at nominal |
+| SR+ / SR- | 8.20202918 / 11.51994781 V/µs | hard + stretch PASS at nominal |
+| Rise/fall slew-fit samples | 62 / 47 | frozen 20–80% least-squares method |
+| Rise/fall 1% settling | 0.07475 / 0.04075 µs | hard + stretch worst-case PASS at nominal |
+| Rise overshoot / fall undershoot | 74.99684 / 1.858472 mV | reported |
+| Minimum M1–M10 saturation margin | 0.1161336635 V (M5) | PASS at nominal |
+
+The SR extractor uses least-squares fits over the monotonic 20–80% rising and
+80–20% falling intervals required by the frozen specification. The retained
+sample counts exceed the five-point validity minimum.
+Settling is measured from the corresponding input 50% crossing: 1.01 µs for
+the rising edge and 3.03 µs for the falling edge.
+
+### Implemented loop break and sign check
+
+- `LBREAK = 1 GH` connects `VOUT` to `VINN`: effectively closed for DC bias and
+  open for AC.
+- `CBREAK = 1 GF` couples the 1 V AC test source to `VINN`: open at DC and
+  effectively short for AC.
+- The analyzer uses `T = -V(VOUT)/V(VINN)` and unwraps its phase.
+- Selected low-frequency phase is -0.00682757215° at 1 Hz, validating the near-
+  zero phase expected from the chosen return-ratio sign.
+
+### Compensation before/after and retained failure
+
+| Network | A0 | UGB | PM | State |
+|---|---:|---:|---:|---|
+| 3 pF, `RZ ≈ 0` | 67.6747747 dB | 17.2553341 MHz | 33.2236432° | baseline FAIL |
+| 3 pF, 1 kΩ | 67.6747747 dB | 16.3621278 MHz | 52.2886533° | hard-PM FAIL retained |
+| 3 pF, 2 kΩ | 67.6747747 dB | 16.7454480 MHz | 69.0829108° | selected PASS |
+
+The selected resistor improves PM by 35.8592675° relative to the 3 pF-only
+baseline with a 2.95495% UGB reduction. The 3 pF/1 kΩ point is not discarded:
+its gain and UGB pass, but its PM misses the 55° hard limit.
+
+### Numerical and scope limits
+
+- `results/day3_log_audit.csv` shows all 19 logs completed without an audited
+  fatal token.
+- Each log contains one known PDK multiplier-hierarchy warning.
+- Only `nominal_transient.log` used successful dynamic-gmin stepping; this is
+  disclosed and must be rechecked at corners.
+- Results are TT-only and schematic-level. PVT, complete-OTA ICMR/output swing,
+  CMRR, PSRR, noise, and 1/2/5 pF load stability remain `NOT_RUN`.
+- The Day 2 first-stage-only 0.76–1.24 V ICMR and 1.3 V failure remain known;
+  Day 3 did not replace them with a complete-OTA ICMR result.
+
+### Evidence paths
+
+- Final parameters and M6 balance: `results/day3_design_parameters.csv`,
+  `results/day3_m6_balance.csv`
+- Compensation: `results/day3_compensation_comparison.csv`,
+  `results/day3_compensation_before_after.csv`
+- Nominal summary/OP: `results/day3_nominal_summary.csv`,
+  `results/day3_nominal_operating_point.csv`
+- Plots: `results/plots/day3_m6_balance.png`,
+  `results/plots/day3_loop_gain_compensation.png`,
+  `results/plots/day3_unity_follower_transient.png`
+- Raw decks/logs/data: `results/raw/day3/`
+
+### Next action
+
+- Run the 13-point PVT matrix and remaining nominal/load-stability
+  measurements, applying the same frozen SR/settling definitions.
+- Preserve nonconvergence and spec failures in the aggregate summaries.
+
 ## Daily entry template
 
 ### YYYY-MM-DD — Day N: short title

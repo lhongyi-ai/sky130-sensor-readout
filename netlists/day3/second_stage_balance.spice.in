@@ -1,0 +1,59 @@
+* Day 3: temporary M6 width balance sweep at VOUT=0.9 V.
+* The target explicitly includes the 100-kohm load current to VSS (9 uA).
+* This bench is a sizing aid only; the production OTA uses closed-loop DC bias.
+
+.lib "@@MODEL_DECK@@" @@CORNER@@
+.temp 27
+
+.param VDDVAL=1.8 IREFVAL=10u RLOAD=100k
+.param W6=10.0 L6=0.5
+.param W7=72.2005 L7=0.8
+.param W8=7.22005 L8=0.8
+.param W9=7.22005 L9=0.8
+.param W10=8.08605 L10=0.8
+
+VDD vdd 0 {VDDVAL}
+IREF vbp 0 {IREFVAL}
+VVX vx 0 0.792073469
+VCLAMP vout 0 0.9
+RLOAD1 vout 0 {RLOAD}
+
+* Single-IREF bias: M8 establishes VBP; M9 feeds diode-connected M10 at VBN.
+XM8  vbp  vbp vdd vdd sky130_fd_pr__pfet_01v8 L={L8}  W={W8}  nf=1 mult=1
+XM9  vbn  vbp vdd vdd sky130_fd_pr__pfet_01v8 L={L9}  W={W9}  nf=1 mult=1
+XM10 vbn  vbn 0   0   sky130_fd_pr__nfet_01v8 L={L10} W={W10} nf=1 mult=1
+
+XM6 vout vx  0   0   sky130_fd_pr__nfet_01v8 L={L6} W={W6} nf=1 mult=1
+XM7 vout vbp vdd vdd sky130_fd_pr__pfet_01v8 L={L7} W={W7} nf=1 mult=1
+
+.save all
+.save @m.xm6.msky130_fd_pr__nfet_01v8[id]
+.save @m.xm7.msky130_fd_pr__pfet_01v8[id]
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set appendwrite
+
+setplot const
+let w6_iter=6
+dowhile w6_iter le 10.000001
+  alterparam W6=$&w6_iter
+  reset
+  op
+  let w6_record=0*v(vout)+const.w6_iter
+  let m6_id=abs(@m.xm6.msky130_fd_pr__nfet_01v8[id])
+  let m7_id=abs(@m.xm7.msky130_fd_pr__pfet_01v8[id])
+  * RLOAD is fixed at 100 kohm here, so VOUT=0.9 V contributes exactly 9 uA.
+  let rl_current=v(vout)/100k
+  let residual=m7_id-m6_id-rl_current
+  wrdata results/raw/day3/second_stage_balance.tsv w6_record m6_id m7_id rl_current residual
+  setplot const
+  let w6_iter=w6_iter+0.1
+end
+unset appendwrite
+quit
+.endc
+
+.end
