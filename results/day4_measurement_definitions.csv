@@ -1,0 +1,13 @@
+metric,definition,audit_note,manifest_sha256
+A0,20log10(abs(VOUT/(VINP-VINN))) at 1 Hz,Actual differential stimulus retained; DC follower closed through 1-GH LBREAK and opened for AC,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+UGB,first downward 0-dB crossing of signed T=-VOUT/VINN,Every crossing counted; boundary or multiple downward crossing is a failure,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+PM,180 deg plus unwrapped complex phase(T) at UGB,Low-frequency loop phase must be within 5 deg of zero,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+Power,(VDD-VSS)*abs(I(VDD)),Signed I(VDD) is retained separately,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+SR+/-,least-squares slope over directed monotonic 20%-80% / 80%-20% output interval,0.8-V to 1.2-V command; 20-ns input edges,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+Settling,earliest time after interpolated input 50% crossing that remains within 4 mV,Rise/fall kept separately; worse direction reported,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+ICMR,largest continuous valid 10-mV interval containing 0.9 V,"Gain >= nominal-3 dB, M1-M10 margins >=0, output uses 50-mV rail guard",6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+Output swing,largest continuous valid interval common to forward and reverse sweeps,Equal 10-Meg RIN/RFB; <=10-mV tracking; M6/M7 saturated,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+CMRR,20log10(abs(Ad/Acm)),Ad and Acm measured at same frequency/bias,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+PSRR+/-,20log10(abs(Ad/Aps)),1-V AC supply perturbation; explicit VSS bench for PSRR-,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+Noise,SPICE input-referred density; RMS=sqrt(integral density^2 df),10 Hz-1 MHz; report only; cross-checked against output noise/Ad,6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab
+Load stability,PM plus unity-follower transient,"CL=1/2/5 pF, RL=100 kOhm; no sustained/growing oscillation",6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab

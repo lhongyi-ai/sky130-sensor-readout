@@ -1,0 +1,31 @@
+* Day 4 independent differential open-loop AC test.
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+.lib "@@PDK_LIB_PATH@@" @@CORNER@@
+.temp @@TEMP_C@@
+.include "results/generated/day4/ota_subckt.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS @@VDD_V@@
+IREF VBP VSS 10u
+* LBREAK closes the DC follower; it opens for AC.  The 1-GF coupling
+* capacitor supplies the -0.5-V small-signal half stimulus to VINN.
+VINP VINP VSS DC 0.9 AC 0.5
+VNEG VNEG VSS DC 0 AC -0.5
+LBREAK VOUT VINN 1G
+CBREAK VNEG VINN 1G
+RLOAD VOUT VSS 100k
+CLOAD VOUT VSS 5p
+XOTA VDD VSS VINP VINN VOUT VBP SKY130_TWO_STAGE_OTA
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+ac dec 120 1 1G
+let vdiff=v(VINP)-v(VINN)
+let ad=v(VOUT)/vdiff
+wrdata @@RAW_PREFIX@@_diff_ac.tsv ad vdiff v(VOUT)
+quit
+.endc
+.end

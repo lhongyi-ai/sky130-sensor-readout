@@ -1,0 +1,26 @@
+* Canonical Day 4 OTA subcircuit.
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+* Pin order: VDD VSS VINP VINN VOUT VBP(IREF input node)
+.subckt SKY130_TWO_STAGE_OTA VDD VSS VINP VINN VOUT VBP
+
+* Single-IREF bias tree.  Every bulk and return has an explicit rail.
+XM8  VBP  VBP VDD VDD sky130_fd_pr__pfet_01v8 L=@@L8@@ W=@@W8@@ nf=1 mult=1
+XM9  VBN  VBP VDD VDD sky130_fd_pr__pfet_01v8 L=@@L9@@ W=@@W9@@ nf=1 mult=1
+XM10 VBN  VBN VSS VSS sky130_fd_pr__nfet_01v8 L=@@L10@@ W=@@W10@@ nf=1 mult=1
+
+* Differential first stage; M3/M4 are each two explicit parallel units.
+XM1  NMIR VINN TAIL VSS sky130_fd_pr__nfet_01v8 L=@@L1@@ W=@@W1@@ nf=1 mult=1
+XM2  VX   VINP TAIL VSS sky130_fd_pr__nfet_01v8 L=@@L2@@ W=@@W2@@ nf=1 mult=1
+XM3A NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=@@L3@@ W=@@W3UNIT@@ nf=1 mult=1
+XM3B NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=@@L3@@ W=@@W3UNIT@@ nf=1 mult=1
+XM4A VX   NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=@@L4@@ W=@@W4UNIT@@ nf=1 mult=1
+XM4B VX   NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=@@L4@@ W=@@W4UNIT@@ nf=1 mult=1
+XM5  TAIL VBN  VSS VSS sky130_fd_pr__nfet_01v8 L=@@L5@@ W=@@W5@@ nf=1 mult=1
+
+* Common-source second stage and Miller compensation.
+XM6 VOUT VX  VSS VSS sky130_fd_pr__nfet_01v8 L=@@L6@@ W=@@W6@@ nf=1 mult=1
+XM7 VOUT VBP VDD VDD sky130_fd_pr__pfet_01v8 L=@@L7@@ W=@@W7@@ nf=1 mult=1
+RZ1 VX NCC @@RZ_OHM@@
+CC1 NCC VOUT @@CC_F@@
+
+.ends SKY130_TWO_STAGE_OTA

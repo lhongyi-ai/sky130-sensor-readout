@@ -1,0 +1,23 @@
+* Day 4 formal unity-follower slew/settling transient.
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+.lib "@@PDK_LIB_PATH@@" @@CORNER@@
+.temp @@TEMP_C@@
+.include "results/generated/day4/ota_subckt.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS @@VDD_V@@
+IREF VBP VSS 10u
+VINP VINP VSS PULSE(0.8 1.2 1u 20n 20n 2u 5u)
+RLOAD VOUT VSS 100k
+CLOAD VOUT VSS @@CLOAD_PF@@p
+XOTA VDD VSS VINP VOUT VOUT VBP SKY130_TWO_STAGE_OTA
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 0.5n 5u
+wrdata @@RAW_PREFIX@@_transient.tsv v(VINP) v(VOUT)
+quit
+.endc
+.end

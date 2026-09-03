@@ -1,0 +1,74 @@
+* Day 4 return-ratio and operating-point test.
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+.lib "@@PDK_LIB_PATH@@" @@CORNER@@
+.temp @@TEMP_C@@
+.include "results/generated/day4/ota_subckt.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS @@VDD_V@@
+IREF VBP VSS 10u
+VINP VINP VSS DC 0.9 AC 0
+VTEST VTEST VSS DC 0 AC 1
+* Production return-ratio method inherited from the validated Day 3 bench.
+LBREAK VOUT VINN 1G
+CBREAK VTEST VINN 1G
+RLOAD VOUT VSS 100k
+CLOAD VOUT VSS @@CLOAD_PF@@p
+XOTA VDD VSS VINP VINN VOUT VBP SKY130_TWO_STAGE_OTA
+
+.save all
+.save i(VDD)
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+let ivdd_signed=i(VDD)
+let idd=abs(ivdd_signed)
+let m1_id=abs(@m.xota.xm1.msky130_fd_pr__nfet_01v8[id])
+let m1_gm=abs(@m.xota.xm1.msky130_fd_pr__nfet_01v8[gm])
+let m1_gds=abs(@m.xota.xm1.msky130_fd_pr__nfet_01v8[gds])
+let m1_vdsat=abs(@m.xota.xm1.msky130_fd_pr__nfet_01v8[vdsat])
+let m2_id=abs(@m.xota.xm2.msky130_fd_pr__nfet_01v8[id])
+let m2_gm=abs(@m.xota.xm2.msky130_fd_pr__nfet_01v8[gm])
+let m2_gds=abs(@m.xota.xm2.msky130_fd_pr__nfet_01v8[gds])
+let m2_vdsat=abs(@m.xota.xm2.msky130_fd_pr__nfet_01v8[vdsat])
+let m3_id=abs(@m.xota.xm3a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xota.xm3b.msky130_fd_pr__pfet_01v8[id])
+let m3_gm=abs(@m.xota.xm3a.msky130_fd_pr__pfet_01v8[gm])+abs(@m.xota.xm3b.msky130_fd_pr__pfet_01v8[gm])
+let m3_gds=abs(@m.xota.xm3a.msky130_fd_pr__pfet_01v8[gds])+abs(@m.xota.xm3b.msky130_fd_pr__pfet_01v8[gds])
+let m3_vdsat=abs(@m.xota.xm3a.msky130_fd_pr__pfet_01v8[vdsat])
+let m4_id=abs(@m.xota.xm4a.msky130_fd_pr__pfet_01v8[id])+abs(@m.xota.xm4b.msky130_fd_pr__pfet_01v8[id])
+let m4_gm=abs(@m.xota.xm4a.msky130_fd_pr__pfet_01v8[gm])+abs(@m.xota.xm4b.msky130_fd_pr__pfet_01v8[gm])
+let m4_gds=abs(@m.xota.xm4a.msky130_fd_pr__pfet_01v8[gds])+abs(@m.xota.xm4b.msky130_fd_pr__pfet_01v8[gds])
+let m4_vdsat=abs(@m.xota.xm4a.msky130_fd_pr__pfet_01v8[vdsat])
+let m5_id=abs(@m.xota.xm5.msky130_fd_pr__nfet_01v8[id])
+let m5_gm=abs(@m.xota.xm5.msky130_fd_pr__nfet_01v8[gm])
+let m5_gds=abs(@m.xota.xm5.msky130_fd_pr__nfet_01v8[gds])
+let m5_vdsat=abs(@m.xota.xm5.msky130_fd_pr__nfet_01v8[vdsat])
+let m6_id=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[id])
+let m6_gm=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[gm])
+let m6_gds=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[gds])
+let m6_vdsat=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[vdsat])
+let m7_id=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[id])
+let m7_gm=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[gm])
+let m7_gds=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[gds])
+let m7_vdsat=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[vdsat])
+let m8_id=abs(@m.xota.xm8.msky130_fd_pr__pfet_01v8[id])
+let m8_gm=abs(@m.xota.xm8.msky130_fd_pr__pfet_01v8[gm])
+let m8_gds=abs(@m.xota.xm8.msky130_fd_pr__pfet_01v8[gds])
+let m8_vdsat=abs(@m.xota.xm8.msky130_fd_pr__pfet_01v8[vdsat])
+let m9_id=abs(@m.xota.xm9.msky130_fd_pr__pfet_01v8[id])
+let m9_gm=abs(@m.xota.xm9.msky130_fd_pr__pfet_01v8[gm])
+let m9_gds=abs(@m.xota.xm9.msky130_fd_pr__pfet_01v8[gds])
+let m9_vdsat=abs(@m.xota.xm9.msky130_fd_pr__pfet_01v8[vdsat])
+let m10_id=abs(@m.xota.xm10.msky130_fd_pr__nfet_01v8[id])
+let m10_gm=abs(@m.xota.xm10.msky130_fd_pr__nfet_01v8[gm])
+let m10_gds=abs(@m.xota.xm10.msky130_fd_pr__nfet_01v8[gds])
+let m10_vdsat=abs(@m.xota.xm10.msky130_fd_pr__nfet_01v8[vdsat])
+wrdata @@RAW_PREFIX@@_op.tsv v(VOUT) v(XOTA.VX) v(XOTA.VBN) v(VBP) v(XOTA.TAIL) v(XOTA.NMIR) v(VINP) v(VINN) ivdd_signed idd m1_id m1_gm m1_gds m1_vdsat m2_id m2_gm m2_gds m2_vdsat m3_id m3_gm m3_gds m3_vdsat m4_id m4_gm m4_gds m4_vdsat m5_id m5_gm m5_gds m5_vdsat m6_id m6_gm m6_gds m6_vdsat m7_id m7_gm m7_gds m7_vdsat m8_id m8_gm m8_gds m8_vdsat m9_id m9_gm m9_gds m9_vdsat m10_id m10_gm m10_gds m10_vdsat
+ac dec 120 1 1G
+let tloop=-v(VOUT)/v(VINN)
+wrdata @@RAW_PREFIX@@_loop.tsv tloop v(VINN) v(VOUT)
+quit
+.endc
+.end

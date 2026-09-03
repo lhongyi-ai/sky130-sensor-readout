@@ -1,0 +1,26 @@
+* Day 4 nominal input-referred noise from 10 Hz through 1 MHz.
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+.lib "@@PDK_LIB_PATH@@" tt
+.temp 27
+.include "results/generated/day4/ota_subckt.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS 1.8
+IREF VBP VSS 10u
+VINP VINP VSS DC 0.9 AC 1
+VINN VINN VSS DC 0.9 AC 0
+RLOAD VOUT VSS 100k
+CLOAD VOUT VSS 5p
+XOTA VDD VSS VINP VINN VOUT VBP SKY130_TWO_STAGE_OTA
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+noise v(VOUT) VINP dec 100 10 1Meg
+setplot noise1
+wrdata results/raw/day4/nominal/noise.tsv onoise_spectrum inoise_spectrum
+quit
+.endc
+.end

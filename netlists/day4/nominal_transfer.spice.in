@@ -1,0 +1,26 @@
+* Day 4 nominal differential/common-mode/PSRR transfer bench.
+* MODE=@@MODE@@
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+.lib "@@PDK_LIB_PATH@@" tt
+.temp 27
+.include "results/generated/day4/ota_subckt.spice"
+
+@@SUPPLY_SOURCES@@
+IREF VBP VSS 10u
+@@INPUT_SOURCES@@
+RLOAD VOUT VSS 100k
+CLOAD VOUT VSS 5p
+XOTA VDD VSS VINP VINN VOUT VBP SKY130_TWO_STAGE_OTA
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+ac dec 120 1 1G
+let response=@@RESPONSE_EXPR@@
+let stimulus=@@STIMULUS_EXPR@@
+wrdata @@RAW_PREFIX@@.tsv response stimulus v(VOUT)
+quit
+.endc
+.end

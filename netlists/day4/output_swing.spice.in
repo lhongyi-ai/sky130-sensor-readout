@@ -1,0 +1,47 @@
+* Day 4 output-swing DC sweep using offset-inverting closed-loop drive.
+* VOUT_command = 1.8 V - VDRIVE; RIN=RFB=10 Megohm.
+* DAY4_MANIFEST_SHA256=@@MANIFEST_SHA256@@
+.lib "@@PDK_LIB_PATH@@" tt
+.temp 27
+.include "results/generated/day4/ota_subckt.spice"
+
+VSSSUP VSS 0 0
+VDD VDD VSS 1.8
+IREF VBP VSS 10u
+VINP VINP VSS 0.9
+VDRIVE DRIVE VSS 1.8
+RIN DRIVE VINN 10Meg
+RFB VOUT VINN 10Meg
+RLOAD VOUT VSS 100k
+CLOAD VOUT VSS 5p
+XOTA VDD VSS VINP VINN VOUT VBP SKY130_TWO_STAGE_OTA
+
+* Explicit saves are required so these model operating-point quantities remain
+* pointwise vectors across each .dc sweep rather than final-point scalars.
+.save all
+.save @m.xota.xm6.msky130_fd_pr__nfet_01v8[id]
+.save @m.xota.xm6.msky130_fd_pr__nfet_01v8[vdsat]
+.save @m.xota.xm7.msky130_fd_pr__pfet_01v8[id]
+.save @m.xota.xm7.msky130_fd_pr__pfet_01v8[vdsat]
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+dc VDRIVE 1.8 0 -0.01
+let command=1.8-v(DRIVE)
+let m6_id=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[id])
+let m6_vdsat=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[vdsat])
+let m7_id=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[id])
+let m7_vdsat=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[vdsat])
+wrdata results/raw/day4/nominal/output_swing_forward.tsv command v(DRIVE) v(VOUT) v(VINN) v(XOTA.VX) m6_id m6_vdsat m7_id m7_vdsat
+dc VDRIVE 0 1.8 0.01
+let command=1.8-v(DRIVE)
+let m6_id=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[id])
+let m6_vdsat=abs(@m.xota.xm6.msky130_fd_pr__nfet_01v8[vdsat])
+let m7_id=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[id])
+let m7_vdsat=abs(@m.xota.xm7.msky130_fd_pr__pfet_01v8[vdsat])
+wrdata results/raw/day4/nominal/output_swing_reverse.tsv command v(DRIVE) v(VOUT) v(VINN) v(XOTA.VX) m6_id m6_vdsat m7_id m7_vdsat
+quit
+.endc
+.end
