@@ -1,0 +1,137 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: ** sch_path: /foss/pdks/sky130a/libs.tech/xschem/sky130_tests/test_inv.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+z[1]                              -1.83744e-15
+z[2]                              -1.84433e-15
+z[3]                              -1.83885e-15
+z[4]                              -1.84007e-15
+z[5]                              -1.83826e-15
+z[6]                              -1.83277e-15
+z[0]                              -1.84302e-15
+y[1]                               7.07733e-18
+y[2]                              -4.66957e-18
+y[3]                              -1.76109e-18
+y[4]                              -7.23729e-19
+y[5]                              -4.22267e-18
+y[6]                               7.73835e-18
+y[0]                               3.04076e-18
+x4.dn                             -1.83744e-15
+vss                                          0
+x4.dp                             -1.83744e-15
+vcc                                          0
+x1.dn                             -1.84433e-15
+x1.dp                             -1.84433e-15
+x2.dn                             -1.83885e-15
+x2.dp                             -1.83885e-15
+x3.dn                             -1.84007e-15
+x3.dp                             -1.84007e-15
+x5.dn                             -1.83826e-15
+x5.dp                             -1.83826e-15
+x6.dn                             -1.83277e-15
+x6.dp                             -1.83277e-15
+x7.dn                             -1.84302e-15
+x7.dp                             -1.84302e-15
+vvcc#branch                        2.20635e-26
+vvss#branch                       -2.20635e-26
+v.x7.vmeas1#branch                -3.18158e-27
+v.x7.vmeas#branch                 -3.18158e-27
+v.x6.vmeas1#branch                  -3.168e-27
+v.x6.vmeas#branch                   -3.168e-27
+v.x5.vmeas1#branch                -3.17764e-27
+v.x5.vmeas#branch                 -3.17764e-27
+v.x3.vmeas1#branch                -3.17492e-27
+v.x3.vmeas#branch                 -3.17492e-27
+v.x2.vmeas1#branch                -3.17373e-27
+v.x2.vmeas#branch                 -3.17373e-27
+v.x1.vmeas1#branch                -3.18084e-27
+v.x1.vmeas#branch                 -3.18084e-27
+v.x4.vmeas1#branch                -3.16759e-27
+v.x4.vmeas#branch                 -3.16759e-27
+
+
+No. of Data Rows : 7520
+binary raw file "test_inv.raw"
+Reset re-loads circuit ** sch_path: /foss/pdks/sky130a/libs.tech/xschem/sky130_tests/test_inv.sch
+
+Circuit: ** sch_path: /foss/pdks/sky130a/libs.tech/xschem/sky130_tests/test_inv.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+z[1]                              -1.83744e-15
+z[2]                              -1.84433e-15
+z[3]                              -1.83885e-15
+z[4]                              -1.84007e-15
+z[5]                              -1.83826e-15
+z[6]                              -1.83277e-15
+z[0]                              -1.84302e-15
+y[1]                               7.07733e-18
+y[2]                              -4.66957e-18
+y[3]                              -1.76109e-18
+y[4]                              -7.23729e-19
+y[5]                              -4.22267e-18
+y[6]                               7.73835e-18
+y[0]                               3.04076e-18
+x4.dn                             -1.83744e-15
+vss                                          0
+x4.dp                             -1.83744e-15
+vcc                                          0
+x1.dn                             -1.84433e-15
+x1.dp                             -1.84433e-15
+x2.dn                             -1.83885e-15
+x2.dp                             -1.83885e-15
+x3.dn                             -1.84007e-15
+x3.dp                             -1.84007e-15
+x5.dn                             -1.83826e-15
+x5.dp                             -1.83826e-15
+x6.dn                             -1.83277e-15
+x6.dp                             -1.83277e-15
+x7.dn                             -1.84302e-15
+x7.dp                             -1.84302e-15
+vvcc#branch                        2.20635e-26
+vvss#branch                       -2.20635e-26
+v.x7.vmeas1#branch                -3.18158e-27
+v.x7.vmeas#branch                 -3.18158e-27
+v.x6.vmeas1#branch                  -3.168e-27
+v.x6.vmeas#branch                   -3.168e-27
+v.x5.vmeas1#branch                -3.17764e-27
+v.x5.vmeas#branch                 -3.17764e-27
+v.x3.vmeas1#branch                -3.17492e-27
+v.x3.vmeas#branch                 -3.17492e-27
+v.x2.vmeas1#branch                -3.17373e-27
+v.x2.vmeas#branch                 -3.17373e-27
+v.x1.vmeas1#branch                -3.18084e-27
+v.x1.vmeas#branch                 -3.18084e-27
+v.x4.vmeas1#branch                -3.16759e-27
+v.x4.vmeas#branch                 -3.16759e-27
+
+
+No. of Data Rows : 1520
+binary raw file "test_inv.raw"
+ngspice-47 done

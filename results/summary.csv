@@ -1,0 +1,20 @@
+metric,scope,hard_target,stretch_target,nominal_result,worst_pvt_result,worst_condition,unit,status,evidence_path,notes
+Open-loop DC gain,13-point PVT,>=50,>=60,,,,dB,NOT_RUN,,
+Unity-gain bandwidth,13-point PVT,>=5,>=10,,,,MHz,NOT_RUN,,
+Phase margin,13-point PVT,>=55,>=65,,,,deg,NOT_RUN,,
+Quiescent power,13-point PVT,<=600,<=400,,,,uW,NOT_RUN,,
+Positive slew rate,13-point PVT,>=2,>=4,,,,V/us,NOT_RUN,,
+Negative slew rate,13-point PVT,>=2,>=4,,,,V/us,NOT_RUN,,
+1% settling time,Nominal,<=1.5,<=1.0,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,us,NOT_RUN,,Report worse direction; retain rise and fall separately
+CMRR at 1 kHz,Nominal,>=55,>=65,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,dB,NOT_RUN,,
+PSRR+ at 1 kHz,Nominal,>=45,>=55,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,dB,NOT_RUN,,
+PSRR- at 1 kHz,Nominal,>=45,>=55,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,dB,NOT_RUN,,
+ICMR low endpoint,Nominal,<=0.8,lower is better,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,V,NOT_RUN,,Continuous valid interval must include 0.8-1.3 V
+ICMR high endpoint,Nominal,>=1.3,higher is better,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,V,NOT_RUN,,Continuous valid interval must include 0.8-1.3 V
+Output-swing low endpoint,Nominal,<=0.3,lower is better,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,V,NOT_RUN,,Continuous valid interval must include 0.3-1.5 V
+Output-swing high endpoint,Nominal,>=1.5,higher is better,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,V,NOT_RUN,,Continuous valid interval must include 0.3-1.5 V
+Input-referred noise density at 1 kHz,Nominal,REPORT,lower is better,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,nV/sqrtHz,NOT_RUN,,No pass/fail threshold
+Integrated input-referred noise 10 Hz-1 MHz,Nominal,REPORT,lower is better,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,uV_rms,NOT_RUN,,No pass/fail threshold
+PM at CL=1 pF,Nominal load sweep,>=55,>=65,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,deg,NOT_RUN,,RL=100 kOhm
+PM at CL=2 pF,Nominal load sweep,>=55,>=65,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,deg,NOT_RUN,,RL=100 kOhm
+PM at CL=5 pF,Nominal load sweep,>=55,>=65,,N/A_NOT_SWEPT,N/A_NOT_SWEPT,deg,NOT_RUN,,RL=100 kOhm; same as nominal core condition

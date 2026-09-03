@@ -1,0 +1,35 @@
+* SKY130A standard-VT PFET characterization at VSD = 0.9 V.
+* Generated from this template; do not edit files under results/generated.
+
+.lib "@@MODEL_DECK@@" @@CORNER@@
+.temp 27
+.param WCH=5 LCH=@@LENGTH_UM@@
+
+VDD vdd 0 1.8
+VG gate 0 1.8
+VD drain 0 0.9
+XMP drain gate vdd vdd sky130_fd_pr__pfet_01v8 L={LCH} W={WCH} nf=1 mult=1
+
+.save @m.xmp.msky130_fd_pr__pfet_01v8[id]
+.save @m.xmp.msky130_fd_pr__pfet_01v8[gm]
+.save @m.xmp.msky130_fd_pr__pfet_01v8[gds]
+.save @m.xmp.msky130_fd_pr__pfet_01v8[vth]
+.save @m.xmp.msky130_fd_pr__pfet_01v8[vdsat]
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+dc VG 1.8 0 -0.01
+let id_abs = abs(@m.xmp.msky130_fd_pr__pfet_01v8[id])
+let gm_abs = abs(@m.xmp.msky130_fd_pr__pfet_01v8[gm])
+let gds_abs = abs(@m.xmp.msky130_fd_pr__pfet_01v8[gds])
+let vth_abs = abs(@m.xmp.msky130_fd_pr__pfet_01v8[vth])
+let vdsat_abs = abs(@m.xmp.msky130_fd_pr__pfet_01v8[vdsat])
+let gm_id = gm_abs / id_abs
+let gm_gds = gm_abs / gds_abs
+wrdata results/raw/day1/pfet_characterization_l@@LENGTH_TAG@@.tsv id_abs gm_abs gds_abs vth_abs vdsat_abs gm_id gm_gds
+quit
+.endc
+
+.end

@@ -1,0 +1,35 @@
+* 1:1 NMOS current-mirror compliance sweep at IREF = 10 uA.
+
+.lib "@@MODEL_DECK@@" @@CORNER@@
+.temp 27
+.param WCH=5 LCH=0.8
+
+VDD vdd 0 1.8
+IREF vdd nref 10u
+VOUT out 0 0
+XMREF nref nref 0 0 sky130_fd_pr__nfet_01v8 L={LCH} W={WCH} nf=1 mult=1
+XMOUT out nref 0 0 sky130_fd_pr__nfet_01v8 L={LCH} W={WCH} nf=1 mult=1
+
+.save @m.xmref.msky130_fd_pr__nfet_01v8[id]
+.save @m.xmout.msky130_fd_pr__nfet_01v8[id]
+.save @m.xmout.msky130_fd_pr__nfet_01v8[vdsat]
+.save v(out)
+.save i(VOUT)
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+dc VOUT 0 1.8 0.01
+let iref_forced = 10u
+let iref_mos = abs(@m.xmref.msky130_fd_pr__nfet_01v8[id])
+let iout_mos = abs(i(VOUT))
+let error_vs_forced_pct = 100 * abs(iout_mos - iref_forced) / iref_forced
+let error_vs_reference_mos_pct = 100 * abs(iout_mos - iref_mos) / iref_mos
+let vdsat_abs = abs(@m.xmout.msky130_fd_pr__nfet_01v8[vdsat])
+let sat_margin = v(out) - vdsat_abs
+wrdata results/raw/day1/nmos_current_mirror.tsv iref_forced iref_mos iout_mos error_vs_forced_pct error_vs_reference_mos_pct vdsat_abs sat_margin
+quit
+.endc
+
+.end

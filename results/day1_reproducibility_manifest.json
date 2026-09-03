@@ -1,0 +1,93 @@
+{
+  "container": {
+    "architecture": "aarch64",
+    "docker_client_version": "29.7.2",
+    "docker_server_version": "29.5.2",
+    "local_image_id": "sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7",
+    "ngspice": "** ngspice-47 : Circuit level simulation program",
+    "python": "Python 3.12.3",
+    "requested_image_reference": "hpretl/iic-osic-tools@sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7"
+  },
+  "generated_at_utc": "2026-09-03T09:39:37.891335+00:00",
+  "host_analysis": {
+    "matplotlib": "3.10.6",
+    "numpy": "2.3.2",
+    "pandas": "2.3.2",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python": "3.12.6 (v3.12.6:a4a2d2b0d85, Sep  6 2024, 16:08:03) [Clang 13.0.0 (clang-1300.0.29.30)]"
+  },
+  "log_validation": {
+    "accepted_warning": "Warning: m=xx on .subckt line will override multiplier m hierarchy!",
+    "accepted_warning_occurrences": 11,
+    "expected_rows_per_log": 181,
+    "logs_checked": 11,
+    "status": "PASS"
+  },
+  "pdk": {
+    "model_deck": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/ngspice/sky130.lib.spice",
+    "model_deck_sha256": "17c208a699228f5acb87bf59c09c22a4c4d3937b6766b4957737d34e8e075f64",
+    "revision": "026824c7969ce6f4fc9678e6ca04b0a06a596c4b"
+  },
+  "schema_version": 1,
+  "sha256": {
+    "authored_inputs": {
+      "netlists/day1/nfet_characterization.spice.in": "06fc10038309d0f96228e8761f3853e899bb0246e47f1c261c5078a48cc73525",
+      "netlists/day1/nmos_current_mirror.spice.in": "1b86938752354f53cf9da3f4c5b66443e963afce4e642ab181f02b673bbe8e5f",
+      "netlists/day1/pfet_characterization.spice.in": "7fd861570890defc85f36555d9b247f451b05b49c17f047e7d28706f93e5fecb",
+      "scripts/analyze_day1.py": "c09b55052245247c367dde757ed027374b5413292f7ca5fbbada6ce299916da7",
+      "scripts/render_netlists.py": "2f744c04a6959808097f8c3e5d9fd2f65c415b77bd47be8debbe02ac854910e6",
+      "scripts/run_day1.sh": "850f05689e5c37222483493742669b2530b45b109dc8a9435d35a02d6ce8967d",
+      "scripts/write_day1_manifest.py": "e6d82a667a1222d99720bd324b7e8c64a64731c3091f91d39bd3ed5a4652fa59"
+    },
+    "rendered_netlists": {
+      "results/generated/day1/nfet_characterization_l0p15.spice": "4c4533599f4dd6ac491aaaf76a9f1e31e93abdd0a49b088b536a4c99a0bee458",
+      "results/generated/day1/nfet_characterization_l0p3.spice": "ea5fd6e74fef4a9508107d11ea9d6244493e2aab42245b5721bc64d3fd523182",
+      "results/generated/day1/nfet_characterization_l0p5.spice": "f084920fbaa6717b5826f66a60a12b21f3b438d78bf156d9ba352b69c48bb3a5",
+      "results/generated/day1/nfet_characterization_l0p8.spice": "ef97caaabe606831893bbdd36c291629db3ee32dc916ae1126aed0c088f86540",
+      "results/generated/day1/nfet_characterization_l1.spice": "865c73ac2ba135be6fb0846fb7017ad7af7362d896c3ac6f311df0e6aa5a3a9c",
+      "results/generated/day1/nmos_current_mirror.spice": "a9226ec7720743cb86bd2787b1f3800596fb13a3b42fcbb13cafcc8e4b0aa7b0",
+      "results/generated/day1/pfet_characterization_l0p15.spice": "06d2207e793a361f2536e1b4df3ad3ce7b5d19314e23e6ff4fd97f0b639a058e",
+      "results/generated/day1/pfet_characterization_l0p3.spice": "51263e59bf0a9248a6b0e49a80e38fdae3bf9ab334d97c3886656f5603f826a0",
+      "results/generated/day1/pfet_characterization_l0p5.spice": "7b177014fe7ea86b2260ad40da3a82bbe283a193bcd22631a547285ce3be18ec",
+      "results/generated/day1/pfet_characterization_l0p8.spice": "2a16307b7654f83e5b5fb380711764b2b9fcea3cb3b7d0edfa1ade771d2d11bf",
+      "results/generated/day1/pfet_characterization_l1.spice": "cfcfe0fcad3b8e4237a2e20ffa64f21a02cdcaf7e358f99597430681a44c9533"
+    },
+    "run_outputs": {
+      "results/current_mirror_summary.csv": "a2b6ea0c8415ed3de7bcf9139a621c32b1c0be32545cc9bc9e5d8d0b21f9a119",
+      "results/device_sizing_candidates.csv": "5e25870dc5f4a494a0fef816b2aeb5683fb812b38d7ee91c4d251c2158f5b16d",
+      "results/plots/day1_current_mirror_compliance.png": "6507c9f2d4676cb85a0a9f7f80240655a0bd6ab041b75647c4e9d0228a1dcf1e",
+      "results/plots/day1_device_characterization.png": "57a46797ed40497798e4d2a3755354301bcfc3dc68e3f3e41ca8c5d4d913aad3",
+      "results/raw/day1/container_tool_identity.txt": "12e5320a6ca0231920a3487bce21b4b135a5eb11fed0dc57dd2a2822c9522a3d",
+      "results/raw/day1/nfet_characterization_l0p15.log": "82a917e4750aea391392a04089ffb8350c71ca9f9d81264a37cef287f78af503",
+      "results/raw/day1/nfet_characterization_l0p15.tsv": "d8905d1a47a7620cbddff6477da8fa52330619eab8fbad9552323c1da4fa6b67",
+      "results/raw/day1/nfet_characterization_l0p3.log": "82a917e4750aea391392a04089ffb8350c71ca9f9d81264a37cef287f78af503",
+      "results/raw/day1/nfet_characterization_l0p3.tsv": "2cd30e89ff38b547c2be322354ca50979f76aa9f831d745d6642bea09439e716",
+      "results/raw/day1/nfet_characterization_l0p5.log": "82a917e4750aea391392a04089ffb8350c71ca9f9d81264a37cef287f78af503",
+      "results/raw/day1/nfet_characterization_l0p5.tsv": "798bdfdfdf09639168bd926919558f189d0afdd5787b37f1f3d8abfe1fc497e1",
+      "results/raw/day1/nfet_characterization_l0p8.log": "82a917e4750aea391392a04089ffb8350c71ca9f9d81264a37cef287f78af503",
+      "results/raw/day1/nfet_characterization_l0p8.tsv": "aee35e742224d0e870212c5c10e95a081be151d27a2f9ff5dfd31a39fcaa3359",
+      "results/raw/day1/nfet_characterization_l1.log": "82a917e4750aea391392a04089ffb8350c71ca9f9d81264a37cef287f78af503",
+      "results/raw/day1/nfet_characterization_l1.tsv": "a67f4ca107dac21e2c90adb9d369952967ff0ef3218ae30736bccf34a8d3d0d0",
+      "results/raw/day1/nmos_current_mirror.log": "05788369777429d0c6d45591cc9645d3fe01bb157e78a95ccde6d0280fb281b5",
+      "results/raw/day1/nmos_current_mirror.tsv": "8b8261ca2102768a6edd861065b1a375a309c7376b8d985f08ebc473ad88ff80",
+      "results/raw/day1/pfet_characterization_l0p15.log": "03125b857dbf5b17ba4ecbcaf86dec6538261d406ba9b7242c3dfd13c95543f6",
+      "results/raw/day1/pfet_characterization_l0p15.tsv": "6a7f2b209d0faea4d8de752097ed2dd1c7a9ac473ea06a705019cc35643cef4c",
+      "results/raw/day1/pfet_characterization_l0p3.log": "03125b857dbf5b17ba4ecbcaf86dec6538261d406ba9b7242c3dfd13c95543f6",
+      "results/raw/day1/pfet_characterization_l0p3.tsv": "af4015980da0406aa0ef7a2c2f34dd46c4288f5fe1809d341070f91450c36d49",
+      "results/raw/day1/pfet_characterization_l0p5.log": "03125b857dbf5b17ba4ecbcaf86dec6538261d406ba9b7242c3dfd13c95543f6",
+      "results/raw/day1/pfet_characterization_l0p5.tsv": "3b31c0e52c2b96b03e6d9347fab1a47dd08ef90313147dd3c11bc5653f30c24b",
+      "results/raw/day1/pfet_characterization_l0p8.log": "03125b857dbf5b17ba4ecbcaf86dec6538261d406ba9b7242c3dfd13c95543f6",
+      "results/raw/day1/pfet_characterization_l0p8.tsv": "465eb3849dd1b41f686683821a3d7ad13e432d15fd87736aba7d9272deb77bdb",
+      "results/raw/day1/pfet_characterization_l1.log": "03125b857dbf5b17ba4ecbcaf86dec6538261d406ba9b7242c3dfd13c95543f6",
+      "results/raw/day1/pfet_characterization_l1.tsv": "ddd2992752f74d64e191ea0db217f9d7422d5138dc69e2c47c3c2b4e200ee9d6"
+    }
+  },
+  "simulation_conditions": {
+    "corner": "tt",
+    "points_per_sweep": 181,
+    "sweep_start_v": 0.0,
+    "sweep_step_v": 0.01,
+    "sweep_stop_v": 1.8,
+    "temperature_c": 27
+  }
+}

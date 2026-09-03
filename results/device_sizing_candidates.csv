@@ -1,0 +1,6 @@
+device_group,device,role,target_current_ua,length_um,target_gm_id_vinv,sampled_gm_id_vinv,gate_bias_v,vgs_or_vsg_v,id_per_w_ua_per_um,initial_width_um,gm_gds,vdsat_v,status
+M1/M2,nfet,input pair (each),20,0.5,15,15.0158,0.71,0.71,2.96948,6.73519,130.426,0.103957,INITIAL_CANDIDATE_NOT_FINAL
+M5,nfet,tail current source,40,0.8,12,11.8897,0.74,0.74,3.7101,10.7814,169.6,0.137961,INITIAL_CANDIDATE_NOT_FINAL
+M3/M4,pfet,first-stage mirror load,20,0.8,12,11.8668,0.68,1.12,0.89174,22.4281,310.727,0.143911,INITIAL_CANDIDATE_NOT_FINAL
+M6,nfet,second-stage common source,100,0.5,10,9.93948,0.8,0.8,9.00164,11.1091,107.659,0.160126,INITIAL_CANDIDATE_NOT_FINAL
+M7,pfet,second-stage current source,100,0.8,10,10.1827,0.64,1.16,1.38503,72.2005,270.722,0.17305,INITIAL_CANDIDATE_NOT_FINAL

@@ -1,0 +1,41 @@
+# macOS and editor state
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Local environment and caches
+.env
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+
+# Simulator scratch and large waveform databases
+*.raw
+*.tr0
+*.ac0
+*.sw0
+*.mt0
+*.lis
+*.log
+!results/smoke/xschem/*.log
+*.bak
+
+# Deterministically regenerated SPICE decks
+results/generated/*
+!results/generated/.gitkeep
+
+# Layout/editor backup files
+*.mag~
+*.sch~
+
+# Generated report intermediates
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+
+# Keep parsed CSV summaries and curated plots under version control. Large raw
+# outputs should be archived externally and referenced by checksum/path.
