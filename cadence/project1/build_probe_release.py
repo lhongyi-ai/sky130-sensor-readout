@@ -9,7 +9,7 @@ import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parent
-MEMBERS = ("run.sh", "probe.py", "probe_cadence.il", "开始这里.md")
+MEMBERS = ("run.sh", "probe.py", "probe_cadence.il", "START_HERE.md")
 
 
 def check_skill_structure(text):

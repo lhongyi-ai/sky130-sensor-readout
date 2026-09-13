@@ -1,26 +1,26 @@
-# 如何访问模拟前端
+# Accessing the analog frontend
 
-这里的“前端”是芯片中连接压力传感器与 SAR ADC 的**模拟前端电路**，不是网页前端，因此没有网址、登录页面或可以点击操作的 Web UI。
+Here, frontend means the **analog frontend circuit** connecting the pressure sensor to the SAR ADC on the chip, not a website frontend. It therefore has no URL, login page, or interactive Web UI.
 
-当前权威电路是 [`dynamic_20260911/candidate_06.spice`](dynamic_20260911/candidate_06.spice)。它使用 SKY130 器件，提供 1、4、16 倍三档增益，并驱动真实 4096 个 MIM 单元／侧的 SAR 采样负载。它在标称条件下通过三档静态与动态检查，但正式多环稳定性、45-PVT、噪声和前端物理版图尚未闭合；因此不能称为最终合格前端。
+The current authoritative circuit is [`dynamic_20260911/candidate_06.spice`](dynamic_20260911/candidate_06.spice). It uses SKY130 devices, provides gains of 1, 4, and 16, and drives a real SAR sampling load of 4096 MIM cells per side. It passes three-gain static and dynamic checks under nominal conditions, but formal multiloop stability, 45-PVT coverage, noise, and the physical frontend layout remain incomplete. It therefore cannot be called a qualified final frontend.
 
-## 方式一：直接看图，不安装软件
+## Option 1: view the images without installing software
 
-进入 [`xschem_20260911/renders`](xschem_20260911/renders) 后依次打开：
+Open [`xschem_20260911/renders`](xschem_20260911/renders), then view:
 
-1. [`frontend_top.png`](xschem_20260911/renders/frontend_top.png)：整个信号链，从差分传感器到 PGA、RC 隔离和 SAR 采样器。
-2. [`switchable_pga.png`](xschem_20260911/renders/switchable_pga.png)：1、4、16 倍增益如何通过反馈电阻和开关选择。
-3. [`rd_fdota.png`](xschem_20260911/renders/rd_fdota.png)：两级全差分 OTA 的晶体管、偏置、补偿和两个共模控制回路。
+1. [`frontend_top.png`](xschem_20260911/renders/frontend_top.png): the complete signal chain from the differential sensor through the PGA and RC isolation to the SAR sampler.
+2. [`switchable_pga.png`](xschem_20260911/renders/switchable_pga.png): how feedback resistors and switches select gains of 1, 4, and 16.
+3. [`rd_fdota.png`](xschem_20260911/renders/rd_fdota.png): the two-stage fully differential OTA's transistors, biasing, compensation, and two common-mode control loops.
 
-三张图均为 2400×1600，已经逐张检查文字、器件、导线和边框之间的间距。也提供同名 SVG，放大后文字和线条仍然清晰。
+All three images are 2400×1600 and have individually been checked for spacing between text, devices, wires, and borders. Matching SVG files are also provided, with text and lines that remain sharp when enlarged.
 
-## 方式二：用 Xschem 打开并缩放查看
+## Option 2: open and zoom in Xschem
 
-Xschem 是开源原理图工具。安装并进入下面的目录：
+Xschem is an open-source schematic tool. After installation, enter:
 
 `/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/frontend/xschem_20260911`
 
-然后分别打开：
+Then open the pages separately:
 
 ```sh
 xschem frontend_top.sch
@@ -28,33 +28,33 @@ xschem sky130_v2_switchable_pga.sch
 xschem rd_fdota.sch
 ```
 
-项目容器 `sky130-v2-resume-20260910` 中已经配置 Xschem 3.4.8RC 和 SKY130 环境。如果只需要重新导出图片，可在容器里进入 `/repo/v2/analog/frontend/xschem_20260911` 后运行：
+The project container `sky130-v2-resume-20260910` already has Xschem 3.4.8RC and the SKY130 environment configured. To re-export images only, enter `/repo/v2/analog/frontend/xschem_20260911` inside the container and run:
 
 ```sh
 ./render_headless.sh
 ```
 
-这些 `.sch` 文件是便于阅读的分层审阅图，不是 Cadence Virtuoso 原生原理图，也不应从中重新生成网表来替代权威 SPICE 电路。
+These `.sch` files are readable hierarchical review drawings, not native Cadence Virtuoso schematics. Do not regenerate a netlist from them to replace the authoritative SPICE circuit.
 
-## 方式三：查看真正用于仿真的电路
+## Option 3: inspect the actual simulated circuit
 
-打开 [`dynamic_20260911/candidate_06.spice`](dynamic_20260911/candidate_06.spice)。关键层次如下：
+Open [`dynamic_20260911/candidate_06.spice`](dynamic_20260911/candidate_06.spice). Key hierarchy:
 
-| 行附近 | 子电路 | 作用 |
+| Approximate line | Subcircuit | Function |
 |---:|---|---|
-| 63 | `rd_bias` | 片内偏置与启动 |
-| 73 | `rd_fdota` | 两级全差分 OTA、补偿和共模控制 |
-| 125 | `rd_fbbranch` | 一条真实电阻＋传输门反馈支路 |
-| 132 | `sky130_v2_switchable_pga` | 1／4／16 倍增益选择与交叉反馈 |
-| 156 | `sky130_v2_switchable_sample_driver` | 输出隔离与 ADC 采样驱动 |
+| 63 | `rd_bias` | On-chip bias and startup |
+| 73 | `rd_fdota` | Two-stage fully differential OTA, compensation, and common-mode control |
+| 125 | `rd_fbbranch` | One real resistor-plus-transmission-gate feedback branch |
+| 132 | `sky130_v2_switchable_pga` | Gain 1/4/16 selection and cross-feedback |
+| 156 | `sky130_v2_switchable_sample_driver` | Output isolation and ADC sampling drive |
 
-网表中的 `X...` 表示器件或子电路实例；MOS 管的 `W`、`L` 是宽度和长度。这里的晶体管、电阻和 MIM 电容均引用可布局的 SKY130 PDK 器件，不是理想运算放大器方块。
+In the netlist, `X...` denotes a device or subcircuit instance; MOS `W` and `L` specify width and length. The transistors, resistors, and MIM capacitors reference physically implementable SKY130 PDK devices, not ideal op-amp blocks.
 
-## 证据与当前边界
+## Evidence and current limits
 
-- 最新结论：[`dynamic_20260911/qualification.json`](dynamic_20260911/qualification.json)
-- 前端实验说明：[`dynamic_20260911/README.md`](dynamic_20260911/README.md)
-- Xschem 图纸说明：[`xschem_20260911/README.md`](xschem_20260911/README.md)
-- 图纸完整性与来源哈希：[`xschem_20260911/artifact_manifest.json`](xschem_20260911/artifact_manifest.json)
+- Latest conclusion: [`dynamic_20260911/qualification.json`](dynamic_20260911/qualification.json)
+- Frontend experiment description: [`dynamic_20260911/README.md`](dynamic_20260911/README.md)
+- Xschem drawing description: [`xschem_20260911/README.md`](xschem_20260911/README.md)
+- Drawing integrity and source hashes: [`xschem_20260911/artifact_manifest.json`](xschem_20260911/artifact_manifest.json)
 
-当前准确状态是：**非 Cadence 前端电路、可读原理图和标称三档动态验证已经可以访问；Cadence 原生原理图、正式多环稳定性、45-PVT、噪声、前端版图、DRC/LVS/PEX 与后仿真仍未完成。**
+The precise status is: **the non-Cadence frontend circuit, readable schematics, and nominal three-gain dynamic verification are accessible. Native Cadence schematics, formal multiloop stability, 45-PVT coverage, noise, frontend layout, DRC/LVS/PEX, and post-layout simulation remain incomplete.**

@@ -1,110 +1,110 @@
-# 原生 SKY130 噪声闭合检查 — 2026-09-11
+# Native SKY130 Noise Closure Check — 2026-09-11
 
-## 结论
+## Conclusion
 
-**当前安装环境不能直接完成真实 SAR ADC 的时变器件噪声验收。**
+**The currently installed environment cannot directly complete time-varying device-noise acceptance for the real SAR ADC.**
 
-状态：`BLOCKED_NATIVE_INTRINSIC_SWITCHING_NOISE_UNAVAILABLE`。
+Status: `BLOCKED_NATIVE_INTRINSIC_SWITCHING_NOISE_UNAVAILABLE`.
 
-本轮完成了实际能力检查和一个有严格边界的采样噪声规划工具：保留 ngspice 原生 **BSIM4v5 / version 4.5** 的频域噪声，进行有限频段的理想采样折叠与统计检查。它不是带噪声 ADC 仿真，也不能让最终 SNDR 验收通过。
+This round completed actual capability checks and a strictly bounded sampled-noise planning tool: preserve ngspice native **BSIM4v5 / version 4.5** frequency-domain noise, then perform ideal-sampling folding and statistical checks over a finite frequency band. This is not noisy ADC simulation and cannot pass final SNDR acceptance.
 
-未使用 Cadence；没有下载、安装或修改仿真器、PDK；没有将 VACASK v8 结果乘系数冒充 v5；没有向电路注入人为白噪声。旧文件与旧结果均未修改。
+Cadence was not used; simulators/PDK were not downloaded, installed, or modified. VACASK v8 results were not scaled to impersonate v5, and artificial white noise was not injected into circuits. Legacy files and results are unchanged.
 
-## 1. 四次小单元运行实际做了什么
+## 1. What four small-cell runs actually did
 
-原始数据位于 [results/20260911T080040Z](results/20260911T080040Z)。四次为 RC 噪声关、开、相同种子重放、不同种子；每次一个仿真进程，依次完成工作点、11 点 DC 扫描、AC、三个输出的频域噪声、2 ms 普通瞬态。每进程限时 180 秒，实际分别用时 6.46、6.75、6.01、5.32 秒。**所有本轮仿真已结束，不再启动额外电路运行。**
+Raw data are in [results/20260911T080040Z](results/20260911T080040Z). Four runs cover RC noise off, on, same-seed replay, and a different seed. Each uses one simulation process and sequentially completes operating point, an 11-point DC sweep, AC, frequency-domain noise at three outputs, and a 2 ms ordinary transient. Each process has a 180-second limit; actual times are 6.46, 6.75, 6.01, and 5.32 seconds. **All simulations in this round have ended; no additional circuit runs are being started.**
 
-每个电路包含互不耦合的三部分：
+Each circuit has three uncoupled parts:
 
-- 原生电阻 10 kΩ + 电容 1 nF，27 °C。
-- 自编译最小 Verilog-A 电阻 + 1 nF，电阻内部声明 `white_noise(4kT/R)`；这是检查加载器和噪声求值能力的控制电路，不是替代 SKY130 的模型。
-- 与 9 月 10 日完全相同的实际 SKY130 NFET：W = 2 µm，L = 1 µm，栅压 0.7 V，电源 1.8 V，20 kΩ 负载、1 pF 输出负载，TT、27 °C。
+- Native 10 kΩ resistor + 1 nF capacitor, 27 °C.
+- A self-compiled minimum Verilog-A resistor + 1 nF, with internal `white_noise(4kT/R)` declaration; this is a control for loading and noise-evaluation capabilities, not a replacement SKY130 model.
+- The exact same real SKY130 NFET as on September 10: W = 2 µm, L = 1 µm, gate voltage 0.7 V, supply 1.8 V, 20 kΩ load, 1 pF output load, TT, 27 °C.
 
-### RC 与真实单管的结果
+### RC and real single-transistor results
 
-| 控制电路 | 频域噪声打开后，1 Hz–100 MHz RMS | 普通瞬态噪声标准差 | 说明 |
+| Control circuit | RMS from 1 Hz–100 MHz with frequency-domain noise enabled | Ordinary-transient noise standard deviation | Interpretation |
 |---|---:|---:|---|
-| ngspice 原生 RC | 2.035632 µV | 0 V | 电阻的频域噪声开关生效，瞬态没有热噪声 |
-| Verilog-A / OSDI RC | 2.035633 µV | 0 V | `white_noise` 被正确用于频域，但未成为瞬态随机器件源 |
-| 原生 SKY130 BSIM4v5 单管输出 | 164.057543 µV | 约 5.54 × 10⁻¹⁶ V | 只有数值舍入波动，不能当成噪声很低 |
+| Native ngspice RC | 2.035632 µV | 0 V | Resistor frequency-domain noise switch works; no transient thermal noise |
+| Verilog-A / OSDI RC | 2.035633 µV | 0 V | `white_noise` works in frequency domain but does not become a transient random device source |
+| Native SKY130 BSIM4v5 single-transistor output | 164.057543 µV | Approximately 5.54 × 10⁻¹⁶ V | Numerical rounding fluctuation only; cannot be interpreted as very low noise |
 
-两种 RC 关闭噪声后，频域结果均为零；其 AC 与解析 RC 传递函数的最大相对误差约 4.5 × 10⁻¹⁶。打开后的原生 RC 噪声谱相对 4kTR 公式误差约 3.5 × 10⁻⁷，OSDI 约 9.4 × 10⁻⁷。不同实现的物理常数有微小差别，**未进行经验缩放**。由实测频谱插值积分与解析有限频带积分比较，相对误差 2.24 × 10⁻⁵。
+With noise disabled, both RC frequency-domain results are zero; their maximum AC relative error against the analytical RC transfer function is approximately 4.5 × 10⁻¹⁶. With noise enabled, native RC spectral error relative to 4kTR is approximately 3.5 × 10⁻⁷, and OSDI approximately 9.4 × 10⁻⁷. Physical constants differ slightly between implementations; **no empirical scaling was applied**. Comparing interpolated measured-spectrum integration with analytical finite-band integration gives relative error 2.24 × 10⁻⁵.
 
-真实单管仍由 `xm:nshort_model.29`、**BSIM4v5** 求值，未展开或删改 PDK 参数。输出工作点 1.718068324769174 V，漏电流 4.0965837615413055 µA。相对旧原生结果，工作点电流误差为 0；141 个共同频点的 AC 最大相对误差 2.48 × 10⁻¹⁴，噪声功率谱误差 4.95 × 10⁻¹⁴。这不是旧 VACASK v8 的噪声结果。
+The real transistor is still evaluated by `xm:nshort_model.29`, **BSIM4v5**, without expanding, deleting, or modifying PDK parameters. Output operating point is 1.718068324769174 V, drain current 4.0965837615413055 µA. Relative to old native results, operating-point current error is 0; maximum AC relative error across 141 common frequency points is 2.48 × 10⁻¹⁴ and noise-power-spectrum error is 4.95 × 10⁻¹⁴. This is not old VACASK v8 noise.
 
-**“开／关”不能被误读为单管时变噪声已经打开／关闭。** 原生 SKY130 单管没有找到可用的该类开关，四次都使用同一完整模型；改变的是 RC 的频域噪声声明，以及只对独立 TRNOISE 源适用的 `notrnoise` 变量。电路中根本没有独立 TRNOISE 源。
+**“On/off” must not be read as enabling/disabling single-transistor time-varying noise.** No usable such switch was found for the native SKY130 transistor; all four runs use the same complete model. Changes affect RC frequency-domain noise declarations and the `notrnoise` variable, which applies only to independent TRNOISE sources. The circuit contains no independent TRNOISE source.
 
-### 种子检查与命令检查
+### Seed and command checks
 
-四次单管瞬态轨迹逐点一致，换种子没有产生器件噪声。一个**完全未连接到电路的软件随机向量**则能做到相同种子重放、不同种子变化。因此问题不是“种子命令坏了”，而是缺少瞬态器件噪声求值。
+All four transistor transient traces agree point by point; changing seeds generates no device noise. A **software random vector completely disconnected from the circuit** does replay with the same seed and change with a different seed. The issue is therefore absent transient-device-noise evaluation, not a broken seed command.
 
-实际调用 `noisetran`，四个日志均返回 `no such command available in ngspice`。包装库返回的文字数组为空，但错误被记录在各自 `worker.log`；审计读取的是日志，未将空返回当作成功。
+Actual calls to `noisetran` return `no such command available in ngspice` in all four logs. The wrapper library returns an empty text array, but each error is recorded in `worker.log`; the audit reads logs and does not treat an empty return as success.
 
-官方资料也区分了这些能力：ngspice 47 的独立 TRNOISE 源可用于瞬态，`notrnoise` 只控制这类源；普通 `.noise` 是定常小信号分析，不能据此认定开关电路噪声已包含。[ngspice 47 手册，§1.2.7、§4.1.7、§11.3.11](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf) OSDI 可以加载 Verilog-A 模型，但加载能力不等于时变噪声能力；本轮 RC 对照验证了这个区别。[官方 OSDI 说明](https://ngspice.sourceforge.io/osdi.html) 47 版公告的相关新功能是 code model 的小信号噪声，不能扩展理解为原生 BSIM4 瞬态噪声。[官方版本公告](https://ngspice.sourceforge.io/news.html)
+Official sources also distinguish these capabilities: ngspice 47 independent TRNOISE sources work in transient, and `notrnoise` controls only those sources; ordinary `.noise` is stationary small-signal analysis and does not establish inclusion of switched-circuit noise. [ngspice 47 manual, §1.2.7, §4.1.7, §11.3.11](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf) OSDI loads Verilog-A models, but loading capability does not imply time-varying noise capability; this round's RC control verifies the distinction. [Official OSDI description](https://ngspice.sourceforge.io/osdi.html) The relevant new feature in the version-47 announcement is small-signal noise for code models, which cannot be extended to native BSIM4 transient noise. [Official release announcement](https://ngspice.sourceforge.io/news.html)
 
-ngspice 47 手册 §11.3.11 仍将从晶体管模型产生瞬态噪声列为待解决事项。备选工具也没有自动获得资格：[Xyce 7.10 当前官方功能表](https://xyce.sandia.gov/download/2068/?tmstv=1754510749)的 Table 2-36 对 BSIM4 level 14/54 仍未标出 stationary-noise 支持。项目已用 `Xyce -v` 固化本地安装身份为 `7.10-opensource`，但**没有运行 Xyce SKY130 噪声电路**；身份与文档检查不是瞬态噪声实测，不能把 Xyce 当成已验证的替代品。较早的 [7.7](https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.7.pdf)与 [7.8](https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.8.pdf)表格也保留作版本历史对照。
+ngspice 47 manual §11.3.11 still lists transient noise from transistor models as unresolved work. Alternative tools are not automatically qualified either: Table 2-36 in the [Current official Xyce 7.10 capability table](https://xyce.sandia.gov/download/2068/?tmstv=1754510749) still does not mark stationary-noise support for BSIM4 level 14/54. The project used `Xyce -v` to freeze local installation identity as `7.10-opensource`, but **did not run an Xyce SKY130 noise circuit**. Identity/documentation checks are not measured transient-noise evidence and cannot establish Xyce as a verified substitute. Earlier [7.7](https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.7.pdf) and [7.8](https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.8.pdf) tables are also retained for version-history comparison.
 
-## 2. 新完成的混合方法：只用于规划
+## 2. Newly completed hybrid method: planning only
 
-实现见 [hybrid.py](hybrid.py)，离线分析见 [analyze.py](analyze.py)。流程为：
+Implementation: [hybrid.py](hybrid.py); offline analysis: [analyze.py](analyze.py). The flow is:
 
-1. 从真实原生电路提取输出噪声幅度谱，平方得到单边功率谱 S(f)，单位 V²/Hz。
-2. 在实测频点间采用幂律插值，并解析积分；1/f 谱使用其对数积分极限。
-3. 对理想瞬时采样器，将每个采样频率倍数两边的噪声功率折回 0～fs/2。这里 fs = 100 kS/s。
-4. 将折叠后的每个频率小区间积分功率分配给 16,384 点 Fourier 系数，生成有指定频谱的有限长度高斯模型序列。
-5. 检查功率守恒、同种子重放、不同种子变化，并对 128 个模型噪声序列检查均方值的统计误差。
+1. Extract output-noise amplitude spectra from the real native circuit and square them to obtain one-sided power spectral density S(f), in V²/Hz.
+2. Use power-law interpolation between measured frequencies and analytical integration; use the logarithmic integral limit for 1/f spectra.
+3. For an ideal instantaneous sampler, fold noise power from both sides of every sampling-frequency multiple into 0–fs/2, with fs = 100 kS/s.
+4. Allocate integrated power in each folded frequency interval to 16,384-point Fourier coefficients, producing finite-length Gaussian model sequences with the specified spectrum.
+5. Check power conservation, same-seed replay, different-seed variation, and mean-square statistical error over 128 model-noise sequences.
 
-对基带区间 [a,b]，使用的功率折叠关系为：
+For baseband interval [a,b], the power-folding relationship is:
 
 `Psample[a,b] = ∫[a,b] S(f)df + Σ(k≥1){∫[kfs+a,kfs+b] S(f)df + ∫[kfs−b,kfs−a] S(f)df}`
 
-这里只对**已有 1 Hz～100 MHz 频谱的贡献**积分。超出该范围的噪声标为未知，不宣称物理噪声为零。分配到所有采样频率区间的功率之和，必须与同一已知模拟频段的积分相等；RC 相对误差约 2.2 × 10⁻¹⁶，单管为 0。额外单元测试使用 RC 精确采样协方差 `kT/C × exp(−|lag|Ts/RC)` 的谱进行独立校验。
+Only **contributions from the available 1 Hz–100 MHz spectrum** are integrated. Noise outside this range is marked unknown, not physically zero. Power summed over all sampled-frequency intervals must equal the integral over the same known analog band; RC relative error is approximately 2.2 × 10⁻¹⁶ and transistor error is 0. Additional unit tests independently check against the spectrum of exact sampled RC covariance `kT/C × exp(−|lag|Ts/RC)`.
 
-模型中的 DC Fourier 分量是随机记录均值，故统计总功率时使用**均方值**，不能先减均值再与全谱功率比较。它不是本项目的失调校准模型。
+The model's DC Fourier component is a random record mean, so total power uses **mean square**; do not subtract the mean before comparison with full-spectrum power. This is not the project's offset-calibration model.
 
-| 已知频段贡献的规划例子 | 直接积分 0～5 kHz | 理想采样折叠到 0～5 kHz 后 |
+| Planning example for known-band contributions | Direct integration over 0–5 kHz | After ideal-sampling folding into 0–5 kHz |
 |---|---:|---:|
 | 10 kΩ / 1 nF RC | 0.8960 µV RMS | 0.9332 µV RMS |
-| 同一固定偏置 SKY130 单管输出 | 58.7595 µV RMS | 74.6769 µV RMS |
+| Same fixed-bias SKY130 transistor output | 58.7595 µV RMS | 74.6769 µV RMS |
 
-这说明忽略折叠可能低估噪声。**这些数值都不是传感器前端或完整 ADC 的成绩。** 单管只是指定负载、指定偏置的能力检查电路。
+This shows that ignoring folding can underestimate noise. **None of these values are sensor-frontend or complete-ADC results.** The transistor is only a capability-check circuit at specified load and bias.
 
-每种模型 128 个噪声序列的平均均方值，与理论期望相差分别为 0.067、−0.444 个标准误差。它们是 **noise realizations，不是 PDK 工艺／器件失配 Monte Carlo**；失配样本数仍为 0，不能用这 128 个序列抵扣项目要求的 200 个失配样本。
+Across 128 noise sequences for each model, average mean square differs from theoretical expectation by 0.067 and −0.444 standard errors respectively. These are **noise realizations, not PDK process/device-mismatch Monte Carlo**. Mismatch sample count remains 0; the 128 sequences cannot count toward the project's required 200 mismatch samples.
 
-## 3. 为什么仍然不能验收最终 SNDR
+## 3. Why final SNDR still cannot be accepted
 
-这一规划模型只回答“若电路保持这个工作点且线性定常，已知频段噪声经过理想采样会有多少”。它保留了原生模型在该工作点给出的总噪声谱，但无法追踪：
+This planning model answers only how much known-band noise ideal sampling would produce if the circuit remained at this operating point and were linear and stationary. It preserves the native model's total noise spectrum at that operating point, but cannot track:
 
-- 采样开关导通、关断时电导与器件噪声的变化。
-- 电容充放电、保持阶段及跨转换状态记忆。
-- 比较器再生和实际工作轨迹下的噪声、相关性与非线性混频。
-- 多节点在切换过程中的交叉相关、参考与时钟调制。
-- 频谱测量范围外的贡献、完整 PVT、失配及顶层后仿真。
+- Changes in conductance and device noise as sampling switches turn on/off.
+- Capacitor charging/discharging, hold phases, and state memory across conversions.
+- Noise, correlations, and nonlinear mixing during comparator regeneration and actual operating trajectories.
+- Cross-correlation among nodes during switching, and reference/clock modulation.
+- Contributions outside the measured spectrum, complete PVT, mismatch, and top-level post-layout simulation.
 
-因此 `adc_noise_qualified` 与 `full_chain_sndr_qualified` 均为 `false`。程序没有计算一个看似通过的 ADC SNDR 数字；缺失物理证据时，验收函数强制拒绝放行。
+Thus both `adc_noise_qualified` and `full_chain_sndr_qualified` are `false`. The program does not calculate an apparently passing ADC SNDR number; absent physical evidence, the acceptance function forcibly refuses release.
 
-下一步真正需要的是：能保留当前 SKY130 **BSIM4v5** 噪声行为和相关性的时域或周期噪声引擎，再依次验证多偏置、多类器件、受时钟控制的 RC 单元，最后才接真实 ADC。当前已安装的 VACASK BSIM4 OSDI 仅找到 v8，旧检查已有最高约 3.14 dB 噪声差异；不能使用统一修正系数补过去。
+The real next requirement is a time-domain or periodic-noise engine preserving current SKY130 **BSIM4v5** noise behavior and correlations, followed by multibias, multidevice, and clocked-RC qualification before connecting the real ADC. Only v8 was found in the installed VACASK BSIM4 OSDI; earlier checks show noise differences up to approximately 3.14 dB, which a common correction factor cannot remove.
 
-本轮没有发现可直接启用且已通过 v5 等价验证的现成依赖，因而没有提出未经验证的软件安装作为“解决方案”。若继续做开源引擎／v5 模型移植，这是独立的工具开发和多偏置等价验证任务，不是改一个噪声开关即可完成；新增源码依赖、精确版本与许可需在下载前单独核查。
+This round found no ready-to-enable dependency with passing v5 equivalence, so it did not propose unverified software installation as a solution. Continued open-source engine/v5 model porting is a separate tool-development and multibias-equivalence task, not a single noise-switch change; new source dependencies, exact revisions, and licenses need separate review before download.
 
-## 4. 文件、验证和复现
+## 4. Files, verification, and reproduction
 
-- [qualification.json](qualification.json)：结构化资格与拒绝放行原因。
-- [environment.json](environment.json)：工具、PDK、二进制指纹与运行约束。
-- [thermal_resistor.va](thermal_resistor.va)：本轮原创的最小 OSDI 控制器件。
-- [probe.py](probe.py)：一次最多四个进程；默认单线程，每个限时 180 秒，不自动重试失败电路。
-- [test_hybrid.py](test_hybrid.py)、[test_qualification.py](test_qualification.py)：解析积分、折叠、随机种子、统计归一化、原始证据指纹和负面验收测试。
-- [xyce_capability.json](xyce_capability.json)：本地 Xyce 7.10 身份与编译能力记录；不包含噪声电路成绩。
+- [qualification.json](qualification.json): structured qualification and release-refusal reasons.
+- [environment.json](environment.json): tools, PDK, binary fingerprints, and run constraints.
+- [thermal_resistor.va](thermal_resistor.va): the original minimum OSDI control device created this round.
+- [probe.py](probe.py): at most four processes per invocation, single-threaded by default, each limited to 180 seconds, without automatic retries of failed circuits.
+- [test_hybrid.py](test_hybrid.py), [test_qualification.py](test_qualification.py): analytical integration, folding, seeds, statistical normalization, raw-evidence fingerprints, and negative acceptance tests.
+- [xyce_capability.json](xyce_capability.json): local Xyce 7.10 identity/build capability record, without noise-circuit results.
 
-本轮新增 **25 项离线测试，全部通过**（其中 2 项核对 Xyce 身份证据）。它们验收工具实现与诚实的状态判定，不是 25 项芯片性能通过项。
+This round adds **25 offline tests, all passing** (including 2 checking Xyce identity evidence). They qualify tool implementation and honest status assessment, not 25 passing chip-performance items.
 
-物理小单元在固定容器内执行；本轮四次预算已经用完。以后**获得新的运行预算后**可在同一环境重新调用 `python3 /repo/v2/verification/noise_closure_20260911/probe.py`，它生成新的时间戳目录，不覆盖旧结果。编译产物仅留在容器 `/tmp`，没有把 PDK 参数、模型、规则或许可证复制进仓库。
+Physical small cells execute in the fixed container; this round's four-run budget is exhausted. **After a new run budget is authorized**, `python3 /repo/v2/verification/noise_closure_20260911/probe.py` can be called again in the same environment, creating a new timestamped directory without overwriting old results. Compilation artifacts remain only in container `/tmp`; PDK parameters, models, rules, and licenses were not copied into the repository.
 
-不启动新仿真的离线重算：
+Offline recalculation without new simulations:
 
 ```sh
 python3 v2/verification/noise_closure_20260911/analyze.py v2/verification/noise_closure_20260911/results/20260911T080040Z
 python3 -m unittest discover -s v2/verification/noise_closure_20260911 -p 'test_*.py' -v
 ```
 
-工具与物理能力检查的通过，不能写成芯片噪声指标通过；有限频段的定常规划模型通过，也不能写成开关 ADC 的带噪声仿真完成。
+Passing tool/physical-capability checks cannot be reported as passing chip-noise metrics; passing a finite-band stationary planning model cannot be reported as completed noisy switched-ADC simulation.

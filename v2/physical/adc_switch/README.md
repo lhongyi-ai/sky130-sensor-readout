@@ -1,100 +1,102 @@
-# SAR 采样开关：真实器件、独立版图及失败迭代
+# SAR Sampling Switch: Real Devices, Independent Layout, and Failed Iterations
 
-本目录不使用 Cadence。它只验证一个输入采样开关，不是整个 SAR ADC
-或读出芯片的版图、线性、噪声及精度验收。
+This directory does not use Cadence. It verifies one input sampling switch, not layout,
+linearity, noise, or accuracy acceptance for the complete SAR ADC or readout chip.
 
-## 最终冻结结果
+## Final frozen results
 
-**独立四管采样开关的规定条件验证通过。** 正式入口是
-`results/sampling_switch_release.json`，文件和端口索引见 `SOURCE_INDEX.md`。
-最终参数：主 N-LVT 4/0.15µm、P-LVT 8/0.35µm，补偿管各半宽。
+**The independent four-transistor sampling switch passes verification under specified conditions.**
+The formal entry point is `results/sampling_switch_release.json`; see `SOURCE_INDEX.md` for files and ports.
+Final parameters: main N-LVT 4/0.15µm, P-LVT 8/0.35µm, compensation transistors at half width each.
 
-| 验证项 | 结果 |
+| Verification item | Result |
 |---|---|
-| 实体版图 | DRC=0，LVS唯一匹配，95R/51C真实提取 |
-| 实际单元边界/面积 | 16.0×17.295µm，276.72µm² |
-| 全网格 | 45PVT×3输入×3共模×3驱动电阻×2视图=2430条件点，0失败 |
-| 窗口/负载 | 2.476847754µs采集，保持至10µs，81.28512pF/端 |
-| 原理图最坏采集/最终保持误差 | 10.94µV / 30.76µV |
-| RC后最坏采集/最终保持误差 | 13.66µV / 26.15µV |
-| 相反满量程初值边界 | 4个明确PVT的216条件点全通过；最坏采集22.15µV |
+| Physical layout | DRC=0, unique LVS match, real extraction of 95R/51C |
+| Actual cell boundary/area | 16.0×17.295µm, 276.72µm² |
+| Full grid | 45PVT×3 inputs×3 common modes×3 driver resistances×2 views=2430 condition points, 0 failures |
+| Window/load | 2.476847754µs acquisition, hold through 10µs, 81.28512pF/terminal |
+| Worst schematic acquisition/final-hold error | 10.94µV / 30.76µV |
+| Worst post-RC acquisition/final-hold error | 13.66µV / 26.15µV |
+| Opposite-full-scale initial-state boundaries | All 216 condition points at 4 explicit PVT points pass; worst acquisition 22.15µV |
 
-每项上述采集/保持误差均低于48.828125µV检查阈值。全网格是在45个
-瞬态批次里放置电气独立副本，**不是2430次独立仿真命令，更不是随机
-良率样本**。满量程边界的4个PVT没有伪装成另一轮45PVT。
-`qualify_release.py` 重新读取全部45批原始波形，检查完整时长、有限值、
-单调时间和逐点测量，并逐项核对网格；压缩波形全量保留在 `evidence/`。
+Every acquisition/hold error above is below the 48.828125µV checking threshold. The full grid places
+electrically independent copies in 45 transient batches; these are **not 2430 independent simulation
+commands or random yield samples**. The 4 full-scale boundary PVT points are not portrayed as another 45PVT run.
+`qualify_release.py` rereads all 45 batches of raw waveforms, checking full duration, finite values,
+monotonic time, and per-point measurements, and checks the grid item by item. All compressed waveforms remain in `evidence/`.
 
-仍使用理想1ns互补时钟边沿；采集窗口取自真实相位发生器的保守实测值。
-系统还须验证实际时钟负载/偏斜、真实底板切换、噪声与ADC非线性。
-本结果既不是全ADC通过，也不是Cadence/硅测结果。
+Ideal 1ns complementary clock edges are still used; the acquisition window comes from a conservative
+measurement of the real phase generator. The system still needs actual clock loading/skew, real
+bottom-plate switching, noise, and ADC nonlinearity verification. This is neither a full-ADC pass nor Cadence/silicon evidence.
 
-## 已冻结的标准阈值基线
+## Frozen standard-threshold baseline
 
-原电路是 `adc_tgate A B EN ENB VDD VSS`：标准 NFET W/L=8/0.15µm、
-标准 PFET W/L=16/0.15µm。生成了真实带体接触/护环的 SKY130 PCell
-版图、金属布线及端口，Magic DRC=0，Netgen LVS 唯一匹配。
-平坦化后在新 Magic 进程中提取 42 个电阻、29 个正电容；没有用假电阻
-或仅原理图电容冒充 RC 提取。对应文件位于 `artifacts/`。
+The original circuit is `adc_tgate A B EN ENB VDD VSS`: standard NFET W/L=8/0.15µm,
+standard PFET W/L=16/0.15µm. Real SKY130 PCell layout with body contacts/guard rings,
+metal routing, and ports was generated, with Magic DRC=0 and unique Netgen LVS match.
+After flattening, a new Magic process extracted 42 resistors and 29 positive capacitors;
+no fake resistors or schematic-only capacitance substitute for RC extraction. Files are in `artifacts/`.
 
-2.5µs 采集、4096×3µm×3µm MIM 负载的 45PVT×3输入、额外标称
-0/1kΩ 源阻抗，共 141 组原理图/RC 配对、282 次仿真已完成。
-**14 个 view-case 未通过**，最坏 SF/1.62V/−20°C、输入1.01V 的
-RC 采集残差约 −37.4mV。原理图同样失败，原因是低电源低温时两管
-导通能力不足，不是后仿真凭空出现的问题。不能把 DRC/LVS 通过说成
-该采样开关满足系统精度。
+With 2.5µs acquisition and a 4096×3µm×3µm MIM load, 45PVT×3 inputs plus additional
+nominal 0/1kΩ source impedances completed 141 schematic/RC pairs, or 282 simulations.
+**14 view-cases fail**, with worst RC acquisition residual approximately −37.4mV at
+SF/1.62V/−20°C, input 1.01V. The schematic also fails because both transistors have
+insufficient conduction at low supply and temperature; this is not a problem appearing only after extraction.
+Passing DRC/LVS cannot be described as the sampling switch meeting system accuracy.
 
-完整原始失败表：`results/switch_validation.json`。`run.py` 可重新生成；
-它在指标失败时返回非零状态，结果不会被隐藏。
+Complete raw failure table: `results/switch_validation.json`. `run.py` regenerates it and
+returns nonzero status for metric failures, without hiding results.
 
-## 独立候选与已完成的对照
+## Independent candidates and completed comparisons
 
-所有候选放在 `candidates/`，没有覆盖 ADC 负责人的 `adc_blocks.spice`。
+All candidates are in `candidates/`; the ADC owner's `adc_blocks.spice` was not overwritten.
 
-| 候选 | 真实测试发现 |
+| Candidate | Actual test finding |
 |---|---|
-| 只把 N 换为 LVT，仍 W8/P16 | SS低电压低温最大 Ron 从42.4kΩ降到16.0kΩ，仍约10mV建立误差；不足 |
-| 双 LVT，N8/.15、P16/.35 | 最坏 Ron 降到约1.26kΩ，但关断注入可达195µV；速度好不等于精度好 |
-| 双 LVT，N4/.15、P4/.35 | 注入下降，但SS建立残差约87µV；器件过小 |
-| 双 LVT，N4/.15、P5/.35 | 旧2.5µs窗口141点中140通过，FS/1.98V/85°C高输入49.03µV略超48.83µV；不算全通过 |
+| Replace only N with LVT, still W8/P16 | Worst Ron at SS low voltage/low temperature drops from 42.4kΩ to 16.0kΩ, but settling error remains approximately 10mV; insufficient |
+| Dual LVT, N8/.15, P16/.35 | Worst Ron falls to approximately 1.26kΩ, but turnoff injection reaches 195µV; speed does not establish accuracy |
+| Dual LVT, N4/.15, P4/.35 | Injection decreases, but SS settling residual is approximately 87µV; devices too small |
+| Dual LVT, N4/.15, P5/.35 | 140 of 141 points pass in the old 2.5µs window; high-input error of 49.03µV at FS/1.98V/85°C slightly exceeds 48.83µV; not an all-pass result |
 
-注意：PDK 的低阈值 PMOS 最小合法/建模长度是0.35µm。早期尝试
-0.15µm直接被模型拒绝，相关日志保留；没有在模型范围之外外推。
-MIM 负载用实际 AC 电流核实为81.28512pF，`m` 与 `mult` 均按已验证的
-PDK 调用规则传入。延长至完整7.5µs保持并反向切换外部输入后，旧候选
-保持漏电的量级约0.04µV，主要问题是导通和关断电荷，不是这个保持区间的漏电。
+The PDK's minimum legal/modeled low-threshold PMOS length is 0.35µm. An early 0.15µm
+attempt was rejected directly by the model; logs are retained, without extrapolation beyond model bounds.
+Actual AC current confirms MIM load of 81.28512pF; both `m` and `mult` follow verified PDK invocation rules.
+After extending to a full 7.5µs hold and reversing external input, old-candidate hold leakage is approximately
+0.04µV. The main issues are conduction and turnoff charge, not leakage during this hold interval.
 
-N4/P5 两管候选也完成了独立实体版图，边界8.155×7.19µm，
-58.63445µm²，DRC=0、LVS唯一匹配、42R/29C。9个旧窗口标称/极角
-点的18次原理图/RC仿真通过，只证明这些已测试条件。
-文件见 `artifacts/dual_lvt_rc_smoke/`，真实渲染图见同目录PNG。
+The N4/P5 two-transistor candidate also completed independent physical layout, with boundary
+8.155×7.19µm, 58.63445µm², DRC=0, unique LVS match, and 42R/29C. Eighteen schematic/RC
+simulations at 9 old-window nominal/extreme-corner points pass, proving only those tested conditions.
+See `artifacts/dual_lvt_rc_smoke/` and its PNG for the actual layout render.
 
-## 最终窗口和扩展范围
+## Final window and expanded scope
 
-真实相位生成器给出的最短采集窗口是2.476847754µs；旧2.5µs结果
-不能冒充覆盖该较短窗口。`batch_qualification.py` 使用此窗口，测量关断
-开始前1ns的采集误差，并保持至10µs；输入在关断后200ns反向切换。
-每个PVT中独立复制相同电路，同时覆盖输入−0.2/0/+0.2V、共模偏移
-−50/0/+50mV、源阻抗0/350/1000Ω。批量只是减少重复读入PDK的开销，
-每个副本仍有自己的真实MOS、MIM负载和源电阻。
+The shortest acquisition window from the real phase generator is 2.476847754µs; old 2.5µs
+results cannot claim coverage of that shorter window. `batch_qualification.py` uses this window,
+measures acquisition error 1ns before turnoff starts, and holds through 10µs; input reverses 200ns after turnoff.
+Independent copies of the same circuit at each PVT cover inputs −0.2/0/+0.2V, common-mode offsets
+−50/0/+50mV, and source impedances 0/350/1000Ω. Batching only reduces repeated PDK loading;
+every copy still has its own real MOS devices, MIM load, and source resistor.
 
-350Ω是冻结的主规格源阻抗，0/1kΩ属于额外敏感性测试。报告分别统计
-主规格失败和敏感性失败。关断后的绝对四分之一LSB检查是额外设计余量；
-它既不能代替全ADC线性/噪声检查，也不能代替固定系数外部校准的验证。
-带半宽 dummy 的候选也仅是候选：不得假设理想电荷抵消。
+350Ω is the frozen main-specification source impedance; 0/1kΩ are additional sensitivity tests.
+Reports separately count main-specification and sensitivity failures. The absolute quarter-LSB
+post-turnoff check is extra design margin; it replaces neither full-ADC linearity/noise checks nor
+validation of frozen-coefficient external calibration. Half-width-dummy versions also remain candidates;
+ideal charge cancellation must not be assumed.
 
-四管版本的端口 **不再对称**：A是驱动源侧，B是保持电容/顶板侧。
-dummy两管只短接到B。若系统把它作为VCM顶板钳位器，必须A接VCM、
-B接顶板；不能沿用旧两管TG可随意交换A/B的习惯。钳位器承受真实
-CDAC底板切换的行为仍由系统级仿真验证，不能仅用本目录的A端电压阶跃替代。
+Four-transistor ports are **no longer symmetric**: A is the driven-source side, B the held-capacitor/top-plate side.
+Both dummy transistors are shorted only to B. If used as a VCM top-plate clamp, A must connect to VCM
+and B to the top plate; do not carry over arbitrary A/B interchangeability from the old two-transistor TG.
+Clamp behavior under real CDAC bottom-plate switching still requires system simulation and cannot be
+replaced solely by A-terminal voltage steps in this directory.
 
-这里的电阻直接放在独立采样开关的输入端，是测试驱动器的等效电阻。
-系统规格中的350Ω传感器源阻抗位于PGA之前；本测试不能代替传感器—PGA
-闭环—采样器的真实联合驱动分析，也没有宣称PGA输出电阻就是350Ω。
+Resistance here sits directly at the standalone sampling-switch input and represents the test driver's resistance.
+The system specification's 350Ω sensor source impedance is before the PGA. This test cannot replace
+real joint drive analysis of sensor–closed-loop PGA–sampler, and does not claim PGA output resistance is 350Ω.
 
-## 复现
+## Reproduction
 
-在项目已有离线工具容器 `/repo` 中运行，例如：
+Run in `/repo` in the project's existing offline tool container, for example:
 
 ```sh
 python3 v2/physical/adc_switch/run.py --tag new_standard --suite full
@@ -103,7 +105,7 @@ python3 v2/physical/adc_switch/physical_candidate.py --tag new_layout --suite sm
 python3 v2/physical/adc_switch/batch_qualification.py --tag new_short_window --suite full --wn 4 --wp 5 --physical-run new_layout
 ```
 
-以上命令重现历史两管对照；最终四管的完整复现顺序是：
+These commands reproduce historical two-transistor controls. Complete reproduction for the final four-transistor version is:
 
 ```sh
 python3 v2/physical/adc_switch/physical_candidate.py --tag dummy_layout_final --suite physical_only --model adc_tgate_dual_lvt_dummy --wn 4 --wp 8
@@ -112,13 +114,13 @@ python3 v2/physical/adc_switch/fullscale_check.py
 python3 v2/physical/adc_switch/qualify_release.py
 ```
 
-这些固定tag适合全新克隆的工作目录；已有本地run时不要覆盖，需使用
-独立副本或更新审核脚本的run选择。后处理脚本使用NumPy；最终资格只开
-一个仿真worker，避免与其他模拟任务竞争内存。
+These fixed tags suit a fresh clone; do not overwrite existing local runs. Use an independent copy or
+update run selection in the review scripts. Postprocessing uses NumPy; final qualification runs only
+one simulation worker to avoid competing with other analog tasks for memory.
 
-必须使用新tag，不能覆盖过去的原始失败记录。`runs/` 保存每次输入网表、
-日志、波形数据和哈希，默认不加入Git；`results/` 和筛选后的 `artifacts/`
-是可携带证据。需安装同一公开PDK版本；本目录不复制PDK、规则文件或许可证密钥。
+New tags are required; past raw failure records must not be overwritten. `runs/` stores every input netlist,
+log, waveform, and hash, excluded from Git by default; `results/` and selected `artifacts/` are portable evidence.
+Install the same public PDK revision; this directory does not copy the PDK, rule files, or license keys.
 
-仍需系统集成的事项包括真实时钟驱动及偏斜、动态CDAC参考切换、匹配、
-噪声、差分ADC线性和全链路精度。独立开关的通过不能替代这些验证。
+Remaining system integration includes real clock drive/skew, dynamic CDAC reference switching, matching,
+noise, differential ADC linearity, and full-chain accuracy. A standalone switch pass cannot replace these checks.

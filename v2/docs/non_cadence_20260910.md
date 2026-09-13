@@ -1,76 +1,76 @@
-# 2026-09-10：不用 Cadence 的工作实际进展
+# 2026-09-10: Actual Progress on Work Without Cadence
 
-结论：已继续修改真实电路并运行验证，没有等待 Cadence；但截图中三大项还不能全部打勾。Cadence 原生原理图、适配 PDK 和最终 Cadence 物理闭环仍按用户要求暂停。指标没有降低，旧版 OTA 及失败记录没有覆盖。
+Conclusion: Real circuits were further modified and verified without waiting for Cadence, but the three major items in the screenshot cannot all be checked off. Native Cadence schematics, the compatible PDK, and the final Cadence physical closed loop remain deferred at the user's request. Specifications were not lowered, and legacy OTA/failure records were not overwritten.
 
-## 这轮具体做了什么
+## What this round actually did
 
-### 1. 修复前端，而不是仅更新说明
+### 1. Repairing the frontend, beyond documentation updates
 
-在全差分放大器中增加真实 PDK 尾电流叠接管与片内偏置，并在共模感测电阻两端加入 MIM 电容。前者降低内部电流随电压变化的影响，后者让共模反馈及时看到输出变化。所有器件在新候选快照中，未覆盖原 FDDA10。
+Added real PDK tail-current cascode devices and on-chip biasing to the fully differential amplifier, and MIM capacitors across the common-mode sensing resistors. The former reduces internal current variation with voltage; the latter lets common-mode feedback respond promptly to output changes. All devices are in new candidate snapshots, without overwriting original FDDA10.
 
-同一 `564f4776…` 电路、16 倍档、每端 350 Ω 源阻抗、2.6 kΩ 隔离电阻，在 TT／1.8 V／27 °C 下复验：
+Retested the same `564f4776…` circuit at gain 16, 350 Ω source impedance per terminal, and 2.6 kΩ isolation resistance under TT/1.8 V/27 °C:
 
-| 局部检查 | 实际结果 | 能说明什么 |
+| Local check | Actual result | What it establishes |
 |---|---:|---|
-| 81 点静态传输，三点校准、其余点验证 | 最大残差 0.820 LSB | 该前端的标称静态线性达到了这一局部门限 |
-| 实际四 MOS 开关采集末端误差 | 42.99 µV | 三个规定采样末端低于 48.83 µV；不是所有输入／PVT |
-| 开关关断后约 20 ns 局部误差 | 41.71 µV | 局部关断检查通过；不是完整 7.5 µs 转换保持验收 |
-| 静态负载下 1 Hz–1 GHz 输出噪声 | 原始 111.66 µV RMS | 连续时间小信号噪声；没有据此宣称采样 SNDR |
-| 该前端 VDD＋VCM 端静态净供能 | 约 1.804 mW | 不含完整 ADC、数字时钟驱动和参考，因此不是芯片总功耗 |
-| 固定标称校准，TT／1.62 V／85 °C | 1.18 LSB | 该静态温压点低于 4 LSB |
-| 固定标称校准，TT／1.98 V／−20 °C | 1.73 LSB | 该静态温压点低于 4 LSB |
+| 81-point static transfer, three-point calibration, validation at remaining points | Maximum residual 0.820 LSB | This frontend's nominal static linearity meets this local threshold |
+| Acquisition endpoint error with actual four-MOS switch | 42.99 µV | Three specified sampling endpoints are below 48.83 µV; not all inputs/PVT |
+| Local error approximately 20 ns after switch turnoff | 41.71 µV | Local turnoff check passes; not complete 7.5 µs conversion-hold acceptance |
+| 1 Hz–1 GHz output noise under static load | Raw 111.66 µV RMS | Continuous-time small-signal noise; no sampled-SNDR claim |
+| Static net energy supply at this frontend's VDD+VCM terminals | Approximately 1.804 mW | Excludes full ADC, digital clock drivers, and references; not total chip power |
+| Fixed nominal calibration, TT/1.62 V/85 °C | 1.18 LSB | This static voltage/temperature point is below 4 LSB |
+| Fixed nominal calibration, TT/1.98 V/−20 °C | 1.73 LSB | This static voltage/temperature point is below 4 LSB |
 
-原始文件在 [同源复验](../analog/frontend/repair_20260910/qualification_frozen_recheck/)。1 ns 细时间步的局部采样结果与原 2 ns 结果接近，但不是整个电路数值收敛的完整证明。
+Raw files are in [Same-source retest](../analog/frontend/repair_20260910/qualification_frozen_recheck/). Local sampling results at a finer 1 ns time step are close to the original 2 ns results, but do not fully prove numerical convergence of the entire circuit.
 
-随后已测完这个同源 G16 候选的全部 **45 个工艺温压 DC 条件**，每条件 81 个输入点，每工艺角仅在 1.8 V／27 °C 标定一次。结果为 **30 点满足静态精度门限，15 点失败**，没有漏点或超时。TT／FF／SS／FS／SF 分别通过 6／5／8／5／6 个点（每角 9 点）。最差 SF／1.98 V／85 °C 的残差达 **457.828 LSB**。因此上述标称和两个边界点的进展不能推广成全温压通过。
+All **45 process/voltage/temperature DC conditions** for this same-source G16 candidate were then completed, with 81 inputs per condition and calibration only once per process corner at 1.8 V/27 °C. **30 points meet static-accuracy thresholds and 15 fail**, with no missing points or timeouts. TT/FF/SS/FS/SF pass 6/5/8/5/6 points respectively, out of 9 per corner. Worst-case residual at SF/1.98 V/85 °C is **457.828 LSB**. Progress at nominal and the two boundary points therefore cannot be generalized to full voltage/temperature passing.
 
-FF／FS 的标称残差分别为 1.274／1.324 LSB，标称规格失败保留；其数学上有效的固定系数继续用于其他温压诊断，并没有重拟合。完整摘要与逐点原始证据见 [45 点 G16 静态筛查](../analog/frontend/repair_20260910/qualification_g16_pvt/20260910T065530849637Z/summary.json)。这不是三档 × 45 点全链路验收；DC 解也不能证明动态稳定。
+FF/FS nominal residuals are 1.274/1.324 LSB respectively; nominal-specification failures are retained. Their mathematically valid frozen coefficients continue to diagnose other voltage/temperature conditions without refitting. See [45-point G16 static screen](../analog/frontend/repair_20260910/qualification_g16_pvt/20260910T065530849637Z/summary.json) for the complete summary and per-point raw evidence. This is not three-gain ×45-point full-chain acceptance; a DC solution also does not prove dynamic stability.
 
-**同一版本的 1 倍档仍失败，4 倍档一项仿真因时间步过小而未完整结束。** 后续低偏置／更快共模感测候选能显著减小 1 倍档的持续波动，但实际采样仍超限；不能把它与 16 倍版本拼成三档通过。低阈值输入器件对照恢复了尾管余量，却暴露输入管饱和区和增益误差的另一项取舍，也保留为失败候选。
+**Gain 1 of the same revision still fails; one gain-4 simulation did not finish because the time step became too small.** Later lower-bias/faster-common-mode-sensing candidates substantially reduce sustained gain-1 fluctuations but still exceed actual sampling limits. Their results cannot be combined with the gain-16 revision to pass all three gains. A low-threshold input-device control restores tail-device headroom but exposes another tradeoff involving input-transistor saturation and gain error; it is also retained as a failed candidate.
 
-“输出共模偏离 50 mV”是现有模块诊断门，不应与原规格的“输入共模偏离 VDD/2 ±50 mV”混为一谈。现有失败没有删除；完整输入共模边界还需按原规格逐项验证。
+“Output common-mode deviation of 50 mV” is an existing module diagnostic gate and must not be confused with the original specification's “input common mode deviating VDD/2 ±50 mV.” Existing failures were not deleted; complete input common-mode boundaries still require itemized verification against the original specification.
 
-[完整前端实验索引](../analog/frontend/repair_20260910/repair_summary.json) 按电路哈希分组，包含没有 summary 的仿真失败。原生极点分析也已尝试，但返回数值可疑根列表，不能将其解释为可靠稳定性证明。
+The [Complete frontend experiment index](../analog/frontend/repair_20260910/repair_summary.json) is grouped by circuit hash and includes failed simulations lacking a summary. Native pole analysis was also attempted but returned a numerically suspicious root list, which cannot be interpreted as reliable stability proof.
 
-### 2. ADC 全码测试现在有真实可恢复的执行框架
+### 2. ADC all-code testing now has a real resumable execution framework
 
-新增批处理、断点恢复、真实输出总线核对、完整覆盖检查和端点 INL／DNL 阈值区间计算。由原 SAR 数字逻辑读取真实比较器，再驱动下一位电容开关，不是行为模型直接生成理想码。
+Added batching, checkpoint recovery, real output-bus comparison, complete coverage checks, and endpoint INL/DNL threshold-interval calculations. The original SAR digital logic reads the real comparator and then drives the next capacitor-switch bit; a behavioral model does not directly generate ideal codes.
 
-同一连续仿真实际完成六次转换：`2677、2677、2047、2047、2048、2048`，对应三个输入点各两次。**只证明这三个点，未完成 4096 码或全范围线性。**
+One continuous simulation actually completed six conversions: `2677, 2677, 2047, 2047, 2048, 2048`, two conversions at each of three inputs. **This proves only these three points; 4096-code or full-range linearity is unfinished.**
 
-实测 62 µs 电路波形需要约 3.3–3.5 分钟。按少量样本、单 worker、每点预热一帧与跨批重放外推：4096 码中心约 3.5 天；32 点／LSB 的完整 ramp 约 112 天，且仅一个工艺温压条件。此估计有明显不确定性，不是承诺工期；未偷偷启动数月后台任务。
+A measured 62 µs circuit waveform takes approximately 3.3–3.5 minutes. Extrapolating from a few samples, one worker, one warmup frame per point, and cross-batch replay: 4096 code centers take approximately 3.5 days; a full 32-point/LSB ramp takes approximately 112 days, for only one process/voltage/temperature condition. This estimate has substantial uncertainty and is not a schedule commitment; no months-long background task was silently started.
 
-已做加速对照：最大步长从 2 ns 改到 10 ns 仅快约 1.10 倍。虽然六个输出码相同，部分 DAC 波形差到 0.356 LSB，超过预设数值比较门限，因此没有采用它替代原设置。另核实真实 ADC 的有效 `chgtol=1e-14`，不是前端使用的 `1e-18`；未基于错误假设改容差。
+An acceleration control was run: increasing maximum step from 2 ns to 10 ns speeds execution by only approximately 1.10×. Although the six output codes agree, some DAC waveforms differ by 0.356 LSB, exceeding the preset numerical-comparison threshold, so the setting was not substituted for the original. The real ADC's effective `chgtol=1e-14` was also confirmed, rather than the frontend's `1e-18`; tolerances were not changed on an incorrect assumption.
 
-[方法、运行入口及证据](../analog/adc/verification_20260910/README.md)。
+[Method, execution entry points, and evidence](../analog/adc/verification_20260910/README.md).
 
-### 3. 查清了随机噪声工具是否真的能用于此工艺
+### 3. Establishing whether the random-noise tool actually supports this process
 
-安装环境中的 VACASK 可模拟 RC 的固有随机噪声，结果接近 kT/C，开／关噪声和随机种子检查正常。
+The installed VACASK can simulate intrinsic RC random noise, with results near kT/C and valid noise on/off and random-seed checks.
 
-但从 ngspice 实际选中的 SKY130 单管提取完整显式参数后，发现 ngspice 使用 BSIM4v5／4.5，而现有 VACASK 器件回退到 4.8.3。直流和交流几乎相同，噪声谱却最大差 3.144 dB。将提取参数放回原 ngspice 的对照误差低于 1e-12，排除了参数提取误差。
+However, extracting complete explicit parameters from the SKY130 single transistor actually selected by ngspice shows that ngspice uses BSIM4v5/4.5, while the available VACASK device falls back to 4.8.3. DC and AC are almost identical, but noise spectra differ by as much as 3.144 dB. Reinserting the extracted parameters into original ngspice gives control error below 1e-12, ruling out extraction error.
 
-因此必须先获得匹配的器件噪声实现，或完成严谨的模型迁移验证；不能用一个统一倍率补偿后宣称通过，也不能用无噪声 FFT 交差。[噪声资格报告](../verification/noise_20260910/qualification.json)。
+A matching device-noise implementation or rigorous model-migration verification is therefore required first. Applying a single scale factor cannot establish a pass, and a noiseless FFT cannot substitute. [Noise qualification report](../verification/noise_20260910/qualification.json).
 
-### 4. 把验收规则落到代码中
+### 4. Implementing acceptance rules in code
 
-- 非标称温压的静态测试必须提供标称固定校准，不允许逐条件重新拟合。
-- 新实验记录配置、电路、刺激、原始数据、日志、校准来源和摘要的哈希。
-- 重新分析前检查这些文件；新分析另存，不覆盖原始摘要。
-- 旧实验无完整清单时明确标为历史未校验格式，不补造“已验证”。
-- 软件统一入口增加 ADC 静态框架、噪声资格、前端保护和极点审计测试。软件通过并不等于模拟电路通过。
+- Nonnominal voltage/temperature static tests must supply frozen nominal calibration; per-condition refitting is prohibited.
+- New experiments record hashes of configuration, circuit, stimulus, raw data, logs, calibration source, and summary.
+- Check these files before reanalysis; save new analysis separately without overwriting the original summary.
+- Older experiments without complete manifests are explicitly marked as historical unverified format; no fabricated “verified” status.
+- The unified software entry point adds ADC static-framework, noise-qualification, frontend-protection, and pole-audit tests. Software passing does not mean analog circuits pass.
 
-本轮统一回归共 **124 项 Python 软件测试通过**（原 80 项＋新增 44 项），另运行了行为模型、解析预算和数字 RTL 回归。确切源码哈希、输出和状态见 [验证报告](../results/validation.json)。
+This unified regression passes **124 Python software tests** (the original 80 plus 44 additions), with behavioral-model, analytical-budget, and digital RTL regressions also executed. See the [Validation report](../results/validation.json) for exact source hashes, output, and status.
 
-## 仍未完成，而且不能全推给 Cadence
+## Still unfinished, and not all attributable to Cadence
 
-1. 三档增益在同一可实现电路中同时满足稳定性、建立时间、噪声、失真及功耗。
-2. 完整 ADC 的全码线性、包含随机器件噪声的动态精度、完整失配筛查。
-3. 全链路三档 × 45 工艺温压组合、固定校准、启动／过载／干扰等边界测试。
-4. 完整模拟核心布局、DRC/LVS、寄生提取和顶层回归。前端还未稳定冻结，不能用数字宏或独立开关版图替代。
+1. All three gains simultaneously satisfying stability, settling time, noise, distortion, and power in the same implementable circuit.
+2. Full-ADC all-code linearity, dynamic accuracy including random device noise, and complete mismatch screening.
+3. Full-chain three-gain ×45 process/voltage/temperature combinations, frozen calibration, and startup/overload/interference boundary tests.
+4. Complete analog-core layout, DRC/LVS, parasitic extraction, and top-level regression. The frontend is not yet stably frozen; a digital macro or standalone switch layout cannot substitute.
 
-下一步先解决三档前端的稳定性与跨温压偏置／线性问题，同时确定可验证的噪声引擎和合理全码计算路线；通过后才进入整合和完整模拟版图。下载 Cadence 本身不会自动修好这些电路问题。最终 Cadence 原生交付另按原计划恢复。
+Next, resolve three-gain frontend stability and voltage/temperature bias/linearity while establishing a verifiable noise engine and a reasonable all-code computation route. Integration and complete analog layout follow only after passing. Downloading Cadence alone will not repair these circuit problems. Final native Cadence delivery resumes separately under the original plan.
 
-## 文件与历史
+## Files and history
 
-完整工作副本已迁移到用户指定工作区的 `sky130-two-stage-ota/`，包含原 Git 历史和旧结果。新容器只允许写本副本的 `v2/`；旧工作副本保留不动。没有上传 PDK、规则、许可证、学校信息，也没有把新候选发布成已完成芯片。
+The complete working copy was moved to `sky130-two-stage-ota/` in the user's designated workspace, including original Git history and legacy results. The new container may write only this copy's `v2/`; the old working copy remains untouched. No PDK, rules, licenses, or school information was uploaded, and no new candidate was published as a completed chip.

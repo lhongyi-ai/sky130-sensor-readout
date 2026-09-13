@@ -1,0 +1,944 @@
+{
+  "scope": "English edition of the current checkout; existing Git history retained. No new analog simulation or school qualification.",
+  "tracked_and_pending_files_scanned": 7711,
+  "utf8_texts_including_archives_scanned": 8006,
+  "archives_scanned": 12,
+  "archive_entries_scanned": 461,
+  "language_findings": [],
+  "python_files_parsed": 341,
+  "python_syntax_errors": [],
+  "source_ast_changes_beyond_string_contents": [],
+  "changed_numeric_circuit_layout_and_existing_image_files": [],
+  "document_structure_changes_for_review": [],
+  "archive_verification": {
+    "archives": [
+      {
+        "path": "cadence/project1/releases/project1_basic_design_v1.0.0.zip",
+        "original_sha256": "0d0a62eab653a2a4f7a31ff51e5fbf5d7dd95423ed83620c27b35d091e094bc4",
+        "english_sha256": "875e00d45fcfeb902dbfff239fa17efd41e8aed854484c3adc85d64bc4c435d9",
+        "verified_internal_file_hashes": 75,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/basic_design_v1_0/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_design_v1.0.1.zip",
+        "original_sha256": "e01a2939979df8f97c5993c20d475cb50af9eaa9e5eebd1c74872c27d77f2b45",
+        "english_sha256": "11a901431a3989e93b27e32f7c214ba57ad2585d9d3ea504b80784ab6e0b3905",
+        "verified_internal_file_hashes": 76,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/basic_design_v1_0_1/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_design_v1.0.2.zip",
+        "original_sha256": "8a9e5371bfef8ec1c2b0193f5ade85b9c858a1abbd77a23a038bfcfdb3710f6c",
+        "english_sha256": "e28c849615dee92af9e40c554f9645a754c6cd56160b53fad1332adf2a80d2a5",
+        "verified_internal_file_hashes": 76,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/basic_design_v1_0_2/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_design_v1.0.3.zip",
+        "original_sha256": "155a27221dcdb35e39461b9be039ef2e50608b3834162ef7b7a22d06a6b9a5f0",
+        "english_sha256": "d6ec94c68107e08db072befe66c571a8ddfe6321ed52ad7856e3e9934808a8f6",
+        "verified_internal_file_hashes": 79,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/basic_design_v1_0_3/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_design_v1.0.4.zip",
+        "original_sha256": "ed8fb1d585a37673f0a4452fe274ad350bcea112a6f6b63c4252dab64ebfbbcd",
+        "english_sha256": "705c2ad60db4b0279777eebed14c4fef844f516aab18b4762c63efd879ff0e3a",
+        "verified_internal_file_hashes": 80,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/basic_design_v1_0_4/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p1.zip",
+        "original_sha256": "3275426e6a9a8ebd5b62ed302b81a3674d1d249f8c6742ae40f98c5a0bac65ea",
+        "english_sha256": "3edb64f66dd7ee9ce4c6ad0e8d7fe1737f364765161a49a99cf7b35045251304",
+        "verified_internal_file_hashes": 7,
+        "manifest_references_to_base_package": 79,
+        "english_note": "project1_handoff/basic_runtime_fix_v1_0_4p1/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p2.zip",
+        "original_sha256": "99cf2f7774db4de0d2d6b13f97fb32bea4f17877d7ceed2edb1769cddb7cf9d8",
+        "english_sha256": "f70cda6f5523da1abeeef46ce5eb737177f0c9fd3b0203a67cdb492deeaa7dfb",
+        "verified_internal_file_hashes": 13,
+        "manifest_references_to_base_package": 79,
+        "english_note": "project1_handoff/basic_runtime_fix_v1_0_4p2/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p3.zip",
+        "original_sha256": "25a7b8b6dc780b65e1dd41c4aee47adb923ed46eba5729a36abf690849aa09b5",
+        "english_sha256": "9e80ed1ce18306f6cb94fc151947b971f8cd9e591f14cda0a120b61c1dc4936b",
+        "verified_internal_file_hashes": 9,
+        "manifest_references_to_base_package": 81,
+        "english_note": "project1_handoff/basic_runtime_fix_v1_0_4p3/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_m0_setup_v0.1.0.zip",
+        "original_sha256": "6559d00784f08bc685adb9cbe7b4f9bb8ac8ec42526087c0e6a07c4532928050",
+        "english_sha256": "1dabab17820e947b94c8dd1b92860ef21ec44d917c874f05731866bdf71f64f2",
+        "verified_internal_file_hashes": 2,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/m0_setup_v0_1/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_pmos_dc_v0.1.0.zip",
+        "original_sha256": "b31290162061ef4bbb7146642d145794ba80b0b241d8032c4292096a85924129",
+        "english_sha256": "28f83bc39e8d92e4c68ec824db2d6c5a11efb2c7398eb5a7d79ad12151aa8008",
+        "verified_internal_file_hashes": 2,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/m0_pmos_v0_1/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_probe_v1.0.0.zip",
+        "original_sha256": "54c54254d42c04c90fc0d967f10a2bc8ba8585b762063335c3ebc40353d36925",
+        "english_sha256": "159a84f2c4b4750449f117fa759b31b3136ff3a0ce254853845eec601b21d28a",
+        "verified_internal_file_hashes": 4,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/probe/ENGLISH_EDITION.md"
+      },
+      {
+        "path": "cadence/project1/releases/project1_probe_v1.1.0.zip",
+        "original_sha256": "df048510a3dc1442ca55b2cb8f074eada3c61586051f439692b2d407d8951efb",
+        "english_sha256": "b68ad27c7f16bc724b0145791cd7a6fc58823b83e1805484c52e3a09c1dace49",
+        "verified_internal_file_hashes": 4,
+        "manifest_references_to_base_package": 0,
+        "english_note": "project1_handoff/probe_v1_1/ENGLISH_EDITION.md"
+      }
+    ],
+    "canonicalized_duplicate_translations": [],
+    "hash_refresh_iterations": 2
+  },
+  "package_installation_verification": {
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "english_base_package",
+        "files_verified": 80
+      },
+      {
+        "name": "patch_p1_install",
+        "returncode": 0,
+        "stdout": "P1_RUNTIME_PATCH_APPLIED: 1.0.4p1\nExisting site.json, cells, created.txt and runs preserved.\nNext, in the same configured Linux terminal:\nbash p1_run.sh run --group passives --retry\n",
+        "stderr": ""
+      },
+      {
+        "name": "patch_p1_repeat_install",
+        "returncode": 0,
+        "stdout": "P1_RUNTIME_PATCH_ALREADY_APPLIED: 1.0.4p1\n",
+        "stderr": ""
+      },
+      {
+        "name": "patch_p2_install",
+        "returncode": 0,
+        "stdout": "P1_RUNTIME_PATCH_APPLIED: 1.0.4p2\nExisting site.json, cells, created.txt and runs preserved.\nNext, in the Linux terminal:\nbash ~/cadence_skywater/p1_school_run_v1.sh recheck-passives\n",
+        "stderr": ""
+      },
+      {
+        "name": "patch_p2_repeat_install",
+        "returncode": 0,
+        "stdout": "P1_RUNTIME_PATCH_ALREADY_APPLIED: 1.0.4p2\n",
+        "stderr": ""
+      },
+      {
+        "name": "patch_p3_install",
+        "returncode": 0,
+        "stdout": "P1_RUNTIME_PATCH_APPLIED: 1.0.4p3\nExisting site.json, cells, created.txt and runs preserved.\nNext, in the Linux terminal:\nbash ~/cadence_skywater/p1_school_run_v1.sh recheck-passives\n",
+        "stderr": ""
+      },
+      {
+        "name": "patch_p3_repeat_install",
+        "returncode": 0,
+        "stdout": "P1_RUNTIME_PATCH_ALREADY_APPLIED: 1.0.4p3\n",
+        "stderr": ""
+      },
+      {
+        "name": "corrupted_package_rejected",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "P1_RUNTIME_PATCH_STOPPED: Package file changed or missing: run.py\n"
+      }
+    ],
+    "scope": "Local extraction, sequential installation, idempotence, and corruption rejection; no school tools executed."
+  },
+  "model_and_rtl_checks": [
+    {
+      "name": "behavioral_analysis_tests",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_affine_fit_independent_holdout (test_analysis.CalibrationTests.test_affine_fit_independent_holdout) ... ok\ntest_bad_raw_codes_rejected_and_serialization_round_trip (test_analysis.CalibrationTests.test_bad_raw_codes_rejected_and_serialization_round_trip) ... ok\ntest_corrupted_metadata_and_coefficients_rejected (test_analysis.CalibrationTests.test_corrupted_metadata_and_coefficients_rejected) ... ok\ntest_degenerate_clipped_and_nonmonotonic_fit_rejected (test_analysis.CalibrationTests.test_degenerate_clipped_and_nonmonotonic_fit_rejected) ... ok\ntest_frozen_calibration_does_not_hide_later_drift (test_analysis.CalibrationTests.test_frozen_calibration_does_not_hide_later_drift) ... ok\ntest_no_hidden_clipping_rounding_or_half_lsb_shift (test_analysis.CalibrationTests.test_no_hidden_clipping_rounding_or_half_lsb_shift) ... ok\ntest_nominal_only_and_valid_provenance (test_analysis.CalibrationTests.test_nominal_only_and_valid_provenance) ... ok\ntest_endpoint_removes_gain_offset_but_nominal_dnl_retains_gain (test_analysis.EndpointLinearityTests.test_endpoint_removes_gain_offset_but_nominal_dnl_retains_gain) ... ok\ntest_ideal_twelve_bit_transfer_and_scope (test_analysis.EndpointLinearityTests.test_ideal_twelve_bit_transfer_and_scope) ... ok\ntest_invalid_boundaries_are_not_sorted_or_assumed_complete (test_analysis.EndpointLinearityTests.test_invalid_boundaries_are_not_sorted_or_assumed_complete) ... ok\ntest_known_nonlinearity (test_analysis.EndpointLinearityTests.test_known_nonlinearity) ... ok\ntest_zero_width_missing_code_is_not_hidden (test_analysis.EndpointLinearityTests.test_zero_width_missing_code_is_not_hidden) ... ok\ntest_alias_harmonics_including_above_nyquist (test_analysis.SpectrumMetricsTests.test_alias_harmonics_including_above_nyquist) ... ok\ntest_broadband_noise_matches_independent_time_domain_power (test_analysis.SpectrumMetricsTests.test_broadband_noise_matches_independent_time_domain_power) ... ok\ntest_dc_offset_and_scale_do_not_change_ratios (test_analysis.SpectrumMetricsTests.test_dc_offset_and_scale_do_not_change_ratios) ... ok\ntest_harmonics_are_not_removed_from_sndr (test_analysis.SpectrumMetricsTests.test_harmonics_are_not_removed_from_sndr) ... ok\ntest_invalid_and_degenerate_records_rejected (test_analysis.SpectrumMetricsTests.test_invalid_and_degenerate_records_rejected) ... ok\ntest_known_powers_sndr_snr_thd_and_sfdr (test_analysis.SpectrumMetricsTests.test_known_powers_sndr_snr_thd_and_sfdr) ... ok\ntest_nonharmonic_spur_preserves_sndr_when_harmonics_are_absent (test_analysis.SpectrumMetricsTests.test_nonharmonic_spur_preserves_sndr_when_harmonics_are_absent) ... ok\ntest_nyquist_weight_and_aliased_harmonic_deduplication (test_analysis.SpectrumMetricsTests.test_nyquist_weight_and_aliased_harmonic_deduplication) ... ok\ntest_odd_length_has_no_nyquist_half_weight (test_analysis.SpectrumMetricsTests.test_odd_length_has_no_nyquist_half_weight) ... ok\ntest_sfdr_includes_nonharmonic_spurs (test_analysis.SpectrumMetricsTests.test_sfdr_includes_nonharmonic_spurs) ... ok\ntest_single_harmonic_preserves_sndr_when_noise_is_absent (test_analysis.SpectrumMetricsTests.test_single_harmonic_preserves_sndr_when_noise_is_absent) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.069s\n\nOK\n"
+    },
+    {
+      "name": "behavioral_model_tests",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_cubic_output_error (test_model.FrontendTests.test_cubic_output_error) ... ok\ntest_extreme_finite_gain_does_not_overflow (test_model.FrontendTests.test_extreme_finite_gain_does_not_overflow) ... ok\ntest_linear_gain_offset_and_finite_loop_gain (test_model.FrontendTests.test_linear_gain_offset_and_finite_loop_gain) ... ok\ntest_noisy_seed_reproducibility (test_model.FrontendTests.test_noisy_seed_reproducibility) ... ok\ntest_settling_has_history_and_known_time_constant (test_model.FrontendTests.test_settling_has_history_and_known_time_constant) ... ok\ntest_coherent_tone (test_model.ToneAndValidationTests.test_coherent_tone) ... ok\ntest_invalid_array_gain_and_cap_shape (test_model.ToneAndValidationTests.test_invalid_array_gain_and_cap_shape) ... ok\ntest_invalid_error_parameters (test_model.ToneAndValidationTests.test_invalid_error_parameters) ... ok\ntest_invalid_specs (test_model.ToneAndValidationTests.test_invalid_specs) ... ok\ntest_invalid_tone_requests (test_model.ToneAndValidationTests.test_invalid_tone_requests) ... ok\ntest_near_nyquist_never_selects_alias_or_nyquist (test_model.ToneAndValidationTests.test_near_nyquist_never_selects_alias_or_nyquist) ... ok\ntest_spec_properties (test_model.ToneAndValidationTests.test_spec_properties) ... ok\ntest_capacitor_errors_create_missing_codes (test_model.TransferTests.test_capacitor_errors_create_missing_codes) ... ok\ntest_comparator_noise_is_drawn_per_decision (test_model.TransferTests.test_comparator_noise_is_drawn_per_decision) ... ok\ntest_comparator_offset_sign (test_model.TransferTests.test_comparator_offset_sign) ... ok\ntest_endpoints_and_scalar (test_model.TransferTests.test_endpoints_and_scalar) ... ok\ntest_every_threshold_and_adjacent_float (test_model.TransferTests.test_every_threshold_and_adjacent_float) ... ok\ntest_full_code_range_centers (test_model.TransferTests.test_full_code_range_centers) ... ok\ntest_random_ideal_sar_agreement_and_shape (test_model.TransferTests.test_random_ideal_sar_agreement_and_shape) ... ok\ntest_sampling_noise_is_drawn_once_per_conversion (test_model.TransferTests.test_sampling_noise_is_drawn_once_per_conversion) ... ok\ntest_zero_capacitor_errors_are_ideal (test_model.TransferTests.test_zero_capacitor_errors_are_ideal) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.043s\n\nOK\n"
+    },
+    {
+      "name": "digital_rtl",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"evidence_level\": \"digital_rtl_with_ideal_held_code_comparator\",\n  \"analog_adc_validated\": false,\n  \"physical_timing_validated\": false,\n  \"stages\": [\n    {\n      \"name\": \"verilog_2005_design_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"testbench_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"self_checking_simulation\",\n      \"returncode\": 0,\n      \"output\": \"PASS sar_controller: checks=687790 accepted=4400 completed=4384 aborted=16 ignored_busy=2293 reserved_rejected=74 back_to_back=124\\n/Users/stanley/Documents/ChatGPT/Analog Circuit Project/github-publication/sky130-sensor-readout/v2/tests/rtl/tb_sar_controller.sv:222: $finish called at 46914064500 (1ps)\"\n    }\n  ],\n  \"simulator\": \"Icarus Verilog version 13.0 (stable) (v13_0)\",\n  \"counters\": {\n    \"checks\": 687790,\n    \"accepted\": 4400,\n    \"completed\": 4384,\n    \"aborted\": 16,\n    \"ignored_busy\": 2293,\n    \"reserved_rejected\": 74,\n    \"back_to_back\": 124\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "cadence_probe_tests",
+      "returncode": 0,
+      "stdout": "Terminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n\nload(\"/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-nakjs_6l/runs/20260913T100108Z_bd00f6d3/load_probe.il\")\n\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect\nIf Cadence reports an error, run collect anyway and return the partial report and error text.\nPlease download and return:\n/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-nakjs_6l/project1_report_20260913T100108Z_bd00f6d3_100108_9121.zip\nReport status: METADATA_COLLECTED_REQUIRES_REVIEW; no circuit simulation has been run.\nTerminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n\nload(\"/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-4ykzexw7/runs/20260913T100108Z_27e10355/load_probe.il\")\n\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect\nIf Cadence reports an error, run collect anyway and return the partial report and error text.\nPlease download and return:\n/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-4ykzexw7/project1_report_20260913T100108Z_27e10355_100108_5c69.zip\nReport status: PARTIAL_REPORT; no circuit simulation has been run.\nTerminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n\nload(\"/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-rzw9d1xz/runs/20260913T100108Z_cba220fa/load_probe.il\")\n\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect\nIf Cadence reports an error, run collect anyway and return the partial report and error text.\nPlease download and return:\n/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-rzw9d1xz/project1_report_20260913T100108Z_cba220fa_100108_920b.zip\nReport status: METADATA_COLLECTED_REQUIRES_REVIEW; no circuit simulation has been run.\nTerminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n\nload(\"/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-rh9acmmz/runs/20260913T100108Z_5f6c77cd/load_probe.il\")\n\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect\nIf Cadence reports an error, run collect anyway and return the partial report and error text.\nTerminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n\nload(\"/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-rh9acmmz/runs/20260913T100108Z_7fb55b77/load_probe.il\")\n\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect\nIf Cadence reports an error, run collect anyway and return the partial report and error text.\nTerminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n\nload(\"/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-3bd179sr/runs/20260913T100108Z_c91dcfe6/load_probe.il\")\n\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect\nIf Cadence reports an error, run collect anyway and return the partial report and error text.\nPlease download and return:\n/var/folders/5b/h8jvf2cj5vs26dcxp6mwdgy00000gn/T/p1-probe-test-3bd179sr/project1_report_20260913T100108Z_c91dcfe6_100108_b7db.zip\nReport status: PARTIAL_REPORT; no circuit simulation has been run.\n",
+      "stderr": "test_cds_cycle_missing_include_and_undefined_variable (test_probe.ProbeTests.test_cds_cycle_missing_include_and_undefined_variable) ... ok\ntest_collect_before_probe_fails_clearly (test_probe.ProbeTests.test_collect_before_probe_fails_clearly) ... ok\ntest_completed_probe_is_not_simulation_pass_and_secrets_excluded (test_probe.ProbeTests.test_completed_probe_is_not_simulation_pass_and_secrets_excluded) ... ok\ntest_invalid_active_run_cannot_escape_package (test_probe.ProbeTests.test_invalid_active_run_cannot_escape_package) ... ok\ntest_missing_cadence_returns_useful_partial_report (test_probe.ProbeTests.test_missing_cadence_returns_useful_partial_report) ... ok\ntest_missing_mapping_and_sections_are_explicit (test_probe.ProbeTests.test_missing_mapping_and_sections_are_explicit) ... ok\ntest_model_report_has_names_not_model_parameters (test_probe.ProbeTests.test_model_report_has_names_not_model_parameters) ... ok\ntest_models_prioritized_over_many_cell_models (test_probe.ProbeTests.test_models_prioritized_over_many_cell_models) ... ok\ntest_noise_help_filtered_before_truncation (test_probe.ProbeTests.test_noise_help_filtered_before_truncation) ... ok\ntest_repeat_probe_preserves_previous_run_and_project (test_probe.ProbeTests.test_repeat_probe_preserves_previous_run_and_project) ... ok\ntest_wrong_run_completion_is_rejected (test_probe.ProbeTests.test_wrong_run_completion_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.038s\n\nOK\n"
+    }
+  ],
+  "pdf_text_checks": [
+    {
+      "path": "cadence/project1/reports/basic_20260913T015701Z_582c6ec8/nominal_comparison.pdf",
+      "returncode": 0,
+      "text_characters": 717,
+      "chinese_characters": 0
+    },
+    {
+      "path": "cadence/project1/reports/basic_20260913T023544Z_5cc09eef/pvt_settling_failures.pdf",
+      "returncode": 0,
+      "text_characters": 472,
+      "chinese_characters": 0
+    },
+    {
+      "path": "cadence/project1/reports/basic_20260913T062632Z_d7dc1ae6/extra_characterization.pdf",
+      "returncode": 0,
+      "text_characters": 915,
+      "chinese_characters": 0
+    },
+    {
+      "path": "docs/sky130_two_stage_ota_report.pdf",
+      "returncode": 0,
+      "text_characters": 8435,
+      "chinese_characters": 0
+    }
+  ],
+  "png_ocr_check": {
+    "images": 49,
+    "recognition_languages": [
+      "en-US",
+      "zh-Hans"
+    ],
+    "errors": [],
+    "chinese_label_matches": [],
+    "execution": "local macOS Vision; successful run after sandbox service access was enabled"
+  },
+  "changed_publication_files": [
+    {
+      "path": "README.md",
+      "original_path_sha256": "b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5",
+      "original_sha256": "909e938036a1054166041599b17e79084eabb36053c7d514af834ade32bfbc45",
+      "english_sha256": "20b52df2e5daa68bdf6da804f2acd33cbecfa67205a02a71b8b46fc8fc69b0e4"
+    },
+    {
+      "path": "cadence/project1/README.md",
+      "original_path_sha256": "37697522b22bbfb4c8ea4815136b7cabc0177c5feb08fcc6524804b0cd546436",
+      "original_sha256": "a48f94a238737153c495259f8333d88b9e69c72a1b56cf49963cc9dd14dd8957",
+      "english_sha256": "7fb1b64ef7d4360aceb714a0844e6c7354e66ac244a61fe4df800facf87bf865"
+    },
+    {
+      "path": "cadence/project1/basic_design/build.py",
+      "original_path_sha256": "990af13ef1a9d4716e74dbd3ffabac7ec5b9ed9eaaffd441c027d04f317e41db",
+      "original_sha256": "f7bce5c143bfcafa5b09f7dafb38c938a8a165734f1b1770a4b8a8c3459f50cf",
+      "english_sha256": "d173f1445b70734fffbb02b6a304bc6e340b5afaca203cb90ce7ad88dfbf740c"
+    },
+    {
+      "path": "cadence/project1/basic_design/package_manifest.json",
+      "original_path_sha256": "adbeb87263e9847ea39e840f61a259b829167c427075aeef8c6ff3f8f75246a5",
+      "original_sha256": "ba14bebdf9d118cebcd415ae9a79cb3900b0a4d3ac19c95811c5d007d08f3f33",
+      "english_sha256": "825f6005b0738acda1358c6c8455e3be821f7da650c26aefcd38fc132d79c340"
+    },
+    {
+      "path": "cadence/project1/basic_design/device_size_mapping.md",
+      "original_path_sha256": "6205cc8fec9a92fa1b716866fd6c0a356be5c0eb750ac4307f0caf36f20a5f43",
+      "original_sha256": "0b1673321f2118dc349813f42b979889348cd2df9e1f5a83f5447c7433611d09",
+      "english_sha256": "46929128b6f0f8e6ced5a2c50c08fa0085164f6f6b4620a31b8131db40a088ce"
+    },
+    {
+      "path": "cadence/project1/basic_design/START_HERE.md",
+      "original_path_sha256": "bd238699fb0c527b8ab2089f10c8567f5a1deb59162f1637905094fda0beb07a",
+      "original_sha256": "1abbd20e80bcd46770fb01b34748a37226b76fb04be0ac0be673ce5c2643a1bf",
+      "english_sha256": "a15e0519f307e5bb4a70c62119ce39f36716f10ef458d43f8ee5d470e9c554c9"
+    },
+    {
+      "path": "cadence/project1/basic_design/FIX_NOTES.md",
+      "original_path_sha256": "2e6230b0db3f146739f3c5c81fcc4b75bcaf853a352e5b4a41a2098e5e733f68",
+      "original_sha256": "5c627399662345c2acfaec77a86bf5fe230d65df2e2c6b2593daf0414af73ff7",
+      "english_sha256": "2f0e6aa3e89784637d822d355aadc4cb554a7b093c73f062b4c303361ce3c21a"
+    },
+    {
+      "path": "cadence/project1/build_probe_release.py",
+      "original_path_sha256": "199d77c0a10cb716932b6c79c982be946775b3eba00c6b3b9992f01ffc513e63",
+      "original_sha256": "7461e33936fc9086dbef1804b73c8534a562a5c16312a727fa9227856ad03113",
+      "english_sha256": "7b3f2acc750edb6619bfd6180436c750bffe1d4bb5f9b7f495e3cc0ed18c6450"
+    },
+    {
+      "path": "cadence/project1/m0_pmos/manifest.json",
+      "original_path_sha256": "3d77266d0ac103c7b3ce36b536339c1c0a296c82086da1b2bbf9c1df19a4ff8e",
+      "original_sha256": "f5504995c83c7286afed2a9826eec6a885aae33ce50009a37077a9edd464dd8c",
+      "english_sha256": "93d145ceb48fdb2533e5e8bded11d428cd6a328d608d78642bf23a6423d6939b"
+    },
+    {
+      "path": "cadence/project1/m0_pmos/INSTRUCTIONS.md",
+      "original_path_sha256": "60fba48dee1be603ecec9c00a1dd5927ed941c6ea07f089129d1048f2b93d857",
+      "original_sha256": "109e125ed6d479d55c237ccb2e4a20ae33a7366ad516f27affbb0cec4357ed4d",
+      "english_sha256": "3acb42eddd7f28786b4fd4ed5535d2ef04110a3238092b1549360a651908bacb"
+    },
+    {
+      "path": "cadence/project1/m0_setup/manifest.json",
+      "original_path_sha256": "364579ddb794bbbd9b522051e80da528ade5bc37eea3123540894b5d23f4494d",
+      "original_sha256": "8937795dd78ee666660ea559d43757e78b100e6c59b7597fb568c367495e6246",
+      "english_sha256": "215610f4fef4414918011fb931fb84f8276707b65aa97c4f764d7fe035de7579"
+    },
+    {
+      "path": "cadence/project1/m0_setup/INSTRUCTIONS.md",
+      "original_path_sha256": "d13b5d8fb914c375af3788305f7ff6f158ce09fbbfcd856def2bcc6a8ad10738",
+      "original_sha256": "4ececd30a34c9772f2a00d769a412d3f17f30c816b812f622e270188fa4b1e76",
+      "english_sha256": "15ee7a7fefb4841dcc8ce7814e360e02ecfac4e0b4be65cfc8721e513b0431fb"
+    },
+    {
+      "path": "cadence/project1/probe/probe.py",
+      "original_path_sha256": "c51d4de2a569262ed494cffb6f0d7d74f402f9e1214d1feaf18e6872acbd338b",
+      "original_sha256": "8e449040b1941bce6c44b4ddb3e13add166cffa6bd213113bc3138f6f4b43656",
+      "english_sha256": "46244f2f6b054f36cf667e92bdd1dd7cecc5e6e3a1bcd3180892dffb9e9f18d1"
+    },
+    {
+      "path": "cadence/project1/probe/run.sh",
+      "original_path_sha256": "acdef218853c7ec587e0e6b88565528d44a8ef3af587130d852dedf65c44ab37",
+      "original_sha256": "0c325c7d216b060f6d1a84d2bd2dbd873010f60f8ce8a1083402e7965c53342a",
+      "english_sha256": "e8457596fed9add6152f81875dd08fed8c5fdb4e2e88c5196e1254a3a9ee3e00"
+    },
+    {
+      "path": "cadence/project1/probe/START_HERE.md",
+      "original_path_sha256": "074bb3097c12eb422f40c0ccfebc840da2917c0d1fd357c282916e6cb14639c1",
+      "original_sha256": "22f14208e0851af5bc3a697c0a63d0ba104c9495141f4725ec30d4d474dac10d",
+      "english_sha256": "b889a45d80a0a3b567f91eccc2d694131fe7402df5b54b30a6f8f96ac5d41409"
+    },
+    {
+      "path": "cadence/project1/releases/local_validation.json",
+      "original_path_sha256": "063cfb34bf9b3cd1fd42ccd5d957b7d70d877109ccb5e62c792105b167af8340",
+      "original_sha256": "cf494225173e309d6c961df9d4144fa2d6b6855a53ab9badd052ac6f0b92a526",
+      "english_sha256": "95753a1eea22eee3a62cc67be3bf20b72dc8bf9125a0700b2a69595a088e1d75"
+    },
+    {
+      "path": "cadence/project1/releases/local_validation_v1.1.0.json",
+      "original_path_sha256": "4dbac2cd89c32a6f0b169efd036f8902af0cb606312b9d83b384bdd551084c21",
+      "original_sha256": "1b0a9ba842caebf14f7712db4f9e95b78f764048109c486ef8f1c9f822263fa8",
+      "english_sha256": "1f5b5c7add177fba8485f5fa8a1c8437307c3d9f79abe4017825cb0e571c7e5d"
+    },
+    {
+      "path": "cadence/project1/releases/p1_fix_pulses_v1_instructions.md",
+      "original_path_sha256": "cf4a8839d5061ddcc1baa66e31d92b5987d46b00d94c994740c246b487d6f38b",
+      "original_sha256": "accee3dbce11eaf2d197cfbb7506d3cf264709ab1a5524d0a48a7024d7d7c1fa",
+      "english_sha256": "81406976a78c5bc2cc401c3b4113d20445638087c12982651a2d4cee866a5a63"
+    },
+    {
+      "path": "cadence/project1/releases/p1_fix_pulses_v2_instructions.md",
+      "original_path_sha256": "7fc26d16bd2284dfea4094edec97646dbc8edff1c63095f516a45f4229183c9e",
+      "original_sha256": "b73c204b3e08b5762fd653881311d041ad20ff326e6e4dfe23f4e466ba68c2e6",
+      "english_sha256": "18a4b856db7618bad2736330f187321a164d629a645f6f89c08ffbdc25e80f41"
+    },
+    {
+      "path": "cadence/project1/releases/p1_school_run_v1_instructions.md",
+      "original_path_sha256": "9facfbb56b5c579059258e07b8fa637ee7391ab342d5d8253d4f53bd356af873",
+      "original_sha256": "a2de898fe7130519959ce2cee7602a0bf7b83efe5f110cb78b8ce3d2c0322ac3",
+      "english_sha256": "8341afdeaa02e82824f87f24dca4231ba6008cb38b5e90a202f202835525fcaa"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.0.zip",
+      "original_path_sha256": "3fe3cde0c9918ab9cfe5548518c1d11015c54fc15a1fdcf37e37c520fc0869af",
+      "original_sha256": "0d0a62eab653a2a4f7a31ff51e5fbf5d7dd95423ed83620c27b35d091e094bc4",
+      "english_sha256": "875e00d45fcfeb902dbfff239fa17efd41e8aed854484c3adc85d64bc4c435d9"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.0.zip.sha256",
+      "original_path_sha256": "b139aec22e3093fdb58146d65c4f8194672e6357145693434c6f939d07c530ce",
+      "original_sha256": "3afb89fea2290c7de4a1497ec406eb87cf0fa701eec821e339482a61b3a71608",
+      "english_sha256": "f2f976e3f63718a17a7f38feb30e590baeaa3df31e326b85559ec2897010c844"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.1.zip",
+      "original_path_sha256": "8783db4463c6f064a32353bcd5c7caf9ef4ab8a332f77b29304e136690e820bd",
+      "original_sha256": "e01a2939979df8f97c5993c20d475cb50af9eaa9e5eebd1c74872c27d77f2b45",
+      "english_sha256": "11a901431a3989e93b27e32f7c214ba57ad2585d9d3ea504b80784ab6e0b3905"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.1.zip.sha256",
+      "original_path_sha256": "6716c9ae17ca87b4a3ec50fdef5abda2071a1e38e7a7520e82c6c5aad3e62d00",
+      "original_sha256": "eb7a10a24019b6cda08081801bd5c3a5319adb63e8bce2ab9ba750e720c6fa1c",
+      "english_sha256": "a0f575c9c1089ed358c7ec3eb5e95cb94809cb02e86fe91da1ade0faa471d3c8"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.2.zip",
+      "original_path_sha256": "d7ba12b580cfd7161789158c75144c912ff4c532bff0458342f58c8b3c0db712",
+      "original_sha256": "8a9e5371bfef8ec1c2b0193f5ade85b9c858a1abbd77a23a038bfcfdb3710f6c",
+      "english_sha256": "e28c849615dee92af9e40c554f9645a754c6cd56160b53fad1332adf2a80d2a5"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.2.zip.sha256",
+      "original_path_sha256": "a106f3b8e4c935933a9886a412ef790b583a1550013af39e4f99344c76d6c9de",
+      "original_sha256": "dcc06b7cc553fc2765bdd82f7f942239d2e6490ad1d1d38a2eafda1898963a15",
+      "english_sha256": "f2c4a4002d33dd65cf8b90ad0d8b89285894a390d63d400ad61738b9a22f1699"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.3.zip",
+      "original_path_sha256": "7df1d437a237ad3249193f1023a20aaf7fdb1c870a0b5bb0f0c29ecfe25dd71c",
+      "original_sha256": "155a27221dcdb35e39461b9be039ef2e50608b3834162ef7b7a22d06a6b9a5f0",
+      "english_sha256": "d6ec94c68107e08db072befe66c571a8ddfe6321ed52ad7856e3e9934808a8f6"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.3.zip.sha256",
+      "original_path_sha256": "67abd569306bf91ce059c50aa2ec5c567f2a2bab818acb8d8ab486dbbf07a18e",
+      "original_sha256": "582be8873f15bd0b9356af0cf3abeb98f81094f86e48f19d523f7bc5b6ee8aa1",
+      "english_sha256": "2a9fdee57ebb14020380958accfcc0d987f9784ab13c33166c75434243cca361"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.4.zip",
+      "original_path_sha256": "c5f982572ada567e73eb0e6e1e906b9f1f284b1ba1717e159c24b8d82b6e887f",
+      "original_sha256": "ed8fb1d585a37673f0a4452fe274ad350bcea112a6f6b63c4252dab64ebfbbcd",
+      "english_sha256": "705c2ad60db4b0279777eebed14c4fef844f516aab18b4762c63efd879ff0e3a"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_design_v1.0.4.zip.sha256",
+      "original_path_sha256": "f57cc815fe522ddceccf6daaa2a99bf280da9744aa51432fb514fb4efce07677",
+      "original_sha256": "ab86749e97fa0fd79bea1a9322d74dc37f157717474582bbedf01ca4532f4120",
+      "english_sha256": "d1d83f495069161d997d47f4adbb1c45c4406c864e52051e6eceae57cdbf5487"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p1.zip",
+      "original_path_sha256": "d0fa7ac77774336d9b4ce9c75945e1c53618cd9c641d48d91414d884c0f816e9",
+      "original_sha256": "3275426e6a9a8ebd5b62ed302b81a3674d1d249f8c6742ae40f98c5a0bac65ea",
+      "english_sha256": "3edb64f66dd7ee9ce4c6ad0e8d7fe1737f364765161a49a99cf7b35045251304"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p1.zip.sha256",
+      "original_path_sha256": "b0b872973ea4b4aaaaf2d7a692e71c38449bf132310ba307a068a013b6857179",
+      "original_sha256": "b3b17a41cf564eb2b6cccfe25a810a6bbb1c2b2d1c9747999a1ab00da03980f1",
+      "english_sha256": "b70b218fd58c0044a5e49a4015b0cb917f74a087b2a295bccca1cb75edd18dcd"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p2.zip",
+      "original_path_sha256": "f46519fee5c3030b51a012bcb6f490f50bba6435f1977e5bfcc96dbb9e98ca16",
+      "original_sha256": "99cf2f7774db4de0d2d6b13f97fb32bea4f17877d7ceed2edb1769cddb7cf9d8",
+      "english_sha256": "f70cda6f5523da1abeeef46ce5eb737177f0c9fd3b0203a67cdb492deeaa7dfb"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p2.zip.sha256",
+      "original_path_sha256": "e90ec0f66dcfa5f592f14aa85438191966c1392e571800c382dfa522f8773691",
+      "original_sha256": "92d6e898af8327e7358cbb8d8bf1ed86cce57d598dbf737db09b0f81be9f948a",
+      "english_sha256": "1a45b23dd566c4abcd64b94bbc79947cea2581fab71e663a763a7c08c7669510"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p2_instructions.md",
+      "original_path_sha256": "e4a99f37dfe68ae1c8e1aaafc8d6979b60149e29f42f6fcbfd67c88c736ed5c8",
+      "original_sha256": "051893b6627573415e1ffbbe5d5429e8589a915079f1fd402fb47cbac7861b85",
+      "english_sha256": "c912d9dd0bc2f5d2402e5c0b50ab3b5a7011bef7846a2e9c0b28070df1b4294f"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p3.zip",
+      "original_path_sha256": "b982a99c47922931cdda221889d9c0bcaa8cdb5a64981474cbedfd503ca641b4",
+      "original_sha256": "25a7b8b6dc780b65e1dd41c4aee47adb923ed46eba5729a36abf690849aa09b5",
+      "english_sha256": "9e80ed1ce18306f6cb94fc151947b971f8cd9e591f14cda0a120b61c1dc4936b"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p3.zip.sha256",
+      "original_path_sha256": "ef83525a0b2126bdcfaf5eff2a131656f8da82efe63d1a46fefad265254c1def",
+      "original_sha256": "4c8f822264a3337ea8d479131e67012376ff8725ace2380d351f36255ac9f4dd",
+      "english_sha256": "c79d1d600772864548fd2b5b908728b635fb321bca83e32d7af057153f6fb2c2"
+    },
+    {
+      "path": "cadence/project1/releases/project1_basic_runtime_fix_v1.0.4p3_instructions.md",
+      "original_path_sha256": "a5606ae368f5f640ce50d12e5e50aebdccce7a0c92d8aa3fa5426965a3b7ea68",
+      "original_sha256": "964382638eaa8c2dae4df3633a37a2f3fff61d771711e5275504db62f625a275",
+      "english_sha256": "903b0464b08e4a5b532362cc821ff5971440e16eebbaa48123959b968cbe4ee3"
+    },
+    {
+      "path": "cadence/project1/releases/project1_m0_setup_v0.1.0.zip",
+      "original_path_sha256": "174134972f5a758699f0af5e59448241600c0a891e44c435ba892895a37804aa",
+      "original_sha256": "6559d00784f08bc685adb9cbe7b4f9bb8ac8ec42526087c0e6a07c4532928050",
+      "english_sha256": "1dabab17820e947b94c8dd1b92860ef21ec44d917c874f05731866bdf71f64f2"
+    },
+    {
+      "path": "cadence/project1/releases/project1_m0_setup_v0.1.0.zip.sha256",
+      "original_path_sha256": "e732fbc5745e2dbab32e0028ddc6f073e62fcb90405f824b7af50105fb67181c",
+      "original_sha256": "66377288916ceb018a61a77a486ead77fb761e1e481b64e937102ac0b23478c3",
+      "english_sha256": "f42a2f1e5bfa1ce734d71fb8e70784532524013b15d72ddce01a055bc3891499"
+    },
+    {
+      "path": "cadence/project1/releases/project1_pmos_dc_v0.1.0.zip",
+      "original_path_sha256": "a8a6c632db6ec3568b5611ae24b8c7b93503cb4274b3687c09f5fd8ea2c0b7e9",
+      "original_sha256": "b31290162061ef4bbb7146642d145794ba80b0b241d8032c4292096a85924129",
+      "english_sha256": "28f83bc39e8d92e4c68ec824db2d6c5a11efb2c7398eb5a7d79ad12151aa8008"
+    },
+    {
+      "path": "cadence/project1/releases/project1_pmos_dc_v0.1.0.zip.sha256",
+      "original_path_sha256": "7ab2438f882d2621d7e5f22965c755a2794df4c5e610c8d1f4e837abf0fba48e",
+      "original_sha256": "df709047a393fb92b98a0826d07c0a712bf5e28582df06ba65f6813fc27053d5",
+      "english_sha256": "138f45437990f56cb71d9fd50f4f58b77b234eec7915676db5fec8a1f507829d"
+    },
+    {
+      "path": "cadence/project1/releases/project1_probe_v1.0.0.zip",
+      "original_path_sha256": "88cdc938c13407c552394854b0eb92e2b9e30351195514d55ce88c215597a7b4",
+      "original_sha256": "54c54254d42c04c90fc0d967f10a2bc8ba8585b762063335c3ebc40353d36925",
+      "english_sha256": "159a84f2c4b4750449f117fa759b31b3136ff3a0ce254853845eec601b21d28a"
+    },
+    {
+      "path": "cadence/project1/releases/project1_probe_v1.0.0.zip.sha256",
+      "original_path_sha256": "c56cd4d8a0ff853eb0b9a860a3d628052db8c18e51f8400d99007dd3317e7d37",
+      "original_sha256": "029027925c63e00bca849d792e44ab11d6a1072319750eb558badd2e46f45f18",
+      "english_sha256": "ee9db6b9e1a4152db8cfba1abd36d60d977c182f628384acbfd1a10f32b30ae2"
+    },
+    {
+      "path": "cadence/project1/releases/project1_probe_v1.1.0.zip",
+      "original_path_sha256": "43e0534a87d4422584bb984c151bbc9561b3bc1499e2948f596ddbe56c560bba",
+      "original_sha256": "df048510a3dc1442ca55b2cb8f074eada3c61586051f439692b2d407d8951efb",
+      "english_sha256": "b68ad27c7f16bc724b0145791cd7a6fc58823b83e1805484c52e3a09c1dace49"
+    },
+    {
+      "path": "cadence/project1/releases/project1_probe_v1.1.0.zip.sha256",
+      "original_path_sha256": "184dc8b7a659b3acb0728fbf4eb2d3b0361050e27ced9f979c5cd6a4427ebfff",
+      "original_sha256": "699236c17c9756f0972f6af19f5636f62a95a8b106596b40293870e072a41d8d",
+      "english_sha256": "cba6f99eef9714c7e448099b77b36b133bbd7415a0dc537ba8f9862b71531655"
+    },
+    {
+      "path": "cadence/project1/reliability_20260913/PACKAGE_GATE_README.md",
+      "original_path_sha256": "e15503fe17e6f3187ba538c2d771a836c1fcbb609694add38a462ce8a0732841",
+      "original_sha256": "ceca61bddf052656339565976d69da80919f45ae4f655ec155a97224757943f8",
+      "english_sha256": "453f7a6e5cf05ca68fe2999d68c29f99aeb80c21071c785f3c820d1516daf816"
+    },
+    {
+      "path": "cadence/project1/reports/basic_20260912T093350Z_ad8b13b5/review_notes.md",
+      "original_path_sha256": "51a24a141d93e83ceb02bad27036567bb4beb9ddfc256f7cf74617829a9d0da4",
+      "original_sha256": "07f92194bcd7f861a8c1fbb8431ce80bdfbf0e401999239ad73003ebc4267b38",
+      "english_sha256": "7aad1c0efe73cb87bacd936ba2ba2b335e2e84d9ac5756440f9b8d9d2c25c609"
+    },
+    {
+      "path": "cadence/project1/reports/basic_20260913T015701Z_582c6ec8/nominal_review_and_next_steps.md",
+      "original_path_sha256": "a44a24e18a1bbd89a80963f6cac4fe1de881820df954b83be2c55183feeee6d4",
+      "original_sha256": "013ff809548a058ab91cee8438aa37d8982dee66f893868a82770ed7f8a6ddb0",
+      "english_sha256": "de9971ebe05c450fedd92b4204516c9bfdde3d6d2ace57f5bdee7a29591f6737"
+    },
+    {
+      "path": "cadence/project1/reports/basic_20260913T023544Z_5cc09eef/pvt_review_and_next_steps.md",
+      "original_path_sha256": "8bbd0e3329a663ecb4ea8f2f0f8718de88fd0f3971aec07ffa1954d8cd400247",
+      "original_sha256": "6206d699e54cf4acb8f578ddfb1895a0b2f7a56b01465344067f0ab90c3ed05c",
+      "english_sha256": "1bcf2aa57e569fbe044579249396b6c207361b9b7bf5743cdd620af9a6fd1c03"
+    },
+    {
+      "path": "cadence/project1/reports/basic_20260913T062632Z_d7dc1ae6/extra_characterization_review.md",
+      "original_path_sha256": "acf6d9db1274a17b7e92337f0a083b78e7d793a69a20bee845961d008a27c9e1",
+      "original_sha256": "abdad312e478c82f16322309d4500c4aa7c30ade407be77ffa31c6b6a7c80799",
+      "english_sha256": "9127ea4390d487efb8b02a22959c98cabbb2114984a9a85a2493dddda9f3fdaf"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p1/install.py",
+      "original_path_sha256": "955ab865cff2dd24a3f32985fa848e3fbddda73ce5d6813c58160960e96f67b1",
+      "original_sha256": "caf4a7b188e18ff7090fdfbda4dcd0465712debd16577822fb78803af5b932dd",
+      "english_sha256": "1f93ed390d1430868cbc7f89a54c3b65f96a2c0c50b3024cd7f7e6f1d62f3347"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p1/patch_manifest.json",
+      "original_path_sha256": "07de6fd83f2db9e8acca5471f1ce494ecedbab0743cd4e0941449eba64438dfa",
+      "original_sha256": "bb4a01a3a7177f4f6a4a524c45801b8b026c2ec3837510f5ee29db5eee089197",
+      "english_sha256": "01d9768cda47f93347251fe5a469969e088d3d91bf9accd598e92e51c980b026"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p1/payload/package_manifest.json",
+      "original_path_sha256": "9e59afce22c9642979dc93bf45a9f6a146440e0babb3595eec760b9d245da125",
+      "original_sha256": "c982275d2f5046439e77e4e5236d614d083e865fbb86414059a38d06f652aa66",
+      "english_sha256": "767a12283cc8fdef7f0bdbf4fdb79cedec0d5bc361700798ccddc3b47222acf4"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p1/START_HERE.md",
+      "original_path_sha256": "03cabac5bf4bfa803a32aebcc4d3fb7ee2ff7febbeb892397f9b8bd8a6ff503f",
+      "original_sha256": "92838eb780c4849e83fbd8c72cd022186335c680ef3537bb0a7a8523ce7e3313",
+      "english_sha256": "6aebc017cd4ae9e04c966ab19b0ea887ed864a90c4579ea5bd08d51744b98776"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p2/install.py",
+      "original_path_sha256": "46d693fa2529e7023f0fd8a916c2213499c02571268a58fb9627bf7e1f9f12ea",
+      "original_sha256": "5d80a740c1a05ee1f3a032d243f85b4634b9dd346b1a5b7e71a85f25069b1007",
+      "english_sha256": "be69e64b21c1dccd15553bbafab51093e3beb26ef1504b613d0f1c04ee8a50d7"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p2/patch_manifest.json",
+      "original_path_sha256": "db4739c903f189034990f7c1f22646f312f5ffb699edf62017a32fa400b2fe03",
+      "original_sha256": "0aaa991ead08f61143445d6e011853658a319b3b1bd202119967df062fcf3b07",
+      "english_sha256": "8e3685fec8965549f312b1ecfb8d46332829d793118c4ecdc98d86acba89d780"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p2/payload/package_manifest.json",
+      "original_path_sha256": "76b1452a9c2f6dba6bff8f23d7388980cab212eddc9df88881a8195f2bc20f33",
+      "original_sha256": "3502851b9bacef25d0c2e9f21aee3aef4de3baf5a88e9e7476bde57417e54933",
+      "english_sha256": "e27396a4c46cce88689b16ff32be7abcfca133b4b06626d8c8af2f5bd654c404"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p2/payload/passive_criteria.md",
+      "original_path_sha256": "b426dd8d71fcc71b168082297b27d5bbbc8c55608d5eb781565a9ab9ebe11719",
+      "original_sha256": "285c5e14229ff2d0777eeb4fc2016301dad2b30beab333f271785ba14b304126",
+      "english_sha256": "935b198636c9d7a905eec6c659d9f5ab92dd9709a61b833c050a1fca20cbe29a"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p2/INSTRUCTIONS.md",
+      "original_path_sha256": "fe3b5c10e0e38858bea6747f6797b6cf98c0dcfd48230c049d0570fd3aea74c8",
+      "original_sha256": "051893b6627573415e1ffbbe5d5429e8589a915079f1fd402fb47cbac7861b85",
+      "english_sha256": "c912d9dd0bc2f5d2402e5c0b50ab3b5a7011bef7846a2e9c0b28070df1b4294f"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/install.py",
+      "original_path_sha256": "ec1d1348c219f03aca18116e8d9b9354a2875157762a61c06c0faf18939c9695",
+      "original_sha256": "a7904de913aa9c5d55b9bf6952fb7ca5df9301260ab6aee30c5257d232ffdf39",
+      "english_sha256": "d1463de2b7e9c4281a03b5605fc2f769902fb4416beb757fc4f42a0bb269e637"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/patch_manifest.json",
+      "original_path_sha256": "5052ed447afddd8579000d020ce8125bc8854ba815300b125b2aeca05b8e1c3e",
+      "original_sha256": "7c4698e1d5796ef5206c8d1a01091d6645a09285eb5b13c71b5f935939428e95",
+      "english_sha256": "c7642fd86381acd05279e6b1441ac7d9fd937eeabf17444adec7a55077feeaf4"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/payload/package_manifest.json",
+      "original_path_sha256": "258b0a0d36a7a4f0a7ae45ad8655fcf770989a497b46d9c9b3741ba3abee5075",
+      "original_sha256": "a77492fe2de2aee32ab9021c867bfb1b38a66ed6e5826b4c9e3a51211585336e",
+      "english_sha256": "014719121e6ccf77a5b633e5735a24f464089284facab60075e1f232dafc9f76"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/INSTRUCTIONS.md",
+      "original_path_sha256": "c06e0a4c25aae741ea87042a41cccc332e846be92282d3981fa8d63ea2ae4546",
+      "original_sha256": "964382638eaa8c2dae4df3633a37a2f3fff61d771711e5275504db62f625a275",
+      "english_sha256": "903b0464b08e4a5b532362cc821ff5971440e16eebbaa48123959b968cbe4ee3"
+    },
+    {
+      "path": "docs/career_materials.md",
+      "original_path_sha256": "9081ca445240f1be350b4b0b99329a5965292c9c6ecdb597e90231d71264bb68",
+      "original_sha256": "26dd451c56cb206e9b8c725bbf049e779a2b6cc7366dd82586077d66b25aca41",
+      "english_sha256": "35d3caed6baf0d7b737d92164d3e8b9668b9575fefb358112771c258e7e7b5be"
+    },
+    {
+      "path": "docs/github_checkpoint_20260913.md",
+      "original_path_sha256": "8290688505e1f9ca41e86119f0e3709ce920a6a34d90ddc308bfcd0ee9d13d6b",
+      "original_sha256": "64bd4f2ebbc9076f815860e6595bfba9b25abd3a412ed56dd04aa0169ff189a2",
+      "english_sha256": "87ad31ec3949154c5fdf5d909ed2a5c5e956aa78b7e3e8ba4078ad42cede7e31"
+    },
+    {
+      "path": "docs/github_checkpoint_manifest_20260913.json",
+      "original_path_sha256": "418e44b8aaa302d4c85a0850a1907d15295b57d0c44f7bea506da503dad7c7b7",
+      "original_sha256": "8d8d884e681c51b4ee1b9f5ed7c4a8363670e761e48b897a5c5446903e1910a5",
+      "english_sha256": "31cf2fa9e99eeed0b4395e485e45c10c82ccfdd2f2b43371d4357b3a96999374"
+    },
+    {
+      "path": "v2/README.md",
+      "original_path_sha256": "80c2326825c2bf73b4461e64e31323c03e59689d3a8485e716b0cfc9050b33b5",
+      "original_sha256": "6f1e215fb050b25015f4e5076d2ba3227cbb0127057a386fd85279d1a6cec2dc",
+      "english_sha256": "93124d9cb40f914187cf9e81cbf4f84b661b68a31f7037fade3a43a15122704a"
+    },
+    {
+      "path": "v2/analog/adc/README.md",
+      "original_path_sha256": "e12d62b72a9af13189d0ecd9c87549749ac859d266f6715964d392041958934b",
+      "original_sha256": "599f680770320255a735a1910080058851e82f010b800ea886d33119f353d10c",
+      "english_sha256": "30104a6cbc69a6ca4906eef9c021918ff53a8e4ebe21111a1d208626171ab6cd"
+    },
+    {
+      "path": "v2/analog/adc/acceleration_20260911/README.md",
+      "original_path_sha256": "684b86d10afcf317c90c129a7180a6230964f806c4f91fb4d555c68e47042d5d",
+      "original_sha256": "c165e24f53d8dbdd84cfdfe61a77df33932d35aaa4016a808e7698518d821a44",
+      "english_sha256": "5540550128b43aca25fdbd05d229f6526a5d5cb873a0df72900b003aa17f97ae"
+    },
+    {
+      "path": "v2/analog/adc/cdac_pex_linearity_20260911/README.md",
+      "original_path_sha256": "7e8c732745df96a5f9b4b5386287e14b23c8542f10f90368d9552d2ac46ae686",
+      "original_sha256": "967028728976caecf5f4aefc8ac197dc08487f4c3ba989ff0b7c2ed97fd80231",
+      "english_sha256": "bc0acfafd83104bc86782b82d4a23263a1c8bd8c975a883b39a12c3c5d52a0dc"
+    },
+    {
+      "path": "v2/analog/adc/closure_20260911/README.md",
+      "original_path_sha256": "b12fe7c9184808e1f19bff89165cfa51b71a06f0b9089d47d8c768ec6f1ae01c",
+      "original_sha256": "910540211bb4c09a6ca15f35042ca2f98e72c67a16253e2a7b1833bb2b3ee63e",
+      "english_sha256": "3d166c041646e5b47f91fd966e0c34c9f7812b1a9da8ec029d630306e14ba01a"
+    },
+    {
+      "path": "v2/analog/adc/qualification_20260913/README.md",
+      "original_path_sha256": "c7d8335a32f12e5edc24a9bd95c4c1efaba3ae2ae1b9c571bbc4640bd7bd4f63",
+      "original_sha256": "ade78301f4db79d6cdef8ff33e5a00867b9b1b0b1f2106ea8a3664cb35e87c05",
+      "english_sha256": "7c90a44f2f1f6c2ff17c88fa8dcb50136d55eab6b00de60731e4cbe3ba22a103"
+    },
+    {
+      "path": "v2/analog/adc/qualification_20260913/deliver.py",
+      "original_path_sha256": "7ad777dd4557d2dc7648523e828bc2aee03221632e35ccd490a11e165ad70675",
+      "original_sha256": "30daa529fccf301f27ed41ad1fb6e4f2c07f93a3415fb1ef630b5e09e621ba3b",
+      "english_sha256": "5bd8a67ade90f1241a56aa29725ac81e99bd149164d0a42d2ceb43672d300b89"
+    },
+    {
+      "path": "v2/analog/adc/verification_20260910/README.md",
+      "original_path_sha256": "28adafa656f09b4f4aec29d92f8fc07e572b5e56e1cfed83c3d4b8aba0eb2f1e",
+      "original_sha256": "50ff0a544dd2bb3341ae748e9367399f438e2e3ce83e385f3f7ad09cb48988de",
+      "english_sha256": "273643ec4139210ee437b38ef5e1d841adeed0c1242b709dc8b6330f53c38610"
+    },
+    {
+      "path": "v2/analog/frontend/ACCESS.md",
+      "original_path_sha256": "47ad7fc2445144528737158bddbc52ea0221ad6b22a096634404c95ff165aab2",
+      "original_sha256": "f9ab928750b04ea2a3036a04d563c3425ff56f56adafc93dec94d5db73a28acb",
+      "english_sha256": "77f67e82adc1c07d68c9995de83010c78ae28645767188b3ea61b629ef57a640"
+    },
+    {
+      "path": "v2/analog/frontend/README.md",
+      "original_path_sha256": "ac90f5da8cc3b4bf166a4f21b7fbab86aba215600bd0ab9eab8be5979e07872c",
+      "original_sha256": "5cff836465c09d916c70cf42243e4b9e8ad31d3bc9bba27be543ae70862e2302",
+      "english_sha256": "46d13af3aa52f0c8ffdd6a7092cde6224b71b10418b8949e8b3f144e9b8dc227"
+    },
+    {
+      "path": "v2/analog/frontend/closure_20260911/README.md",
+      "original_path_sha256": "67b001232a6ff164edbb5f868d3d5e805d27cd6fe57d004bfb72875829d7d4f0",
+      "original_sha256": "fd9480157359eaf1ba10e219bcfe0d28def960b13c92712e9b9ec67a234493bb",
+      "english_sha256": "c6c661fbe8a150eaedea86ff2304af3dae3df0cf5298ae53c43df17897a5a79f"
+    },
+    {
+      "path": "v2/analog/frontend/dynamic_20260911/README.md",
+      "original_path_sha256": "64841cbd61c80e913ab79fe7140b006a84ee3a62268c3ff0feeb27efba37a962",
+      "original_sha256": "df26756e8085f17cdcf2fcdafefd1091ef36fa49072a1865e62df87432e1bd29",
+      "english_sha256": "3b49e9d5e200e2d9424ad872dbf15dc778ef2ed3aea4cde0e845c1023591ce4f"
+    },
+    {
+      "path": "v2/analog/frontend/frontend_overview.svg",
+      "original_path_sha256": "a965ad2eaaa50343edd4729bab319ce27a9580236a5ae5378d76402e3caeb06b",
+      "original_sha256": "606763b286116a98411c30e4647ec4c9c7642c9de9c2a704c71d29cd6b95d103",
+      "english_sha256": "7c435e191e3f56814931ef84056eb96b881dadf0e449b6614033ee53b13d9aae"
+    },
+    {
+      "path": "v2/analog/frontend/qualification_20260913/CADENCE_CANARY.md",
+      "original_path_sha256": "0253be5c65c471e98da988c3e66460b691eb3f77879778ffd097f0c5e736851a",
+      "original_sha256": "556fd5a9e9abadce45895dafebb3acc46ec637f08ff2f92d2468ae5a59c90052",
+      "english_sha256": "0000e172d6bfd3dade93353e10fd9bb163af019bebf090dae08efffff17bcd07"
+    },
+    {
+      "path": "v2/analog/frontend/qualification_20260913/README.md",
+      "original_path_sha256": "578f9c763df88aafa85f9af1da1dca43d2be00203e06f50c2e240c0fac8ceede",
+      "original_sha256": "14c746890918ecb39cde55c65693cb05723e68a200e94517299d54c9926513ca",
+      "english_sha256": "87221c43e60d9eef63ac7cc4f59b9bc74fb44c72e5489ec86b164ae188c9f2cb"
+    },
+    {
+      "path": "v2/analog/frontend/redesign_20260911/README.md",
+      "original_path_sha256": "88fc9af05094ea41a1f949a8fff9c3c93cf5ed7d7b8e6282af4420c2569fd228",
+      "original_sha256": "732f759ea4d458705445f55d4f31832fa60b11b2d06304169b50ec1849c0c756",
+      "english_sha256": "b2c4f220d9741e3be922f7937648d1edd7e8db1828d35ec9cd934a51da674311"
+    },
+    {
+      "path": "v2/analog/frontend/redesign_20260911/architecture.svg",
+      "original_path_sha256": "3d6eaf8719f3faa2490b60e166b0c70d0072f0202dcb278d6746c4301dd71a7f",
+      "original_sha256": "a35bcc079abf280e193b8567fa08738830cc5f79be2bc8a5cca68bedde83aac9",
+      "english_sha256": "48562cecfec993f275f6e5893dbfb51c8113710f05daa00a6a12cae20d2330ac"
+    },
+    {
+      "path": "v2/analog/frontend/repair_20260910/README.md",
+      "original_path_sha256": "0e4d06340790e56709c976b7d9f406a7096c58831f411b30b50df04325598e5e",
+      "original_sha256": "ee4f5ed675e6d331825881bd57e0a071c32c3edb8e24a3ad5f290ce8ba4a803e",
+      "english_sha256": "1463486df759cded7ac1c392cc4dde5f4b9b5873ed066426cda5123443ae818e"
+    },
+    {
+      "path": "v2/analog/frontend/repair_20260910/pole_audit/README.md",
+      "original_path_sha256": "40bd7b8310f336ff35f75a878033bd28f94f8c6373b5db164731f515feae80bf",
+      "original_sha256": "f2904b6c07cfa394861f5ced7f2901e799388026b4ce654f8797daada8e80692",
+      "english_sha256": "d16676a8a27ad41aaa1242b40fd854636ecc0718f350f10d7f81861d6498ff7e"
+    },
+    {
+      "path": "v2/analog/frontend/xschem_20260911/README.md",
+      "original_path_sha256": "8bb09f690a7f41d3b622284dac11d673e17fae8aec1fa65c668c4d2665a9ba61",
+      "original_sha256": "0bb85cdd0ab56d390ca4238b5557a07eedcd72f6c81946a68468aadbd0e2b31c",
+      "english_sha256": "91a0f3dcc4c7b20106ae093183759e12aac096c6ee16de4afa522853dd89979b"
+    },
+    {
+      "path": "v2/docs/chip_overview.md",
+      "original_path_sha256": "6cab1a2c8c195a64668c0015c83d67d6b37408b99dc097030283c5321d7eddf5",
+      "original_sha256": "aad015a7f3db0f861ed77558a72e0c9793cf0eb1e83b5ec24d060758e38945f6",
+      "english_sha256": "e43fdac6f97b80b05e0843346fd7eee9d3f1b843ba0348b5ce27bd8ac5d66d46"
+    },
+    {
+      "path": "v2/docs/digital_control.md",
+      "original_path_sha256": "d9f28ff2fa74e230ac7171b617b4bdd6c01bfb8577ef47fd53017d5115762060",
+      "original_sha256": "52756f791c023630ff8d4299e64ce68f1385476995ff04b39b0ef35e02672447",
+      "english_sha256": "25f5f2ee181014dabadc5ff96f976c81c77300a83f28adeffd0ef9b6cc22bdd4"
+    },
+    {
+      "path": "v2/docs/external_calibration.md",
+      "original_path_sha256": "390cab4cf77b854ee8e9fd8fdf44bc5db5694af1c5a18527bf44c49c987dc01a",
+      "original_sha256": "cb423c7e22e6c8a15b3be09cb211c4a31dfd271787dfe979c21c1b0999539b95",
+      "english_sha256": "b84d3546333a96aaffa6135eb3f0845aedeb5e3f1704c7bd402befb96cd7afe5"
+    },
+    {
+      "path": "v2/docs/interfaces.md",
+      "original_path_sha256": "4c7f17c33cea912db8a110d7be76e74d66e53f3c8bc5ec31fc8b81afee1c3547",
+      "original_sha256": "3d7f966256cb36d3f7925cdac1ee5a5a6f26fd094ddb70ae15e69131d197bf0a",
+      "english_sha256": "7d07ad832eecef83e1c59a3cd81ebfb7b82622ef678276f5ef7f54bfac866a71"
+    },
+    {
+      "path": "v2/docs/learning_checkpoint.md",
+      "original_path_sha256": "a2d5e9d917452d6bb710a08284cec70f4623d2e85bf43182658a0a0326d49380",
+      "original_sha256": "62bb4b8eb3348cf1c10e27231afca16c9583a1d69121b0a72dab72bbc4b5df89",
+      "english_sha256": "1621f51014154c7f39521d9dfcf4fba3375f3db168b4354bb10d5a39ab8def07"
+    },
+    {
+      "path": "v2/docs/local_preparation_20260913.md",
+      "original_path_sha256": "867c256a04fb19cf451feca986626d44036c9008f6f1d0d89071d2ce18d1ec25",
+      "original_sha256": "a265d29a1f75765aa6493dd2a1f267ed36b977c1e2fde670c3a2e18536b24276",
+      "english_sha256": "289d24dd517337a6de95847d2153e72b069906c06e7688fd4be918d8e8e688c7"
+    },
+    {
+      "path": "v2/docs/non_cadence_20260910.md",
+      "original_path_sha256": "5fdab9834ae56a7059ba90d54b0d1e964ab1c7b241e99e3e0f0b7b9eb2d7e1c4",
+      "original_sha256": "37369231410b69df5f0e6beab206826b9a0c82dc247d17c30afc3a27a3eeaaab",
+      "english_sha256": "cd4d4a6a7dafab4636ab2221d374283dfe054f35918061000019132c3eaf7d4b"
+    },
+    {
+      "path": "v2/docs/status.md",
+      "original_path_sha256": "eed5602b4355ac68e482210f1715a2428c0c742fb6ee06b29b4df978272fda87",
+      "original_sha256": "a84926ebb5c33fad80e2e2501f0c06ceb5dbc1181c51cec1e5e8b768122c0229",
+      "english_sha256": "cccb11d9b96e9fdf6ceacb2f5c858a100399654a50118489f3a8afd6a7c137a9"
+    },
+    {
+      "path": "v2/environment/README.md",
+      "original_path_sha256": "980a0de954bfa903d4d19fff86fc7c909a1713cd5164f1a4fddd7c0b286516f6",
+      "original_sha256": "9a1d42f345280d8bd4bf4bc965498ee616b12347e9d990736a82b13d530c8264",
+      "english_sha256": "b4a185e4f30982b658584862140a4ebb81c0a93a4daede5ad2296e2d16e9111e"
+    },
+    {
+      "path": "v2/integration/README.md",
+      "original_path_sha256": "57e58cbf9c804bd124ba5c00ed270aea8e34d48e6335888e8392dfaca5e2ee98",
+      "original_sha256": "0fba3731d7be625f38a2cb3500c868be326ec03cf34689c24d8eb29b368a5e8f",
+      "english_sha256": "4974e03a199af8ab4514d7be31d1a7356b7dfc57c66ba8225c8e3a6606449a00"
+    },
+    {
+      "path": "v2/physical/adc_switch/README.md",
+      "original_path_sha256": "9dacd15fbae1d20f825fae4b40afde3c55c33c0942eb4ad261ab26d7e05d0f04",
+      "original_sha256": "47d10917197be47e6b47ed4eb2720b8bd5f06c1a1f0ca9d1f153a0651fc64b0c",
+      "english_sha256": "1d41d7684d8c72cd06af1a95034191bc07267e02375ecaa4cab648092c56128a"
+    },
+    {
+      "path": "v2/physical/adc_switch/SOURCE_INDEX.md",
+      "original_path_sha256": "ded0fc8b1c4950a07fa9fda05727c206c6e5e5e40f040167adff25ef26a0291d",
+      "original_sha256": "22db32364975e9243c9e5723b359f61fb1172f16773615261ea305f1b999c7af",
+      "english_sha256": "5832002da5eb59580de682e73ae2f313f5369eda4cd2b718b992003160a0c3c8"
+    },
+    {
+      "path": "v2/physical/cdac/README.md",
+      "original_path_sha256": "82168b2cbc2c6a60d0883b3af148078ceda160107ba38ccf87cd7964943ef0e9",
+      "original_sha256": "d7c8cc98c15ddb256daf9e19fb7bdf4472006393f4eea6e3f6e1ae9ee8a421b5",
+      "english_sha256": "5b0e77ae3ecc60da1267b24297b9d305f2e703d4ed8e08eb5ff9dc874b95da6a"
+    },
+    {
+      "path": "v2/physical/cdac_layout_20260911/README.md",
+      "original_path_sha256": "57a9c5b444e6c6063cbba777bb0869fc6c4da18e5a5d2e60d0607fea14487fb8",
+      "original_sha256": "b0b99a86c6d3279fd396fa4cce395591a56b5f28a5d96f90eb48443633ca6815",
+      "english_sha256": "0cad1738517e048a223c2d758e778e235ee47e1c9b29de8fab20ea0ec758f852"
+    },
+    {
+      "path": "v2/physical/cdac_route_20260911/README.md",
+      "original_path_sha256": "a727eb453eea97d8f8a60c7a41172a76486f781fb8518b3f28847634d5cc1b40",
+      "original_sha256": "abdbe55d6523f53739f5fc6ee329614b30eb04b88387c00a37337f105f7855cd",
+      "english_sha256": "5ced5d02d56d627a8d421bdfc1c3a7e58268fd9ae128300030e53c3883bee0ff"
+    },
+    {
+      "path": "v2/physical/core_integration_20260913/README.md",
+      "original_path_sha256": "165e87c01bb9bb6265bb6cb5c1c3874330a1931fa4b770e3644ef2dce3f974b1",
+      "original_sha256": "afab4805c22d655ae1119801fa49b81a154ac29630c0ae0a8c5de30d86dbcece",
+      "english_sha256": "9453b433dacce4151c0914c9ae0879f85c2a98a60ef255ca413911c06da07b2e"
+    },
+    {
+      "path": "v2/physical/digital/README.md",
+      "original_path_sha256": "db78ca918a1f89d3a2d95bbae34290e14e9d496a35eb0b25da2bc6b1c8add29a",
+      "original_sha256": "f6c3bd5173f91d06b8eaa17c4fbfba98e37e989e81d1cc20a3be9bca5bea31e9",
+      "english_sha256": "16d623057ed3a63b3daccac5412e135f43570f630d9f8ad4af4d6ddddfa0d483"
+    },
+    {
+      "path": "v2/results/behavioral_report.md",
+      "original_path_sha256": "3349e9f122105c1c04938e854b188088b882c20c055b28e6fa4d445f49c049c0",
+      "original_sha256": "33518f133311e78863cec8877bfe5f8acf4cd83a48f5425526cf84a62de4b906",
+      "english_sha256": "b78527266c9a11917430676a6cb864fa21f5ca56d412b8510d24e7f0b28b9a98"
+    },
+    {
+      "path": "v2/results/physical_budget_report.md",
+      "original_path_sha256": "e5ceae58cea30ea22701ded1805c0d62a693aa746990a54bd3c410718a67762b",
+      "original_sha256": "52cb5010629a4ec4683ae8dce7849be788ec2f5de3501c48cac1768479ebd8f8",
+      "english_sha256": "7460595ad92a6666b5b17e866a1e130c97a67d215775ea321157428fcfe0da57"
+    },
+    {
+      "path": "v2/results/validation.json",
+      "original_path_sha256": "61f29a65e85dd7275d570c3dc637434afaa3d6185a5fa37df0e09c88ec950462",
+      "original_sha256": "21cc4a27e14b013f901576d462ffda60e0f7c64dd0904a62235b6ae6867bc470",
+      "english_sha256": "1f4ac58f05277a294e4d57f32c1ff6b29cddeb052ddc713412eaa4715253616d"
+    },
+    {
+      "path": "v2/scripts/run_behavioral.py",
+      "original_path_sha256": "6668baaae8e9193d7938f47ada6bd06d258d7874d28a7c59c4b9d0f2dd594da5",
+      "original_sha256": "17e6b2e4b140a8956f2a10e409bc18c38a9988a13942d5eeacb2e8e987c5d500",
+      "english_sha256": "a634adbd682fdd4e6971adacb78ee897302a080f4dfc16c62db32826ef7ad2b4"
+    },
+    {
+      "path": "v2/scripts/run_physical_budget.py",
+      "original_path_sha256": "7fa0f681fdd5203db1bca7713f0cf6ca0d121509530c7289e40e550986a2bbda",
+      "original_sha256": "0ea4bc7a2adf49e1f9eff091e0f306cf531636ffd6f307eedf5c6e8ae2c14034",
+      "english_sha256": "3ec4a3cc40995a0fcfcbd1e4160274957d0fb13ff8ee002d1fd353fbcb3d3e03"
+    },
+    {
+      "path": "v2/verification/legacy_extra_20260913/README.md",
+      "original_path_sha256": "83c392a3401777299bf4901b3a6d58c939ae2c22a0774a646cfb79ec75d7ecb2",
+      "original_sha256": "8ec1324687bd1713913c468354018a9cbf8c286c2e1adb57294728deccbeead2",
+      "english_sha256": "e4749f785c71f116ab41f181f8e2717421b8a5fd96b94f6515eea854179d4e9c"
+    },
+    {
+      "path": "v2/verification/legacy_extra_20260913/build_report.py",
+      "original_path_sha256": "242d83840875db860d15fb7748e492022cf407b2dfadde16642d25b0fc03f225",
+      "original_sha256": "d1a9848f327cdbf7c44d9e3fdffc9d2801ac959c17d007140167a3909fce7735",
+      "english_sha256": "3479160bb1ec67195ceb0684d0bc0a039fd9bb2f826ffe0c4fca45dc52d4592b"
+    },
+    {
+      "path": "v2/verification/legacy_extra_20260913/reviews/20260913T062428272833Z/manifest.json",
+      "original_path_sha256": "a9409b7e247d917f5c4975a83f678b63e07f6569c8852a1ae6b45ffce6e51206",
+      "original_sha256": "81d924be78b7609dbf1418850bddad92a138855df9a209e51fdb61d3ee878d4d",
+      "english_sha256": "58729019e4af8bf5645eeafd684c152d71e3660f6f86dfdc818c49cc8aea8ccf"
+    },
+    {
+      "path": "v2/verification/legacy_extra_20260913/reviews/20260913T062428272833Z/reproduction_report.md",
+      "original_path_sha256": "10829b25d724fdddb6dc1de01339409a9bf91071dc4d9dea07882a922aad2437",
+      "original_sha256": "c356cb7a5ded562dedd9e605241469ef82bec15cfe20b792cc3ec3b4dd83e14e",
+      "english_sha256": "023267ceeceac989879f1449e95237c5eb0ac130554c8be64054b30a00a279b7"
+    },
+    {
+      "path": "v2/verification/noise_20260910/README.md",
+      "original_path_sha256": "494dc4c506d5d4f6604e73f1a3ad538a682d433581fcc4e0a6ec16106fccb722",
+      "original_sha256": "f00bd78ac9a3a1bb65fe0fa181e7fe9419391c13a2829761bc5ef418215a639d",
+      "english_sha256": "7794c3784450246970819886bfd041666b07586832e78ba2a8305170ae55c9ed"
+    },
+    {
+      "path": "v2/verification/noise_closure_20260911/README.md",
+      "original_path_sha256": "2579e54eb37bf26de24831347d2654cf3c352d0746e5891d0929b2cefa9839df",
+      "original_sha256": "a6bdad05e74b5e2b6d81429d23004cd411bc129d2e2cbbcc9a73089b6ba72774",
+      "english_sha256": "859a34145c2a29b20148a70763b713dd83157a49b755c816b9ecbc88f3fb2b2d"
+    }
+  ],
+  "original_report_fingerprints": "Historical source/evidence hashes refer to original bytes; operational English package bindings were refreshed separately.",
+  "status": "PASS",
+  "markdown_link_check": {
+    "new_missing_targets": [],
+    "preexisting_missing_or_local_only_targets": 1,
+    "current_missing_or_local_only_targets": 1
+  },
+  "archive_numeric_circuit_payload_check": {
+    "files_verified_byte_identical": 300,
+    "changed_files": []
+  },
+  "svg_visual_review": {
+    "files": [
+      "v2/analog/frontend/frontend_overview.svg",
+      "v2/analog/frontend/redesign_20260911/architecture.svg"
+    ],
+    "result": "Both rendered and visually checked; labels fit, feedback caption moved clear of the wire, and a white background preserves readability."
+  },
+  "whitespace_review": {
+    "returncode": 2,
+    "diagnostics": "cadence/project1/reports/basic_20260913T015701Z_582c6ec8/nominal_review_and_next_steps.md:3: trailing whitespace.\n+Report: `project1_basic_report_20260913T015701Z_582c6ec8.zip`  \ncadence/project1/reports/basic_20260913T015701Z_582c6ec8/nominal_review_and_next_steps.md:4: trailing whitespace.\n+Report SHA256: `1145038acb946f06e97a5995308f9316bdc49217f6674bbf2f41e11436ec9eb4`  \ncadence/project1/reports/basic_20260913T023544Z_5cc09eef/pvt_review_and_next_steps.md:5: trailing whitespace.\n+Report: `project1_basic_report_20260913T023544Z_5cc09eef.zip`  \ncadence/project1/reports/basic_20260913T023544Z_5cc09eef/pvt_review_and_next_steps.md:6: trailing whitespace.\n+Report SHA256: `9730a427a344b5161dc5faf99dd3c573ed76f68c86a9de8893601e1079c6a3d3`  \ncadence/project1/reports/basic_20260913T062632Z_d7dc1ae6/extra_characterization_review.md:5: trailing whitespace.\n+Report: `project1_basic_report_20260913T062632Z_d7dc1ae6.zip`  \n",
+    "decision": "Five intentional CommonMark hard line breaks use exactly two trailing spaces in translated report metadata; retained as valid Markdown formatting."
+  }
+}

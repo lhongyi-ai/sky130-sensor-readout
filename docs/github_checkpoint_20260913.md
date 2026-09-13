@@ -1,39 +1,39 @@
-# GitHub 阶段成果快照：2026-09-13
+# GitHub Engineering Checkpoint: 2026-09-13
 
-本仓库保存当前已完成的工程工作和可审阅结果。完整芯片尚未通过验收，设计目标、工具检查、行为模型结果、真实电路仿真与学校实测仍按原报告区分。
+This repository preserves completed engineering work and reviewable results. The complete chip has not passed qualification. Design targets, tool checks, behavioral-model results, transistor-level simulations, and school measurements remain distinguished according to their original reports.
 
-## 收录范围
+## Included scope
 
-- 原版 OTA 的全部已提交文件及 Git 历史，基线提交为 `6e7f782fccecc0c2a047435744b26ffeb0db175f`。
-- V2 的自有模型、SPICE 电路、SAR RTL、测试、分析脚本、配置、文档、版图和结果摘要；已知失败与未完成任务原样保留。
-- Cadence 迁移脚本、自有交付包、复核程序、比较表格、图像和中文复核报告。学校当前成果以 [Cadence 状态](../cadence/project1/README.md) 为入口。
-- 总计复制 7,706 个原项目文件，约 525.95 MiB 未压缩；另有本次发布说明和校验报告。只对首页增加快照导航，对根 `.gitignore` 追加排除规则，两者原始内容均完整保留。
+- All previously committed original OTA files and Git history, based on commit `6e7f782fccecc0c2a047435744b26ffeb0db175f`.
+- V2's original models, SPICE circuits, SAR RTL, tests, analysis scripts, configuration, documentation, layouts, and result summaries, retaining known failures and unfinished tasks.
+- Cadence migration scripts, project-authored delivery packages, review programs, comparison tables, figures, and review reports. Start with [Cadence status](../cadence/project1/README.md) for the latest school results.
+- The initial checkpoint copied 7,706 original project files, approximately 525.95 MiB uncompressed, plus publication notes and verification records. It prepended checkpoint navigation to the original homepage and appended exclusions to the root `.gitignore`, preserving their original content. The subsequent English edition translates documentation and display text and renames language-specific paths; see [English-edition notes](english_publication_20260913.md).
 
-## 本地保留的数据
+## Data retained locally
 
-[文件清单](github_checkpoint_manifest_20260913.json) 按相对原项目根目录的路径，保存收录文件与本地保留文件的字节数和 SHA-256。共 5,333 个本地保留文件、约 2,585.98 MiB，包括：
+The [file inventory](github_checkpoint_manifest_20260913.json) records byte counts and SHA-256 hashes for included and local-only files. Its original checkpoint inventory covers 5,333 local-only files, approximately 2,585.98 MiB, including:
 
-- 超过 1 MiB 的新增 DAT/TSV/CSV/NPZ 原始数值数据。
-- 学校原始回传目录、完整回传 ZIP 和环境元数据；已完成的结果复核与摘要仍收录。
-- 本机生成的数字桥二进制、编译中间文件及用量记录。
+- New DAT/TSV/CSV/NPZ numeric data files larger than 1 MiB.
+- Original school-return directories, complete return ZIPs, and environment metadata. Completed result reviews and summaries remain included.
+- Locally generated digital-bridge binaries, compiler intermediates, and usage records.
 
-原仓库本来就忽略的日志、RAW 波形、缓存等继续按原规则处理，不在上述文件清单的覆盖范围内。原项目目录中的这些文件未移动、未删除。
+Logs, RAW waveforms, caches, and other files already ignored by the original repository remain subject to its existing rules and are outside this inventory. These files have not been moved or deleted from the original project directory.
 
-**本仓库不是全部原始仿真证据的备份。** 历史报告、源代码和清单里的原始路径与哈希未改写；引用本地保留文件的链接及证据回放需从原项目取回对应文件。仅克隆本仓库不能运行所有依赖历史波形、学校回传或编译二进制的测试。没有修改测试来跳过缺失证据，也没有将缺失证据变成通过。
+**This repository is not a backup of all raw simulation evidence.** Original measurement hashes remain provenance records. The English edition supplies published paths and hashes separately where translation changes bytes or filenames. Links to local-only files and evidence replay require the corresponding original project files. Cloning this repository alone is insufficient to run every test that depends on historical waveforms, school returns, or compiled binaries. Tests have not been changed to skip missing evidence or convert it into a passing result.
 
-## 本次实际验证
+## Checks performed for the initial checkpoint
 
-[发布副本验证记录](github_checkpoint_validation_20260913.json) 保存命令结果与输出：
+The [publication-copy verification record](github_checkpoint_validation_20260913.json) preserves command results and output:
 
-- 23 项行为分析测试、21 项行为模型测试通过。
-- SAR 数字 RTL 编译及自检仿真通过；实际检查计数见验证记录。这不代表真实模拟 ADC 性能或物理时序验收。
-- 341 个 Python 源文件通过语法解析。
-- 7,706 个原项目文件完成哈希或有意文档追加的逐字节核对。
-- 对收录文件及交付 ZIP 内容检查常见访问令牌和私钥格式，未发现匹配；这是一项有限格式检查。
+- 23 behavioral-analysis tests and 21 behavioral-model tests passed.
+- SAR digital RTL compilation and self-checking simulation passed; the actual check count is in the record. This does not establish analog ADC performance or physical timing qualification.
+- 341 Python source files passed syntax parsing.
+- 7,706 original files were checked by hash or by byte-for-byte validation of the intentional documentation additions.
+- A limited scan of included files and delivery ZIP contents found no matches for common access-token and private-key formats.
 
-本轮只整理发布副本，未重新运行模拟电路仿真或完整历史证据回放。历史报告中的 PASS/FAIL 只在其原范围内有效。
+The checkpoint operation prepared a publication copy without rerunning analog simulations or the complete historical evidence suite. Historical PASS/FAIL results retain their original scope. Importing simulator-generated tables produces whitespace diagnostics; their bytes are retained to preserve evidence integrity. Checks for the later English edition are recorded separately.
 
-可在仓库根目录复现本次模型与 RTL 检查（需要 Python 3.12、NumPy、Icarus Verilog/vvp）：
+The model and RTL checks can be reproduced from the repository root with Python 3.12, NumPy, and Icarus Verilog/vvp:
 
 ```sh
 PYTHONPATH=v2 python3 -m unittest discover -s v2/tests -p test_analysis.py -v
@@ -41,4 +41,4 @@ PYTHONPATH=v2 python3 -m unittest discover -s v2/tests -p test_model.py -v
 python3 v2/tests/rtl/run.py
 ```
 
-`v2/scripts/run_validation.py` 包含额外的历史证据测试，不属于上述便携检查范围；运行前必须恢复对应原始文件。PDK、商业工具、许可证及本机工具链需按各子目录说明单独配置。
+`v2/scripts/run_validation.py` includes additional historical-evidence tests outside the portable checks above; restore their required original files before running it. Configure the PDK, commercial tools, licenses, and local toolchains separately according to each subdirectory's documentation.

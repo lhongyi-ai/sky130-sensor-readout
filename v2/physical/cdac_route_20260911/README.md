@@ -1,113 +1,113 @@
-# 12-bit 差分 CDAC：SKY130 真实布线、DRC/LVS 与 RC 提取
+# 12-bit Differential CDAC: Real SKY130 Routing, DRC/LVS, and RC Extraction
 
-## 结论
+## Conclusion
 
-本目录把此前只有真实电容放置、尚未接线的 CDAC floorplan，推进成了一个**有真实金属连线的独立无源差分 CDAC 宏单元**：
+This directory advances the previous CDAC floorplan of real but unconnected capacitors into an **independent passive differential CDAC macro with real metal connections**:
 
-- P、N 两侧各有 4096 个有效单位电容和 260 个边缘 dummy；顶层共有 **8192 个有效 MIM**、**520 个边缘 MIM**，合计 **8712 个真实 SKY130 MIM 实例**。
-- 原 64 × 64 电气分配没有改变；每侧仍严格满足 `B11…B0 = 2048…1`，另有一个 electrical `DUMMY`。
-- 每侧 `TOP`、`B11…B0`、`DUMMY`、`EDGE_BIAS` 共 15 个物理端口均已接通；差分顶层有 30 个端口。
-- P 侧、N 侧及差分顶层 Magic DRC 均为 0。
-- 代表 tile、P 侧、N 侧和差分顶层均与独立参考网表 **Netgen 唯一匹配**。
-- 完整差分顶层已经做展平 RC 提取，保留 8712 个 MIM，并产生 26,210 段互连电阻和 17,710 个提取电容项。
+- Each P/N side has 4096 active unit capacitors and 260 edge dummies; the top has **8192 active MIMs** and **520 edge MIMs**, totaling **8712 real SKY130 MIM instances**.
+- The original 64 × 64 electrical assignment is unchanged; each side still exactly satisfies `B11…B0 = 2048…1`, plus one electrical `DUMMY`.
+- All 15 physical ports per side—`TOP`, `B11…B0`, `DUMMY`, and `EDGE_BIAS`—are connected; the differential top has 30 ports.
+- Magic DRC is 0 for P, N, and the differential top.
+- The representative tile, P side, N side, and differential top all **match uniquely in Netgen** against independent reference netlists.
+- The complete differential top has flattened RC extraction retaining 8712 MIMs and producing 26,210 interconnect-resistor segments and 17,710 extracted-capacitor entries.
 
-机器可读的最终状态为 `SKY130_CDAC_ROUTED_OPEN_PDK_PASS`，见 [`qualification.json`](qualification.json)。这个 PASS 只适用于本目录的**无源 CDAC 宏单元**，不代表完整 SAR ADC、前端或全芯片通过，也不是 Cadence／foundry signoff。
+Final machine-readable status is `SKY130_CDAC_ROUTED_OPEN_PDK_PASS`; see [`qualification.json`](qualification.json). This PASS applies only to this directory's **passive CDAC macro**, not the complete SAR ADC, frontend, or chip, and is not Cadence/foundry sign-off.
 
-下面两张是展示专用图片。为避免端口名和每个 MIM 内部文字压住器件或导线，渲染脚本只在内存副本中隐藏了全部 GDS text；它**没有改写 GDS**。带完整标签的原始证据图仍保存在 `artifacts/cdac_diff_routed.png` 和 `artifacts/cdac_routing_detail.png`。
+The following two images are for presentation. To keep port names and text inside every MIM from obscuring devices or wires, the rendering script hides all GDS text only in an in-memory copy; it **does not rewrite the GDS**. Original evidence images with complete labels remain in `artifacts/cdac_diff_routed.png` and `artifacts/cdac_routing_detail.png`.
 
-![无文字遮挡的差分 CDAC 整体布线](artifacts/cdac_diff_routed_display_no_labels.png)
+![Full differential CDAC routing without obscuring text](artifacts/cdac_diff_routed_display_no_labels.png)
 
-下面是中心 B0／DUMMY 区域的近景。可以分辨单个 MIM、电容端子上的 M4 escape、行间 M4 导线、via4 落点和竖直 M5 trunk；图上没有文字覆盖金属。
+The central B0/DUMMY region is enlarged below. Individual MIMs, M4 escapes from capacitor terminals, interrow M4 wires, via4 landings, and vertical M5 trunks are visible without text covering metal.
 
-![无文字遮挡的中心布线近景](artifacts/cdac_routing_detail_display_no_labels.png)
+![Central routing detail without obscuring text](artifacts/cdac_routing_detail_display_no_labels.png)
 
-## 真实连接方式
+## Actual connectivity
 
-每个有效电容都有两个端子：
+Each active capacitor has two terminals:
 
-1. `C2` 端通过与端子实际重叠的 M3 横线接到每一行的 TOP rail，再由一根 M3 竖线把 64 行接成同一个 `TOP` 网络。
-2. `C1` 端先用 M4 finger 进入相邻行间走线通道；同一行内连续且属于同一 bit 的电容由 M4 row bus 汇合。
-3. 每条 row bus 通过真实 `via4` 接到 M5 trunk。每侧共有 24 根 M5 trunk；同一 bit 的多根 trunk 再由阵列上方、彼此分开的 M4 peripheral bus 实际连接。
-4. 每条 peripheral bus 都延伸到真正的引脚落点后才放置端口 label。label 只给已经存在的导体命名，从未跨空白代替金属。
-5. 外围 260 个 edge dummy 的两端局部短接，并接入单独的 M3 `EDGE_BIAS` ring；它们不会错误地给 `TOP` 增加 260 个单位电容。以后集成时，`EDGE_BIAS` 必须接到安静、固定的偏置。
+1. Terminal `C2` connects through an M3 horizontal wire actually overlapping the terminal to each row's TOP rail; an M3 vertical wire then joins all 64 rows into one `TOP` net.
+2. Terminal `C1` first uses an M4 finger to enter the adjacent interrow routing channel; consecutive capacitors belonging to the same bit within a row join an M4 row bus.
+3. Each row bus connects through real `via4` to an M5 trunk. There are 24 M5 trunks per side; multiple trunks for the same bit are physically joined by separate M4 peripheral buses above the array.
+4. Every peripheral bus extends to a real pin landing before its port label is placed. Labels only name existing conductors and never replace metal across empty space.
+5. Both terminals of the 260 perimeter edge dummies are locally shorted and connected to a separate M3 `EDGE_BIAS` ring; they do not incorrectly add 260 unit capacitors to `TOP`. During later integration, `EDGE_BIAS` must connect to a quiet fixed bias.
 
-原来的 x 坐标和各 bit 的共心分配保持不变。为了让 1.18 µm 的 via4 landing、1.60 µm 宽 M5 和行间 M4 routing 满足间距规则，y pitch 从 4.54 µm 增加到 6.00 µm；增幅为 32.1586%。
+Original x coordinates and common-centroid bit assignments remain unchanged. To satisfy spacing for 1.18 µm via4 landings, 1.60 µm-wide M5, and interrow M4 routing, y pitch increases from 4.54 µm to 6.00 µm, a 32.1586% increase.
 
-## 为什么这不是“同名标签造成的假连接”
+## Why these are not false connections from matching labels
 
-本轮用了四层相互独立的证据：
+This round used four independent levels of evidence:
 
-- 小型 4-MIM 代表 tile 先验证 M3/M4/via4/M5 的端口访问方式，DRC=0、LVS 唯一匹配，并在新 Magic 进程中提取出真实 R/C 网络。
-- 完整版图提取网表逐个保留 4356 个 MIM／侧。审计脚本直接把每个 MIM 的两个提取端子与冻结的原始 assignment CSV 比较，而不是只相信汇总数字或同一个生成器的声明。
-- P、N 两侧各只出现 15 个网络，差分顶层只出现预期的 30 个端口；所有原始网表中的 bit 权重、TOP 和 EDGE_BIAS 连接均与参考一致。若一段导线断开并产生额外节点，这些直接比对会失败。
-- KLayout 独立回读最终 GDS，确认顶层恰有两个 side cell、每侧恰有 4356 个 MIM，并读到全部 30 个顶层物理端口 label。
+- A small representative 4-MIM tile first validates M3/M4/via4/M5 port access, with DRC=0, unique LVS match, and a real R/C network extracted in a fresh Magic process.
+- The complete-layout extracted netlist individually retains 4356 MIMs per side. The audit directly compares both extracted terminals of every MIM against the frozen original assignment CSV, rather than trusting summary counts or the same generator's claims.
+- Each P/N side has only 15 nets, and the differential top has only the expected 30 ports; bit weights, TOP, and EDGE_BIAS connectivity in all raw netlists match the reference. A disconnected wire creating an extra node would fail these direct comparisons.
+- Independent KLayout readback of final GDS confirms exactly two top-level side cells, exactly 4356 MIMs per side, and all 30 top-level physical port labels.
 
-Netgen 日志会说明 MIM 模型作为两端 black box 比较；因此 LVS 结论是**实例类型、数量、引脚和网络拓扑匹配**。实际 MIM 几何来自已验证的 SKY130 PCell，且由 Magic DRC 和 KLayout GDS 回读另行约束。Netgen 在报告中把同网络并联的 4356 个 MIM 合并成 14 组只是比较优化；原始提取网表和 CSV 审计仍逐个检查全部实例。
+Netgen logs state that MIM models are compared as two-terminal black boxes, so LVS establishes **matching instance types, counts, pins, and network topology**. Actual MIM geometry comes from the verified SKY130 PCell and is separately constrained by Magic DRC and KLayout GDS readback. Netgen merging the 4356 same-net parallel MIMs into 14 groups is only a comparison optimization; raw extracted-netlist and CSV audits still check all instances individually.
 
-## 核心证据
+## Core evidence
 
-| 对象 | MIM 数 | 端口／网络数 | Magic DRC | 独立 LVS | RC 提取 |
+| Object | MIM count | Port/net count | Magic DRC | Independent LVS | RC extraction |
 |---|---:|---:|---:|---|---|
-| 代表 tile | 4 | 3 | 0 | 唯一匹配 | 9 R、11 C |
-| P 侧 | 4356 | 15 | 0 | 唯一匹配 | 13,105 R、8,855 C |
-| N 侧 | 4356 | 15 | 0 | 唯一匹配 | 13,105 R、8,855 C |
-| 差分顶层 | 8712 | 30 个端口 | 0 | 唯一匹配 | 26,210 R、17,710 C |
+| Representative tile | 4 | 3 | 0 | Unique match | 9 R, 11 C |
+| P side | 4356 | 15 | 0 | Unique match | 13,105 R, 8,855 C |
+| N side | 4356 | 15 | 0 | Unique match | 13,105 R, 8,855 C |
+| Differential top | 8712 | 30 ports | 0 | Unique match | 26,210 R, 17,710 C |
 
-最终 `.res.ext` 全部非空：代表 tile 1168 bytes，P 侧 1,608,389 bytes，N 侧 1,607,456 bytes，差分顶层 3,433,086 bytes。这里列出的 R/C 数量证明提取网络真实存在；电阻总和或电容项总和并不是某一条端到端路径的等效值，不能直接当作建立时间或 INL 结论。
+All final `.res.ext` files are nonempty: representative tile 1168 bytes, P side 1,608,389 bytes, N side 1,607,456 bytes, differential top 3,433,086 bytes. These R/C counts prove an extracted network exists. Sums of resistor or capacitor entries are not equivalents for a particular end-to-end path and cannot directly establish settling time or INL.
 
-## 面积与布线资源
+## Area and routing resources
 
-| 项目 | 结果 |
+| Item | Result |
 |---|---:|
-| routed pitch | x = 6.00 µm，y = 6.00 µm |
-| 单侧读回外框 | 431.60 µm × 422.50 µm |
-| 差分顶层读回外框 | 893.20 µm × 422.50 µm |
-| 差分顶层宏面积 | 377,377 µm² = **0.377377 mm²** |
-| 每侧 contiguous row runs | 140 |
-| 每侧 M5 trunks | 24 |
+| Routed pitch | x = 6.00 µm, y = 6.00 µm |
+| Single-side readback bounding box | 431.60 µm × 422.50 µm |
+| Differential top readback bounding box | 893.20 µm × 422.50 µm |
+| Differential top macro area | 377,377 µm² = **0.377377 mm²** |
+| Contiguous row runs per side | 140 |
+| M5 trunks per side | 24 |
 
-使用的物理资源为 M3 TOP mesh、M4 C1 escape／row bus／peripheral bus、真实 via4 和 M5 trunk。面积只属于当前差分无源 CDAC；参考开关、采样开关、比较器、参考缓冲、数字控制和前端均未计入。
+Physical resources are an M3 TOP mesh, M4 C1 escapes/row buses/peripheral buses, real via4, and M5 trunks. Area belongs only to the current passive differential CDAC; reference switches, sampling switches, comparator, reference buffers, digital controller, and frontend are excluded.
 
-## `.res.ext` 早期为什么为空
+## Why early `.res.ext` files were empty
 
-第一次代表 tile 尝试在“建立层次版图的同一个 Magic 进程”里紧接着执行 `extresist all`。该进程保留了错误的层次 extraction root，因而找不到展平父 cell 的 `.ext`，没有生成电阻网络。失败输出完整保存在 `probe_artifacts/attempt_in_process_extresist_root_failure.log`。
+The first representative-tile attempt ran `extresist all` immediately within the same Magic process that built the hierarchical layout. That process retained the wrong hierarchical extraction root, could not find the flattened parent cell's `.ext`, and produced no resistor network. Complete failure output is retained in `probe_artifacts/attempt_in_process_extresist_root_failure.log`.
 
-修正不是伪造空文件或降低条件，而是把 RC 提取放入全新的 Magic 进程，并让一次进程只处理一个明确 root。`extract_probe_rc.tcl`、`extract_rc.tcl` 和 `extract_top_rc.tcl` 均采用这一边界；最终四份 `.res.ext` 都非空，SPICE 中也有正值 R/C。
+The repair moves RC extraction into a fresh Magic process, with each process handling one explicit root; it neither fabricates empty files nor lowers conditions. `extract_probe_rc.tcl`, `extract_rc.tcl`, and `extract_top_rc.tcl` all use this boundary. All four final `.res.ext` files are nonempty, and SPICE contains positive R/C values.
 
-## 保留的失败记录
+## Retained failures
 
-| 失败 | 证据 | 修正 |
+| Failure | Evidence | Repair |
 |---|---|---|
-| 首版内部宽 M3 trunk 违反 `capm.11`，每侧 194 项 | `artifacts/attempt1_capm11_194_per_side.log` | TOP joining 移到已验证的边界 slot，竖直 M3 缩为 0.30 µm |
-| 第二次运行加载旧 `.mag`，旧图形累积，仍有 194 项 | `artifacts/attempt2_stale_mag_replayed_194_per_side.log` | 生成前只删除本生成器命名的 cell，再完整重建 |
-| DRC=0 但 B0／DUMMY 未成为端口 | `artifacts/attempt3_drc0_missing_b0_dummy_ports.log` | 每条 peripheral bus 实际延伸到统一 pin x |
-| side 已正确，但顶层只提取出两个端口 | `artifacts/attempt4_drc0_side_lvs_ready_top_ports_missing.log` | 每个顶层 label 下增加 parent-level M3/M4 landing |
-| 同进程 RC 提取没有电阻网络 | `probe_artifacts/attempt_in_process_extresist_root_failure.log` | 新 Magic 进程中对明确的 flattened root 执行提取 |
+| First internal wide M3 trunk violates `capm.11`, 194 violations per side | `artifacts/attempt1_capm11_194_per_side.log` | Move TOP joining to a verified boundary slot and narrow vertical M3 to 0.30 µm |
+| Second run loads old `.mag`, accumulating old geometry and retaining 194 violations | `artifacts/attempt2_stale_mag_replayed_194_per_side.log` | Delete only cells named by this generator before generation, then rebuild completely |
+| DRC=0 but B0/DUMMY are not ports | `artifacts/attempt3_drc0_missing_b0_dummy_ports.log` | Physically extend each peripheral bus to the common pin x coordinate |
+| Sides correct, but top extracts only two ports | `artifacts/attempt4_drc0_side_lvs_ready_top_ports_missing.log` | Add parent-level M3/M4 landings below every top label |
+| Same-process RC extraction produces no resistor network | `probe_artifacts/attempt_in_process_extresist_root_failure.log` | Extract an explicit flattened root in a new Magic process |
 
-## 关键文件与访问方法
+## Key files and access
 
-- `artifacts/cdac_diff_routed.gds`：最终差分 routed GDS；用 KLayout 打开。
-- `artifacts/cdac_diff_routed.mag`：Magic 顶层；同目录包含两个 side cell 和 `mim_unit.mag`。
-- `artifacts/cdac_side_p_routed.gds`、`artifacts/cdac_side_n_routed.gds`：独立 P／N 宏。
-- `artifacts/cdac_diff_routed_flat_rc.spice`：完整差分 flattened RC PEX 网表。
-- `artifacts/cdac_diff_routed_flat_rc.res.ext`：完整差分 Magic 电阻提取中间证据。
-- `artifacts/top_lvs.rpt`、`artifacts/side_p_lvs.rpt`、`artifacts/side_n_lvs.rpt`：原始 LVS 报告。
-- `artifacts/magic_full.log`：P、N 和顶层 DRC 原始日志。
-- `artifacts/klayout_readback.json`：独立 GDS 层次、实例和端口回读。
-- `qualification.json`：最终机器审计、所有 checks、限制、面积和关键文件哈希。
-- `probe_artifacts/`：先行代表 tile 的 MAG/GDS/LVS/PEX 与失败证据。
+- `artifacts/cdac_diff_routed.gds`: final differential routed GDS; open with KLayout.
+- `artifacts/cdac_diff_routed.mag`: Magic top; the same directory contains both side cells and `mim_unit.mag`.
+- `artifacts/cdac_side_p_routed.gds`, `artifacts/cdac_side_n_routed.gds`: independent P/N macros.
+- `artifacts/cdac_diff_routed_flat_rc.spice`: complete differential flattened RC PEX netlist.
+- `artifacts/cdac_diff_routed_flat_rc.res.ext`: complete differential Magic resistor-extraction intermediate evidence.
+- `artifacts/top_lvs.rpt`, `artifacts/side_p_lvs.rpt`, `artifacts/side_n_lvs.rpt`: raw LVS reports.
+- `artifacts/magic_full.log`: raw P/N/top DRC log.
+- `artifacts/klayout_readback.json`: independent GDS hierarchy, instance, and port readback.
+- `qualification.json`: final machine audit, all checks, limitations, area, and key-file hashes.
+- `probe_artifacts/`: preliminary representative-tile MAG/GDS/LVS/PEX and failure evidence.
 
-不安装任何 EDA 工具也可以直接打开本 README 中两张 PNG、`qualification.json` 和 LVS 报告查看结果。要交互查看几何，可在 KLayout 中打开 `artifacts/cdac_diff_routed.gds`；要看电气连接，可用文本编辑器或 SPICE 工具打开 PEX 网表。
+Without installing EDA tools, open the two PNGs in this README, `qualification.json`, and LVS reports to inspect results. For interactive geometry, open `artifacts/cdac_diff_routed.gds` in KLayout; for electrical connectivity, open the PEX netlist in a text editor or SPICE tool.
 
-## 复现与测试
+## Reproduction and tests
 
-物理工具使用固定离线容器 `sky130-v2-resume-20260910`，PDK 为 `/foss/pdks/sky130A`。下面的命令须从仓库根目录运行，所有物理工具按顺序执行，避免多个进程同时改同一组 cell：
+Physical tools use fixed offline container `sky130-v2-resume-20260910`, with PDK `/foss/pdks/sky130A`. Run these commands from the repository root, executing physical tools sequentially so multiple processes do not edit the same cells:
 
 ```bash
-# 1. 从冻结 CSV 生成真实布线 Tcl 与独立参考网表
+# 1. Generate real-routing Tcl and an independent reference netlist from the frozen CSV
 python3 v2/physical/cdac_route_20260911/generate_routed_cdac.py
 
-# 2. 先跑代表 tile，然后独立进行其 RC 提取
+# 2. Run the representative tile first, then extract its RC independently
 docker exec sky130-v2-resume-20260910 bash -lc \
   'magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /repo/v2/physical/cdac_route_20260911/probe_routes.tcl > /repo/v2/physical/cdac_route_20260911/probe_artifacts/magic.log 2>&1'
 docker exec sky130-v2-resume-20260910 bash -lc \
@@ -115,11 +115,11 @@ docker exec sky130-v2-resume-20260910 bash -lc \
 docker exec sky130-v2-resume-20260910 bash -lc \
   'magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /repo/v2/physical/cdac_route_20260911/extract_probe_rc.tcl > /repo/v2/physical/cdac_route_20260911/probe_artifacts/rc_extraction.log 2>&1'
 
-# 3. 生成完整 P/N/顶层版图并运行 Magic DRC/提取
+# 3. Generate complete P/N/top layouts and run Magic DRC/extraction
 docker exec sky130-v2-resume-20260910 bash -lc \
   'magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /repo/v2/physical/cdac_route_20260911/artifacts/generate_routed_cdac.tcl > /repo/v2/physical/cdac_route_20260911/artifacts/magic_full.log 2>&1'
 
-# 4. 在 artifacts/ 内分别运行 P、N 与顶层 Netgen LVS
+# 4. Run P, N, and top-level Netgen LVS separately in artifacts/
 docker exec sky130-v2-resume-20260910 bash -lc \
   'cd /repo/v2/physical/cdac_route_20260911/artifacts && netgen -batch lvs "cdac_side_p_routed_flat.lvs.spice cdac_side_p_routed_flat" "cdac_side_p_routed_flat.reference.spice cdac_side_p_routed_flat" /foss/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl side_p_lvs.rpt -json > side_p_netgen.log 2>&1'
 docker exec sky130-v2-resume-20260910 bash -lc \
@@ -127,28 +127,28 @@ docker exec sky130-v2-resume-20260910 bash -lc \
 docker exec sky130-v2-resume-20260910 bash -lc \
   'cd /repo/v2/physical/cdac_route_20260911/artifacts && netgen -batch lvs "cdac_diff_routed.lvs.spice cdac_diff_routed" "cdac_diff_routed.reference.spice cdac_diff_routed" /foss/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl top_lvs.rpt -json > top_netgen.log 2>&1'
 
-# 5. 在分开的新 Magic 进程中进行 side 和差分顶层 RC 提取
+# 5. Extract side and differential top RC in separate new Magic processes
 docker exec sky130-v2-resume-20260910 bash -lc \
   'magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /repo/v2/physical/cdac_route_20260911/extract_rc.tcl > /repo/v2/physical/cdac_route_20260911/artifacts/rc_extraction.log 2>&1'
 docker exec sky130-v2-resume-20260910 bash -lc \
   'magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc /repo/v2/physical/cdac_route_20260911/extract_top_rc.tcl > /repo/v2/physical/cdac_route_20260911/artifacts/top_rc_extraction.log 2>&1'
 
-# 6. KLayout 独立回读并输出证据图和无标签展示图
+# 6. Independently read back with KLayout and export evidence and label-free display images
 docker exec sky130-v2-resume-20260910 bash -lc \
   'cd /repo/v2/physical/cdac_route_20260911 && python3 render_klayout.py > artifacts/klayout_render.log 2>&1'
 
-# 7. 不重跑物理工具，审计全部已有证据并执行回归测试
+# 7. Audit all existing evidence and run regression tests without rerunning physical tools
 python3 v2/physical/cdac_route_20260911/qualify.py
 python3 -m unittest v2/physical/cdac_route_20260911/test_routed_cdac.py -v
 ```
 
-`qualify.py` 不会根据文件是否“存在”就判定通过；它会解析 DRC/LVS、端口、原始 MIM 端子、CSV 数量、RC 元件、`.res.ext`、GDS 回读、PNG 尺寸和关键文件哈希。
+`qualify.py` does not pass evidence merely because files exist. It parses DRC/LVS, ports, raw MIM terminals, CSV counts, RC components, `.res.ext`, GDS readback, PNG dimensions, and key-file hashes.
 
-## 尚未完成，不能从本目录宣称
+## Unfinished work not established by this directory
 
-- 没有集成 reference-selection switch、采样开关、比较器、参考分配／缓冲、数字 SAR 控制、前端或偏置。
-- 没有用这份 RC PEX 完成 reference droop、settling、INL/DNL、噪声、SNDR 或全 ADC 后版图仿真。
-- 没有做 EM/IR、antenna、density/fill、耦合 corner 或可靠性 signoff。
-- 没有使用 Cadence，也没有替代未来学校 Cadence/验证规则的闭环。
+- No integration of reference-selection switches, sampling switches, comparator, reference distribution/buffering, digital SAR controller, frontend, or biasing.
+- No reference-droop, settling, INL/DNL, noise, SNDR, or full-ADC post-layout simulation completed with this RC PEX.
+- No EM/IR, antenna, density/fill, coupling-corner, or reliability sign-off.
+- No Cadence use or replacement of the future school Cadence/verification-rule closed loop.
 
-因此，本目录完成的是新版项目里一个可独立复核、可实际集成的**差分无源 CDAC 物理宏**，不是完整 ADC，更不是已经完成的芯片。
+This directory completes an independently reviewable, practically integrable **passive differential CDAC physical macro** in the new project, not a complete ADC or finished chip.

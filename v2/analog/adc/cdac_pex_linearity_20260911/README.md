@@ -1,54 +1,54 @@
-# CDAC 寄生提取后静态线性核验（2026-09-11）
+# CDAC static-linearity verification after parasitic extraction (2026-09-11)
 
-## 一句话结论
+## Conclusion
 
-我们已经把最终差分 CDAC 版图提取出来的真实电容网络用于全部 **4096 个码**的静态电荷重分配计算。计算方法和输入都有效，但当前版图的线性结果**没有通过**：
+The real capacitance network extracted from the final differential CDAC layout has been used for static charge-redistribution calculations across **all 4096 codes**. The method and inputs are valid, but the current layout's linearity **did not pass**:
 
-- 差分端点法 INL：`−3.5621 ～ +3.5621 LSB`，目标是 `±1.5 LSB`；
-- 差分端点法 DNL：`−3.8545 ～ +0.3243 LSB`，目标是 `−0.9 ～ +1.5 LSB`；
-- 有 **255 个相邻码转换发生反向跳变**，因此单调性和“无缺码必要条件”均失败；
-- 最差反向跳变出现在 `2047 → 2048`；
-- P、N 两边经过端点归一化后的最大差异只有 `0.01057 LSB`。这说明左右镜像做得很好，但两边共同复制了相同的系统性寄生误差，差分相减无法消掉它。
+- Differential endpoint INL: `−3.5621 to +3.5621 LSB`, against a target of `±1.5 LSB`;
+- Differential endpoint DNL: `−3.8545 to +0.3243 LSB`, against a target of `−0.9 to +1.5 LSB`;
+- **255 adjacent-code transitions reverse direction**, failing both monotonicity and the necessary condition for no missing codes;
+- The worst reverse transition occurs at `2047 → 2048`;
+- After endpoint normalization, the maximum P/N difference is only `0.01057 LSB`. This shows good left/right mirroring, but both sides reproduce the same systematic parasitic error, which differential subtraction cannot cancel.
 
-机器可读结论见 [`qualification.json`](qualification.json)，状态为：
+The machine-readable conclusion is in [`qualification.json`](qualification.json), with status:
 
 `CDAC_PEX_STATIC_LINEARITY_FAIL_NONMONOTONIC`
 
-这不是“仿真程序失败”。恰恰相反，分析完整执行并通过了输入、连通性、矩阵和文件哈希核验；失败的是**当前物理电容权重本身**。
+This is not a failure of the simulation program. The analysis ran to completion and passed input, connectivity, matrix, and file-hash checks. The failure lies in **the current physical capacitor weights themselves**.
 
-## 你刚才看到的那张图是什么
+## What the displayed image represents
 
-那张黑底图不是晶体管原理图，也不是完整芯片。它是 SAR ADC 里面的一个无源模块——**差分电容 DAC（CDAC）的版图**：
+The black-background image is neither a transistor schematic nor a complete chip. It shows the **layout of the differential capacitive DAC (CDAC)**, a passive module within the SAR ADC:
 
-- 左边大矩形是 P 侧电容阵列；
-- 右边大矩形是 N 侧电容阵列；
-- 每一个小方格是一只真实 SKY130 MIM 电容；
-- 密集的彩色线条是把电容接到 `TOP`、`B11…B0`、`DUMMY` 和 `EDGE_BIAS` 的金属与过孔；
-- 两边合计有 8,712 只物理 MIM，其中 8,192 只是有效电容，520 只是边缘保护 dummy；
-- 这张版图已经做到开源流程 DRC=0、LVS 唯一匹配和 RC 提取，但这不自动等于模拟性能合格。
+- The large rectangle on the left is the P-side capacitor array;
+- The large rectangle on the right is the N-side capacitor array;
+- Every small square is a real SKY130 MIM capacitor;
+- The dense colored lines are metal and vias connecting capacitors to `TOP`, `B11…B0`, `DUMMY`, and `EDGE_BIAS`;
+- Together the sides contain 8,712 physical MIM capacitors: 8,192 active capacitors and 520 edge-protection dummies;
+- This layout has achieved DRC=0, a unique LVS match, and RC extraction in the open-source flow, which does not automatically establish qualified analog performance.
 
-没有文字遮挡的原始版图展示图在：
+Original layout presentation images with no obscuring text are available at:
 
 - [`../../../physical/cdac_route_20260911/artifacts/cdac_diff_routed_display_no_labels.png`](../../../physical/cdac_route_20260911/artifacts/cdac_diff_routed_display_no_labels.png)
 - [`../../../physical/cdac_route_20260911/artifacts/cdac_routing_detail_display_no_labels.png`](../../../physical/cdac_route_20260911/artifacts/cdac_routing_detail_display_no_labels.png)
 
-这些 PNG 只在展示副本中隐藏了文字，GDS 和电气连接没有被修改。
+These PNGs hide text only in presentation copies; the GDS and electrical connectivity remain unchanged.
 
-## 为什么“DRC/LVS 通过”后仍会线性失败
+## Why linearity can fail after DRC/LVS passes
 
-可以把 CDAC 想成一架十二档砝码天平：
+Think of the CDAC as a balance with twelve binary weights:
 
-- B0 理应是 1 份；
-- B1 理应是 2 份；
-- B2 理应是 4 份；
-- ……；
-- B11 理应是 2048 份。
+- B0 should contribute 1 unit;
+- B1 should contribute 2 units;
+- B2 should contribute 4 units;
+- …;
+- B11 should contribute 2048 units.
 
-DRC 只检查几何是否违反制造规则；LVS 只检查“该接的有没有接、器件数量和网络是否一致”。它们不会保证金属导线自己带来的寄生电容仍严格保持 `1:2:4:…:2048`。
+DRC checks only whether geometry violates manufacturing rules. LVS checks whether intended connections, device counts, and nets agree. Neither guarantees that parasitic capacitance from metal wiring preserves the exact `1:2:4:…:2048` ratio.
 
-当前结果里，低位网络获得了相对更大的附加 TOP 耦合。例如 P 侧：
+In the current results, lower-bit nets acquire relatively larger additional TOP coupling. For example, on the P side:
 
-| 端口 | 有效 TOP 耦合 |
+| Port | Effective TOP coupling |
 |---|---:|
 | B0 | 27.89023 fF |
 | B1 | 55.94460 fF |
@@ -56,55 +56,55 @@ DRC 只检查几何是否违反制造规则；LVS 只检查“该接的有没有
 | B3 | 182.90650 fF |
 | B4 | 351.84180 fF |
 
-当码从 `...01111` 进位成 `...10000` 时，B3…B0 被同时撤掉、B4 被接入。当前 B4 的增加量不足以抵消四个低位的总撤除量，所以输出反而后退。这个模式每 16 个码重复一次，共形成 255 次反向跳变。
+When the code carries from `...01111` to `...10000`, B3…B0 are removed simultaneously and B4 is added. The current B4 increment is too small to compensate for removing all four low bits, so the output moves backward. This pattern repeats every 16 codes, producing 255 reverse transitions.
 
-## 我们怎样从 PEX 得到结果
+## How the PEX results were obtained
 
-最终输入是已冻结、未修改的三个 RC PEX 网表：
+The final inputs are three frozen, unmodified RC PEX netlists:
 
-- 差分顶层：[`../../../physical/cdac_route_20260911/artifacts/cdac_diff_routed_flat_rc.spice`](../../../physical/cdac_route_20260911/artifacts/cdac_diff_routed_flat_rc.spice)
-- P 侧：[`../../../physical/cdac_route_20260911/artifacts/cdac_side_p_routed_flat.rc.spice`](../../../physical/cdac_route_20260911/artifacts/cdac_side_p_routed_flat.rc.spice)
-- N 侧：[`../../../physical/cdac_route_20260911/artifacts/cdac_side_n_routed_flat.rc.spice`](../../../physical/cdac_route_20260911/artifacts/cdac_side_n_routed_flat.rc.spice)
+- Differential top level: [`../../../physical/cdac_route_20260911/artifacts/cdac_diff_routed_flat_rc.spice`](../../../physical/cdac_route_20260911/artifacts/cdac_diff_routed_flat_rc.spice)
+- P side: [`../../../physical/cdac_route_20260911/artifacts/cdac_side_p_routed_flat.rc.spice`](../../../physical/cdac_route_20260911/artifacts/cdac_side_p_routed_flat.rc.spice)
+- N side: [`../../../physical/cdac_route_20260911/artifacts/cdac_side_n_routed_flat.rc.spice`](../../../physical/cdac_route_20260911/artifacts/cdac_side_n_routed_flat.rc.spice)
 
-分析步骤如下：
+Analysis steps:
 
-1. 读取差分顶层的 30 个真实端口：P、N 各自的 `TOP`、`B11…B0`、`DUMMY` 和 `EDGE_BIAS`。
-2. 审计 26,210 段提取电阻，确认每一个内部金属节点最终只连到一个正确端口，没有浮空岛，也没有两个端口被错误短接。
-3. 在“等待无限久”的静态极限下，把同一网络内的有限电阻收缩成理想导线。电阻会影响有限时间建立速度，但不会改变最终静态电容比。
-4. 读取全部提取电容。网表实际包含 17,710 个 `f` 后缀正值、20 个 `p` 后缀正值和 2 个显式零值；本分析没有漏掉 `p` 后缀。
-5. 每只 3 µm × 3 µm MIM 的本征电容采用本项目先前用同一 SKY130 环境实测并冻结的标称值 `19.845 fF`；再叠加金属提取电容。
-6. 由 TOP 电荷守恒计算：
+1. Read the differential top level's 30 real ports: `TOP`, `B11…B0`, `DUMMY`, and `EDGE_BIAS` for each of P and N.
+2. Audit 26,210 extracted resistor segments, confirming that every internal metal node ultimately reaches exactly one correct port, with no floating islands or accidental shorts between ports.
+3. In the static limit of infinite settling time, collapse finite resistances within each net to ideal wires. Resistance affects finite-time settling but does not change the final static capacitance ratios.
+4. Read all extracted capacitors. The netlist actually contains 17,710 positive values with an `f` suffix, 20 positive values with a `p` suffix, and 2 explicit zeros; this analysis does not omit the `p` suffix.
+5. For each 3 µm × 3 µm MIM, use the nominal intrinsic capacitance of `19.845 fF` previously measured and frozen in the same SKY130 environment for this project; add the extracted metal capacitance.
+6. Calculate from TOP charge conservation:
 
    `ΔV_TOP = Σ(C_TOP,j × ΔV_j) / ΣC_TOP,j`
 
-7. P 侧使用当前码，N 侧使用 12 位反码；`DUMMY` 和 `EDGE_BIAS` 固定不切换。
-8. 对 0…4095 全部码计算输出，再按端点法计算 INL、DNL、单调性和无缺码必要条件。
+7. Apply the current code to P and its 12-bit complement to N; keep `DUMMY` and `EDGE_BIAS` fixed without switching.
+8. Calculate outputs for every code from 0…4095, then compute endpoint INL, DNL, monotonicity, and the necessary condition for no missing codes.
 
-独立 P/N 网表和差分顶层网表中的全部 12 个码驱动 TOP 耦合逐项完全一致；顶层只增加了约 `0.0003/0.0004 fF` 的额外固定 TOP 电容。这项交叉检查防止只相信某一个文件。
+All 12 code-driven TOP couplings agree exactly, term by term, between the independent P/N netlists and the differential top-level netlist. The top level adds only approximately `0.0003/0.0004 fF` of extra fixed TOP capacitance. This cross-check avoids reliance on a single file.
 
-## 结果图（文字与曲线分区，没有压线标注）
+## Result plots: text separated from curves, with no overlapping annotations
 
-图例放在绘图区外，图中没有把数字文字贴在曲线上。
+Legends are outside the plotting area, and numerical annotations are not placed on curves.
 
-![全部 4096 码的 P、N、差分 INL 与差分 DNL](results/static_linearity.png)
+![P, N, and differential INL and differential DNL for all 4096 codes](results/static_linearity.png)
 
-下面这张图把每一位相对理想二进制权重的误差单独展开。P、N 两组柱子几乎重合，说明主要问题是共同的布线寄生，不是左右失配。
+The next plot separates each bit's error relative to ideal binary weighting. The P and N bars almost overlap, indicating that common routing parasitics dominate rather than left/right mismatch.
 
-![寄生提取后的各位权重误差](results/bit_weight_error.png)
+![Bit-weight errors after parasitic extraction](results/bit_weight_error.png)
 
-## 可审计文件
+## Auditable files
 
-- [`results/all_4096_codes.csv`](results/all_4096_codes.csv)：每个码的 P 输出、N 反码输出、差分输出、INL 和到下一码的 DNL。
-- [`results/bit_weights.csv`](results/bit_weights.csv)：B0…B11 的本征 MIM、电路提取附加量、有效总量和权重误差。
-- [`results/capacitance_pairs.csv`](results/capacitance_pairs.csv)：每一对真实端口之间的电容来源和总量。
-- [`results/port_capacitance_matrix_fF.csv`](results/port_capacitance_matrix_fF.csv)：31 × 31 对称“端口对电容”矩阵，包含 30 个接口和衬底 `VSUBS`；对角线为 0，表中不是带负号对角项的 Maxwell 矩阵。
-- [`qualification.json`](qualification.json)：输入哈希、输出哈希、算法边界、全部门槛和最终数值。
-- [`analyze.py`](analyze.py)：解析、矩阵、4096 码计算、CSV 和作图源码。
-- [`test_cdac_pex_linearity.py`](test_cdac_pex_linearity.py)：11 项回归测试，包括小型理想二进制电路、符号方向、进位失败、真实端口、后缀解析、矩阵对称性和输入／输出哈希。
+- [`results/all_4096_codes.csv`](results/all_4096_codes.csv): P output, N complemented-code output, differential output, INL, and DNL to the next code for each code.
+- [`results/bit_weights.csv`](results/bit_weights.csv): intrinsic MIM capacitance, extracted additions, effective totals, and weight errors for B0…B11.
+- [`results/capacitance_pairs.csv`](results/capacitance_pairs.csv): capacitance sources and totals between each pair of real ports.
+- [`results/port_capacitance_matrix_fF.csv`](results/port_capacitance_matrix_fF.csv): a 31 × 31 symmetric pairwise-port-capacitance matrix covering 30 interfaces and substrate `VSUBS`, with a 0 diagonal; this is not a Maxwell matrix with negative diagonal terms.
+- [`qualification.json`](qualification.json): input hashes, output hashes, algorithm scope, all thresholds, and final numerical values.
+- [`analyze.py`](analyze.py): source for parsing, matrices, 4096-code calculation, CSV output, and plotting.
+- [`test_cdac_pex_linearity.py`](test_cdac_pex_linearity.py): 11 regressions covering a small ideal binary circuit, sign direction, carry failure, real ports, suffix parsing, matrix symmetry, and input/output hashes.
 
-## 测试结果
+## Test results
 
-运行：
+Run:
 
 ```bash
 cd /Users/stanley/Documents/ChatGPT/Analog\ Circuit\ Project/sky130-two-stage-ota
@@ -112,26 +112,26 @@ python3 v2/analog/adc/cdac_pex_linearity_20260911/analyze.py
 python3 -m unittest v2/analog/adc/cdac_pex_linearity_20260911/test_cdac_pex_linearity.py -v
 ```
 
-当前结果：`11/11 tests passed`。
+Current result: `11/11 tests passed`.
 
-小型理想二进制网络的 INL/DNL 都回到数值零；故意把 B4 做轻后，测试能在 `15 → 16` 检出负向进位。这分别验证了矩阵、方向和故障判定，不是只对最终数据写死答案。
+The small ideal binary network returns numerical zero for both INL and DNL. Deliberately underweighting B4 makes the test detect a negative carry at `15 → 16`. These tests validate the matrix, direction, and fault detection rather than merely hard-coding answers for the final data.
 
-## 下一步应该怎样修
+## Recommended repair sequence
 
-当前版图不应直接送入完整 ADC 并宣称 12 位通过。合理的下一轮是：
+The current layout should not be inserted directly into the complete ADC and declared a 12-bit pass. A reasonable next round is:
 
-1. 根据 `bit_weights.csv` 做寄生感知的单位数／补偿电容重分配，首先解决 B4 与低四位的进位余量；
-2. 或改成带冗余／可修调的 CDAC 架构，使布线寄生有可吸收余量；
-3. 重新布线后再次完成 DRC、LVS 和 RC PEX；
-4. 先重复本目录的全 4096 码静态检查，确认单调、INL/DNL 通过；
-5. 再加入真实参考开关、互连 R、参考源阻抗做有限时间建立；最后才是比较器、噪声、SAR 时序和完整 ADC 验证。
+1. Use `bit_weights.csv` for parasitic-aware redistribution of unit counts/compensation capacitors, first correcting the carry margin between B4 and the four low bits;
+2. Alternatively, adopt a redundant/trimmable CDAC architecture with margin to absorb wiring parasitics;
+3. Complete DRC, LVS, and RC PEX again after rerouting;
+4. First repeat this directory's all-4096-code static check and confirm monotonicity and INL/DNL passes;
+5. Then add real reference switches, interconnect R, and reference-source impedance for finite-time settling, followed by comparator, noise, SAR timing, and complete-ADC verification.
 
-## 明确没有完成的内容
+## Explicitly incomplete work
 
-- 没有证明完整 ADC 通过，也没有把 255 个反向转换说成最终 ADC 的实测缺码数；
-- 没有计算动态 RC 建立、参考下垂、开关非线性、比较器、噪声或 SNDR；
-- 没有把单一标称 MIM 当成失配／工艺角结果；
-- 没有使用 Cadence，也没有替代将来的 Cadence／学校规则闭环；
-- 没有硅片或实验室实测。
+- No complete-ADC pass has been proven, and the 255 reverse transitions are not presented as a measured missing-code count for the final ADC;
+- Dynamic RC settling, reference droop, switch nonlinearity, comparator behavior, noise, and SNDR have not been calculated;
+- A single nominal MIM result has not been treated as a mismatch/process-corner result;
+- Cadence has not been used, and future Cadence/university-rule closure has not been replaced;
+- There are no silicon or laboratory measurements.
 
-因此，这一阶段的真实价值是：它把“版图连接正确”进一步推进成了“用真实寄生发现了必须修掉的系统性线性问题”，并留下可复算的全部证据。
+This stage advances from correct layout connectivity to discovering a systematic linearity problem through real parasitics that must be corrected, with all evidence retained for independent recalculation.

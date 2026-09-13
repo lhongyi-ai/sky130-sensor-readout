@@ -13,22 +13,22 @@ def main():
     report = make_physical_budget()
     output = ROOT / "results/physical_budget.json"
     output.write_text(json.dumps(report, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
-    lines = ["# 真实器件信息驱动的预算检查", "", "这里是解析约束与风险筛查，不是芯片仿真成绩。", "",
-        "## 反馈网络与噪声折叠", "",
-        "实际采用电阻反馈时，信号增益 G 不等于噪声增益 1+G。350 Ω/端源阻抗既改变增益，也贡献热噪声。",
-        "以下用满足全幅 2.5 µs 建立要求的理想单极点作比较，只统计输入/反馈电阻噪声，未含晶体管噪声。",
-        "瞬时采样会把高于 50 kHz 的噪声折叠回来；全 Nyquist FFT 必须统计这些噪声。", "",
-        "| 输入总电阻/端 | 增益 | 反馈电阻/端 | 电阻输出噪声 RMS | 仅电阻 SNR 上界 |", "|---|---:|---:|---:|---:|"]
+    lines = ["# Budget Checks Informed by Real Device Data", "", "These are analytical constraints and risk screening, not chip simulation performance.", "",
+        "## Feedback Network and Noise Folding", "",
+        "With actual resistive feedback, signal gain G differs from noise gain 1+G. Source impedance of 350 Ω per terminal both changes gain and contributes thermal noise.",
+        "The comparison below uses an ideal single pole satisfying full-scale settling in 2.5 µs and includes only input/feedback resistor noise, excluding transistor noise.",
+        "Instantaneous sampling folds noise above 50 kHz back into band; a full-Nyquist FFT must include that noise.", "",
+        "| Total input resistance/terminal | Gain | Feedback resistance/terminal | Resistor output noise RMS | Resistor-only SNR upper bound |", "|---|---:|---:|---:|---:|"]
     for row in report["resistor_noise_cases"]:
         total = row["source_resistance_per_leg_ohm"] + row["input_resistor_per_leg_ohm"]
         lines.append(f"| {total:g} Ω | {row['gain']} | {row['feedback_resistor_per_leg_ohm']:g} Ω | {row['full_nyquist_sampled_rms_v']*1e6:.2f} µV | {row['resistor_noise_only_snr_upper_bound_db']:.2f} dB |")
-    lines += ["", "这是降低反馈阻值、联合设计采样隔离/滤波网络的依据，不是直接宣称某个新取值已达标。",
-        "不能只将积分带宽从 50 kHz 改成 5 kHz 来宣布 SNDR 达标。", "", "## MIM 电容与参考端", "",
-        "固定 PDK 的连续模型：3×3 µm MIM 单位为 19.845 fF；每侧 4096 单位为 81.28512 pF。",
-        "双阵列裸极板面积为 73,728 µm²，绝不是核心面积。已另做最小单元 DRC/LVS 和电容提取，完整阵列仍需实布线。",
-        "参考端并非零负载。JSON 保存了保守的切换电荷、瞬时电流、去耦和建立时间上界，实际值必须来自带源阻抗的瞬态测试。", "",
-        "## 仍需真实电路完成", "",
-        "晶体管热噪声/闪烁噪声、采样时变噪声、参考回路、比较器回踢、稳定性、功耗和完整版图寄生均不能由这些计算代替。", ""]
+    lines += ["", "This motivates lower feedback resistance and joint design of sampling isolation/filtering, without establishing compliance for any new value.",
+        "Changing integration bandwidth from 50 kHz to 5 kHz alone cannot establish passing SNDR.", "", "## MIM Capacitors and Reference Terminals", "",
+        "Continuous model in the frozen PDK: a 3×3 µm MIM unit is 19.845 fF; 4096 units per side are 81.28512 pF.",
+        "Bare plate area of the two arrays is 73,728 µm², not core area. Minimum-unit DRC/LVS and capacitance extraction were performed separately; the complete array still needs actual routing.",
+        "Reference terminals are loaded. The JSON retains conservative upper bounds for switched charge, instantaneous current, decoupling, and settling time; actual values must come from transient tests with source impedance.", "",
+        "## Still Requires Real Circuits", "",
+        "These calculations cannot replace transistor thermal/flicker noise, time-varying sampling noise, reference loops, comparator kickback, stability, power, or complete-layout parasitics.", ""]
     (ROOT / "results/physical_budget_report.md").write_text("\n".join(lines))
     print(json.dumps({"status": "ANALYTICAL_CONSTRAINTS_GENERATED", "chip_qualified": False, "report": str(output)}))
 

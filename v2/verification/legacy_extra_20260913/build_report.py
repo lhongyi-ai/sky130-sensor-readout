@@ -102,29 +102,29 @@ def main():
     fig.savefig(out/'characterization.png',dpi=170); plt.close(fig)
     report=dict(status='LOCAL_32_JOB_CHARACTERIZATION_COMPLETE_WITH_FAILURES',cadence_extra_status='AWAITING_SCHOOL_RAW_RESULTS',campaign=str(campaign.relative_to(ROOT)),reference=str(reference.relative_to(ROOT)),evidence_files_verified=verified,core_sha256=statuses['support_nominal_ac']['core_sha256'],execution_jobs=33,extra_jobs=32,additional_same_op_reference_jobs=1,automatic_32_status_counts=dict(Counter(r['legacy_automatic_status'] for r in rows)),baseline_comparison=baseline,rejection=rejection,noise=noise_report,icmr=icmr_report,loads=loads,follower=follower,school_baseline_metrics_sha256=sha(school/'metrics.json'))
     put(out/'review.json',report)
-    lines=['# 旧 OTA：32 项本地对应测试复现报告','',
-        '**32/32 项本地 ngspice 对应测试全部实际执行并完成导出，性能存在失败。学校 Cadence 的 32 项仍需回传原始结果，不能据此记为已完成。**','',
-        '使用学校已经导出的 13 个 MOS 尺寸和扩散几何，保持 3 pF / 2 kΩ 补偿、100 kΩ 负载和理想外部 10 µA 偏置。旧电路与历史结果均未修改。本次另跑一个标称差分核对，以及一个同偏置差分参考，共 34 次有效仿真。', '',
-        '## 结果','',
-        '| 项目 | 本地结果 | 判定 |','|---|---:|---|']
-    for label,m in rejection.items(): lines.append(f'| {label} @ 1 kHz | {m["value_1k_dB"]:.4f} dB | {m["status"]}，门限 {m["limit_dB"]} dB |')
-    lines += [f'| 输入共模范围 | 0.1 V 网格内 {icmr[low]["VCM_V"]:.1f}～{icmr[high]["VCM_V"]:.1f} V | {icmr_report["status"]}，未覆盖 1.3 V |',f'| 1 kHz 输入噪声 | {noise_report["density_1k_nV_sqrtHz"]:.3f} nV/√Hz | 仅报告，无硬门限 |',f'| 10 Hz～1 MHz 输入噪声 | {noise_report["rms_10Hz_1MHz_uV"]:.3f} µV RMS | 仅报告，保留模型警告 |','',
-        '| 负载 | 相位裕度 | 最差建立时间 | 环路／阶跃 |','|---|---:|---:|---|']
+    lines=['# Legacy OTA: Reproduction Report for 32 Corresponding Local Tests','',
+        '**All 32/32 corresponding local ngspice tests were actually executed and exported; performance failures exist. The 32 school Cadence items still require returned raw results and cannot be marked complete on this basis.**','',
+        'Uses the 13 MOS dimensions and diffusion geometries already exported by the school, retaining 3 pF / 2 kΩ compensation, 100 kΩ loading, and ideal external 10 µA bias. The legacy circuit and historical results are unchanged. One nominal differential comparison and one same-bias differential reference were also run, for 34 valid simulations total.', '',
+        '## Results','',
+        '| Item | Local result | Assessment |','|---|---:|---|']
+    for label,m in rejection.items(): lines.append(f'| {label} @ 1 kHz | {m["value_1k_dB"]:.4f} dB | {m["status"]}; threshold {m["limit_dB"]} dB |')
+    lines += [f'| Input common-mode range | On a 0.1 V grid: {icmr[low]["VCM_V"]:.1f}–{icmr[high]["VCM_V"]:.1f} V | {icmr_report["status"]}; does not cover 1.3 V |',f'| Input noise at 1 kHz | {noise_report["density_1k_nV_sqrtHz"]:.3f} nV/√Hz | Report-only; no hard threshold |',f'| Input noise from 10 Hz to 1 MHz | {noise_report["rms_10Hz_1MHz_uV"]:.3f} µV RMS | Report-only; model warnings retained |','',
+        '| Load | Phase margin | Worst settling time | Loop/step |','|---|---:|---:|---|']
     for l in loads: lines.append(f'| {l["CL_pF"]} pF | {l["pm_deg"]:.3f}° | {l["settling_ns"]:.3f} ns | {l["loop_status"]} / {l["step_status"]} |')
-    lines += ['', '10/20 pF 是扩展表征，超出原规格要求的 1/2/5 pF 负载矩阵。它们的环路未达到 55°，即使阶跃最终建立，也不能以阶跃 PASS 覆盖相位裕度失败。', '',
-        f'共模扫描的自动单项判据只检查绝对增益 ≥50 dB；ICMR 还必须相对 0.9 V 不下降超过 3 dB。因此 icmr_13 的自动状态为 {metrics["icmr_13"]["status"]}，但增益变化 {icmr[13]["gain_delta_dB"]:.3f} dB，不能计为 ICMR 通过。范围端点只有 0.1 V 网格精度，不声称找到了连续边界。', '',
-        '直流跟随扫描已完整执行，但它同时移动输入共模，且缺少逐点工作区和反向扫描，不能替代冻结规格的独立输出摆幅验收。', '',
-        '![表征曲线](characterization.png)', '', '## 复现一致性与已修正的本地检查问题', '',
-        f'标称差分增益相对学校数据差 {baseline["gain_dB"]["difference"]:.9f} dB；功耗差 {baseline["power_uW"]["difference"]:.9f} µW。此处是名义电路与工具对照，不是新版前端指标。', '',
-        '首次 smoke 的原始 BSIM PMOS 工作点使用类型归一化正值，而复用的学校分析器要求有符号 D−S / G−S 值，导致工作区假失败。该试验完整保留；正式运行只在导出适配中转换 PMOS id/vgs/vds/vdsat 的符号，原始 op.tsv 不变。所有正式作业使用同一网表核心哈希。', '',
-        'CM/PSRR 测试的输出 DC 约为 0.929 V，而原标称伺服差分测试约为 0.900 V。本次增加完全相同 DC 偏置、仅改变 AC 刺激的差分参考；先核对节点与频率轴，再计算 Ad/Acm 或 Ad/Aps，没有直接把供电传递响应当抑制比。', '',
-        '普通 noise 给出幅度谱密度，本报告积分其平方后开方。依据 [ngspice 官方噪声分析文档](https://nmg.gitlab.io/ngspice-manual/analysesandoutputcontrol_batchmode/analyses/noise_noiseanalysis.html)。噪声记录有 26 条 source/drain conductance reset 警告，全部保留；没有声称警告为零、开关噪声资格通过或 ADC SNDR 通过。', '',
-        '## 可复现入口', '',
-        '在已配置的本地 EDA 容器 `/repo` 中执行：', '', '```sh','python3 v2/verification/legacy_extra_20260913/run_campaign.py','python3 v2/verification/legacy_extra_20260913/run_rejection_reference.py','```', '',
-        '两个命令均新建时间戳目录。把各自输出目录传给 `build_report.py --campaign ... --reference ...`，先校验原始文件哈希再生成新报告。这里的脚本依赖本地 ngspice/NumPy，不是供学校 Python 3.6.8 直接运行的上传包。', '',
-        f'本报告已校验 {verified} 个来源/结果文件条目；完整目录见 [机器可读复核](review.json)、[32 项明细](jobs32.csv)。模型入口及递归 include 内容哈希、源文件快照、网表、所有工作点、曲线、日志、退出码保存在对应运行目录。', '',
-        '学校端继续使用已验证的现有 extra 入口；本次没有覆盖学校 OA 库，也没有生成需要重新导入的旧 OTA 包。PVT 三项既有建立失败仍保留，旧 OTA 全指标达标状态不改变。','']
-    (out/'复现报告.md').write_text('\n'.join(lines))
+    lines += ['', '10/20 pF are extended characterization beyond the original required 1/2/5 pF load matrix. Their loops do not reach 55°; even if steps eventually settle, a step PASS cannot override a phase-margin failure.', '',
+        f'The common-mode sweep automatic per-item criterion checks only absolute gain ≥50 dB; ICMR additionally requires no more than 3 dB decrease relative to 0.9 V. Thus the automatic status of icmr_13 is {metrics["icmr_13"]["status"]} but its gain change is {icmr[13]["gain_delta_dB"]:.3f} dB, so it cannot count as an ICMR pass. Range endpoints have only 0.1 V grid resolution; no continuous boundary is claimed.', '',
+        'The DC follower sweep completed, but it also moves input common mode and lacks per-point operating-region checks and a reverse sweep. It cannot replace independent output-swing acceptance in the frozen specification.', '',
+        '![Characterization curves](characterization.png)', '', '## Reproduction Consistency and Corrected Local Checking Issues', '',
+        f'Nominal differential gain differs from school data by {baseline["gain_dB"]["difference"]:.9f} dB; power differs by {baseline["power_uW"]["difference"]:.9f} µW. This compares the nominal circuit and tools; it is not a new-frontend metric.', '',
+        'The first smoke run used type-normalized positive values for raw BSIM PMOS operating points, whereas the reused school analyzer expects signed D−S / G−S values, causing a false operating-region failure. That experiment is fully retained. Formal runs change only the PMOS id/vgs/vds/vdsat signs in the export adapter; raw op.tsv is unchanged. All formal jobs use the same core-netlist hash.', '',
+        'CM/PSRR tests have output DC around 0.929 V, versus approximately 0.900 V in the original nominal servo differential test. This round adds a differential reference with identical DC bias, changing only AC stimulus. Nodes and frequency axes are checked before computing Ad/Acm or Ad/Aps; supply transfer response is not directly treated as a rejection ratio.', '',
+        'Ordinary noise returns amplitude spectral density; this report integrates its square and then takes the square root, following the [Official ngspice noise-analysis documentation](https://nmg.gitlab.io/ngspice-manual/analysesandoutputcontrol_batchmode/analyses/noise_noiseanalysis.html). The noise record has 26 source/drain conductance reset warnings, all retained; no claim of zero warnings, passing switched-noise qualification, or passing ADC SNDR is made.', '',
+        '## Reproduction Entry Points', '',
+        'Execute in `/repo` in the configured local EDA container:', '', '```sh','python3 v2/verification/legacy_extra_20260913/run_campaign.py','python3 v2/verification/legacy_extra_20260913/run_rejection_reference.py','```', '',
+        'Both commands create new timestamped directories. Pass their output directories to `build_report.py --campaign ... --reference ...`, which checks raw-file hashes before generating a new report. These scripts depend on local ngspice/NumPy and are not an upload package for direct execution under school Python 3.6.8.', '',
+        f'This report verified {verified} source/result file entries; see [Machine-readable review](review.json) and [32-item details](jobs32.csv) for the complete listing. Model-entry and recursive include-content hashes, source snapshots, netlists, all operating points, curves, logs, and exit codes are stored in the corresponding run directories.', '',
+        'The school side continues using the verified existing extra entry point. This round did not overwrite the school OA library or generate a legacy OTA package requiring reimport. The three existing PVT settling failures remain; the legacy OTA overall specification-compliance status is unchanged.','']
+    (out/'reproduction_report.md').write_text('\n'.join(lines))
     put(out/'manifest.json',{p.name:sha(p) for p in out.iterdir() if p.is_file() and p.name!='manifest.json'})
     print(json.dumps({'review':str(out),'summary':{k:report[k] for k in ['status','automatic_32_status_counts','rejection','noise','loads']}},indent=2,ensure_ascii=False))
 

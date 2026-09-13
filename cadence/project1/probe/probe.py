@@ -251,10 +251,10 @@ def probe(base, cds, roots):
     loader += '(p1Probe ' + json.dumps(str(run)) + ' ' + json.dumps(runid) + ')\n'
     (run / "load_probe.il").write_text(loader)
     write_json(base / "active_run.json", {"run_id": runid})
-    print("终端检查完成。这不是仿真通过。\n在 Cadence 主窗口底部输入：\n")
+    print("Terminal checks complete. This is not a simulation pass.\nEnter the following at the bottom of the main Cadence window:\n")
     print('load(' + json.dumps(str(run / "load_probe.il")) + ')')
-    print("\n看到 PROJECT1_PROBE_COMPLETE 后，回到本终端执行：\nbash run.sh collect")
-    print("如 Cadence 报错，也执行 collect，回传部分报告和错误文字。")
+    print("\nAfter PROJECT1_PROBE_COMPLETE appears, return to this terminal and run:\nbash run.sh collect")
+    print("If Cadence reports an error, run collect anyway and return the partial report and error text.")
     return run
 
 
@@ -326,8 +326,8 @@ def collect(base):
     with zipfile.ZipFile(str(target), "x", zipfile.ZIP_DEFLATED) as z:
         for name in names:
             z.write(str(run / name), state["run_id"] + "/" + name)
-    print("请下载并发回：\n" + str(target))
-    print("报告状态：" + summary["status"] + "；尚未运行任何电路仿真。")
+    print("Please download and return:\n" + str(target))
+    print("Report status: " + summary["status"] + "; no circuit simulation has been run.")
     return target, summary
 
 
@@ -347,5 +347,5 @@ if __name__ == "__main__":
     try:
         main()
     except (OSError, ValueError, KeyError) as exc:
-        print("检查未完成：" + str(exc) + "\n请保留此错误文字并发回；不要修改 PDK 或许可证。", file=sys.stderr)
+        print("Checks incomplete: " + str(exc) + "\nPreserve and return this error text; do not modify the PDK or license.", file=sys.stderr)
         sys.exit(2)

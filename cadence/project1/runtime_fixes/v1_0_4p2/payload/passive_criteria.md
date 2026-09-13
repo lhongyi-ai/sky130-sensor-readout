@@ -1,39 +1,39 @@
-# M0 无源器件复核判据 V1
+# M0 passive-device review criteria V1
 
-仅适用于当前冻结基础包的 TT、27°C、tnom=27°C：0.35 µm × 0.35 µm 工艺电阻、4 µm × 4 µm MIM 电容，以及原 0→0.1 V RC 测试。旧 OTA 和新版前端规格不变。
+Applies only to the current frozen basic package at TT, 27°C, tnom=27°C: the 0.35 µm × 0.35 µm process resistor, 4 µm × 4 µm MIM capacitor, and original 0→0.1 V RC test. Legacy OTA and new-frontend specifications remain unchanged.
 
-## 为什么修正
+## Reason for correction
 
-旧电阻判据把 CDF 显示的 979.33 Ω 当成整个电压扫描范围的实际恒定阻值。旧 RC 判据又直接用 979.33 Ω × 34.6223 fF。公开模型包含电压依赖项和端部寄生电容；这两个旧判据没有反映实际模型。
+The old resistor criterion treated the CDF-displayed 979.33 Ω as the actual constant resistance throughout the voltage sweep. The old RC criterion directly used 979.33 Ω × 34.6223 fF. The public model includes voltage dependence and terminal parasitic capacitances; neither old criterion reflected the actual model.
 
-本版本重新分析已完成的 Spectre 数据，生成独立 review.json。原 status.json、metrics.json、网表、波形、失败和环境阻塞记录全部保留。RECHECK PASS 是对旧真实数据的复核，不表示重新运行过仿真。
+This version reanalyzes completed Spectre data and creates an independent review.json. Original status.json, metrics.json, netlists, waveforms, failures, and environment-block records are all preserved. RECHECK PASS reviews prior actual data; it does not imply another simulation run.
 
-## 模型来源与范围
+## Model sources and scope
 
-- [电阻模型](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/cells/res_high_po/sky130_fd_pr__res_high_po_0p35.model.spice)：589.99 Ω 接触项、1112.41 Ω/µm 体电阻项及其电压系数；两端对体端各有寄生电容。
-- [TT 电阻／电容参数](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/models/r%2Bc/res_typical__cap_typical.spice)：面积电容密度 1.06e-4 F/m²、边缘电容密度 5.04e-11 F/m。本几何每端得到 0.3286045 fF。
-- [MIM 模型](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/cells/cap_mim_m3/sky130_fd_pr__cap_mim_m3_1.model.spice)：电容与两项串联电阻；模型电容没有电压系数，温度系数为零。
+- [Resistor model](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/cells/res_high_po/sky130_fd_pr__res_high_po_0p35.model.spice): 589.99 Ω contact term, 1112.41 Ω/µm body-resistance term, and their voltage coefficients; both ends have parasitic capacitance to bulk.
+- [TT resistor/capacitor parameters](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/models/r%2Bc/res_typical__cap_typical.spice): area capacitance density 1.06e-4 F/m² and edge capacitance density 5.04e-11 F/m. This geometry gives 0.3286045 fF per end.
+- [MIM model](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/cells/cap_mim_m3/sky130_fd_pr__cap_mim_m3_1.model.spice): capacitance and two series resistances; model capacitance has no voltage coefficient and its temperature coefficient is zero.
 
-系数直接来自模型，没有对返回的 RC 波形拟合。C 使用冻结 CDF 的 34.6223 fF，独立 MIM AC 测试验证该值。公开模型的学校依赖文件尚未逐个核验哈希，所以这是本环境、本几何的迁移资格，不是整套 PDK 认证。
+Coefficients come directly from the model and were not fitted to the returned RC waveform. C uses the frozen CDF value of 34.6223 fF, independently validated by MIM AC testing. School dependency files corresponding to the public model have not been individually hash-verified, so this is migration qualification for this environment and geometry, not certification of the entire PDK.
 
-## 三项判据
+## Three sets of criteria
 
-1. 电阻：101 个点的扫描轴、电压、电流符号及有限值；每点电流与电压相关模型方程比较，容差为 1 pA + 1e-4 × 参考电流，沿用先前独立复核的数值预算。保留 CDF 值供说明，不再要求与其相差不超过 5%，也不强制物理模型表现为理想线性电阻。
-2. MIM：1081 个频点，1 Hz 至 1 GHz、每十倍频 120 点；1 kHz 至 1 MHz 提取电容，保留原“正电容且在 CDF ±5% 内”门槛；测量频段平坦度 1e-4；高频提取的串联电阻需在 0 至 1 Ω 内，作为 RC 近似成立的附加条件。
-3. RC：保留原输入脉冲、10 ns 时长、最大 0.5 ps 步长；检查全波形输入、输出范围和高低平台；上升 63.2% 与下降 36.8% 延迟均与模型参考比较。
+1. Resistor: check the 101-point sweep axis, voltage, current sign, and finite values; compare every point's current with the voltage-dependent model equation using tolerance 1 pA + 1e-4 × reference current, retaining the numerical budget of the earlier independent review. Retain the CDF value for explanation, but no longer require agreement within 5% or force the physical model to behave as an ideal linear resistor.
+2. MIM: 1081 frequency points from 1 Hz to 1 GHz, 120 points per decade; extract capacitance from 1 kHz to 1 MHz and retain the original threshold of positive capacitance within CDF ±5%; measurement-band flatness 1e-4; high-frequency extracted series resistance must be 0–1 Ω as an additional condition for the RC approximation.
+3. RC: retain the original input pulse, 10 ns duration, and maximum 0.5 ps step; check the full input waveform, output range, and high/low plateaus; compare both rising 63.2% and falling 36.8% delays with the model reference.
 
-对于理想阶跃，令 A=0.1 V，C_total=C_MIM+C_res_output，参考延迟为
+For an ideal step, let A=0.1 V and C_total=C_MIM+C_res_output. The reference delay is
 
-`t63 = C_total × integral[0..1] R(A × exp(-s)) ds`。
+`t63 = C_total × integral[0..1] R(A × exp(-s)) ds`.
 
-使用 1024 段 Simpson 积分；参考包含非线性 R 和输出端寄生。输入端寄生由理想电压源驱动，不计入输出负载。参考忽略 ≤1 Ω 的 MIM 串联电阻及 1 ps 有限上升沿，上、下降延迟容差均为 0.5%，足以覆盖这些小量及采样插值误差。
+Use Simpson integration with 1024 segments; the reference includes nonlinear R and the output-terminal parasitic. The ideal voltage source drives the input-terminal parasitic, which is not included in the output load. The reference neglects ≤1 Ω MIM series resistance and the finite 1 ps rise time. Both rising and falling delay tolerances are 0.5%, sufficient to cover these small terms and sample-interpolation error.
 
-另用完整 VIN/VOUT 曲线积分电阻模型电流，核对 `C_total × ΔVOUT = integral I_R dt`。输出等效残差限值为 250 µV（阶跃幅度的 0.25%），覆盖串联电阻近似、梯形积分和仿真容差。这不是 ADC 建立误差规格。所有指标都需同时满足；缺失、错误刺激、断点不全或错误波形不能仅凭一个交越时间通过。
+Also integrate resistor-model current over the complete VIN/VOUT curves to check `C_total × ΔVOUT = integral I_R dt`. The output-equivalent residual limit is 250 µV (0.25% of step amplitude), covering the series-resistance approximation, trapezoidal integration, and simulation tolerances. This is not an ADC settling-error specification. All metrics must pass simultaneously; missing data, incorrect stimulus, incomplete breakpoints, or incorrect waveforms cannot pass solely on one crossing time.
 
-## 结果复用与阶段入口
+## Result reuse and stage entry
 
-只取每个测试最新保留的 attempt；最新失败不能跳过而寻找更早的最好结果。复核重新核对原生拓扑、全部参数、实际分析输入、日志正常结束、导出完成标志和全部数据，并验证输入／网表哈希。
+Use only the latest retained attempt for each test; do not skip a latest failure to seek the best earlier result. Review rechecks native topology, all parameters, actual analysis inputs, normal log termination, export-complete markers, and all data, and verifies input/netlist hashes.
 
-只接受已冻结的 1.0.4p1 数据或当前 1.0.4p2 数据；三个测试的模型顶层哈希、配置必须一致，并与当前 Linux 模型入口匹配。模型、数据、配置或最新 attempt 改变后，旧复核不能继续用于 OTA 门槛。
+Accept only frozen 1.0.4p1 data or current 1.0.4p2 data. All three tests must share top-level model hashes and configuration, matching the current Linux model entry. If models, data, configuration, or the latest attempt change, the old review can no longer qualify the OTA entry gate.
 
-三个测试复核全部通过后才能进入旧 OTA 标称组。OTA 原有工作点、AC、环路、阶跃及 PVT 的门槛保持不变。本补丁不创建 cell，不修改任何器件、连线或学校 PDK。
+All three reviews must pass before entering the nominal legacy OTA group. Original OTA operating-point, AC, loop, step, and PVT thresholds remain unchanged. This patch creates no cells and modifies no devices, connections, or school PDK files.

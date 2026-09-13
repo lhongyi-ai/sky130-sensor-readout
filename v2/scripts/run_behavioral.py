@@ -292,28 +292,28 @@ def run(output_dir: Path | None = None) -> dict:
     save_csv(output / "adc_transitions.csv", linearity_rows)
     save_csv(output / "qualification_matrix.csv", matrix)
     model_rows = [r for r in spectral_rows if r["scenario"] == "assumed_budget"]
-    report = ["# V2 本地行为实验结果", "", "仅为行为模型和预算，不是 SKY130 电路性能。",
-              "Cadence 暂停；M2 尚缺 PDK 可行性证据，不能记为完整通过。", "",
-              "## 假设预算下的采样结果", "", "| 增益 | 输入频率 Hz | SNDR dB | ENOB |",
+    report = ["# V2 Local Behavioral Experiment Results", "", "Behavioral models and budgets only, not SKY130 circuit performance.",
+              "Cadence deferred; M2 still lacks PDK feasibility evidence and cannot be marked fully passed.", "",
+              "## Sampling Results Under Assumed Budgets", "", "| Gain | Input frequency Hz | SNDR dB | ENOB |",
               "|---|---:|---:|---:|"]
     report.extend(f"| {r['gain']} | {r['actual_hz']:.3f} | {r['sndr_db']:.3f} | {r['enob_uncorrected_for_input_backoff']:.3f} |"
                   for r in model_rows)
-    report += ["", "这些数字依赖配置中的假设噪声/增益/失调参数，不能用于宣称芯片达标。",
-               "线性校准改善静态误差，不改变 SNDR；该不变性已自动检查。", "",
-               "## 独立静态校准验证", "", "| 增益 | 校准前最大平均误差 LSB | 校准后 |",
+    report += ["", "These numbers depend on assumed noise/gain/offset parameters in the configuration and cannot establish chip compliance.",
+               "Linear calibration improves static error without changing SNDR; this invariance has been checked automatically.", "",
+               "## Independent Static Calibration Validation", "", "| Gain | Maximum mean error before calibration, LSB | After calibration |",
                "|---|---:|---:|"]
     report.extend(f"| {r['gain']} | {r['raw_max_abs_mean_error_lsb']:.3f} | {r['corrected_max_abs_mean_error_lsb']:.3f} |"
                   for r in static_summary)
-    report += ["", "误差为多次采样后的平均值，不代表单次转换精度。测试点与标定点分离。",
-               "", "## 失败保留与证据边界", ""]
+    report += ["", "Errors are means over multiple samples, not single-conversion accuracy. Test points are separate from calibration points.",
+               "", "## Failure Retention and Evidence Boundaries", ""]
     report.extend(f"- {key}: {'PASS' if ok else 'FAIL'}" for key, ok in assertions.items())
-    report += ["", "PASS 在此表示检测程序正确识别了预设失败，并非芯片通过验收。",
-               "45 个工艺/温压点乘三档增益的 135 行仅为测试定义，全部仍为 NOT_RUN。",
-               "", "## 关键预算", "",
-               f"- LSB：{budget['lsb_v'] * 1e6:.6f} µV；0.25 LSB：{budget['settling_error_limit_v'] * 1e6:.6f} µV。",
-               f"- 采集窗口：{budget['acquisition_time_s'] * 1e6:.3f} µs；满幅阶跃的单极点时间常数上限：{budget['max_single_pole_tau_s_for_full_scale_step'] * 1e9:.3f} ns。",
-               f"- 20 fF 单元仅为候选假设，对应每侧 {budget['candidate_cdac_total_per_side_f'] * 1e12:.2f} pF；尚未证明版图实现或匹配。",
-               "- 噪声折叠、参考源动态负载、真实比较器、功耗、面积、版图及寄生仍待电路验证。", ""]
+    report += ["", "Here PASS means the checker correctly identifies preset failures, not that the chip passes acceptance.",
+               "The 135 rows of 45 process/voltage/temperature points times three gains are test definitions only; all remain NOT_RUN.",
+               "", "## Key Budgets", "",
+               f"- LSB: {budget['lsb_v'] * 1e6:.6f} µV; 0.25 LSB: {budget['settling_error_limit_v'] * 1e6:.6f} µV。",
+               f"- Acquisition window: {budget['acquisition_time_s'] * 1e6:.3f} µs; single-pole time-constant upper limit for a full-scale step: {budget['max_single_pole_tau_s_for_full_scale_step'] * 1e9:.3f} ns.",
+               f"- A 20 fF unit is only a candidate assumption, corresponding to {budget['candidate_cdac_total_per_side_f'] * 1e12:.2f} pF per side; layout implementation and matching are not established.",
+               "- Noise folding, dynamic reference loading, the real comparator, power, area, layout, and parasitics still require circuit verification.", ""]
     (output / "behavioral_report.md").write_text("\n".join(report))
     sources = [config_path, Path(__file__).resolve(), *sorted((ROOT / "sensor_readout").glob("*.py"))]
     outputs = sorted(p for p in output.iterdir() if p.is_file() and p.name != "behavioral_manifest.json"

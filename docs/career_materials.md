@@ -1,106 +1,106 @@
-# SKY130 两级 OTA 求职材料
+# SKY130 Two-Stage OTA Career Materials
 
-> 口径声明：以下全部结果均为 **schematic-level simulated only（仅原理图级仿真）**，不是流片测量、版图后仿真或硅验证结果。电路使用外部理想 10 µA `IREF`；核心指标做了 13 点 PVT，settling、CMRR、PSRR、ICMR、输出摆幅和噪声仅做 nominal characterization。输出摆幅为 0.18–1.63 V，覆盖冻结规格要求的 0.3–1.5 V 区间。
+> Scope: all results below are **schematic-level simulated only**, not tapeout measurements, post-layout simulations, or silicon validation. The circuit uses an ideal external 10 µA `IREF`. The core metrics were evaluated at 13 PVT points; settling, CMRR, PSRR, ICMR, output swing, and noise received nominal characterization only. The output swing is 0.18–1.63 V, covering the frozen specification's required 0.3–1.5 V interval.
 
-## 简历 bullet
+## Resume bullets
 
-- 基于 SKY130A 1.8 V 器件设计并自动化验证两级 Miller 补偿 OTA，生成并审计 171 个 ngspice 测试；在冻结的 5 pF ∥ 100 kΩ 负载及 13 点 PVT 下，A0、UGB、PM、静态功耗、SR+、SR− 六项核心硬指标全部通过，最差结果分别为 65.54 dB、14.55 MHz、66.25°、302.71 µW、7.98/11.20 V/µs。
-- 通过参数化补偿扫描选定 3 pF Miller 电容与 2 kΩ 消零电阻，将 nominal PM 从 33.22° 提升至 69.08°（+35.86°），同时保持约 16.75 MHz UGB；完成 settling、CMRR、PSRR、ICMR、输出摆幅与噪声表征，并如实记录 PSRR+/PSRR− 为 36.33/36.25 dB、ICMR 高端为 1.22 V，未达到 45 dB 与 1.3 V 的冻结硬指标。
+- Designed and automated verification of a two-stage Miller-compensated OTA using SKY130A 1.8 V devices; generated and audited 171 ngspice tests. With the frozen 5 pF ∥ 100 kΩ load, all six core hard requirements—A0, UGB, PM, quiescent power, SR+, and SR−—passed at all 13 PVT points. Worst-case results were 65.54 dB, 14.55 MHz, 66.25°, 302.71 µW, and 7.98/11.20 V/µs, respectively.
+- Selected a 3 pF Miller capacitor and 2 kΩ nulling resistor through a parameterized compensation sweep, raising nominal PM from 33.22° to 69.08° (+35.86°) while maintaining approximately 16.75 MHz UGB. Characterized settling, CMRR, PSRR, ICMR, output swing, and noise, and explicitly documented PSRR+/PSRR− of 36.33/36.25 dB and an ICMR upper limit of 1.22 V, which miss the frozen 45 dB and 1.3 V hard requirements.
 
-## 约 90 秒中文项目介绍
+## Approximately 90-second project introduction
 
-我做的是一款基于 SKY130A 1.8 V 标准阈值器件的两级 CMOS OTA。第一级由 NMOS 差分对和 PMOS 电流镜负载完成差分到单端转换，第二级是共源增益级；M8 到 M10 从单个外部 10 µA 参考建立偏置。两级之间采用 3 pF Miller 电容和 2 kΩ 串联消零电阻补偿。
+I designed a two-stage CMOS OTA using SKY130A 1.8 V standard-threshold devices. The first stage uses an NMOS differential pair and a PMOS current-mirror load to convert a differential input into a single-ended output. The second stage is a common-source gain stage. M8 through M10 establish the bias from a single external 10 µA reference. A 3 pF Miller capacitor and a 2 kΩ series nulling resistor compensate the two stages.
 
-这个项目的重点不只是得到一个漂亮的 nominal 仿真点，而是先冻结规格和测量定义，再把设计过程做成可复现流程。我先做器件与电流镜表征，再完成一级和二级的尺寸、工作点及余量检查；之后扫补偿参数，把相位裕度从 33.22° 提升到 69.08°。最后自动生成、运行和审计 171 个 ngspice 测试，其中核心六项指标覆盖 13 点 PVT。最差 PVT 下仍有 65.54 dB 增益、14.55 MHz UGB、66.25° 相位裕度，功耗不超过 302.71 µW，正负压摆率不低于 7.98 和 11.20 V/µs。
+The focus was to freeze the specifications and measurement definitions first, then make the design process reproducible. I characterized the devices and current mirror, sized the first and second stages, and checked their operating points and headroom. I then swept the compensation parameters and increased the phase margin from 33.22° to 69.08°. Finally, I automatically generated, ran, and audited 171 ngspice tests, including six core metrics across 13 PVT points. The worst PVT results still provided 65.54 dB gain, 14.55 MHz UGB, and 66.25° phase margin, with power no greater than 302.71 µW and positive and negative slew rates of at least 7.98 and 11.20 V/µs.
 
-我也保留了失败，而不是只展示通过项：nominal CMRR 为 71.32 dB，但 PSRR+ 和 PSRR− 只有约 36 dB；ICMR 低端通过，高端只到 1.22 V，没有覆盖 1.3 V。所有结果都只是原理图级仿真，使用理想外部参考电流，尚未包含 mismatch、Monte Carlo、版图寄生或硅测量。这些限制也定义了我下一步优化和验证的方向。
+I retained the failures as well as the passing results. Nominal CMRR was 71.32 dB, but PSRR+ and PSRR− were only about 36 dB. The low end of the ICMR met its requirement, while the high end reached only 1.22 V instead of the required 1.3 V. All results are schematic-level simulations using an ideal external reference current. They do not yet include mismatch, Monte Carlo, layout parasitics, or silicon measurements. These limitations define the next optimization and verification steps.
 
-## 面试问答
+## Interview questions and answers
 
-### 1. 这个 OTA 的拓扑和信号路径是什么？
+### 1. What are the OTA topology and signal path?
 
-M1/M2 构成 NMOS 差分输入对，M3/M4 是 PMOS 电流镜有源负载，把差分电流转换成第一级单端节点 `VX` 的电压。M6 是第二级 NMOS 共源管，M7 是其 PMOS 电流源负载，输出节点为 `VOUT`。补偿支路严格从 `VX` 经 2 kΩ `RZ`、中间节点、3 pF `CC` 接到 `VOUT`；M8–M10 则由单个外部 10 µA `IREF` 建立偏置。测试台里的 loop-break 元件、负载和激励源不属于 OTA 内核。
+M1/M2 form the NMOS differential input pair. M3/M4 are the PMOS current-mirror active load, converting differential current into a voltage at the first-stage single-ended node `VX`. M6 is the second-stage NMOS common-source transistor, and M7 is its PMOS current-source load; the output node is `VOUT`. The compensation branch runs from `VX` through the 2 kΩ `RZ`, an intermediate node, and the 3 pF `CC` to `VOUT`. M8–M10 establish the bias from a single external 10 µA `IREF`. Loop-break elements, loads, and stimulus sources in the testbench are not part of the OTA core.
 
-### 2. 为什么称它为 OTA，而不是完整运放？
+### 2. Why call it an OTA rather than a complete operational amplifier?
 
-它有两级电压增益，但没有专门的低输出阻抗缓冲级，输出端直接由共源级驱动，所以更准确地称为 OTA。它可以在测试台中接成单位增益跟随器来测瞬态，但这不等于电路内部自带闭环或输出 buffer。
+It has two stages of voltage gain but no dedicated low-output-impedance buffer. The common-source stage drives the output directly, so OTA is the more precise description. It can be configured as a unity-gain follower in a testbench for transient measurements; this does not mean that the circuit contains an internal closed loop or output buffer.
 
-### 3. 单个 10 µA `IREF` 如何建立整机偏置？有什么局限？
+### 3. How does a single 10 µA `IREF` establish the bias, and what are its limitations?
 
-M8 是二极管连接 PMOS，外部 10 µA 电流形成 `VBP`；M9 将其镜像到内部支路，再由二极管连接的 M10 产生 `VBN`。`VBN` 偏置尾电流管 M5，`VBP` 同时偏置第二级负载 M7。优点是接口简单且偏置链路一致；局限是本项目把 `IREF` 当作理想源，没有把真实参考发生器的 PVT、噪声和失配算进去。
+M8 is a diode-connected PMOS; the external 10 µA current establishes `VBP`. M9 mirrors that current into an internal branch, and diode-connected M10 generates `VBN`. `VBN` biases tail-current transistor M5, while `VBP` also biases second-stage load M7. This provides a simple interface and a consistent bias chain. The limitation is that this project treats `IREF` as ideal and excludes the PVT variation, noise, and mismatch of a real reference generator.
 
-### 4. 你如何决定器件尺寸，而不是盲目调参？
+### 4. How did you determine device sizes instead of tuning blindly?
 
-流程是先用 SKY130 模型做器件和电流镜表征，观察 `gm/ID`、`gm/gds`、`VDSAT`、电流误差和合规区，再按增益、速度、电流及摆幅预算给各支路初始尺寸。随后分别检查第一级增益与共模余量、第二级静态平衡和全部器件饱和余量，最后才在完整 OTA 上扫补偿网络。每次修改只改变少量、可解释的变量，并保留对应原始数据和失败记录。
+I first characterized devices and current mirrors using the SKY130 models, examining `gm/ID`, `gm/gds`, `VDSAT`, current error, and compliance. Initial branch sizes followed gain, speed, current, and swing budgets. I then checked first-stage gain and common-mode headroom, second-stage DC balance, and saturation margins for every device before sweeping the compensation network in the complete OTA. Each iteration changed only a few explainable variables and retained its raw data and failures.
 
-### 5. 3 pF Miller 电容在这里起什么作用？
+### 5. What does the 3 pF Miller capacitor do here?
 
-`CC` 跨接第一级高阻节点 `VX` 与输出，使主极点下移并拉开两级极点，从而改善闭环稳定性；代价是 UGB、瞬态速度和负载响应之间存在权衡。项目没有只看阶跃波形，而是按签名环路增益的首个向下 0 dB 交越计算 UGB 与 PM。
+`CC` connects the high-impedance first-stage node `VX` to the output. It lowers the dominant pole and separates the two stage poles to improve closed-loop stability, at the cost of tradeoffs among UGB, transient speed, and load response. The project does not assess stability from the step waveform alone: UGB and PM are calculated at the first downward 0 dB crossing of the signed loop gain.
 
-### 6. 为什么还要在 `CC` 前串联 2 kΩ 的 `RZ`？选择证据是什么？
+### 6. Why place a 2 kΩ `RZ` in series with `CC`, and what supports that choice?
 
-单独的 Miller 电容会引入不利的前馈零点。串联 `RZ` 用来移动或抵消该零点，减轻其相位损失。参数扫描中，`CC=3 pF、RZ≈0` 的 nominal PM 只有 33.22°；加入 `RZ=2 kΩ` 后 PM 达 69.08°，提高 35.86°，UGB 仍约 16.75 MHz，A0 基本不变，因此该组合被选为冻结补偿点。
+A Miller capacitor alone introduces an unfavorable feedforward zero. Series resistor `RZ` moves or cancels that zero to reduce its phase penalty. In the parameter sweep, `CC=3 pF, RZ≈0` produced only 33.22° nominal PM. Adding `RZ=2 kΩ` raised PM to 69.08°, an increase of 35.86°, while UGB remained approximately 16.75 MHz and A0 was essentially unchanged. This combination became the frozen compensation point.
 
-### 7. 你怎样打断反馈环路而不破坏 DC 工作点？
+### 7. How do you break the feedback loop without disturbing the DC operating point?
 
-单位增益负反馈台在 `VOUT` 与反相端之间放置超大电感 `LBREAK=1 GH`：DC 时近似短路，保留闭环偏置；AC 时近似开路。再通过超大电容 `CBREAK=1 GF` 注入 AC 测试信号，它在 DC 时开路、AC 时近似短路。这样可以在同一工作点上测 return ratio。两者都是测试台构件，不是 OTA 电路的一部分。
+The unity-gain negative-feedback testbench places a very large inductor, `LBREAK=1 GH`, between `VOUT` and the inverting input. It approximates a short at DC to retain the closed-loop bias and an open circuit in AC analysis. An AC test signal is injected through a very large capacitor, `CBREAK=1 GF`, which is open at DC and approximately short in AC analysis. This measures the return ratio at the same operating point. Both elements belong to the testbench, not the OTA circuit.
 
-### 8. 为什么环路增益写成 `T=-VOUT/VINN`？PM 如何计算？
+### 8. Why is the loop gain written as `T=-VOUT/VINN`, and how is PM calculated?
 
-负号显式纳入负反馈符号约定，使低频 `T` 的相位接近 0°，便于避免 180° 误判。UGB 取 `|T|` 第一次向下穿越 0 dB 的频率，PM 则是该频率处解包裹相位加 180°。自动检查还要求只有一个有效向下交越、交越不落在扫频边界，并确认低频相位接近 0°。
+The minus sign explicitly includes the negative-feedback sign convention, putting the low-frequency phase of `T` near 0° and helping avoid a 180° interpretation error. UGB is the frequency of the first downward 0 dB crossing of `|T|`; PM is the unwrapped phase at that frequency plus 180°. Automated checks also require a single valid downward crossing, reject crossings at the frequency-sweep boundary, and confirm that the low-frequency phase is close to 0°.
 
-### 9. 13 点 PVT 为什么这样选？
+### 9. Why were these 13 PVT points selected?
 
-矩阵由两部分组成：TT、FF、SS、FS、SF 五个工艺角在 1.8 V、27 °C 下测试；再在 TT 下组合 1.62/1.80/1.98 V 与 −20/27/85 °C。名义点重复一次后去重，共 13 点。核心 A0、UGB、PM、功耗、SR+ 和 SR− 必须在每一点都过硬指标，缺失、不收敛或数值无效都按失败处理。
+The matrix has two parts: TT, FF, SS, FS, and SF process corners at 1.8 V and 27 °C; and TT combinations of 1.62/1.80/1.98 V with −20/27/85 °C. Removing the duplicate nominal point gives 13 points. A0, UGB, PM, power, SR+, and SR− must meet the hard requirements at every point. Missing results, nonconvergence, and invalid numerical results are treated as failures.
 
-### 10. 13 点 PVT 的关键结果和最差角是什么？
+### 10. What are the key 13-point PVT results and worst corners?
 
-六项核心硬指标全部通过。最差 A0 为 65.54 dB、最差 UGB 为 14.55 MHz，均出现在 P08（TT、1.62 V、85 °C）；最差 PM 为 66.25°、最大功耗为 302.71 µW，出现在 P13（TT、1.98 V、85 °C）；最差 SR+ 为 7.98 V/µs，最差 SR− 为 11.20 V/µs。这里的“通过”只适用于冻结的核心 PVT 范围，不应扩展成所有指标或硅验证通过。
+All six core hard requirements pass. The worst A0 is 65.54 dB and the worst UGB is 14.55 MHz, both at P08 (TT, 1.62 V, 85 °C). The worst PM is 66.25° and the maximum power is 302.71 µW, both at P13 (TT, 1.98 V, 85 °C). The worst SR+ is 7.98 V/µs and the worst SR− is 11.20 V/µs. This passing result applies only to the frozen core PVT scope and must not be extended to every metric or to silicon validation.
 
-### 11. 你如何测量 slew rate？为什么不用两个点直接相除？
+### 11. How do you measure slew rate, and why not divide the difference between two points?
 
-把 OTA 接成单位增益跟随器，输入在 0.8 V 与 1.2 V 之间切换，边沿为 20 ns。SR+ 在输出上升的 20%–80% 单调区间做最小二乘直线拟合；SR− 对下降的 80%–20% 区间做同样处理并取绝对值。拟合多点比用两个采样点更不易受时间步长和边沿尖峰影响；nominal 结果为 8.20/11.52 V/µs。
+The OTA is configured as a unity-gain follower, with an input switching between 0.8 V and 1.2 V and 20 ns edges. SR+ is obtained by a least-squares line fit over the monotonic 20%–80% portion of the output's rising edge. SR− uses the same method over the falling 80%–20% interval and takes the absolute value. A multipoint fit is less sensitive than two samples to time-step placement and edge spikes. Nominal results are 8.20/11.52 V/µs.
 
-### 12. 1% settling time 的定义和结果是什么？
+### 12. What is the definition and result for 1% settling time?
 
-时间零点不是脉冲源的理想设定时刻，而是输入实际跨过 50% 的插值时刻。对 0.4 V 阶跃，1% 带宽是最终值 ±4 mV；settling time 是此后输出第一次进入该带宽且在剩余观察窗内不再离开的时间。上升、下降分别保存，取较差者；nominal 最差为 0.07475 µs，即 74.75 ns，低于 1.5 µs 硬限制。
+Time zero is the interpolated instant at which the actual input crosses 50%, not the pulse source's ideal scheduled edge. For a 0.4 V step, the 1% band is the final value ±4 mV. Settling time is the first time the output enters that band and stays within it for the rest of the observation window. Rising and falling results are saved separately and the worse value is used. The worst nominal result is 0.07475 µs, or 74.75 ns, below the 1.5 µs hard limit.
 
-### 13. ICMR 怎样定义？为什么当前结果仍是失败？
+### 13. How is ICMR defined, and why does the current result still fail?
 
-两输入同时扫共模电压，在每个 10 mV 网格点测 1–10 Hz 小信号差分增益和 M1–M10 的工作区。有效点要求增益相对 0.9 V 参考下降不超过 3 dB、所有相关器件饱和余量非负、输出不贴近电源轨。取包含 0.9 V 的最大连续区间，当前 nominal 区间为 0.76–1.22 V：低端满足 ≤0.8 V，但高端没有达到 ≥1.3 V，所以整体明确记为 `ICMR_FAIL`。
+Both inputs are swept together in common mode. At each 10 mV grid point, the test measures small-signal differential gain at 1–10 Hz and the operating regions of M1–M10. A valid point requires gain no more than 3 dB below the 0.9 V reference, nonnegative saturation margins for all relevant devices, and an output that is not close to a supply rail. The reported interval is the largest contiguous valid range containing 0.9 V. The current nominal range is 0.76–1.22 V: the low end meets the ≤0.8 V requirement, but the high end does not reach ≥1.3 V, so the overall result is explicitly `ICMR_FAIL`.
 
-### 14. 输出摆幅为什么不能用 ICMR 扫描代替？
+### 14. Why cannot an ICMR sweep replace an output-swing test?
 
-ICMR 改变的是输入共模，会同时扰动输入对余量；输出摆幅应独立控制输出命令。测试采用偏置反相闭环：同相端固定在 0.9 V，等值 10 MΩ 输入/反馈电阻把输出命令扫过电源范围，并做正反向扫描。有效点要求跟踪误差 ≤10 mV、无削顶且 M6/M7 保持预期工作区。正反向扫描共同有效的连续区间为 0.18–1.63 V，覆盖冻结的 0.3–1.5 V 要求。
+ICMR changes the input common mode and therefore also perturbs input-pair headroom. Output swing should instead be controlled by an independent output command. The test uses a biased inverting closed loop: the noninverting input is fixed at 0.9 V, and equal 10 MΩ input and feedback resistors sweep the output command over the supply range in both directions. Valid points require tracking error ≤10 mV, no clipping, and M6/M7 in their intended operating regions. The contiguous range valid in both sweep directions is 0.18–1.63 V, covering the frozen 0.3–1.5 V requirement.
 
-### 15. CMRR 是怎样测的？结果说明什么？
+### 15. How is CMRR measured, and what does the result establish?
 
-在相同 nominal 偏置和频率下，先以 +0.5/−0.5 V AC 激励得到 1 V 差分输入及 `Ad`，再让两输入同相施加 1 V AC 得到 `Acm`；定义 `CMRR=20log10(|Ad/Acm|)`。1 kHz 结果为 71.32 dB，高于 55 dB 硬限制和 65 dB stretch target。它只证明 nominal 1 kHz 的抑制能力，不代表全频或 PVT 下都达到同一数值。
+At the same nominal bias and frequency, AC inputs of +0.5/−0.5 V first provide a 1 V differential input to measure `Ad`. Both inputs then receive an in-phase 1 V AC stimulus to measure `Acm`. The definition is `CMRR=20log10(|Ad/Acm|)`. The 1 kHz result is 71.32 dB, above the 55 dB hard limit and 65 dB stretch target. It establishes rejection only at nominal conditions and 1 kHz, not the same value over all frequencies or PVT conditions.
 
-### 16. PSRR+、PSRR− 怎样测？为什么这是已知失败？
+### 16. How are PSRR+ and PSRR− measured, and why are they known failures?
 
-在 1 kHz 保持相同偏置和 `Ad`，分别给 VDD 或 VSS 施加 1 V AC 扰动，计算 `PSRR=20log10(|Ad/Aps|)`；PSRR− 测试中特别保留显式 VSS 电压源和 1.8 V DC 关系。结果为 PSRR+ 36.33 dB、PSRR− 36.25 dB，均低于 45 dB 硬限制，因此不能说整机规格全部通过。下一轮应从偏置树和高阻节点的电源耦合路径入手优化，再完整回归稳定性、功耗、ICMR 和 PVT。
+At 1 kHz, with the same bias and `Ad`, a 1 V AC disturbance is applied separately to VDD and VSS, and `PSRR=20log10(|Ad/Aps|)` is calculated. The PSRR− test specifically retains an explicit VSS voltage source and the 1.8 V DC relationship. PSRR+ is 36.33 dB and PSRR− is 36.25 dB, both below the 45 dB hard limit. The complete design therefore cannot be described as meeting every specification. The next iteration should improve supply coupling through the bias tree and high-impedance nodes, then rerun stability, power, ICMR, and PVT verification.
 
-### 17. 噪声怎样定义？你会如何陈述结果？
+### 17. How is noise defined, and how would you report it?
 
-用 SPICE `.noise` 将差分输入源作为输入参考，保存 10 Hz–1 MHz 的输入等效噪声密度，并对密度平方积分后开方得到 RMS。当前 nominal 值为 1 kHz 处 401.17 nV/√Hz、10 Hz–1 MHz 积分 52.30 µV RMS。冻结规格没有给噪声硬门限，所以状态是 `REPORTED` 而不是 `PASS`；日志中的 24 条模型 conductance-reset 警告也被保留，结果需要在后续模型/版图流程中复核。
+SPICE `.noise` uses the differential input source as the input reference. The input-referred noise density is saved over 10 Hz–1 MHz; integrating its square and taking the square root gives RMS noise. Current nominal values are 401.17 nV/√Hz at 1 kHz and 52.30 µV RMS integrated over 10 Hz–1 MHz. The frozen specification has no hard noise threshold, so the status is `REPORTED`, not `PASS`. The 24 model conductance-reset warnings in the logs are also retained, and the results require further review in later model and layout flows.
 
-### 18. 你如何验证不同负载下的稳定性？
+### 18. How do you verify stability under different loads?
 
-在 TT、1.8 V、27 °C、RL=100 kΩ 下，把 CL 分别设为 1、2、5 pF，同时重复 return-ratio 和单位增益瞬态测试。三种负载的 PM 分别为 94.16°、86.29°、69.08°，都高于 55°，且瞬态没有持续或增长振荡。这里验证的是冻结的三点 nominal load sweep，不是任意电容、任意电阻或 PVT 下的无条件稳定性。
+At TT, 1.8 V, 27 °C, and RL=100 kΩ, CL is set to 1, 2, and 5 pF. Return-ratio and unity-gain transient tests are repeated for each load. The respective phase margins are 94.16°, 86.29°, and 69.08°, all above 55°, and the transients show no sustained or growing oscillation. This verifies the frozen three-point nominal load sweep, not unconditional stability for arbitrary capacitance, resistance, or PVT conditions.
 
-### 19. 这个项目如何做到可复现和可审计？
+### 19. How is the project reproducible and auditable?
 
-规格、测试矩阵和测量定义先冻结；网表由模板和参数生成，工具链使用固定 IIC-OSIC 容器/PDK 版本。Day 4 的 171 个预期测试均保留生成网表、raw TSV、ngspice 日志、解析 CSV 和 manifest 哈希，汇总表能反向定位原始证据。日志审计区分普通完成与使用 dynamic-gmin 的完成，并保留已知 warning，而不是只依赖进程退出码或删除失败信息。
+The specifications, test matrix, and measurement definitions are frozen first. Netlists are generated from templates and parameters, and the toolchain uses fixed IIC-OSIC container and PDK versions. All 171 expected Day 4 tests retain generated netlists, raw TSV data, ngspice logs, parsed CSV files, and manifest hashes. Summary tables point back to raw evidence. Log auditing distinguishes normal completion from completion using dynamic-gmin and retains known warnings instead of relying only on process exit codes or deleting failure information.
 
-### 20. 这个项目最重要的局限和下一步是什么？
+### 20. What are the main limitations and next steps?
 
-最重要的边界是：**schematic-level simulated only**。目前没有真实参考电流源的 PVT/噪声、器件 mismatch、Monte Carlo、版图、寄生提取、封装/板级效应或硅测量；settling、CMRR、PSRR、ICMR、输出摆幅和噪声也只做了 nominal。近期先修复 PSRR 和 ICMR 高端失败并全量回归；之后加入参考源、统计仿真和版图后仿真，最终用流片测量验证模型相关性。
+The central boundary is **schematic-level simulated only**. The results do not yet include real reference-current PVT/noise, device mismatch, Monte Carlo, layout, parasitic extraction, package/board effects, or silicon measurements. Settling, CMRR, PSRR, ICMR, output swing, and noise were characterized only at nominal conditions. The immediate priorities are to fix the PSRR and high-end ICMR failures and rerun the full regression. Subsequent work should add the reference source, statistical simulation, and post-layout simulation, followed by tapeout measurements to validate model correlation.
 
-## 数字证据索引
+## Numerical evidence index
 
-- 冻结规格与测量定义：[`docs/specification.md`](specification.md)、[`results/day4_measurement_definitions.csv`](../results/day4_measurement_definitions.csv)
-- 补偿 before/after：[`results/day3_compensation_before_after.csv`](../results/day3_compensation_before_after.csv)
-- 13 点 PVT：[`results/pvt_summary.csv`](../results/pvt_summary.csv)
-- Day 4 统一汇总与已知失败：[`results/summary.csv`](../results/summary.csv)、[`results/day4_nominal_summary.csv`](../results/day4_nominal_summary.csv)
-- 负载稳定性与日志审计：[`results/day4_load_stability.csv`](../results/day4_load_stability.csv)、[`results/day4_log_audit.csv`](../results/day4_log_audit.csv)
+- Frozen specification and measurement definitions: [`docs/specification.md`](specification.md), [`results/day4_measurement_definitions.csv`](../results/day4_measurement_definitions.csv)
+- Compensation before/after: [`results/day3_compensation_before_after.csv`](../results/day3_compensation_before_after.csv)
+- 13-point PVT: [`results/pvt_summary.csv`](../results/pvt_summary.csv)
+- Day 4 aggregate results and known failures: [`results/summary.csv`](../results/summary.csv), [`results/day4_nominal_summary.csv`](../results/day4_nominal_summary.csv)
+- Load stability and log auditing: [`results/day4_load_stability.csv`](../results/day4_load_stability.csv), [`results/day4_log_audit.csv`](../results/day4_log_audit.csv)

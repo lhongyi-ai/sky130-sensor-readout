@@ -1,61 +1,61 @@
-# 实施状态
+# Implementation Status
 
-**2026-09-13 当前状态：** 用户已恢复学校 Cadence 工作，并要求同时推进本地验证及提高学校上传包可靠性。已新增旧 OTA 32 项本地对应表征、同源前端双注入/耦合矩阵与噪声诊断、ADC 12 帧真实连续转换、可复用宏装配 GDS 和新包放行检查。完整芯片仍未通过验收。当前入口为 [本地推进与学校交付准备](local_preparation_20260913.md)。
+**Current status, 2026-09-13:** The user has resumed work in the school's Cadence environment and requested continued local verification and more reliable school upload packages. Additions include a corresponding 32-item local characterization of the legacy OTA, same-source frontend dual-injection/coupling-matrix and noise diagnostics, 12 real continuous ADC conversion frames, reusable macro-assembly GDS, and new-package release checks. The complete chip has not passed acceptance. Start with [Local progress and school delivery preparation](local_preparation_20260913.md).
 
-| 当前工作 | 已完成的本轮证据 | 仍未完成 |
+| Current work | Evidence completed this round | Still unfinished |
 |---|---|---|
-| 旧 OTA | 32/32 本地对应测试及两项差分参考，原始数据和报告齐全 | 学校 extra 原始结果；已有 PSRR/ICMR/PVT 建立失败保持 |
-| 前端 | 同源三档双注入、四平面耦合矩阵、采集/保持噪声诊断、小型迁移基准 | 正式全多环稳定性、采样噪声、45-PVT、学校原生迁移 |
-| ADC | 基准/严格两组 12 帧真实连续功能均一致；KLU 工作点可用 | 完整 CDAC 数值波形收敛失败，可靠连续转换、全码、长记录、完整系统失配未放行 |
-| 物理/后仿真 | 真实局部宏装配、未布线装配几何 DRC=0；135 行矩阵和准备门控 | 缺失模拟模块版图、宏间布线、完整核心 LVS/PEX、顶层后仿真 |
-| 学校新包 | 既有安装/导出恢复回归，新包清单/兼容/同包现场证据放行检查 | 新前端尚未冻结，未发布新学校包，未实际执行新包现场最小试验 |
+| Legacy OTA | 32/32 corresponding local tests and two differential references, with complete raw data and reports | School extra raw results; existing PSRR/ICMR/PVT settling failures retained |
+| Frontend | Same-source dual injection at three gains, four-plane coupling matrices, acquisition/hold noise diagnostics, small migration benchmark | Formal full multiloop stability, sampled noise, 45-PVT, native school migration |
+| ADC | Baseline/strict runs each agree across 12 real continuous functional frames; KLU operating point available | Full CDAC numerical waveforms fail convergence; reliable continuous conversion, all-code, long-record, and full-system mismatch not released |
+| Physical/post-layout simulation | Real local macro assembly, unrouted assembly geometry DRC=0; 135-row matrix and readiness gate | Missing analog-module layouts, intermacro routing, full-core LVS/PEX, top-level post-layout simulation |
+| New school package | Existing install/export recovery regression; manifest/compatibility/same-package field-evidence release checks | New frontend not frozen, no new school package released, no actual minimum field trial of a new package |
 
-以下保留 **2026-09-10 的历史阶段记录**，不能用其中的旧候选或“Cadence 暂缓”标签覆盖上面的当前状态。冻结 `config/spec.json` 的旧状态元数据也按历史记录解释；本轮没有修改其数值规格或源哈希。
+The following preserves **historical stage records from 2026-09-10**. Their old candidates or “Cadence deferred” labels do not supersede the current status above. Old status metadata in frozen `config/spec.json` is also historical; this round did not change its numerical specification or source hash.
 
-2026-09-10 已继续实施前端修复、ADC 全码执行框架、噪声模型资格和证据链加固；[本轮结果与未完成项](non_cadence_20260910.md)。新前端的 16 倍档有同源标称局部改善；但其完整 45 点 DC 工艺温压筛查只有 30 点通过、15 点失败，最差残差 457.828 LSB。没有冻结可同时满足三档和全温压的最终版本。
+2026-09-10: Continued frontend repair, an ADC all-code execution framework, noise-model qualification, and evidence-chain strengthening; [Results and unfinished work from this round](non_cadence_20260910.md). The new frontend's gain-16 setting shows local nominal improvements from the same source. However, its complete 45-point DC process/voltage/temperature screen passes only 30 points and fails 15, with a worst residual of 457.828 LSB. No final revision satisfying all three gains and all voltage/temperature conditions has been frozen.
 
-| 阶段 | 当前状态 | 已有证据 / 缺口 |
+| Stage | Current status | Existing evidence / gaps |
 |---|---|---|
-| M0 环境资格 | OPEN_FLOW_PARTIAL; CADENCE_DEFERRED | 开源单管、统计模型和小版图闭环已经运行；未核验学校 Virtuoso/Spectre、Cadence 适配 PDK 与签核规则 |
-| M1 旧版 Cadence 复现 | DEFERRED_BY_USER | 旧版文件完整保留；没有原生 Cadence 复现 |
-| M2 系统模型与预算 | PARTIAL | 模型、校准、FFT、噪声折叠解析预算、真实 MIM 匹配和有限参考负载已有证据；系统噪声／线性／功耗联合可行性尚未闭合 |
-| M3 前端晶体管级 | IN_PROGRESS_NOT_QUALIFIED | 新修复候选 G16 标称 DC 残差约 0.820 LSB、局部采样误差约 43 µV；同源 G1/G4 未放行。旧 FDDA10 的振荡／静态失败原样保留；不能跨候选拼三档成绩 |
-| M4 前端物理实现 | NOT_STARTED | 数字宏和开关版图不是前端版图；前端尚未冻结，不能称为完整前端 DRC/LVS/PEX 成果 |
-| M5 独立 SAR ADC | PARTIAL | 新增真实模拟＋原 RTL 连续六次、三个输入的转换与可恢复全码验证框架；全码长跑、噪声、失配及完整 ADC 版图未放行 |
-| M6 全链路物理集成 | SCHEMATIC_SMOKE_ONLY | 旧 G16 前端＋真实 ADC＋原 RTL 已完成短时连续转换；没有完整核心布局／顶层寄生验收 |
-| M7 完整验收与展示 | PARTIAL_DOCUMENTATION | 已有中文芯片说明、接口、学习检查、原始数据与失败记录；最终成绩报告必须等待整体验证，不能提前填写目标为成绩 |
+| M0 Environment qualification | OPEN_FLOW_PARTIAL; CADENCE_DEFERRED | Open-source single-device, statistical-model, and small-layout closed-loop runs completed; school Virtuoso/Spectre, Cadence-compatible PDK, and sign-off rules not checked |
+| M1 Legacy Cadence reproduction | DEFERRED_BY_USER | Legacy files fully retained; no native Cadence reproduction |
+| M2 System model and budget | PARTIAL | Evidence exists for models, calibration, FFT, analytical noise-folding budgets, real MIM matching, and finite reference loading; joint system noise/linearity/power feasibility is not closed |
+| M3 Frontend transistor level | IN_PROGRESS_NOT_QUALIFIED | New repair candidate G16 nominal DC residual approximately 0.820 LSB and local sampling error approximately 43 µV; same-source G1/G4 not released. Legacy FDDA10 oscillation/static failures retained; three-gain results cannot be assembled across candidates |
+| M4 Frontend physical implementation | NOT_STARTED | Digital-macro and switch layouts are not frontend layouts; frontend not frozen, so complete frontend DRC/LVS/PEX cannot be claimed |
+| M5 Standalone SAR ADC | PARTIAL | Added six continuous conversions at three inputs using real analog circuits plus original RTL, and a resumable all-code verification framework; all-code long runs, noise, mismatch, and complete ADC layout not released |
+| M6 Full-chain physical integration | SCHEMATIC_SMOKE_ONLY | Legacy G16 frontend plus real ADC plus original RTL completed short continuous conversions; no full-core layout/top-level parasitic acceptance |
+| M7 Complete acceptance and presentation | PARTIAL_DOCUMENTATION | Chip explanation, interfaces, learning checkpoint, raw data, and failure records available; final performance report must await overall verification, without entering targets as achieved results |
 
-## 历史：已发现并处理的设计细节
+## Historical design details identified and addressed
 
-1. 连续 100 kS/s 不能在每个 16 周期帧后额外插入一个空闲周期。控制接口把 busy 定义为请求反压，最后决策周期已能接受下一帧；busy 高时仍严格忽略 start。
-2. 无间隙转换时，增益选择会切到下一帧，因此新增 data_gain 与本次输出一同锁存，避免外部校准使用错误增益系数。
-3. 比较器新增真实输出保持锁存；真实 R/MIM/CMOS 相位发生器已检查全部 45 个 PVT 点。实测采集窗口最短约 2.47685 µs，后续采样测试改用该窗口，不沿用理想 2.5 µs 结果宣称覆盖。
-4. FFT 不应因为没有可分辨的某一项噪声或谐波，就丢弃仍然有效的 SNDR。不存在的独立指标返回 null 和原因，不伪造无穷大性能。
-5. 校准点严格固定；验证点与校准点分离，后续漂移不能通过重新拟合隐藏。
+1. Continuous 100 kS/s operation cannot insert an extra idle cycle after each 16-cycle frame. The control interface defines busy as request backpressure and permits the next frame request during the final decision cycle; start is still strictly ignored while busy is high.
+2. In gapless conversion, gain selection switches to the next frame. Therefore data_gain is latched with the current output to prevent external calibration from using incorrect gain coefficients.
+3. The comparator now has a real output-holding latch; the real R/MIM/CMOS phase generator has been checked at all 45 PVT points. The shortest measured acquisition window is approximately 2.47685 µs. Subsequent sampling tests use this window rather than claiming coverage from ideal 2.5 µs results.
+4. FFT analysis must not discard otherwise valid SNDR merely because a particular noise or harmonic component is unresolved. Unavailable independent metrics return null with a reason, rather than fabricated infinite performance.
+5. Calibration points are strictly fixed; validation and calibration points are separate, and subsequent drift cannot be hidden by refitting.
 
-6. 3×3 µm MIM 标称 19.845 fF，4096 单元约 81.285 pF／端。实际 PDK 试验发现仅 `m=N` 不满足独立单元局部统计缩放，`m=N mult=N` 已通过正反对照。200 个 CDAC 失配样本不是全 ADC 或完整芯片良率。
-7. 原前端的 350 Ω 源阻抗、增益开关导通电阻与片内电阻温漂共同破坏固定校准。高输入阻抗候选改为比较传感器电压与高阻反馈抽头，仍保留真实源阻抗、两级全差分结构和 CMFB；需重新检查噪声、功耗与稳定性，不能只修 DC。
-8. 底板采样与比较器前置放大候选降低了近阈值回踢误判；实际 MSB 标准阈值参考开关在低压冷角建立失败，低阈值候选已通过有限边界复验，但尚未完成完整 ADC 验收。不能把使用最小开关的反例误称为原阵列实际 MSB 尺寸。
-9. 数字宏布局布线暴露的保持时间问题经过实际单元／缓冲修复；最终九角 STA 与布线后全码功能测试通过。没有拿零延时网表功能通过代替物理时序。
-10. 四 MOS 采样开关已完成独立版图 DRC/LVS 和 R/C 寄生提取，45 个 PVT × 三输入 × 三共模 × 三源阻抗 × 原理图／RC，共 2430 个条件点全部通过。它使用规定窗口的理想时钟，未包含失配／随机噪声，也不是完整 ADC 的 2430 项验收。
-11. 新参考开关＋比较器前置放大＋补偿采样开关已与真实相位电路和原 SAR RTL 联调：标称及 SS／1.62 V／−20 °C 各一次完整转换，在 0.123 V 输入下得到 2677 码。仅是短时连接／功能证据，不代表全码、噪声或系统精度通过。
-12. 冻结 FDDA10 的同版测量明确失败：G16 标称静态校准残差 1.35887 LSB，固定系数在 TT／1.62 V／85 °C 为 4.00399 LSB；采样参考窗口有持续振荡，不能计算并宣称合格建立误差。其约 1.816 mW 和 108.9 µV 校准后小信号噪声仅是该未稳定候选的诊断值，不能作为芯片成绩。
-13. 裸比较器与保持锁存的 200 个实际失配实例固定标称失调系数后，在 1.62 V／−20 °C、1.62 V／85 °C、1.98 V／−20 °C、1.98 V／85 °C 的 ±4 LSB 局部检查分别有 12、1、0、32 个失败。未按温压重拟合。这不含新增前置放大或浮置电容阵列，不能直接代表新 ADC 或全芯片校准结果。
-14. 采样开关追加了四个选定工艺温压点的相反满量程初始状态检查，原理图／RC 共 216 个条件点通过；没有将这项有限边界测试宣称为全 45 点满量程覆盖。
+6. A 3×3 µm MIM is nominally 19.845 fF; 4096 units are approximately 81.285 pF per side. Actual PDK experiments show that `m=N` alone does not provide independent-unit local statistical scaling; `m=N mult=N` passes positive/negative controls. The 200 CDAC mismatch samples are not full-ADC or full-chip yield.
+7. The original frontend's 350 Ω source impedance, gain-switch on-resistance, and on-chip resistor temperature drift jointly invalidate fixed calibration. The high-input-impedance candidate instead compares sensor voltage with a high-impedance feedback tap, while retaining real source impedance, a two-stage fully differential structure, and CMFB. Noise, power, and stability must be rechecked, not just DC repaired.
+8. Bottom-plate sampling and comparator preamplification reduce near-threshold kickback misdecisions. The actual MSB standard-threshold reference switch fails settling at the low-voltage cold corner; a low-threshold candidate passes limited boundary retests but has not completed full ADC acceptance. A counterexample using minimum-size switches must not be described as the original array's actual MSB size.
+9. Hold-time problems exposed by digital-macro placement/routing were repaired with actual cells/buffers. Final nine-corner STA and routed all-code functional tests pass; zero-delay netlist function was not substituted for physical timing.
+10. The four-MOS sampling switch completed independent layout DRC/LVS and R/C parasitic extraction. All 2430 condition points pass: 45 PVT × three inputs × three common modes × three source impedances × schematic/RC. It uses an ideal clock with the specified window and excludes mismatch/random noise; these are not 2430 full-ADC acceptance tests.
+11. New reference switches, comparator preamplifier, and compensated sampling switch were integrated with the real phase circuit and original SAR RTL: one complete conversion each at nominal and SS/1.62 V/−20 °C produces code 2677 for input 0.123 V. This is short connection/function evidence, not passing all-code, noise, or system accuracy.
+12. Same-revision measurements of frozen FDDA10 clearly fail: G16 nominal static-calibration residual is 1.35887 LSB, and frozen coefficients give 4.00399 LSB at TT/1.62 V/85 °C. Persistent oscillation in the sampling reference window prevents calculation and declaration of qualified settling error. Approximately 1.816 mW and 108.9 µV calibrated small-signal noise are diagnostic values for this unstable candidate, not chip performance.
+13. For 200 actual mismatch instances of the bare comparator and holding latch, after freezing nominal offset coefficients, local ±4 LSB checks at 1.62 V/−20 °C, 1.62 V/85 °C, 1.98 V/−20 °C, and 1.98 V/85 °C fail in 12, 1, 0, and 32 instances respectively. No voltage/temperature refitting was used. This excludes the new preamplifier and floating capacitor array and does not directly represent new-ADC or full-chip calibration.
+14. Sampling-switch checks added opposite-full-scale initial states at four selected process/voltage/temperature points; 216 schematic/RC conditions pass. This limited boundary test is not claimed as full 45-point full-scale coverage.
 
-15. 新前端修复在同一 `564f4776…` 源码下，使 G16 标称静态校准残差降至约 0.820 LSB，实际四 MOS 采样负载的三次末端误差约 43 µV；固定标称系数下，TT 高温低压／低温高压的静态残差分别约 1.18／1.73 LSB。其他增益、噪声包含的动态精度和整个保持期不据此通过。
-16. 新 ADC 静态框架严格区分短转换、4096 码中心覆盖和阈值 ramp 线性。实测全码计算成本很高；10 ns 最大步长虽得到相同六个码，却未通过全波形数值比较，未替换原 2 ns 设置。
-17. 现成 VACASK 和原 ngspice 的 SKY130 器件噪声不等价；RC 固有噪声能力正常、单管 DC/AC 匹配都不能代替噪声模型资格。禁止用该不等价模型生成最终 SNDR 成绩。
-18. 新实验冻结校准报告及原始证据哈希；非标称温压不能临时重拟合。重新分析不覆盖原摘要。软件测试数量由统一验证报告给出，不换算成芯片性能通过数。
+15. With the same `564f4776…` source, the new frontend repair reduces G16 nominal static-calibration residual to approximately 0.820 LSB, with three endpoint errors of approximately 43 µV under the actual four-MOS sampling load. With fixed nominal coefficients, static residuals at TT high-temperature/low-voltage and low-temperature/high-voltage are approximately 1.18/1.73 LSB. This does not pass other gains, noise-inclusive dynamic accuracy, or the entire hold interval.
+16. The new ADC static framework strictly distinguishes short conversions, 4096-code-center coverage, and threshold-ramp linearity. Measured all-code computation cost is high; a 10 ns maximum step produces the same six codes but fails full-waveform numerical comparison and has not replaced the original 2 ns setting.
+17. Available VACASK and original ngspice SKY130 device noise are not equivalent; correct intrinsic RC noise and matched single-transistor DC/AC do not replace noise-model qualification. This nonequivalent model must not generate final SNDR results.
+18. New experiments freeze calibration reports and raw-evidence hashes; nonnominal voltage/temperature runs cannot refit temporarily. Reanalysis does not overwrite original summaries. Software-test counts come from the unified validation report and are not converted into counts of passing chip-performance tests.
 
-## 历史待办及仍有效的验收要求
+## Historical tasks and still-valid acceptance requirements
 
-- 前端候选冻结后，在同一源码快照下完成三档噪声、差模／共模环路稳定性、真实采样建立、固定校准全温压回归及启动／过载／PSRR／CMRR 等测试。
-- ADC 采样与参考开关、前置放大／比较器的联合收敛；全码静态线性、长记录动态失真、边界测试与规定失配覆盖。
-- 将新的稳定前端、采样结构、真实参考负载和数字物理接口整合，回归所有输入／增益／工艺温压条件。短联调不允许替代完整系统验收。
-- 完整模拟核心布局及寄生验证尚未实施；开源工具可以做一部分，但不会被改名为已完成 Cadence 原生设计。按原计划的最终 Cadence 物理交付仍暂停。
-- 本轮尚未建立可宣称完整动态器件随机噪声已纳入的模拟流程。可继续分析／资格验证替代方法，但不得把无噪声 FFT 或人为噪声假设写成真实 SNDR。
+- After freezing a frontend candidate, complete three-gain noise, differential/common-mode loop stability, real sampling settling, fixed-calibration full voltage/temperature regression, and startup/overload/PSRR/CMRR tests under one source snapshot.
+- Resolve joint convergence of ADC sampling/reference switches and preamplifier/comparator; complete all-code static linearity, long-record dynamic distortion, boundary tests, and required mismatch coverage.
+- Integrate the new stable frontend, sampling structure, real reference loading, and digital physical interface, then regress all input/gain/process/voltage/temperature conditions. Short integration tests cannot replace complete system acceptance.
+- Complete analog-core layout and parasitic verification have not been implemented. Open-source tools can perform some work, but it will not be renamed as completed native Cadence design. Final Cadence physical delivery under the original plan remains deferred in this historical record.
+- This round has not established a simulation flow supporting a claim of complete dynamic device random-noise inclusion. Alternative methods can continue to be analyzed/qualified, but noiseless FFT or assumed artificial noise must not be presented as real SNDR.
 
-Cadence 恢复后仍按 M0→M1 完成真实环境资格和旧 OTA 对照，随后迁移同版候选、完整物理实现和统一顶层后仿真。不擅自换工艺，不补造截图。
+After Cadence resumes, follow M0→M1 to complete actual environment qualification and legacy OTA comparison, then migrate the same-revision candidate, implement full physical design, and run unified top-level post-layout simulation. Do not switch processes without authorization or fabricate screenshots.
 
-完整目标和数值门槛不变。未解决项保持未完成，不因本地测试通过而放宽。
+Complete targets and numerical thresholds are unchanged. Unresolved items remain unfinished and are not relaxed because local tests pass.

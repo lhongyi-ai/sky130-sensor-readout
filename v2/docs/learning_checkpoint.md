@@ -1,11 +1,11 @@
-# 本阶段学习检查
+# Learning Checkpoint for This Stage
 
-你现在可以先围绕这五个问题理解新版项目，不需要先操作 Cadence。
+Start with these five questions to understand the new project; no Cadence operation is needed first.
 
-1. **PGA 与 ADC 各做什么？** PGA 把小信号放大到合适范围；ADC 在有限时间内把它变成整数。增益增加时，允许的输入幅度要相应减小。
-2. **为什么 12-bit 不等于 12-bit 有效精度？** 12-bit 只规定有 4096 个输出码。噪声、失真和建立误差会让实际可分辨的信息变少，因此另测 SNDR/ENOB。
-3. **为什么比较 12 次？** SAR 先试最高位，再逐位二分缩小范围。采集 4 周期、决策 12 周期，1.6 MHz 时钟下每帧 10 µs。
-4. **校准能修复什么？** 线性校准能修正固定偏移和比例误差，不能消除随机噪声、失配非线性或采样不稳定。用同一组系数观察漂移，才能知道校准有多稳健。
-5. **为什么模型通过仍然不是芯片通过？** 我们目前给模型指定了增益、噪声等数字；下一步必须证明实际晶体管、版图和寄生真的能提供这些数字。
+1. **What do the PGA and ADC each do?** The PGA amplifies a small signal into a suitable range; the ADC converts it into an integer within a finite time. As gain increases, the allowed input amplitude must decrease accordingly.
+2. **Why does 12-bit not mean 12-bit effective accuracy?** 12-bit specifies only 4096 output codes. Noise, distortion, and settling error reduce the information that can actually be resolved, so SNDR/ENOB is measured separately.
+3. **Why make 12 comparisons?** SAR tries the most significant bit first and then narrows the range by successive binary decisions. Acquisition takes 4 cycles and decisions take 12 cycles, giving 10 µs per frame at a 1.6 MHz clock.
+4. **What can calibration fix?** Linear calibration corrects fixed offset and scale errors; it cannot remove random noise, mismatch nonlinearity, or unstable sampling. Observing drift with one fixed set of coefficients shows how robust calibration is.
+5. **Why does a passing model still not mean a passing chip?** We currently assign the model numerical gain, noise, and other parameters; the next step is to prove that real transistors, layout, and parasitics can deliver those values.
 
-可以从实验报告中各选一条通过结果和失败结果，用自己的话说明：输入是什么、测量了什么、为什么通过/失败、还缺什么证据。
+Choose one passing and one failing result from the experiment report and explain in your own words: what the input was, what was measured, why it passed/failed, and what evidence is still missing.

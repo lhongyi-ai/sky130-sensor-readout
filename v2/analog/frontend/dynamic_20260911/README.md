@@ -1,98 +1,97 @@
-# 非 Cadence 前端动态闭合（2026-09-11）
+# Non-Cadence frontend dynamic closure (2026-09-11)
 
-## 结论先说
+## Conclusion
 
-这轮把前端从“真实采样时会振荡、16 倍建立误差超标”推进到了一个明显更好、
-而且使用外部 `VCM` 参考的晶体管级候选。`candidate_06.spice` 在同一份源码、
-TT／1.8 V／27 °C 下，1、4、16 三档同时通过了：
+This round advanced the frontend from oscillation under real sampling and excessive gain-16 settling error to a substantially improved
+transistor-level candidate that uses the external `VCM` reference. With one source version at
+TT / 1.8 V / 27 °C, `candidate_06.spice` passed all of the following at gains 1, 4, and 16 simultaneously:
 
-- 81 点静态扫描与三点外部线性校准后的独立点误差；
-- 每侧 4096 个真实 SKY130 MIM 单元和四 MOS 采样开关的采集建立；
-- 安静参考窗口振铃、输出共模、器件工作区和前端功耗；
-- 外部 `VCM` 取 0.85 V、0.95 V 时的全输入范围端点检查。
+- An 81-point static scan and independent-point errors after three-point external linear calibration;
+- Acquisition settling with 4096 real SKY130 MIM cells per side and four-MOS sampling switches;
+- Quiet-reference-window ringing, output common mode, device operating regions, and frontend power;
+- Full-input-range endpoint checks with external `VCM` at 0.85 V and 0.95 V.
 
-但它**还不是合格前端**。最后的正式环路审计发现多环路结果不能由“第一次
-0 dB 穿越的相位裕度”充分证明，45 个 PVT 组合因此按阶段门禁没有启动。
-最终权威状态是 `qualification.json`，不是第 8 次原始脚本的乐观状态文字。
+However, it **is not yet a qualified frontend**. The final formal loop audit found that phase margin at the first
+0 dB crossing is insufficient to prove the multiloop result. The stage gate therefore prevented starting the 45 PVT combinations.
+The authoritative final status is `qualification.json`, not the optimistic status text emitted by the original script for diagnostic 8.
 
-## 小白版：这轮改了什么
+## Plain-language explanation of the changes
 
-前端可以理解成 ADC 前面的“可调音量放大器”。它要把传感器的微小差分电压
-放大，同时把两根输出线的平均电压稳在 `VCM` 附近。上一版有两个很强的自动
-调平均值回路，像两个人同时猛打方向盘，约 2.9 MHz 的摆动会越摆越大。
+The frontend acts like an adjustable-gain amplifier ahead of the ADC. It must amplify the sensor's small differential voltage
+while holding the average of the two output voltages near `VCM`. The previous version had two strong automatic
+average-control loops, like two people turning the same steering wheel aggressively; oscillation at approximately 2.9 MHz kept growing.
 
-这轮最终候选做了三件事：
+The final candidate from this round makes three changes:
 
-1. 第一级用输出平均值直接控制匹配负载，不再增加一个高增益中间回路。
-2. 输出级加入低增益、带真实电阻退化的 `CMS−VCM` 误差级；所以 `VCM` 真正
-   进入电路，不是只写在端口名称里。
-3. Miller 电容从每侧 16 pF 调到 8 pF，隔离电阻在被测装配中从 1.8 kΩ 调到
-   1.5 kΩ，令 16 倍档能在 2.476847754 µs 采集窗口内建立。
+1. The first stage directly controls matched loads from the average output, without adding a high-gain intermediate loop.
+2. The output stage adds a low-gain `CMS−VCM` error stage with real resistor degeneration, so `VCM` actually
+   enters the circuit rather than appearing only in the port name.
+3. Miller capacitance changes from 16 pF to 8 pF per side, and the tested assembly's isolation resistance changes from 1.8 kΩ to
+   1.5 kΩ, allowing gain 16 to settle within the 2.476847754 µs acquisition window.
 
-原来 1.2 kΩ 调零电阻用 0.35 µm 电阻会得到约 0.241 µm 的非法长度。这轮改用
-0.69 µm 宽高阻多晶硅器件，长度约 0.855 µm；1.5 kΩ 隔离电阻长度约
-0.543 µm。二者均高于 0.5 µm PCell 最小长度。这里只是参数合法性检查，
-不等于已经画过前端版图或通过 DRC/LVS。
+The original 1.2 kΩ zero-setting resistor, implemented with a 0.35 µm-wide resistor, had an illegal calculated length of approximately 0.241 µm.
+This round uses a 0.69 µm-wide high-resistance polysilicon device with an approximately 0.855 µm length. The 1.5 kΩ isolation resistor is approximately
+0.543 µm long. Both exceed the 0.5 µm PCell minimum length. This is parameter-legality checking only,
+not evidence that a frontend layout has been drawn or that DRC/LVS passed.
 
-## 同一候选的标称结果
+## Nominal results from the same candidate
 
-以下门限没有降低：采集误差与采样后 30 ns 误差均为 48.828125 µV，安静参考
-窗口峰峰值为 4.8828125 µV，前端功耗预算为 1.85 mW。
+The following thresholds were not relaxed: 48.828125 µV for acquisition error and error 30 ns after sampling, 4.8828125 µV peak-to-peak in the quiet
+reference window, and a 1.85 mW frontend power budget.
 
-| 增益 | 静态独立点最大残差 | 最大采集误差 | 采样后 30 ns 最大误差 | 参考窗口最大峰峰值 | 平均功耗 |
+| Gain | Maximum static independent-point residual | Maximum acquisition error | Maximum error 30 ns after sampling | Maximum reference-window peak-to-peak | Average power |
 |---:|---:|---:|---:|---:|---:|
 | 1 | 0.029642 LSB | 1.892 µV | 1.637 µV | 1.321 nV | 0.702 mW |
 | 4 | 0.019548 LSB | 1.743 µV | 1.441 µV | 1.180 nV | 0.698 mW |
 | 16 | 0.041138 LSB | 10.262 µV | 11.182 µV | 1.132 nV | 0.698 mW |
 
-标称输出共模的最大瞬态误差约为 13.94、14.58、14.69 mV。外部 `VCM` 设为
-0.85 V 和 0.95 V 时，全输入范围内最大输出共模跟踪误差分别为 36.56 mV 和
-5.21 mV，均在当前 50 mV 端点门限内。它们不是 PVT 结果。
+The maximum nominal transient output-common-mode errors are approximately 13.94, 14.58, and 14.69 mV. With external `VCM` set to
+0.85 V and 0.95 V, the maximum output-common-mode tracking errors over the full input range are 36.56 mV and
+5.21 mV respectively, both within the current 50 mV endpoint limit. These are not PVT results.
 
-## 为什么相位裕度仍不能签字
+## Why phase margin still cannot be signed off
 
-第 8 次诊断用测试专用、直流为零的电压源，分别注入三档差模外环、第一级
-共模环和输出共模环；真实采样开关保持导通，每侧仍挂 4096 个 MIM 单元。
-第一次向下穿越 0 dB 时：
+Diagnostic 8 used test-only zero-DC voltage sources to inject each gain's outer differential loop, first-stage
+common-mode loop, and output common-mode loop. The real sampling switches remained on, with 4096 MIM cells per side.
+At the first downward 0 dB crossing:
 
-- 三档差模表观相位裕度为 86.38°、84.86°、83.30°；
-- 三档输出共模表观相位裕度为 123.53°、123.19°、123.00°。
+- Apparent differential phase margins at the three gains were 86.38°, 84.86°, and 83.30°;
+- Apparent output-common-mode phase margins were 123.53°, 123.19°, and 123.00°.
 
-这些数字本身超过 60°，但原始脚本漏掉了两个否决项：
+These values exceed 60°, but the original script missed two disqualifying findings:
 
-- 差模曲线在约 74.8、47.1、38.9 MHz 又**向上**穿过 0 dB；只看第一次向下
-  穿越不能代表整个 Nyquist 行为。
-- 第一级共模标量返回比在 1 倍和 4 倍的低频相位约为 −180°，而 16 倍约为
-  0°。在相互耦合的回路里，这种符号不一致不能继续套单环相位裕度公式。
+- The differential curves cross 0 dB **upward** again at approximately 74.8, 47.1, and 38.9 MHz. The first downward
+  crossing alone cannot represent the complete Nyquist behavior.
+- The first-stage common-mode scalar return ratio has approximately −180° low-frequency phase at gains 1 and 4, but approximately
+  0° at gain 16. With mutually coupled loops, this sign inconsistency invalidates continued use of a single-loop phase-margin formula.
 
-所以 `diagnostics/08.../summary.json` 中原始的 `LOOP_STABILITY_PASS` 被
-`qualification.json` 明确推翻。要继续，需要做多环路返回差／广义 Nyquist
-审计，或改为只有一个明确输出共模环的结构，再重新跑动态与稳定性门。
+Therefore, the original `LOOP_STABILITY_PASS` in `diagnostics/08.../summary.json` is
+explicitly superseded by `qualification.json`. Continuing requires a multiloop return-difference/generalized Nyquist
+audit, or a redesign with one well-defined output-common-mode loop, followed by renewed dynamic and stability gates.
 
-## 八次诊断留下了什么
+## Evidence retained from eight diagnostics
 
-- 01：合法电阻＋大共模补偿电容，在第一个复位边沿数值失败。
-- 02：数值伪断点修复后证明大电容方案会摆到电源轨。
-- 03：无条件电阻恢复没有振铃，但偏置把一级推向高电源轨。
-- 04：修偏置后落到另一个饱和工作点。
-- 05：直接感测共模结构使三档静态通过，1/4 倍动态通过，16 倍约 90 µV 失败。
-- 06：8 pF Miller＋合法 1.5 kΩ 隔离后，三档动态通过，但 `VCM` 尚未入环。
-- 07：加入低增益 `CMS−VCM` 误差级；三档动态及 ±50 mV VCM 端点通过。
-- 08：环路注入产生完整原始曲线；审计发现原始自动判定是假阳性。
+- 01: legal resistors plus large common-mode compensation capacitors failed numerically at the first reset edge.
+- 02: fixing artificial numerical breakpoints revealed that the large-capacitor approach oscillates to the supply rails.
+- 03: unconditional resistive restoration removed ringing, but the bias pushed the first stage toward the upper rail.
+- 04: correcting the bias moved the circuit to another saturated operating point.
+- 05: direct common-mode sensing passed static checks at all three gains and dynamics at gains 1/4, while gain 16 failed at approximately 90 µV.
+- 06: 8 pF Miller capacitance plus legal 1.5 kΩ isolation passed dynamics at all three gains, but `VCM` was not yet in the loop.
+- 07: adding the low-gain `CMS−VCM` error stage passed three-gain dynamics and ±50 mV VCM endpoint checks.
+- 08: loop injection produced complete raw curves; auditing found the original automatic pass to be a false positive.
 
-运行器路径问题发生在 ngspice 启动前，保存在 `setup_failures/`，没有伪装成
-一次真实电路实验。所有实际诊断均为单 worker，并且每个目录保存候选快照、
-测试台、原始数据、日志、配置、摘要和 SHA-256 manifest。
+The runner-path problem occurred before ngspice started and is stored in `setup_failures/`; it was not presented as
+a real circuit experiment. All actual diagnostics used one worker, and each directory retains candidate snapshots,
+testbenches, raw data, logs, configuration, summaries, and a SHA-256 manifest.
 
-## 现在可以怎么查看
+## Viewing the current evidence
 
-- 候选电路：`candidate_06.spice`
-- 最终保守状态：`qualification.json`
-- 最好的完整动态证据：`diagnostics/07_20260911T085157880653Z_candidate_06/`
-- 正式环路原始证据：`diagnostics/08_20260911T085257873008Z_candidate_06_loops/`
-- 可重建状态：`python3 build_qualification.py`
-- 证据回归：`python3 -m unittest -v test_evidence.py`
+- Candidate circuit: `candidate_06.spice`
+- Final conservative status: `qualification.json`
+- Best complete dynamic evidence: `diagnostics/07_20260911T085157880653Z_candidate_06/`
+- Formal raw loop evidence: `diagnostics/08_20260911T085257873008Z_candidate_06_loops/`
+- Rebuildable status: `python3 build_qualification.py`
+- Evidence regressions: `python3 -m unittest -v test_evidence.py`
 
-这些全是开源 SKY130/ngspice 的版图前结果，不是 Cadence 原生原理图，不是
-前端 DRC/LVS/PEX，不含合格的晶体管瞬态噪声，也不能证明全 ADC 的 SNDR。
-
+All results are pre-layout results from open-source SKY130/ngspice. They are not native Cadence schematics or
+frontend DRC/LVS/PEX, do not include qualified transistor transient noise, and do not establish full-ADC SNDR.

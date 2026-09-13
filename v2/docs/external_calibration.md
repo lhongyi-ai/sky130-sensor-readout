@@ -1,13 +1,13 @@
-# 外部校准的数据入口
+# External Calibration Data Input
 
-校准在电脑的软件中运行，不在芯片上。输入可以来自行为模型、ngspice 或后续 Spectre 的原始转换码；导入工具不会自动认可其物理证据级别。
+Calibration runs in computer software, not on the chip. Inputs may be raw conversion codes from the behavioral model, ngspice, or later Spectre simulations; the import tool does not automatically endorse their level of physical evidence.
 
-CSV 必须有这些列：`instance_id,sample_id,gain,vdd_v,temperature_c,raw_code,sensor_input_v`。
-`sample_id` 在该文件内唯一；`raw_code` 是 0～4095 的原始整数；`gain` 是 1、4、16。
-`sensor_input_v` 是两端传感器电压之差，校准/验证时必须已知，日常应用时可以留空。
-必须只导出采集/转换稳定后的有效输出，不得将复位期间或无效码混入。
+CSV files must contain these columns: `instance_id,sample_id,gain,vdd_v,temperature_c,raw_code,sensor_input_v`.
+`sample_id` must be unique within the file; `raw_code` is a raw integer from 0 to 4095; `gain` is 1, 4, or 16.
+`sensor_input_v` is the difference between the two sensor-terminal voltages. It must be known for calibration/validation and may be blank in normal application.
+Only valid outputs after acquisition/conversion has settled may be exported; reset-period or invalid codes must not be included.
 
-在仓库根目录使用：
+From the repository root:
 
 ```sh
 python3 v2/scripts/calibrate.py fit nominal_training.csv frozen_coefficients.json
@@ -15,11 +15,11 @@ python3 v2/scripts/calibrate.py apply raw_samples.csv corrected_samples.csv --co
 python3 v2/scripts/calibrate.py validate independent_holdout.csv holdout_report.json --coefficients frozen_coefficients.json
 ```
 
-- 每实例、每增益只允许在 1.8 V / 27 °C 的 −80%、0、+80% 满量程各至少 4096 个样本拟合。
-- 单个训练样本触及端码即拒绝；不能用平均值掩盖饱和。
-- 验证点必须独立于训练点，各至少 2048 个样本。标称平均残差目标 ≤1 LSB，其余温压 ≤4 LSB。
-- 同一个实例/增益跨温压必须使用原系数，不许重新拟合。工具拒绝拿另一个实例或另一档增益的系数代用。
-- 输出同时保留原始码和未取整、未裁剪的校准码，以及换算的输入电压。超量程和漂移不会被软件隐藏。
-- 已存在的输出文件不覆盖；选择新的文件名保存下一次试验。
+- For each instance and gain, fit only at 1.8 V / 27 °C, using at least 4096 samples at each of −80%, 0, and +80% full scale.
+- Reject training if any individual sample reaches an endpoint code; averaging must not hide saturation.
+- Validation points must be independent of training points, with at least 2048 samples each. The nominal mean-residual target is ≤1 LSB, and ≤4 LSB at other voltage/temperature conditions.
+- The same instance/gain must use the original coefficients across voltage/temperature conditions, without refitting. The tool rejects substitution of coefficients from another instance or gain.
+- Outputs retain raw codes, unrounded/unclipped calibrated codes, and converted input voltage. Software does not hide overrange or drift.
+- Existing output files are not overwritten; choose a new filename for the next experiment.
 
-测试点全部通过，也只证明这批输入点的结果。完整 45 组合、三档增益、噪声、动态精度、失配和后仿真必须另有证据，不能由校准报告代替。
+Passing every tested point proves only the results for that set of inputs. The full 45 combinations, three gains, noise, dynamic accuracy, mismatch, and post-layout simulation require separate evidence and cannot be replaced by a calibration report.

@@ -1,81 +1,81 @@
-# 非 Cadence 前端重构（2026-09-11）
+# Non-Cadence frontend redesign (2026-09-11)
 
-本目录是独立的新架构实验。它不修改或覆盖旧前端、`repair_20260910/` 或
-`closure_20260911/` 的失败证据。目标是用真实 SKY130 器件完成同一套 1/4/16
-倍可编程传感器前端，而不是把三个档位来自不同候选的结果拼在一起。
+This directory is an independent experiment with a new architecture. It does not modify or overwrite the old frontend or the failed evidence in
+`repair_20260910/` and `closure_20260911/`. The goal is one programmable sensor frontend with gains 1/4/16
+using real SKY130 devices, rather than combining the three gain settings from different candidates.
 
-候选 01 改为全差分反相闭环：两条输入各经过真实高阻多晶硅电阻进入 OTA
-求和节点，另一侧输出交叉反馈到同一节点。OTA 本体是两输入、两级、全差分
-晶体管放大器；输出平均值由电阻连续检测，并由独立晶体管共模环调节。内部
-没有理想电流源、理想受控放大器或理想开关。
+Candidate 01 uses a fully differential inverting closed loop: both inputs pass through real high-resistance polysilicon resistors into the OTA
+summing nodes, with cross-feedback from the opposite output to the same node. The OTA itself is a two-input, two-stage, fully differential
+transistor amplifier. Output average is continuously sensed with resistors and regulated by an independent transistor common-mode loop.
+There are no ideal current sources, ideal controlled amplifiers, or ideal switches inside.
 
-所有候选与实验均须由 `run_diagnostic.py` 建立只增不改的时间戳目录并写入
-源码快照、原始数据、日志、配置、结果和 SHA-256 manifest。12 次标称小诊断
-全部用完之前，只允许在同一候选同时检查三档。三档静态、真实采样建立、差模
-与共模稳定性以及功耗的前置门同时通过后，才允许一次 45-PVT DC 筛查。
+All candidates and experiments must use `run_diagnostic.py` to create append-only timestamped directories containing
+source snapshots, raw data, logs, configuration, results, and SHA-256 manifests. Before the budget of 12 small nominal diagnostics
+is exhausted, only simultaneous checking of all three gains on the same candidate is allowed. One 45-PVT DC screen is permitted only
+after all three gains simultaneously pass the prerequisite gates for static performance, real sampling settling, differential/common-mode stability, and power.
 
-## 当前候选与真实结果
+## Current candidate and actual results
 
-- 当前源码：`candidate_01.spice`
-- 当前源码 SHA-256：`2c36c23fb47036272a8dfe4a7fff6ee9101a9091fdcb1f13cb742880f257891e`
-- 可复现汇总：`qualification.json`
-- 选定冻结证据：`diagnostics/06_20260911T082721717297Z_candidate_01/`
-- 真实采样开关：`sampling_switch.spice`
+- Current source: `candidate_01.spice`
+- Current source SHA-256: `2c36c23fb47036272a8dfe4a7fff6ee9101a9091fdcb1f13cb742880f257891e`
+- Reproducible summary: `qualification.json`
+- Selected frozen evidence: `diagnostics/06_20260911T082721717297Z_candidate_01/`
+- Real sampling switch: `sampling_switch.spice`
 
-同一份候选源码在 TT／1.8 V／27 °C 完整跑完了三档各 81 个静态点。
-用 −80%、0、+80% 三点拟合后，其余 78 个独立点的最大残差如下：
+The same candidate source completed 81 static points at each of the three gains under TT / 1.8 V / 27 °C.
+After fitting −80%, 0, and +80%, the remaining 78 independent points had these maximum residuals:
 
-| 增益 | 最大静态残差 | 最大静态共模误差 | DC 前端最大功耗 | 关键管工作区 |
+| Gain | Maximum static residual | Maximum static common-mode error | Maximum DC frontend power | Key-device operating regions |
 |---:|---:|---:|---:|---|
-| 1 | 0.117264 LSB | 约 0.409 mV | 约 0.535 mW | 所列管均至少留 20 mV 饱和余量 |
-| 4 | 0.015870 LSB | 约 0.409 mV | 约 0.526 mW | 同上 |
-| 16 | 0.019776 LSB | 约 0.409 mV | 约 0.525 mW | 同上 |
+| 1 | 0.117264 LSB | Approximately 0.409 mV | Approximately 0.535 mW | All listed devices retain at least 20 mV saturation margin |
+| 4 | 0.015870 LSB | Approximately 0.409 mV | Approximately 0.526 mW | Same |
+| 16 | 0.019776 LSB | Approximately 0.409 mV | Approximately 0.525 mW | Same |
 
-这些是**同源静态通过**，不是完整前端通过。它说明反相全差分闭环消除了旧
-FDDA 的大信号输入头间隙问题，并且新增的第一级共模环把一级节点稳定在约
-0.705 V；它不能证明采样、噪声或稳定性合格。
+These are **static passes from one source**, not a full frontend pass. They show that the inverting fully differential loop eliminates the old
+FDDA's large-signal input-headroom problem and that the added first-stage common-mode loop stabilizes the first-stage nodes near
+0.705 V. They do not establish sampling, noise, or stability qualification.
 
-## 为什么动态仍然失败
+## Why dynamics still fail
 
-最后一次测试使用真实 LVT 主传输门、两个短接扩散假管和每侧 4096 个真实
-MIM 单元。10 ns 数字边沿让仿真完成到 28.010 µs，随后在第三次复位边沿发生
-`timestep too small`。在这之前完整记录的第一个采样周期已经足以否决动态门：
+The final test used a real main LVT transmission gate, two dummy transistors with shorted diffusions, and 4096 real
+MIM cells per side. With 10 ns digital edges, the simulation reached 28.010 µs before encountering
+`timestep too small` at the third reset edge. The first fully recorded sampling cycle before that point already rejects the dynamic gate:
 
-| 增益 | 第一个采集误差 | 16–19 µs 参考窗口峰峰值 | 结果 |
+| Gain | First acquisition error | Peak-to-peak in the 16–19 µs reference window | Result |
 |---:|---:|---:|---|
-| 1 | 约 70.55 µV | 约 14.47 mV | 失败 |
-| 4 | 约 9.39 µV | 约 10.84 mV | 失败（参考未稳定） |
-| 16 | 约 917.07 µV | 约 4.80 mV | 失败 |
+| 1 | Approximately 70.55 µV | Approximately 14.47 mV | Failed |
+| 4 | Approximately 9.39 µV | Approximately 10.84 mV | Failed: reference not settled |
+| 16 | Approximately 917.07 µV | Approximately 4.80 mV | Failed |
 
-采集误差门限是 48.828125 µV，安静参考窗口门限是 4.8828125 µV。三档参考
-都还在毫伏级振铃，不能把 G4 的单个瞬时误差当成建立通过。差模和共模相位
-裕度也没有完成正式注入测量，因此稳定性门明确为失败／未闭合。
+The acquisition-error limit is 48.828125 µV, and the quiet-reference-window limit is 4.8828125 µV. References at all three gains
+still show millivolt-level ringing, so G4's single instantaneous error cannot establish a settling pass. Formal injection measurements of differential and common-mode phase
+margins are also incomplete, so the stability gate is explicitly failed/unresolved.
 
-按有界实验规则，本轮在第 6/12 次诊断后停止调参。由于三档动态和正式稳定性
-前置条件没有同时通过，未启动 45-PVT DC 筛查，也未沿用旧候选的噪声数字。
-当前文件出现不代表通过；最终状态以 `qualification.json` 为准。
+Under the bounded-experiment rules, tuning stopped after diagnostic 6/12. Because three-gain dynamics and formal stability
+prerequisites had not passed together, the 45-PVT DC screen was not started and noise figures from old candidates were not reused.
+A file's existence does not imply a pass; the authoritative final status is `qualification.json`.
 
-## 物理可实现性审计
+## Physical implementability audit
 
-反馈网络没有出现毫米级电阻：0.35 µm 宽高阻多晶硅下，10 kΩ、10.35 kΩ、
-41.4 kΩ、165.6 kΩ 的模型长度约为 9.10、9.46、40.72、165.80 µm；最大
-单条反馈电阻的有效电阻体面积约 58.0 µm²，最终含触点、护环和走线会更大。
-G1 时传感器看到的差分负载约 20.7 kΩ，±0.2 V 每条输入支路约 19.3 µA；
-350 Ω 源阻抗造成的约 3.38% 压降已经包含在反馈阻值设计与静态校准内。
+The feedback network has no millimeter-scale resistor: with 0.35 µm-wide high-resistance polysilicon, the model lengths for 10 kΩ, 10.35 kΩ,
+41.4 kΩ, and 165.6 kΩ are approximately 9.10, 9.46, 40.72, and 165.80 µm. The largest
+single feedback resistor has an effective resistive-body area of approximately 58.0 µm²; contacts, guard rings, and routing will enlarge the final footprint.
+At G1, the sensor sees approximately 20.7 kΩ differential load, and each input branch carries approximately 19.3 µA at ±0.2 V.
+The approximately 3.38% drop from the 350 Ω source impedance is already included in feedback-resistor design and static calibration.
 
-但本轮也发现一个不能掩盖的版图违规：两条 1.2 kΩ Miller 调零电阻按当前
-0.35 µm 模型公式得到约 0.241 µm 长，低于 PDK PCell 的 0.5 µm 最小长度。
-因为动态本来就失败，本轮没有偷偷把它四舍五入后继续宣称同一候选；物理可
-布局门因此为失败。未来版本必须换更宽／更低阻的合法 PDK 电阻选项，或使用
-最小合法尺寸，并从静态与动态重新验证。
+This round also found a physical-rule violation that cannot be hidden: the two 1.2 kΩ Miller zero-setting resistors have calculated lengths
+of approximately 0.241 µm under the current 0.35 µm model formula, below the PDK PCell's 0.5 µm minimum.
+Because dynamics already failed, this round did not silently round the dimensions and continue claiming the same candidate. The physical
+implementability gate therefore fails. A future version must use a legal wider/lower-resistance PDK resistor option or
+the minimum legal dimensions, then repeat both static and dynamic verification.
 
-![重构前端架构](architecture.svg)
+![Redesigned frontend architecture](architecture.svg)
 
-## 文件怎么用
+## Using the files
 
-`run_diagnostic.py` 是可重跑入口；每次运行会生成新的时间戳证据目录，不覆盖
-旧结果。`build_qualification.py` 只读取并校验第 6 次冻结证据，再重建汇总。
-`test_evidence.py` 检查哈希、诊断次数和“静态通过不能掩盖动态失败”的真值。
+`run_diagnostic.py` is the rerun entry point; every invocation creates a new timestamped evidence directory without overwriting
+old results. `build_qualification.py` only reads and verifies the frozen evidence from diagnostic 6, then rebuilds the summary.
+`test_evidence.py` checks hashes, diagnostic counts, and the requirement that a static pass cannot conceal a dynamic failure.
 
-这些结果全是开源 ngspice＋SKY130 模型的版图前结果；不是 Cadence 原生设计、
-不是寄生后仿真、不是完整 ADC 转换结果，更不是流片或硅测。
+All results are pre-layout results from open-source ngspice＋SKY130 models, not a native Cadence design,
+post-parasitic simulation, full-ADC conversion result, tapeout, or silicon measurement.

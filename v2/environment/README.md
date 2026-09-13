@@ -1,25 +1,25 @@
-# 开源环境资格与复现边界
+# Open-source Environment Qualification and Reproduction Boundaries
 
-Cadence 依用户要求暂停。本目录的证据属于开源工具／公开 SKY130A PDK，不是 Cadence 资格。
+Cadence was deferred at the user's request. Evidence in this directory belongs to open-source tools and the public SKY130A PDK, not Cadence qualification.
 
-原资格使用 IIC-OSIC-TOOLS 镜像 `hpretl/iic-osic-tools@sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7`，PDK 安装在容器 `/foss/pdks/sky130A`，解析版本 `026824c7969ce6f4fc9678e6ca04b0a06a596c4b`。历史容器名 `sky130-v2-open-work`，历史记录保留。
+Original qualification used the IIC-OSIC-TOOLS image `hpretl/iic-osic-tools@sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7`, with the PDK installed at container path `/foss/pdks/sky130A`, resolved revision `026824c7969ce6f4fc9678e6ca04b0a06a596c4b`. The historical container name was `sky130-v2-open-work`; historical records are retained.
 
-2026-09-10 的实际运行容器为 `sky130-v2-resume-20260910`，使用同一镜像、同一 PDK，网络关闭。完整工作副本位于 `/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota`；其根目录只读挂载到 `/repo`，仅新版目录可写挂载到 `/repo/v2`。新运行不写旧工作副本，也不启动 Cadence。
+The actual 2026-09-10 runtime container was `sky130-v2-resume-20260910`, using the same image and PDK with networking disabled. The complete working copy is at `/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota`; its root is mounted read-only at `/repo`, with only the new-version directory mounted writable at `/repo/v2`. New runs neither write the old working copy nor start Cadence.
 
-额外发现：现成 VACASK 可运行固有 RC 随机噪声，但其 BSIM4v8 与当前 ngspice47 选中的 SKY130 BSIM4v5 噪声不等价，资格未通过。见 [本轮噪声资格](../verification/noise_20260910/README.md)；软件存在不等于工艺噪声可用。
+Additional finding: available VACASK runs intrinsic RC random noise, but its BSIM4v8 noise is not equivalent to the SKY130 BSIM4v5 selected by current ngspice47, so qualification fails. See [Noise qualification from this round](../verification/noise_20260910/README.md); installed software does not imply usable process noise.
 
-## 已执行的独立资格
+## Independent qualifications executed
 
-| 入口 | 证据 | 范围 |
+| Entry point | Evidence | Scope |
 |---|---|---|
-| `qualify.py` | [device_qualification.json](results/device_qualification.json) | 45 个单管工艺温压点、200 个真实失配实例、重复／关闭统计种子控制，共 247 次仿真 |
-| `qualify_cap_multiplier.py` | [cap_multiplier_qualification.json](results/cap_multiplier_qualification.json) | 600 个真实 PDK 电容实例，分别验证单元、仅 m=64、m=mult=64 的均值和局部失配缩放 |
-| `qualify_physical.py` | [physical_qualification.json](results/physical_qualification.json) | 自生成 MIM 和 NMOS 小版图，DRC/LVS、含电容寄生的仿真闭环 |
+| `qualify.py` | [device_qualification.json](results/device_qualification.json) | 45 single-device process/voltage/temperature points, 200 real mismatch instances, repeated/disabled statistical seed controls; 247 simulations total |
+| `qualify_cap_multiplier.py` | [cap_multiplier_qualification.json](results/cap_multiplier_qualification.json) | 600 real PDK capacitor instances, checking means and local-mismatch scaling for a unit, m=64 only, and m=mult=64 |
+| `qualify_physical.py` | [physical_qualification.json](results/physical_qualification.json) | Self-generated small MIM and NMOS layouts, DRC/LVS, and a simulation closed loop including capacitive parasitics |
 
-在该容器内调用相应 Python 脚本即可复现；每次生成带时间戳的输出目录、源码快照、原始仿真文件、日志和结构化报告。
+Reproduce by invoking the corresponding Python script in that container. Each run generates a timestamped output directory, source snapshots, raw simulation files, logs, and a structured report.
 
-实际发现：只设置 MIM `m=64` 可以正确缩放标称电容，但不能据此假设局部随机失配按 sqrt(64) 缩小。独立控制试验验证了本 PDK 中 `m=64 mult=64` 的正确局部统计缩放。原错误假设的失败报告保留，不覆盖。
+Actual finding: MIM `m=64` alone correctly scales nominal capacitance, but does not justify assuming local random mismatch shrinks by sqrt(64). Independent control experiments verify correct local statistical scaling with `m=64 mult=64` in this PDK. Failure reports for the original incorrect assumption are retained, not overwritten.
 
-这些 200 样本是器件或电容构造检查，不是 200 颗完整芯片的良率。统计模型未验证空间梯度和版图相关系统性失配。小版图闭环中的提取是电容寄生；[采样开关物理实现](../physical/adc_switch/) 和数字宏另有真实 RC 提取，不能混为一项。
+These 200 samples check devices or capacitor constructions, not yield for 200 complete chips. The statistical model has not verified spatial gradients or layout-dependent systematic mismatch. Extraction in the small-layout closed loop covers capacitive parasitics; [Sampling-switch physical implementation](../physical/adc_switch/) and the digital macro have separate real RC extraction and must not be conflated.
 
-仅保存自有设计、工具／模型版本、哈希、结果和可公开的必要许可说明，不复制受限制规则、许可证、账号或学校配置。
+Only project-owned designs, tool/model revisions, hashes, results, and necessary publicly shareable licensing notes are retained; restricted rules, licenses, accounts, and school configuration are not copied.

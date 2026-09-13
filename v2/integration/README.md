@@ -1,45 +1,45 @@
-# 真实晶体管与 SAR RTL 联调
+# Real Transistor Circuits and SAR RTL Integration
 
-本目录使用 ngspice 的 XSPICE `d_cosim` 和 Verilator，运行原始、可综合的 `rtl/sar_controller.v`。不是用另一个软件 SAR 算法替代数字控制。接口方法见 [ngspice 官方手册](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf) 的 HDL co-simulation 部分。
+This directory uses ngspice XSPICE `d_cosim` and Verilator to execute the original synthesizable `rtl/sar_controller.v`. Another software SAR algorithm does not replace the digital controller. See HDL co-simulation in the [Official ngspice manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf) for the interface method.
 
-## 三个不同层次的证据
+## Three different levels of evidence
 
-1. `qualify_cosim.py --vdd 1.62`（也运行 1.8、1.98）：ADC 是理想测试夹具，仅验证逻辑端口、极性和连续 100 kS/s 时序。不能证明模拟 ADC 正确。
-2. `qualify_phases.py`：真实 SKY130 MOS、电阻和 MIM 组成的非重叠相位电路；45 个工艺温压组合独立检查，保留实际负载、所有波形和源文件快照。
-3. `run_adc_cosim.py`：真实 ADC 与原 RTL 连续转换，可显式加入冻结前端。默认真实相位电路；`--phase-source ideal` 仅用于保留对照实验。
+1. `qualify_cosim.py --vdd 1.62` (also run at 1.8 and 1.98): the ADC is an ideal test fixture, verifying only logic ports, polarity, and continuous 100 kS/s timing. It cannot establish analog ADC correctness.
+2. `qualify_phases.py`: a nonoverlapping phase circuit built from real SKY130 MOS, resistors, and MIM; 45 process/voltage/temperature combinations checked independently, retaining actual loads, all waveforms, and source snapshots.
+3. `run_adc_cosim.py`: continuous conversions with real ADC and original RTL, optionally adding an explicitly selected frozen frontend. Defaults to the real phase circuit; `--phase-source ideal` is only for retained control experiments.
 
-示例（容器内）：
+Examples (inside the container):
 
     python3 /repo/v2/integration/qualify_cosim.py --vdd 1.8
     python3 /repo/v2/integration/run_adc_cosim.py --input-v 0.123
 
-新的底板采样／前置隔离放大候选使用显式参数，不覆盖原 ADC：
+The new bottom-plate-sampling/isolation-preamplifier candidate uses explicit arguments without overwriting the original ADC:
 
     python3 /repo/v2/integration/run_adc_cosim.py \
       --adc-wrapper /repo/v2/analog/adc/adc_analog12_bottom_preamp.spice \
       --adc-subckt adc_analog12_bottom_preamp \
       --adc-preamp /repo/v2/analog/adc/adc_preamp.spice
 
-`--frontend` 必须指定待验证前端文件。`--gain` 为 1、4、16；输入参数 `--input-v` 指理想放大后希望送到 ADC 的差分电压，传感器实际刺激自动除以增益。源阻抗保留在传感器与前端之间，不能在加入前端时消失。
+`--frontend` must specify the frontend file under test. `--gain` is 1, 4, or 16; input argument `--input-v` denotes the desired differential ADC voltage after ideal amplification, and actual sensor stimulus is automatically divided by gain. Source impedance remains between the sensor and frontend and must not disappear when the frontend is added.
 
-前端隔离电阻必须按冻结实验显式指定 `--frontend-riso`，不能因为源码默认值不同而偷换负载条件。例如 FDDA5 的已复核快照使用每端 2200 Ω。FDDA10 当前有共模振荡，不应将其接入后用短码容差宣称合格前端。
+Frontend isolation resistance must be explicitly set with `--frontend-riso` according to the frozen experiment; differing source defaults must not silently change load conditions. For example, the reviewed FDDA5 snapshot uses 2200 Ω per side. FDDA10 currently has common-mode oscillation and must not be connected and declared qualified using short-code tolerances.
 
-`candidates/20260908T045601001817Z/` 保存低阈值参考开关、真实前置放大和四 MOS 补偿顶板钳位的组合快照。该候选只完成标称与 SS／1.62 V／−20 °C 各一个 0.123 V 输入的完整转换，均输出 2677。其 manifest 保持 `UNQUALIFIED_INTEGRATION_CANDIDATE`。运行时应显式传入该目录的 wrapper、blocks、preamp，并分别 `--extra-include` 该目录的参考开关和采样开关文件；不能混入其他版本。快照生成器只替换两个顶板钳位，补偿晶体管必须接被保持的 B 节点，A/B 不能互换。
+`candidates/20260908T045601001817Z/` preserves a combined snapshot of low-threshold reference switches, real preamplification, and four-MOS compensated top-plate clamps. This candidate completed only one full conversion at input 0.123 V each at nominal and SS/1.62 V/−20 °C, both yielding 2677. Its manifest remains `UNQUALIFIED_INTEGRATION_CANDIDATE`. Runs must explicitly supply that directory's wrapper, blocks, and preamp, plus separate `--extra-include` arguments for its reference-switch and sampling-switch files; other revisions must not be mixed in. The snapshot generator replaces only the two top-plate clamps. Compensation transistors must connect to held node B; A/B cannot be swapped.
 
-逻辑桥报告不仅需要 PASS，也必须与当前控制器、接口包装及桥接脚本的哈希、供电和仿真后端一致。源码改变后必须重新资格检查。
+A logic-bridge report needs more than PASS: it must match hashes of the current controller, interface wrapper, and bridge script, as well as supply and simulation backend. Source changes require requalification.
 
-`--reference-r`、`--reference-c-nf` 描述外部参考／共模源阻抗和外部去耦，默认各 1 Ω、10 nF。`--source-r` 为每端 0／350／1000 Ω，`--input-cm-offset-mv` 为 −50／0／50 mV。参考电压相对 VDD/2 保持 ±0.2 V。
+`--reference-r` and `--reference-c-nf` describe external reference/common-mode source impedance and external decoupling, defaulting to 1 Ω and 10 nF each. `--source-r` is 0/350/1000 Ω per terminal, and `--input-cm-offset-mv` is −50/0/50 mV. References remain ±0.2 V relative to VDD/2.
 
-参考条件已显式区分：默认 `--reference-cm-mode tracking` 使 VREF±=VDD/2±0.2 V；`fixed` 保持外部参考为 1.1／0.7 V，但输入共模仍为 VDD/2。两者标称相同、供电变化时不同。原计划只给出标称参考，最终须冻结这个外部接口条件或覆盖两者，不能把一个模式的失败直接归因到另一个模式的电路。ADC 独立参考支路诊断的部分早期测试使用 fixed 模式。
+Reference conditions are explicitly distinguished: default `--reference-cm-mode tracking` gives VREF±=VDD/2±0.2 V; `fixed` keeps external references at 1.1/0.7 V while input common mode remains VDD/2. They agree nominally and differ as supply changes. The original plan specifies only nominal references; this external interface condition must ultimately be frozen or both covered. Failure in one mode cannot directly be attributed to the circuit in another mode. Some early standalone ADC reference-branch diagnostics use fixed mode.
 
-大电路仿真显式保存所需观察节点，避免把所有内部节点波形都驻留内存。`--solver sparse`／`klu` 只切换数值求解器，不修改电路、转换次数、刺激或误差门槛。超时单列为未完成，不能从部分正确输出推断整项通过；旧的超时报告原样保留。
+Large-circuit simulations explicitly save required observation nodes rather than keeping all internal waveforms in memory. `--solver sparse`/`klu` changes only the numerical solver, not the circuit, conversion count, stimulus, or error thresholds. Timeouts are separately marked incomplete; partial correct output cannot imply a complete pass. Old timeout reports remain unchanged.
 
-## 已知解释限制
+## Known interpretation limits
 
-- 短联调每个输入通常只有三次转换。2 LSB 原始码容差是定位连接／极性／时序错误的 smoke gate，不是放宽 INL、校准残差或 SNDR 目标。
-- Verilator 接口日志的 `$realtime` 可能显示零；转换间隔用 SPICE 波形中的 data_valid 上升沿测量，不能拿日志零时间作时序证明。
-- 数字电平桥仍是理想接口，不含数字标准单元功耗／延迟。真实数字宏的物理时序与功耗另有报告；最终必须在一致的顶层条件下整合，而非拼接最好值。
-- MOS／电容／电阻使用真实 PDK，但本目录目前是原理图级。参考端瞬态电流和净供能有直接积分；不是完整芯片功耗终验。
-- 新版功耗分析只积分两个 data_valid 上升沿之间的完整转换周期；单次转换没有足够完整周期，不输出平均功耗。早期报告的短窗口诊断值保留，但不得解释成全周期功耗。
-- 当前合格流程没有证明动态比较器的器件大信号随机噪声被完整纳入。无噪声瞬态 FFT、连续前置放大器 `.noise` 或人工注入的独立随机源，都不能单独证明完整 ADC／系统 SNDR。需进一步资格确认相应的时变噪声方法；最终 Cadence 验证仍必须完成。
-- Icarus co-simulation 挂起、旧相位对照、旧前端／旧 ADC 失败及每次源快照均保留。使用带时间戳的 `summary.json` 判断特定候选，不把 `latest` 文件当所有版本都通过。
+- Short integration tests usually contain only three conversions per input. The 2 LSB raw-code tolerance is a smoke gate for connection/polarity/timing errors, not a relaxation of INL, calibration-residual, or SNDR targets.
+- Verilator interface-log `$realtime` may display zero. Conversion intervals are measured from data_valid rising edges in SPICE waveforms; zero log timestamps cannot prove timing.
+- Digital level bridges remain ideal interfaces and exclude digital standard-cell power/delay. Real digital-macro physical timing and power have separate reports; they must ultimately be integrated under consistent top-level conditions, without combining best values.
+- MOS/capacitors/resistors use the real PDK, but this directory is currently schematic-level. Reference transient current and net supplied energy are directly integrated; this is not final full-chip power acceptance.
+- New power analysis integrates only complete conversion cycles between two data_valid rising edges. A single conversion lacks enough complete cycles, so no average power is produced. Early short-window diagnostic values are retained but must not be interpreted as full-cycle power.
+- The currently qualified flow has not established complete inclusion of large-signal random device noise in the dynamic comparator. Noiseless transient FFT, continuous-preamplifier `.noise`, or artificially injected independent random sources cannot individually establish full ADC/system SNDR. The relevant time-varying noise method needs further qualification; final Cadence verification remains required.
+- Icarus co-simulation hangs, old phase controls, old frontend/ADC failures, and every source snapshot are retained. Use timestamped `summary.json` files to judge specific candidates; a `latest` file does not mean every revision passes.

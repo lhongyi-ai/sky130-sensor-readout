@@ -1,59 +1,59 @@
-# 前端修复实验：2026-09-10
+# Frontend repair experiments: 2026-09-10
 
-这轮工作是在开源工具中继续修复放大器，不需要等待 Cadence。它不是一个已经达标的完整前端，更不是完整芯片的成绩单。
+This round continues amplifier repair with open-source tools, without waiting for Cadence. It is not a fully qualified frontend, much less a performance report for a complete chip.
 
-最终追加：同源 G16 的 **45 点工艺温压静态筛查全部运行，30 点通过、15 点失败**；最差 SF／1.98 V／85 °C 为 457.828 LSB。见 [完整静态索引](qualification_g16_pvt/20260910T065530849637Z/summary.json)。标称改善不代表跨温压已闭合，也没有把本档 45 点称作三档全链路验证。
+Final addition: the same-source G16 **45-point process/voltage/temperature static screen completed all points, with 30 passes and 15 failures**. The worst case was SF / 1.98 V / 85 °C at 457.828 LSB. See the [complete static index](qualification_g16_pvt/20260910T065530849637Z/summary.json). Nominal improvement does not mean cross-temperature/voltage closure, and these 45 points at one gain are not three-gain full-chain verification.
 
-## 这次在修什么？
+## What is being repaired?
 
-前端有两路输出。它们的电压差是有用信号，而两路电压的平均值叫“共模”。旧候选在某些条件下会让这个平均值来回振荡，影响后面的 ADC 读数。
+The frontend has two outputs. Their voltage difference is the useful signal, while their average voltage is common mode. Under some conditions, the old candidate lets this average oscillate, affecting downstream ADC readings.
 
-电路中本来就有共模反馈，用于把平均电压拉回合适的位置。但电流源并不理想：电压改变时，电流也会稍微改变。另一个反馈路径可能放大这种变化。因此，这轮尝试延长尾电流源的晶体管、增加低电压余量的级联晶体管，并调整共模检测和补偿。这里是根据电路和波形提出并测试的原因，不把尚未证明的推断写成定论。
+The circuit already has common-mode feedback to restore the average voltage to the proper level. However, current sources are not ideal: their current changes slightly with voltage. Another feedback path may amplify this change. This round therefore tries longer tail-current-source transistors, additional cascode transistors with low-voltage headroom, and adjustments to common-mode sensing and compensation. These are causes proposed and tested from the circuit and waveforms, not unproven inferences presented as settled conclusions.
 
-级联晶体管可以让电流更稳定，但需要额外的工作电压空间。1 倍档输入摆幅更大，可能压缩这个空间。不能因为 16 倍档有进展，就假定 1 倍、4 倍也已经通过。
+Cascode transistors can stabilize current but need extra operating-voltage headroom. Gain 1 permits larger input swings, which may reduce that headroom. Progress at gain 16 cannot be assumed to establish passes at gains 1 and 4.
 
-## 一个已经记录的同源候选：有进展，也有失败
+## A recorded same-source candidate: progress and failures
 
-下面的例子严格对应核心电路哈希 `564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c`。不是从多个不同候选中挑选最好成绩拼成一张表。条件为 TT、1.8 V、27 °C；噪声与采样使用每侧 2.6 kΩ 隔离电阻及 4 pF 储能电容。DC 标定不带切换动作，和采样是不同测试。
+The example below strictly corresponds to core-circuit hash `564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c`. It does not combine the best results from different candidates. Conditions are TT, 1.8 V, 27 °C; noise and sampling use a 2.6 kΩ isolation resistor and 4 pF storage capacitor per side. DC calibration has no switching actions and is a separate test from sampling.
 
-| 测试 | 已记录结果 | 能说明什么／不能说明什么 |
+| Test | Recorded result | What it establishes / does not establish |
 |---|---|---|
-| 16 倍 DC 线性 | 三点线性校准后，独立静态输入点最大残差约 0.8194 LSB | 通过这项局部 DC 筛查；不包含 ADC、随机噪声、温压漂移 |
-| 16 倍静态噪声 | 1 Hz–1 GHz 输出 RMS 约 111.666 µV；乘同源标称校准倍率 1.0023632 后约 111.930 µV | 静态负载的连续时间噪声；不是采样后的 SNDR，也不能证明振荡消失 |
-| 16 倍采集末端 | 三个观察点最坏动态残差约 42.974 µV | 在这三个观察点满足约 48.828 µV 门限 |
-| 16 倍关断局部 | 最坏关断后局部残差约 41.700 µV | 仅检查刚关断后的局部时刻；没有证明完整转换保持期 |
-| 前端功耗 | 噪声测试的前端 VDD 静态功耗约 1.806 mW | 不包含完整 ADC、数字控制、真实时钟驱动；不是整颗芯片功耗 |
-| 1 倍真实开关负载 | 已完成仿真，但动态误差和共模不通过 | 同源候选不能宣布三档增益完成 |
-| 4 倍真实开关负载 | 在约 22.479 µs 出现 `Timestep too small`，40 µs 仿真没有完成 | 数值失败／未完成，不能当成功，也不能据此证明物理电路必然失效 |
+| Gain-16 DC linearity | Maximum residual at independent static input points approximately 0.8194 LSB after three-point linear calibration | Passes this local DC screen; excludes ADC, random noise, and temperature/voltage drift |
+| Gain-16 static noise | Output RMS over 1 Hz–1 GHz approximately 111.666 µV; approximately 111.930 µV after multiplying by the same-source nominal calibration factor 1.0023632 | Continuous-time noise with a static load; not sampled SNDR, and not evidence that oscillation has disappeared |
+| Gain-16 acquisition endpoint | Worst dynamic residual across three observation points approximately 42.974 µV | Meets the approximately 48.828 µV threshold at these three observation points |
+| Gain-16 local turnoff behavior | Worst local post-turnoff residual approximately 41.700 µV | Checks only local instants immediately after turnoff; does not establish the complete conversion hold interval |
+| Frontend power | Static frontend VDD power in the noise test approximately 1.806 mW | Excludes the complete ADC, digital control, and real clock drivers; not full-chip power |
+| Gain-1 real switched load | Simulation completed, but dynamic error and common mode failed | The same-source candidate cannot be declared complete at all three gains |
+| Gain-4 real switched load | `Timestep too small` at approximately 22.479 µs; the 40 µs simulation did not complete | Numerical failure/incomplete, not success; this alone also does not prove inevitable physical circuit failure |
 
-相应原始目录均在 `qualification_cas65_deg1000_cap1/`。其他隔离电阻值、其他尾管尺寸以及后续候选独立保留；即使某个新版本有所改善，也不能覆盖上表对应版本的失败记录。
+All corresponding raw directories are under `qualification_cas65_deg1000_cap1/`. Other isolation resistances, tail-device dimensions, and subsequent candidates are preserved separately. Improvement in a new version cannot overwrite failure records for the version in this table.
 
-本候选的标量环路测量还存在低频共模返回相位接近 −180° 的诊断问题；差模／共模某个交越点显示较大相位裕度，不等于完成多环路稳定性证明。实际切换负载的三档测试仍需独立通过。
+This candidate's scalar loop measurements also have a diagnostic issue: low-frequency common-mode return phase is near −180°. A large phase margin at one differential/common-mode crossing does not establish multiloop stability. Tests with actual switched loads still need independent passes at all three gains.
 
-## 为什么采样“通过”不等于整个 ADC 通过？
+## Why a sampling pass is not a full-ADC pass
 
-这里的四 MOS 开关确实使用了 SKY130 器件模型。A 端接前端输出（或测试复位用的 VCM），B 端接保存电荷的电容；补偿晶体管连接在 B 端。替换的是输入采样和测试复位两组开关，共四个实例。
+The four-MOS switches here do use SKY130 device models. Terminal A connects to the frontend output, or to VCM for test reset; terminal B connects to the charge-storage capacitor, with compensation transistors attached at B. Two switch groups are replaced, input sampling and test reset, totaling four instances.
 
-但测试仍然使用理想互补时钟、单个等效电容负载及测试复位。只检查采集末端和开关刚关断后的电压。测试复位把保持时间缩短到约 5.52 µs，没有覆盖 SAR 完整的约 7.5 µs 转换保持期，更没有模拟所有逐位参考切换、比较器回踢和采样噪声。因此 `full_conversion_hold_qualified`、`full_frontend_qualified`、`full_chip_qualified` 均不能写成 true。
+However, the test still uses ideal complementary clocks, one equivalent capacitive load, and test reset. It checks only acquisition endpoints and voltages immediately after switch turnoff. Test reset shortens hold time to approximately 5.52 µs, omitting the SAR's full approximately 7.5 µs conversion-hold interval, all bit-by-bit reference switching, comparator kickback, and sampling noise. Therefore `full_conversion_hold_qualified`, `full_frontend_qualified`, and `full_chip_qualified` must all remain false.
 
-## 怎样查看所有尝试，而不是只看成功截图？
+## Viewing all attempts rather than only successful screenshots
 
-运行以下汇总命令，不会启动电路仿真，也不会修改旧结果：
+The following summary command starts no circuit simulation and modifies no old results:
 
 ```sh
 python3 v2/analog/frontend/repair_20260910/build_summary.py
 ```
 
-它更新本目录的 `repair_summary.json`，索引 `results/*/` 和 `qualification*/*/`：
+It updates this directory's `repair_summary.json`, indexing `results/*/` and `qualification*/*/`:
 
-- 按实际保存的核心电路哈希分组；每个实验仍单独记录增益、隔离电阻、负载、刺激和求解条件。
-- 保留失败门限、仿真报错、进行中和“有电路文件但没有总结”的实验，不把没有结果当成没有做过。
-- 分别列出原始报告和 `analyses/` 下的再分析报告，不用新报告悄悄覆盖原始证据。
-- 只有同一电路、同一增益、同一工艺角的标称校准，才用于对应的噪声倍率换算；不选择不同候选的最好成绩。
-- 根目录脚本正在添加实验时，索引只是生成时的快照，收尾后应重跑。
+- Groups by the actually saved core-circuit hash, while retaining each experiment's gain, isolation resistance, load, stimulus, and solver conditions separately.
+- Retains failed thresholds, simulation errors, running experiments, and experiments with circuit files but no summary; absence of results does not imply no work was done.
+- Lists original reports separately from reanalysis reports under `analyses/`, without silently replacing original evidence with new reports.
+- Uses nominal calibration for noise scaling only when circuit, gain, and process corner match; it does not select the best results from different candidates.
+- While root-directory scripts are adding experiments, the index is only a snapshot at generation time and should be rerun after work concludes.
 
-新格式实验具有 `evidence_manifest.json`，覆盖配置、实际仿真电路、数据、日志、源快照和校准副本。再分析先检查这些记录有没有变化。没有 manifest 的记录标为 `LEGACY_UNVERIFIED_NO_MANIFEST`：仍可查看它们的结果与源哈希，但不能把它们补称为经过新完整性检查的证据。哈希检查只保护记录一致性，不证明电路性能达标。
+New-format experiments contain `evidence_manifest.json`, covering configuration, the actually simulated circuit, data, logs, source snapshots, and calibration copies. Reanalysis first checks whether those records changed. Records without a manifest are labeled `LEGACY_UNVERIFIED_NO_MANIFEST`: their results and source hashes remain viewable, but they cannot be retrospectively presented as evidence that passed the new integrity checks. Hash checks protect record consistency, not circuit-performance qualification.
 
-## 本轮还不能宣布完成什么？
+## Work that still cannot be declared complete
 
-三档增益同一冻结版本的稳定性、全范围建立时间、噪声、线性和温压表现仍未全部完成；与真实 ADC 整链路、失配统计和模拟核心后仿真还需继续。这里不把目标数值、局部测试或软件测试数量称为已经测得的芯片性能。
+Stability, full-range settling, noise, linearity, and temperature/voltage behavior are not yet all complete at three gains on one frozen version. Integration with the real full ADC chain, mismatch statistics, and analog-core post-layout simulation remain. Target numbers, local tests, and software-test counts are not presented as measured chip performance.

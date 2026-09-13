@@ -1,57 +1,57 @@
-# SAR 数字控制：可执行准备件，而非已完成 ADC
+# SAR Digital Controller: Executable Preparation, Not a Completed ADC
 
-本模块是 12-bit 同步 SAR 的数字控制 RTL。它不包含晶体管比较器、采样开关、CDAC、标准单元映射或物理版图，不能据此宣称完成 M5 或证明 ADC 的噪声、INL、DNL、功耗、有效位数。
+This module is the digital controller RTL for a 12-bit synchronous SAR. It does not include a transistor comparator, sampling switches, CDAC, standard-cell mapping, or physical layout. It cannot establish completion of M5 or prove ADC noise, INL, DNL, power, or effective resolution.
 
-## 接口约定
+## Interface contract
 
-设计文件是 `v2/rtl/sar_controller.v`，可综合 Verilog-2005。所有控制请求均在 `clk` 上升沿处理。`rst_n` 是异步低有效复位：立即取消转换、清零输出数据与元数据，屏蔽采样与比较器求值。物理实现还须设计复位释放同步与恢复／移除时序。
+The design file is `v2/rtl/sar_controller.v`, written in synthesizable Verilog-2005. All control requests are processed on the rising edge of `clk`. `rst_n` is an asynchronous active-low reset: it immediately cancels conversion, clears output data and metadata, and masks sampling and comparator evaluation. Physical implementation must also address synchronized reset release and recovery/removal timing.
 
-| 信号 | 约定 |
+| Signal | Contract |
 |---|---|
-| `clk` | 外部 1.6 MHz 时钟；数字行为测试使用 50% 占空比 |
-| `start` / `gain_sel[1:0]` | 当 `ready=1` 且增益合法时接受请求；`00=1`、`01=4`、`10=16`；`11` 拒绝请求 |
-| `ready` / `busy` | `busy = !ready`，表示**请求反压**，不是全部模拟活动期间的忙状态。`busy=1` 时 `start` 一律忽略。复位期间 `ready=0` |
-| `gain_latched[1:0]` | 接受请求时锁存，转换中忽略外部增益改变 |
-| `sample_en` | 连续四个完整时钟周期的采集请求 |
-| `trial_code[11:0]` | 当前 CDAC 试探码；MSB 到 LSB，比较器结果决定保留或清除当前位 |
-| `comparator_evaluate` | 仅在 12 个决策周期的时钟低半周期有效；复位期间强制无效 |
-| `comparator_bit` | 上升沿采样；`1` 表示被保持的差分输入不小于当前 DAC 试探电平，保留试探位；相等时保留 |
-| `data[11:0]` / `data_valid` | 偏移二进制原始码；完成时 `data_valid` 高一个完整周期，数据保持到下一次完成或复位 |
-| `data_gain[1:0]` | 与 `data` 同时更新，标识**刚完成的那帧**的增益；用于选择正确校准系数 |
+| `clk` | External 1.6 MHz clock; digital behavioral tests use 50% duty cycle |
+| `start` / `gain_sel[1:0]` | Requests are accepted when `ready=1` and gain is valid; `00=1`, `01=4`, `10=16`; `11` rejects the request |
+| `ready` / `busy` | `busy = !ready` indicates **request backpressure**, not a busy flag for all analog activity. All `start` requests are ignored when `busy=1`. During reset, `ready=0` |
+| `gain_latched[1:0]` | Latched when a request is accepted; external gain changes are ignored during conversion |
+| `sample_en` | Acquisition request for four consecutive full clock cycles |
+| `trial_code[11:0]` | Current CDAC trial code; proceeds from MSB to LSB, with the comparator determining whether to retain or clear each bit |
+| `comparator_evaluate` | Active only during the low clock half-cycle of the 12 decision cycles; forced inactive during reset |
+| `comparator_bit` | Sampled on the rising edge; `1` means the held differential input is at least the current DAC trial level, retaining the trial bit; equality retains the bit |
+| `data[11:0]` / `data_valid` | Offset-binary raw code; on completion, `data_valid` is high for one full cycle, and data is held until the next completion or reset |
+| `data_gain[1:0]` | Updated with `data`, identifying the gain of **the frame just completed**; used to select the correct calibration coefficients |
 
-`ready` 表示允许在**下一个上升沿**接受请求。它在空闲期间和最后一个决策周期为高。因此最后一个决策周期 `busy=0`，但模拟比较活动尚未结束。需要判断模拟活动时使用采样／比较控制信号，不能把 `!busy` 当作模拟电路已经静止。
+`ready` indicates that a request can be accepted on the **next rising edge**. It is high while idle and during the final decision cycle. Thus `busy=0` during the final decision cycle even though analog comparison has not finished. Use sampling/comparison control signals to determine analog activity; `!busy` does not mean that the analog circuit is quiescent.
 
-相对于最初计划，`ready` 是消除帧间空闲周期的明确握手补充，`data_gain` 是确保连续转换时校准系数不会配错的元数据补充；`busy=1` 时忽略请求的规则不变。
+Relative to the initial plan, `ready` is an explicit handshake addition that eliminates interframe idle cycles, and `data_gain` is a metadata addition that prevents mismatched calibration coefficients during continuous conversion. The rule that requests are ignored when `busy=1` is unchanged.
 
-输入协议要求 `start`、`gain_sel` 在接受边沿满足建立／保持条件。持续拉高 `start` 表示持续请求，会按可接受边界开始后续转换。保留增益 `11` 不会触发转换，不产生新的错误码或新有效数据，也不清除已有数据。
+The input protocol requires `start` and `gain_sel` to satisfy setup/hold conditions at the acceptance edge. Holding `start` high requests continuous conversion, starting subsequent conversions at eligible boundaries. Reserved gain `11` does not trigger conversion, produce a new error code or valid data, or clear existing data.
 
-## 精确时序：16 个完整周期，没有第 17 个空闲周期
+## Exact timing: 16 full cycles, without a 17th idle cycle
 
-以接受请求的上升沿为 E0：
+Let E0 be the rising edge that accepts the request:
 
-| 区间／边沿 | 操作 |
+| Interval/edge | Operation |
 |---|---|
-| E0 | 接受请求，锁存增益，采样请求拉高 |
-| E0–E4 | 四个完整采集周期，共 2.5 µs |
-| E4 | 关闭采集，设置 MSB 试探码 `0x800` |
-| E4–E5 | 首个决策周期：高半周期 CDAC 建立／比较器复位，低半周期请求比较 |
-| E5–E15 | 依次采样 MSB 至 bit 1 决策，更新下一位试探码 |
-| E15–E16 | bit 0 决策；`ready=1`、`busy=0`，允许为下一帧准备请求 |
-| E16 | 完成本帧，发布 `data`、`data_gain` 和有效脉冲；合法请求可同时启动下一帧 |
+| E0 | Accept request, latch gain, assert sampling request |
+| E0–E4 | Four full acquisition cycles, totaling 2.5 µs |
+| E4 | End acquisition and set MSB trial code `0x800` |
+| E4–E5 | First decision cycle: CDAC settling/comparator reset in the high half-cycle, comparison request in the low half-cycle |
+| E5–E15 | Sample decisions from MSB through bit 1 and update the next trial bit |
+| E15–E16 | Bit 0 decision; `ready=1`, `busy=0`, allowing preparation of the next frame request |
+| E16 | Complete the frame and publish `data`, `data_gain`, and the valid pulse; a valid request can simultaneously start the next frame |
 
-因此连续请求的接受边沿为 E0、E16、E32，结果边沿为 E16、E32、E48，满足 `1.6 MHz / 16 = 100 kS/s`。E16 同时更新数据和开始下一帧时，`data_gain` 属于上一帧，而 `gain_latched` 属于新帧。
+Continuous-request acceptance edges are therefore E0, E16, E32, and result edges are E16, E32, E48, satisfying `1.6 MHz / 16 = 100 kS/s`. When E16 simultaneously updates data and starts a new frame, `data_gain` belongs to the previous frame and `gain_latched` to the new frame.
 
-### 尚未物理验证的时间要求
+### Timing requirements not yet physically verified
 
-`comparator_evaluate` 是组合逻辑生成的**相位控制输出**，不是用于 RTL 寄存器的门控时钟。在理想数字时序中，状态和试探码只在上升沿改变，求值窗口在之后的低半周期。
+`comparator_evaluate` is a combinational **phase-control output**, not a gated clock for RTL registers. In ideal digital timing, state and trial code change only on rising edges, with evaluation in the following low half-cycle.
 
-这并不证明实际电路具有无毛刺、无重叠、充足复位或比较再生时间。625 ns 周期中每半周期名义为 312.5 ns；实际还需要扣除时钟偏斜、开关控制延迟、CDAC 建立、比较器复位／再生以及寄存器建立时间。后续须完成专用相位驱动与时序约束，并进行晶体管级和物理寄生验证。复位撤销须满足同步化约束。
+This does not prove that the real circuit is glitch-free, nonoverlapping, or has sufficient reset or comparison-regeneration time. Each half of the 625 ns period is nominally 312.5 ns; clock skew, switch-control delay, CDAC settling, comparator reset/regeneration, and register setup time must be deducted. Dedicated phase drivers and timing constraints, followed by transistor-level and physical-parasitic verification, are still required. Reset deassertion must satisfy synchronization constraints.
 
-## 可重复的数字测试
+## Reproducible digital tests
 
-推荐在仓库根目录运行 `python3 v2/tests/rtl/run.py`。该入口只使用 Python 标准库和已安装的 Icarus Verilog，把编译产物放在临时目录并自动清理；标准输出为 JSON 验证记录。缺少工具返回状态 `blocked` 和退出码 2，不会把未运行当作通过。
+Run `python3 v2/tests/rtl/run.py` from the repository root. This entry point uses only the Python standard library and installed Icarus Verilog, places compilation artifacts in a temporary directory, and cleans them automatically. Standard output is a JSON validation record. Missing tools produce status `blocked` and exit code 2; an unexecuted test is not treated as a pass.
 
-测试文件 `v2/tests/rtl/tb_sar_controller.sv` 使用 SystemVerilog 测试语法，但被测 RTL 保持 Verilog-2005。以 Icarus Verilog 为例，在仓库根目录运行；生成文件放入临时目录，不写入设计目录：
+Test file `v2/tests/rtl/tb_sar_controller.sv` uses SystemVerilog test syntax, while the RTL under test remains Verilog-2005. For Icarus Verilog, run the following from the repository root; generated files go to a temporary directory rather than the design directory:
 
 ```sh
 rtl_test_dir=$(mktemp -d /tmp/sky130-sar-rtl.XXXXXX)
@@ -60,18 +60,18 @@ iverilog -g2012 -Wall -s tb_sar_controller -o "$rtl_test_dir/test.vvp" v2/rtl/sa
 vvp "$rtl_test_dir/test.vvp"
 ```
 
-成功会输出以 `PASS sar_controller:` 开头的统计行；失败会输出原因并以非零状态结束。测试使用固定伪随机序列，可复现：
+Success prints a statistics line beginning with `PASS sar_controller:`; failure prints the reason and exits with nonzero status. Tests use a fixed pseudorandom sequence for reproducibility:
 
-- 4096 个理想量化码全部遍历，覆盖每位保留／拒绝、端点和零差分附近代码；三档增益交错。
-- 使用独立时间表检查 4 个完整采集周期、12 个决策周期和精确 16 周期延迟；每次比对最终码与逐位试探码。
-- 32 帧无空闲间隔吞吐测试，外部输入和增益同时变化，验证旧数据／新增益元数据不会混淆。
-- 4096 周期确定性随机请求、增益和输入；所有反压期间的请求忽略。
-- 在全部 16 个采集／决策时段分别施加异步复位，检查取消、无残留有效脉冲和之后恢复。
-- 保留增益在空闲和完成边界均拒绝启动；不破坏上一帧的正常完成。
-- 输出数据保持、有效脉冲宽度、比较器低半周期求值与复位屏蔽。
+- Exhaustively visit all 4096 ideal quantization codes, covering retention/rejection of every bit, endpoints, and codes around zero differential input; interleave the three gain settings.
+- Independently schedule and check 4 full acquisition cycles, 12 decision cycles, and exactly 16 cycles of latency; compare final and per-bit trial codes each time.
+- Test 32 frames with no idle gaps, changing external input and gain together to verify that old-data/new-gain metadata are not confused.
+- Apply 4096 cycles of deterministic random requests, gains, and inputs; ignore all requests during backpressure.
+- Apply asynchronous reset separately in all 16 acquisition/decision intervals, checking cancellation, no residual valid pulse, and subsequent recovery.
+- Reject reserved-gain starts both while idle and at completion boundaries, without disrupting normal completion of the previous frame.
+- Check output-data retention, valid-pulse width, comparator evaluation during the low half-cycle, and reset masking.
 
-测试比较器仅实现“已采集的理想整数码 ≥ 试探码”，不模拟电压参考幅度、比较器噪声／失调、亚稳态、CDAC 失配、采样建立误差、增益电路或失真。这种全码遍历证明的是**数字搜索与协议**，不是物理 ADC 无缺码或满足 12-bit 精度。
+The test comparator implements only “acquired ideal integer code ≥ trial code.” It does not model reference-voltage amplitudes, comparator noise/offset, metastability, CDAC mismatch, sampling-settling error, gain circuitry, or distortion. This all-code sweep proves **digital search and protocol behavior**, not that the physical ADC has no missing codes or achieves 12-bit accuracy.
 
-### 本次数字验证结果
+### Results of this digital validation
 
-使用 Icarus Verilog 13.0 完成了 Verilog-2005 设计编译及测试：687,790 次断言检查，接受 4,400 帧，完成 4,384 帧，复位取消 16 帧；反压期间忽略 2,293 次请求，拒绝保留增益请求 74 次，完成／新请求同沿重叠 124 次。结果是数字 RTL 验证通过，物理时序与模拟 ADC 验证仍未完成。
+Icarus Verilog 13.0 completed Verilog-2005 design compilation and testing: 687,790 assertion checks, 4,400 accepted frames, 4,384 completed frames, and 16 reset-canceled frames; 2,293 requests ignored during backpressure, 74 reserved-gain requests rejected, and 124 coincident completion/new-request edges. Digital RTL validation passes; physical timing and analog ADC verification remain unfinished.

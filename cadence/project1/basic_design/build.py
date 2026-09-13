@@ -55,14 +55,14 @@ def build():
     assert len(ota) == 13
     put('size_mapping.json',dict(policy='Explicit migration choice: widths rounded to 0.01 um; not a claimed PDK minimum grid.',
         source='reference/ota_subckt.spice',evidence='reference/p1_m8_diagnose.txt',devices=mapping))
-    table=['# 原尺寸与 Cadence 迁移尺寸','',
-           '原始源码不变。下列宽度是本次明确选择的迁移尺寸；0.01 µm 不是从单个 M8 样本推导出的工艺最小网格。所有回调和导出网表仍须严格匹配这些目标值。','',
-           '| 器件 | 原 W / µm | 迁移 W / µm | 差值 / µm | 相对变化 |','|---|---:|---:|---:|---:|']
+    table=['# Original dimensions and Cadence migration dimensions','',
+           'The original source is unchanged. The widths below are explicitly selected migration dimensions; 0.01 µm is not a minimum process grid inferred from the single M8 sample. All callbacks and exported netlists must still strictly match these target values.','',
+           '| Device | Original W / µm | Migrated W / µm | Difference / µm | Relative change |','|---|---:|---:|---:|---:|']
     for row in mapping:
         table.append('| {device} | {original_w_um} | {cadence_w_um} | {delta_um} | {percent:.6f}% |'.format(percent=row['relative_change']*100,**row))
-    table+=['','M7 的迁移总宽度 72.2 µm 分成 M7A、M7B 两个并联 PMOS，每个 W=36.1 µm、L=0.8 µm、fingers=m=1；各自 D/G/S/B 均与原 M7 对应端相连。学校报告已确认单指上限 50 µm。分拆后分别生成扩散几何，寄生参数不保证与单实例一致，需在仿真中对照。',
-            '仅 M8 的 7.22 µm 已有独立学校 CDF 诊断证据；本版所有实例仍待 Linux 验证。最大总宽度相对调整小于 0.05%，不代表性能差异已验证。旧 ngspice 与新 Cadence 对照必须同时考虑尺寸映射、并联分拆和模型版本差异。','']
-    (ROOT/'尺寸映射.md').write_text('\n'.join(table))
+    table+=['','The migrated total M7 width of 72.2 µm is split into parallel PMOS devices M7A and M7B, each with W=36.1 µm, L=0.8 µm, and fingers=m=1; their D/G/S/B terminals connect to the corresponding original M7 terminals. The school report confirms a 50 µm single-finger limit. Each split device generates its own diffusion geometry; parasitics are not guaranteed to match a single instance and require simulation comparison.',
+            'Only the 7.22 µm M8 has independent school CDF diagnostic evidence; all instances in this version still await Linux validation. The maximum relative total-width adjustment is below 0.05%; this does not establish the performance difference. Comparisons between the old ngspice and new Cadence results must account for dimension mapping, parallel splitting, and model-version differences.','']
+    (ROOT/'device_size_mapping.md').write_text('\n'.join(table))
     ota += [inst('RZ1','res',['VX','NCC'],{'r':'2k'}), inst('CC1','cap',['NCC','VOUT'],{'c':'3p'})]
     ports = ['VDD','VSS','VINP','VINN','VOUT','VBP']
     cells = {'p1b_ota_legacy_r4':dict(ports=ports, instances=ota)}

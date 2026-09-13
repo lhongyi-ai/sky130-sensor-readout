@@ -1,67 +1,67 @@
-# 前端闭合实验：2026-09-11
+# Frontend closure experiments: 2026-09-11
 
-本目录完成了故障定位和三个真实 PDK 器件候选的有界实验，**尚未完成可编程模拟前端**。旧版电路、旧结果和已有测量脚本均未修改。完整索引在 `closure_summary.json`；每次实验保留电路、刺激、源代码快照、原始数据、日志、结果及 SHA-256 manifest。
+This directory completes fault diagnosis and bounded experiments on three candidates built from real PDK devices; **the programmable analog frontend remains incomplete**. The old circuit, old results, and existing measurement scripts were not modified. The complete index is `closure_summary.json`; each experiment retains the circuit, stimulus, source snapshots, raw data, logs, results, and SHA-256 manifest.
 
-## 用小白能懂的话解释
+## Plain-language explanation
 
-放大器中的晶体管需要上下都留有足够的电压空间，才能像受控制的电流源那样工作。旧候选在“电源较高、温度较热”时，输入信号的平均电压上升，但输入管上方的偏置没有跟着上升。上下空间被挤没后，输入增加了，输出却跟不上，于是大信号两端被压扁。这不是加一个软件比例系数就能修好的失真。
+Amplifier transistors need enough voltage headroom above and below to behave as controlled current sources. At higher supply and temperature, the old candidate's average input voltage rose but the bias above the input devices did not follow. As headroom disappeared, increasing input no longer produced the expected output, compressing both large-signal endpoints. A software scale factor cannot repair this distortion.
 
-1 倍档另有问题：它允许的传感器输入摆幅更大，输入到低端时，下方的尾电流源也没有足够空间。尾电流不再恒定，使输出共模更容易来回振铃。共模可以理解为两根输出电线电压的“平均高度”；差分信号才是两根线的电压差。
+Gain 1 has an additional issue: it allows a larger sensor-input swing, and at the low input endpoint the tail-current source below the input devices also lacks headroom. Tail current is no longer constant, making output common mode more prone to ringing. Common mode is the average voltage of the two output wires; the differential signal is their voltage difference.
 
-本轮先把这些空间问题用实际晶体管工作点证实，再调整偏置、电流镜与补偿。空间改善了，但“波形安静下来”和“三档同时精确”还没一起做到，不能宣布放大器已经修好。
+This round first confirmed these headroom issues using actual transistor operating points, then adjusted bias, current mirrors, and compensation. Headroom improved, but quiet waveforms and simultaneous accuracy at all three gains have not yet been achieved, so the amplifier cannot be declared repaired.
 
-## 旧 45 点失败的定量结论
+## Quantitative findings from the old 45-point failures
 
-完整读取同一 `564f4776…` 源码的 45 个 G16 工艺/温压条件，原始结果为 30 项静态通过、15 项静态失败。本轮没有改变其校准系数或门限。
+All 45 G16 process/voltage/temperature conditions for the same `564f4776…` source were read completely. Original results were 30 static passes and 15 static failures. This round changed neither calibration coefficients nor thresholds.
 
-- 15 个 1.98 V 条件中有 8 项失败；15 个 85°C 条件中有 8 项失败。失败集中在大幅度正负两端，主要为奇对称压缩，而非零点失调。
-- 最坏 SF / 1.98 V / 85°C：固定校准残差 457.828 LSB，输入目标 ±0.4 V 时实际输出约 ±0.30970 V。输出静态共模误差却仅 3.35 mV。
-- 新诊断 01 证实该条件的输入管 `VDS−VDSAT` 最差 −51.55 mV；零输入每个被测输入管 `gds≈1.04 mS`，已失去正常高输出阻抗的饱和工作状态。
-- 新诊断 02 证实 TT 标称 G1 满幅时上层尾管的余量为 −64.55 mV；静态校准残差 1.62650 LSB，阶跃共模峰偏约 317.78 mV。
-- FS / 1.62 V / −20°C 的旧零输入节点证据还显示上层尾管 `VDS` 仅 34.39 mV；该点没有在本轮额外重跑器件工作区，不能把节点推断当成新仿真成绩。
+- Of 15 conditions at 1.98 V, 8 failed; of 15 conditions at 85°C, 8 failed. Failures concentrate at large positive/negative inputs and are mainly odd-symmetric compression rather than zero offset.
+- Worst case, SF / 1.98 V / 85°C: fixed-calibration residual 457.828 LSB; actual output approximately ±0.30970 V for an input target of ±0.4 V. Yet static output-common-mode error is only 3.35 mV.
+- New diagnostic 01 confirmed a worst input-device `VDS−VDSAT` of −51.55 mV under that condition. At zero input, each measured input device has `gds≈1.04 mS`, indicating loss of normal high-output-resistance saturation operation.
+- New diagnostic 02 confirmed −64.55 mV headroom for the upper tail transistor at TT nominal G1 full scale; static-calibration residual is 1.62650 LSB, with approximately 317.78 mV peak step common-mode deviation.
+- Historical zero-input node evidence at FS / 1.62 V / −20°C also shows only 34.39 mV `VDS` for the upper tail device. This round did not rerun device-region analysis at that point, so the node-based inference is not a new simulation result.
 
-逐点的符号、输入幅度、共模、偏置节点、源文件/数据摘要和完整性检查见 `baseline_analysis/*/summary.json`。
+Per-point signs, input amplitudes, common mode, bias nodes, source/data summaries, and integrity checks are in `baseline_analysis/*/summary.json`.
 
-## 三个候选做了什么
+## Changes in the three candidates
 
-候选 A 使用真实 SKY130 LVT 输入管，采用同沟道长度、较低过驱动的独立尾电流镜，降低实际尾级联偏置；通过缩小输出 NMOS 抬高前一级电压；用实际电阻从 VDD/VCM 生成随电源变化的漏端级联偏置。标称 G1 的静态误差降至 0.90194 LSB，但仍有明显共模振铃，且新 LVT 噪声未验证。
+Candidate A uses real SKY130 LVT input devices, an independent same-channel-length tail mirror with lower overdrive to lower the actual tail-cascode bias, smaller output NMOS devices to raise the preceding-stage voltage, and real resistors from VDD/VCM to generate a supply-tracking drain-cascode bias. Nominal G1 static error falls to 0.90194 LSB, but common-mode ringing remains pronounced and new LVT noise is unverified.
 
-候选 B 再给底部尾管增加余量，并把共模补偿从 1 pF 加到 4 pF。结果不理想：G1 静态误差 1.02275 LSB，振铃仍未过。第 05 项小信号诊断测得共模交越约 1.804 MHz、标量相位余量约 12.9°；差模还有高频向上穿越，因此两者都不能当作正式环路稳定性验收。
+Candidate B adds more headroom to the bottom tail device and increases common-mode compensation from 1 pF to 4 pF. Results are unsatisfactory: G1 static error is 1.02275 LSB and ringing still fails. Small-signal diagnostic 05 measured a common-mode crossover near 1.804 MHz and scalar phase margin near 12.9°. The differential loop also has a high-frequency upward crossing, so neither result is formal loop-stability qualification.
 
-候选 C 用同一低过驱/级联偏置产生按几何比例缩放的共模尾电流，再用 PDK 电阻、电容把共模误差信号衰减 1/16，降低该环路的带宽。它显著减少了后段振铃，但对电流镜的小比例误差更敏感，产生约 +40 mV 共模静差。其全部三档使用完全相同源码 `6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397`。
+Candidate C uses the same low-overdrive/cascode bias to generate geometrically scaled common-mode tail current, then attenuates the common-mode error signal by 1/16 using PDK resistors/capacitors to lower loop bandwidth. It substantially reduces late ringing but becomes more sensitive to small current-mirror ratio errors, producing approximately +40 mV static common-mode error. All three gains use the identical source `6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397`.
 
-| 候选 C，TT / 1.8 V / 27°C | G1 | G4 | G16 |
+| Candidate C, TT / 1.8 V / 27°C | G1 | G4 | G16 |
 |---|---:|---:|---:|
-| 81 点独立静态残差，LSB | 2.76370，失败 | 0.357664，通过 | 1.125913，失败 |
-| 瞬态共模最大偏差，mV | 126.089 | 86.941 | 54.809 |
-| 负阶跃末段共模峰峰值，µV | 575.885 | 23.517 | 15.274 |
-| 负阶跃开始后 2.476847754 µs，动态误差绝对值，µV | 104.736，失败 | 64.893，失败 | 72.783，失败 |
-| 初步阶跃安静窗口判定 | 失败 | 失败 | 失败 |
-| 前端 VDD+VCM 零输入功耗，mW | 1.64014 | 1.64032 | 1.64035 |
+| 81-point independent static residual, LSB | 2.76370, failed | 0.357664, passed | 1.125913, failed |
+| Maximum transient common-mode deviation, mV | 126.089 | 86.941 | 54.809 |
+| Late negative-step common-mode peak-to-peak, µV | 575.885 | 23.517 | 15.274 |
+| Absolute dynamic error 2.476847754 µs after the negative step starts, µV | 104.736, failed | 64.893, failed | 72.783, failed |
+| Preliminary quiet step-window decision | Failed | Failed | Failed |
+| Frontend VDD+VCM zero-input power, mW | 1.64014 | 1.64032 | 1.64035 |
 
-标称静态门限仍是 1 LSB；固定标定跨温压门限仍是 4 LSB。A 的 G1 静态通过、C 的 G4 静态通过和旧候选的噪声结果不能拼接成一个通过的前端。C 的名义输入管及尾管工作区改善不代表它已通过旧 45 个工艺温压条件。
+The nominal static limit remains 1 LSB; the fixed-calibration cross-temperature/voltage limit remains 4 LSB. A's G1 static pass, C's G4 static pass, and the old candidate's noise results cannot be combined into one passing frontend. Improved nominal input/tail-device regions in C do not establish a pass across the old 45 process/voltage/temperature conditions.
 
-表中动态误差来自对已有波形的单独只读复核：在输入阶跃开始后 2.476847754 µs，比较滤波输出与同一电路在该输入下的 DC 稳态值，静态增益误差另计。三档负阶跃误差都超过原定 0.25 LSB（48.828125 µV）目标，连静态电容负载的这项诊断都未闭合。它并非真实 SAR 采样开关测试；即使通过也不能代替采样建立验收。复核结果在 `settling_analysis/*/summary.json`，没有增加电路仿真次数。
+The table's dynamic errors come from a separate read-only review of existing waveforms: at 2.476847754 µs after input-step start, compare the filtered output with the DC steady-state value of the same circuit at that input, accounting for static gain error separately. Negative-step errors at all three gains exceed the original 0.25 LSB (48.828125 µV) target, leaving even this static-capacitive-load diagnostic unresolved. This is not a real SAR sampling-switch test; even a pass could not replace sampling-settling qualification. Review results are in `settling_analysis/*/summary.json`, with no additional circuit simulations.
 
-## 这轮没有完成什么
+## Work not completed in this round
 
-- 同一候选三档静态精度和初步稳定性闭合；G1/G16 静态、三档瞬态仍失败。
-- C 的差模/共模正式环路稳定性；A/B 的环路结果不能沿用到 C。
-- 真实采样开关/CDAC 动态负载下的 2.476847754 µs 采集建立精度、完整 7.5 µs 保持、带噪声 SNDR。
-- 新 LVT 器件的噪声预算、完整芯片功耗、失配、全 PVT、启动及全部输入共模边界。
-- 新候选的实际布局、DRC/LVS、寄生提取或 Cadence 原生设计。
+- Static accuracy and preliminary stability closure at all three gains on one candidate; G1/G16 static and all three transient tests still fail.
+- Formal differential/common-mode loop stability for C; A/B loop results cannot be reused for C.
+- Acquisition accuracy within 2.476847754 µs under real sampling-switch/CDAC dynamic loads, complete 7.5 µs hold, and SNDR with noise.
+- Noise budgets for the new LVT devices, complete-chip power, mismatch, full PVT, startup, and all input-common-mode boundaries.
+- Actual layout, DRC/LVS, parasitic extraction, or native Cadence design for the new candidates.
 
-本轮使用了约定的 **8/8 个小型诊断**，每次只有一个 ngspice 进程，均正常结束，失败判定完整保留。允许的 **2 个完整 45 点筛查均未启动**：三档标称和初步阶跃前置条件未满足，不能靠扩大后续模块掩盖失败。这里的“实验正常结束”仅表示仿真有完整数据，并不表示电路通过。
+This round used the agreed **8/8 small diagnostics**, each with one ngspice process. All ended normally, and failure decisions are fully retained. Neither of the allowed **2 complete 45-point screens was started**: the three-gain nominal and preliminary step prerequisites were unmet, and expanding later stages cannot conceal failure. Normal experiment completion here means only that simulation data are complete, not that the circuit passed.
 
-## 下一步的技术方向（尚未实施）
+## Technical directions for the next round, not yet implemented
 
-1. 先解决共模偏置比例的有限输出电阻误差。C 的 G1 零输入时，实际一级 PMOS 电流镜比例约 4.97156，而非几何 5；输入尾/共模尾实际比约 2.51202，而非 2.5。两项共同迫使共模检测对不平衡，1/16 衰减又把检测器端的小误差放大到输出平均电压。需要相同漏源电压的复制/调节偏置或经 PVT 验证的物理尺寸校正，不能逐测试点拟合。
-2. 重新取得同一候选的共模/差模全部交越与环路极点证据，再围绕真实采样窗口检查。不能只加大电容，或只观察几十微秒之后最终安静。
-3. 重新联合分配输出级跨导、反馈电阻、噪声和功耗预算；当前提高一级电压的代价是输出级跨导降低，G1 有限环路增益造成的非线性仍需要处理。
-4. 只有同一源码三档前置验收通过后，再启动完整 45 条件静态筛查及带噪声系统验证。
+1. First resolve finite-output-resistance error in common-mode bias ratios. At C's G1 zero input, the actual first-stage PMOS mirror ratio is approximately 4.97156 rather than the geometric 5; the actual input-tail/common-mode-tail ratio is approximately 2.51202 rather than 2.5. Together they force imbalance in the common-mode sensing pair, and 1/16 attenuation amplifies a small detector-side error into the average output voltage. Replicated/regulated bias with matched drain-source voltage, or physical sizing correction verified over PVT, is needed; per-test-point fitting is not acceptable.
+2. Reestablish evidence for all common-mode/differential crossings and loop poles on the same candidate, then check around the real sampling window. Simply increasing capacitance or observing eventual quietness after tens of microseconds is insufficient.
+3. Jointly reallocate output-stage transconductance, feedback resistors, noise, and power budgets. Raising the first-stage voltage currently reduces output-stage transconductance, and G1 nonlinearity caused by finite loop gain still needs correction.
+4. Start the complete 45-condition static screen and system verification with noise only after the same source passes prerequisites at all three gains.
 
-## 复核入口
+## Review entry points
 
-在现有容器内运行 `run_diagnostic.py` 或 `run_loop_diagnostic.py` 会核对 8 次预算；已达到本轮上限后会拒绝继续，不覆盖任何实验。`build_summary.py` 只重建可再生索引，不编辑原始实验。`test_closure_evidence.py` 为只读证据审计测试，不运行电路。
+Running `run_diagnostic.py` or `run_loop_diagnostic.py` in the existing container checks the 8-run budget. Once this round's limit is reached, further runs are refused without overwriting experiments. `build_summary.py` only rebuilds a regenerable index and does not edit original experiments. `test_closure_evidence.py` audits evidence read-only and runs no circuit simulations.
 
-所有结果均为 **SKY130 器件模型、版图前、独立前端诊断**；不是完整芯片后仿真，更不是流片或硅测成绩。
+All results are **pre-layout independent frontend diagnostics using SKY130 device models**, not full-chip post-layout simulations, tapeout, or silicon-measurement results.

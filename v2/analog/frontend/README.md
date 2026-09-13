@@ -1,132 +1,132 @@
-# V2 真正的 SKY130 全差分前端原型
+# V2 real SKY130 fully differential frontend prototype
 
-初次查看请从 [模拟前端访问入口](ACCESS.md) 开始；它给出信号图、当前候选、结果和复现路径。
+For a first visit, start at the [analog frontend access guide](ACCESS.md), which provides signal diagrams, the current candidate, results, and reproduction paths.
 
-这是 **ngspice 晶体管级设计与分模块实验**，不是 Cadence 原生设计、
-完整芯片、完整版图或硅测结果。目前不能宣布 M3/M4 或整个项目完成。
+This is **ngspice transistor-level design and module-level experimentation**, not a native Cadence design,
+complete chip, complete layout, or silicon measurement. M3/M4 and the overall project cannot currently be declared complete.
 
-## 本轮冻结交付：FDDA10，未通过前端验收
+## Frozen delivery from this round: FDDA10, frontend qualification failed
 
-本轮停止继续调参，冻结 `frontend_fdda.spice`，SHA-256：
-`c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6`。
-同版结果统一见 `results/frozen_delivery.json`。不同历史版本的最好结果不拼接。
+Parameter tuning stopped for this round, and `frontend_fdda.spice` was frozen with SHA-256:
+`c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6`.
+Results from that same version are consolidated in `results/frozen_delivery.json`. Best results from different historical versions are not combined.
 
-| 冻结源测试 | 实测结果 | 状态 |
+| Frozen-source test | Measured result | Status |
 |---|---|---|
-| G16标称81点直流，三点拟合、独立点验证 | 最大1.35887LSB，目标≤1LSB | 失败 |
-| 固定标称系数，TT/1.62V/85°C | 4.00399LSB；CM误差74.86mV | 失败，不四舍五入为通过 |
-| 固定标称系数，TT/1.98V/−20°C | 2.36960LSB，目标≤4LSB | 该DC子项通过 |
-| G16真实81.285pF/端采样负载，2.476847754µs采集窗 | CM偏差125.78mV，参考窗口仍有160–207mVpp振荡 | 稳定性／建立失败 |
-| 标称VDD供能 | 静态1.81624mW；上述瞬态时间积分平均1.81551mW | 仅供能测量，不代表性能通过 |
-| G16 1Hz–1GHz小信号噪声 | 108.564µVrms；乘固定校准系数后108.901µVrms | 仅静态预算筛查 |
-| G1／G4工作点与1kHz小信号增益 | 0.99017／3.99211，极性正确 | 仅基础连通／极性子项 |
+| G16 nominal 81-point DC, three-point fit and independent-point validation | Maximum 1.35887 LSB, target ≤1 LSB | Failed |
+| Fixed nominal coefficients, TT/1.62V/85°C | 4.00399 LSB; CM error 74.86 mV | Failed; not rounded to a pass |
+| Fixed nominal coefficients, TT/1.98V/−20°C | 2.36960 LSB, target ≤4 LSB | This DC subtest passed |
+| G16 real 81.285 pF/side sampling load, 2.476847754 µs acquisition window | CM deviation 125.78 mV; reference window still oscillates by 160–207 mVpp | Stability/settling failed |
+| Nominal VDD supply power | Static 1.81624 mW; time-integrated average in the above transient 1.81551 mW | Supply-power measurement only, not a performance pass |
+| G16 1 Hz–1 GHz small-signal noise | 108.564 µVrms; 108.901 µVrms after fixed calibration scaling | Static budget screening only |
+| G1/G4 operating points and 1 kHz small-signal gain | 0.99017/3.99211, correct polarity | Basic connectivity/polarity subtest only |
 
-静态VCM参考端吸收约16.83µW，单列报告，不用它冲减VDD预算后宣称优势。
-初次Gear/5ns采样仿真数值中止，失败日志保留；同源、同刺激2ns步长重试
-完成并测得振荡，未把数值中止或不平稳窗口的均值作为通过证据。
+The static VCM reference terminal absorbs approximately 16.83 µW, reported separately rather than subtracted from the VDD budget to claim an advantage.
+The first Gear/5 ns sampling simulation terminated numerically, and its failure log is retained. A retry with the same source and stimulus at a 2 ns timestep
+completed and measured oscillation. Neither numerical termination nor the mean of a nonstationary window was treated as pass evidence.
 
-虽然静态噪声小于暂定113µV前端预算，**该工作点没有通过动态稳定性**，
-不能因此称为有效精度或65dB SNDR。环路注入也只是一项诊断：差模主下穿点
-标量余量约105.9°，但共模存在耦合正反馈／右半平面极点风险，且两条曲线
-有高频再次穿越，故没有完成“差模与共模各≥60°”正式验收。
+Although static noise is below the provisional 113 µV frontend budget, **this operating point has not passed dynamic stability**,
+so it does not establish effective accuracy or 65 dB SNDR. Loop injection is also diagnostic only: the differential-mode primary downward crossing
+has a scalar margin of approximately 105.9°, but the common-mode system risks coupled positive feedback/right-half-plane poles, and both curves
+cross again at high frequency. Formal qualification of at least 60° for both differential and common modes remains incomplete.
 
-关键后续设计工作是共模反馈与输入对尾电流调制的耦合、满量程非线性、
-低压高温余量。它们是电路问题，并不需要等Cadence才能继续解决；但不能
-宣称本轮已把全部非Cadence工作做完。
+The key remaining design issues are coupling between common-mode feedback and input-pair tail-current modulation, full-scale nonlinearity,
+and low-voltage/high-temperature headroom. These circuit issues can be addressed without waiting for Cadence, but
+this round cannot be described as completing all non-Cadence work.
 
-## 已经实现的电路
+## Implemented circuits
 
-有两条明确分开的设计线，均未达到全部规格。`frontend_pdk.spice` 是已测的
-电阻输入 PGA 基线，`frontend_fdda.spice` 是正在验证的高输入阻抗改进候选。
-**不能同时 include 两个文件**，其中辅助子电路名称相同。
+Two distinct design tracks exist, neither meeting all specifications. `frontend_pdk.spice` is the measured
+resistive-input PGA baseline; `frontend_fdda.spice` is the high-input-impedance improvement candidate under verification.
+**Do not include both files together**: their auxiliary subcircuit names overlap.
 
-电阻输入 PGA 基线已经实现：
+The resistive-input PGA baseline implements:
 
-- 真正的全差分 NMOS 输入级、级联尾电流源、两路共源输出级。
-- 二极管负载的电流输出型连续时间共模反馈；不是两个旧 OTA 拼接。
-- 电阻退化自偏置电流源、MOS 启动注入及关断；没有外部理想 IREF。
-- 真实 SKY130 高阻多晶硅电阻及 MIM 电容；所有内部 R/C 均为 PDK 器件。
-- 固定 RF=10kΩ 的低噪声反馈结构；每端传感器源阻抗仍为350Ω。
-- 实际 CMOS 增益译码和六个传输门，选择00/01/10对应标称1/4/16档。
-- 输出隔离网络已与 ADC 的真实传输门和81.285pF/侧 MIM 阵列联合测试。
+- A real fully differential NMOS input stage, cascoded tail-current source, and two common-source output stages.
+- Diode-loaded, current-output continuous-time common-mode feedback; not two old OTAs connected together.
+- A resistor-degenerated self-biased current source, MOS startup injection, and shutdown, with no external ideal IREF.
+- Real SKY130 high-resistance polysilicon resistors and MIM capacitors; all internal R/C elements are PDK devices.
+- A low-noise feedback structure with fixed RF=10 kΩ; sensor source impedance remains 350 Ω per side.
+- Actual CMOS gain decoding and six transmission gates selecting nominal gains 1/4/16 for 00/01/10.
+- An output isolation network jointly tested with the ADC's real transmission gates and 81.285 pF/side MIM array.
 
-`frontend_core.spice` 是保留的 **MOS真实、R/C理想** 中间版本，不能作为
-“所有器件均可布局”的证据。早期不稳定版本和失败数据保留在 `results/`。
+`frontend_core.spice` is a retained intermediate version with **real MOS devices but ideal R/C**, and cannot establish
+that all devices have a physical implementation. Early unstable versions and failed data remain in `results/`.
 
-## 集成接口
+## Integration interface
 
-| 子电路 | 引脚及含义 |
+| Subcircuit | Pins and meaning |
 |---|---|
-| `sky130_v2_frontend` | `INP INN OUTP OUTN VDD VSS VCM`，无反馈核心 |
-| `sky130_v2_pga` | `VINP VINN OUTP OUTN VDD VSS VCM`；静态参数RF/RG |
-| `sky130_v2_sample_driver` | 同上；静态GAIN参数，含150Ω/4pF隔离网络 |
-| `sky130_v2_switchable_pga` | 上述7个引脚后接`SEL0 SEL1`；真实开关，可外接隔离网络 |
+| `sky130_v2_frontend` | `INP INN OUTP OUTN VDD VSS VCM`, core without feedback |
+| `sky130_v2_pga` | `VINP VINN OUTP OUTN VDD VSS VCM`; static RF/RG parameters |
+| `sky130_v2_sample_driver` | Same pins; static GAIN parameter, with 150 Ω/4 pF isolation network |
+| `sky130_v2_switchable_pga` | The above 7 pins followed by `SEL0 SEL1`; real switches, supports an external isolation network |
 
-两位选择应由数字控制部分在转换开始时锁存并保持。11是保留码，目前会
-断开传感器输入支路，**尚未与数字模块的非法码处理统一**。运行中增益切换、
-控制信号注入和非重叠时序尚未完成验证。
+The digital controller should latch and hold the two selection bits at conversion start. 11 is reserved and currently
+disconnects the sensor input branch; **its handling has not yet been aligned with the digital module's invalid-code handling**. Runtime gain switching,
+control-signal injection, and nonoverlap timing remain unverified.
 
-早期开关导通电阻曾使16档实际增益降至约14.06。后来补偿输入支路后，
-`gm3x_rz` 的标称增益接近15.97，静态校准可以修正；但是350Ω传感器源阻抗
-和开关导通电阻在增益公式中，温度／电源变化导致固定标称系数严重失效。
+Early switch on-resistance reduced the actual gain in the 16 setting to approximately 14.06. After compensating the input branches,
+`gm3x_rz` reached a nominal gain near 15.97, correctable by static calibration. However, the 350 Ω sensor source impedance
+and switch on-resistance enter the gain formula, and temperature/supply changes cause severe failure of fixed nominal coefficients.
 
-### 高输入阻抗 FDDA 改进
+### High-input-impedance FDDA improvement
 
-`frontend_fdda.spice` 保留全差分两级、真实电阻反馈和连续时间共模反馈，
-将第一放大级改成两个交叉相加的差分误差对，分别比较 `VINP−FBP`、
-`VINN−FBN`。传感器连接晶体管栅极，仍保留每端350Ω源阻抗；输出至VCM的
-16个相同PDK电阻构成1/4/16抽头。真实传输门只选择高阻反馈栅极，因此
-开关Ron和源阻抗不再直接决定直流增益。不是把两个旧OTA相接。
+`frontend_fdda.spice` retains two fully differential stages, real resistive feedback, and continuous-time common-mode feedback,
+while replacing the first amplifier stage with two cross-summed differential error pairs comparing `VINP−FBP`
+and `VINN−FBN`. Sensors connect to transistor gates, retaining 350 Ω source impedance per side. 16 identical PDK resistors
+from each output to VCM provide 1/4/16 taps. Real transmission gates select only high-impedance feedback gates, so
+switch Ron and source impedance no longer directly set DC gain. This is not two old OTAs joined together.
 
-新增误差对提高了输入级功耗和面积；反馈电阻热噪声、低压余量与共模环路
-必须重新验证。CMFB的1kΩ源退化是根据实际共模振荡加入的，不是行为模型。
-FDDA内部没有理想放大器、理想电流源或理想R/C。它的公开接口是
-`sky130_v2_switchable_pga VINP VINN OUTP OUTN VDD VSS VCM SEL0 SEL1`；
-`sky130_v2_switchable_sample_driver` 同引脚，另有 `RISO` 参数及每端4pF储能电容。
-FDDA没有旧版 `sky130_v2_pga` 静态参数接口，运行脚本必须加 `--switchable`。
+The additional error pair increases input-stage power and area. Feedback-resistor thermal noise, low-voltage headroom, and the common-mode loop
+must be reverified. The CMFB's 1 kΩ source degeneration was added in response to actual common-mode oscillation; it is not a behavioral model.
+The FDDA contains no ideal amplifier, ideal current source, or ideal R/C. Its public interface is
+`sky130_v2_switchable_pga VINP VINN OUTP OUTN VDD VSS VCM SEL0 SEL1`;
+`sky130_v2_switchable_sample_driver` has the same pins, plus an `RISO` parameter and 4 pF storage capacitance per side.
+The FDDA does not provide the old `sky130_v2_pga` static-parameter interface; run scripts must include `--switchable`.
 
-## 证据和重要失败
+## Evidence and important failures
 
-- 原始高阻输出节点 CMFB 有正确工作点，却出现严重瞬态振荡；保留失败。
-- 电流输出型 CMFB 消除了该额外高阻节点，标称短负载下能稳定工作。
-- 直接接81.285pF负载存在不满足建立时间的情况；不能用5pF结果替代。
-- 早期150Ω/4pF隔离后，静态增益配置在标称三档的采集建立及关断后保持误差
-  小于48.8µV。G16的SS/1.62V/85°C和FF/1.98V/−20°C两个选定工况也通过；
-  **这不是45工况×3档完整PVT**。
-- 真实开关选择网络已运行三档采样及16档81点直流传输测试；
-  正负80%满量程和零点拟合后，未参与拟合的点误差约0.03LSB。
-  这只是前端静态传输，不是ADC INL/DNL，也不是带噪转换精度。
-- 输入晶体管增大面积后，16档静态配置1–5kHz输出噪声约87µVrms；
-  1–50kHz约107µVrms，而1–1GHz仍约242µVrms。
-  **宽带噪声预算不达标**，不能截断积分到5kHz或50kHz后声称系统65dB达标。
-- 实际噪声必须考虑采样噪声折叠、增益校准比例、参考与比较器噪声；当前
-  普通小信号noise不是完整开关电路的周期稳态／采样噪声验证。
-- 上述0.914mW、242µV噪声、14.06倍均属于历史版本，不能与后来结果拼接。
-- `gm3x_rz` 将输入跨导／电流增加3倍，并重调Miller零点；标称宽带静态
-  噪声降至106.66µV、功耗1.219mW，三档标称旧采样测试通过。但同版固定
-  标称校准在TT/1.62V/85°C和TT/1.98V/−20°C分别为77.59、92.74LSB，失败。
-- `gm3x_rz_matrix` 已真实跑完5角×3电压×3温度×3增益的135个前端采样
-  子测试，旧报告64通过；独立数值审计后为63通过、72失败。旧报告保留，
-  更正另存`results/legacy_measurement_audit.json`。它不是全链路135项验收，也不能因矩阵已跑完
-  而宣称PVT通过。
-- 稳定FDDA5的冻结快照见 `results/fdda5_ro/`：G16，实际最短采集窗
-  2.476847754µs、每端Riso2.2kΩ，pre-aperture最大25.0µV、旧top-plate TG
-  开断后最大20.7µV，全程CM误差≤15.9mV；81点三点校准后0.401LSB。
-  该版本功耗1.519mW，宽带静态噪声131.57µV，乘1.02781校准系数后约
-  135.23µV，留给量化与ADC噪声的余量不足。**仍不是合格最终前端。**
-- FDDA5以后多轮候选已收尾并冻结FDDA10；请依据具体目录的电路哈希和完整测试集合，
-  不把FDDA2的最佳DC、FDDA5的瞬态和另一个版本的噪声合并为一套成绩。
-- `results/fdda2/AUDIT.md` 记录一次顺序命令跨版本校准错误；对应冷端结果
-  标记INVALID，保留原始输出。新脚本已经强制校准与测试电路哈希相同。
+- The original CMFB with a high-impedance output node had a correct operating point but severe transient oscillation; the failure is retained.
+- Current-output CMFB removed that additional high-impedance node and operates stably with a small nominal load.
+- A directly connected 81.285 pF load can fail settling; 5 pF results cannot substitute for it.
+- With the early 150 Ω/4 pF isolation network, static gain configurations at all three nominal gains had acquisition settling and post-turnoff hold errors
+  below 48.8 µV. Two selected G16 conditions, SS/1.62V/85°C and FF/1.98V/−20°C, also passed;
+  **this is not complete PVT across 45 conditions × 3 gains**.
+- The real switch-selection network has undergone sampling tests at three gains and an 81-point DC transfer test at gain 16.
+  After fitting positive/negative 80% full scale and zero, errors at points excluded from the fit were approximately 0.03 LSB.
+  This is frontend static transfer only, not ADC INL/DNL or conversion accuracy with noise.
+- Enlarging the input transistors reduced gain-16 static-configuration output noise to approximately 87 µVrms over 1–5 kHz,
+  and approximately 107 µVrms over 1–50 kHz, while 1–1 GHz remained approximately 242 µVrms.
+  **The broadband noise budget fails**; truncating integration at 5 kHz or 50 kHz cannot support a claim that the system meets 65 dB.
+- Actual noise must account for sampling-noise folding, gain-calibration scaling, and reference/comparator noise. The present
+  ordinary small-signal noise analysis is not periodic-steady-state/sampled-noise verification of the complete switched circuit.
+- The 0.914 mW, 242 µV noise, and 14.06 gain figures above belong to historical versions and cannot be combined with later results.
+- `gm3x_rz` increases input transconductance/current 3-fold and retunes the Miller zero. Nominal broadband static
+  noise falls to 106.66 µV at 1.219 mW, and the old nominal sampling tests pass at all three gains. However, fixed
+  nominal calibration on the same version gives 77.59 and 92.74 LSB at TT/1.62V/85°C and TT/1.98V/−20°C respectively, both failures.
+- `gm3x_rz_matrix` completed 135 real frontend sampling subtests across 5 corners × 3 voltages × 3 temperatures × 3 gains.
+  The old report counted 64 passes; independent numerical auditing corrected this to 63 passes and 72 failures. The old report is retained,
+  with corrections in `results/legacy_measurement_audit.json`. This is not 135 full-chain qualification tests, and completing the matrix
+  does not mean PVT passed.
+- The frozen snapshot of stable FDDA5 is in `results/fdda5_ro/`: G16, actual shortest acquisition window
+  2.476847754 µs, Riso 2.2 kΩ per side, maximum pre-aperture error 25.0 µV, maximum error after opening the old top-plate TG
+  20.7 µV, and CM error ≤15.9 mV throughout; 0.401 LSB after three-point calibration over 81 points.
+  This version consumes 1.519 mW with 131.57 µV broadband static noise, or approximately
+  135.23 µV after multiplying by the 1.02781 calibration coefficient, leaving insufficient margin for quantization and ADC noise. **It is still not a qualified final frontend.**
+- The rounds of candidates after FDDA5 have concluded with FDDA10 frozen. Use the circuit hash and complete test set of each specific directory;
+  do not combine FDDA2's best DC, FDDA5's transient behavior, and another version's noise into one performance record.
+- `results/fdda2/AUDIT.md` records a cross-version calibration error in sequential commands. The corresponding cold-end result
+  is marked INVALID with original output retained. New scripts enforce identical hashes for calibration and test circuits.
 
-逐次实验数据和版本快照是数值依据，汇总见 `results/frontend_manifest.json`。
-小信号环路注入脚本只是诊断：共模路径包含耦合环路及高频寄生反馈，
-目前没有可靠完成差模／共模各≥60°的多环路稳定性验收。
+Per-experiment data and version snapshots are the numerical evidence; see `results/frontend_manifest.json` for the index.
+Small-signal loop-injection scripts are diagnostic only: the common-mode path contains coupled loops and high-frequency parasitic feedback,
+and reliable multiloop stability qualification of at least 60° for both differential and common modes has not been completed.
 
-## 可复现运行
+## Reproducible runs
 
-在已配置的 IIC-OSIC 容器中，设置
-`SPICE_USERINIT_DIR=/foss/pdks/sky130A/libs.tech/ngspice` 后运行：
+In the configured IIC-OSIC container, set
+`SPICE_USERINIT_DIR=/foss/pdks/sky130A/libs.tech/ngspice`, then run:
 
 ```sh
 python3 run_frontend.py --gains 1 4 16 --loads 81.285 --out results/new_static
@@ -138,30 +138,30 @@ python3 qualify_advanced.py sampling --core frontend_fdda.spice --gain 16 --swit
 python3 build_manifest.py
 ```
 
-每个实验保留模型引用、设计快照、网表、日志、原始数值和摘要。不同设计
-版本／刺激必须使用不同输出目录；已存在的实验拒绝覆盖。新实验保存不可变
-`experiment_config.json`；`--analyze-only` 读取该文件，重新检查日志、仿真
-覆盖范围、数据有限性和采样器哈希。旧实验缺少此配置时不允许用当前默认值
-重新标注；历史数据用独立审计脚本分析，原始结果不覆盖。
-运行采样实验需要同级 `adc/adc_blocks.spice`，它会被复制成实验快照。
-顺序运行多项测试时，第一项之后的 `--core` 应指向该项保存的
-`frontend_pdk_snapshot.spice`，不能指向可能被继续调参的live源文件。
-默认采样窗口已改为真实相位电路测得的最短2.476847754µs；早期目录保留
-原始2.49µs测试刺激。全部原始结果依据各自网表解释，不追溯改写刺激。
-早期目录未显式覆盖ngspice数值容差；新生成网表已固定reltol=1e-6、
-vntol=1nV、abstol=10fA。冻结候选必须在这些较严容差下复验，不能把早期
-贴近48.8µV门槛的结果当作已经完成数值收敛验收。
+Every experiment retains model references, a design snapshot, netlists, logs, raw numerical data, and a summary. Different design
+versions/stimuli must use different output directories; existing experiments refuse overwriting. New experiments save an immutable
+`experiment_config.json`; `--analyze-only` reads it and rechecks logs, simulation
+coverage, data finiteness, and sampler hashes. Old experiments lacking this configuration cannot be relabeled using current defaults.
+Historical data are analyzed with an independent audit script without overwriting raw results.
+Sampling experiments require the sibling `adc/adc_blocks.spice`, which is copied into an experiment snapshot.
+When running several tests sequentially, each `--core` after the first must point to that first test's saved
+`frontend_pdk_snapshot.spice`, not a live source that may undergo further tuning.
+The default sampling window is now the shortest 2.476847754 µs measured from the real phase circuit; early directories retain
+the original 2.49 µs stimulus. All raw results are interpreted against their own netlists; stimuli are not rewritten retrospectively.
+Early directories did not explicitly override ngspice numerical tolerances. Newly generated netlists fix reltol=1e-6,
+vntol=1 nV, and abstol=10 fA. Frozen candidates must be retested under these stricter tolerances; early results
+near the 48.8 µV threshold cannot be treated as having completed numerical-convergence qualification.
 
-`measurements.py` 使用时间积分计算非均匀网格平均值，并在精确时刻／频率
-端点插值。采样参考窗口还必须足够平稳，避免把持续振荡的平均值叫“最终值”。
-`python3 -m unittest test_measurements.py` 的5项回归覆盖这些数值审计规则。
+`measurements.py` uses time integration for nonuniform-grid averages and interpolates at exact time/frequency
+endpoints. Sampling reference windows must also be sufficiently stationary, preventing the mean of persistent oscillation from being called a final value.
+The 5 regressions in `python3 -m unittest test_measurements.py` cover these numerical-audit rules.
 
-## 仍需完成
+## Remaining work
 
-完整采样噪声与SNDR、时变负载下的环路稳定性、增益精确值及转换动态、
-合格的45工况×三档PVT、真实200次失配、温压下固定校准系数误差、CMRR/PSRR、
-启动覆盖、参考扰动、完整SAR比较器回踢联仿、原生可编辑Xschem原理图、
-整个前端版图及DRC/LVS/寄生后仿真。没有将未完成项归因于Cadence不可用。
+Complete sampled noise and SNDR; loop stability under time-varying loads; exact gains and conversion dynamics;
+qualified PVT across 45 conditions × three gains; 200 real mismatch runs; fixed-calibration coefficient errors over temperature/voltage; CMRR/PSRR;
+startup coverage; reference disturbances; full SAR comparator-kickback cosimulation; native editable Xschem schematics;
+and the full frontend layout with DRC/LVS/post-parasitic simulation. Incomplete work is not attributed to unavailable Cadence.
 
-W=800µm的输入器件、电阻分段和并联MIM单元仍需实际指状布局与匹配布局；
-模型能运行不代表完整几何已经通过DRC，也不能把晶体管沟道面积称为芯片面积。
+W=800 µm input devices, segmented resistors, and parallel MIM cells still require actual fingered and matched layouts.
+A runnable model does not establish DRC-clean complete geometry, and transistor channel area is not chip area.

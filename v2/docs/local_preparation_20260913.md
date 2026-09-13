@@ -1,73 +1,73 @@
-# 本地推进与学校交付准备：2026-09-13
+# Local Progress and School Delivery Preparation: 2026-09-13
 
-已在本地实际执行旧 OTA 对应表征、新前端诊断、ADC 连续转换和可复用版图装配。**完整芯片仍未通过验收，本次没有向学校发布新的前端安装包。** 学校端已有环境和旧 OTA 数据作为交接依据保留；当前准备不覆盖原学校库。
+Corresponding legacy OTA characterization, new frontend diagnostics, continuous ADC conversion, and reusable layout assembly were actually executed locally. **The complete chip has not passed acceptance, and no new frontend installation package was released to the school in this round.** Existing school environment and legacy OTA data are retained as handoff evidence; this preparation does not overwrite the original school library.
 
-## 旧 OTA 的 32 项
+## The legacy OTA's 32 items
 
-32/32 本地 ngspice 对应测试完成，另有两项差分参考。使用学校已经导出的 13 个 MOS 尺寸和扩散几何，不能称为学校 Spectre 新运行。标称增益与学校值相差约 0.000011 dB，功耗相差约 0.000018 µW；13 个 MOS 的五项共同工作点字段最大相对差约 0.0001934%。
+32/32 corresponding local ngspice tests completed, plus two differential references. They use the 13 MOS dimensions and diffusion geometries already exported by the school and cannot be described as new school Spectre runs. Nominal gain differs from the school value by approximately 0.000011 dB and power by approximately 0.000018 µW; the maximum relative difference across five shared operating-point fields for the 13 MOS devices is approximately 0.0001934%.
 
-- CMRR：71.324 dB，通过旧门限。
-- PSRR+ / PSRR−：36.331 / 36.099 dB，未达 45 dB。
-- ICMR：0.1 V 网格内 0.8～1.2 V，未覆盖 1.3 V；不是连续边界测量。
-- 1/2 pF 环路与阶跃通过；10/20 pF 扩展负载 PM 53.767°/40.554°，低于 55°。扩展负载不能与原 1/2/5 pF 强制范围混淆。
-- 1 kHz 噪声 401.152 nV/√Hz；10 Hz～1 MHz 积分 52.300 µV RMS。仅报告，保留 26 条噪声模型警告。
+- CMRR: 71.324 dB, passing the legacy threshold.
+- PSRR+ / PSRR−: 36.331 / 36.099 dB, below 45 dB.
+- ICMR: 0.8–1.2 V on a 0.1 V grid, not covering 1.3 V; not a continuous boundary measurement.
+- Loop and step tests pass at 1/2 pF; extended-load PM at 10/20 pF is 53.767°/40.554°, below 55°. Extended loads must not be confused with the original mandatory 1/2/5 pF range.
+- Noise at 1 kHz: 401.152 nV/√Hz; integrated from 10 Hz to 1 MHz: 52.300 µV RMS. Report-only, with 26 noise-model warnings retained.
 
-共模/电源测试与原差分测试的 DC 偏置不一致，因此另做相同偏置差分参考后才计算抑制比。自动绝对增益 PASS 也不能覆盖 ICMR 的相对增益失败。直流跟随扫描不冒充独立输出摆幅测试。
+Common-mode/supply tests and the original differential test have different DC bias, so additional differential references at matching bias were run before calculating rejection ratios. An automatic absolute-gain PASS cannot override an ICMR relative-gain failure. A DC follower sweep is not presented as an independent output-swing test.
 
-[完整复现报告、原始数据和入口](../verification/legacy_extra_20260913/README.md)。学校端 extra 的 32 项及其正式复核仍等待学校原始结果；此前 PVT 三项建立失败保持不变。
+[Complete reproduction report, raw data, and entry point](../verification/legacy_extra_20260913/README.md). The 32 school-side extra items and formal review still await school raw results; the previous three PVT settling failures remain unchanged.
 
-## 新版前端
+## New frontend
 
-继续使用同源 `dynamic_20260911/candidate_06.spice`，未改电路或拼接候选成绩。
+Continued using same-source `dynamic_20260911/candidate_06.spice`, without changing the circuit or assembling results across candidates.
 
-本轮补入电流/电压双注入后，原先差模高频再次向上穿越 0 dB 的现象消失，指出旧测量方法遗漏反向传输。采集/保持三档局部差模最低 PM 约 74.22°。但是耦合回路的参考系统右半平面极点数量和未被端口观察到的内部模态仍未被可靠验证，因此正式全多环稳定性仍未通过。
+After adding current/voltage dual injection, the previous high-frequency differential upward recrossing of 0 dB disappears, indicating that the old measurement method omitted reverse transmission. Minimum local differential PM across acquisition/hold and three gains is approximately 74.22°. However, the coupled-loop reference system's right-half-plane pole count and internal modes unobserved by ports are still not reliably verified, so formal full multiloop stability has not passed.
 
-三档、采集/保持共六个静态噪声诊断已经实际执行。它们不能替代采样后随机噪声验收；与旧 FDDA10 的 113 µV 预算只作诊断比较，不能用不同滤波和采样状态直接宣称新版噪声 PASS/FAIL。45 点 PVT 按稳定性前置条件仍未启动。
+Six static-noise diagnostics across three gains and acquisition/hold states were actually executed. They cannot replace sampled random-noise acceptance. Comparison with the legacy FDDA10 113 µV budget is diagnostic only; differing filters and sampling states cannot directly establish new-version noise PASS/FAIL. The 45-point PVT run has not started because the stability prerequisite remains unmet.
 
-新增 G4 小型 DC/AC 试验的本地参考，供将来学校原生设计先做小规模核对。当前仍不是已通过学校执行的迁移包。[前端完整记录](../analog/frontend/qualification_20260913/README.md)、[学校最小迁移核对](../analog/frontend/qualification_20260913/CADENCE_CANARY.md)。本轮共 26 次真实启动，其中 6 次噪声导出失败完整保留；6 项方法与证据检查通过。主任务已核验 415 个交付文件哈希，并按最新学校 `site.json` 纠正迁移文档的 OCEAN 路径。
+A local reference for a small G4 DC/AC trial was added so future native school designs can first undergo a small comparison. This is still not a migration package proven by school execution. [Complete frontend record](../analog/frontend/qualification_20260913/README.md), [Minimum school migration comparison](../analog/frontend/qualification_20260913/CADENCE_CANARY.md). This round had 26 real launches, including 6 fully retained noise-export failures; 6 method/evidence checks pass. The main task verified 415 delivery-file hashes and corrected the migration document's OCEAN path using the latest school `site.json`.
 
 ## ADC
 
-新增真实晶体管电路 + 修复桥 + 原 SAR RTL 的 12 帧连续转换，122 µs 仿真记录。基准运行实际用时 393.553 s；144/144 个比较器判决、12 组数据总线/RTL 日志/比较器码和 50 个握手检查一致。输入覆盖正负近满量程、零点两侧及新码中心，结果是 5、4090、2047、2048、100、3995、1601、3000、1907、2203、2557、3311。
+Added 12 continuous frames using the real transistor circuit, repaired bridge, and original SAR RTL, with a 122 µs simulation record. The baseline run took 393.553 s; all 144/144 comparator decisions, 12 sets of data-bus/RTL-log/comparator codes, and 50 handshake checks agree. Inputs cover positive/negative near-full-scale, both sides of zero, and new code centers. Results are 5, 4090, 2047, 2048, 100, 3995, 1601, 3000, 1907, 2203, 2557, 3311.
 
-更严格的同刺激复核也已完成：容限收紧 10 倍，最大步长从 2 ns 改为 1 ns，实际用时 839.944 s、退出码 0，12 帧码字、144 个真实判决和 50 个握手检查仍一致。
+A stricter review using the same stimulus also completed: tolerances tightened 10-fold, maximum step reduced from 2 ns to 1 ns, elapsed time 839.944 s, exit code 0; all 12 frame codes, 144 real decisions, and 50 handshake checks still agree.
 
-**完整数值波形收敛门未通过，因此可靠连续转换与完整 ADC 验收仍未完成。** CDAC 最大差异在联合接受时间点网格上约 48.393 mV，在 1 ns 公共网格上约 4.077 mV，均高于 0.05 LSB = 9.765625 µV。判决前差异只有约 13.38 nV，不能覆盖整个波形的明显差异。两组原始点、边沿和局部诊断均保留，不根据码字相同就更换求解设置或放行全码。
+**The complete numerical-waveform convergence gate fails, so reliable continuous conversion and full ADC acceptance remain unfinished.** Maximum CDAC difference is approximately 48.393 mV on the union of accepted time points and approximately 4.077 mV on a common 1 ns grid, both above 0.05 LSB = 9.765625 µV. Predecision differences are only approximately 13.38 nV, which cannot override substantial differences across the full waveform. Raw points, edges, and local diagnostics from both runs are retained; identical codes do not justify changing solver settings or releasing all-code runs.
 
-另用同一模型实际确认 KLU 矩阵求解器可完成工作点，3.021 s、退出码 0；这是可继续验证的新计算路径，没有瞬态加速或数值等价通过结论。
+The same model also confirmed that the KLU matrix solver can complete an operating point in 3.021 s, exit code 0. This is a new computational path for further verification, without a conclusion of transient speedup or passing numerical equivalence.
 
-[ADC 完整结果与可恢复入口](../analog/adc/qualification_20260913/README.md)。13 项相关测试通过，主任务独立核验了 76 个交付文件哈希。全码静态目前为 0/131,073，16,384 点频谱和至少 200 个系统失配样本仍未执行。已有 CDAC 和比较器局部统计不能相加充当完整 ADC 失配验收。
+[Complete ADC results and resumable entry point](../analog/adc/qualification_20260913/README.md). 13 related tests pass, and the main task independently verified 76 delivery-file hashes. All-code static progress is currently 0/131,073; the 16,384-point spectrum and at least 200 system mismatch samples remain unexecuted. Existing local CDAC/comparator statistics cannot be added together as complete ADC mismatch acceptance.
 
-学校迁移另有已实证的架构风险：当前数字桥二进制为 ARM64 Linux，不能直接视为学校机器可运行文件。学校侧必须核对 CPU 架构、提供匹配目标架构的数字桥并完成加载及短转换资格测试；本地容器的连续转换通过不证明学校桥兼容。
+School migration has a separately demonstrated architecture risk: the current digital-bridge binary is ARM64 Linux and cannot directly be treated as executable on school machines. The school side must check CPU architecture, supply a bridge matching the target architecture, and qualify loading and short conversion. Passing continuous conversion in the local container does not prove school-bridge compatibility.
 
-## 版图及顶层后仿真
+## Layout and top-level post-layout simulation
 
-已生成真实局部装配 GDS：一个差分 CDAC、两个四管采样开关和一个数字宏。KLayout 回读通过，Magic 未布线装配的几何 DRC=0；148 项现有证据/端口/哈希核对和 7 项防误判检查通过。
+Generated a real local assembly GDS with one differential CDAC, two four-transistor sampling switches, and one digital macro. KLayout readback passes, and Magic reports geometry DRC=0 for the unrouted assembly; 148 existing-evidence/port/hash checks and 7 false-pass-prevention checks pass.
 
-发现并在新仿真适配副本中显式导出 CDAC 基底端口，防止内部基底浮置。数字宏 SPICE 仅为 LVS 拓扑视图，其 R=C=0，必须使用实际 SPEF/SDF/门级时序接口或重新提取，不能当模拟 RC 后仿真。
+A CDAC substrate port was found and explicitly exposed in a new simulation-adapter copy to prevent a floating internal substrate. The digital macro SPICE is only an LVS topology view with R=C=0; actual SPEF/SDF/gate-level timing interfaces or fresh extraction are required. It cannot serve as analog RC post-layout simulation.
 
-尚缺前端、比较器/前置放大、参考网络和时钟/驱动实体版图，也没有宏间布线。完整核心 LVS、PEX 与性能后仿真未执行。三档 ×45 PVT 的 135 行准备矩阵全为 NOT_RUN，后仿真准备门当前正确拒绝放行。
+Physical layouts for the frontend, comparator/preamplifier, reference network, and clock/drivers are missing, as is intermacro routing. Full-core LVS, PEX, and performance post-layout simulation were not executed. All 135 rows in the three-gain ×45-PVT readiness matrix are NOT_RUN; the post-layout readiness gate correctly refuses release.
 
-[局部 GDS、图像和完整准备记录](../physical/core_integration_20260913/README.md)。
+[Local GDS, images, and complete preparation record](../physical/core_integration_20260913/README.md).
 
-## 学校 Linux 交付可靠性
+## School Linux delivery reliability
 
-用户明确要求减少反复上传后才发现错误。本次把这一点纳入新版本放行条件：
+The user explicitly requested fewer errors discovered only after repeated uploads. This round incorporates that into new-version release conditions:
 
-1. 锁定学校已证实的 Python 3.6.8、IC618、Spectre 21 环境合同；本地 NumPy/ngspice 工具与学校入口分开交付。
-2. 采用完整版本包、清单校验和单一入口；在干净目录、含空格目录测试安装、重复运行、失败退出和恢复，不要求逐次叠加临时补丁。
-3. 环境和依赖先检查；从原生导出核对引脚、CDF 参数、实际刺激和工作点数据字段。没有运行证据的 SKILL 函数不因括号平衡而算通过。
-4. 学校先执行一个有本地参考的小型试验；保存模型/网表/包哈希与原始日志。该证据必须匹配同一包，才能启动批量任务。
-5. 环境失败、仿真失败、导出失败和性能失败分别记录；旧成功记录不能替代最新失败，恢复不得覆盖旧数据。
+1. Freeze the school's demonstrated Python 3.6.8, IC618, and Spectre 21 environment contract; deliver local NumPy/ngspice tools separately from school entry points.
+2. Use a complete versioned package, manifest checks, and a single entry point; test installation, reruns, failure exits, and recovery in clean directories and paths containing spaces, without requiring successive temporary patches.
+3. Check environment and dependencies first; verify pins, CDF parameters, actual stimulus, and operating-point data fields from native exports. A SKILL function without execution evidence does not pass merely because parentheses balance.
+4. First run a small school-side trial with a local reference; save model/netlist/package hashes and raw logs. That evidence must match the same package before batch tasks start.
+5. Record environment, simulation, export, and performance failures separately; old successful records cannot replace the newest failure, and recovery must not overwrite old data.
 
-已重跑既有可靠性回归：4 项启动器测试、7 项导出/安装/回滚测试、5 种流水线失败场景通过。新包放行器另有 13 项合成测试通过，能拒绝损坏/混版本/哈希错误、CRLF、Python 3.6 不兼容、旧/模拟现场证据，并检查实际日志中的错误及与同包哈希绑定的完成标志。即使进程退出 0，只要日志报错或缺实际导出文件也不会放行。含原生模块的包还必须声明目标架构、匹配 ELF 文件头，并提供学校实际模块加载记录；ARM 本地桥不能混入 x86 目标包。
+Existing reliability regression reran: 4 launcher tests, 7 export/install/rollback tests, and 5 pipeline-failure scenarios pass. The new package gate additionally passes 13 synthetic tests, rejecting corruption/mixed revisions/incorrect hashes, CRLF, Python 3.6 incompatibility, and stale/simulated field evidence, and checking real log errors and completion markers bound to the same package hash. Even exit code 0 does not release a run with logged errors or missing actual export files. Packages containing native modules must also declare the target architecture, match ELF headers, and supply school-side module-loading records; an ARM local bridge cannot be included in an x86 target package.
 
-部分测试使用模拟 OCEAN/Virtuoso，证明入口逻辑，不等于学校工具实测；Python 3.6 目前检查到语法兼容，本地没有该实际运行时。新的完成标志协议尚未由学校新入口实际执行，因此当前批量放行仍为否。哈希证明内容绑定，不是学校来源认证；现场日志仍需实质审查。
+Some tests use simulated OCEAN/Virtuoso, proving entry-point logic rather than actual school-tool execution. Python 3.6 compatibility has currently been checked at the syntax level; that runtime is unavailable locally. The new completion-marker protocol has not yet been executed by a new school entry point, so batch release remains denied. Hashes bind content, not authenticate school provenance; field logs still need substantive review.
 
-[新包放行工具与测试说明](../../cadence/project1/reliability_20260913/PACKAGE_GATE_README.md)、[既有启动与恢复回归记录](../../cadence/project1/reliability_20260913/regression.json)。本次没有要求重新上传旧 OTA 包，也没有宣称新前端已能在学校可靠批量运行。
+[New-package release tool and tests](../../cadence/project1/reliability_20260913/PACKAGE_GATE_README.md), [Existing launch/recovery regression record](../../cadence/project1/reliability_20260913/regression.json). This round neither requested reupload of the old OTA package nor claimed reliable school-side batch execution of the new frontend.
 
-## 继续推进顺序
+## Order of continued work
 
-旧 OTA 的学校 extra 原始数据返回后逐项对照；新版前端先闭合正式稳定性及采样噪声，再冻结同版 45-PVT；ADC 先解决数值收敛与计算路径，再放行全码、长记录和系统失配；模块冻结后完成缺失模拟版图、宏间布线、完整 DRC/LVS/PEX，最后执行统一顶层后仿真。
+Compare the legacy OTA school extra items once raw results return; close formal stability and sampled noise for the new frontend before freezing same-revision 45-PVT; resolve ADC numerical convergence and the computational path before releasing all-code, long-record, and system-mismatch runs; after freezing modules, complete missing analog layouts, intermacro routing, full DRC/LVS/PEX, and finally unified top-level post-layout simulation.
 
-以上是当前实际剩余条件，不改变任何芯片规格，也不把准备完成等同于设计验收完成。
+These are the actual remaining conditions. No chip specification changes, and completed preparation is not equated with completed design acceptance.

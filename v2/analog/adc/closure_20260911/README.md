@@ -1,83 +1,83 @@
-# ADC 非 Cadence 闭合：2026-09-11 有界实验
+# ADC closure without Cadence: bounded experiments on 2026-09-11
 
-本轮实际修复了一项数字／模拟联仿接口缺陷，并完成性能剖析和失败路线验证。**没有完成全码 ADC 验收，也没有解决全码晶体管仿真的计算量问题。** 4096 码、每 LSB 32 点的覆盖要求和 0.05 LSB 数值比较门限均未降低。
+This round repaired a real digital/analog cosimulation interface defect, completed performance profiling, and evaluated unsuccessful routes. **All-code ADC qualification remains incomplete, and the computational cost of all-code transistor simulation remains unresolved.** Neither the coverage requirement of 4096 codes at 32 points per LSB nor the 0.05 LSB numerical-comparison threshold was relaxed.
 
-## 保持不变的对象
+## Unchanged objects
 
-冻结对象仍为 `verification_20260910/campaigns/continuous_three_point/frozen/` 中的复合 ADC：20260908T045601001817Z 的前置放大器、LVT 参考开关、四 MOS dummy 顶板钳位及真实动态比较器；SAR RTL、相位电路和 ADC 全部晶体管不改。三轮均为 TT、1.8 V、27 °C、350 Ω/端、参考源 1 Ω＋10 nF、62 µs、同样的 1 ns 输入／时钟边沿、2 ns 最大步长、相同误差容限。
+The frozen object remains the composite ADC in `verification_20260910/campaigns/continuous_three_point/frozen/`: the preamplifier, LVT reference switches, four-MOS dummy top-plate clamps, and real dynamic comparator from 20260908T045601001817Z. The SAR RTL, phase circuit, and all ADC transistors remain unchanged. All three runs used TT, 1.8 V, 27 °C, 350 Ω per input, 1 Ω＋10 nF reference sources, 62 µs duration, identical 1 ns input/clock edges, a 2 ns maximum timestep, and identical error tolerances.
 
-输入只有三点：0.123 V、−0.25 LSB、+0.25 LSB，每点两次真实转换。LSB = 0.8/4096 V。并未覆盖三档前端增益、噪声、失配、45 个工艺温压组合或完整模拟版图。
+Only three inputs were used: 0.123 V, −0.25 LSB, and +0.25 LSB, each with two real conversions. LSB = 0.8/4096 V. The runs did not cover three frontend gains, noise, mismatch, 45 process/voltage/temperature combinations, or a complete analog layout.
 
-## 三轮测量
+## Three measured runs
 
-| 试验 | 实测用时 | 接受时间点 | 实际比较器判决 | 全波形 0.05 LSB 门限 |
+| Experiment | Measured runtime | Accepted timepoints | Actual comparator decisions | Complete-waveform 0.05 LSB gate |
 |---|---:|---:|---|---|
-| 原桥 live RTL，增加完整输出观察 | 196.556 s | 96,923 | 72/72；与旧基线相同 | 对旧 2 ns 基线差异为 0 |
-| 仅将 testbench 数字桥改为已知轨迹 PWL | 334.741 s | 210,312 | 72/72 接受已知轨迹 | **失败**：CDAC 最大差 375.723 µV |
-| 本地修复桥的 33 位输出掩码，live RTL | 180.284 s | 96,947 | 72/72；真实输出码一致 | **失败**：CDAC 最大差 53.452 µV |
+| Original bridge with live RTL; complete output observation added | 196.556 s | 96,923 | 72/72; identical to the old baseline | Difference of 0 from the old 2 ns baseline |
+| Only the testbench digital bridge replaced by known-trajectory PWL | 334.741 s | 210,312 | 72/72 accepted the known trajectory | **Failed**: maximum CDAC difference 375.723 µV |
+| Locally repaired 33-bit bridge output mask, live RTL | 180.284 s | 96,947 | 72/72; actual output codes agreed | **Failed**: maximum CDAC difference 53.452 µV |
 
-严格阈值为 9.765625 µV。共同时间点为全时长 1 ns 插值网格，同时在 72 个真实 EVAL 上升前 1 ns 检查 CDAC 与参考。PWL 回放的判决前最大 CDAC 差仅 0.311 nV；修复桥的判决前最大差仅 6.60 pV。小的判决前差异与相同输出码，**不能抹去全波形门限失败**。1 ns 公共网格本身也可能漏掉更短的尖峰，因此不是连续时间数学证明。
+The strict threshold is 9.765625 µV. Common timepoints use a 1 ns interpolated grid across the full duration, with additional CDAC/reference checks 1 ns before each of 72 real EVAL rising edges. PWL replay's maximum predecision CDAC difference was only 0.311 nV; the repaired bridge's maximum predecision difference was only 6.60 pV. Small predecision differences and identical output codes **do not erase the complete-waveform gate failure**. The 1 ns common grid itself may miss shorter spikes and therefore is not a continuous-time mathematical proof.
 
-这三轮是同一主机上的单次运行，期间可有其他团队任务；用时只作为实测工程预算，不将约 1.09 倍的第三轮用时变化宣传成已证明的加速。
+These were single runs on the same host, possibly concurrent with other team work. Runtime is only a measured engineering budget; the approximately 1.09-fold runtime change in the third run is not presented as proven acceleration.
 
-## 找到并局部修复的真实缺陷
+## Real defect identified and locally repaired
 
-冻结 wrapper 把 33 个数字位打包在同一输出中：bit 32 为 ready，bit 31 为 busy。所安装 ngspice-47 的 `verilator_shim.cpp` 在扫描输出时使用 `1 << i`。`1` 是窄的有符号整数：32 位移位会发生未定义行为，bit 31 的符号扩展也可能影响 64 位端口。
+The frozen wrapper packs 33 digital bits into one output: bit 32 is ready and bit 31 is busy. The installed ngspice-47 `verilator_shim.cpp` scans output using `1 << i`. Here `1` is a narrow signed integer: shifting by 32 invokes undefined behavior, and sign extension of bit 31 may also affect a 64-bit port.
 
-实测原桥的 ready 完全跟随最低位 evaluate，busy 一直为高，而这不符合内部 RTL 的 ready/busy。最小 C++ 复现对 33 个 one-hot 词的 1089 个位检查中，旧表达式出现 3 个错误；显式 `uint64_t(1) << i` 为 0 个错误。未定义行为的具体旧结果仅对已记录编译器／平台有效，不作为跨平台必然行为。
+With the original bridge, measured ready followed the least-significant evaluate bit exactly and busy stayed high, contradicting the internal RTL ready/busy signals. In a minimal C++ reproduction with 1089 bit checks across 33 one-hot words, the old expression produced 3 errors; explicit `uint64_t(1) << i` produced 0. The specific observed outcome of the old undefined behavior applies only to the recorded compiler/platform, not inevitably to every platform.
 
-本轮在自己的目录中，仅替换 shim 两处输出掩码为 `uint64_t(1) << i`，重用哈希锁定的 Verilator 对象重链接。**没有修改 `/foss` 安装、原 wrapper、RTL 或模拟核心。** 不宣称同时修好了宽输入、inout 或该 shim 的其他问题。
+Within its own directory, this round replaced only the two shim output masks with `uint64_t(1) << i`, then relinked the hash-locked Verilator objects. **The `/foss` installation, original wrapper, RTL, and analog core were not modified.** No claim is made that wide inputs, inout, or other shim issues were also fixed.
 
-修复后的真实联仿确认：
+The repaired real cosimulation confirmed:
 
-- 26 个复位、空闲、采集、比较、最后一位及下一次采集状态检查全部通过；ready/busy 在 1 µs 后公共网格上互补，最大互补误差 0.288 pV。
-- 从实际导出数据引脚读到 `2677, 2677, 2047, 2047, 2048, 2048`，与真实比较器逐位判决一致。
-- valid 和 EVAL 时刻一致；参考波形最大差小于 0.394 µV。
-- 仍有上述 53.452 µV 的 CDAC 全波形数值差异，须在修复后的桥上重新做更细时步／误差容限收敛，不能宣布完整数值资格通过。
+- All 26 checks of reset, idle, acquisition, comparison, final-bit, and next-acquisition states passed; ready/busy were complementary on the common grid after 1 µs, with a maximum complementarity error of 0.288 pV.
+- The actual exported data pins read `2677, 2677, 2047, 2047, 2048, 2048`, consistent with the real comparator's bit-by-bit decisions.
+- valid and EVAL timings agreed; the maximum reference-waveform difference was below 0.394 µV.
+- The 53.452 µV complete CDAC waveform difference described above remains. Finer timestep/error-tolerance convergence must be repeated on the repaired bridge before complete numerical qualification can be claimed.
 
-**旧桥资格记录存在最高两个状态位的覆盖缺口。** 本结果不推翻那些仅依赖正确低 31 位的有限转换数据，但旧记录不能证明 ready/busy 正确，更不能证明完整握手接口已经通过。原记录和失败均保留。
+**The old bridge qualification record has a coverage gap for the two highest status bits.** This result does not invalidate the limited conversion data that depend only on the correct lower 31 bits, but the old record cannot establish correct ready/busy behavior or qualification of the full handshake interface. The original records and failures are retained.
 
-源路径及原哈希：`/foss/tools/ngspice/share/ngspice/scripts/src/verilator_shim.cpp`，SHA-256 `ddf28192068013b402f1481be2530407036c62a6ac0bf9093fce59f90174c77e`。受影响源码片段、修改后的局部源码、编译命令、编译器版本、复现输出、重用对象及二进制哈希保存在第三轮目录的 `build/` 和 `provenance.json`。
+Source path and original hash: `/foss/tools/ngspice/share/ngspice/scripts/src/verilator_shim.cpp`, SHA-256 `ddf28192068013b402f1481be2530407036c62a6ac0bf9093fce59f90174c77e`. The affected source excerpt, locally modified source, compile commands, compiler version, reproduction output, reused objects, and binary hashes are stored in the third run's `build/` and `provenance.json`.
 
-## 为什么不能把计算问题算作解决
+## Why the computation problem remains unresolved
 
-第一轮含 3703 个电路方程、325530 次迭代。`rusage all` 报告总分析 191.187 s，其中矩阵加载 118.323 s、分解 34.029 s、求解 15.180 s；网表加载约 2.251 s。主要费用在瞬态非线性求解，不是每次生成 RTL 或读 PDK。这些计时不能单独精确分离 d_cosim 的开销。
+The first run contained 3703 circuit equations and 325530 iterations. `rusage all` reported 191.187 s total analysis time, including 118.323 s for matrix loading, 34.029 s for factoring, and 15.180 s for solving; netlist loading took approximately 2.251 s. Most cost lies in nonlinear transient solution, not repeatedly generating RTL or reading the PDK. These timings cannot precisely isolate d_cosim overhead.
 
-PWL 仅取代六行 testbench 桥／控制器声明；真实比较器 Q/QB、相位、CDAC、采样开关、参考网络都保留且 Q/QB 从未被电压源驱动。输入位来自第一轮已有轨迹，所以只能证明**已知轨迹回放**，并无新输入预测能力。实际 Q/QB 必须在每个判决窗口保持有效互补逻辑并独立接受所有预测位，才保留这一有限回放证据；故意翻转预测位的软件测试会被拒绝。
+PWL replaced only six testbench bridge/controller declaration lines. The real comparator Q/QB, phases, CDAC, sampling switches, and reference network remained, and Q/QB were never driven by voltage sources. Input bits came from the first run's existing trajectory, so this establishes only **known-trajectory replay**, with no prediction capability for new inputs. Actual Q/QB must retain valid complementary logic in every decision window and independently accept every predicted bit for this limited replay evidence to remain valid. The software test that deliberately flips a predicted bit is rejected.
 
-回放已作 1e−10 V 误差界的分段线性压缩，33 路合计仍有 120372 个保留 PWL 点；接受时间点反增至 210312，矩阵加载增至 204.210 s。大量 PWL 断点／源求值是变慢的一个合理嫌疑，实际数值轨迹亦改变；没有单独隔离实验，不能说已精确证明原因。按数字事件仅保留边沿的压缩或放宽数字回放压缩误差，可能是后续路线，但本轮既没有完成新输入预测验证，也没有通过严格全波形门限，不能采用这条路线替代全码真实转换。
+Replay used piecewise-linear compression with a 1e−10 V error bound, yet the 33 channels still retained 120372 PWL points. Accepted timepoints increased to 210312, and matrix loading increased to 204.210 s. Many PWL breakpoints/source evaluations are a plausible cause of the slowdown, and the numerical trajectory changed as well. Without an isolated experiment, the precise cause has not been proven. Compression retaining only digital-event edges, or relaxing digital-replay compression error, may be future routes. This round neither verified prediction for new inputs nor passed the strict complete-waveform gate, so this route cannot replace real all-code conversions.
 
-### 两阶段方法和状态保存的边界
+### Limits of two-stage methods and state saving
 
-“提取 CDAC 电容／阈值网络＋RTL 全码”能得到子模块静态证据，但不是完整 ADC 的全码瞬态证据。要等价，需对所有输入及历史给出统一误差界，覆盖真实开关的电荷注入／馈通、比较器动态失调与记忆、CDAC/参考建立及输入历史，再证明这些误差不会改变任何逐位判决。门限附近判决可任意敏感；有限样本拟合或单独电容加权公式不提供这种证明。当前没有这样的模型或误差界，因此两阶段结果不能取代本任务的全码验证。
+An extracted CDAC capacitance/threshold network combined with all-code RTL can provide submodule static evidence, but not full-ADC all-code transient evidence. Equivalence would require a uniform error bound over every input and history, covering real-switch charge injection/feedthrough, comparator dynamic offset and memory, CDAC/reference settling, and input history, followed by proof that these errors cannot change any bit decision. Near-threshold decisions may be arbitrarily sensitive; a finite-sample fit or isolated capacitor-weight formula provides no such proof. No such model or error bound currently exists, so two-stage results cannot replace this task's all-code verification.
 
-ngspice 并非没有快照功能，但手册明确 `snsave/snload` 不支持含 XSPICE 器件的电路；本 live fixture 含 `d_cosim`、`adc_bridge`、`dac_bridge`，不能直接以受支持的快照恢复跳过状态历史。去掉 XSPICE 的新 fixture 可能可以研究快照，但不同输入的采样电荷和历史不能自动共用同一状态，且本轮 PWL 等价门失败。[ngspice 快照命令手册](https://nmg.gitlab.io/ngspice-manual/interactiveinterpreter/commands/snsave__saveasnapshotfile.html)，[官方完整手册](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf)。
+ngspice does have snapshot functionality, but its manual explicitly states that `snsave/snload` does not support circuits with XSPICE devices. This live fixture contains `d_cosim`, `adc_bridge`, and `dac_bridge`, so supported snapshot restoration cannot directly bypass its state history. A new fixture without XSPICE could potentially be studied for snapshots, but different inputs' sampling charge and histories cannot automatically share one state, and this round's PWL equivalence gate failed. [ngspice snapshot command manual](https://nmg.gitlab.io/ngspice-manual/interactiveinterpreter/commands/snsave__saveasnapshotfile.html), [official complete manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf).
 
-独立批次可以并行，但每批从 OP／复位开始并回放前一点，不是无缝保留无限历史；并行还会受内存和共享 CPU 限制。修复桥后按 180.284 s/6 次转换线性估算：
+Independent batches can run in parallel, but each starts from OP/reset and replays the previous point; they do not seamlessly preserve infinite history. Memory and shared CPU also constrain parallelism. Linear estimates after the bridge repair, using 180.284 s / 6 conversions, are:
 
-| 覆盖 | 批大小 | 真实转换总数（含预热／历史回放） | 单 worker／单 PVT | 理想 3 worker 下界 |
+| Coverage | Batch size | Total real conversions, including warmup/history replay | One worker / one PVT | Ideal lower bound with 3 workers |
 |---|---:|---:|---:|---:|
-| 4096 个码中心 | 3 | 9557 | 3.32 天 | 1.11 天 |
-| 32 点/LSB、131073 个输入 | 3 | 305836 | 106.36 天 | 35.45 天 |
-| 32 点/LSB、131073 个输入 | 8 | 278530 | 96.86 天 | 32.29 天 |
+| 4096 code centers | 3 | 9557 | 3.32 days | 1.11 days |
+| 32 points/LSB, 131073 inputs | 3 | 305836 | 106.36 days | 35.45 days |
+| 32 points/LSB, 131073 inputs | 8 | 278530 | 96.86 days | 32.29 days |
 
-这不是承诺。它包含从六次转换分摊的加载／输出时间，未精确外推各批固定开销；更严的数值设置可能更慢。只有一个工艺温压条件，不能把此表当成全 PVT 预算。并行不改变总算量，也不足以把问题降到合理的本轮运行时间，故没有启动数天作业。
+These are not promises. They include loading/output time apportioned across six conversions, without precisely extrapolating each batch's fixed overhead; stricter numerical settings may be slower. They cover only one process/voltage/temperature condition and are not a full-PVT budget. Parallelism does not change total computation and is insufficient to bring the problem within a reasonable runtime for this round, so no multiday job was launched.
 
-## 可恢复交付与防止假完成
+## Resumable delivery and safeguards against false completion
 
-`resume_campaign.py` 复用旧 runner 的源／PDK／二进制哈希、单 worker 锁、每批保留失败和显式重试机制。新计划只在本目录创建，绑定局部修复后二进制，不再自动调用有问题的旧 shim 编译器路径。每次显式 run 最多一批、360 s。
+`resume_campaign.py` reuses the old runner's source/PDK/binary hashes, single-worker lock, retained per-batch failures, and explicit retry mechanism. New plans are created only in this directory and bind the locally repaired binary, no longer automatically invoking the defective old shim compiler path. Each explicit run is limited to one batch and 360 s.
 
-`campaigns/fixed_ramp32/` 已保存 131073 点／32 点每 LSB 的完整计划，**尚未运行任何点**，coverage 返回 `INCOMPLETE_COVERAGE`、0/131073。由于修复桥后的严格数值门失败，执行入口会在启动任何 SPICE 进程前报 `NUMERICAL_GATE_BLOCKED`。这是刻意设置的质量门，不要删掉它来得到“完成”。后续先获得合格的新数值证据，再创建新不可变计划；不能修改本轮结果。
+`campaigns/fixed_ramp32/` contains a complete plan for 131073 points at 32 points per LSB, but **no points have run**. Coverage returns `INCOMPLETE_COVERAGE`, 0/131073. Because the repaired bridge failed the strict numerical gate, the run entry point reports `NUMERICAL_GATE_BLOCKED` before starting any SPICE process. This is an intentional quality gate; do not remove it to obtain a completion claim. First obtain qualifying new numerical evidence, then create a new immutable plan; this round's results must not be modified.
 
-以下在已配置容器内 `/repo` 运行，不重新下载工具：
+Run the following in `/repo` inside the configured container, without downloading tools again:
 
 ```sh
 python3 -m unittest discover -s v2/analog/adc/closure_20260911 -p 'test_*.py' -v
 python3 v2/analog/adc/closure_20260911/resume_campaign.py collect v2/analog/adc/closure_20260911/campaigns/fixed_ramp32
-# 目前应在启动仿真前被拒绝：
+# This should currently be rejected before simulation starts:
 python3 v2/analog/adc/closure_20260911/resume_campaign.py run v2/analog/adc/closure_20260911/campaigns/fixed_ramp32
 ```
 
-18 项软件／保存波形回归通过，其中包括拒绝错误预测位、拒绝不完整词列表、拒绝 0.06 LSB 的人为波形误差、识别旧状态端口错误、保持完整网格和拒绝数值未过关时开跑。**18 项软件测试不是 18 组新电路验收。**
+18 software/saved-waveform regressions passed, covering rejection of incorrect predicted bits, incomplete word lists, and an artificial 0.06 LSB waveform error; detection of the old status-port defect; preservation of the full grid; and refusal to run without numerical qualification. **18 software tests are not 18 new circuit qualifications.**
 
-主结果索引为 `results/feasibility_and_bridge_report.json`；其中包含前 14 项测试的保存输出，最终 18 项及恢复入口审计见 `results/delivery_audit.json`。三轮分别为 `20260911T080054695882Z_live`、`20260911T080430354263Z_replay`、`20260911T081221912898Z_bridge_fixed`。原始波形、网表、日志、参数和结果均保留。没有 Cadence、版图、流片或硅测完成声明。
+The main result index is `results/feasibility_and_bridge_report.json`, which includes saved output from the first 14 tests. The final 18 tests and resume-entry audit are in `results/delivery_audit.json`. The three runs are `20260911T080054695882Z_live`, `20260911T080430354263Z_replay`, and `20260911T081221912898Z_bridge_fixed`. Raw waveforms, netlists, logs, parameters, and results are retained. There is no claim of completed Cadence work, layout, tapeout, or silicon measurement.

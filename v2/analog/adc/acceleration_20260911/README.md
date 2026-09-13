@@ -1,45 +1,45 @@
-# ADC 全码加速闭合实验（2026-09-11）
+# ADC all-code acceleration closure experiment (2026-09-11)
 
-## 结论先说
+## Conclusion
 
-本轮找到了一个**有效但不足以解决全码计算量**的技巧：把 33 路数字桥波形从逐点拟合改成“只写逻辑边沿起点和终点”。PWL 点数由 120,372 降到 800（减少 150.465 倍），真实 SKY130 CDAC、开关、相位电路、前置放大器和动态比较器都没有被模型替换。
+This round identified a technique that is **effective but insufficient to resolve the all-code computational cost**: replace point-by-point fitting of 33 digital-bridge waveforms with records containing only the start and end of logic edges. The PWL point count fell from 120,372 to 800 (a 150.465-fold reduction). The real SKY130 CDAC, switches, phase circuit, preamplifier, and dynamic comparator were not replaced by models.
 
-但是，六次真实转换仍需 178.086 s，而修复 33 位 shim 后的 live RTL 基线为 180.284 s，只快 **1.012 倍**。更重要的是，完整 CDAC 波形没有通过原定的 0.05 LSB 数值等价门：
+However, six real conversions still required 178.086 s, compared with 180.284 s for the live RTL baseline after fixing the 33-bit shim: only a **1.012-fold** speedup. More importantly, the complete CDAC waveforms failed the original 0.05 LSB numerical-equivalence gate:
 
-- 0.05 LSB = 9.765625 µV；
-- 两组求解器接受点的联合网格上，最坏 CDAC 差为 527.880 µV；
-- 按旧实验使用的 1 ns 公共网格，最坏差仍为 53.542 µV；
-- 72 个判决前检查点的最坏差只有 0.267 nV，且 72/72 判决相同。
+- 0.05 LSB = 9.765625 µV;
+- On the union of the two solvers' accepted-point grids, the worst CDAC difference was 527.880 µV;
+- On the 1 ns common grid used by the earlier experiment, the worst difference was still 53.542 µV;
+- At the 72 predecision checkpoints, the worst difference was only 0.267 nV, and all 72/72 decisions agreed.
 
-因此，**不能启动 131,073 点的长全码任务，也不能称完整 ADC 已通过**。`gate.py` 会保持 fail-closed；它现在应以退出码 2 拒绝长任务。
+Therefore, **the long 131,073-point all-code job cannot be started, and the complete ADC cannot be declared qualified**. `gate.py` remains fail-closed; it should currently reject the long job with exit code 2.
 
-## 实际完成了什么
+## Work actually completed
 
-### 1. 修复后的 33 位 bridge 作为唯一参考
+### 1. The repaired 33-bit bridge is the sole reference
 
-参考对象是 `closure_20260911/results/20260911T081221912898Z_bridge_fixed/`：它使用局部修复的 `uint64_t(1) << i` 输出掩码，原 SKY130 模拟核心和 SAR RTL 不变。本目录不写 `/foss`，不复制 PDK，也不修改冻结电路。
+The reference is `closure_20260911/results/20260911T081221912898Z_bridge_fixed/`: it uses the locally repaired `uint64_t(1) << i` output mask, with the original SKY130 analog core and SAR RTL unchanged. This directory does not write to `/foss`, copy the PDK, or modify the frozen circuit.
 
-事件压缩先从这条参考波形的 0.9 V 交点恢复每个 1 ns 上升／下降边沿。在启动 SPICE 前，对参考的每一个已保存接受点重建 33 路源；最大误差为 17.264 nV，即约 0.0000884 LSB，低于 0.05 LSB 门限。
+Event compression first reconstructs every 1 ns rising/falling edge from the reference waveform's 0.9 V crossings. Before starting SPICE, it reconstructs all 33 sources at every saved accepted point of the reference. The maximum error is 17.264 nV, approximately 0.0000884 LSB, below the 0.05 LSB threshold.
 
-### 2. 已知轨迹真实电路实验
+### 2. Real-circuit experiment with a known trajectory
 
-目录：`results/20260911T082551662858Z_known/`
+Directory: `results/20260911T082551662858Z_known/`
 
-- 六次转换、72 个真实比较器判决全部一致；
-- 真实相位电路、CDAC、开关、参考网络、前置放大器和动态比较器均保留；
-- 实测 178.086 s、96,936 个接受时间点、322,957 次迭代；
-- PWL 点大幅减少，但矩阵计算量几乎未变；
-- 完整波形 0.05 LSB 门失败，所以本路线不能升级为全码验收路径。
+- All six conversions and 72 real comparator decisions agreed;
+- The real phase circuit, CDAC, switches, reference network, preamplifier, and dynamic comparator were retained;
+- Measured runtime: 178.086 s, 96,936 accepted timepoints, and 322,957 iterations;
+- The PWL point count decreased substantially, but matrix computation barely changed;
+- The complete-waveform 0.05 LSB gate failed, so this route cannot be promoted to an all-code qualification path.
 
-这说明瓶颈不是“PWL 文件太长”，而是每个真实转换中大量非线性晶体管方程的加载、分解和求解。
+This identifies the bottleneck as loading, factoring, and solving the many nonlinear transistor equations in each real conversion, rather than simply an excessively long PWL file.
 
-### 3. 全新输入的独立逐位预测
+### 3. Independent bit-by-bit prediction for entirely new inputs
 
-目录：`results/20260911T083114860787Z_predicted/`
+Directory: `results/20260911T083114860787Z_predicted/`
 
-使用六个旧轨迹从未包含的理想码中心：
+Six ideal code centers absent from the old trajectories were used:
 
-| 差分输入 | 预测码 |
+| Differential input | Predicted code |
 |---:|---:|
 | +0.18603515625 V | 3000 |
 | −0.08720703125 V | 1601 |
@@ -48,55 +48,55 @@
 | +0.09951171875 V | 2557 |
 | +0.24677734375 V | 3311 |
 
-数字试探码由冻结 SAR RTL 的递推关系提前生成，但 Q/QB 没有被任何电压源驱动；真实比较器必须在每个读取窗口独立接受预测：
+Digital trial codes were generated in advance using the recurrence of the frozen SAR RTL, but no voltage source drove Q/QB. The real comparator had to independently accept each prediction in every read window:
 
-- 72/72 个真实 Q/QB 判决接受预测；
-- 六个时序窗口均完整；
-- 故意把第 1 帧 LSB 预测翻转后，只剩 71/72 接受，负面测试成功拒绝错误轨迹；
-- 实测 184.284 s、97,247 个接受时间点。
+- 72/72 real Q/QB decisions accepted the predictions;
+- All six timing windows were complete;
+- Deliberately flipping frame 1's predicted LSB reduced acceptance to 71/72; the negative test successfully rejected the incorrect trajectory;
+- Measured runtime: 184.284 s and 97,247 accepted timepoints.
 
-这是一项**六输入、有限轨迹、条件式证书**。它证明“如果预测的每一位都被真实比较器接受，提前写出的控制轨迹与 live RTL 对该轨迹等价”；它不证明所有 131,073 个输入都正确，也不是 live RTL 仍位于该次模拟反馈环中的证据。
+This is a **conditional certificate for six inputs and a finite trajectory**. It establishes that, if every predicted bit is accepted by the real comparator, the control trajectory written in advance is equivalent to live RTL for that trajectory. It does not establish correctness for all 131,073 inputs, nor prove that live RTL remained in the feedback loop of this simulation.
 
-## 为什么逐位证明成立
+## Why the bit-by-bit proof holds
 
-对每次 12 位转换：
+For each 12-bit conversion:
 
-1. 基础步：MSB 判决前，冻结 RTL 和预测轨迹都把 `trial_code` 置为 `0x800`。
-2. 归纳假设：判决 bit `b` 前，预测轨迹中的高位前缀与冻结 RTL 相同，当前 bit 被置 1，低位清零。
-3. 真实动态比较器给出 Q/QB。本轮不是相信软件预测，而是在 RTL 原本读取它的 ±10 ns 窗口内逐点检查有效互补电平。
-4. 若真实判决等于预测位，冻结 RTL 的 `decided_code` 会保留或清除当前 bit，再将下一 bit 置 1；这恰好等于下一段预测 `trial_code`。
-5. 由归纳，12 个判决全接受时，最终数据字等于预测字。
+1. Base case: before the MSB decision, both the frozen RTL and predicted trajectory set `trial_code` to `0x800`.
+2. Inductive hypothesis: before deciding bit `b`, the predicted trajectory has the same high-bit prefix as the frozen RTL, sets the current bit to 1, and clears lower bits.
+3. The real dynamic comparator produces Q/QB. This round does not trust the software prediction; it checks valid complementary levels point by point in the ±10 ns window in which the RTL would read them.
+4. If the real decision equals the predicted bit, the frozen RTL's `decided_code` retains or clears the current bit and sets the next bit to 1. This is exactly the next predicted `trial_code` segment.
+5. By induction, if all 12 decisions are accepted, the final data word equals the predicted word.
 
-本轮对六帧共 72 步逐一验证。负面测试证明证书不是“无论写什么都通过”。
+All 72 steps across six frames were individually verified. The negative test confirms that the certificate does not accept arbitrary supplied predictions.
 
-## 保留的两次失败
+## Two retained failures
 
-真实进程 `20260911T082931655937Z_predicted` 和 `20260911T083032868118Z_predicted` 都在 3.503 µs 停止，ngspice 报告最小步长 2.5e−21 s。更换首个输入后位置不变，最终定位为新生成的 trial 时间与从参考恢复的 sample 时间只差约 2.5e−19 s，形成了人工的近重合 PWL 断点。
+The real processes `20260911T082931655937Z_predicted` and `20260911T083032868118Z_predicted` both stopped at 3.503 µs, with ngspice reporting a minimum timestep of 2.5e−21 s. Changing the first input did not move the failure. The eventual diagnosis was that a newly generated trial time differed from a sample time reconstructed from the reference by only approximately 2.5e−19 s, creating artificially near-coincident PWL breakpoints.
 
-最终脚本让 trial/data 严格复用冻结 bridge 的同一事件时间格，最后一次实验才完整结束。两个失败的网表、部分波形和日志都保留，未删除。
+The final script makes trial/data reuse exactly the same event-time grid as the frozen bridge. Only the final experiment completed. Both failures' netlists, partial waveforms, and logs remain preserved.
 
-`20260911T082521485574Z_known` 是一次 PATH 配置错误；没有启动 ngspice 进程，不计入“四次真实 SPICE”上限。
+`20260911T082521485574Z_known` was a PATH configuration error: no ngspice process started, so it does not count toward the limit of four real SPICE runs.
 
-## 定量瓶颈与下界
+## Quantified bottleneck and lower bounds
 
-已知轨迹实验的 173.446 s 分析时间中：
+Within the known-trajectory experiment's 173.446 s analysis time:
 
-- 矩阵加载、分解、求解合计 153.797 s，占 88.67%；
-- 总 wall time 与分析时间之差只有 4.640 s；
-- 即使假设删掉所有保存节点和输出成本，乐观加速上限也只有约 1.027 倍；
-- 一份六转换原始波形约 95 MB，按相同保存方式跑满会产生约 2.08 TB，故正式长任务必须减少保存数据，但这主要解决存储，不解决求解时间。
+- Matrix loading, factoring, and solving totaled 153.797 s, or 88.67%;
+- Total wall time exceeded analysis time by only 4.640 s;
+- Even assuming all saved-node and output costs were removed, the optimistic speedup ceiling is only approximately 1.027-fold;
+- One raw six-conversion waveform occupies approximately 95 MB. Full coverage with the same saved signals would produce approximately 2.08 TB, so a formal long run must save less data. This primarily solves storage, not solver time.
 
-全码静态网格仍是 4096×32+1 = 131,073 个输入，需要 1,572,876 个真实比较器判决。按本轮 178.086 s／6 转换线性外推：
+The all-code static grid remains 4096×32+1 = 131,073 inputs, requiring 1,572,876 real comparator decisions. Linear extrapolation from this round's 178.086 s / 6 conversions gives:
 
-- 单 worker 乐观连续运行约 45.03 天；
-- 即使所有非分析成本消失仍约 43.85 天；
-- 原有可恢复 batch=8 方案含历史回放／预热，估计仍约 96.86 天。
+- Approximately 45.03 days of optimistic continuous operation with one worker;
+- Approximately 43.85 days even with every non-analysis cost removed;
+- Approximately 96.86 days for the existing resumable batch=8 scheme, including history replay/warmup.
 
-这些数字是工程下界／外推，不是完成承诺。更严格的误差设置通常只会更慢。旧的 2 ns→10 ns 最大步长实验只获得约 1.104 倍，同时 CDAC 波形差约 0.356 LSB，因此同样不能跨过数值门。
+These are engineering lower bounds/extrapolations, not completion promises. Tighter error settings are generally slower. The earlier maximum-timestep experiment from 2 ns→10 ns achieved only approximately 1.104-fold acceleration while introducing approximately 0.356 LSB CDAC waveform difference; it also fails the numerical gate.
 
-## 如何核验和继续
+## Verification and continuation
 
-在现有配置容器的 `/repo` 下：
+From `/repo` in the existing configured container:
 
 ```sh
 python3 -m unittest discover -s v2/analog/adc/acceleration_20260911 -p 'test_*.py' -v
@@ -104,13 +104,13 @@ python3 v2/analog/adc/acceleration_20260911/build_delivery.py
 python3 v2/analog/adc/acceleration_20260911/gate.py
 ```
 
-最后一条目前必须输出 `long_all_code_campaign_allowed: false` 并以退出码 2 结束。这不是脚本故障，而是防止把有限预测或行为模型全码冒充晶体管全码。
+The last command must currently print `long_all_code_campaign_allowed: false` and exit with code 2. This is not a script failure; it prevents finite predictions or behavioral-model all-code results from being presented as transistor-level all-code verification.
 
-主要机器可读证据：
+Primary machine-readable evidence:
 
-- `results/delivery_report.json`：结论、运行时间、误差门、预测证书和计算下界；
-- `manifest.json`：本目录除自身和 Python 缓存外全部文件的 SHA-256 与字节数；
-- 各 `results/*/adc.spice`：每次真正执行的完整网表快照；
-- 各 `results/*/simulation.log`、`native.log`、`waveform.dat`：原始日志与波形。
+- `results/delivery_report.json`: conclusions, runtimes, error gates, prediction certificates, and computational lower bounds;
+- `manifest.json`: SHA-256 and byte count for every file in this directory except itself and Python caches;
+- Each `results/*/adc.spice`: the complete netlist snapshot actually executed;
+- Each `results/*/simulation.log`, `native.log`, and `waveform.dat`: raw logs and waveforms.
 
-没有使用 Cadence，没有完成 ADC 全码线性、噪声、失配、PVT 或版图验收，也没有流片／硅测声明。
+Cadence was not used. ADC all-code linearity, noise, mismatch, PVT, and layout qualification remain incomplete, with no tapeout or silicon-measurement claims.
