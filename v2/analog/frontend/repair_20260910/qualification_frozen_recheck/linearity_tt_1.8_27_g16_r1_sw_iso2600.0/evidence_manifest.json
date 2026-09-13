@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-10T06:49:10.216667+00:00",
+  "scope": "Recorded artifact integrity only, not an electrical test PASS",
+  "files": {
+    "experiment_config.json": {
+      "sha256": "f4bb0c4917c3e0cb3b162fb04be5491ce643bfdbef60e8423c342ec9b0a45128",
+      "size_bytes": 509
+    },
+    "frontend_pdk_snapshot.spice": {
+      "sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "size_bytes": 7726
+    },
+    "linearity.console.txt": {
+      "sha256": "9cfdfacf0bf43699c4f399969ec3016a89c24d713190870b348924a5c9f77724",
+      "size_bytes": 625
+    },
+    "linearity.dat": {
+      "sha256": "0fb575863ce7068b7cb24005c811e19a63afb1fb335b0e6a3cb2e5080f20042b",
+      "size_bytes": 5330
+    },
+    "linearity.log": {
+      "sha256": "57a0edc3a53b1696c70e67ad97e34f6c6874debab8707ce867996e551edb8000",
+      "size_bytes": 555
+    },
+    "linearity.spice": {
+      "sha256": "5b000e119b36f95fb698527fb45f6d9361ee2a36ac745dcef7a5f8611a6b529f",
+      "size_bytes": 847
+    },
+    "op_nodes.dat": {
+      "sha256": "ab6b7fe20addd247f4b03ad1937d61144d2f053efa0ed177d709b01c6a932e95",
+      "size_bytes": 25762
+    },
+    "summary.json": {
+      "sha256": "ac6f8c932cd6470992dc8e5af68dd2a70ea10c1f26a98c1ec6391a2b737d72ba",
+      "size_bytes": 1229
+    }
+  },
+  "producer_code": {
+    "/repo/v2/analog/frontend/qualify_advanced.py": "ac6cad1d876ea1fc1ddb5bef6ae28e30cab0f6bd456908e657cf4f03d81f311e",
+    "/repo/v2/analog/frontend/measurements.py": "f4356981f5404856edcbffbb90d1b0e7ee1034feaace4d1cf4c5c382e1568b94",
+    "/repo/v2/analog/frontend/measurement_evidence.py": "67f05a3ff95a4a567b1efb5b09f79fef3cea265011aee0374ff08a6095019c31",
+    "/repo/v2/analog/frontend/run_frontend.py": "b5712d756a526094da5768588a54cddf1f0ab29645c6dc030887f712e85f6cde"
+  }
+}

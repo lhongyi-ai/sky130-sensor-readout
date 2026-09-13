@@ -1,0 +1,95 @@
+* Real frontend acquisition PVT, not full ADC signoff
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice ff
+.include /repo/v2/analog/frontend/results/gm3x_rz_matrix/frontend_pdk_snapshot.spice
+.include /repo/v2/analog/frontend/results/gm3x_rz_matrix/adc_blocks_snapshot.spice
+.temp 85
+
+.subckt frontend_case params: SUP=1.8 G=4 S0=1.8 S1=0
+VDD VDD 0 {SUP}
+VCM VCM 0 {SUP/2}
+VIP SP 0 PULSE({SUP/2-0.18/G} {SUP/2+0.18/G} 10u 10n 10n 10u 20u)
+VIN SN 0 PULSE({SUP/2+0.18/G} {SUP/2-0.18/G} 10u 10n 10n 10u 20u)
+RSP SP IP 350
+RSN SN IN 350
+VSEL0 SEL0 0 {S0}
+VSEL1 SEL1 0 {S1}
+XPGA IP IN OP ON VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga
+VACQ ACQ 0 PULSE(0 {SUP} 10u 1n 1n 2.49u 10u)
+BACQB ACQB 0 v={SUP}-v(acq)
+VRST RST 0 PULSE(0 {SUP} 8u 1n 1n 1u 10u)
+BRSTB RSTB 0 v={SUP}-v(rst)
+XRIP OP FILTP 0 frontend_r R=1800
+XRIN ON FILTN 0 frontend_r R=1800
+XCFP FILTP 0 frontend_c4p
+XCFN FILTN 0 frontend_c4p
+XTGP FILTP HP ACQ ACQB VDD 0 adc_tgate
+XTGN FILTN HN ACQ ACQB VDD 0 adc_tgate
+XCP HP VCM adc_mim_bank COUNT=4096
+XCN HN VCM adc_mim_bank COUNT=4096
+XRSTP VCM HP RST RSTB VDD 0 adc_tgate
+XRSTN VCM HN RST RSTB VDD 0 adc_tgate
+RLEAKP HP VCM 1g
+RLEAKN HN VCM 1g
+.ends frontend_case
+XCASE0 frontend_case SUP=1.62 G=1 S0=0 S1=0
+XCASE1 frontend_case SUP=1.62 G=4 S0=1.62 S1=0
+XCASE2 frontend_case SUP=1.62 G=16 S0=0 S1=1.62
+XCASE3 frontend_case SUP=1.8 G=1 S0=0 S1=0
+XCASE4 frontend_case SUP=1.8 G=4 S0=1.8 S1=0
+XCASE5 frontend_case SUP=1.8 G=16 S0=0 S1=1.8
+XCASE6 frontend_case SUP=1.98 G=1 S0=0 S1=0
+XCASE7 frontend_case SUP=1.98 G=4 S0=1.98 S1=0
+XCASE8 frontend_case SUP=1.98 G=16 S0=0 S1=1.98
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 5n 40u
+let d0=v(xcase0.op)-v(xcase0.on)
+let h0=v(xcase0.hp)-v(xcase0.hn)
+let c0=(v(xcase0.op)+v(xcase0.on))/2
+let p0=-v(xcase0.vdd)*i(v.xcase0.vdd)
+wrdata case0.dat d0 h0 c0 p0
+let d1=v(xcase1.op)-v(xcase1.on)
+let h1=v(xcase1.hp)-v(xcase1.hn)
+let c1=(v(xcase1.op)+v(xcase1.on))/2
+let p1=-v(xcase1.vdd)*i(v.xcase1.vdd)
+wrdata case1.dat d1 h1 c1 p1
+let d2=v(xcase2.op)-v(xcase2.on)
+let h2=v(xcase2.hp)-v(xcase2.hn)
+let c2=(v(xcase2.op)+v(xcase2.on))/2
+let p2=-v(xcase2.vdd)*i(v.xcase2.vdd)
+wrdata case2.dat d2 h2 c2 p2
+let d3=v(xcase3.op)-v(xcase3.on)
+let h3=v(xcase3.hp)-v(xcase3.hn)
+let c3=(v(xcase3.op)+v(xcase3.on))/2
+let p3=-v(xcase3.vdd)*i(v.xcase3.vdd)
+wrdata case3.dat d3 h3 c3 p3
+let d4=v(xcase4.op)-v(xcase4.on)
+let h4=v(xcase4.hp)-v(xcase4.hn)
+let c4=(v(xcase4.op)+v(xcase4.on))/2
+let p4=-v(xcase4.vdd)*i(v.xcase4.vdd)
+wrdata case4.dat d4 h4 c4 p4
+let d5=v(xcase5.op)-v(xcase5.on)
+let h5=v(xcase5.hp)-v(xcase5.hn)
+let c5=(v(xcase5.op)+v(xcase5.on))/2
+let p5=-v(xcase5.vdd)*i(v.xcase5.vdd)
+wrdata case5.dat d5 h5 c5 p5
+let d6=v(xcase6.op)-v(xcase6.on)
+let h6=v(xcase6.hp)-v(xcase6.hn)
+let c6=(v(xcase6.op)+v(xcase6.on))/2
+let p6=-v(xcase6.vdd)*i(v.xcase6.vdd)
+wrdata case6.dat d6 h6 c6 p6
+let d7=v(xcase7.op)-v(xcase7.on)
+let h7=v(xcase7.hp)-v(xcase7.hn)
+let c7=(v(xcase7.op)+v(xcase7.on))/2
+let p7=-v(xcase7.vdd)*i(v.xcase7.vdd)
+wrdata case7.dat d7 h7 c7 p7
+let d8=v(xcase8.op)-v(xcase8.on)
+let h8=v(xcase8.hp)-v(xcase8.hn)
+let c8=(v(xcase8.op)+v(xcase8.on))/2
+let p8=-v(xcase8.vdd)*i(v.xcase8.vdd)
+wrdata case8.dat d8 h8 c8 p8
+quit
+.endc
+.end

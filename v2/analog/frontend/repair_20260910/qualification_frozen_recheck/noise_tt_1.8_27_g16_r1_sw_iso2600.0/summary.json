@@ -1,0 +1,315 @@
+{
+  "test": "noise",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gain_implementation": "real transistor gain-select network, fixed select during this test",
+  "circuit_source": "repair_20260910/results/20260910T062811944809Z_cascoded_tail_g16/candidate.spice",
+  "circuit_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "artifact_integrity_status": "NEW_IMMUTABLE_MANIFEST",
+  "analysis_code_sha256": "ac6cad1d876ea1fc1ddb5bef6ae28e30cab0f6bd456908e657cf4f03d81f311e",
+  "measurement_helpers_sha256": "f4356981f5404856edcbffbb90d1b0e7ee1034feaace4d1cf4c5c382e1568b94",
+  "tail_operating_point_scope": "XT0 is one current-setting device of a parallel/cascoded tail; its id is not the total tail current.",
+  "dc_power_w": 0.00180649756,
+  "dc_power_basis": "VDD rail only; external common-mode port reported separately when available",
+  "common_mode_port_dc_power_w": -2.71112637e-06,
+  "total_vdd_and_common_mode_dc_power_w": 0.00180378643363,
+  "output_noise_1_to_5000Hz_rms_v": 2.8868142505530707e-05,
+  "output_noise_1_to_50000Hz_rms_v": 4.278519803426458e-05,
+  "output_noise_1_to_1e+09Hz_rms_v": 0.00011166312775444566,
+  "noise_at_1khz_v_per_rtHz": 3.64166599e-07,
+  "isolation_r_ohm_per_side": 2600.0,
+  "caution": "Continuous-time noise after2600ohm/4pF isolation, static81.285pF/side load. NOT sampled/aliased system noise or SNDR. Consult retained deck for older revisions.",
+  "selected_mos_noise_contributors": [
+    {
+      "device": "xln",
+      "total_1_to_5000Hz_rms_v": 5.4315236749847034e-06,
+      "flicker_1_to_5000Hz_rms_v": 5.268792157602988e-06,
+      "channel_1_to_5000Hz_rms_v": 1.3178471463482943e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.8041838408067333e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 6.586371688355744e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.6774599914865776e-05
+    },
+    {
+      "device": "xln2",
+      "total_1_to_5000Hz_rms_v": 5.4315236749847034e-06,
+      "flicker_1_to_5000Hz_rms_v": 5.268792157602988e-06,
+      "channel_1_to_5000Hz_rms_v": 1.3178471463482943e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.8041838408067333e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 6.586371688355744e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.6774599914865776e-05
+    },
+    {
+      "device": "xln3",
+      "total_1_to_5000Hz_rms_v": 5.4315236749847034e-06,
+      "flicker_1_to_5000Hz_rms_v": 5.268792157602988e-06,
+      "channel_1_to_5000Hz_rms_v": 1.3178471463482943e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.8041838408067333e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 6.586371688355744e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.6774599914865776e-05
+    },
+    {
+      "device": "xlp",
+      "total_1_to_5000Hz_rms_v": 5.4315236749847034e-06,
+      "flicker_1_to_5000Hz_rms_v": 5.268792157602988e-06,
+      "channel_1_to_5000Hz_rms_v": 1.3178471463482943e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.8041838407852403e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 6.586371688329862e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.6774599914756512e-05
+    },
+    {
+      "device": "xlp2",
+      "total_1_to_5000Hz_rms_v": 5.4315236749847034e-06,
+      "flicker_1_to_5000Hz_rms_v": 5.268792157602988e-06,
+      "channel_1_to_5000Hz_rms_v": 1.3178471463482943e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.8041838407852403e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 6.586371688329862e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.6774599914756512e-05
+    },
+    {
+      "device": "xlp3",
+      "total_1_to_5000Hz_rms_v": 5.4315236749847034e-06,
+      "flicker_1_to_5000Hz_rms_v": 5.268792157602988e-06,
+      "channel_1_to_5000Hz_rms_v": 1.3178471463482943e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.8041838407852403e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 6.586371688329862e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.6774599914756512e-05
+    },
+    {
+      "device": "xerrp.xp1",
+      "total_1_to_5000Hz_rms_v": 5.118311797670232e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966670719e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374077415e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274690087e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847223302e-05
+    },
+    {
+      "device": "xerrp.xp2",
+      "total_1_to_5000Hz_rms_v": 5.118311797670232e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966670719e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374077415e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274690087e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847223302e-05
+    },
+    {
+      "device": "xerrp.xp3",
+      "total_1_to_5000Hz_rms_v": 5.118311797670232e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966670719e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374077415e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274690087e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847223302e-05
+    },
+    {
+      "device": "xerrp.xp4",
+      "total_1_to_5000Hz_rms_v": 5.118311797670232e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966670719e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374077415e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274690087e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847223302e-05
+    },
+    {
+      "device": "xerrp.xp5",
+      "total_1_to_5000Hz_rms_v": 5.118311797670232e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966670719e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374077415e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274690087e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847223302e-05
+    },
+    {
+      "device": "xerrp.xp6",
+      "total_1_to_5000Hz_rms_v": 5.118311797670232e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966670719e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374077415e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274690087e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847223302e-05
+    },
+    {
+      "device": "xerrn.xp1",
+      "total_1_to_5000Hz_rms_v": 5.118311797459183e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966307058e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374010957e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274317198e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847222848e-05
+    },
+    {
+      "device": "xerrn.xp2",
+      "total_1_to_5000Hz_rms_v": 5.118311797459183e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966307058e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374010957e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274317198e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847222848e-05
+    },
+    {
+      "device": "xerrn.xp3",
+      "total_1_to_5000Hz_rms_v": 5.118311797459183e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966307058e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374010957e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274317198e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847222848e-05
+    },
+    {
+      "device": "xerrn.xp4",
+      "total_1_to_5000Hz_rms_v": 5.118311797459183e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966307058e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374010957e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274317198e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847222848e-05
+    },
+    {
+      "device": "xerrn.xp5",
+      "total_1_to_5000Hz_rms_v": 5.118311797459183e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966307058e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374010957e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274317198e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847222848e-05
+    },
+    {
+      "device": "xerrn.xp6",
+      "total_1_to_5000Hz_rms_v": 5.118311797459183e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.996288966307058e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1106587013375338e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6261525374010957e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.012607274317198e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.4146491847222848e-05
+    },
+    {
+      "device": "xerrp.xn1",
+      "total_1_to_5000Hz_rms_v": 5.116536258016205e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335397371e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584872416e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708230161026e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721752483e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460138082e-05
+    },
+    {
+      "device": "xerrp.xn2",
+      "total_1_to_5000Hz_rms_v": 5.116536258016205e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335397371e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584872416e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708230161026e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721752483e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460138082e-05
+    },
+    {
+      "device": "xerrp.xn3",
+      "total_1_to_5000Hz_rms_v": 5.116536258016205e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335397371e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584872416e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708230161026e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721752483e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460138082e-05
+    },
+    {
+      "device": "xerrp.xn4",
+      "total_1_to_5000Hz_rms_v": 5.116536258016205e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335397371e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584872416e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708230161026e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721752483e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460138082e-05
+    },
+    {
+      "device": "xerrp.xn5",
+      "total_1_to_5000Hz_rms_v": 5.116536258016205e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335397371e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584872416e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708230161026e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721752483e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460138082e-05
+    },
+    {
+      "device": "xerrp.xn6",
+      "total_1_to_5000Hz_rms_v": 5.116536258016205e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335397371e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584872416e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708230161026e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721752483e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460138082e-05
+    },
+    {
+      "device": "xerrn.xn1",
+      "total_1_to_5000Hz_rms_v": 5.116536257846622e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335052617e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584652217e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708229581706e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721438323e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460066879e-05
+    },
+    {
+      "device": "xerrn.xn2",
+      "total_1_to_5000Hz_rms_v": 5.116536257846622e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335052617e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584652217e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708229581706e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721438323e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460066879e-05
+    },
+    {
+      "device": "xerrn.xn3",
+      "total_1_to_5000Hz_rms_v": 5.116536257846622e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335052617e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584652217e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708229581706e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721438323e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460066879e-05
+    },
+    {
+      "device": "xerrn.xn4",
+      "total_1_to_5000Hz_rms_v": 5.116536257846622e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335052617e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584652217e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708229581706e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721438323e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460066879e-05
+    },
+    {
+      "device": "xerrn.xn5",
+      "total_1_to_5000Hz_rms_v": 5.116536257846622e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335052617e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584652217e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708229581706e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721438323e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460066879e-05
+    },
+    {
+      "device": "xerrn.xn6",
+      "total_1_to_5000Hz_rms_v": 5.116536257846622e-06,
+      "flicker_1_to_5000Hz_rms_v": 4.995252335052617e-06,
+      "channel_1_to_5000Hz_rms_v": 1.1071350584652217e-06,
+      "total_1_to_1e+09Hz_rms_v": 1.6179708229581706e-05,
+      "flicker_1_to_1e+09Hz_rms_v": 8.008888721438323e-06,
+      "channel_1_to_1e+09Hz_rms_v": 1.405457460066879e-05
+    },
+    {
+      "device": "xon",
+      "total_1_to_5000Hz_rms_v": 4.3702828479577894e-08,
+      "flicker_1_to_5000Hz_rms_v": 4.3590869646396694e-08,
+      "channel_1_to_5000Hz_rms_v": 3.124689663860101e-09,
+      "total_1_to_1e+09Hz_rms_v": 2.43530091911359e-06,
+      "flicker_1_to_1e+09Hz_rms_v": 1.1209379482651789e-06,
+      "channel_1_to_1e+09Hz_rms_v": 2.1607828457719245e-06
+    },
+    {
+      "device": "xop",
+      "total_1_to_5000Hz_rms_v": 4.370282844220989e-08,
+      "flicker_1_to_5000Hz_rms_v": 4.35908696197701e-08,
+      "channel_1_to_5000Hz_rms_v": 3.1246896618693612e-09,
+      "total_1_to_1e+09Hz_rms_v": 2.4353009188823016e-06,
+      "flicker_1_to_1e+09Hz_rms_v": 1.1209379482079347e-06,
+      "channel_1_to_1e+09Hz_rms_v": 2.160782845703255e-06
+    }
+  ]
+}

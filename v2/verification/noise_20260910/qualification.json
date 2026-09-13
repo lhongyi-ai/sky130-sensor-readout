@@ -1,0 +1,265 @@
+{
+  "status": "RC_INTRINSIC_NOISE_CAPABILITY_PASS_SKY130_MODEL_MISMATCH",
+  "generated_utc": "2026-09-10T06:38:23Z",
+  "adc_noise_qualified": false,
+  "full_chain_sndr_qualified": false,
+  "rc_source_report": "results/20260910T062307Z/summary.json",
+  "rc_source_sha256": "7823ed57b488a0339fbab58fb08a6d582bd0fb9e03a78e68000e2384b041221d",
+  "rc_checks": {
+    "all_checks_pass": true,
+    "complete_runs": true,
+    "noise_off_has_zero_variance": true,
+    "intrinsic_thermal_noise_matches_ktc_within_20_percent": true,
+    "same_seed_replays": true,
+    "different_seed_changes_waveform": true,
+    "stationary_integral_matches_ktc_within_2_percent": true,
+    "oversampling_change_under_10_percent": true
+  },
+  "rc_results": [
+    {
+      "name": "off",
+      "seed": 11,
+      "noise_enabled": false,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 0.17524751099699643
+      },
+      "points": 200008,
+      "end_s": 0.02,
+      "variance_v2": 0.0,
+      "rms_v": 0.0,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 0.0,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "a34efa97db672de6dedcfb4bd7d4f87382b93a6509332c79728d06b543145851"
+    },
+    {
+      "name": "on_seed11",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 1.9894135350041324
+      },
+      "points": 1789063,
+      "end_s": 0.02,
+      "variance_v2": 4.36767690389865e-12,
+      "rms_v": 2.089898803715235e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0539715155264517,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "20bedfe27d39537141c7ac6aca067a0eca37b372752f685388a127e74b69b628"
+    },
+    {
+      "name": "replay_seed11",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 1.917016623003292
+      },
+      "points": 1789063,
+      "end_s": 0.02,
+      "variance_v2": 4.36767690389865e-12,
+      "rms_v": 2.089898803715235e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0539715155264517,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "20bedfe27d39537141c7ac6aca067a0eca37b372752f685388a127e74b69b628"
+    },
+    {
+      "name": "on_seed29",
+      "seed": 29,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 2.0577843859937275
+      },
+      "points": 1788332,
+      "end_s": 0.02,
+      "variance_v2": 4.305986164227129e-12,
+      "rms_v": 2.0822717960611123e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0390848185898025,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "ff8a039bc6adcbb226e29f576558ba8e2a7c5964318f108ddf7162668097694e"
+    },
+    {
+      "name": "on_os12",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 12,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 3.2207826970116002
+      },
+      "points": 3102590,
+      "end_s": 0.02,
+      "variance_v2": 4.224291484224446e-12,
+      "rms_v": 2.056764076885803e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0193709369114168,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "407ed6df8a9bb19ea9ca3ee43c74142a7e2ec596a959be490c3a1b1ee8d5f35b"
+    },
+    {
+      "name": "on_sde",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "sde",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 0.2987612269935198
+      },
+      "points": 243413,
+      "end_s": 0.02,
+      "variance_v2": 4.332107671075503e-12,
+      "rms_v": 2.0813943934320783e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.04538824367517,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "41c3c586f7ff7bfa8289bf4a4df6d634e837f3c6f2af9a5b0d3b3453524c7017"
+    }
+  ],
+  "latest_sky130_attempt": "results/20260910T062837Z/summary.json",
+  "latest_sky130_source_sha256": "26530ff56cfb5332f0c2a9e8421fc423841e6e78bc53674324587a06b711da9e",
+  "sky130_attempt": {
+    "ngspice": {
+      "returncode": 0,
+      "elapsed_s": 3.7801348299981328
+    },
+    "conversion": {
+      "returncode": 1,
+      "elapsed_s": 0.4776981839968357
+    },
+    "converted_pdk_location": "/tmp/sensor_noise_pdk_qa87j7ja",
+    "pdk_deck_sha256": "48de7c677e2c6e7d09b2559279de9f818be71010a4aa933d728eb4db3b133c84",
+    "pdk_resolved_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sky130.lib.spice",
+    "status": "CONVERSION_FAILED_NO_SKY130_TRANSIENT_NOISE_RESULT",
+    "converter_adapter_sha256": "a2a841ac9677dbe4cd9b5784fa9ae767ba00ee900a0e2d9d1d518dbb349ee410",
+    "ngspice_plain_tran_output_std_v": 6.469963679937878e-16,
+    "ngspice_stationary_noise_integral_v2": 2.6398354384818218e-08
+  },
+  "specific_integration_gaps": [
+    "Installed ng2vc has no process_instance_m implementation and no level-54 BSIM4 family mapping.",
+    "Its model-name matching does not resolve SKY130 binned base names to model .N variants.",
+    "Confirmed: ngspice selects BSIM4v5 version 4.5; VACASK falls back to 4.8.3. DC/AC agree but noise PSD differs by up to 3.1444 dB at this one bias.",
+    "PDK mismatch semantics, all used PMOS/LVT/passive devices, charge conservation, and noise contribution mapping are not port-qualified.",
+    "No dynamic comparator decision-probability, sampled kT/C, or complete noisy ADC FFT has been run.",
+    "No proven VACASK mixed-signal bridge to existing RTL in this project."
+  ],
+  "allowed_claim": "A preinstalled open-source engine generates intrinsic resistor noise and passes narrow physics/reproducibility controls.",
+  "forbidden_claim": "The SKY130 SAR ADC or full sensor chip has passed noise/SNDR verification.",
+  "sources": [
+    {
+      "title": "Installed VACASK official source/docs a9d8860929517499299b91a0300c0f8ff2ff4716",
+      "url": "https://codeberg.org/arpadbuermen/VACASK",
+      "access": "Read bundled official files; web origin blocked crawler"
+    },
+    {
+      "title": "ngspice official manual, transient noise sources and ordinary small-signal noise",
+      "url": "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf"
+    },
+    {
+      "title": "Xyce official analysis support",
+      "url": "https://xyce.sandia.gov/about-xyce/"
+    }
+  ],
+  "installed_evidence_sha256": {
+    "/foss/tools/vacask/SOURCES": "55f1f0a95c0e15da2c919225e4868bf1e1226339fd44b3b8853c683607284e7a",
+    "/foss/tools/vacask/share/doc/vacask/docs/cmd-analysis-trannoise.md": "83fbadd05c98b359edc2a912d57302f3f943108d8218d1cefb4bfcb2bf3290b7",
+    "/foss/tools/vacask/share/doc/vacask/docs/cmd-options-tran.md": "467dee1b633e8913ec3f2348c9e9104d01f3a1810e06cd5ecf92cc0d2dc2f70a",
+    "/foss/tools/vacask/share/doc/vacask/docs/dev-spice.md": "a3f3a032fa0cc64be3fefb5a6314098bfe5c5cca78c72bd6d9a0831fa3886683",
+    "/foss/tools/vacask/src/vacask/devices/resistor.va": "3ec68d98cd3967617f9ace753cef38cb2d20a13ea07b3f4576d70297d9dcf135",
+    "/foss/tools/vacask/lib/vacask/mod/resistor.osdi": "3dfb7b872a68b954a29165f70bd0ad1b3b2e24d8aa588bb36b5b807ba7a548cf",
+    "/foss/tools/vacask/lib/vacask/mod/spice/bsim4v8.osdi": "068d91fa6b382e9af7d6cbaae0335c510117ef210d1e4331f1ff60036f6b81d2",
+    "/foss/tools/vacask/lib/vacask/python/ng2vclib/converter.py": "38dce3a07358bc7fd46e5990698b2d268dd33461b82556a653645be8258d5cc5",
+    "/foss/tools/vacask/lib/vacask/python/ng2vclib/dfl.py": "b960d10f0d7199d739337d94f62acc6b71b5b09e1fd98ae6032c0f49f216a81f"
+  },
+  "project_sources_sha256": {
+    "single_mos_numeric.py": "835e5a7c3658bac9f005be75a29221a823988eb6d86b2160995d997a98485ade",
+    "test_report.py": "e1f2e84d34c27d1b5e014f582bd72b8411eff1a52ab2086d1b605bc99a1aec35",
+    "build_report.py": "2103b3276cfec826d6211792882d29302e571cbfbdb1b2e41110ca624ddaaf8e",
+    "validate_numeric_model.py": "4a67c2ecee597fb194e9774aa203d9d21a48f0cb047e1cefb720162bb02a6d47",
+    "probe.py": "d9a3e36b69e10d90b8c9213508394f26999a50eb6336c78d72a8e3098e2911be",
+    "convert_relative.py": "7f9ce7832605a1253b7664c73dcb5266bb609eae9d202252677c7c2e1802a732"
+  },
+  "single_bin_comparison": {
+    "path": "results/single_mos_20260910T063501Z/summary.json",
+    "source_sha256": "3c799d18da90cc02a8c20299b30d44d88d5dced9cdd02179b1fe0339e375fac4",
+    "numeric_extraction_equivalence_sha256": "1ccbd70bb4230913c06e3801fad91e6fa616941dc5d1fd28208fa8126723e654",
+    "summary": {
+      "status": "SINGLE_BIN_PROBE_NOT_QUALIFIED",
+      "original_model_implementation": "BSIM4v5 models (Berkeley Short Channel IGFET Model-4)",
+      "selected_model": "xm:nshort_model.29",
+      "original_version": "4.5",
+      "ngspice_op": {
+        "out": 1.718068324769174,
+        "vdd#branch": -4.0965837615413055e-06
+      },
+      "explicit_model_parameter_count": 349,
+      "instance_parameter_count": 14,
+      "constant_fallbacks": [
+        {
+          "parameter": "lintnoi",
+          "reason": "query unavailable; original literal preserved"
+        }
+      ],
+      "numeric_model_runtime_path": "/tmp/sensor_numeric_bin_a1i3tzss/device.sim",
+      "numeric_parameters_sha256": "9da82c1585519f892d1909440c6101b3069227b33ed86e3d109d5d8e52fd04d5",
+      "native_deck_sha256": "2d5f43771f9e318d6b3feb50ed00b292fd3613da1a4270362fa7f3214c298173",
+      "ngspice_model_file_sha256": "e90265f1a1b6057fbb4324a2e5d2b4ff8d6e5028314daec563eda1defb3a91de",
+      "vacask_model_source_sha256": "57c171ca7148b72ab6008493045d8eb14dc3e0e50d36fb900523c61b7ab936bf",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 46.39742387601291
+      },
+      "unknown_version_fallback": true,
+      "adc_noise_qualified": false,
+      "sky130_model_equivalence_qualified": false,
+      "vacask_op": {
+        "out": 1.7180683238785452,
+        "vdd:flow(br)": -4.096583806072745e-06
+      },
+      "dc_current_relative_error": 1.0870384148375933e-08,
+      "noise_psd_ratio_minmax": [
+        0.48479559591059346,
+        0.999979041272942
+      ],
+      "ngspice_noise_rms_v": 0.00016247570398314395,
+      "vacask_noise_rms_v": 0.0001397943221599987,
+      "off_std_v": 2.220446049250313e-16,
+      "on_std_v": 0.00013128867349343162
+    },
+    "extraction_control": {
+      "status": "NUMERIC_EXTRACTION_NATIVE_EQUIVALENCE_PASS_SINGLE_BIAS",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 0.013534996003727429
+      },
+      "source_sha256": "af60d8889e2dc2aa70859d9146c845ced0d9a4b4c1bf19f4632acc65f7d647c2",
+      "source_runtime_path": "/tmp/sensor_numeric_bin_a1i3tzss/flat_ngspice.spice",
+      "same_model_version": "4.5",
+      "all_original_explicit_model_parameters_preserved": true,
+      "dc_current_relative_error": 9.892087149410145e-13,
+      "max_ac_complex_relative_error": 1.354667013223615e-13,
+      "max_noise_psd_relative_error": 2.724487302430134e-13,
+      "native_bin_extraction_equivalent_at_tested_bias": true,
+      "vacask_ac_max_relative_error": 2.1073402668622666e-09,
+      "vacask_unknown_version_fallback": true,
+      "vacask_noise_max_error_db": 3.144413341396555,
+      "vacask_model_equivalence_qualified": false
+    },
+    "model_fixture_accepted": false
+  }
+}

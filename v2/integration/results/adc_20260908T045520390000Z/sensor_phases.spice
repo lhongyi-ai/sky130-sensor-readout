@@ -1,0 +1,47 @@
+* Real SKY130 static CMOS + PDK R/MIM nonoverlap phase generator candidate.
+* No ideal delay/source/logic element is inside this subcircuit.
+* SAMPLE_CMD is the registered SAR acquisition request.
+* TOP opens first; ACQ drops after delay; CONV rises only after ACQ feedback.
+* On acquisition entry CONV drops, ACQ rises after dead time, then TOP closes.
+* Logical interlock makes dead time positive; exact delays require PVT/PEX.
+.subckt phase_inv A Y VDD VSS params: SIZE=1
+XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15
+XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15
+.ends phase_inv
+.subckt phase_nor A B Y VDD VSS
+XN1 Y A VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=.15
+XN2 Y B VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=.15
+XP1 MID A VDD VDD sky130_fd_pr__pfet_01v8 W=4 L=.15
+XP2 Y B MID VDD sky130_fd_pr__pfet_01v8 W=4 L=.15
+.ends phase_nor
+.subckt phase_nand A B Y VDD VSS
+XP1 Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=.15
+XP2 Y B VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=.15
+XN1 Y A MID VSS sky130_fd_pr__nfet_01v8 W=4 L=.15
+XN2 MID B VSS VSS sky130_fd_pr__nfet_01v8 W=4 L=.15
+.ends phase_nand
+.subckt phase_buffer A Y VDD VSS
+XI1 A B VDD VSS phase_inv SIZE=2
+XI2 B Y VDD VSS phase_inv SIZE=16
+.ends phase_buffer
+.subckt phase_delay A Y VDD VSS
+* 15kohm nominal high-poly electrical fit; ~1pF MIM, <30um dimensions.
+XR A RC VSS sky130_fd_pr__res_high_po_1p41 L=63.924
+XC RC VSS sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215
+XI1 RC B VDD VSS phase_inv SIZE=1
+XI2 B Y VDD VSS phase_inv SIZE=2
+.ends phase_delay
+.subckt sensor_phases SAMPLE_CMD TOP TOPB ACQ CONV VDD VSS
+XCMDB SAMPLE_CMD CMD_B VDD VSS phase_inv SIZE=2
+XDCMD CMD_B CMD_B_DELAY VDD VSS phase_delay
+XDACQ ACQ ACQ_DELAY VDD VSS phase_delay
+XDCONV CONV CONV_DELAY VDD VSS phase_delay
+XNACQ CMD_B_DELAY CONV_DELAY ACQ_RAW VDD VSS phase_nor
+XNCONV SAMPLE_CMD ACQ_DELAY CONV_RAW VDD VSS phase_nor
+XBACQ ACQ_RAW ACQ VDD VSS phase_buffer
+XBCONV CONV_RAW CONV VDD VSS phase_buffer
+XNTOP SAMPLE_CMD ACQ_DELAY TOP_RAW_B VDD VSS phase_nand
+XTOPI TOP_RAW_B TOP_RAW VDD VSS phase_inv SIZE=2
+XBTOP TOP_RAW TOP VDD VSS phase_buffer
+XTOPB TOP TOPB VDD VSS phase_inv SIZE=16
+.ends sensor_phases

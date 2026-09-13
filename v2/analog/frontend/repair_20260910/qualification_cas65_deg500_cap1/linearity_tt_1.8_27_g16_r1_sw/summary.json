@@ -1,0 +1,26 @@
+{
+  "test": "linearity",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gain_implementation": "real transistor gain-select network, fixed select during this test",
+  "circuit_source": "repair_20260910/results/20260910T062816489259Z_cascoded_tail_g16/candidate.spice",
+  "circuit_sha256": "86889394196a510e0a267bb9a8a74b79f1ceb69116e3a88352a61f0a236de3ca",
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "calibration_points_output_equivalent_v": [
+    -0.32,
+    0,
+    0.32
+  ],
+  "calibration_source": "this nominal/static experiment",
+  "calibration_coefficients": [
+    1.0023026619457918,
+    -5.950812195540505e-12
+  ],
+  "max_holdout_error_lsb": 0.7703137274910432,
+  "holdout_1LSB_gate": true,
+  "fixed_calibration_4LSB_gate": null,
+  "max_output_cm_error_v": 0.001536933000000018,
+  "caution": "Frontend DC transfer after three-point linear calibration; not ADC INL/DNL or noise-bearing conversion accuracy."
+}

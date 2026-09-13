@@ -1,0 +1,47 @@
+Two uncoupled scalar loop probes, NOT two-chip circuit implementation
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include measurement_injections.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18
+VDD VDD 0 1.8
+VCM VCM 0 .9
+VIP SP 0 .9
+VIN SN 0 .9
+VSEL0 SEL0 0 0
+VSEL1 SEL1 0 0
+RSP_cm SP IP_cm 350
+RSN_cm SN IN_cm 350
+XPGA_cm IP_cm IN_cm OP_cm ON_cm VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga CMAC=1 DMAC=0
+XRIP_cm OP_cm FP_cm 0 frontend_r R=2600
+XRIN_cm ON_cm FN_cm 0 frontend_r R=2600
+XCFP_cm FP_cm 0 frontend_c4p
+XCFN_cm FN_cm 0 frontend_c4p
+CLP_cm FP_cm 0 81.285p
+CLN_cm FN_cm 0 81.285p
+RSP_dm SP IP_dm 350
+RSN_dm SN IN_dm 350
+XPGA_dm IP_dm IN_dm OP_dm ON_dm VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga CMAC=0 DMAC=1
+XRIP_dm OP_dm FP_dm 0 frontend_r R=2600
+XRIN_dm ON_dm FN_dm 0 frontend_r R=2600
+XCFP_dm FP_dm 0 frontend_c4p
+XCFN_dm FN_dm 0 frontend_c4p
+CLP_dm FP_dm 0 81.285p
+CLN_dm FN_dm 0 81.285p
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+op
+wrdata op.dat v(op_cm) v(on_cm) v(op_dm) v(on_dm)
+ac dec 100 1 1g
+let cm_loop=-v(xpga_cm.xamp.cmsense)/v(xpga_cm.xamp.icmsense)
+let dm_loop=-(v(xpga_dm.fbp)-v(xpga_dm.fbn))/(v(xpga_dm.ifbp)-v(xpga_dm.ifbn))
+let cmr=real(cm_loop)
+let cmi=imag(cm_loop)
+let dmr=real(dm_loop)
+let dmi=imag(dm_loop)
+wrdata loops.dat cmr cmi dmr dmi
+quit
+.endc
+.end

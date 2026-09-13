@@ -1,0 +1,68 @@
+{
+  "status": "SIMULATION_COMPLETED_DEVICE_OP_EXPORT_FAILED",
+  "source_report_sha256": "a810cd9eed294831ed231bddca2564bea97eb26f47a344d6b9a1e878af34da67",
+  "source_status": {
+    "job": {
+      "id": "P01_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": 27,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P01",
+      "group": "nominal"
+    },
+    "status": "FAIL",
+    "performance_status": "NOT_RUN",
+    "package_sha256": "3502851b9bacef25d0c2e9f21aee3aef4de3baf5a88e9e7476bde57417e54933",
+    "site": {
+      "ocean": "/project/engineering/cadence21/ic/tools/dfII/bin/ocean",
+      "spectre": "/project/engineering/cadence21/spectre/tools/bin/spectre",
+      "workdir": "/home/compute/l.hongyi/cadence_skywater",
+      "model": "/project/engineering/cadence21/CDK/sky130_release_0.0.3/models/sky130.lib.spice"
+    },
+    "native_netlist_sha256": "afecf75d377c290e4f8976d3635ef3ec22f836f8a6ae62d1905904546ad88d3b",
+    "input_sha256": "7ac8a481dbf6a9e6be21d8efeb335830a3d7efe74b8baad1750b73d95b047c95",
+    "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+    "error": "Incomplete/nonfinite device OP"
+  },
+  "observed_scalar_OP": {
+    "VOUT": 0.9000120331720024,
+    "VINP": 0.9,
+    "VSS": 0.0,
+    "VBP": 0.6327533990046771,
+    "VDD": 1.8,
+    "ivdd": -0.0001510153568156326
+  },
+  "supply_power_uW": 271.8276422681387,
+  "device_rows_exported": 0,
+  "internal_device_identifiers_in_PSF": [
+    "XOTA.M1.msky130_fd_pr__nfet_01v8",
+    "XOTA.M10.msky130_fd_pr__nfet_01v8",
+    "XOTA.M2.msky130_fd_pr__nfet_01v8",
+    "XOTA.M3A.msky130_fd_pr__pfet_01v8",
+    "XOTA.M3B.msky130_fd_pr__pfet_01v8",
+    "XOTA.M4A.msky130_fd_pr__pfet_01v8",
+    "XOTA.M4B.msky130_fd_pr__pfet_01v8",
+    "XOTA.M5.msky130_fd_pr__nfet_01v8",
+    "XOTA.M6.msky130_fd_pr__nfet_01v8",
+    "XOTA.M7A.msky130_fd_pr__pfet_01v8",
+    "XOTA.M7B.msky130_fd_pr__pfet_01v8",
+    "XOTA.M8.msky130_fd_pr__pfet_01v8",
+    "XOTA.M9.msky130_fd_pr__pfet_01v8"
+  ],
+  "numeric_device_OP_not_decoded_locally": true,
+  "normal_completion": true,
+  "spectre_errors": 0,
+  "spectre_warnings": 0,
+  "spectre_notices": 3,
+  "convergence_iterations": 11,
+  "numerical_notice": "Bad pivoting; actual simulation converged; notice retained",
+  "cause": "Exporter selected wrapper instance rather than internal MOS; interactive input continued after errors and wrote a misleading COMPLETE marker",
+  "next": "Apply 1.0.4p3; re-export retained PSF before evaluating device operation"
+}

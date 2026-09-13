@@ -1,0 +1,56 @@
+{
+  "generator": "generate_floorplan.py",
+  "evidence_level": "Generated hierarchical placement input; no routing/LVS/PEX",
+  "pitch_um": {
+    "x": 6.0,
+    "y": 4.54
+  },
+  "rows": 66,
+  "columns": 66,
+  "instances_per_side": 4356,
+  "instance_counts_by_net": {
+    "P": {
+      "B0": 1,
+      "B1": 2,
+      "B10": 1024,
+      "B11": 2048,
+      "B2": 4,
+      "B3": 8,
+      "B4": 16,
+      "B5": 32,
+      "B6": 64,
+      "B7": 128,
+      "B8": 256,
+      "B9": 512,
+      "DUMMY": 1,
+      "EDGE": 260
+    },
+    "N": {
+      "B0": 1,
+      "B1": 2,
+      "B10": 1024,
+      "B11": 2048,
+      "B2": 4,
+      "B3": 8,
+      "B4": 16,
+      "B5": 32,
+      "B6": 64,
+      "B7": 128,
+      "B8": 256,
+      "B9": 512,
+      "DUMMY": 1,
+      "EDGE": 260
+    }
+  },
+  "planned_unconnected_pin_markers": 28,
+  "source_sha256": {
+    "v2/physical/cdac/cdac_p_assignment.csv": "5c604dd024ba0c9fb5970ed5424c02e7a75f0b4b5695f208856f28f176272d88",
+    "v2/physical/cdac/cdac_n_assignment.csv": "498bf0359188651409dfbba9b273e8c02c522107d5768723f479f50fc965df34",
+    "v2/physical/cdac/assignment_summary.json": "13e1086f7d73e8568d5b9452b676765ed4fbb49ba3c6c0e1d3c17a538000135d",
+    "v2/environment/results/physical_20260908T022855079643Z/mim_unit.mag": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e"
+  },
+  "generated_sha256": {
+    "placement_index.csv": "53667bd5e0cf168329bc53d30e240de068e49d2d7be2693e441ef8cb3c68c9b9",
+    "generate_cdac_floorplan.tcl": "6982769f6929631222e1ec22fec64f034c4737bde0bbf8948485818b12fc89d2"
+  }
+}

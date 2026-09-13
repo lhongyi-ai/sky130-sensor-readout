@@ -1,0 +1,41 @@
+{
+  "kind": "local",
+  "gain": 4,
+  "sampler_state": "hold",
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temperature_c": 27,
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "complete_frontend_qualified": false,
+  "formal_stability_gate_pass": false,
+  "single_worker": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 4.810143356997287,
+  "simulator_diagnostics": [],
+  "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+  "port_count": 4,
+  "port_order": [
+    "dm",
+    "input_cm",
+    "stage1_cm",
+    "output_cm"
+  ],
+  "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+  "max_reconstruction_relative_residual": 1.9235099422613808e-16,
+  "max_C_condition_number": 3252.1792535667237,
+  "return_difference_low": {
+    "real": 9459108.962457497,
+    "imag": -20990.321981811383
+  },
+  "return_difference_high": {
+    "real": 0.9253937245704833,
+    "imag": -0.06584082170555655
+  },
+  "min_abs_return_difference": 0.9277330215516176,
+  "minimum_singular_value_of_normalized_return_difference": 0.8524465930126095,
+  "finite_positive_axis_phase_change_deg": -3.9425359880591624,
+  "reference_RHP_pole_count": null,
+  "winding_number_qualified": false,
+  "unobserved_internal_modes_excluded": false
+}

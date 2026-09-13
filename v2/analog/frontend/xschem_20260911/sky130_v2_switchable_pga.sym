@@ -1,0 +1,43 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist sky130_v2_switchable_pga"
+template="name=XPGA"
+}
+V {}
+S {}
+F {}
+E {}
+B 4 -100 -120 100 120 {fill=false}
+L 4 -100 -45 -75 -45 {}
+L 4 -100 45 -75 45 {}
+L 4 75 -45 100 -45 {}
+L 4 75 45 100 45 {}
+L 4 -50 -140 -50 -120 {}
+L 4 0 -140 0 -120 {}
+L 4 0 120 0 140 {}
+L 4 -60 120 -60 140 {}
+L 4 60 120 60 140 {}
+B 5 -122.5 -47.5 -117.5 -42.5 {name=VINP dir=in pinnumber=1}
+B 5 -122.5 42.5 -117.5 47.5 {name=VINN dir=in pinnumber=2}
+B 5 117.5 -47.5 122.5 -42.5 {name=OUTP dir=out pinnumber=3}
+B 5 117.5 42.5 122.5 47.5 {name=OUTN dir=out pinnumber=4}
+B 5 -52.5 -142.5 -47.5 -137.5 {name=VDD dir=inout pinnumber=5}
+B 5 -2.5 137.5 2.5 142.5 {name=VSS dir=inout pinnumber=6}
+B 5 -2.5 -142.5 2.5 -137.5 {name=VCM dir=in pinnumber=7}
+B 5 -62.5 137.5 -57.5 142.5 {name=SEL0 dir=in pinnumber=8}
+B 5 57.5 137.5 62.5 142.5 {name=SEL1 dir=in pinnumber=9}
+T {TRUE FULLY DIFFERENTIAL} 0 -82 0 0 0.28 0.28 {hcenter=true}
+T {SWITCHABLE PGA} 0 -58 0 0 0.38 0.38 {hcenter=true}
+T {G = 1 / 4 / 16} 0 -12 0 0 0.34 0.34 {hcenter=true}
+T {cross-feedback + real TG} 0 22 0 0 0.24 0.24 {hcenter=true}
+T {@name} 0 72 0 0 0.24 0.24 {hcenter=true}
+T {VINP} -94 -55 0 1 0.2 0.2 {}
+T {VINN} -94 35 0 1 0.2 0.2 {}
+T {OUTP} 94 -55 0 0 0.2 0.2 {}
+T {OUTN} 94 35 0 0 0.2 0.2 {}
+T {VDD} -55 -116 0 0 0.18 0.18 {}
+T {VCM} 5 -116 0 0 0.18 0.18 {}
+T {SEL0} -70 102 0 0 0.18 0.18 {}
+T {VSS} 5 102 0 0 0.18 0.18 {}
+T {SEL1} 35 102 0 0 0.18 0.18 {}

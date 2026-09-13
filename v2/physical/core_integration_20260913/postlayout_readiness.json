@@ -1,0 +1,12 @@
+{
+  "status": "BLOCKED_FULL_CORE_POSTLAYOUT",
+  "ready_to_simulate": false,
+  "full_core_performance_pass": false,
+  "reasons": [
+    "required physical views are missing: frontend, comparator_and_preamp, reference_selection_and_distribution, nonoverlap_phase_and_clock_drive, core_interconnect_and_power_routing",
+    "full core module inventory incomplete",
+    "digital LVS-only SPICE is not a post-layout simulation view",
+    "full core extracted view missing"
+  ],
+  "scope": "Readiness and binding integrity only; the 135-row performance matrix must be executed and independently evaluated."
+}

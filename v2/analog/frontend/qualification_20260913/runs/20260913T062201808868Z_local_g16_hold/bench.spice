@@ -1,0 +1,324 @@
+* Frozen candidate_06: G16, hold
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include injections.spice
+.include adc_blocks.spice
+.include sampling_switch.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=300 itl2=300 method=gear maxord=2
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+VINP VINP 0 0.9 ac 0
+VINN VINN 0 0.9 ac 0
+VACQ ACQ 0 0
+VACQB ACQB 0 1.8
+VSEL0 SEL0 0 0
+VSEL1 SEL1 0 1.8
+RSP_dm_v VINP IP_dm_v 350
+RSN_dm_v VINN IN_dm_v 350
+XPGA_dm_v IP_dm_v IN_dm_v OP_dm_v ON_dm_v VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga DV=1
+XRIP_dm_v OP_dm_v FP_dm_v 0 rd_hr R=1500
+XRIN_dm_v ON_dm_v FN_dm_v 0 rd_hr R=1500
+XCFP_dm_v FP_dm_v 0 rd_c4p
+XCFN_dm_v FN_dm_v 0 rd_c4p
+XTGP_dm_v FP_dm_v HP_dm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_dm_v FN_dm_v HN_dm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_dm_v HP_dm_v VCM adc_mim_bank COUNT=4096
+XCN_dm_v HN_dm_v VCM adc_mim_bank COUNT=4096
+RLEAKP_dm_v HP_dm_v VCM 1g
+RLEAKN_dm_v HN_dm_v VCM 1g
+RSP_dm_i VINP IP_dm_i 350
+RSN_dm_i VINN IN_dm_i 350
+XPGA_dm_i IP_dm_i IN_dm_i OP_dm_i ON_dm_i VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga DI=1
+XRIP_dm_i OP_dm_i FP_dm_i 0 rd_hr R=1500
+XRIN_dm_i ON_dm_i FN_dm_i 0 rd_hr R=1500
+XCFP_dm_i FP_dm_i 0 rd_c4p
+XCFN_dm_i FN_dm_i 0 rd_c4p
+XTGP_dm_i FP_dm_i HP_dm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_dm_i FN_dm_i HN_dm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_dm_i HP_dm_i VCM adc_mim_bank COUNT=4096
+XCN_dm_i HN_dm_i VCM adc_mim_bank COUNT=4096
+RLEAKP_dm_i HP_dm_i VCM 1g
+RLEAKN_dm_i HN_dm_i VCM 1g
+RSP_input_cm_v VINP IP_input_cm_v 350
+RSN_input_cm_v VINN IN_input_cm_v 350
+XPGA_input_cm_v IP_input_cm_v IN_input_cm_v OP_input_cm_v ON_input_cm_v VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga CV=1
+XRIP_input_cm_v OP_input_cm_v FP_input_cm_v 0 rd_hr R=1500
+XRIN_input_cm_v ON_input_cm_v FN_input_cm_v 0 rd_hr R=1500
+XCFP_input_cm_v FP_input_cm_v 0 rd_c4p
+XCFN_input_cm_v FN_input_cm_v 0 rd_c4p
+XTGP_input_cm_v FP_input_cm_v HP_input_cm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_input_cm_v FN_input_cm_v HN_input_cm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_input_cm_v HP_input_cm_v VCM adc_mim_bank COUNT=4096
+XCN_input_cm_v HN_input_cm_v VCM adc_mim_bank COUNT=4096
+RLEAKP_input_cm_v HP_input_cm_v VCM 1g
+RLEAKN_input_cm_v HN_input_cm_v VCM 1g
+RSP_input_cm_i VINP IP_input_cm_i 350
+RSN_input_cm_i VINN IN_input_cm_i 350
+XPGA_input_cm_i IP_input_cm_i IN_input_cm_i OP_input_cm_i ON_input_cm_i VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga CI=1
+XRIP_input_cm_i OP_input_cm_i FP_input_cm_i 0 rd_hr R=1500
+XRIN_input_cm_i ON_input_cm_i FN_input_cm_i 0 rd_hr R=1500
+XCFP_input_cm_i FP_input_cm_i 0 rd_c4p
+XCFN_input_cm_i FN_input_cm_i 0 rd_c4p
+XTGP_input_cm_i FP_input_cm_i HP_input_cm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_input_cm_i FN_input_cm_i HN_input_cm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_input_cm_i HP_input_cm_i VCM adc_mim_bank COUNT=4096
+XCN_input_cm_i HN_input_cm_i VCM adc_mim_bank COUNT=4096
+RLEAKP_input_cm_i HP_input_cm_i VCM 1g
+RLEAKN_input_cm_i HN_input_cm_i VCM 1g
+RSP_stage1_cm_v VINP IP_stage1_cm_v 350
+RSN_stage1_cm_v VINN IN_stage1_cm_v 350
+XPGA_stage1_cm_v IP_stage1_cm_v IN_stage1_cm_v OP_stage1_cm_v ON_stage1_cm_v VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga NV=1
+XRIP_stage1_cm_v OP_stage1_cm_v FP_stage1_cm_v 0 rd_hr R=1500
+XRIN_stage1_cm_v ON_stage1_cm_v FN_stage1_cm_v 0 rd_hr R=1500
+XCFP_stage1_cm_v FP_stage1_cm_v 0 rd_c4p
+XCFN_stage1_cm_v FN_stage1_cm_v 0 rd_c4p
+XTGP_stage1_cm_v FP_stage1_cm_v HP_stage1_cm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_stage1_cm_v FN_stage1_cm_v HN_stage1_cm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_stage1_cm_v HP_stage1_cm_v VCM adc_mim_bank COUNT=4096
+XCN_stage1_cm_v HN_stage1_cm_v VCM adc_mim_bank COUNT=4096
+RLEAKP_stage1_cm_v HP_stage1_cm_v VCM 1g
+RLEAKN_stage1_cm_v HN_stage1_cm_v VCM 1g
+RSP_stage1_cm_i VINP IP_stage1_cm_i 350
+RSN_stage1_cm_i VINN IN_stage1_cm_i 350
+XPGA_stage1_cm_i IP_stage1_cm_i IN_stage1_cm_i OP_stage1_cm_i ON_stage1_cm_i VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga NI=1
+XRIP_stage1_cm_i OP_stage1_cm_i FP_stage1_cm_i 0 rd_hr R=1500
+XRIN_stage1_cm_i ON_stage1_cm_i FN_stage1_cm_i 0 rd_hr R=1500
+XCFP_stage1_cm_i FP_stage1_cm_i 0 rd_c4p
+XCFN_stage1_cm_i FN_stage1_cm_i 0 rd_c4p
+XTGP_stage1_cm_i FP_stage1_cm_i HP_stage1_cm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_stage1_cm_i FN_stage1_cm_i HN_stage1_cm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_stage1_cm_i HP_stage1_cm_i VCM adc_mim_bank COUNT=4096
+XCN_stage1_cm_i HN_stage1_cm_i VCM adc_mim_bank COUNT=4096
+RLEAKP_stage1_cm_i HP_stage1_cm_i VCM 1g
+RLEAKN_stage1_cm_i HN_stage1_cm_i VCM 1g
+RSP_output_cm_v VINP IP_output_cm_v 350
+RSN_output_cm_v VINN IN_output_cm_v 350
+XPGA_output_cm_v IP_output_cm_v IN_output_cm_v OP_output_cm_v ON_output_cm_v VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga OV=1
+XRIP_output_cm_v OP_output_cm_v FP_output_cm_v 0 rd_hr R=1500
+XRIN_output_cm_v ON_output_cm_v FN_output_cm_v 0 rd_hr R=1500
+XCFP_output_cm_v FP_output_cm_v 0 rd_c4p
+XCFN_output_cm_v FN_output_cm_v 0 rd_c4p
+XTGP_output_cm_v FP_output_cm_v HP_output_cm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_output_cm_v FN_output_cm_v HN_output_cm_v ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_output_cm_v HP_output_cm_v VCM adc_mim_bank COUNT=4096
+XCN_output_cm_v HN_output_cm_v VCM adc_mim_bank COUNT=4096
+RLEAKP_output_cm_v HP_output_cm_v VCM 1g
+RLEAKN_output_cm_v HN_output_cm_v VCM 1g
+RSP_output_cm_i VINP IP_output_cm_i 350
+RSN_output_cm_i VINN IN_output_cm_i 350
+XPGA_output_cm_i IP_output_cm_i IN_output_cm_i OP_output_cm_i ON_output_cm_i VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga OI=1
+XRIP_output_cm_i OP_output_cm_i FP_output_cm_i 0 rd_hr R=1500
+XRIN_output_cm_i ON_output_cm_i FN_output_cm_i 0 rd_hr R=1500
+XCFP_output_cm_i FP_output_cm_i 0 rd_c4p
+XCFN_output_cm_i FN_output_cm_i 0 rd_c4p
+XTGP_output_cm_i FP_output_cm_i HP_output_cm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_output_cm_i FN_output_cm_i HN_output_cm_i ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_output_cm_i HP_output_cm_i VCM adc_mim_bank COUNT=4096
+XCN_output_cm_i HN_output_cm_i VCM adc_mim_bank COUNT=4096
+RLEAKP_output_cm_i HP_output_cm_i VCM 1g
+RLEAKN_output_cm_i HN_output_cm_i VCM 1g
+.control
+set noaskquit
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+set filetype=ascii
+op
+ac dec 120 1 1g
+let r0c0_v_ve=(v(xpga_dm_v.i_sumpos)-v(xpga_dm_v.i_sumneg))
+let r0c0_v_ve_r=real(r0c0_v_ve)
+let r0c0_v_ve_i=imag(r0c0_v_ve)
+let r0c0_v_if=(-i(v.xpga_dm_v.vtestp)+i(v.xpga_dm_v.vtestn))/2
+let r0c0_v_if_r=real(r0c0_v_if)
+let r0c0_v_if_i=imag(r0c0_v_if)
+let r1c0_v_ve=(v(xpga_dm_v.i_sumpos)+v(xpga_dm_v.i_sumneg))/2
+let r1c0_v_ve_r=real(r1c0_v_ve)
+let r1c0_v_ve_i=imag(r1c0_v_ve)
+let r1c0_v_if=(-i(v.xpga_dm_v.vtestp)-i(v.xpga_dm_v.vtestn))
+let r1c0_v_if_r=real(r1c0_v_if)
+let r1c0_v_if_i=imag(r1c0_v_if)
+let r2c0_v_ve=v(xpga_dm_v.xota.ncm_gate)
+let r2c0_v_ve_r=real(r2c0_v_ve)
+let r2c0_v_ve_i=imag(r2c0_v_ve)
+let r2c0_v_if=-i(v.xpga_dm_v.xota.vtestncm)
+let r2c0_v_if_r=real(r2c0_v_if)
+let r2c0_v_if_i=imag(r2c0_v_if)
+let r3c0_v_ve=v(xpga_dm_v.xota.cms_error)
+let r3c0_v_ve_r=real(r3c0_v_ve)
+let r3c0_v_ve_i=imag(r3c0_v_ve)
+let r3c0_v_if=-i(v.xpga_dm_v.xota.vtestocm)
+let r3c0_v_if_r=real(r3c0_v_if)
+let r3c0_v_if_i=imag(r3c0_v_if)
+let r0c0_i_ve=(v(xpga_dm_i.i_sumpos)-v(xpga_dm_i.i_sumneg))
+let r0c0_i_ve_r=real(r0c0_i_ve)
+let r0c0_i_ve_i=imag(r0c0_i_ve)
+let r0c0_i_if=(-i(v.xpga_dm_i.vtestp)+i(v.xpga_dm_i.vtestn))/2
+let r0c0_i_if_r=real(r0c0_i_if)
+let r0c0_i_if_i=imag(r0c0_i_if)
+let r1c0_i_ve=(v(xpga_dm_i.i_sumpos)+v(xpga_dm_i.i_sumneg))/2
+let r1c0_i_ve_r=real(r1c0_i_ve)
+let r1c0_i_ve_i=imag(r1c0_i_ve)
+let r1c0_i_if=(-i(v.xpga_dm_i.vtestp)-i(v.xpga_dm_i.vtestn))
+let r1c0_i_if_r=real(r1c0_i_if)
+let r1c0_i_if_i=imag(r1c0_i_if)
+let r2c0_i_ve=v(xpga_dm_i.xota.ncm_gate)
+let r2c0_i_ve_r=real(r2c0_i_ve)
+let r2c0_i_ve_i=imag(r2c0_i_ve)
+let r2c0_i_if=-i(v.xpga_dm_i.xota.vtestncm)
+let r2c0_i_if_r=real(r2c0_i_if)
+let r2c0_i_if_i=imag(r2c0_i_if)
+let r3c0_i_ve=v(xpga_dm_i.xota.cms_error)
+let r3c0_i_ve_r=real(r3c0_i_ve)
+let r3c0_i_ve_i=imag(r3c0_i_ve)
+let r3c0_i_if=-i(v.xpga_dm_i.xota.vtestocm)
+let r3c0_i_if_r=real(r3c0_i_if)
+let r3c0_i_if_i=imag(r3c0_i_if)
+let r0c1_v_ve=(v(xpga_input_cm_v.i_sumpos)-v(xpga_input_cm_v.i_sumneg))
+let r0c1_v_ve_r=real(r0c1_v_ve)
+let r0c1_v_ve_i=imag(r0c1_v_ve)
+let r0c1_v_if=(-i(v.xpga_input_cm_v.vtestp)+i(v.xpga_input_cm_v.vtestn))/2
+let r0c1_v_if_r=real(r0c1_v_if)
+let r0c1_v_if_i=imag(r0c1_v_if)
+let r1c1_v_ve=(v(xpga_input_cm_v.i_sumpos)+v(xpga_input_cm_v.i_sumneg))/2
+let r1c1_v_ve_r=real(r1c1_v_ve)
+let r1c1_v_ve_i=imag(r1c1_v_ve)
+let r1c1_v_if=(-i(v.xpga_input_cm_v.vtestp)-i(v.xpga_input_cm_v.vtestn))
+let r1c1_v_if_r=real(r1c1_v_if)
+let r1c1_v_if_i=imag(r1c1_v_if)
+let r2c1_v_ve=v(xpga_input_cm_v.xota.ncm_gate)
+let r2c1_v_ve_r=real(r2c1_v_ve)
+let r2c1_v_ve_i=imag(r2c1_v_ve)
+let r2c1_v_if=-i(v.xpga_input_cm_v.xota.vtestncm)
+let r2c1_v_if_r=real(r2c1_v_if)
+let r2c1_v_if_i=imag(r2c1_v_if)
+let r3c1_v_ve=v(xpga_input_cm_v.xota.cms_error)
+let r3c1_v_ve_r=real(r3c1_v_ve)
+let r3c1_v_ve_i=imag(r3c1_v_ve)
+let r3c1_v_if=-i(v.xpga_input_cm_v.xota.vtestocm)
+let r3c1_v_if_r=real(r3c1_v_if)
+let r3c1_v_if_i=imag(r3c1_v_if)
+let r0c1_i_ve=(v(xpga_input_cm_i.i_sumpos)-v(xpga_input_cm_i.i_sumneg))
+let r0c1_i_ve_r=real(r0c1_i_ve)
+let r0c1_i_ve_i=imag(r0c1_i_ve)
+let r0c1_i_if=(-i(v.xpga_input_cm_i.vtestp)+i(v.xpga_input_cm_i.vtestn))/2
+let r0c1_i_if_r=real(r0c1_i_if)
+let r0c1_i_if_i=imag(r0c1_i_if)
+let r1c1_i_ve=(v(xpga_input_cm_i.i_sumpos)+v(xpga_input_cm_i.i_sumneg))/2
+let r1c1_i_ve_r=real(r1c1_i_ve)
+let r1c1_i_ve_i=imag(r1c1_i_ve)
+let r1c1_i_if=(-i(v.xpga_input_cm_i.vtestp)-i(v.xpga_input_cm_i.vtestn))
+let r1c1_i_if_r=real(r1c1_i_if)
+let r1c1_i_if_i=imag(r1c1_i_if)
+let r2c1_i_ve=v(xpga_input_cm_i.xota.ncm_gate)
+let r2c1_i_ve_r=real(r2c1_i_ve)
+let r2c1_i_ve_i=imag(r2c1_i_ve)
+let r2c1_i_if=-i(v.xpga_input_cm_i.xota.vtestncm)
+let r2c1_i_if_r=real(r2c1_i_if)
+let r2c1_i_if_i=imag(r2c1_i_if)
+let r3c1_i_ve=v(xpga_input_cm_i.xota.cms_error)
+let r3c1_i_ve_r=real(r3c1_i_ve)
+let r3c1_i_ve_i=imag(r3c1_i_ve)
+let r3c1_i_if=-i(v.xpga_input_cm_i.xota.vtestocm)
+let r3c1_i_if_r=real(r3c1_i_if)
+let r3c1_i_if_i=imag(r3c1_i_if)
+let r0c2_v_ve=(v(xpga_stage1_cm_v.i_sumpos)-v(xpga_stage1_cm_v.i_sumneg))
+let r0c2_v_ve_r=real(r0c2_v_ve)
+let r0c2_v_ve_i=imag(r0c2_v_ve)
+let r0c2_v_if=(-i(v.xpga_stage1_cm_v.vtestp)+i(v.xpga_stage1_cm_v.vtestn))/2
+let r0c2_v_if_r=real(r0c2_v_if)
+let r0c2_v_if_i=imag(r0c2_v_if)
+let r1c2_v_ve=(v(xpga_stage1_cm_v.i_sumpos)+v(xpga_stage1_cm_v.i_sumneg))/2
+let r1c2_v_ve_r=real(r1c2_v_ve)
+let r1c2_v_ve_i=imag(r1c2_v_ve)
+let r1c2_v_if=(-i(v.xpga_stage1_cm_v.vtestp)-i(v.xpga_stage1_cm_v.vtestn))
+let r1c2_v_if_r=real(r1c2_v_if)
+let r1c2_v_if_i=imag(r1c2_v_if)
+let r2c2_v_ve=v(xpga_stage1_cm_v.xota.ncm_gate)
+let r2c2_v_ve_r=real(r2c2_v_ve)
+let r2c2_v_ve_i=imag(r2c2_v_ve)
+let r2c2_v_if=-i(v.xpga_stage1_cm_v.xota.vtestncm)
+let r2c2_v_if_r=real(r2c2_v_if)
+let r2c2_v_if_i=imag(r2c2_v_if)
+let r3c2_v_ve=v(xpga_stage1_cm_v.xota.cms_error)
+let r3c2_v_ve_r=real(r3c2_v_ve)
+let r3c2_v_ve_i=imag(r3c2_v_ve)
+let r3c2_v_if=-i(v.xpga_stage1_cm_v.xota.vtestocm)
+let r3c2_v_if_r=real(r3c2_v_if)
+let r3c2_v_if_i=imag(r3c2_v_if)
+let r0c2_i_ve=(v(xpga_stage1_cm_i.i_sumpos)-v(xpga_stage1_cm_i.i_sumneg))
+let r0c2_i_ve_r=real(r0c2_i_ve)
+let r0c2_i_ve_i=imag(r0c2_i_ve)
+let r0c2_i_if=(-i(v.xpga_stage1_cm_i.vtestp)+i(v.xpga_stage1_cm_i.vtestn))/2
+let r0c2_i_if_r=real(r0c2_i_if)
+let r0c2_i_if_i=imag(r0c2_i_if)
+let r1c2_i_ve=(v(xpga_stage1_cm_i.i_sumpos)+v(xpga_stage1_cm_i.i_sumneg))/2
+let r1c2_i_ve_r=real(r1c2_i_ve)
+let r1c2_i_ve_i=imag(r1c2_i_ve)
+let r1c2_i_if=(-i(v.xpga_stage1_cm_i.vtestp)-i(v.xpga_stage1_cm_i.vtestn))
+let r1c2_i_if_r=real(r1c2_i_if)
+let r1c2_i_if_i=imag(r1c2_i_if)
+let r2c2_i_ve=v(xpga_stage1_cm_i.xota.ncm_gate)
+let r2c2_i_ve_r=real(r2c2_i_ve)
+let r2c2_i_ve_i=imag(r2c2_i_ve)
+let r2c2_i_if=-i(v.xpga_stage1_cm_i.xota.vtestncm)
+let r2c2_i_if_r=real(r2c2_i_if)
+let r2c2_i_if_i=imag(r2c2_i_if)
+let r3c2_i_ve=v(xpga_stage1_cm_i.xota.cms_error)
+let r3c2_i_ve_r=real(r3c2_i_ve)
+let r3c2_i_ve_i=imag(r3c2_i_ve)
+let r3c2_i_if=-i(v.xpga_stage1_cm_i.xota.vtestocm)
+let r3c2_i_if_r=real(r3c2_i_if)
+let r3c2_i_if_i=imag(r3c2_i_if)
+let r0c3_v_ve=(v(xpga_output_cm_v.i_sumpos)-v(xpga_output_cm_v.i_sumneg))
+let r0c3_v_ve_r=real(r0c3_v_ve)
+let r0c3_v_ve_i=imag(r0c3_v_ve)
+let r0c3_v_if=(-i(v.xpga_output_cm_v.vtestp)+i(v.xpga_output_cm_v.vtestn))/2
+let r0c3_v_if_r=real(r0c3_v_if)
+let r0c3_v_if_i=imag(r0c3_v_if)
+let r1c3_v_ve=(v(xpga_output_cm_v.i_sumpos)+v(xpga_output_cm_v.i_sumneg))/2
+let r1c3_v_ve_r=real(r1c3_v_ve)
+let r1c3_v_ve_i=imag(r1c3_v_ve)
+let r1c3_v_if=(-i(v.xpga_output_cm_v.vtestp)-i(v.xpga_output_cm_v.vtestn))
+let r1c3_v_if_r=real(r1c3_v_if)
+let r1c3_v_if_i=imag(r1c3_v_if)
+let r2c3_v_ve=v(xpga_output_cm_v.xota.ncm_gate)
+let r2c3_v_ve_r=real(r2c3_v_ve)
+let r2c3_v_ve_i=imag(r2c3_v_ve)
+let r2c3_v_if=-i(v.xpga_output_cm_v.xota.vtestncm)
+let r2c3_v_if_r=real(r2c3_v_if)
+let r2c3_v_if_i=imag(r2c3_v_if)
+let r3c3_v_ve=v(xpga_output_cm_v.xota.cms_error)
+let r3c3_v_ve_r=real(r3c3_v_ve)
+let r3c3_v_ve_i=imag(r3c3_v_ve)
+let r3c3_v_if=-i(v.xpga_output_cm_v.xota.vtestocm)
+let r3c3_v_if_r=real(r3c3_v_if)
+let r3c3_v_if_i=imag(r3c3_v_if)
+let r0c3_i_ve=(v(xpga_output_cm_i.i_sumpos)-v(xpga_output_cm_i.i_sumneg))
+let r0c3_i_ve_r=real(r0c3_i_ve)
+let r0c3_i_ve_i=imag(r0c3_i_ve)
+let r0c3_i_if=(-i(v.xpga_output_cm_i.vtestp)+i(v.xpga_output_cm_i.vtestn))/2
+let r0c3_i_if_r=real(r0c3_i_if)
+let r0c3_i_if_i=imag(r0c3_i_if)
+let r1c3_i_ve=(v(xpga_output_cm_i.i_sumpos)+v(xpga_output_cm_i.i_sumneg))/2
+let r1c3_i_ve_r=real(r1c3_i_ve)
+let r1c3_i_ve_i=imag(r1c3_i_ve)
+let r1c3_i_if=(-i(v.xpga_output_cm_i.vtestp)-i(v.xpga_output_cm_i.vtestn))
+let r1c3_i_if_r=real(r1c3_i_if)
+let r1c3_i_if_i=imag(r1c3_i_if)
+let r2c3_i_ve=v(xpga_output_cm_i.xota.ncm_gate)
+let r2c3_i_ve_r=real(r2c3_i_ve)
+let r2c3_i_ve_i=imag(r2c3_i_ve)
+let r2c3_i_if=-i(v.xpga_output_cm_i.xota.vtestncm)
+let r2c3_i_if_r=real(r2c3_i_if)
+let r2c3_i_if_i=imag(r2c3_i_if)
+let r3c3_i_ve=v(xpga_output_cm_i.xota.cms_error)
+let r3c3_i_ve_r=real(r3c3_i_ve)
+let r3c3_i_ve_i=imag(r3c3_i_ve)
+let r3c3_i_if=-i(v.xpga_output_cm_i.xota.vtestocm)
+let r3c3_i_if_r=real(r3c3_i_if)
+let r3c3_i_if_i=imag(r3c3_i_if)
+wrdata response.dat r0c0_v_ve_r r0c0_v_ve_i r0c0_v_if_r r0c0_v_if_i r1c0_v_ve_r r1c0_v_ve_i r1c0_v_if_r r1c0_v_if_i r2c0_v_ve_r r2c0_v_ve_i r2c0_v_if_r r2c0_v_if_i r3c0_v_ve_r r3c0_v_ve_i r3c0_v_if_r r3c0_v_if_i r0c0_i_ve_r r0c0_i_ve_i r0c0_i_if_r r0c0_i_if_i r1c0_i_ve_r r1c0_i_ve_i r1c0_i_if_r r1c0_i_if_i r2c0_i_ve_r r2c0_i_ve_i r2c0_i_if_r r2c0_i_if_i r3c0_i_ve_r r3c0_i_ve_i r3c0_i_if_r r3c0_i_if_i r0c1_v_ve_r r0c1_v_ve_i r0c1_v_if_r r0c1_v_if_i r1c1_v_ve_r r1c1_v_ve_i r1c1_v_if_r r1c1_v_if_i r2c1_v_ve_r r2c1_v_ve_i r2c1_v_if_r r2c1_v_if_i r3c1_v_ve_r r3c1_v_ve_i r3c1_v_if_r r3c1_v_if_i r0c1_i_ve_r r0c1_i_ve_i r0c1_i_if_r r0c1_i_if_i r1c1_i_ve_r r1c1_i_ve_i r1c1_i_if_r r1c1_i_if_i r2c1_i_ve_r r2c1_i_ve_i r2c1_i_if_r r2c1_i_if_i r3c1_i_ve_r r3c1_i_ve_i r3c1_i_if_r r3c1_i_if_i r0c2_v_ve_r r0c2_v_ve_i r0c2_v_if_r r0c2_v_if_i r1c2_v_ve_r r1c2_v_ve_i r1c2_v_if_r r1c2_v_if_i r2c2_v_ve_r r2c2_v_ve_i r2c2_v_if_r r2c2_v_if_i r3c2_v_ve_r r3c2_v_ve_i r3c2_v_if_r r3c2_v_if_i r0c2_i_ve_r r0c2_i_ve_i r0c2_i_if_r r0c2_i_if_i r1c2_i_ve_r r1c2_i_ve_i r1c2_i_if_r r1c2_i_if_i r2c2_i_ve_r r2c2_i_ve_i r2c2_i_if_r r2c2_i_if_i r3c2_i_ve_r r3c2_i_ve_i r3c2_i_if_r r3c2_i_if_i r0c3_v_ve_r r0c3_v_ve_i r0c3_v_if_r r0c3_v_if_i r1c3_v_ve_r r1c3_v_ve_i r1c3_v_if_r r1c3_v_if_i r2c3_v_ve_r r2c3_v_ve_i r2c3_v_if_r r2c3_v_if_i r3c3_v_ve_r r3c3_v_ve_i r3c3_v_if_r r3c3_v_if_i r0c3_i_ve_r r0c3_i_ve_i r0c3_i_if_r r0c3_i_if_i r1c3_i_ve_r r1c3_i_ve_i r1c3_i_if_r r1c3_i_if_i r2c3_i_ve_r r2c3_i_ve_i r2c3_i_if_r r2c3_i_if_i r3c3_i_ve_r r3c3_i_ve_i r3c3_i_if_r r3c3_i_if_i
+quit
+.endc
+.end

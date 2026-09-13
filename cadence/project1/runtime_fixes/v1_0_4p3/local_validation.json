@@ -1,0 +1,15 @@
+{
+  "status": "PASS_LOCAL_CHECKS",
+  "patch_tests": 7,
+  "original_regressions": 17,
+  "evidence": [
+    "All 13 mapped MOS leaf names occur in the returned PSF",
+    "Actual OCEAN errors cannot be hidden by a COMPLETE file or exit 0",
+    "Missing/nonfinite/mis-mapped device rows rejected",
+    "Mocked recovery calls only OCEAN; source PSF and original failure preserved",
+    "Changed source rejected; install rollback/idempotence and passive review verified",
+    "Fake-launcher shell sequence: success, recheck failure, export failure, collection failure, installation failure"
+  ],
+  "limitation": "No local OCEAN/SKILL execution or actual recovered device values; numerical recovery fixtures are synthetic tests only",
+  "shell_flow_cases": 5
+}

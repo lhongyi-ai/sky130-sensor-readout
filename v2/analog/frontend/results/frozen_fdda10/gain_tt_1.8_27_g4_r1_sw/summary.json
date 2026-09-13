@@ -1,0 +1,15 @@
+{
+  "test": "gain",
+  "gain": 4,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gain_implementation": "real transistor gain-select network, fixed select during this test",
+  "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+  "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "gain_magnitude_at_1khz": 3.992105077889482,
+  "phase_deg_at_1khz": -0.00542419790274028,
+  "correct_closed_loop_polarity": true,
+  "caution": "DC operating point and small-signal closed-loop polarity/gain only, no finite-load, full-swing, settling or SNDR signoff."
+}

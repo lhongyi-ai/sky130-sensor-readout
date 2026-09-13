@@ -1,0 +1,8253 @@
+{
+  "evidence_level": "200 actual PDK tt_mm dynamic-comparator instances; finite staircase input-offset brackets, NOT whole ADC MC",
+  "nominal_vdd": 1.8,
+  "nominal_temperature_c": 27,
+  "sample_count": 200,
+  "comparisons": 1400,
+  "source_resistance_ohm": 350,
+  "input_capacitance_f": 8.128512e-11,
+  "output_load_f": 5e-15,
+  "resolved_sample_count": 200,
+  "monotonic_sample_count": 200,
+  "bracketed_sample_count": 143,
+  "smallest_bracket_v": 0.00025,
+  "largest_bracket_v": 0.002,
+  "samples": [
+    {
+      "sample": 0,
+      "batch": 0,
+      "instance": 0,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992363250001,
+        -1.7999992363250001,
+        -1.7999992363250001,
+        -1.799999236324,
+        -1.799999236324,
+        1.799999239504,
+        1.7999993020910001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 1,
+      "batch": 0,
+      "instance": 1,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999897182,
+        1.799999354577,
+        1.7999994164020001,
+        1.799999416415,
+        1.799999416423,
+        1.799999416428,
+        1.7999994164320001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 2,
+      "batch": 0,
+      "instance": 2,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999381598,
+        -1.799999381598,
+        -1.7999993815970001,
+        -1.7999993815970001,
+        -1.7999993815970001,
+        -1.7999993815970001,
+        1.7999992484810001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 3,
+      "batch": 0,
+      "instance": 3,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999412178,
+        1.799999329881,
+        1.799999391259,
+        1.799999391272,
+        1.79999939128,
+        1.799999391285,
+        1.799999391289
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 4,
+      "batch": 0,
+      "instance": 4,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999239616,
+        1.79999940436,
+        1.799999467042,
+        1.799999467056,
+        1.799999467064,
+        1.7999994670700001,
+        1.799999467074
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 5,
+      "batch": 0,
+      "instance": 5,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999302704,
+        -1.7999993027030001,
+        -1.7999993027030001,
+        -1.7999993027030001,
+        -1.7999993027030001,
+        -1.799999302702,
+        -1.799999302702
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 6,
+      "batch": 0,
+      "instance": 6,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999403129,
+        1.799999245805,
+        1.799999308461,
+        1.799999308474,
+        1.799999308482,
+        1.799999308487,
+        1.799999308491
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 7,
+      "batch": 0,
+      "instance": 7,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999136605,
+        1.799999198621,
+        1.799999198634,
+        1.799999198641,
+        1.799999198646,
+        1.7999991986500001,
+        1.799999198653
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 8,
+      "batch": 0,
+      "instance": 8,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999326297,
+        -1.799999326297,
+        -1.799999326297,
+        -1.799999326297,
+        -1.799999326297,
+        1.799999296683,
+        1.7999993595450001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 9,
+      "batch": 0,
+      "instance": 9,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999361319,
+        1.799999267337,
+        1.799999330485,
+        1.799999330499,
+        1.7999993305070001,
+        1.799999330513,
+        1.7999993305170001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 10,
+      "batch": 0,
+      "instance": 10,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999388158,
+        1.799999299757,
+        1.799999360925,
+        1.799999360938,
+        1.799999360945,
+        1.79999936095,
+        1.7999993609540001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 11,
+      "batch": 0,
+      "instance": 11,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999323362,
+        -1.799999323362,
+        1.7999992587690001,
+        1.79999932101,
+        1.799999321023,
+        1.7999993210310001,
+        1.7999993210360001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 12,
+      "batch": 0,
+      "instance": 12,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999205567,
+        1.799999299788,
+        1.7999993612160001,
+        1.799999361228,
+        1.799999361235,
+        1.79999936124,
+        1.799999361243
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 13,
+      "batch": 0,
+      "instance": 13,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993620230001,
+        -1.799999362022,
+        -1.799999362022,
+        -1.799999362022,
+        -1.799999362022,
+        -1.799999362021,
+        1.799999408945
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 14,
+      "batch": 0,
+      "instance": 14,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999292089,
+        -1.799999292089,
+        -1.7999992920880001,
+        -1.7999992920880001,
+        -1.7999992920880001,
+        -1.7999992920880001,
+        -1.7999992920880001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 15,
+      "batch": 0,
+      "instance": 15,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999361254,
+        -1.799999361254,
+        1.799999359837,
+        1.7999994216750002,
+        1.799999421689,
+        1.799999421696,
+        1.7999994217020001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 16,
+      "batch": 0,
+      "instance": 16,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999345444,
+        -1.799999345444,
+        1.799999354708,
+        1.799999416851,
+        1.799999416863,
+        1.799999416871,
+        1.799999416876
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 17,
+      "batch": 0,
+      "instance": 17,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999464273,
+        1.799999305656,
+        1.799999367613,
+        1.799999367626,
+        1.799999367633,
+        1.799999367638,
+        1.799999367642
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 18,
+      "batch": 0,
+      "instance": 18,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999429191,
+        -1.799999429191,
+        -1.799999429191,
+        -1.79999942919,
+        -1.79999942919,
+        -1.79999942919,
+        -1.79999942919
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 19,
+      "batch": 0,
+      "instance": 19,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999387039,
+        -1.799999387038,
+        -1.799999387038,
+        -1.799999387038,
+        -1.799999387038,
+        -1.7999993870370001,
+        1.7999993325580002
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 20,
+      "batch": 0,
+      "instance": 20,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999344283,
+        -1.7999993442820001,
+        -1.7999993442820001,
+        -1.7999993442820001,
+        -1.7999993442820001,
+        -1.7999993442820001,
+        1.79999928314
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 21,
+      "batch": 0,
+      "instance": 21,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999184467,
+        1.799999071532,
+        1.799999133566,
+        1.799999133579,
+        1.799999133586,
+        1.799999133591,
+        1.799999133595
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 22,
+      "batch": 0,
+      "instance": 22,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999068481,
+        -1.799999068481,
+        -1.799999068481,
+        -1.79999906848,
+        -1.79999906848,
+        -1.79999906848,
+        1.7999993156210001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 23,
+      "batch": 0,
+      "instance": 23,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999257227,
+        1.799999318996,
+        1.799999319009,
+        1.799999319017,
+        1.799999319022,
+        1.799999319026,
+        1.799999319029
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 24,
+      "batch": 0,
+      "instance": 24,
+      "seed": 1309200,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993291710001,
+        -1.79999932917,
+        1.7999992916060001,
+        1.799999353178,
+        1.7999993531910001,
+        1.799999353199,
+        1.799999353204
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 25,
+      "batch": 1,
+      "instance": 0,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999165777,
+        -1.799999165777,
+        -1.799999165776,
+        -1.799999165776,
+        -1.799999165776,
+        -1.799999165776,
+        1.799999345195
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 26,
+      "batch": 1,
+      "instance": 1,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999301651,
+        -1.799999301651,
+        1.799999413491,
+        1.799999475674,
+        1.799999475688,
+        1.799999475695,
+        1.7999994757
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 27,
+      "batch": 1,
+      "instance": 2,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999244359,
+        -1.799999244358,
+        1.799999187821,
+        1.799999250977,
+        1.799999250991,
+        1.799999250999,
+        1.799999251004
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 28,
+      "batch": 1,
+      "instance": 3,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999305702,
+        -1.799999305702,
+        -1.799999305702,
+        1.799999386507,
+        1.7999994486,
+        1.799999448614,
+        1.799999448621
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 29,
+      "batch": 1,
+      "instance": 4,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993475240001,
+        -1.7999993475240001,
+        -1.7999993475240001,
+        -1.799999347523,
+        -1.799999347523,
+        -1.799999347523,
+        1.799999340852
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 30,
+      "batch": 1,
+      "instance": 5,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999358617,
+        -1.799999358617,
+        -1.7999993586160001,
+        -1.7999993586160001,
+        -1.7999993586160001,
+        -1.7999993586160001,
+        -1.7999993586160001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 31,
+      "batch": 1,
+      "instance": 6,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999931813,
+        -1.79999931813,
+        1.7999993231690001,
+        1.799999385413,
+        1.799999385427,
+        1.799999385434,
+        1.79999938544
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 32,
+      "batch": 1,
+      "instance": 7,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999412163,
+        -1.799999412163,
+        -1.799999412163,
+        -1.799999412162,
+        -1.799999412162,
+        1.799999293828,
+        1.799999356714
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 33,
+      "batch": 1,
+      "instance": 8,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999488514,
+        -1.799999488513,
+        1.799999347086,
+        1.799999409884,
+        1.7999994098980001,
+        1.799999409906,
+        1.799999409912
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 34,
+      "batch": 1,
+      "instance": 9,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999289896,
+        -1.799999289896,
+        -1.799999289896,
+        -1.799999289896,
+        -1.7999992898950001,
+        -1.7999992898950001,
+        1.799999274385
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 35,
+      "batch": 1,
+      "instance": 10,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999370848,
+        1.799999306688,
+        1.799999368253,
+        1.799999368266,
+        1.799999368273,
+        1.799999368278,
+        1.7999993682820001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 36,
+      "batch": 1,
+      "instance": 11,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999266376,
+        1.799999329009,
+        1.799999329023,
+        1.7999993290310001,
+        1.799999329037,
+        1.7999993290410001,
+        1.799999329044
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 37,
+      "batch": 1,
+      "instance": 12,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992544580001,
+        -1.7999992544580001,
+        1.799999402864,
+        1.799999464745,
+        1.799999464758,
+        1.799999464765,
+        1.79999946477
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 38,
+      "batch": 1,
+      "instance": 13,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999302469,
+        -1.799999302468,
+        -1.799999302468,
+        -1.799999302468,
+        -1.799999302468,
+        -1.799999302468,
+        1.799999457525
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 39,
+      "batch": 1,
+      "instance": 14,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992522800001,
+        -1.7999992522800001,
+        -1.7999992522800001,
+        -1.7999992522800001,
+        -1.799999252279,
+        -1.799999252279,
+        1.799999272438
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 40,
+      "batch": 1,
+      "instance": 15,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999428985,
+        1.799999362863,
+        1.7999994258160001,
+        1.79999942583,
+        1.799999425838,
+        1.799999425844,
+        1.799999425848
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 41,
+      "batch": 1,
+      "instance": 16,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999357932,
+        -1.799999357932,
+        -1.799999357932,
+        -1.799999357932,
+        -1.799999357931,
+        -1.799999357931,
+        -1.799999357931
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 42,
+      "batch": 1,
+      "instance": 17,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.79999919786,
+        1.799999260254,
+        1.799999260268,
+        1.799999260276,
+        1.799999260282,
+        1.799999260286,
+        1.799999260289
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 43,
+      "batch": 1,
+      "instance": 18,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999380621,
+        -1.799999380621,
+        1.7999991189890001,
+        1.799999181743,
+        1.7999991817560002,
+        1.7999991817630001,
+        1.7999991817680001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 44,
+      "batch": 1,
+      "instance": 19,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993076,
+        -1.799999307599,
+        1.799999235826,
+        1.79999929747,
+        1.7999992974830001,
+        1.799999297491,
+        1.799999297496
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 45,
+      "batch": 1,
+      "instance": 20,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999241255,
+        -1.799999241255,
+        -1.799999241255,
+        -1.799999241254,
+        -1.799999241254,
+        1.799999403319,
+        1.799999465064
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 46,
+      "batch": 1,
+      "instance": 21,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999484669,
+        -1.799999484669,
+        1.799999314902,
+        1.799999377528,
+        1.7999993775410001,
+        1.799999377549,
+        1.799999377554
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 47,
+      "batch": 1,
+      "instance": 22,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999253593,
+        -1.799999253592,
+        1.799999040079,
+        1.799999102233,
+        1.799999102246,
+        1.799999102254,
+        1.799999102259
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 48,
+      "batch": 1,
+      "instance": 23,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993809750001,
+        -1.7999993809750001,
+        -1.799999380974,
+        -1.799999380974,
+        -1.799999380974,
+        -1.799999380974,
+        1.799999301214
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 49,
+      "batch": 1,
+      "instance": 24,
+      "seed": 1309201,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999938256,
+        -1.79999938256,
+        -1.79999938256,
+        1.7999993198020001,
+        1.7999993808950001,
+        1.799999380907,
+        1.799999380913
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 50,
+      "batch": 2,
+      "instance": 0,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999383713,
+        -1.799999383713,
+        1.7999992481190001,
+        1.799999311551,
+        1.799999311566,
+        1.799999311574,
+        1.7999993115800001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 51,
+      "batch": 2,
+      "instance": 1,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999415817,
+        -1.799999415817,
+        -1.799999415816,
+        -1.799999415816,
+        -1.799999415816,
+        1.799999362579,
+        1.7999994253540001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 52,
+      "batch": 2,
+      "instance": 2,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999994065990002,
+        -1.7999994065990002,
+        -1.7999994065990002,
+        -1.7999994065990002,
+        -1.7999994065990002,
+        1.79999935656,
+        1.799999418445
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 53,
+      "batch": 2,
+      "instance": 3,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999315026,
+        -1.799999315026,
+        -1.799999315026,
+        -1.799999315025,
+        1.79999921874,
+        1.7999992814880001,
+        1.7999992815030001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0,
+        0.00025
+      ],
+      "bracket_midpoint_estimate_v": 0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 54,
+      "batch": 2,
+      "instance": 4,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999367856,
+        1.7999992501820001,
+        1.79999931229,
+        1.799999312305,
+        1.799999312313,
+        1.7999993123190001,
+        1.799999312323
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 55,
+      "batch": 2,
+      "instance": 5,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999349808,
+        -1.799999349808,
+        -1.799999349808,
+        -1.799999349807,
+        -1.799999349807,
+        -1.799999349807,
+        1.799999214692
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 56,
+      "batch": 2,
+      "instance": 6,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999233065,
+        -1.799999233064,
+        -1.799999233064,
+        -1.799999233064,
+        -1.799999233064,
+        -1.7999992330630001,
+        -1.7999992330630001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 57,
+      "batch": 2,
+      "instance": 7,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.7999992497250001,
+        1.799999312868,
+        1.799999312883,
+        1.799999312893,
+        1.799999312899,
+        1.799999312903,
+        1.799999312907
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 58,
+      "batch": 2,
+      "instance": 8,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999127453,
+        1.799999190065,
+        1.7999991900780001,
+        1.799999190086,
+        1.799999190091,
+        1.799999190095,
+        1.7999991900980001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 59,
+      "batch": 2,
+      "instance": 9,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999484675,
+        -1.799999484674,
+        -1.799999484674,
+        -1.799999484674,
+        -1.799999484674,
+        -1.799999484674,
+        1.799999312985
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 60,
+      "batch": 2,
+      "instance": 10,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999488441,
+        -1.799999488441,
+        -1.7999994884400001,
+        -1.7999994884400001,
+        -1.7999994884400001,
+        -1.7999994884400001,
+        -1.7999994884400001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 61,
+      "batch": 2,
+      "instance": 11,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999994248620002,
+        -1.7999994248620002,
+        -1.7999994248620002,
+        -1.799999424861,
+        -1.799999424861,
+        -1.799999424861,
+        -1.799999424861
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 62,
+      "batch": 2,
+      "instance": 12,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992709150001,
+        -1.7999992709150001,
+        -1.7999992709150001,
+        -1.7999992709150001,
+        1.799999349601,
+        1.799999411243,
+        1.799999411255
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0,
+        0.00025
+      ],
+      "bracket_midpoint_estimate_v": 0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 63,
+      "batch": 2,
+      "instance": 13,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999372082,
+        -1.799999372082,
+        -1.799999372082,
+        -1.7999993720810001,
+        -1.7999993720810001,
+        1.799999242937,
+        1.799999305043
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 64,
+      "batch": 2,
+      "instance": 14,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999460507,
+        -1.799999460507,
+        -1.799999460507,
+        -1.799999460507,
+        -1.7999994605060001,
+        1.7999993128160001,
+        1.7999993747360001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 65,
+      "batch": 2,
+      "instance": 15,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999371872,
+        -1.799999371872,
+        -1.7999993718710001,
+        -1.7999993718710001,
+        -1.7999993718710001,
+        -1.7999993718710001,
+        -1.7999993718710001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 66,
+      "batch": 2,
+      "instance": 16,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999315787,
+        -1.7999993157860001,
+        -1.7999993157860001,
+        -1.7999993157860001,
+        -1.7999993157860001,
+        -1.7999993157860001,
+        -1.7999993157860001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 67,
+      "batch": 2,
+      "instance": 17,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999332768,
+        1.799999395108,
+        1.7999993951220001,
+        1.79999939513,
+        1.799999395136,
+        1.79999939514,
+        1.799999395143
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 68,
+      "batch": 2,
+      "instance": 18,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993454110002,
+        -1.7999993454110002,
+        1.7999993433250001,
+        1.799999405859,
+        1.799999405873,
+        1.799999405881,
+        1.7999994058870001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 69,
+      "batch": 2,
+      "instance": 19,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999362562,
+        1.799999423923,
+        1.799999423936,
+        1.799999423943,
+        1.799999423948,
+        1.799999423952,
+        1.7999994239550001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 70,
+      "batch": 2,
+      "instance": 20,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999994617050001,
+        -1.7999994617050001,
+        -1.799999461704,
+        -1.799999461704,
+        -1.799999461704,
+        -1.799999461704,
+        -1.799999461704
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 71,
+      "batch": 2,
+      "instance": 21,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999029341,
+        1.7999990915850002,
+        1.799999091599,
+        1.799999091608,
+        1.799999091613,
+        1.799999091618,
+        1.799999091621
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 72,
+      "batch": 2,
+      "instance": 22,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999221968,
+        1.799999283865,
+        1.799999283879,
+        1.7999992838880001,
+        1.7999992838930001,
+        1.7999992838980001,
+        1.799999283901
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 73,
+      "batch": 2,
+      "instance": 23,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999392883,
+        -1.799999392883,
+        -1.799999392883,
+        -1.799999392883,
+        -1.799999392882,
+        -1.799999392882,
+        1.799999379165
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 74,
+      "batch": 2,
+      "instance": 24,
+      "seed": 1309202,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999330084,
+        -1.799999330083,
+        -1.799999330083,
+        -1.799999330083,
+        -1.799999330083,
+        -1.799999330083,
+        1.799999208724
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 75,
+      "batch": 3,
+      "instance": 0,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999994594320001,
+        -1.7999994594320001,
+        -1.7999994594320001,
+        -1.7999994594320001,
+        -1.799999459431,
+        -1.799999459431,
+        1.799999316503
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 76,
+      "batch": 3,
+      "instance": 1,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999217326,
+        -1.799999217326,
+        -1.799999217326,
+        -1.799999217326,
+        -1.7999992173250001,
+        -1.7999992173250001,
+        -1.7999992173250001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 77,
+      "batch": 3,
+      "instance": 2,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999178173,
+        -1.799999178172,
+        -1.799999178172,
+        -1.799999178172,
+        -1.799999178172,
+        -1.799999178172,
+        -1.799999178172
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 78,
+      "batch": 3,
+      "instance": 3,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999994831150001,
+        -1.7999994831150001,
+        -1.7999994831150001,
+        -1.799999483114,
+        1.799999315818,
+        1.799999377429,
+        1.7999993774410001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0,
+        0.00025
+      ],
+      "bracket_midpoint_estimate_v": 0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 79,
+      "batch": 3,
+      "instance": 4,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999510223,
+        -1.799999510223,
+        -1.799999510223,
+        -1.799999510223,
+        -1.799999510222,
+        -1.799999510222,
+        1.799999203073
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 80,
+      "batch": 3,
+      "instance": 5,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999404807,
+        -1.799999404807,
+        1.799999352984,
+        1.799999415013,
+        1.799999415025,
+        1.799999415033,
+        1.799999415038
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 81,
+      "batch": 3,
+      "instance": 6,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999331305,
+        -1.799999331305,
+        -1.7999993313040001,
+        -1.7999993313040001,
+        -1.7999993313040001,
+        -1.7999993313040001,
+        1.799999328917
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 82,
+      "batch": 3,
+      "instance": 7,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999248577,
+        -1.799999248577,
+        -1.799999248577,
+        -1.799999248577,
+        -1.7999992485760001,
+        -1.7999992485760001,
+        1.79999899818
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 83,
+      "batch": 3,
+      "instance": 8,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999424094,
+        1.799999486316,
+        1.79999948633,
+        1.799999486338,
+        1.799999486343,
+        1.7999994863470001,
+        1.799999486351
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 84,
+      "batch": 3,
+      "instance": 9,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999196466,
+        1.799999239173,
+        1.799999302092,
+        1.799999302105,
+        1.799999302113,
+        1.799999302118,
+        1.799999302122
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 85,
+      "batch": 3,
+      "instance": 10,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999994055300002,
+        1.799999258723,
+        1.7999993203640001,
+        1.799999320378,
+        1.799999320386,
+        1.799999320391,
+        1.799999320395
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 86,
+      "batch": 3,
+      "instance": 11,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.7999991182500001,
+        1.7999991812040002,
+        1.799999181217,
+        1.799999181225,
+        1.79999918123,
+        1.799999181234,
+        1.799999181237
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 87,
+      "batch": 3,
+      "instance": 12,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993205240001,
+        -1.799999320523,
+        1.7999992762750001,
+        1.7999993377230001,
+        1.799999337735,
+        1.799999337742,
+        1.799999337747
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 88,
+      "batch": 3,
+      "instance": 13,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.79999924051,
+        -1.79999924051,
+        -1.79999924051,
+        -1.79999924051,
+        -1.79999924051,
+        -1.799999240509,
+        -1.799999240509
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 89,
+      "batch": 3,
+      "instance": 14,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999259367,
+        -1.7999992593660001,
+        -1.7999992593660001,
+        -1.7999992593660001,
+        -1.7999992593660001,
+        -1.799999259365,
+        1.799999261835
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 90,
+      "batch": 3,
+      "instance": 15,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999375544,
+        -1.799999375544,
+        -1.799999375544,
+        -1.799999375543,
+        -1.799999375543,
+        -1.799999375543,
+        1.799999431857
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 91,
+      "batch": 3,
+      "instance": 16,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999925848,
+        -1.79999925848,
+        1.799999257469,
+        1.799999319364,
+        1.799999319377,
+        1.7999993193850001,
+        1.7999993193900001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 92,
+      "batch": 3,
+      "instance": 17,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999318175,
+        1.799999167333,
+        1.799999229558,
+        1.7999992295710001,
+        1.799999229578,
+        1.799999229583,
+        1.799999229587
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 93,
+      "batch": 3,
+      "instance": 18,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999888564,
+        1.7999993171420001,
+        1.7999993794490001,
+        1.799999379463,
+        1.79999937947,
+        1.799999379476,
+        1.79999937948
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 94,
+      "batch": 3,
+      "instance": 19,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999340174,
+        1.799999402925,
+        1.799999402938,
+        1.799999402946,
+        1.7999994029520001,
+        1.799999402956,
+        1.799999402959
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 95,
+      "batch": 3,
+      "instance": 20,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999364531,
+        1.799999330018,
+        1.799999392609,
+        1.799999392623,
+        1.799999392631,
+        1.7999993926370002,
+        1.799999392641
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 96,
+      "batch": 3,
+      "instance": 21,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999370936,
+        -1.799999370935,
+        -1.799999370935,
+        -1.799999370935,
+        -1.799999370935,
+        1.799999214287,
+        1.799999276272
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 97,
+      "batch": 3,
+      "instance": 22,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999943574,
+        1.79999917629,
+        1.799999239189,
+        1.799999239205,
+        1.799999239213,
+        1.799999239219,
+        1.799999239224
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 98,
+      "batch": 3,
+      "instance": 23,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999129633,
+        -1.7999991296320001,
+        -1.7999991296320001,
+        -1.7999991296320001,
+        -1.7999991296320001,
+        -1.7999991296320001,
+        -1.799999129631
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 99,
+      "batch": 3,
+      "instance": 24,
+      "seed": 1309203,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999384255,
+        1.799999444693,
+        1.7999994447060002,
+        1.799999444714,
+        1.799999444719,
+        1.799999444723,
+        1.7999994447260002
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 100,
+      "batch": 4,
+      "instance": 0,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999994919720002,
+        -1.7999994919720002,
+        1.799999219521,
+        1.799999281191,
+        1.7999992812030001,
+        1.79999928121,
+        1.799999281215
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 101,
+      "batch": 4,
+      "instance": 1,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999994974040001,
+        -1.799999497403,
+        -1.799999497403,
+        -1.799999497403,
+        -1.799999497403,
+        -1.799999497403,
+        -1.799999497402
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 102,
+      "batch": 4,
+      "instance": 2,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999994290180001,
+        1.799999276633,
+        1.7999993385320001,
+        1.799999338545,
+        1.7999993385520001,
+        1.799999338558,
+        1.799999338561
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 103,
+      "batch": 4,
+      "instance": 3,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999203916,
+        -1.799999203916,
+        -1.799999203916,
+        -1.799999203916,
+        -1.7999992039150001,
+        -1.7999992039150001,
+        1.799999200114
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 104,
+      "batch": 4,
+      "instance": 4,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999298338,
+        -1.799999298338,
+        -1.7999992983370001,
+        -1.7999992983370001,
+        -1.7999992983370001,
+        -1.7999992983370001,
+        -1.7999992983370001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 105,
+      "batch": 4,
+      "instance": 5,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999930659,
+        -1.79999930659,
+        -1.799999306589,
+        -1.799999306589,
+        -1.799999306589,
+        -1.799999306589,
+        1.799999240802
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 106,
+      "batch": 4,
+      "instance": 6,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999307468,
+        1.799999389074,
+        1.799999450098,
+        1.79999945011,
+        1.799999450117,
+        1.799999450122,
+        1.799999450125
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 107,
+      "batch": 4,
+      "instance": 7,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999486862,
+        -1.799999486862,
+        -1.799999486862,
+        -1.799999486861,
+        -1.799999486861,
+        -1.799999486861,
+        -1.799999486861
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 108,
+      "batch": 4,
+      "instance": 8,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999385995,
+        -1.799999385995,
+        -1.799999385995,
+        -1.799999385994,
+        -1.799999385994,
+        1.799999241915,
+        1.799999303668
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 109,
+      "batch": 4,
+      "instance": 9,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999486515,
+        -1.799999486514,
+        -1.799999486514,
+        -1.799999486514,
+        -1.799999486514,
+        1.799999117335,
+        1.799999180213
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 110,
+      "batch": 4,
+      "instance": 10,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993284340001,
+        -1.7999993284340001,
+        -1.7999993284340001,
+        -1.799999328433,
+        -1.799999328433,
+        -1.799999328433,
+        1.79999925149
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 111,
+      "batch": 4,
+      "instance": 11,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999313891,
+        -1.799999313891,
+        -1.7999993138900001,
+        -1.7999993138900001,
+        -1.7999993138900001,
+        -1.7999993138900001,
+        1.799999317443
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 112,
+      "batch": 4,
+      "instance": 12,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.79999939533,
+        -1.79999939533,
+        -1.799999395329,
+        -1.799999395329,
+        -1.799999395329,
+        -1.799999395329,
+        -1.799999395329
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 113,
+      "batch": 4,
+      "instance": 13,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999937432,
+        -1.79999937432,
+        1.799999380065,
+        1.799999442445,
+        1.799999442459,
+        1.799999442466,
+        1.799999442472
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 114,
+      "batch": 4,
+      "instance": 14,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999937748,
+        -1.79999937748,
+        1.799999312416,
+        1.799999375578,
+        1.799999375592,
+        1.7999993756000001,
+        1.799999375606
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 115,
+      "batch": 4,
+      "instance": 15,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993867970001,
+        -1.7999993867970001,
+        -1.799999386796,
+        -1.799999386796,
+        -1.799999386796,
+        -1.799999386796,
+        1.799999241432
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 116,
+      "batch": 4,
+      "instance": 16,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999924209,
+        1.7999992540460001,
+        1.799999316044,
+        1.7999993160580001,
+        1.799999316066,
+        1.799999316071,
+        1.799999316075
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 117,
+      "batch": 4,
+      "instance": 17,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999286979,
+        -1.799999286979,
+        1.799999284716,
+        1.799999347082,
+        1.799999347095,
+        1.799999347103,
+        1.799999347108
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 118,
+      "batch": 4,
+      "instance": 18,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993428330001,
+        -1.7999993428330001,
+        -1.799999342832,
+        -1.799999342832,
+        -1.799999342832,
+        1.799999176082,
+        1.799999238682
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 119,
+      "batch": 4,
+      "instance": 19,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999262486,
+        -1.799999262485,
+        -1.799999262485,
+        -1.799999262485,
+        -1.799999262485,
+        -1.799999262484,
+        1.799999301125
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 120,
+      "batch": 4,
+      "instance": 20,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999995035760001,
+        -1.799999503575,
+        -1.799999503575,
+        -1.799999503575,
+        -1.799999503575,
+        -1.799999503575,
+        -1.799999503574
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 121,
+      "batch": 4,
+      "instance": 21,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999303314,
+        -1.799999303313,
+        -1.799999303313,
+        -1.799999303313,
+        -1.799999303313,
+        -1.799999303313,
+        1.799999318282
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 122,
+      "batch": 4,
+      "instance": 22,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999487789,
+        -1.799999487789,
+        -1.7999994877880001,
+        -1.7999994877880001,
+        -1.7999994877880001,
+        -1.7999994877880001,
+        1.799999340903
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 123,
+      "batch": 4,
+      "instance": 23,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999320995,
+        -1.799999320995,
+        -1.799999320994,
+        -1.799999320994,
+        -1.799999320994,
+        -1.799999320994,
+        1.7999992406060001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 124,
+      "batch": 4,
+      "instance": 24,
+      "seed": 1309204,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999450958,
+        1.799999205046,
+        1.799999266355,
+        1.799999266369,
+        1.799999266376,
+        1.7999992663820001,
+        1.799999266386
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 125,
+      "batch": 5,
+      "instance": 0,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999344053,
+        -1.7999993440520001,
+        -1.7999993440520001,
+        -1.7999993440520001,
+        -1.7999993440520001,
+        -1.799999344051,
+        1.7999993498940001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 126,
+      "batch": 5,
+      "instance": 1,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999230166,
+        -1.799999230166,
+        1.799999172581,
+        1.799999235137,
+        1.7999992351510001,
+        1.799999235159,
+        1.799999235164
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 127,
+      "batch": 5,
+      "instance": 2,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999321856,
+        -1.7999993218550001,
+        -1.7999993218550001,
+        -1.7999993218550001,
+        -1.7999993218550001,
+        -1.7999993218550001,
+        1.7999993098440001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 128,
+      "batch": 5,
+      "instance": 3,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999348759,
+        1.799999411558,
+        1.799999411572,
+        1.79999941158,
+        1.799999411585,
+        1.7999994115890001,
+        1.799999411593
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 129,
+      "batch": 5,
+      "instance": 4,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992507840001,
+        -1.7999992507840001,
+        -1.7999992507840001,
+        -1.799999250783,
+        -1.799999250783,
+        -1.799999250783,
+        1.7999992631800001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 130,
+      "batch": 5,
+      "instance": 5,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999918598,
+        -1.79999918598,
+        -1.79999918598,
+        -1.799999185979,
+        -1.799999185979,
+        1.799999202853,
+        1.799999265334
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 131,
+      "batch": 5,
+      "instance": 6,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999160852,
+        -1.799999160852,
+        -1.799999160852,
+        1.799999336692,
+        1.799999399946,
+        1.7999993999600001,
+        1.799999399968
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 132,
+      "batch": 5,
+      "instance": 7,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999923244,
+        1.799999214571,
+        1.7999992778610001,
+        1.799999277875,
+        1.799999277883,
+        1.799999277889,
+        1.799999277893
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 133,
+      "batch": 5,
+      "instance": 8,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999391506,
+        1.799999454015,
+        1.799999454029,
+        1.7999994540370001,
+        1.7999994540420001,
+        1.799999454046,
+        1.79999945405
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 134,
+      "batch": 5,
+      "instance": 9,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999364721,
+        1.799999134508,
+        1.799999196802,
+        1.799999196815,
+        1.799999196822,
+        1.799999196827,
+        1.799999196831
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 135,
+      "batch": 5,
+      "instance": 10,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999322068,
+        -1.799999322068,
+        -1.799999322067,
+        -1.799999322067,
+        -1.799999322067,
+        1.799999284513,
+        1.79999934707
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 136,
+      "batch": 5,
+      "instance": 11,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999367195,
+        -1.799999367194,
+        -1.799999367194,
+        -1.799999367194,
+        -1.799999367194,
+        1.7999992592060001,
+        1.799999322077
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 137,
+      "batch": 5,
+      "instance": 12,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999349674,
+        -1.799999349674,
+        -1.799999349674,
+        -1.799999349673,
+        -1.799999349673,
+        -1.799999349673,
+        -1.799999349673
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 138,
+      "batch": 5,
+      "instance": 13,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999440138,
+        -1.799999440138,
+        1.7999992409330001,
+        1.79999930292,
+        1.7999993029330001,
+        1.799999302941,
+        1.799999302946
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 139,
+      "batch": 5,
+      "instance": 14,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999400023,
+        -1.799999400023,
+        -1.799999400022,
+        -1.799999400022,
+        -1.799999400022,
+        -1.799999400022,
+        1.7999991575360001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 140,
+      "batch": 5,
+      "instance": 15,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999403682,
+        -1.799999403682,
+        -1.799999403682,
+        -1.799999403681,
+        -1.799999403681,
+        -1.799999403681,
+        1.799999150699
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 141,
+      "batch": 5,
+      "instance": 16,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999296333,
+        1.7999993591130001,
+        1.799999359126,
+        1.799999359134,
+        1.799999359139,
+        1.799999359144,
+        1.799999359147
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 142,
+      "batch": 5,
+      "instance": 17,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999387811,
+        -1.799999387811,
+        -1.79999938781,
+        -1.79999938781,
+        -1.79999938781,
+        -1.79999938781,
+        1.799999174597
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 143,
+      "batch": 5,
+      "instance": 18,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999247873,
+        1.799999283707,
+        1.799999346488,
+        1.799999346503,
+        1.799999346511,
+        1.799999346517,
+        1.799999346522
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 144,
+      "batch": 5,
+      "instance": 19,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999490735,
+        -1.799999490735,
+        1.799999235214,
+        1.799999298057,
+        1.799999298071,
+        1.799999298079,
+        1.799999298084
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 145,
+      "batch": 5,
+      "instance": 20,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999995004440001,
+        -1.7999995004440001,
+        -1.799999500443,
+        -1.799999500443,
+        -1.799999500443,
+        -1.799999500443,
+        1.7999993907510001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 146,
+      "batch": 5,
+      "instance": 21,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999335042,
+        -1.799999335042,
+        1.799999319995,
+        1.799999382894,
+        1.799999382908,
+        1.7999993829160001,
+        1.799999382922
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 147,
+      "batch": 5,
+      "instance": 22,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999306893,
+        -1.799999306893,
+        -1.799999306893,
+        -1.799999306893,
+        -1.799999306893,
+        -1.799999306892,
+        -1.799999306892
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 148,
+      "batch": 5,
+      "instance": 23,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999272411,
+        1.79999931054,
+        1.799999372858,
+        1.799999372872,
+        1.799999372879,
+        1.7999993728850001,
+        1.799999372889
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 149,
+      "batch": 5,
+      "instance": 24,
+      "seed": 1309205,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999426205,
+        1.799999088571,
+        1.7999991518160001,
+        1.79999915183,
+        1.799999151838,
+        1.799999151843,
+        1.799999151848
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 150,
+      "batch": 6,
+      "instance": 0,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999992282250001,
+        -1.7999992282250001,
+        -1.7999992282250001,
+        -1.7999992282250001,
+        -1.799999228224,
+        -1.799999228224,
+        -1.799999228224
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 151,
+      "batch": 6,
+      "instance": 1,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999435857,
+        -1.799999435857,
+        -1.799999435856,
+        -1.799999435856,
+        -1.799999435856,
+        -1.799999435856,
+        -1.799999435856
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 152,
+      "batch": 6,
+      "instance": 2,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999216143,
+        1.799999310886,
+        1.799999373108,
+        1.799999373122,
+        1.7999993731300001,
+        1.799999373136,
+        1.7999993731400001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 153,
+      "batch": 6,
+      "instance": 3,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999333882,
+        -1.799999333882,
+        -1.799999333882,
+        -1.799999333881,
+        -1.799999333881,
+        -1.799999333881,
+        1.7999991391430001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 154,
+      "batch": 6,
+      "instance": 4,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999423883,
+        -1.799999423883,
+        1.7999992702110001,
+        1.7999993331570001,
+        1.799999333171,
+        1.799999333179,
+        1.799999333184
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 155,
+      "batch": 6,
+      "instance": 5,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999375881,
+        1.799999241157,
+        1.79999930268,
+        1.7999993026930001,
+        1.7999993027,
+        1.799999302705,
+        1.799999302709
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 156,
+      "batch": 6,
+      "instance": 6,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999944447,
+        -1.799999444469,
+        -1.799999444469,
+        -1.799999444469,
+        -1.799999444469,
+        -1.799999444468,
+        1.799999247719
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 157,
+      "batch": 6,
+      "instance": 7,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.79999930716,
+        1.799999368925,
+        1.799999368938,
+        1.799999368945,
+        1.799999368951,
+        1.7999993689540001,
+        1.799999368958
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 158,
+      "batch": 6,
+      "instance": 8,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999238622,
+        -1.799999238622,
+        -1.799999238622,
+        -1.799999238622,
+        -1.799999238622,
+        1.799999236384,
+        1.7999992995510001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 159,
+      "batch": 6,
+      "instance": 9,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999371455,
+        -1.7999993714540001,
+        -1.7999993714540001,
+        -1.7999993714540001,
+        -1.7999993714540001,
+        -1.799999371453,
+        1.7999993620430002
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 160,
+      "batch": 6,
+      "instance": 10,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999344354,
+        -1.799999344354,
+        -1.799999344354,
+        -1.799999344354,
+        -1.799999344353,
+        -1.799999344353,
+        -1.799999344353
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 161,
+      "batch": 6,
+      "instance": 11,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999386593,
+        -1.799999386592,
+        -1.799999386592,
+        -1.799999386592,
+        -1.799999386592,
+        -1.799999386592,
+        1.799999322006
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 162,
+      "batch": 6,
+      "instance": 12,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999435853,
+        -1.799999435853,
+        -1.799999435852,
+        -1.799999435852,
+        -1.799999435852,
+        1.799999258166,
+        1.799999320873
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.00025,
+        0.001
+      ],
+      "bracket_midpoint_estimate_v": 0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 163,
+      "batch": 6,
+      "instance": 13,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999290475,
+        -1.799999290475,
+        -1.799999290474,
+        1.799999235764,
+        1.799999297679,
+        1.799999297692,
+        1.799999297699
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 164,
+      "batch": 6,
+      "instance": 14,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999218602,
+        1.799999280157,
+        1.799999280171,
+        1.799999280178,
+        1.7999992801840001,
+        1.799999280188,
+        1.799999280191
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 165,
+      "batch": 6,
+      "instance": 15,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999134544,
+        -1.799999134544,
+        1.799999297113,
+        1.799999359017,
+        1.79999935903,
+        1.799999359037,
+        1.799999359042
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 166,
+      "batch": 6,
+      "instance": 16,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.79999927467,
+        -1.79999927467,
+        -1.79999927467,
+        -1.7999992746690001,
+        -1.7999992746690001,
+        -1.7999992746690001,
+        1.799999363431
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 167,
+      "batch": 6,
+      "instance": 17,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999355044,
+        -1.799999355043,
+        1.799999184466,
+        1.799999247773,
+        1.799999247787,
+        1.799999247795,
+        1.799999247801
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 168,
+      "batch": 6,
+      "instance": 18,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999410468,
+        1.799999471539,
+        1.799999471552,
+        1.799999471559,
+        1.799999471564,
+        1.799999471568,
+        1.7999994715710002
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 169,
+      "batch": 6,
+      "instance": 19,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999419184,
+        -1.799999419184,
+        -1.799999419184,
+        -1.799999419184,
+        -1.799999419183,
+        -1.799999419183,
+        1.799999359498
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 170,
+      "batch": 6,
+      "instance": 20,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999993223400002,
+        -1.799999322339,
+        -1.799999322339,
+        -1.799999322339,
+        -1.799999322339,
+        -1.799999322339,
+        -1.799999322338
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 171,
+      "batch": 6,
+      "instance": 21,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999246385,
+        1.799999105963,
+        1.799999168369,
+        1.799999168382,
+        1.79999916839,
+        1.799999168395,
+        1.799999168399
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 172,
+      "batch": 6,
+      "instance": 22,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992599180001,
+        -1.799999259917,
+        -1.799999259917,
+        1.799999068837,
+        1.799999131921,
+        1.799999131935,
+        1.799999131944
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 173,
+      "batch": 6,
+      "instance": 23,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999389753,
+        1.7999990904360001,
+        1.799999154267,
+        1.799999154281,
+        1.79999915429,
+        1.799999154295,
+        1.7999991543
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 174,
+      "batch": 6,
+      "instance": 24,
+      "seed": 1309206,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999415059,
+        -1.799999415059,
+        -1.799999415058,
+        -1.799999415058,
+        -1.799999415058,
+        -1.799999415058,
+        1.799999299324
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 175,
+      "batch": 7,
+      "instance": 0,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993865700001,
+        -1.7999993865700001,
+        -1.799999386569,
+        1.799999168045,
+        1.799999230126,
+        1.799999230139,
+        1.799999230146
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 176,
+      "batch": 7,
+      "instance": 1,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999289215,
+        -1.799999289215,
+        -1.799999289215,
+        -1.799999289215,
+        -1.799999289214,
+        -1.799999289214,
+        1.799999264768
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 177,
+      "batch": 7,
+      "instance": 2,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999314818,
+        1.799999197763,
+        1.799999259629,
+        1.799999259641,
+        1.799999259649,
+        1.799999259654,
+        1.7999992596580001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 178,
+      "batch": 7,
+      "instance": 3,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999327218,
+        -1.799999327218,
+        -1.799999327218,
+        -1.799999327218,
+        -1.799999327218,
+        -1.799999327217,
+        1.799999203174
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 179,
+      "batch": 7,
+      "instance": 4,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999162782,
+        1.7999993455830001,
+        1.799999407521,
+        1.799999407534,
+        1.799999407542,
+        1.799999407547,
+        1.799999407551
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 180,
+      "batch": 7,
+      "instance": 5,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.7999994112820001,
+        1.79999947419,
+        1.799999474204,
+        1.799999474212,
+        1.799999474218,
+        1.799999474222,
+        1.799999474225
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 181,
+      "batch": 7,
+      "instance": 6,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999992522850001,
+        -1.7999992522850001,
+        -1.7999992522850001,
+        -1.7999992522850001,
+        -1.799999252284,
+        -1.799999252284,
+        1.7999992290890001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 182,
+      "batch": 7,
+      "instance": 7,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999295555,
+        -1.799999295555,
+        -1.799999295555,
+        -1.799999295554,
+        -1.799999295554,
+        -1.799999295554,
+        1.799999258727
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 183,
+      "batch": 7,
+      "instance": 8,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.79999938068,
+        -1.79999938068,
+        -1.79999938068,
+        -1.79999938068,
+        -1.799999380679,
+        -1.799999380679,
+        -1.799999380679
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 184,
+      "batch": 7,
+      "instance": 9,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.7999993413620001,
+        -1.7999993413620001,
+        1.799999287703,
+        1.799999349893,
+        1.799999349907,
+        1.799999349915,
+        1.799999349921
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.001,
+        -0.00025
+      ],
+      "bracket_midpoint_estimate_v": -0.000625,
+      "bracket_width_v": 0.00075,
+      "within_tested_range": true
+    },
+    {
+      "sample": 185,
+      "batch": 7,
+      "instance": 10,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999190065,
+        1.799999249418,
+        1.799999311291,
+        1.799999311304,
+        1.799999311311,
+        1.799999311317,
+        1.799999311321
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 186,
+      "batch": 7,
+      "instance": 11,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999091014,
+        1.799999152765,
+        1.799999152778,
+        1.799999152786,
+        1.799999152791,
+        1.7999991527950001,
+        1.799999152799
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 187,
+      "batch": 7,
+      "instance": 12,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999204658,
+        -1.7999992046570001,
+        -1.7999992046570001,
+        -1.7999992046570001,
+        -1.7999992046570001,
+        -1.799999204656,
+        -1.799999204656
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 188,
+      "batch": 7,
+      "instance": 13,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999289439,
+        1.799999350989,
+        1.799999351002,
+        1.79999935101,
+        1.799999351015,
+        1.799999351019,
+        1.799999351022
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 189,
+      "batch": 7,
+      "instance": 14,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999487991,
+        1.799999550257,
+        1.799999550271,
+        1.799999550279,
+        1.7999995502850001,
+        1.799999550289,
+        1.799999550292
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 190,
+      "batch": 7,
+      "instance": 15,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999324136,
+        1.799999386027,
+        1.79999938604,
+        1.799999386047,
+        1.799999386052,
+        1.799999386056,
+        1.799999386059
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 191,
+      "batch": 7,
+      "instance": 16,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999397088,
+        1.7999992741420001,
+        1.799999336446,
+        1.7999993364590001,
+        1.799999336467,
+        1.799999336472,
+        1.799999336476
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 192,
+      "batch": 7,
+      "instance": 17,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999215033,
+        1.7999992767600002,
+        1.799999276774,
+        1.7999992767820001,
+        1.7999992767870001,
+        1.799999276791,
+        1.799999276795
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 193,
+      "batch": 7,
+      "instance": 18,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999370045,
+        -1.799999370045,
+        -1.799999370044,
+        -1.799999370044,
+        1.79999942262,
+        1.799999485622,
+        1.7999994856350001
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0,
+        0.00025
+      ],
+      "bracket_midpoint_estimate_v": 0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 194,
+      "batch": 7,
+      "instance": 19,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.7999994504530001,
+        -1.7999994504530001,
+        -1.7999994504530001,
+        -1.799999450452,
+        -1.799999450452,
+        -1.799999450452,
+        -1.799999450452
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 195,
+      "batch": 7,
+      "instance": 20,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999282246,
+        -1.799999282245,
+        -1.799999282245,
+        1.799999204004,
+        1.799999265889,
+        1.799999265901,
+        1.799999265908
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.00025,
+        0
+      ],
+      "bracket_midpoint_estimate_v": -0.000125,
+      "bracket_width_v": 0.00025,
+      "within_tested_range": true
+    },
+    {
+      "sample": 196,
+      "batch": 7,
+      "instance": 21,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        1.799999343984,
+        1.7999994063440001,
+        1.799999406357,
+        1.799999406365,
+        1.79999940637,
+        1.7999994063740001,
+        1.799999406377
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    },
+    {
+      "sample": 197,
+      "batch": 7,
+      "instance": 22,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999446691,
+        -1.799999446691,
+        -1.799999446691,
+        -1.79999944669,
+        -1.79999944669,
+        -1.79999944669,
+        1.799999268879
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        0.001,
+        0.003
+      ],
+      "bracket_midpoint_estimate_v": 0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 198,
+      "batch": 7,
+      "instance": 23,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "output_differential_v": [
+        -1.799999434154,
+        1.799999229734,
+        1.799999292222,
+        1.799999292235,
+        1.7999992922430001,
+        1.7999992922480001,
+        1.799999292252
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": [
+        -0.003,
+        -0.001
+      ],
+      "bracket_midpoint_estimate_v": -0.002,
+      "bracket_width_v": 0.002,
+      "within_tested_range": true
+    },
+    {
+      "sample": 199,
+      "batch": 7,
+      "instance": 24,
+      "seed": 1309207,
+      "input_levels_v": [
+        -0.003,
+        -0.001,
+        -0.00025,
+        0,
+        0.00025,
+        0.001,
+        0.003
+      ],
+      "decisions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_differential_v": [
+        -1.799999461309,
+        -1.7999994613080001,
+        -1.7999994613080001,
+        -1.7999994613080001,
+        -1.7999994613080001,
+        -1.7999994613080001,
+        -1.799999461307
+      ],
+      "all_resolved": true,
+      "monotonic": true,
+      "offset_bracket_v": null,
+      "bracket_midpoint_estimate_v": null,
+      "bracket_width_v": null,
+      "within_tested_range": false
+    }
+  ],
+  "limitations": [
+    "Offset midpoint is a bounded estimate, not a high-resolution measurement",
+    "No stochastic transient device noise; mismatch is not noise",
+    "No whole-ADC yield or calibration pass assertion",
+    "Only nominal VDD/temperature in this screen"
+  ],
+  "source_sha256": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591"
+}

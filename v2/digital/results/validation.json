@@ -1,0 +1,111 @@
+{
+  "evidence_level": "mapped_standard_cell_functional_simulation",
+  "analog_adc_validated": false,
+  "post_layout_validated": false,
+  "status": "functional_passed_timing_failed",
+  "sta_scope": "library_cells_without_wire_parasitics",
+  "yosys_version": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/bin/c++ 13.3.0)",
+  "opensta_version": "3.1.0",
+  "gate_test": {
+    "status": "passed",
+    "timing": "zero_delay_functional",
+    "counters": {
+      "checks": 687790,
+      "accepted": 4400,
+      "completed": 4384,
+      "aborted": 16,
+      "ignored_busy": 2293,
+      "reserved_rejected": 74,
+      "back_to_back": 124
+    }
+  },
+  "sta_libraries": [
+    {
+      "file": "sky130_fd_sc_hd__tt_025C_1v80.lib",
+      "sha256": "8e78e14442062dba34d414fca6490b2f6b96038d4510d1438ca44fee31487135",
+      "note": "library characterization corner; NOT the 45-point analog PVT matrix",
+      "worst_slack_ns": {
+        "max": 8.35,
+        "min": -0.42
+      },
+      "setup_and_hold_met": false
+    },
+    {
+      "file": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+      "sha256": "9b24f0db3967ac67b4cae1f74bb480fd47922d18d0ed577e3c121739b412c361",
+      "note": "library characterization corner; NOT the 45-point analog PVT matrix",
+      "worst_slack_ns": {
+        "max": 7.89,
+        "min": 0.2
+      },
+      "setup_and_hold_met": true
+    },
+    {
+      "file": "sky130_fd_sc_hd__ff_n40C_1v95.lib",
+      "sha256": "fb61d91c55a7f85b1989e8149d040b13ba5e7f5478f5bf0c3c16c5da30720139",
+      "note": "library characterization corner; NOT the 45-point analog PVT matrix",
+      "worst_slack_ns": {
+        "max": 8.55,
+        "min": -0.65
+      },
+      "setup_and_hold_met": false
+    }
+  ],
+  "mapped_cells": 169,
+  "cell_type_counts": {
+    "sky130_fd_sc_hd__clkinv_1": 4,
+    "sky130_fd_sc_hd__nor2_1": 21,
+    "sky130_fd_sc_hd__nor3_1": 1,
+    "sky130_fd_sc_hd__or4_1": 1,
+    "sky130_fd_sc_hd__o21ai_0": 18,
+    "sky130_fd_sc_hd__nand2_1": 13,
+    "sky130_fd_sc_hd__nor3b_1": 1,
+    "sky130_fd_sc_hd__a21boi_0": 1,
+    "sky130_fd_sc_hd__and3_1": 1,
+    "sky130_fd_sc_hd__lpflow_isobufsrc_1": 2,
+    "sky130_fd_sc_hd__lpflow_inputiso1p_1": 2,
+    "sky130_fd_sc_hd__and2_0": 1,
+    "sky130_fd_sc_hd__a21oi_1": 26,
+    "sky130_fd_sc_hd__a41o_1": 1,
+    "sky130_fd_sc_hd__nand3_1": 1,
+    "sky130_fd_sc_hd__nand2b_1": 2,
+    "sky130_fd_sc_hd__nand3b_1": 2,
+    "sky130_fd_sc_hd__mux2_1": 16,
+    "sky130_fd_sc_hd__o2bb2ai_1": 1,
+    "sky130_fd_sc_hd__a41oi_1": 1,
+    "sky130_fd_sc_hd__xor2_1": 1,
+    "sky130_fd_sc_hd__or3_1": 3,
+    "sky130_fd_sc_hd__a31oi_1": 2,
+    "sky130_fd_sc_hd__o22a_1": 1,
+    "sky130_fd_sc_hd__or3b_1": 2,
+    "sky130_fd_sc_hd__nand4b_1": 1,
+    "sky130_fd_sc_hd__o21a_1": 2,
+    "sky130_fd_sc_hd__o211ai_1": 1,
+    "sky130_fd_sc_hd__o41a_1": 1,
+    "sky130_fd_sc_hd__dfrtp_1": 38,
+    "sky130_fd_sc_hd__dfstp_2": 1
+  },
+  "pre_layout_timing_status": "failed",
+  "source_sha256": {
+    "v2/rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "v2/tests/rtl/tb_sar_controller.sv": "ca68ee09eeca1b8194e0bc7859d19637974ba1ca3ef992dbc728fdeb2a46ad99",
+    "v2/digital/run.py": "5cdbac5a513b561f0f9ee2741359791f4daee38632a93b6690b0d2d92da118cb",
+    "v2/digital/synthesize.tcl": "fd36ba694b1e9502491a420538f32f1d82a8299a49c9248663726d6d486bc95f",
+    "v2/digital/sta.tcl": "45f971d39e4169e6b9e7a65ab0262a11e5772bd22147a4f1740fa8e997177a96",
+    "v2/digital/constraints.sdc": "64e7bbdc7f4f8063785549e5e5c01b8c280332b210f4ed9f4bfac9662650a317"
+  },
+  "artifact_sha256": {
+    "v2/digital/results/gate_compile.log": "1b49e02249492e34549301a260fbd06ac04510d5395dacda1360f4133133366a",
+    "v2/digital/results/gate_test.log": "798ef7265241ca9282da6203075b4e4266d4f3db0c2fe72946504a5743413bc8",
+    "v2/digital/results/opensta_version.log": "b2f44d3b6e29f8b1b73ea4735f006affc4d198e1fd9c7d50e736159b1ef636c6",
+    "v2/digital/results/sar_controller_mapped.json": "4485af4de9aacf273abc126adf6508b7129bf97b3a17af9c9bbe4fb29a4dcd33",
+    "v2/digital/results/sar_controller_mapped.v": "06939c1b3ddf8c5ec80a52d75c23371528b1cddf386cfbf2b4e8e7413e7b0433",
+    "v2/digital/results/sta_ff_n40C_1v95.log": "09020923c3c572dfb193699a59b256a129c48b8f3cf9bca60eb4e6afd1782b73",
+    "v2/digital/results/sta_ss_100C_1v60.log": "656888baa4f9e9b393a161afd85654a39c2ea5b286b9e34724b516599c79c860",
+    "v2/digital/results/sta_tt_025C_1v80.log": "266d305cb9683509d7b5deb17c97cecdaeeb435c777df1d64a3d332f772b7fbe",
+    "v2/digital/results/synthesis.log": "f8e559fc0ee52647b26d193f69d1cc07a3ceb51a417278be65cf9f59084d967a",
+    "v2/digital/results/synthesis_stats.json": "35e51b25d7da795ccee8c479eb9793bbef82e15267acdf8da49244d7ddd4b255",
+    "v2/digital/results/synthesis_stats.txt": "8e8c82393ad8f38c2a2a1da9da36bfa4fcfcd5994bbb8e01c4f8c4f1798dbbdf",
+    "v2/digital/results/yosys_version.log": "3145f7e92e2f593a66afe08f5056f094067826efdc53240ee17a34ff3df13032"
+  }
+}

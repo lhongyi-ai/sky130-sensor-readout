@@ -1,0 +1,99 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1788835765
+<< pwell >>
+rect -211 -1010 211 1010
+<< nmos >>
+rect -15 -800 15 800
+<< ndiff >>
+rect -73 788 -15 800
+rect -73 -788 -61 788
+rect -27 -788 -15 788
+rect -73 -800 -15 -788
+rect 15 788 73 800
+rect 15 -788 27 788
+rect 61 -788 73 788
+rect 15 -800 73 -788
+<< ndiffc >>
+rect -61 -788 -27 788
+rect 27 -788 61 788
+<< psubdiff >>
+rect -175 940 -79 974
+rect 79 940 175 974
+rect -175 878 -141 940
+rect 141 878 175 940
+rect -175 -940 -141 -878
+rect 141 -940 175 -878
+rect -175 -974 -79 -940
+rect 79 -974 175 -940
+<< psubdiffcont >>
+rect -79 940 79 974
+rect -175 -878 -141 878
+rect 141 -878 175 878
+rect -79 -974 79 -940
+<< poly >>
+rect -33 872 33 888
+rect -33 838 -17 872
+rect 17 838 33 872
+rect -33 822 33 838
+rect -15 800 15 822
+rect -15 -822 15 -800
+rect -33 -838 33 -822
+rect -33 -872 -17 -838
+rect 17 -872 33 -838
+rect -33 -888 33 -872
+<< polycont >>
+rect -17 838 17 872
+rect -17 -872 17 -838
+<< locali >>
+rect -175 940 -79 974
+rect 79 940 175 974
+rect -175 878 -141 940
+rect 141 878 175 940
+rect -33 838 -17 872
+rect 17 838 33 872
+rect -61 788 -27 804
+rect -61 -804 -27 -788
+rect 27 788 61 804
+rect 27 -804 61 -788
+rect -33 -872 -17 -838
+rect 17 -872 33 -838
+rect -175 -940 -141 -878
+rect 141 -940 175 -878
+rect -175 -974 -79 -940
+rect 79 -974 175 -940
+<< viali >>
+rect -17 838 17 872
+rect -61 -788 -27 788
+rect 27 -788 61 788
+rect -17 -872 17 -838
+<< metal1 >>
+rect -29 872 29 878
+rect -29 838 -17 872
+rect 17 838 29 872
+rect -29 832 29 838
+rect -67 788 -21 800
+rect -67 -788 -61 788
+rect -27 -788 -21 788
+rect -67 -800 -21 -788
+rect 21 788 67 800
+rect 21 -788 27 788
+rect 61 -788 67 788
+rect 21 -800 67 -788
+rect -29 -838 29 -832
+rect -29 -872 -17 -838
+rect 17 -872 29 -838
+rect -29 -878 29 -872
+<< labels >>
+rlabel psubdiffcont 0 -957 0 -957 0 B
+port 1 nsew
+rlabel ndiffc -44 0 -44 0 0 D
+port 2 nsew
+rlabel ndiffc 44 0 44 0 0 S
+port 3 nsew
+rlabel polycont 0 855 0 855 0 G
+port 4 nsew
+<< properties >>
+string FIXED_BBOX -158 -957 158 957
+<< end >>

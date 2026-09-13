@@ -1,0 +1,51 @@
+{
+  "test": "sampling",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gain_implementation": "static resistor configuration",
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "samples": [
+    {
+      "time_s": 1.248e-05,
+      "sampled_diff_v": 0.357156113,
+      "settled_pga_diff_v": 0.35717212200000004,
+      "dynamic_error_v": -1.600900000003902e-05,
+      "within_0p25LSB": true,
+      "after_switch_opens_time_s": 1.25119475e-05,
+      "held_after_switch_opens_v": 0.357199581,
+      "post_aperture_error_v": 2.745899999995194e-05,
+      "post_aperture_within_0p25LSB": true
+    },
+    {
+      "time_s": 2.248e-05,
+      "sampled_diff_v": -0.357155538,
+      "settled_pga_diff_v": -0.35717212200000004,
+      "dynamic_error_v": 1.6584000000041677e-05,
+      "within_0p25LSB": true,
+      "after_switch_opens_time_s": 2.25119475e-05,
+      "held_after_switch_opens_v": -0.357198964,
+      "post_aperture_error_v": -2.684199999997139e-05,
+      "post_aperture_within_0p25LSB": true
+    },
+    {
+      "time_s": 3.248e-05,
+      "sampled_diff_v": 0.357156113,
+      "settled_pga_diff_v": 0.35717212200000004,
+      "dynamic_error_v": -1.600900000003902e-05,
+      "within_0p25LSB": true,
+      "after_switch_opens_time_s": 3.25119475e-05,
+      "held_after_switch_opens_v": 0.357199581,
+      "post_aperture_error_v": 2.745899999995194e-05,
+      "post_aperture_within_0p25LSB": true
+    }
+  ],
+  "all_dynamic_samples_pass": true,
+  "all_post_aperture_samples_pass": true,
+  "load_pf_per_side": 81.28512,
+  "source_r_ohm_per_side": 350,
+  "isolation_r_ohm_per_side": 150,
+  "reservoir_cap_nominal_pf_per_side": 4,
+  "caution": "Real PDK TG and MIM bank with testbench CM reset. NOT full SAR bit switching/comparator kickback or a system SNDR test."
+}

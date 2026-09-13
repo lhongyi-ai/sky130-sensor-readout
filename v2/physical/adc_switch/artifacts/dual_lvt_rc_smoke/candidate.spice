@@ -1,0 +1,7 @@
+* Separate feasibility candidate; not the frozen ADC integration switch.
+* Both low-threshold devices are supplied by the installed SKY130 PDK.
+.subckt adc_tgate_dual_lvt A B EN ENB VDD VSS params: WN=4.0 WP=5.0 LSW=0.15 LSWP=0.35
+XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L={LSW} nf=1 mult=1
+* SKY130 low-Vt PMOS has a 0.35um minimum legal/modelled length, not 0.15um.
+XP B ENB A VDD sky130_fd_pr__pfet_01v8_lvt W={WP} L={LSWP} nf=1 mult=1
+.ends adc_tgate_dual_lvt

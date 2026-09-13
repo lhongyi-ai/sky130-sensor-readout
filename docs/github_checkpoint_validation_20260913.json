@@ -1,0 +1,62 @@
+{
+  "scope": "Publication copy checks only; no new analog simulation or full-chip qualification.",
+  "checks": [
+    {
+      "name": "behavioral_analysis_tests",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_affine_fit_independent_holdout (test_analysis.CalibrationTests.test_affine_fit_independent_holdout) ... ok\ntest_bad_raw_codes_rejected_and_serialization_round_trip (test_analysis.CalibrationTests.test_bad_raw_codes_rejected_and_serialization_round_trip) ... ok\ntest_corrupted_metadata_and_coefficients_rejected (test_analysis.CalibrationTests.test_corrupted_metadata_and_coefficients_rejected) ... ok\ntest_degenerate_clipped_and_nonmonotonic_fit_rejected (test_analysis.CalibrationTests.test_degenerate_clipped_and_nonmonotonic_fit_rejected) ... ok\ntest_frozen_calibration_does_not_hide_later_drift (test_analysis.CalibrationTests.test_frozen_calibration_does_not_hide_later_drift) ... ok\ntest_no_hidden_clipping_rounding_or_half_lsb_shift (test_analysis.CalibrationTests.test_no_hidden_clipping_rounding_or_half_lsb_shift) ... ok\ntest_nominal_only_and_valid_provenance (test_analysis.CalibrationTests.test_nominal_only_and_valid_provenance) ... ok\ntest_endpoint_removes_gain_offset_but_nominal_dnl_retains_gain (test_analysis.EndpointLinearityTests.test_endpoint_removes_gain_offset_but_nominal_dnl_retains_gain) ... ok\ntest_ideal_twelve_bit_transfer_and_scope (test_analysis.EndpointLinearityTests.test_ideal_twelve_bit_transfer_and_scope) ... ok\ntest_invalid_boundaries_are_not_sorted_or_assumed_complete (test_analysis.EndpointLinearityTests.test_invalid_boundaries_are_not_sorted_or_assumed_complete) ... ok\ntest_known_nonlinearity (test_analysis.EndpointLinearityTests.test_known_nonlinearity) ... ok\ntest_zero_width_missing_code_is_not_hidden (test_analysis.EndpointLinearityTests.test_zero_width_missing_code_is_not_hidden) ... ok\ntest_alias_harmonics_including_above_nyquist (test_analysis.SpectrumMetricsTests.test_alias_harmonics_including_above_nyquist) ... ok\ntest_broadband_noise_matches_independent_time_domain_power (test_analysis.SpectrumMetricsTests.test_broadband_noise_matches_independent_time_domain_power) ... ok\ntest_dc_offset_and_scale_do_not_change_ratios (test_analysis.SpectrumMetricsTests.test_dc_offset_and_scale_do_not_change_ratios) ... ok\ntest_harmonics_are_not_removed_from_sndr (test_analysis.SpectrumMetricsTests.test_harmonics_are_not_removed_from_sndr) ... ok\ntest_invalid_and_degenerate_records_rejected (test_analysis.SpectrumMetricsTests.test_invalid_and_degenerate_records_rejected) ... ok\ntest_known_powers_sndr_snr_thd_and_sfdr (test_analysis.SpectrumMetricsTests.test_known_powers_sndr_snr_thd_and_sfdr) ... ok\ntest_nonharmonic_spur_preserves_sndr_when_harmonics_are_absent (test_analysis.SpectrumMetricsTests.test_nonharmonic_spur_preserves_sndr_when_harmonics_are_absent) ... ok\ntest_nyquist_weight_and_aliased_harmonic_deduplication (test_analysis.SpectrumMetricsTests.test_nyquist_weight_and_aliased_harmonic_deduplication) ... ok\ntest_odd_length_has_no_nyquist_half_weight (test_analysis.SpectrumMetricsTests.test_odd_length_has_no_nyquist_half_weight) ... ok\ntest_sfdr_includes_nonharmonic_spurs (test_analysis.SpectrumMetricsTests.test_sfdr_includes_nonharmonic_spurs) ... ok\ntest_single_harmonic_preserves_sndr_when_noise_is_absent (test_analysis.SpectrumMetricsTests.test_single_harmonic_preserves_sndr_when_noise_is_absent) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.071s\n\nOK\n"
+    },
+    {
+      "name": "behavioral_model_tests",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_cubic_output_error (test_model.FrontendTests.test_cubic_output_error) ... ok\ntest_extreme_finite_gain_does_not_overflow (test_model.FrontendTests.test_extreme_finite_gain_does_not_overflow) ... ok\ntest_linear_gain_offset_and_finite_loop_gain (test_model.FrontendTests.test_linear_gain_offset_and_finite_loop_gain) ... ok\ntest_noisy_seed_reproducibility (test_model.FrontendTests.test_noisy_seed_reproducibility) ... ok\ntest_settling_has_history_and_known_time_constant (test_model.FrontendTests.test_settling_has_history_and_known_time_constant) ... ok\ntest_coherent_tone (test_model.ToneAndValidationTests.test_coherent_tone) ... ok\ntest_invalid_array_gain_and_cap_shape (test_model.ToneAndValidationTests.test_invalid_array_gain_and_cap_shape) ... ok\ntest_invalid_error_parameters (test_model.ToneAndValidationTests.test_invalid_error_parameters) ... ok\ntest_invalid_specs (test_model.ToneAndValidationTests.test_invalid_specs) ... ok\ntest_invalid_tone_requests (test_model.ToneAndValidationTests.test_invalid_tone_requests) ... ok\ntest_near_nyquist_never_selects_alias_or_nyquist (test_model.ToneAndValidationTests.test_near_nyquist_never_selects_alias_or_nyquist) ... ok\ntest_spec_properties (test_model.ToneAndValidationTests.test_spec_properties) ... ok\ntest_capacitor_errors_create_missing_codes (test_model.TransferTests.test_capacitor_errors_create_missing_codes) ... ok\ntest_comparator_noise_is_drawn_per_decision (test_model.TransferTests.test_comparator_noise_is_drawn_per_decision) ... ok\ntest_comparator_offset_sign (test_model.TransferTests.test_comparator_offset_sign) ... ok\ntest_endpoints_and_scalar (test_model.TransferTests.test_endpoints_and_scalar) ... ok\ntest_every_threshold_and_adjacent_float (test_model.TransferTests.test_every_threshold_and_adjacent_float) ... ok\ntest_full_code_range_centers (test_model.TransferTests.test_full_code_range_centers) ... ok\ntest_random_ideal_sar_agreement_and_shape (test_model.TransferTests.test_random_ideal_sar_agreement_and_shape) ... ok\ntest_sampling_noise_is_drawn_once_per_conversion (test_model.TransferTests.test_sampling_noise_is_drawn_once_per_conversion) ... ok\ntest_zero_capacitor_errors_are_ideal (test_model.TransferTests.test_zero_capacitor_errors_are_ideal) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.037s\n\nOK\n"
+    },
+    {
+      "name": "digital_rtl",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"evidence_level\": \"digital_rtl_with_ideal_held_code_comparator\",\n  \"analog_adc_validated\": false,\n  \"physical_timing_validated\": false,\n  \"stages\": [\n    {\n      \"name\": \"verilog_2005_design_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"testbench_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"self_checking_simulation\",\n      \"returncode\": 0,\n      \"output\": \"PASS sar_controller: checks=687790 accepted=4400 completed=4384 aborted=16 ignored_busy=2293 reserved_rejected=74 back_to_back=124\\n/Users/stanley/Documents/ChatGPT/Analog Circuit Project/github-publication/sky130-sensor-readout/v2/tests/rtl/tb_sar_controller.sv:222: $finish called at 46914064500 (1ps)\"\n    }\n  ],\n  \"simulator\": \"Icarus Verilog version 13.0 (stable) (v13_0)\",\n  \"counters\": {\n    \"checks\": 687790,\n    \"accepted\": 4400,\n    \"completed\": 4384,\n    \"aborted\": 16,\n    \"ignored_busy\": 2293,\n    \"reserved_rejected\": 74,\n    \"back_to_back\": 124\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "copied_source_sha256_errors": [],
+  "python_syntax_files": 341,
+  "python_syntax_errors": [],
+  "full_saved_evidence_suite_run": false,
+  "raw_data_note": "Full historical evidence replay requires local-only and originally ignored files; see checkpoint manifest.",
+  "status": "PASS_WITH_PRESERVED_HISTORICAL_WHITESPACE",
+  "initial_source_comparison": {
+    "observed_mismatches": [
+      ".gitignore"
+    ],
+    "resolution": "The publication .gitignore intentionally appends local-only rules; verify exact original prefix separately."
+  },
+  "copied_source_files_checked": 7706,
+  "publication_adaptations": [
+    {
+      "path": ".gitignore",
+      "source_sha256": "289c8a9f91939dfac719242f3d5d1dcba873eadd22295009d8888f5a1aff4f4e",
+      "published_sha256": "ab1fa69439334a9f2afb88f8df48d80bfe1b3b8bb76aa0de835e97b45f065a5e",
+      "original_bytes_preserved": true,
+      "change": "appended local-only ignore rules"
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "2d1e2fff7b9ac7de3b47c8301509acf8a89061685b7573ccf87b02df9f439af0",
+      "published_sha256": "909e938036a1054166041599b17e79084eabb36053c7d514af834ade32bfbc45",
+      "original_bytes_preserved": true,
+      "change": "prepended checkpoint navigation"
+    }
+  ],
+  "whitespace_review": {
+    "all_imported_files_returncode": 2,
+    "diagnostics": {
+      "trailing_whitespace": 3639664,
+      "new_blank_line_at_eof": 373
+    },
+    "decision": "Historical source and simulator output bytes are preserved to retain evidence hashes; whitespace-only diagnostics do not change the functional test results.",
+    "publication_document_changes_returncode": 0,
+    "publication_document_changes_output": ""
+  }
+}

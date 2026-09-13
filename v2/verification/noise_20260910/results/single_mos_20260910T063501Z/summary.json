@@ -1,0 +1,43 @@
+{
+  "status": "SINGLE_BIN_PROBE_NOT_QUALIFIED",
+  "original_model_implementation": "BSIM4v5 models (Berkeley Short Channel IGFET Model-4)",
+  "selected_model": "xm:nshort_model.29",
+  "original_version": "4.5",
+  "ngspice_op": {
+    "out": 1.718068324769174,
+    "vdd#branch": -4.0965837615413055e-06
+  },
+  "explicit_model_parameter_count": 349,
+  "instance_parameter_count": 14,
+  "constant_fallbacks": [
+    {
+      "parameter": "lintnoi",
+      "reason": "query unavailable; original literal preserved"
+    }
+  ],
+  "numeric_model_runtime_path": "/tmp/sensor_numeric_bin_a1i3tzss/device.sim",
+  "numeric_parameters_sha256": "9da82c1585519f892d1909440c6101b3069227b33ed86e3d109d5d8e52fd04d5",
+  "native_deck_sha256": "2d5f43771f9e318d6b3feb50ed00b292fd3613da1a4270362fa7f3214c298173",
+  "ngspice_model_file_sha256": "e90265f1a1b6057fbb4324a2e5d2b4ff8d6e5028314daec563eda1defb3a91de",
+  "vacask_model_source_sha256": "57c171ca7148b72ab6008493045d8eb14dc3e0e50d36fb900523c61b7ab936bf",
+  "run": {
+    "returncode": 0,
+    "elapsed_s": 46.39742387601291
+  },
+  "unknown_version_fallback": true,
+  "adc_noise_qualified": false,
+  "sky130_model_equivalence_qualified": false,
+  "vacask_op": {
+    "out": 1.7180683238785452,
+    "vdd:flow(br)": -4.096583806072745e-06
+  },
+  "dc_current_relative_error": 1.0870384148375933e-08,
+  "noise_psd_ratio_minmax": [
+    0.48479559591059346,
+    0.999979041272942
+  ],
+  "ngspice_noise_rms_v": 0.00016247570398314395,
+  "vacask_noise_rms_v": 0.0001397943221599987,
+  "off_std_v": 2.220446049250313e-16,
+  "on_std_v": 0.00013128867349343162
+}

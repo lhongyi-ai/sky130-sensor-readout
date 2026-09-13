@@ -1,0 +1,620 @@
+{
+  "status": "SKY130_CDAC_ROUTED_OPEN_PDK_PASS",
+  "generated_at_utc": "2026-09-11T08:52:32.151344+00:00",
+  "evidence_level": "Standalone passive differential CDAC macro: real SKY130 MIM placement and M3/M4/via4/M5 routing, Magic DRC, independent Netgen LVS, full flattened RC extraction, and KLayout GDS readback",
+  "cadence_used": false,
+  "foundry_signoff": false,
+  "final_complete_adc_layout": false,
+  "completion": {
+    "binary_assignment": true,
+    "all_8192_active_units_placed": true,
+    "all_active_top_and_12bit_plus_dummy_terminals_physically_routed": true,
+    "edge_dummy_ring_placed_and_biased_separately": true,
+    "routing": true,
+    "magic_drc": true,
+    "netgen_lvs": true,
+    "full_flattened_rc_pex": true,
+    "post_layout_adc_performance": false,
+    "reference_switches_and_comparator_integrated": false
+  },
+  "toolchain": {
+    "container_image_sha256": "sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7",
+    "pdk_version": "026824c7969ce6f4fc9678e6ca04b0a06a596c4b",
+    "magic": "Magic 8.3 revision 681 - Compiled on Tue Aug 25 11:43:38 AM CEST 2026.",
+    "klayout": "KLayout 0.30.11",
+    "netgen": "Netgen 1.5.323 (from raw logs)"
+  },
+  "checks": {
+    "original_binary_assignment_was_qualified": true,
+    "assignment_coordinates_and_common_centroid_preserved": true,
+    "representative_tile_magic_drc_zero": true,
+    "representative_tile_independent_lvs_unique": true,
+    "representative_tile_has_real_rc_pex": true,
+    "p_side_magic_drc_zero": true,
+    "n_side_magic_drc_zero": true,
+    "differential_top_magic_drc_zero": true,
+    "p_side_independent_lvs_unique": true,
+    "n_side_independent_lvs_unique": true,
+    "differential_top_independent_lvs_unique": true,
+    "p_side_extracted_topology_matches_original_csv": true,
+    "n_side_extracted_topology_matches_original_csv": true,
+    "side_rc_extraction_is_nonempty_and_positive": true,
+    "top_rc_extraction_is_nonempty_and_positive": true,
+    "all_res_ext_outputs_are_nonempty": true,
+    "top_pex_has_exact_30_ports": true,
+    "klayout_reads_two_4356_mim_sides": true,
+    "klayout_reads_all_30_physical_port_labels": true,
+    "full_and_detail_png_are_nonempty": true,
+    "presentation_pngs_hide_text_without_changing_gds": true
+  },
+  "magic_drc_counts": {
+    "p_side": 0,
+    "n_side": 0,
+    "top": 0
+  },
+  "lvs": {
+    "representative_tile": "unique_match",
+    "p_side": "unique_match",
+    "n_side": "unique_match",
+    "differential_top": "unique_match",
+    "top_port_count": 30,
+    "side_port_count_each": 15,
+    "note": "LVS references are generated from the frozen assignment CSV; direct extracted-topology-versus-CSV checks provide an additional independent guard against shared mapping errors."
+  },
+  "extracted_topology": {
+    "P": {
+      "mim_devices": 4356,
+      "active_counts_expected": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      },
+      "active_counts_extracted": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      },
+      "edge_dummies_expected": 260,
+      "edge_dummies_extracted": 260,
+      "unexpected_terminal_pairs": [],
+      "all_extracted_mims_are_3um_by_3um": true,
+      "matches_original_assignment": true
+    },
+    "N": {
+      "mim_devices": 4356,
+      "active_counts_expected": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      },
+      "active_counts_extracted": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      },
+      "edge_dummies_expected": 260,
+      "edge_dummies_extracted": 260,
+      "unexpected_terminal_pairs": [],
+      "all_extracted_mims_are_3um_by_3um": true,
+      "matches_original_assignment": true
+    }
+  },
+  "rc_pex": {
+    "representative_tile": {
+      "file": "probe_artifacts/cdac_route_probe_flat.rc.spice",
+      "bytes": 779,
+      "pins": [
+        "TOP",
+        "B0",
+        "B1"
+      ],
+      "pin_count": 3,
+      "mim_devices": 4,
+      "resistor_segments": 9,
+      "parasitic_capacitors": 11,
+      "resistance_sum_ohm_non_path_metric": 15.854016999999999,
+      "largest_resistor_segment_ohm": 5.60941,
+      "parasitic_capacitance_sum_ff_non_node_metric": 33.57544,
+      "positive_rc_network": true
+    },
+    "sides": {
+      "P": {
+        "file": "artifacts/cdac_side_p_routed_flat.rc.spice",
+        "bytes": 971214,
+        "pins": [
+          "TOP",
+          "B11",
+          "B10",
+          "B9",
+          "B8",
+          "B7",
+          "B6",
+          "B5",
+          "B4",
+          "B3",
+          "B2",
+          "B1",
+          "B0",
+          "DUMMY",
+          "EDGE_BIAS"
+        ],
+        "pin_count": 15,
+        "mim_devices": 4356,
+        "resistor_segments": 13105,
+        "parasitic_capacitors": 8855,
+        "resistance_sum_ohm_non_path_metric": 6024.11133016,
+        "largest_resistor_segment_ohm": 30.4143,
+        "parasitic_capacitance_sum_ff_non_node_metric": 13566.77543,
+        "positive_rc_network": true
+      },
+      "N": {
+        "file": "artifacts/cdac_side_n_routed_flat.rc.spice",
+        "bytes": 971311,
+        "pins": [
+          "TOP",
+          "B11",
+          "B10",
+          "B9",
+          "B8",
+          "B7",
+          "B6",
+          "B5",
+          "B4",
+          "B3",
+          "B2",
+          "B1",
+          "B0",
+          "DUMMY",
+          "EDGE_BIAS"
+        ],
+        "pin_count": 15,
+        "mim_devices": 4356,
+        "resistor_segments": 13105,
+        "parasitic_capacitors": 8855,
+        "resistance_sum_ohm_non_path_metric": 6024.11139016,
+        "largest_resistor_segment_ohm": 30.7001,
+        "parasitic_capacitance_sum_ff_non_node_metric": 13560.54029,
+        "positive_rc_network": true
+      }
+    },
+    "differential_top": {
+      "file": "artifacts/cdac_diff_routed_flat_rc.spice",
+      "bytes": 2139097,
+      "pins": [
+        "P_TOP",
+        "P_B11",
+        "P_B10",
+        "P_B9",
+        "P_B8",
+        "P_B7",
+        "P_B6",
+        "P_B5",
+        "P_B4",
+        "P_B3",
+        "P_B2",
+        "P_B1",
+        "P_B0",
+        "P_DUMMY",
+        "P_EDGE_BIAS",
+        "N_TOP",
+        "N_B11",
+        "N_B10",
+        "N_B9",
+        "N_B8",
+        "N_B7",
+        "N_B6",
+        "N_B5",
+        "N_B4",
+        "N_B3",
+        "N_B2",
+        "N_B1",
+        "N_B0",
+        "N_DUMMY",
+        "N_EDGE_BIAS"
+      ],
+      "pin_count": 30,
+      "mim_devices": 8712,
+      "resistor_segments": 26210,
+      "parasitic_capacitors": 17710,
+      "resistance_sum_ohm_non_path_metric": 12048.22272032,
+      "largest_resistor_segment_ohm": 30.7001,
+      "parasitic_capacitance_sum_ff_non_node_metric": 27127.3802,
+      "positive_rc_network": true
+    },
+    "res_ext_bytes": {
+      "probe": 1168,
+      "p_side": 1608389,
+      "n_side": 1607456,
+      "top": 3433086
+    },
+    "res_ext_note": "All final .res.ext files are nonempty. An earlier in-process tile attempt retained the hierarchical extraction root and could not find parent .ext files; the preserved failure was corrected by running extresist all in a fresh Magic process."
+  },
+  "routing_resources": {
+    "top": "metal3 mesh physically overlaps every active C2 terminal",
+    "bank_escape": "metal4 C1 fingers and row-channel buses",
+    "bank_trunks": "metal5 with real 1.18um via4 contacts and 1.60um-wide M5",
+    "periphery": "distinct metal4 buses, 2.0um pitch",
+    "edge_dummies": "both plates shorted and tied to separate EDGE_BIAS metal3 ring",
+    "detached_connectivity_labels": false
+  },
+  "route_summary": {
+    "P": {
+      "active_units": 4096,
+      "edge_dummies": 260,
+      "contiguous_row_runs": 140,
+      "metal5_trunks": 24,
+      "trunks_by_net_um": {
+        "B0": [
+          191.27
+        ],
+        "B1": [
+          11.27,
+          377.27
+        ],
+        "B10": [
+          -16.8,
+          406.8
+        ],
+        "B11": [
+          -20.0,
+          410.0
+        ],
+        "B2": [
+          17.27,
+          365.27
+        ],
+        "B3": [
+          35.27,
+          347.27
+        ],
+        "B4": [
+          71.27,
+          311.27
+        ],
+        "B5": [
+          143.27,
+          239.27
+        ],
+        "B6": [
+          -4.0,
+          394.0
+        ],
+        "B7": [
+          -7.2,
+          397.2
+        ],
+        "B8": [
+          -10.4,
+          400.4
+        ],
+        "B9": [
+          -13.600000000000001,
+          403.6
+        ],
+        "DUMMY": [
+          197.27
+        ]
+      },
+      "counts_by_net": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      }
+    },
+    "N": {
+      "active_units": 4096,
+      "edge_dummies": 260,
+      "contiguous_row_runs": 140,
+      "metal5_trunks": 24,
+      "trunks_by_net_um": {
+        "B0": [
+          197.27
+        ],
+        "B1": [
+          11.27,
+          377.27
+        ],
+        "B10": [
+          -16.8,
+          406.8
+        ],
+        "B11": [
+          -20.0,
+          410.0
+        ],
+        "B2": [
+          17.27,
+          365.27
+        ],
+        "B3": [
+          35.27,
+          347.27
+        ],
+        "B4": [
+          71.27,
+          311.27
+        ],
+        "B5": [
+          143.27,
+          239.27
+        ],
+        "B6": [
+          -4.0,
+          394.0
+        ],
+        "B7": [
+          -7.2,
+          397.2
+        ],
+        "B8": [
+          -10.4,
+          400.4
+        ],
+        "B9": [
+          -13.600000000000001,
+          403.6
+        ],
+        "DUMMY": [
+          191.27
+        ]
+      },
+      "counts_by_net": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      }
+    }
+  },
+  "geometry": {
+    "x_pitch_um": 6.0,
+    "y_pitch_um": 6.0,
+    "y_pitch_increase_vs_placement_percent": 32.15859030837005,
+    "side_bbox_um": [
+      -20.8,
+      -1.7,
+      410.8,
+      420.8
+    ],
+    "differential_top_bbox_um": [
+      1.2,
+      -1.7,
+      894.4,
+      420.8
+    ],
+    "differential_top_width_height_um": [
+      893.1999999999999,
+      422.5
+    ],
+    "differential_top_area_um2": 377377.0,
+    "differential_top_area_mm2": 0.377377,
+    "metal5_trunks_per_side": 24,
+    "contiguous_row_runs_per_side": 140
+  },
+  "klayout_readback": {
+    "reader": "KLayout pya independent GDS readback",
+    "gds": "cdac_diff_routed.gds",
+    "dbu_um": 0.001,
+    "cells": [
+      "cdac_diff_routed",
+      "cdac_side_n_routed",
+      "cdac_side_p_routed",
+      "mim_unit"
+    ],
+    "top_bbox_um": [
+      1.2,
+      -1.7,
+      894.4,
+      420.8
+    ],
+    "p_side_bbox_um": [
+      -20.8,
+      -1.7,
+      410.8,
+      420.8
+    ],
+    "n_side_bbox_um": [
+      -20.8,
+      -1.7,
+      410.8,
+      420.8
+    ],
+    "top_direct_instances": 2,
+    "p_side_direct_mim_instances": 4356,
+    "n_side_direct_mim_instances": 4356,
+    "top_direct_shapes_and_texts": 90,
+    "top_port_labels": [
+      "N_B0",
+      "N_B1",
+      "N_B10",
+      "N_B11",
+      "N_B2",
+      "N_B3",
+      "N_B4",
+      "N_B5",
+      "N_B6",
+      "N_B7",
+      "N_B8",
+      "N_B9",
+      "N_DUMMY",
+      "N_EDGE_BIAS",
+      "N_TOP",
+      "P_B0",
+      "P_B1",
+      "P_B10",
+      "P_B11",
+      "P_B2",
+      "P_B3",
+      "P_B4",
+      "P_B5",
+      "P_B6",
+      "P_B7",
+      "P_B8",
+      "P_B9",
+      "P_DUMMY",
+      "P_EDGE_BIAS",
+      "P_TOP"
+    ],
+    "expected_port_labels": [
+      "N_B0",
+      "N_B1",
+      "N_B10",
+      "N_B11",
+      "N_B2",
+      "N_B3",
+      "N_B4",
+      "N_B5",
+      "N_B6",
+      "N_B7",
+      "N_B8",
+      "N_B9",
+      "N_DUMMY",
+      "N_EDGE_BIAS",
+      "N_TOP",
+      "P_B0",
+      "P_B1",
+      "P_B10",
+      "P_B11",
+      "P_B2",
+      "P_B3",
+      "P_B4",
+      "P_B5",
+      "P_B6",
+      "P_B7",
+      "P_B8",
+      "P_B9",
+      "P_DUMMY",
+      "P_EDGE_BIAS",
+      "P_TOP"
+    ],
+    "display_render": {
+      "source_gds_unchanged": true,
+      "source_gds_sha256_before": "3e42e98260d9d99c8f88cffb9371d755dd6897bbfc311f7b519f743957f867c9",
+      "source_gds_sha256_after": "3e42e98260d9d99c8f88cffb9371d755dd6897bbfc311f7b519f743957f867c9",
+      "text_shapes_removed_in_memory": 62,
+      "full_png": "cdac_diff_routed_display_no_labels.png",
+      "detail_png": "cdac_routing_detail_display_no_labels.png",
+      "note": "All GDS text is hidden only in presentation renders; physical port labels remain in the verified GDS and original evidence renders."
+    }
+  },
+  "preserved_failures": [
+    {
+      "artifact": "artifacts/attempt1_capm11_194_per_side.log",
+      "finding": "An internal M3 vertical trunk plus a wide edge trunk produced 194 capm.11 errors per side.",
+      "resolution": "Moved TOP joining to the qualified boundary slot and narrowed vertical M3 trunks to 0.30 um."
+    },
+    {
+      "artifact": "artifacts/attempt2_stale_mag_replayed_194_per_side.log",
+      "finding": "A rerun loaded an existing .mag and accumulated old paint, so the same 194 errors remained.",
+      "resolution": "Generator now deletes only its named generated cells before rebuilding."
+    },
+    {
+      "artifact": "artifacts/attempt3_drc0_missing_b0_dummy_ports.log",
+      "finding": "DRC was zero, but extraction omitted B0 and DUMMY because the one-trunk periphery wires did not reach their labels.",
+      "resolution": "Every periphery wire now physically reaches the shared pin x; extraction exposes all 15 side ports."
+    },
+    {
+      "artifact": "probe_artifacts/attempt_in_process_extresist_root_failure.log",
+      "finding": "Running extresist after hierarchy generation in the same Magic process could not find retained parent .ext files and produced no resistor network.",
+      "resolution": "extract_probe_rc.tcl runs flattened RC extraction in a fresh process; final tile .res.ext and R network are nonempty."
+    },
+    {
+      "artifact": "artifacts/attempt4_drc0_side_lvs_ready_top_ports_missing.log",
+      "finding": "Side cells had all physical ports, but the first hierarchical top emitted only two ports because parent labels did not overlap parent-level conductor shapes.",
+      "resolution": "The generator now paints a parent-level M3/M4 landing under every prefixed top label; final top extraction exposes all 30 ports and matches uniquely."
+    }
+  ],
+  "limitations": [
+    "This qualifies the standalone passive CDAC capacitor macro, not the complete SAR ADC or sensor readout core.",
+    "Reference-selection switches, sampling switches, comparator, reference distribution devices, digital control, frontend, and bias are not integrated here.",
+    "RC extraction is evidence of parasitics, not a post-layout INL/DNL, settling, noise, reference-droop, or SNDR pass.",
+    "EDGE_BIAS must be tied to a quiet fixed bias in top-level integration; its shorted edge capacitors are deliberately outside TOP.",
+    "No electromigration, IR-drop, antenna, density/fill, coupling-corner, or reliability signoff is claimed.",
+    "Magic/Netgen/KLayout open SKY130 rules were used; this is not Cadence or foundry signoff."
+  ],
+  "key_artifact_sha256": {
+    "generate_routed_cdac.py": "9b8a09f706716e069666ff266f368e6e38b6ac6d3320be083584b6dcd84eae74",
+    "artifacts/generate_routed_cdac.tcl": "8fb38ce99ad1ac2d7787db21ef157421efcfa6d5543517c4511a3171aed6dd03",
+    "artifacts/cdac_diff_routed.gds": "3e42e98260d9d99c8f88cffb9371d755dd6897bbfc311f7b519f743957f867c9",
+    "artifacts/cdac_diff_routed.mag": "46602aeae627663529f3ee139fffb193323b7b2c65745377bd066a713acf90bf",
+    "artifacts/cdac_diff_routed.lvs.spice": "6a0d6e7e07a3bf83282d28d905b67bd675097acb2c719ad391d2c034825db359",
+    "artifacts/cdac_diff_routed.reference.spice": "4241ef0384946d7498009646e0ac8b075a6281060976e2219843ad7d47aeddf2",
+    "artifacts/top_lvs.rpt": "eed362e94fc8087ac9d6a760ae7f3067443a0502b81ecea01f2a9949ce0afe8b",
+    "artifacts/cdac_diff_routed_flat_rc.spice": "7281fb098ddbcad91ee5079031114830a7f1d51e8b719b6b7ca6d3f3dbbbce11",
+    "artifacts/cdac_diff_routed_flat_rc.res.ext": "ecfcbacbaeb6556efbb2e28ec3f0ea76586e22f7ff17d9a1508537c15b452edf",
+    "artifacts/cdac_diff_routed.png": "bce5d2a945deea1666f8d190dbcb0c2fd81814d1724848920c8efc85d3810f05",
+    "artifacts/cdac_routing_detail.png": "861c9ae1998dbb3d8da12123bbb5dfc1399de1075fb5e867942a0478325ead7b",
+    "artifacts/cdac_diff_routed_display_no_labels.png": "d2000dba08d95b5a41412af65be360c632f90319f24d236446155b6864ccc167",
+    "artifacts/cdac_routing_detail_display_no_labels.png": "89d116845a58f2fe6b394245b02f45692c7970c6969a114973065478c8fd3a00",
+    "artifacts/klayout_readback.json": "9cecc805dfed1ad2313e042c1d07ce1a02eecccbb15c3b2241f71311b499a1d2",
+    "probe_artifacts/cdac_route_probe.gds": "0f4abf3c0a1fa95e0b174c227fa9b09e223597482bbe3bef8ad4563bb511c4ee",
+    "probe_artifacts/lvs.rpt": "65036d1ed0430ead88e6b2eab47a9796efb01ff6c2c1271812f37bf7e8480618",
+    "probe_artifacts/cdac_route_probe_flat.rc.spice": "034825238fe8fde87449b53bbb9a49fdffe098dc933b5a484f0ff8234290a7a4",
+    "extract_rc.tcl": "ad8067103f8bb59e7869e2a2feaeaa1ffc3d646e266fd5611afe285e64ba32fa",
+    "extract_top_rc.tcl": "239bc9dd526bf1d182fe390edff949fc7a208dfaf13fd616889cc858ab812233",
+    "extract_probe_rc.tcl": "6dfa4171b921cb3034efe1b5f50881dd3f1c5d34bbd82c1fd4dc3ef0a91a5a2d",
+    "render_klayout.py": "de12f37f70fed62502dca8514ebfba6e0aa1655bbdcb4bd812fc0ca455be4044",
+    "README.md": "abdbe55d6523f53739f5fc6ee329614b30eb04b88387c00a37337f105f7855cd",
+    "test_routed_cdac.py": "c8ee553ba9dbde8a0cc74c56fc10f4db9ad1d13bae971da7db983b4dfb9ca148",
+    "qualify.py": "715a9a2a7f71588f194814fe6c95310bb658bc2f8f6d343054da292adb4520b1"
+  }
+}

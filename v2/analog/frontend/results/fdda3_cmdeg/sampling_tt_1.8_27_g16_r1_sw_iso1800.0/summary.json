@@ -1,0 +1,57 @@
+{
+  "test": "sampling",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gain_implementation": "real transistor gain-select network, fixed select during this test",
+  "circuit_source": "results/fdda3_cmdeg/sampling_tt_1.8_27_g16_r1_sw_iso2700.0/frontend_pdk_snapshot.spice",
+  "circuit_sha256": "15796319f23b6434cf9c83b886ab6edfffba4fcff0522b59f6bc0a4882723019",
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "samples": [
+    {
+      "time_s": 1.2466847754e-05,
+      "sampled_diff_v": 0.356670608,
+      "settled_pga_diff_v": 0.35666144499999997,
+      "dynamic_error_v": 9.163000000034227e-06,
+      "within_0p25LSB": true,
+      "after_switch_opens_time_s": 1.24977728e-05,
+      "held_after_switch_opens_v": 0.356714783,
+      "post_aperture_error_v": 5.3338000000013874e-05,
+      "post_aperture_within_0p25LSB": false
+    },
+    {
+      "time_s": 2.2466847754e-05,
+      "sampled_diff_v": -0.356670757,
+      "settled_pga_diff_v": -0.35666144499999997,
+      "dynamic_error_v": -9.312000000039067e-06,
+      "within_0p25LSB": true,
+      "after_switch_opens_time_s": 2.24977728e-05,
+      "held_after_switch_opens_v": -0.35671494,
+      "post_aperture_error_v": -5.34950000000145e-05,
+      "post_aperture_within_0p25LSB": false
+    },
+    {
+      "time_s": 3.246684775399999e-05,
+      "sampled_diff_v": 0.356670608,
+      "settled_pga_diff_v": 0.35666144499999997,
+      "dynamic_error_v": 9.163000000034227e-06,
+      "within_0p25LSB": true,
+      "after_switch_opens_time_s": 3.24977728e-05,
+      "held_after_switch_opens_v": 0.356714783,
+      "post_aperture_error_v": 5.3338000000013874e-05,
+      "post_aperture_within_0p25LSB": false
+    }
+  ],
+  "all_dynamic_samples_pass": true,
+  "all_post_aperture_samples_pass": false,
+  "load_pf_per_side": 81.28512,
+  "source_r_ohm_per_side": 350,
+  "isolation_r_ohm_per_side": 1800.0,
+  "reservoir_cap_nominal_pf_per_side": 4,
+  "acquisition_window_s": 2.476847754e-06,
+  "max_common_mode_error_v": 0.014671867000000005,
+  "common_mode_within_50mV": true,
+  "mean_frontend_power_w": 0.001693438935212093,
+  "caution": "Real PDK TG and MIM bank with testbench CM reset. NOT full SAR bit switching/comparator kickback or a system SNDR test."
+}

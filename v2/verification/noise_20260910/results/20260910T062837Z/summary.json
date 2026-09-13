@@ -1,0 +1,28 @@
+{
+  "status": "CAPABILITY_PROBE_ONLY_NOT_ADC_NOISE_QUALIFICATION",
+  "created_utc": "20260910T062837Z",
+  "source_sha256": "d9a3e36b69e10d90b8c9213508394f26999a50eb6336c78d72a8e3098e2911be",
+  "simulators": {
+    "ngspice": "/foss/tools/bin/ngspice",
+    "Xyce": "/foss/tools/bin/Xyce",
+    "vacask": "/foss/tools/bin/vacask"
+  },
+  "rc_controls": [],
+  "sky130_mos": {
+    "ngspice": {
+      "returncode": 0,
+      "elapsed_s": 3.7801348299981328
+    },
+    "conversion": {
+      "returncode": 1,
+      "elapsed_s": 0.4776981839968357
+    },
+    "converted_pdk_location": "/tmp/sensor_noise_pdk_qa87j7ja",
+    "pdk_deck_sha256": "48de7c677e2c6e7d09b2559279de9f818be71010a4aa933d728eb4db3b133c84",
+    "pdk_resolved_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sky130.lib.spice",
+    "status": "CONVERSION_FAILED_NO_SKY130_TRANSIENT_NOISE_RESULT",
+    "converter_adapter_sha256": "a2a841ac9677dbe4cd9b5784fa9ae767ba00ee900a0e2d9d1d518dbb349ee410",
+    "ngspice_plain_tran_output_std_v": 6.469963679937878e-16,
+    "ngspice_stationary_noise_integral_v2": 2.6398354384818218e-08
+  }
+}

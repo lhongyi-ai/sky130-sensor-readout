@@ -1,0 +1,16 @@
+* PARTIAL ELECTRICAL FIXTURE; NO TOP-LEVEL ROUTING PARASITICS; NOT FULL ADC
+* A is driven VCM; B is the held CDAC top. Never swap A/B.
+* Invoke from repository root. Both include paths name the frozen extracted views.
+.include "v2/physical/core_integration_20260913/cdac_diff_routed_substrate_bound.spice"
+.include "v2/physical/adc_switch/artifacts/dummy_layout_final/adc_tgate_flat.rc.spice"
+.subckt cdac_clamp_pex_partial P_TOP P_B11 P_B10 P_B9 P_B8 P_B7 P_B6 P_B5 P_B4
++ P_B3 P_B2 P_B1 P_B0 P_DUMMY P_EDGE_BIAS N_TOP N_B11 N_B10
++ N_B9 N_B8 N_B7 N_B6 N_B5 N_B4 N_B3 N_B2 N_B1
++ N_B0 N_DUMMY N_EDGE_BIAS VCM_CLAMP SAMPLE SAMPLEB VDD VSS
+XCDAC VSS P_TOP P_B11 P_B10 P_B9 P_B8 P_B7 P_B6 P_B5
++ P_B4 P_B3 P_B2 P_B1 P_B0 P_DUMMY P_EDGE_BIAS N_TOP N_B11
++ N_B10 N_B9 N_B8 N_B7 N_B6 N_B5 N_B4 N_B3 N_B2
++ N_B1 N_B0 N_DUMMY N_EDGE_BIAS cdac_diff_routed_substrate_bound
+XCLAMP_P VCM_CLAMP P_TOP SAMPLE SAMPLEB VDD VSS adc_tgate_flat
+XCLAMP_N VCM_CLAMP N_TOP SAMPLE SAMPLEB VDD VSS adc_tgate_flat
+.ends cdac_clamp_pex_partial

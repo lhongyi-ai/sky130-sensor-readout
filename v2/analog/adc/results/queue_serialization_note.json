@@ -1,0 +1,6 @@
+{
+  "reason": "Shared four-CPU container: parent requested one ADC ngspice worker maximum.",
+  "action": "Paused the old two-worker preamp OP and floating-PVT Python schedulers, allowed their already-running ngspice children to finish, then terminated those schedulers. All generated decks, logs and written waveforms were retained. Resume uses --jobs 1 --resume and never accepts a TIMEOUT as a pass.",
+  "affected_schedulers": ["run_preamp.py", "run_preamp_pvt.py"],
+  "calibration_note": "The fourth fine-offset round and a later replay hit the 150-second wall-clock limit during contention. This is an incomplete numerical run, not evidence that an electrical specification failed. Three complete stable-input rounds bracketed all 200 comparators; their finite threshold uncertainty is retained explicitly."
+}

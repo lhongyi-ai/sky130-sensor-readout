@@ -1,0 +1,28 @@
+* cmp_sf_1.8_27_-1
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice sf
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+
+VDD vdd 0 1.8
+VIP sp 0 0.899975585938
+VIN sn 0 0.900024414062
+RP sp ip 350
+RN sn inn 350
+XCP ip 0 adc_mim_bank COUNT=4096
+XCN inn 0 adc_mim_bank COUNT=4096
+VCLK clk 0 PULSE(0 1.8 200n 1n 1n 250n 625n)
+XCMP ip inn op on clk vdd 0 adc_strongarm ADC_PAIR_WIDTH_SKEW=0
+CLOADP op 0 5f
+CLOADN on 0 5f
+
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 200p 800n
+wrdata /repo/v2/analog/adc/results/cmp_sf_1.8_27_-1.tsv v(ip) v(inn) v(op) v(on) v(clk) i(vdd)
+quit
+.endc
+.end

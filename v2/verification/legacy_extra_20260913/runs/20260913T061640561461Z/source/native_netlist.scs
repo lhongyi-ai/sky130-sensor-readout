@@ -1,0 +1,49 @@
+
+// Library name: project1
+// Cell name: p1b_ota_legacy_r4
+// View name: schematic
+subckt p1b_ota_legacy_r4 VBP VDD VINN VINP VOUT VSS
+    M7B (VOUT VBP VDD VDD) pfet_01v8 w=(36.1u) l=800n as=9.5665p \
+        ad=9.5665p ps=72.73u pd=72.73u m=(1)*(1)
+    M7A (VOUT VBP VDD VDD) pfet_01v8 w=(36.1u) l=800n as=9.5665p \
+        ad=9.5665p ps=72.73u pd=72.73u m=(1)*(1)
+    M4B (VX NMIR VDD VDD) pfet_01v8 w=(25u) l=500n as=6.625p ad=6.625p \
+        ps=50.53u pd=50.53u m=(1)*(1)
+    M4A (VX NMIR VDD VDD) pfet_01v8 w=(25u) l=500n as=6.625p ad=6.625p \
+        ps=50.53u pd=50.53u m=(1)*(1)
+    M3B (NMIR NMIR VDD VDD) pfet_01v8 w=(25u) l=500n as=6.625p ad=6.625p \
+        ps=50.53u pd=50.53u m=(1)*(1)
+    M3A (NMIR NMIR VDD VDD) pfet_01v8 w=(25u) l=500n as=6.625p ad=6.625p \
+        ps=50.53u pd=50.53u m=(1)*(1)
+    M9 (VBN VBP VDD VDD) pfet_01v8 w=(7.22u) l=800n as=1.9133p ad=1.9133p \
+        ps=14.97u pd=14.97u m=(1)*(1)
+    M8 (VBP VBP VDD VDD) pfet_01v8 w=(7.22u) l=800n as=1.9133p ad=1.9133p \
+        ps=14.97u pd=14.97u m=(1)*(1)
+    M6 (VOUT VX VSS VSS) nfet_01v8 w=(8.84u) l=500n as=2.3426p ad=2.3426p \
+        ps=18.21u pd=18.21u m=(1)*(1)
+    M5 (TAIL VBN VSS VSS) nfet_01v8 w=(25.88u) l=800n as=6.8582p \
+        ad=6.8582p ps=52.29u pd=52.29u m=(1)*(1)
+    M2 (VX VINP TAIL VSS) nfet_01v8 w=(16.84u) l=500n as=4.4626p \
+        ad=4.4626p ps=34.21u pd=34.21u m=(1)*(1)
+    M1 (NMIR VINN TAIL VSS) nfet_01v8 w=(16.84u) l=500n as=4.4626p \
+        ad=4.4626p ps=34.21u pd=34.21u m=(1)*(1)
+    M10 (VBN VBN VSS VSS) nfet_01v8 w=(8.09u) l=800n as=2.14385p \
+        ad=2.14385p ps=16.71u pd=16.71u m=(1)*(1)
+    RZ1 (VX NCC) resistor r=2k
+    CC1 (NCC VOUT) capacitor c=3p
+ends p1b_ota_legacy_r4
+// End of subcircuit definition.
+
+// Library name: project1
+// Cell name: p1b_tb_ac
+// View name: schematic
+VTEST (VTEST VSS) vsource dc=0 mag=0.5 phase=180 type=dc
+VINP (VINP VSS) vsource dc=VCM mag=0.5 type=dc
+VDD (VDD VSS) vsource dc=VDD mag=0 type=dc
+VSSSUP (VSS 0) vsource dc=0 mag=0 type=dc
+IREF (VBP VSS) isource dc=10u type=dc
+RLOAD (VOUT VSS) resistor r=100k
+CBREAK (VTEST VINN) capacitor c=1G
+CLOAD (VOUT VSS) capacitor c=CL
+XOTA (VBP VDD VINN VINP VOUT VSS) p1b_ota_legacy_r4
+LBREAK (VOUT VINN) inductor l=1G

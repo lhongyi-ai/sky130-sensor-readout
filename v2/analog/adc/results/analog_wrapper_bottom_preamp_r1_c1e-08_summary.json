@@ -1,0 +1,76 @@
+{
+  "evidence_level": "single-trial full analog-wrapper transistor checks, ideal external phases/codes; NOT full SAR conversion",
+  "cases": [
+    {
+      "name": "wrapper_bottom_preamp_r1_c1e-08_trial_1024_-1",
+      "code": 1024,
+      "sign": -1,
+      "input_diff_v": -0.20004882812500002,
+      "residual_before_evaluate_v": -4.87380058754594e-05,
+      "residual_error_lsb": 0.0004614099176478842,
+      "output_diff_v": -1.799999336997719,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_preamp_r1_c1e-08_trial_1024_1",
+      "code": 1024,
+      "sign": 1,
+      "input_diff_v": -0.199951171875,
+      "residual_before_evaluate_v": 4.8589911088803284e-05,
+      "residual_error_lsb": -0.0012196552253272014,
+      "output_diff_v": 1.7999990033089166,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_preamp_r1_c1e-08_trial_2048_-1",
+      "code": 2048,
+      "sign": -1,
+      "input_diff_v": -4.8828125e-05,
+      "residual_before_evaluate_v": -4.85870979723968e-05,
+      "residual_error_lsb": 0.0012340583813284095,
+      "output_diff_v": -1.7999993369977183,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_preamp_r1_c1e-08_trial_2048_1",
+      "code": 2048,
+      "sign": 1,
+      "input_diff_v": 4.8828125e-05,
+      "residual_before_evaluate_v": 4.874082483818931e-05,
+      "residual_error_lsb": -0.00044697682847073816,
+      "output_diff_v": 1.7999990034127074,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_preamp_r1_c1e-08_trial_3072_-1",
+      "code": 3072,
+      "sign": -1,
+      "input_diff_v": 0.19995117187500006,
+      "residual_before_evaluate_v": -4.850197408301504e-05,
+      "residual_error_lsb": 0.001669892694962996,
+      "output_diff_v": -1.7999993369977192,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_preamp_r1_c1e-08_trial_3072_1",
+      "code": 3072,
+      "sign": 1,
+      "input_diff_v": 0.20004882812500008,
+      "residual_before_evaluate_v": 4.882599445321656e-05,
+      "residual_error_lsb": -1.090839953123146e-05,
+      "output_diff_v": 1.7999990033983446,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    }
+  ],
+  "pass_count": 6,
+  "fail_count": 0,
+  "architecture": "bottom_preamp",
+  "external_reference_resistance_ohm": 1.0,
+  "external_reference_capacitance_f": 1e-08
+}

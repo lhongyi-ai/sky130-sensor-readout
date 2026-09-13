@@ -1,0 +1,8 @@
+{
+  "status": "interrupted_not_qualified",
+  "run_tag": "dual_lvt_rc_expanded",
+  "reason": "The integration agent supplied a measured 2.476847754us minimum acquisition window. This still-running 2.5us sweep was stopped and superseded by short-window batch qualification. Its partial traces remain in runs/dual_lvt_rc_expanded and are not acceptance evidence.",
+  "prior_2p5us_smoke_evidence_retained": "dual_lvt_rc_smoke.json",
+  "old_standard_tg_failed_evidence_retained": "switch_validation.json",
+  "complete": false
+}

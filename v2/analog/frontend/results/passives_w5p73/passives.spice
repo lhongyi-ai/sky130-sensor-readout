@@ -1,0 +1,22 @@
+* Installed SKY130 passive geometry qualification, not layout DRC.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.temp 27
+V1 R1 0 1
+V2 R2 0 1
+VC C1 0 dc 0 ac 1
+XR1 R1 0 0 sky130_fd_pr__res_high_po_5p73 L=10
+XR2 R2 0 0 sky130_fd_pr__res_high_po_5p73 L=50
+XC C1 0 sky130_fd_pr__cap_mim_m3_1 W=44.5 L=44.5
+.control
+set wr_singlescale
+set wr_vecnames
+op
+let r1=-1/i(v1)
+let r2=-1/i(v2)
+wrdata resistor.dat r1 r2
+ac lin 1 1000 1000
+let ceff=-imag(i(vc))/(2*pi*1000)
+wrdata capacitor.dat ceff
+quit
+.endc
+.end

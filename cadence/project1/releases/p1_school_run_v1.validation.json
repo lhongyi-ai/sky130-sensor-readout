@@ -1,0 +1,13 @@
+{
+  "status": "PASS_LOCAL_CHECKS_ONLY",
+  "school_cadence_status": "NOT_RUN",
+  "tests_run": 4,
+  "launcher_sha256": "d6decb70892e5c1161199a8ff4477f3b21fe529a90ce24863e9b10e42d67c079",
+  "checks": [
+    "bash syntax",
+    "Clean-terminal restoration of all 14 library directories and tool search PATH",
+    "Actual p1_run.sh and shipped invoke() with fake OCEAN -> bare virtuoso lookup",
+    "Python library isolation, argument forwarding, spaces in paths and exit propagation",
+    "Missing launcher/runtime patch stop before job execution"
+  ]
+}

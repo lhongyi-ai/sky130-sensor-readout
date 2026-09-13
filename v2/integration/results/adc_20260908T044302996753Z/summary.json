@@ -1,0 +1,55 @@
+{
+  "status": "FAIL",
+  "full_chip_qualified": false,
+  "ideal_phase_fixture": false,
+  "arguments": {
+    "input_v": -0.36,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temperature": 27,
+    "reference_r": 1.0,
+    "reference_c_nf": 10.0,
+    "source_r": 350,
+    "input_cm_offset_mv": 0,
+    "duration_us": 40.0,
+    "phase_source": "transistor",
+    "solver": "klu",
+    "frontend": null,
+    "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+    "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+    "adc_subckt": "adc_analog12_bottom_preamp",
+    "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+    "gain": 1
+  },
+  "source_sha256": {
+    "integration/cosim_controller.v": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883",
+    "integration/qualify_cosim.py": "d44c318acf045215981511641481025d7c841a28fa018d3e148bb99f5bc86b2c",
+    "integration/run_adc_cosim.py": "9bc5bbde6bace4ff1c32eae7907f9a87beeef4eb24c3ca5e6c986b6842dc2f16",
+    "rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "integration/results/matrix_20260908T043515424818Z/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice": "a2cd8f7f4d279451632fa704027802563ecc7fe357f40c8454ad8ed6e632b7d8",
+    "integration/sensor_phases.spice": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462",
+    "integration/results/matrix_20260908T043515424818Z/adc_preamp.spice": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782"
+  },
+  "run": "integration/results/adc_20260908T044302996753Z",
+  "returncode": null,
+  "raw_codes": [
+    204
+  ],
+  "expected_ideal_code": 204,
+  "code_error_lsb": [
+    0
+  ],
+  "complete_adc_qualified": false,
+  "limitations": [
+    "Only short deterministic conversion check, not full-code linearity or noise-inclusive FFT.",
+    "Live original RTL with ideal logic-voltage bridges; no mapped digital power/delay here. Phase source and amplifier inclusion are recorded in arguments.",
+    "Schematic MOS/MIM/resistor circuits; no analog layout extraction or mismatch included.",
+    "Reference network has the reported source resistance and local external capacitors, not infinite driver strength."
+  ],
+  "checks": {
+    "simulation_completed": false,
+    "all_frames_completed": false,
+    "short_nominal_code_check_within_2lsb": true
+  }
+}

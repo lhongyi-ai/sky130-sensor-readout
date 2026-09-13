@@ -1,0 +1,15 @@
+{
+  "id": "1.0.4p3",
+  "kind": "internal_MOS_OP_export_and_recovery",
+  "base_package_manifest_sha256": "3502851b9bacef25d0c2e9f21aee3aef4de3baf5a88e9e7476bde57417e54933",
+  "schematic_generation": "UNCHANGED",
+  "simulation_deck": "UNCHANGED",
+  "changes": [
+    "Read observed internal MOS structure names from dcOpInfo",
+    "Stop OCEAN on export errors; require complete finite data and source mapping",
+    "Resume export from a retained successful Spectre PSF into a new attempt"
+  ],
+  "input_report_sha256": "a810cd9eed294831ed231bddca2564bea97eb26f47a344d6b9a1e878af34da67",
+  "school_patch_execution": "NOT_RUN",
+  "actual_device_OP_values": "NOT_YET_EXPORTED"
+}

@@ -1,0 +1,67 @@
+{
+  "status": "FAIL",
+  "criteria": {
+    "power_nonnegative": true,
+    "power_le_600uW": true,
+    "devices_saturated": false,
+    "gain_ge_50dB": true
+  },
+  "notes": [
+    "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+    "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical.",
+    "Actual local ngspice execution using school-mapped dimensions and explicit native diffusion geometry; no Spectre run claimed."
+  ],
+  "power_uW": 224.11096490228329,
+  "parallel_group_operating_points": {
+    "M3": {
+      "ids": -5.219832482570976e-06,
+      "gm": 8.984596346008721e-05,
+      "gds": 5.909311974287078e-07
+    },
+    "M4": {
+      "ids": -5.259430340891354e-06,
+      "gm": 9.050835022049168e-05,
+      "gds": 5.810284651180626e-07
+    },
+    "M7": {
+      "ids": -9.403536594561051e-05,
+      "gm": 0.000981770686819738,
+      "gds": 3.109216070002228e-06
+    }
+  },
+  "dc_nodes": {
+    "VDD": 1.8,
+    "VSS": 0.0,
+    "VINP": 0.6000000000000001,
+    "VOUT": 0.5990341543687412,
+    "VBP": 0.6327533119255201,
+    "VINN": 0.5990341543687412,
+    "ivdd": -0.0001245060916123796
+  },
+  "device_saturation_margin_V": {
+    "M8": 0.997543449366427,
+    "M9": 0.9723557114996058,
+    "M10": 0.5655937463071363,
+    "M1": 0.7983703580115075,
+    "M2": 0.730590969636013,
+    "M3A": 0.8701246248053739,
+    "M3B": 0.8701246248053739,
+    "M4A": 0.9376620145597738,
+    "M4B": 0.9376620145597738,
+    "M5": -0.08071647114242572,
+    "M6": 0.4349656977914732,
+    "M7A": 1.0358591714270067,
+    "M7B": 1.0358591714270067
+  },
+  "min_saturation_margin_V": -0.08071647114242572,
+  "all_devices_saturated": false,
+  "gain_dB": 67.13104575001414,
+  "ac_unity_frequency_MHz": 5.856477787480643,
+  "ac_gain_crossings": [
+    {
+      "frequency_hz": 5856477.787480643,
+      "direction": "down",
+      "phase_deg": -100.21769343806908
+    }
+  ]
+}

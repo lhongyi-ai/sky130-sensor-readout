@@ -1,0 +1,13 @@
+{
+  "test": "noise",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "output_noise_1_to_5000Hz_rms_v": 8.699922073091603e-05,
+  "output_noise_1_to_50000Hz_rms_v": 0.00010733428754997996,
+  "output_noise_1_to_1e+09Hz_rms_v": 0.000268249746532049,
+  "noise_at_1khz_v_per_rtHz": 1.00087575e-06,
+  "caution": "Continuous-time output noise, static 81.285 pF/side load. NOT sampled/aliased system noise or SNDR."
+}

@@ -1,0 +1,80 @@
+{
+  "status": "TIMESTEP_COMPARISON_FAIL",
+  "complete_adc_qualified": false,
+  "new_maxstep_adopted": false,
+  "original_default_maxstep_ns": 2,
+  "observed_speedup": 1.1042877720033835,
+  "instrumentation_did_not_change_old_saved_vectors": true,
+  "baseline_step_statistics": {
+    "rows": 96923,
+    "stop_us": 62.0,
+    "dt_ns_percentiles": {
+      "min": 5.133000009196684e-05,
+      "p1": 0.00029486999728869576,
+      "p10": 0.001160559999373366,
+      "p50": 0.012076830000145136,
+      "p90": 2.0000000000009974,
+      "p99": 2.0000000000043854,
+      "max": 2.000000001999995
+    },
+    "steps_below_1ps": 7634,
+    "steps_below_100ps": 60704,
+    "step_count_is_not_cpu_profile": true,
+    "phase_step_counts": {
+      "startup": 531,
+      "acquisition": 15508,
+      "evaluate": 32126,
+      "hold_reset_cdac_settle": 48757
+    }
+  },
+  "trial_step_statistics": {
+    "rows": 75132,
+    "stop_us": 62.0,
+    "dt_ns_percentiles": {
+      "min": 5.1509997981390165e-05,
+      "p1": 0.00027514080017153683,
+      "p10": 0.0009886300000085937,
+      "p50": 0.005143729998955803,
+      "p90": 1.4113930200008118,
+      "p99": 10.000000000001599,
+      "max": 10.000000001001098
+    },
+    "steps_below_1ps": 7669,
+    "steps_below_100ps": 60699,
+    "step_count_is_not_cpu_profile": true,
+    "phase_step_counts": {
+      "startup": 140,
+      "acquisition": 9681,
+      "evaluate": 23972,
+      "hold_reset_cdac_settle": 41338
+    }
+  },
+  "baseline_steps_within_20ns_after_evaluate_edges": 45724,
+  "baseline_duration_within_these_windows_us": 2.891132054927999,
+  "step_count_not_cpu_profile": true,
+  "interpolation_diagnosis_relative_to_2ns_reference": {
+    "maximum_trial_accepted_point_error_v": 0.0002476592559869928,
+    "maximum_common_grid_error_v": 6.950866857072246e-05,
+    "maximum_reference_resampling_component_v": 0.0001083322324648972,
+    "maximum_residual_after_same_grid_representation_v": 7.054409220949229e-05,
+    "worst_common_grid_time_s": 1.286e-06,
+    "at_worst_total_v": -6.950866857072246e-05,
+    "at_worst_reference_resampling_component_v": 1.6673511759289494e-07,
+    "at_worst_residual_v": -6.967540368831536e-05,
+    "declared_threshold_v": 9.765625000000002e-06,
+    "does_not_overrule_failed_predeclared_test": true
+  },
+  "evidence_sha256": {
+    "comparison.json": "a878a198e4cf44bf2dac28737f1375294361be6a5ede3f1aeeb3e2a58973a8b1",
+    "manifest.json": "a098e1f8e920fcade62e46c3432c4802c6e0c16550d760f39f9bd2606345e7b7",
+    "maxstep_2ns/summary.json": "6b31bbcb95bbb88b7322ef4f541875339026454723aedaf712f5dc914c9219d1",
+    "maxstep_10ns/summary.json": "11fb2949fe1e55e21b926b233e64920054256c943064d056e21c1a9bdf66a822"
+  },
+  "conclusions": [
+    "The 10 ns limit reduces long steps but almost none of the sub-100 ps switching steps; measured speedup is only about 10 percent.",
+    "All six codes and all 72 predecision CDAC samples agree within the predeclared small-signal tolerance, but the whole-trajectory interpolation test fails.",
+    "Resampling decomposition diagnoses the failed peak; it is relative to the 2 ns numerical reference, not proof of exact physical error.",
+    "No unmeasured attribution of solver CPU to d_cosim is made. Accepted-point density alone cannot distinguish event overhead, Newton iterations and timestep rejection.",
+    "No 20 ns experiment and no full sweep were launched; default remains 2 ns. No whole-ADC precision or convergence claim is made."
+  ]
+}

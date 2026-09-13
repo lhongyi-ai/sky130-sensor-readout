@@ -1,0 +1,31 @@
+{
+  "status": "IDENTITY_ONLY_NOT_NOISE_QUALIFIED",
+  "executable": "/foss/tools/bin/Xyce",
+  "version": {
+    "command": [
+      "Xyce",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "Xyce Release 7.10-opensource\n",
+    "stderr": ""
+  },
+  "capabilities": {
+    "command": [
+      "Xyce",
+      "-capabilities"
+    ],
+    "returncode": 0,
+    "stdout": "Parallel with MPI\nVerilog-A derived (ADMS) models\nAnalytic sensitivities in ADMS models\nFFT (FFTW)\nReaction parser\nBuild compiler is C++11 compliant\nStokhos enabled\nAmesos2 (Basker and KLU2) enabled\n\n",
+    "stderr": ""
+  },
+  "official_reference": {
+    "url": "https://xyce.sandia.gov/download/2068/?tmstv=1754510749",
+    "title": "Xyce Reference Guide, Version 7.10",
+    "table": "2-36, Features Supported by Xyce Device Models",
+    "review_result": "BSIM4 level 14/54 has no Y in the Stationary Noise column"
+  },
+  "interpretation": "The installed executable identity and official feature table do not provide a BSIM4 noise path. No SKY130 Xyce circuit, switching noise, or transient noise result is claimed by this probe.",
+  "adc_noise_qualified": false,
+  "executable_sha256": "a3e951c33925839c77174f66071a557b1a34ad02551eaa65110d9d0c21cfe03d"
+}

@@ -1,0 +1,58 @@
+* V2 first silicon-process transistor prototype; NOT a qualified final design.
+* Four-terminal MOS instances use actual SKY130 1.8 V standard-Vt models.
+* R/C parts in this revision are IDEAL electrical components, not layout cells.
+* Pin order: INP INN OUTP OUTN VDD VSS VCM
+* No external ideal reference current is used.
+.subckt sky130_v2_frontend INP INN OUTP OUTN VDD VSS VCM
+
+* Self-biased beta-multiplier. Startup removes the zero-current equilibrium.
+XBP1 BP BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XBP2 BN BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XBN1 BN BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8
+XBN2 BP BN BRS VSS sky130_fd_pr__nfet_01v8 L=1 W=32
+RBIAS BRS VSS 10k
+RSTART VDD START 100meg
+XSTOFF START BN VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=1
+XSTINJ BP START VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=0.5
+
+* Truly differential first stage; common-mode servo controls both PMOS loads.
+XINP XP INP TAIL VSS sky130_fd_pr__nfet_01v8 L=0.8 W=40
+XINN XN INN TAIL VSS sky130_fd_pr__nfet_01v8 L=0.8 W=40
+XLP XP CMCTL VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=40
+XLN XN CMCTL VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=40
+XTAIL TAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=48
+
+* Two matched common-source output stages.
+XOP OUTP XP VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=15
+XON OUTN XN VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=15
+XIP OUTP BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=100
+XIN OUTN BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=100
+RZP XP CZP 2k
+RZN XN CZN 2k
+CCP CZP OUTP 4p
+CCN CZN OUTN 4p
+
+* Continuous-time common-mode feedback. CM rises -> CMCTL falls ->
+* first-stage PMOS current rises -> XP/XN rise -> output CM falls.
+RCMP OUTP CMSENSE 10k
+RCMN OUTN CMSENSE 10k
+XCMREF CMD VCM CMTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=10
+XCMSENSE CMCTL CMSENSE CMTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=10
+XCMPL CMD CMD VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XCMPM CMCTL CMD VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XCMT CMTAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=16
+CCMP CMCTL OUTP 20p
+CCMN CMCTL OUTN 20p
+.ends sky130_v2_frontend
+
+* Resistive fully-differential inverting-summing feedback gives overall
+* positive differential gain RF/(RG+RSOURCE). Testbench sensor impedance
+* is external; RG=9650 ohm compensates the specified 350 ohm per-leg source.
+* No ideal gain source exists inside this subcircuit.
+.subckt sky130_v2_pga VINP VINN OUTP OUTN VDD VSS VCM params: RF=40k RG=9650
+RGP VINP INP {RG}
+RGN VINN INN {RG}
+RFP OUTN INP {RF}
+RFN OUTP INN {RF}
+XAMP INP INN OUTP OUTN VDD VSS VCM sky130_v2_frontend
+.ends sky130_v2_pga

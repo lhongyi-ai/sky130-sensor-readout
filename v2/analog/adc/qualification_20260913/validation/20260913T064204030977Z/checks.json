@@ -1,0 +1,52 @@
+[
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/repo/v2/analog/adc/qualification_20260913",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "expected_returncode": 0,
+    "log": "validation/20260913T064204030977Z/check_0.log",
+    "log_sha256": "25d432a1bdaa5f14eccb679d40fbd52de82837a918489ee0c80b3aa317b9a77a"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/repo/v2/analog/adc/qualification_20260913/campaign.py",
+      "run"
+    ],
+    "returncode": 2,
+    "expected_returncode": 2,
+    "log": "validation/20260913T064204030977Z/check_1.log",
+    "log_sha256": "74a34a6661ca091267583dea7e9c45e8e91adee77cdace30f5ac77cdc650717a"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/repo/v2/analog/adc/qualification_20260913/campaign.py",
+      "collect"
+    ],
+    "returncode": 2,
+    "expected_returncode": 2,
+    "log": "validation/20260913T064204030977Z/check_2.log",
+    "log_sha256": "dce9ad701434aa8d3f8051a1fdf346dbfb350e6c6c3a2e4f272dd41b17f41dc4"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/repo/v2/analog/adc/qualification_20260913/run_checked.py",
+      "check"
+    ],
+    "returncode": 0,
+    "expected_returncode": 0,
+    "log": "validation/20260913T064204030977Z/check_3.log",
+    "log_sha256": "1a5725c2ae7c228153ac259cc011025482733ae8b2ba5c20f26c8b8f3457f40a"
+  }
+]

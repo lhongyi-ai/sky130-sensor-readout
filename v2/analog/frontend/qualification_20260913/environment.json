@@ -1,0 +1,877 @@
+{
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "simulator_version": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Tue Aug 25 10:01:13 UTC 2026\n******\n",
+  "simulator_version_exit_code": 0,
+  "root_library": "/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice",
+  "referenced_model_files": {
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sky130.lib.spice": {
+      "sha256": "48de7c677e2c6e7d09b2559279de9f818be71010a4aa933d728eb4db3b133c84",
+      "size_bytes": 43579
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_fet_tt.spice": {
+      "sha256": "1079c5af023f59628e61e4749be70e94d165c9dde71b93b8da63cbf7a857f35f",
+      "size_bytes": 3794
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_res_nom.spice": {
+      "sha256": "bc2401ac75547b56a48cf11c1ab5dedb37c72d518a8ef3d5abf5d2cdea083be6",
+      "size_bytes": 3084
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_cap_nom.spice": {
+      "sha256": "74a1f0933e3220061816ba11b15a2192760a1c95e250e67ffd1bde6b8a5e5ae9",
+      "size_bytes": 1166
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_global.spice": {
+      "sha256": "ac9df6f40a23e46d0aa65268e3006915e6da4e398017b562afbd17ce1d9e171f",
+      "size_bytes": 9654
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet.spice": {
+      "sha256": "1adf908f0c00903a8056215e59fec1e548ccfeef02ac539e08dcde0e73a54361",
+      "size_bytes": 1836
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__esd_nfet_05v0_nvt.spice": {
+      "sha256": "a5e4d1e9cb61b2a855677ba9ba142de9f2905ec6c052fa5a729e1a50863a7b22",
+      "size_bytes": 8700
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__esd_nfet_g5v0d10v5.spice": {
+      "sha256": "8d71f96ea02372db9dbc30615f7f9322abfe7e4978f44d81fc0eca205e6d5c11",
+      "size_bytes": 7497
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__esd_pfet_g5v0d10v5.spice": {
+      "sha256": "4969b8a80b4443a0ccb13ffc567a4c7f4f83a41e013bb71f325b2fc45017a9b0",
+      "size_bytes": 7705
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_01v8.spice": {
+      "sha256": "e90265f1a1b6057fbb4324a2e5d2b4ff8d6e5028314daec563eda1defb3a91de",
+      "size_bytes": 284941
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_01v8_esd.spice": {
+      "sha256": "3f682fb4ac3e49fc6fd2215a2d0cd2156e7c4411d3c7636977014b268706f8f0",
+      "size_bytes": 7181
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_01v8_lvt.spice": {
+      "sha256": "ab9b94cc75c46a8d422e626fce870fee5d7a312c2f09e50489b56537b0d61d9f",
+      "size_bytes": 222234
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_03v3_nvt.spice": {
+      "sha256": "52b1992241561be775bcf03301023a88c571c6de024cbf59a46c2e29057891c1",
+      "size_bytes": 39253
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_05v0_nvt.spice": {
+      "sha256": "6bef8d71d038e78044746c376dfcf40fe4918076ebc7647d3d732661cf17130a",
+      "size_bytes": 65255
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_20v0.spice": {
+      "sha256": "8c14b596e5ca47d6a9c3152ff6a412afea44166b82c9503dc73712b7bba98ea3",
+      "size_bytes": 9835
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_20v0_iso.spice": {
+      "sha256": "b9426b9ce1517bcf438a2312ba0f8856382f6a0db079ed86f68c2d68bde1b2ae",
+      "size_bytes": 10442
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_20v0_nvt.spice": {
+      "sha256": "02681080bc53eed0f083bd1993a7978e5cc8a83c2347033cb2289e1fa785368b",
+      "size_bytes": 11286
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_20v0_zvt.spice": {
+      "sha256": "cca3c09906b8d5c268b4bd23e60f7c6322672774f8d8c70c050004d954a44191",
+      "size_bytes": 10649
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_g5v0d10v5.spice": {
+      "sha256": "d076c45fe7b56b8f1f2f61bdc3092137bebb643e130d1bf2bd52eb11b35c8910",
+      "size_bytes": 238868
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_g5v0d16v0.spice": {
+      "sha256": "0beca94e09b8f1cf8853e95038fa82fe86f05ae7f922d65a14285edbc38ef91f",
+      "size_bytes": 1998
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_g5v0d16v0_base.spice": {
+      "sha256": "13257d88d8aca2c9f6285f30a5b37c9dc7b068961adeca260024308c0238566d",
+      "size_bytes": 31223
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_01v8.spice": {
+      "sha256": "8a0d819cb50c660122385f0da623683b855d38906824f2ca7ef7a83d961bda94",
+      "size_bytes": 304034
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_01v8_hvt.spice": {
+      "sha256": "57fae0cb98793b23c33a9e97d5c35c6ad99c64eceb0660a8b2db0c1e710a4d63",
+      "size_bytes": 299075
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_01v8_lvt.spice": {
+      "sha256": "547a58975415a2c6dc633a3b3de5967b6c0fbcbea0ccfb7082235a666571f9a2",
+      "size_bytes": 203436
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_20v0.spice": {
+      "sha256": "6df2472b5de0b0a479f3daa7186b666a06d5978f63c89a930cdb874610ec2908",
+      "size_bytes": 9603
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_g5v0d10v5.spice": {
+      "sha256": "ef54b634c4cdf8a3347f5042a4d63c47006ef04223bbec43c7aacd1033f4577c",
+      "size_bytes": 238641
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_g5v0d16v0.spice": {
+      "sha256": "58fc6e6f49ac01adc4676672d2a78405e1db78ca6c1f1435b80f77b64598c7af",
+      "size_bytes": 2308
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_g5v0d16v0_base.spice": {
+      "sha256": "9168b3f6f3be7b4a970f96f0b88a8856846630e393e0b7c928d28b1c352455e4",
+      "size_bytes": 8274
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_bjt.spice": {
+      "sha256": "dddf98199f127049c8f4386ee3e2e173a9098d0a4916be93055eb394d2a4555d",
+      "size_bytes": 19345
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_diodes.spice": {
+      "sha256": "afdcf7595bee58671b42d06647dc525da132e03d0891589d86af296f93bdaebf",
+      "size_bytes": 27477
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_resistors.spice": {
+      "sha256": "d406fec360a7a35e473b7ce260c5b5f0ad75c95faa26d1d24fb2aa32d2f1ae6f",
+      "size_bytes": 13343
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/models_capacitors.spice": {
+      "sha256": "c31dc25abbb8948f2cbc0173e2dcd6eeaabb621d8d3aa7f017c15a89486293df",
+      "size_bytes": 6850
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/tt.spice": {
+      "sha256": "a1855dbd79d8a8aa1335aa4b99086c14a629bca1cf77250313bf6aa9719a72b9",
+      "size_bytes": 521
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__tt.pm3.spice": {
+      "sha256": "011048865bed73bcc169cd4639ad1a338201e7f8f5bc263e05ea4e4371054f09",
+      "size_bytes": 14232
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__mismatch.corner.spice": {
+      "sha256": "ebda8ffaa57a68df4b9e467b927ba95515c2a802a01458d67affca3da177c4f1",
+      "size_bytes": 1018
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_01v8_hvt__tt.pm3.spice": {
+      "sha256": "9b3044a9ac8e0c39f63e573b02fb73f7e34991ee94b697b2be796f756651f5e7",
+      "size_bytes": 9752
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_01v8_hvt__mismatch.corner.spice": {
+      "sha256": "bd03b8f948e853b950f409720ccc1012addf109f39f1f69511d821237d4a60b0",
+      "size_bytes": 1103
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/all.spice": {
+      "sha256": "21ee7816c26f8ad057ad5eecc2e0b6de35c6e7a4b679e7effaac1cb83c967873",
+      "size_bytes": 5154
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sonos_p/begin_of_life/mm.spice": {
+      "sha256": "051c18598854776f43ec7194503d4d8046e768ac78d3a0012c6ef697e6de0a8b",
+      "size_bytes": 161
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sonos_e/begin_of_life/mm.spice": {
+      "sha256": "8a4c2d8b90947a09aa671c7336345c3d26f72d668991ef9034e7c003a34d8873",
+      "size_bytes": 292
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_11v0.model.spice": {
+      "sha256": "3134e9ffc310d89e29ce5356b7b55d71f3a47ae4b7517ec5f66d0ca606ccdf18",
+      "size_bytes": 2019
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_11v0_no_rs.model.spice": {
+      "sha256": "768e5990e071efeb43a39afb5d8c96b97770e73365b21438c38d1f88324830a6",
+      "size_bytes": 2024
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_rf_diode_pd2nw_11v0_100.model.spice": {
+      "sha256": "81949e8a3832577373fe5889135ef412655d8c9b66e7778f4b57e5db6ae83ffb",
+      "size_bytes": 858
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_rf_diode_pd2nw_11v0_200.model.spice": {
+      "sha256": "ac2d2c6c781eb31bae49ec1bc26816c6181f59e861e0f83c087eec2a0ba37894",
+      "size_bytes": 860
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_rf_diode_pd2nw_11v0_300.model.spice": {
+      "sha256": "16674f438a0df89c527c34b97ee83be575edf283e200bb14f2b4769f75a78cb6",
+      "size_bytes": 860
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_11v0.model.spice": {
+      "sha256": "47c33e82bd01f8a5419bc08d7de023c220d836f48c47c82be60d95fb8c84487f",
+      "size_bytes": 2037
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_11v0_no_rs.model.spice": {
+      "sha256": "994abbe3a243c6b0f8bd30e9b404aa0c061866233c0f25d0fac9a351b4aa1674",
+      "size_bytes": 2042
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_rf_diode_pw2nd_11v0_100.model.spice": {
+      "sha256": "5f622b163456209f0257634ae856e54187692096c06bed8713e09ef36d6e24c2",
+      "size_bytes": 852
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_rf_diode_pw2nd_11v0_200.model.spice": {
+      "sha256": "5e06256cf70877d885f077161b646c54de8bfe4ed63b1bec1f7f7b79ae95ab07",
+      "size_bytes": 853
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_rf_diode_pw2nd_11v0_300.model.spice": {
+      "sha256": "a69c18728274760f35d64e0553bff48de8008c3b8935289bdd86a254582c2160",
+      "size_bytes": 853
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_hvt.model.spice": {
+      "sha256": "450b49b213811b230d3f3b2e066fd37291f8d76588ecfb9d0d181e016e6e5132",
+      "size_bytes": 5321
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_lvt.model.spice": {
+      "sha256": "ef07259bd556443e004118ffbfab8f8844f225ecfffb29252e3d1550afeee0d1",
+      "size_bytes": 4495
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass.pm3.spice": {
+      "sha256": "065c3a36cd891edc4cba6f8c6fe5d1318a103e90cb4c3a0c02d20b06abfe3256",
+      "size_bytes": 6155
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch.pm3.spice": {
+      "sha256": "634af21934ab8f0838888ca695fea99b73b23136b5dc998a68c8bd40cf837f11",
+      "size_bytes": 6185
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch.pm3.spice": {
+      "sha256": "a71d8e707ff90f4ee23cfe84c1c660f6c50609ce320c3602573bb646ac510978",
+      "size_bytes": 10564
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash.pm3.spice": {
+      "sha256": "484f90f58677ce58e6cf0a46513275618ec61369aef7b684bd7b12c8ef56a2c0",
+      "size_bytes": 10248
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5.pm3.spice": {
+      "sha256": "cc1cd3b324345059e5d21abf48c731ba740ad1d5b7ac073ec015ba2817b8ae1c",
+      "size_bytes": 4885
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt.pm3.spice": {
+      "sha256": "0bb1e7a3df76f120ba9b3afaaf125eab8c7c112d9fe0f62e0759ac0cd0c4626f",
+      "size_bytes": 8326
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8.pm3.spice": {
+      "sha256": "dd1d04c190d31692e149c9a59f0901a6e9ea2666e43f842178d329ec840ccb8d",
+      "size_bytes": 9653
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8.pm3.spice": {
+      "sha256": "089d6c9a4cc5fc7aa4cc2da6ed62fe843cdc4e387faa92efb59f7681c5d785b7",
+      "size_bytes": 14970
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt.pm3.spice": {
+      "sha256": "c1994983307665666126446655157fc4cf458a5e43b464bd74e1a12e6e9b790c",
+      "size_bytes": 3906
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/tt/legacy.spice": {
+      "sha256": "2caca3b0a86b42d6ac6d06a8e7615f4ad8ef442b8bcec1bea9f8ad969901a106",
+      "size_bytes": 415
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice": {
+      "sha256": "2fe2461e85a325fc5856da7b47cfd98333af4c7a8c1efa036c7af414e568d77d",
+      "size_bytes": 4497
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice": {
+      "sha256": "b00978da581468871971827a5d635440c7df9b7648ee52ba3dd8b8f26da64d80",
+      "size_bytes": 18259
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/tt/nonfet.spice": {
+      "sha256": "c2a2e6dd1e718f3e6e21ee7e97ec3d31a711df9205703e5224d9d5e99df5c8f9",
+      "size_bytes": 521
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/tt/rf.spice": {
+      "sha256": "9bba9a4521426fb265d6f403e8c2ac8afd0673ffbcbde66003d19679f3f589e0",
+      "size_bytes": 1064
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__tt.corner.spice": {
+      "sha256": "0cdef6b84f4779b97623b2dab53f5a51b97128e46906bb088fcc1960bfbc5ac2",
+      "size_bytes": 16855
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice": {
+      "sha256": "b3eca56bef28f3478720070144fd6d9a96dfeba2f8929033958f6debb54d31d2",
+      "size_bytes": 114102
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__tt.corner.spice": {
+      "sha256": "d48d5b1be4fe96b97e80115b25e38d1a5d324cb5b817faceabe2f364df9e4b77",
+      "size_bytes": 19491
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice": {
+      "sha256": "188171b49208b7c63a8f265d97cc96c73398735610ef05ee9f6d322cbd45a1c7",
+      "size_bytes": 116684
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__tt.corner.spice": {
+      "sha256": "120c2c096ff8702947b7f8593a0591cb66cd2a7228f97d97068e68c9ded393d3",
+      "size_bytes": 9277
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice": {
+      "sha256": "31414444562c296ec69fa20e871e18f09a796417d6fa268027f7196c12ac64ef",
+      "size_bytes": 56002
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__tt.corner.spice": {
+      "sha256": "06457396b67c95ffa49b13984171e9d4c3ac58b0f31a329d5f936a9f4a6052ee",
+      "size_bytes": 17280
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice": {
+      "sha256": "e5ed14af71ad71967109753d727cf47125a8d5f3b049f130cf9201aac8625e3c",
+      "size_bytes": 115195
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8__mismatch.corner.spice": {
+      "sha256": "ca52edda038b4cf56f39c9a6335d91bccabb4a3b12b6f98895060c4b37d68a98",
+      "size_bytes": 1169
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt__mismatch.corner.spice": {
+      "sha256": "f199d4f4e906ba3939aebe2a06752fd24bc749b61332fcdc5f69d7954b5372b4",
+      "size_bytes": 856
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5__mismatch.corner.spice": {
+      "sha256": "29cf2ce6e1910f3c58dd74300ff330ea918053384a29652db134367c110584bb",
+      "size_bytes": 2067
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8__mismatch.corner.spice": {
+      "sha256": "329b992466fa736b42ee32d5f15fc163410f7745bc57a9aa57a77bb732dfaaab",
+      "size_bytes": 1520
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__tt_discrete.corner.spice": {
+      "sha256": "cf21900fade43a2e9040d15c69d07a2e5705a87b5909894ff3f9673c5dc99bf5",
+      "size_bytes": 3972
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice": {
+      "sha256": "0ce88958b752e4311cee9119a34d606a2883022134d35f99e679b92d7603d5b1",
+      "size_bytes": 15240
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__mismatch.corner.spice": {
+      "sha256": "4be07e841b5c0e6534c25b823133aaa1b9f9689afdd780b66305e82a4460f636",
+      "size_bytes": 826
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/tt/specialized_cells.spice": {
+      "sha256": "658f71e2e534f48984ca055aa3c73982dedc3e52abdaf16b324576dc0fdb62ac",
+      "size_bytes": 7032
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice": {
+      "sha256": "2fa340dc33350ac2aefedccc380019570a23ac0ad03d269817f8c8ac21cf9749",
+      "size_bytes": 958
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice": {
+      "sha256": "6211325195acde110081a7ebe0485df31921a5185a9d2147f5e616e1985aec55",
+      "size_bytes": 953
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice": {
+      "sha256": "3e1ac9dc32bad9a21b4ca34bc3c9d3d3f63f0458feed4b74a3ee30126c5faebc",
+      "size_bytes": 991
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch__mismatch.corner.spice": {
+      "sha256": "8538ce99191b69de8bf38dc87eab0366245322ade8501908c21fb74496219430",
+      "size_bytes": 961
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__tt.corner.spice": {
+      "sha256": "9f736cd439c64f0a1b49348e54fb6f023ecaab4708d97f8475c8a0e74cd4672e",
+      "size_bytes": 1869
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt.pm3.spice": {
+      "sha256": "a19185ab805a9bb542c911fc9e3184406b8b173c8f49caa52beaa09a83ba466b",
+      "size_bytes": 7160
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_typical__cap_typical.spice": {
+      "sha256": "27fc61d71d8b34bfc54421c9a7b251dedb7e9eb18d2949c998363b7582be7f4a",
+      "size_bytes": 7090
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/sky130_fd_pr__model__res.model.spice": {
+      "sha256": "6fdcd3241206ee569767c2056d29c26e8b6deb63680c84ab3368aa3f3fc5c5c4",
+      "size_bytes": 3057
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_typical__cap_typical__lin.spice": {
+      "sha256": "8857d79fd6ff76382e41703fa80608c3ec580ed93bf5dc21a82b4438cb0891f7",
+      "size_bytes": 2134
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/sky130_fd_pr__model__cap_vpp.model.spice": {
+      "sha256": "818e82fe6cd34020f2871fc527a9b1b264633ea9d77a03a98e78325acba8ba02",
+      "size_bytes": 2786
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_l1m1m2_noshield.model.spice": {
+      "sha256": "75c89ac6b817329916242a2f76c150a51648cbe231d12be6bd486c80b74b2b10",
+      "size_bytes": 2015
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_l1m1m2_noshield.model.spice": {
+      "sha256": "ef5f762609aaf8d878f53243750be327b49dcae13e85ea513f8f231e6e75f823",
+      "size_bytes": 2007
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2_noshield.model.spice": {
+      "sha256": "a692e84e822e06a13a80248817039662b32bd70574bab120dd331d3aeaf860cc",
+      "size_bytes": 2018
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_01p8x01p8_m1m2_noshield.model.spice": {
+      "sha256": "5ada599ddd709e0b505fe9e1ba49d0c898c039ea9b1f78929845f68cf378b164",
+      "size_bytes": 1702
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_m1m2_shieldl1.model.spice": {
+      "sha256": "e82ab695db790c216d21cce02af5a92746e594f19baa2b41efafa52fd1423ae5",
+      "size_bytes": 1846
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_shieldl1.model.spice": {
+      "sha256": "a304e161002b025b2b4f2711136e82bf60daf886f44ebd64e2dc21848f8ac24d",
+      "size_bytes": 1842
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2_shieldl1.model.spice": {
+      "sha256": "745d07ac45743c842835d99135bb794c2b761791bddec837aea845c9192cdd6a",
+      "size_bytes": 1848
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_l1m1m2_shieldpo_floatm3.model.spice": {
+      "sha256": "e9e21bc894b057eae0f9ba097f264def5812fb023a0dcc7e191ef419acd08c85",
+      "size_bytes": 2279
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_l1m1m2_shieldpo_floatm3.model.spice": {
+      "sha256": "ec9dd0a27839742020eccd8d029af42b7a136cbe03612924ea3600ebec5fbbac",
+      "size_bytes": 2275
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2_shieldpom3.model.spice": {
+      "sha256": "1756a8075100188aa14e7ea7aa4ebfe5aaf7d952686f4697328de664552d51bc",
+      "size_bytes": 2240
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_03p9x03p9_m1m2_shieldl1_floatm3.model.spice": {
+      "sha256": "89d37d413cfd05ebe4c8ef4f991d87988d32a241c1337cbf2631d0c8ca7bc897",
+      "size_bytes": 1888
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_l1m1m2_noshield_o1.model.spice": {
+      "sha256": "7f0bf5a9d06a65f5b5a8ccffef993314d67f1446a88ef1d28de7da07516b7a85",
+      "size_bytes": 1802
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_l1m1m2_noshield_o1.model.spice": {
+      "sha256": "75805b32c6eda8e4a2cf99ce8576665e5cd607a03965f0fab4a710e3542cb114",
+      "size_bytes": 1805
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_m1m2_noshield.model.spice": {
+      "sha256": "58dbfb2f99a6c018f92f8fcd2b858d7d2557bbb72853f2403429844d3677c382",
+      "size_bytes": 1460
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_noshield_o2.model.spice": {
+      "sha256": "077635061076a7424deed26a8287c04463d109c7dade8bd69cc448aeb0e24c94",
+      "size_bytes": 1466
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p4x04p6_m1m2_noshield.model.spice": {
+      "sha256": "cb18395a9663de9c78cc5b68bd04dc09af0ae955776296f11ed19727a90f51b1",
+      "size_bytes": 1517
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_noshield.model.spice": {
+      "sha256": "6933291234a614ec15ecc414ad200d768a6071de4582aeca90d240e6d540cbd2",
+      "size_bytes": 1615
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2_noshield.model.spice": {
+      "sha256": "dcb7be8ab25bdbd713af1a05d83917087fd8fd84df87d0c358a85d1ed3b0a467",
+      "size_bytes": 1618
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/sky130_fd_pr__model__cap_vpp_only_mos.model.spice": {
+      "sha256": "7daca9f9743d93a489160eaba60c56bae4bd943a11f2cb08126459cdaea42972",
+      "size_bytes": 875
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_noshield_o1nhv.model.spice": {
+      "sha256": "6f58199124ce1837e16d31732dea4cc4d1ce0f90901e4c9af71eaad0ec540dd8",
+      "size_bytes": 1854
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_noshield_o1phv.model.spice": {
+      "sha256": "35e9d616992a0daa28f585db8c62c46ddcdf903d36d4bba021f81562055cd1c5",
+      "size_bytes": 1826
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/sky130_fd_pr__model__cap_vpp_only_p.model.spice": {
+      "sha256": "80cf9e98c6d05ff23f90312be6cd93c0ad3f83035ec685949ff70d0ad008f371",
+      "size_bytes": 3078
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3m4_shieldm5.model.spice": {
+      "sha256": "4298c99e69fc2d2002c60c0c8cdf2433473523b881756bb3ec6caf2f242eca15",
+      "size_bytes": 2670
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5.model.spice": {
+      "sha256": "709267ddbf511a083935671e3342abe2b0882eb54408a5f48214a396c067d535",
+      "size_bytes": 2852
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3m4_shieldl1m5.model.spice": {
+      "sha256": "70921b5bac4f58b95e6c1fb435b61f0df848006772c6ededf2fcf445fda56206",
+      "size_bytes": 2586
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m4_noshield.model.spice": {
+      "sha256": "0535b752338e25aaee54a60c9e470c81083ffe5ccbde921c82da69f6414c62fa",
+      "size_bytes": 2372
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3m4_shieldm5.model.spice": {
+      "sha256": "b8e5ab03db75a9f7094e5afc50cff7bbf7db5d8ae6902d6ece51332ceee3b66d",
+      "size_bytes": 2532
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_m1m2m3_shieldl1m5_floatm4.model.spice": {
+      "sha256": "da793ff90e4a0f4c6e391c9df38c4cab8f55fc696caeac53e374299062bc94f8",
+      "size_bytes": 2367
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2m3_shieldl1m5_floatm4.model.spice": {
+      "sha256": "cf72fe1a83b78d6ea4c1e6642ebbeeed4cce2f1576ebacd1877345169338b4a9",
+      "size_bytes": 2347
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3_shieldl1m5_floatm4.model.spice": {
+      "sha256": "3f66908aeba3f7623e41b53c9a7447b84761b64a7404cdc37fc008fd68711748",
+      "size_bytes": 2353
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv.model.spice": {
+      "sha256": "2bb6db3a27902e6e3f95c4184f28347650bfdca806fe0a3e5b4f3d658243c060",
+      "size_bytes": 2299
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base.model.spice": {
+      "sha256": "70941ff54f00d092d781acac4f3e9b1b37b9f69cd47206af585edb816e9b8aa2",
+      "size_bytes": 8397
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5_x.model.spice": {
+      "sha256": "2c1c793a7a735a73cb660217bfacd2d99488f9783ad7b655bed43085fd940fb4",
+      "size_bytes": 2953
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p9x06p1_m1m2m3m4_shieldl1_fingercap2.model.spice": {
+      "sha256": "426e06d06ae9f9622fd78b2d4541498dda35331458a04a68b2f3161d5e979a78",
+      "size_bytes": 2289
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x11p1_m1m2m3m4_shieldl1_fingercap.model.spice": {
+      "sha256": "574e2bbfa7cd17a8896ef3b5368d83a5be9d5745beecfaad1c6749065945b26e",
+      "size_bytes": 2290
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x21p1_m1m2m3m4_shieldl1_fingercap.model.spice": {
+      "sha256": "a33318e0ef6424e31d4bdc84bfd3b9b1b7b70666948e7049047f7f9aa1d1a71f",
+      "size_bytes": 2290
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x41p1_m1m2m3m4_shieldl1_fingercap.model.spice": {
+      "sha256": "d5bbcea2c2037ebc2a18fff481eabf558131c20b0f2ff5412801cf4b4e422af6",
+      "size_bytes": 2290
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x06p1_m1m2m3m4_shieldl1_fingercap.model.spice": {
+      "sha256": "1d1e7826d37b70c0d713f8c143c622d29ca5339b7393d4f9e7527942323dd00f",
+      "size_bytes": 2284
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p3x11p3_m1m2m3m4_shieldl1_wafflecap.model.spice": {
+      "sha256": "3f097889845cac35adee04665a5294bfa76d3913481012ce5281b50bca070e24",
+      "size_bytes": 2296
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_05p9x05p9_m1m2m3m4_shieldl1_wafflecap.model.spice": {
+      "sha256": "3ba9ebf584a8d918da8c2e2cd3367d7a4126e987f0b211ce031bcc6315ddd6d4",
+      "size_bytes": 2281
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_44p7x23p1_pol1m1m2m3m4m5_noshield.model.spice": {
+      "sha256": "9c51ae7a30dc108b6bfe05847199fb94d4e38d8f8ba3bdaad0bca47d4cf30c69",
+      "size_bytes": 2649
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/sky130_fd_pr__model__cap_vpp_only_pq.model.spice": {
+      "sha256": "ec9f9f3796d17696cff4867e62b9d83c2be6564b94f2a62ca4cece1684949cef",
+      "size_bytes": 1731
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_m1m2m3_shieldl1.model.spice": {
+      "sha256": "af59c5d1cdbee04d8d6b0288222b8a728feb7059c38eb958449ba78cef57b8bf",
+      "size_bytes": 2115
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2m3_shieldl1.model.spice": {
+      "sha256": "843c72841b193f533d3b9202ef5ed8394600e7a1ae76c9e79f668012a7e57c7b",
+      "size_bytes": 2118
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3_shieldl1.model.spice": {
+      "sha256": "470feafc452b3cc8c021b81616db38c4644ce8b2fd8458e59f86fe4693034b67",
+      "size_bytes": 2122
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3_shieldm4.model.spice": {
+      "sha256": "d061413a098abd3200c8f793cc3d49c0684b694ac92c2a234f9782722d27aa96",
+      "size_bytes": 2271
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3_shieldpom4.model.spice": {
+      "sha256": "f89f5926560580da9b4032a7e7b25b287830c8dc5535dd7f6a70f4922fd344e4",
+      "size_bytes": 2355
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_06p8x06p1_l1m1m2m3_shieldpom4.model.spice": {
+      "sha256": "1ddbf337f0181395931ae806c62e41f146c3546d4fdbf9f696ad513cdc43964d",
+      "size_bytes": 2337
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_06p8x06p1_m1m2m3_shieldl1m4.model.spice": {
+      "sha256": "bac04f2476f5f59ce3d2635012b45e769d30bf9f7e37184670d7880470ba094c",
+      "size_bytes": 2087
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_fet_sf.spice": {
+      "sha256": "20be6d9570a0a3cde62f94e3c5771e907cff5862d2167dd3bbe404e17bc35a7b",
+      "size_bytes": 4215
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/sf.spice": {
+      "sha256": "8c1d7c09f1a7590cc6b740a80fd6d903762ce556158cc5d2eb58255bcafc60fd",
+      "size_bytes": 521
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__sf.pm3.spice": {
+      "sha256": "9001688ee49176a20a668a45ed655bc20d867798a0e835ace0b22458aa45dae2",
+      "size_bytes": 14757
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_01v8_hvt__sf.pm3.spice": {
+      "sha256": "f800e00f908eb5f7bd5a00eda9737017c9e1a855c8c1ee141a212a5bdce6ed81",
+      "size_bytes": 9831
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/sf/legacy.spice": {
+      "sha256": "9ce0e12c914a0ece3aabcb37ff28381521c4c2512011c06ff7466790077ceccc",
+      "size_bytes": 415
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__sf.corner.spice": {
+      "sha256": "95fa572dc223518cd236d0905e40390a6a6a30e3994881afdc9b16ab4cbe1065",
+      "size_bytes": 4516
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/sf/nonfet.spice": {
+      "sha256": "33b542592ac029abee9163cbb365d0b13ddfc7468c47e263859ff7f4ba704eba",
+      "size_bytes": 608
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/sf/rf.spice": {
+      "sha256": "98b843ee3f6d0bd725089a9fd481876e37e4934724778a67d2b7a7b6744cefc9",
+      "size_bytes": 1064
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__sf.corner.spice": {
+      "sha256": "f90e8bacff05b2caf4cd60357bc31a7d7c149289b47ce711986d564bcfb8a457",
+      "size_bytes": 16884
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__sf.corner.spice": {
+      "sha256": "20cbbd6c2e6fc2ca96c2e6255939bb2eb847f54ec664b34b04923e03f5aced63",
+      "size_bytes": 19523
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__sf.corner.spice": {
+      "sha256": "0b8e9ed968e99e8115404cbe648fba8c9f93f605d614487751e30caf7ae2bb17",
+      "size_bytes": 9310
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__sf.corner.spice": {
+      "sha256": "8659d8ff6e78a8230aa75d74b986a660cb47ea89e8ae46a92dbaff29fd78ae02",
+      "size_bytes": 17313
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__sf_discrete.corner.spice": {
+      "sha256": "076f6a5297330254b303325fbea7eb92e87826f313ddec2fd0acfff36c2cedc9",
+      "size_bytes": 4040
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/sf/specialized_cells.spice": {
+      "sha256": "cc38ff465cab0d308a68eecc37e69811df5808475a8d1af3c4df1781da1d384e",
+      "size_bytes": 6978
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ff.corner.spice": {
+      "sha256": "c4e3d962522f9e96a75dd18bf19b8622d4d97f28868fc4a3f58bf96ffa42289d",
+      "size_bytes": 1884
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_fet_ff.spice": {
+      "sha256": "b02aa2816444bc5f2c053c7ed35f178c344d03db914082df7c8556a4380aaf3e",
+      "size_bytes": 4308
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ff.spice": {
+      "sha256": "3f83bee66d423b53f6b13ea36be823be92d3d89d8c20e8cbe6e766789c5ec0f2",
+      "size_bytes": 521
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__ff.pm3.spice": {
+      "sha256": "db1157e340dc49953c09693d25f3c5a34782120c3d69c29a45ec118f41937cfe",
+      "size_bytes": 14463
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_01v8_hvt__ff.pm3.spice": {
+      "sha256": "98e520ba81735b17e1ace07589932a2faeba70edbacb688542299b12f8741340",
+      "size_bytes": 9767
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ff/legacy.spice": {
+      "sha256": "7bdaa5db3c74ffde5fd67de6be8bcf9f75a23ed6f76eabacb4d92603a0ff4230",
+      "size_bytes": 415
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__ff.corner.spice": {
+      "sha256": "0206cc43047aaa9fbdf2162f70efc716b33e4149362009f1cb8b76ed6e66ff35",
+      "size_bytes": 4516
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ff/nonfet.spice": {
+      "sha256": "7148e3899bf333f33589cdb1e76770b4dbc1e093ec5d73b09480d84cf2edab8d",
+      "size_bytes": 603
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ff/rf.spice": {
+      "sha256": "393419a64b47329dcfc74d6c4a3fb40a477777266828b45274772dcc735480f8",
+      "size_bytes": 1064
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__ff.corner.spice": {
+      "sha256": "b0d63e167d520cf29ca61039c4de84c43a678ada8ce73c4678d81fee7dcc553b",
+      "size_bytes": 16883
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__ff.corner.spice": {
+      "sha256": "57a43c568eb7a35c8ffe4fa32a22c9cb0a266318d36d700a675efd820256fe05",
+      "size_bytes": 19535
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__ff.corner.spice": {
+      "sha256": "57f151000b60dc65cfeab38fd8929dc4db983a94534b7c524a1f1009bb007de6",
+      "size_bytes": 9305
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__ff.corner.spice": {
+      "sha256": "41c98373171935548b2e28c548d63a0e68aa79761956b2e388dcfba7e164652b",
+      "size_bytes": 17329
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__ff_discrete.corner.spice": {
+      "sha256": "98813f397c0c0a4b77fa8c238051cb22521ea3a062c16720af844efcec54b74f",
+      "size_bytes": 4053
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ff/specialized_cells.spice": {
+      "sha256": "3f6580d1d5c7997a747964fee6e145dddfc2aaa66d18e0707fe76972a436f127",
+      "size_bytes": 7165
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_fet_ss.spice": {
+      "sha256": "1ddb06ebec4e73ea630b9e6ae759db3410ee04da3678ace417cb3aa28e4f7880",
+      "size_bytes": 4300
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ss.spice": {
+      "sha256": "a15173064d4cae6d629e799a4e6242225a7887f4c7de4ad8fc0a096d0de00f3d",
+      "size_bytes": 521
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__ss.pm3.spice": {
+      "sha256": "680a995de68b4028f3cad1fdfc7ca66b5f18dcff4715543b83ac72b347d85172",
+      "size_bytes": 14409
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_01v8_hvt__ss.pm3.spice": {
+      "sha256": "bdbe3d3d5f4d767ad2d8ac1a99cfdd982f24110aa77d996d28d195d81d95ace1",
+      "size_bytes": 9764
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ss/legacy.spice": {
+      "sha256": "e82d305cdf901f3e74e76ca9bbb6817bf2fde3f00461b63afc4d205d49bd1e0f",
+      "size_bytes": 415
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__ss.corner.spice": {
+      "sha256": "e68650b0bd8e376525fda37bc03e88452d4eaa2790b7823729c8540c6d24fcc0",
+      "size_bytes": 4510
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ss/nonfet.spice": {
+      "sha256": "023d84b8a75d0db161030089be0054e9e503861df8414f076f5dd958cbd52f56",
+      "size_bytes": 608
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ss/rf.spice": {
+      "sha256": "a84b63c6204a7b9e4d847c6c1a66466d11a20a84eb94e5f3f0724f7475208965",
+      "size_bytes": 1064
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__ss.corner.spice": {
+      "sha256": "1f26d2444234120c2b2399d182fa55d456e9fd7e528db21709f0ea37781c6236",
+      "size_bytes": 16865
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__ss.corner.spice": {
+      "sha256": "c04e981d19d05d8eb9b694f982202a2c7e7e8e260b048a5db2a8ffdb299a839e",
+      "size_bytes": 19513
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__ss.corner.spice": {
+      "sha256": "cec1fc1e8d0b0377d821d1c8f80c1117963b34d954c0e8d11c479e7b9dc435b6",
+      "size_bytes": 9284
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__ss.corner.spice": {
+      "sha256": "e6170a98263edd3cf7718944b3c767397da94951794d4b30638e488c5de427de",
+      "size_bytes": 17322
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__ss_discrete.corner.spice": {
+      "sha256": "a85aa19e3ffadb05f5f5154cc21371a0783313f2d3ae7a55f8bf0f41acec1f19",
+      "size_bytes": 4050
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/ss/specialized_cells.spice": {
+      "sha256": "3274a8b79dfe72c853ebcde7b7e855a2a5c81d01b01d742bb425c0cbc8939e22",
+      "size_bytes": 7144
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ss.corner.spice": {
+      "sha256": "d1aad00138019e9a74faa229977802536aade2333e845818c819a550c9bde2b3",
+      "size_bytes": 1881
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_fet_fs.spice": {
+      "sha256": "1f77a3d84a81d6c1fda2e3baf9c703d7a5b9e770937b4f5fb5122026db8a6a4c",
+      "size_bytes": 4216
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/fs.spice": {
+      "sha256": "39035286ec5005abb81d0c8f3e3eeae17eecc832f050eda870a8f0eb5f266c90",
+      "size_bytes": 521
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_01v8__fs.pm3.spice": {
+      "sha256": "b6ead1d5d3ad27116afb5a9aea44b18d2c31ae7e78c4af47e1fbfba968f1a416",
+      "size_bytes": 14567
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_01v8_hvt__fs.pm3.spice": {
+      "sha256": "d7850da5e54df1706a894c14bce7e4e39421571af1340381987e23d77c7e51b1",
+      "size_bytes": 9766
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/fs/legacy.spice": {
+      "sha256": "d689498530b3045de1457c73bd31af8a5ccd1a1709a0ceba8d9f10e3b024ae80",
+      "size_bytes": 415
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__fs.corner.spice": {
+      "sha256": "b2da31294d07c4ce093c3daef05915467b3fcbc1acc30b56f957258194b3303a",
+      "size_bytes": 4510
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/fs/nonfet.spice": {
+      "sha256": "5c339aaa391597e03c647ef33a512dac648c61468fd03b9f1d124bdcd46074b6",
+      "size_bytes": 603
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/fs/rf.spice": {
+      "sha256": "98e15ab2e4df9c4599263fc851980fb0356774fa0efe496229e68edfc76e0775",
+      "size_bytes": 1064
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__fs.corner.spice": {
+      "sha256": "bf63eefa1cd2facd2b1b3a1395589949231dbc5bbc678179aabe2381cc0c6dc6",
+      "size_bytes": 16863
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__fs.corner.spice": {
+      "sha256": "e4e57542f3d65f1c3fb25aa4eac1278238c31c58bd36e08bd28454d8b7ed85b8",
+      "size_bytes": 19499
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__fs.corner.spice": {
+      "sha256": "95b9700e0a64fad6a355cb9ac80f4584493812b8b4e0dd3c6093d4969f6224cf",
+      "size_bytes": 9279
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__fs.corner.spice": {
+      "sha256": "0c7a88b0eb5afe5b2fa8b18f62d1b1259c70c3a9631f97208145947eb5d13787",
+      "size_bytes": 17339
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__fs_discrete.corner.spice": {
+      "sha256": "46d50c031a15a866a993f3909a2e32c8f6c3badda0a7021bdf168c59a5efa381",
+      "size_bytes": 4043
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/corners/fs/specialized_cells.spice": {
+      "sha256": "1cdb33f29b6f1b5a2eb3af8956711aa0085d164eb483134e69e6ee40864ea922",
+      "size_bytes": 6957
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_res_low.spice": {
+      "sha256": "b75c5714f065f65be8b052338f9aa7418d69f005d64803e77e7735064715c238",
+      "size_bytes": 3275
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_cap_low.spice": {
+      "sha256": "96ebe0bbb20519295bc7a23e29a388586bd249edd03e73c495dc032652f7fa76",
+      "size_bytes": 1241
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_low__cap_low.spice": {
+      "sha256": "10674200a5e3ac2d79c1ed268af711221bd872fc4cf93c412fc9f5ed9293abc1",
+      "size_bytes": 7159
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_low__cap_low__lin.spice": {
+      "sha256": "7d9683cbd9caf85f54cf2491a720de7b8b159be467aab5e6d0b87833e3edf391",
+      "size_bytes": 2190
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_res_high.spice": {
+      "sha256": "a776f09e5a7177c9450b7d05daa324261e2f133e78ece987f85be430787dc8be",
+      "size_bytes": 3247
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/continuous/parameters_cap_high.spice": {
+      "sha256": "9aae3a661e7d9ba2ce151e5cca728a2ddc14ee8d73cd19717ed331016918d376",
+      "size_bytes": 1250
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_high__cap_high.spice": {
+      "sha256": "fdcaeb4d8ca4041fc010bbc6c440b0a4fdd9ed9c3d43e502489282c0cded8b69",
+      "size_bytes": 6841
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_high__cap_high__lin.spice": {
+      "sha256": "63114fc42284a662dd4a21fc3a99ade2c2eb76e3b3d7d88de0b088b74c285dc9",
+      "size_bytes": 2194
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_high__cap_low.spice": {
+      "sha256": "1f82a74fa844ef2e3b34d2f138a49977d3f28c42a33a2e69db66fb0a97ae0d78",
+      "size_bytes": 6807
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_high__cap_low__lin.spice": {
+      "sha256": "7d9683cbd9caf85f54cf2491a720de7b8b159be467aab5e6d0b87833e3edf391",
+      "size_bytes": 2190
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_low__cap_high.spice": {
+      "sha256": "aa8d3df089d3db9a0f6c5fb1eb56b11b5874af81f337dd3eda5ee800bc0d63ef",
+      "size_bytes": 6808
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/rescap/res_low__cap_high__lin.spice": {
+      "sha256": "1bf2d74fe368b7629dcf0dec847db4ceed9922bef044438a83eff184408734e2",
+      "size_bytes": 2193
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/parameters/critical.spice": {
+      "sha256": "d1a147243171c66716947c74f9b77d2b6cdb10170c46fdaa5446f2da42518b2c",
+      "size_bytes": 7402
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/parameters/montecarlo.spice": {
+      "sha256": "db18875bc13d78435cc3b7253dde030aeb36a1104d336633cd092b09e9e6c9aa",
+      "size_bytes": 53849
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/parameters/invariant.spice": {
+      "sha256": "c624b7e0618d1a375d8429ee093b4a8ba69cb383ba3692cc904d152f9e5f572f",
+      "size_bytes": 53288
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sonos_e/begin_of_life.pm3.spice": {
+      "sha256": "6814fe12581b5ee34023b29e7d4b82f73162cd57c39e223368d81bb2dec9b548",
+      "size_bytes": 12702
+    },
+    "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sonos_p/begin_of_life.pm3.spice": {
+      "sha256": "6a4eadb0edcec9be2638d07bd8249e29e5b13713c9523cb00f82aa5a38ba4bba",
+      "size_bytes": 13064
+    }
+  },
+  "unresolved_include_paths": [],
+  "container_name": "sky130-v2-resume-20260910",
+  "simulator_path": "/foss/tools/ngspice/bin/ngspice",
+  "SPICE_USERINIT_DIR": "/foss/pdks/sky130A/libs.tech/ngspice",
+  "school_paths_not_used": true
+}

@@ -1,0 +1,17 @@
+{
+  "test": "startup",
+  "gain": 4,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "ramp_s": 1e-06,
+  "final_output_cm_v": 0.890961867,
+  "final_bn_v": 0.63257209,
+  "final_bp_v": 0.682760143,
+  "final_startup_gate_v": 0.00425098572,
+  "final_supply_current_a": 0.000478235414,
+  "startup_gate_shutoff_below_0p2V": true,
+  "final_cm_within_50mV": true,
+  "caution": "UIC supply-ramp test; not comprehensive startup/temperature proof."
+}

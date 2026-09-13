@@ -1,0 +1,17 @@
+Intrinsic resistor thermal noise control, not a sensor ADC
+load "resistor.osdi"
+load "capacitor.osdi"
+model r resistor has_noise=1
+model c capacitor
+model i isource
+r1 (out 0) r r=10000
+c1 (out 0) c c=1n
+i1 (0 out) i dc=0
+control
+  abort always
+  options temp=27 rawfile="binary" strictsave=1
+  options reltol=1e-5 vntol=1e-10 abstol=1e-15 tran_noisedebug=1
+  save v(out)
+  analysis transient tran stop=20m step=10n maxstep=100n noisefmax=1000000 noisefmin=10 oversample=12 noiseseed=11 noisemode="zoh"
+  analysis stationary noise out="out" in="i1" from=10 to=1meg mode="dec" points=80
+endc

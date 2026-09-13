@@ -1,0 +1,52 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE",
+  "ordinal": 5,
+  "diagnostic_budget": 8,
+  "gain": 1,
+  "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+  "scope": "One AC solve of two isolated copies of the same physical core, one with differential injection and one with common-mode injection; ideal test sources preserve DC operating points.",
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "formal_multiloop_stability_signoff": false,
+  "returncode": 0,
+  "elapsed_s": 2.3904644180147443,
+  "loops": {
+    "cm": {
+      "low_frequency_gain_db": 66.2802701253017,
+      "low_frequency_phase_deg": -179.9791897359093,
+      "unity_crossings": [
+        {
+          "frequency_hz": 1803622.4270112119,
+          "phase_deg": -167.08091236215006,
+          "scalar_phase_margin_deg": 12.919087637849941,
+          "direction": "down"
+        }
+      ],
+      "scalar_downcrossings_meet_60deg": false
+    },
+    "dm": {
+      "low_frequency_gain_db": 37.96806105831735,
+      "low_frequency_phase_deg": -0.00038853104488129384,
+      "unity_crossings": [
+        {
+          "frequency_hz": 5834240.709733147,
+          "phase_deg": -63.22532861088882,
+          "scalar_phase_margin_deg": 116.77467138911118,
+          "direction": "down"
+        },
+        {
+          "frequency_hz": 12248675.742779583,
+          "phase_deg": 48.31545014870024,
+          "scalar_phase_margin_deg": 228.31545014870025,
+          "direction": "up"
+        }
+      ],
+      "scalar_downcrossings_meet_60deg": true
+    }
+  },
+  "limitations": [
+    "Opposite loop remains connected; no independent open-loop RHP pole count.",
+    "Scalar voltage injection needs a useful unidirectional partition; this is diagnostic, not full loop or PEX qualification.",
+    "No switching, noise, mismatch or PVT signoff."
+  ]
+}

@@ -1,0 +1,60 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__nfet_01v8_lvt are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8_lvt is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8_lvt is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8_lvt     |Circuit 2: sky130_fd_pr__nfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__nfet_01v8_lvt are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_lvt are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_lvt is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_lvt is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8_lvt     |Circuit 2: sky130_fd_pr__pfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt are equivalent.
+Flattening unmatched subcell tg_nfet_lvt in circuit adc_tgate_layout (0)(1 instance)
+Flattening unmatched subcell tg_pfet_dummy in circuit adc_tgate_layout (0)(1 instance)
+Flattening unmatched subcell tg_pfet_lvt in circuit adc_tgate_layout (0)(1 instance)
+Flattening unmatched subcell tg_nfet_dummy in circuit adc_tgate_layout (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: adc_tgate_layout                |Circuit 2: adc_tgate_dual_lvt_dummy        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8_lvt (2)            |sky130_fd_pr__nfet_01v8_lvt (2)            
+sky130_fd_pr__pfet_01v8_lvt (2)            |sky130_fd_pr__pfet_01v8_lvt (2)            
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: adc_tgate_layout                |Circuit 2: adc_tgate_dual_lvt_dummy        
+-------------------------------------------|-------------------------------------------
+B                                          |B                                          
+EN                                         |EN                                         
+A                                          |A                                          
+VSS                                        |VSS                                        
+ENB                                        |ENB                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes adc_tgate_layout and adc_tgate_dual_lvt_dummy are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,19 @@
+* NGSPICE file created from adc_tgate_flat.ext - technology: sky130A
+
+.subckt adc_tgate_flat A B EN ENB VDD VSS
+X0 A EN B VSS sky130_fd_pr__nfet_01v8 ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=0.15
+X1 A ENB B VDD sky130_fd_pr__pfet_01v8 ad=4.64 pd=32.58 as=4.64 ps=32.58 w=16 l=0.15
+C0 ENB A 0.23718f
+C1 ENB VDD 0.25269f
+C2 B A 2.47875f
+C3 B VDD 0.92551f
+C4 EN B 0.13535f
+C5 VDD A 0.95957f
+C6 EN A 0.13302f
+C7 ENB B 0.2261f
+C8 EN VDD 0.00213f
+C9 A VSS 1.49198f
+C10 B VSS 1.49842f
+C11 VDD VSS 5.99068f
+.ends
+

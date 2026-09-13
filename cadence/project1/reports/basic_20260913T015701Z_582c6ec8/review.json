@@ -1,0 +1,704 @@
+{
+  "status": "PASS_RETURNED_NOMINAL_DATA_REVIEW",
+  "source_report_sha256": "1145038acb946f06e97a5995308f9316bdc49217f6674bbf2f41e11436ec9eb4",
+  "package_sha256": "a77492fe2de2aee32ab9021c867bfb1b38a66ed6e5826b4c9e3a51211585336e",
+  "records": {
+    "P01_op": {
+      "attempt": "20260913T015511Z_e1890861",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "power_nonnegative": true,
+          "power_le_600uW": true,
+          "devices_saturated": true
+        },
+        "notes": [
+          "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+          "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical."
+        ],
+        "power_uW": 271.8276422681387,
+        "parallel_group_operating_points": {
+          "M3": {
+            "ids": -1.9012550878191828e-05,
+            "gm": 0.0003013002109442072,
+            "gds": 1.956660518205786e-06
+          },
+          "M4": {
+            "ids": -1.901101263299316e-05,
+            "gm": 0.0003012778638154362,
+            "gds": 1.9570894789578846e-06
+          },
+          "M7": {
+            "ids": -9.300032503459127e-05,
+            "gm": 0.0009714638668969693,
+            "gds": 3.83883630251538e-06
+          }
+        },
+        "dc_nodes": {
+          "VOUT": 0.9000120331720024,
+          "VINP": 0.9,
+          "VSS": 0.0,
+          "VBP": 0.6327533990046771,
+          "VDD": 1.8,
+          "ivdd": -0.0001510153568156326
+        },
+        "device_saturation_margin_V": {
+          "M1": 0.5028559104299711,
+          "M2": 0.5036468249976207,
+          "M3A": 0.920633602412342,
+          "M3B": 0.920633602412342,
+          "M4A": 0.9198487491456296,
+          "M4B": 0.9198487491456296,
+          "M5": 0.11618919336858488,
+          "M6": 0.7410310489006667,
+          "M7A": 0.7349747685105561,
+          "M7B": 0.7349747685105561,
+          "M8": 0.9975434339065925,
+          "M9": 0.9723558339050554,
+          "M10": 0.5655937258069303
+        },
+        "min_saturation_margin_V": 0.11618919336858488,
+        "all_devices_saturated": true,
+        "historical_pass_fail": "PASS",
+        "comparison": {
+          "power_uW": {
+            "cadence": 271.8276422681387,
+            "ngspice": 270.536967,
+            "difference": 1.2906752681386706
+          }
+        }
+      },
+      "csv_rows": {
+        "op.csv": 6,
+        "op_instance_map.csv": 13,
+        "op_devices.csv": 13
+      },
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "spectre_errors": 0,
+      "spectre_warnings": 0,
+      "spectre_notices": 3,
+      "dc_iterations": 11,
+      "bad_pivot_notice": true,
+      "simulation_origin": "RETAINED_SPECTRE_RESULTS",
+      "evidence_sha256": {
+        "metrics.json": "641c88f860180a5d2d295b74ec931d8a38ba7c9173c19baa2bcbf18e4a86fbd2",
+        "op.csv": "c7980ced96bd4eadfd158adb84e8fa84d2fdf411c00d59bc13ced33cd10004cd",
+        "op_instance_map.csv": "bd1a3d96371e222ec61cbf897b3530166284bf2dbcb8de85f953f1b23bf4e885",
+        "op_available_names.txt": "c9aa178a9d26fd0115487b888cd2e0fd6f34b7936f0435dd070e42a22f87fd8a",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "ocean_export.log": "47fc99d8976f3ccc67a973ddd51076d638c636db5b6a0692552c8194461af68e",
+        "op_devices.csv": "7915c7f0ed05429497c53c82d3c5414fe4a3aa05ee4a249ebe52082dd89896f5",
+        "export.ocn": "6d9ec8d148a3a30c3e33c3ba49713c93afe7124ed89e58937941372b7d7fc3a2",
+        "spectre.out": "4c25be554ce2d1314a2447098c0047c61591cb817ba804f6d60cb719e061d8eb",
+        "netlist_audit.json": "cc4b80558bdc38eea534ed3cf2e3e5f449c5dde7c0728cd36f59c0a0f602107e",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "native_selection.json": "ed8980b495f2e11e851255c9c837b91aee18222ccd41aae3bb4eeef3b6b3b1ed",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "native_input.scs": "e2aeef9a7bc65b18e70785c709fa3e81f8f553a52033e3dbb0aeb5dd5ca3cc66",
+        "status.json": "cd574a74801085c327ca1fd88a748962fe4c419a80eaa2050fb28dd2b6e8d45b",
+        "recovery_source.json": "bd7328a79b9b0a05fd92c837beb8096473809a18e2c1d3472b4bf419bec6535e",
+        "input.scs": "7ac8a481dbf6a9e6be21d8efeb335830a3d7efe74b8baad1750b73d95b047c95",
+        "native_netlist.scs": "afecf75d377c290e4f8976d3635ef3ec22f836f8a6ae62d1905904546ad88d3b"
+      }
+    },
+    "P01_ac": {
+      "attempt": "20260913T015526Z_53d3402e",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "power_nonnegative": true,
+          "power_le_600uW": true,
+          "devices_saturated": true,
+          "gain_ge_50dB": true
+        },
+        "notes": [
+          "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+          "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical."
+        ],
+        "power_uW": 271.82764227781536,
+        "parallel_group_operating_points": {
+          "M3": {
+            "ids": -1.9012550900176294e-05,
+            "gm": 0.000301300211247911,
+            "gds": 1.9566605202269157e-06
+          },
+          "M4": {
+            "ids": -1.9011012620651402e-05,
+            "gm": 0.0003012778636204516,
+            "gds": 1.957089490558231e-06
+          },
+          "M7": {
+            "ids": -9.300032502822212e-05,
+            "gm": 0.0009714638668321855,
+            "gds": 3.838836307896364e-06
+          }
+        },
+        "dc_nodes": {
+          "VOUT": 0.9000120348312025,
+          "VINP": 0.9,
+          "VSS": 0.0,
+          "VBP": 0.6327533990046771,
+          "VDD": 1.8,
+          "ivdd": -0.0001510153568210085
+        },
+        "device_saturation_margin_V": {
+          "M1": 0.5028559089505,
+          "M2": 0.503646841791793,
+          "M3A": 0.9206336024513286,
+          "M3B": 0.9206336024513286,
+          "M4A": 0.9198487316731997,
+          "M4B": 0.9198487316731997,
+          "M5": 0.11618919478954604,
+          "M6": 0.7410310394733636,
+          "M7A": 0.73497476685187,
+          "M7B": 0.73497476685187,
+          "M8": 0.9975434339065925,
+          "M9": 0.9723558339050554,
+          "M10": 0.5655937258069303
+        },
+        "min_saturation_margin_V": 0.11618919478954604,
+        "all_devices_saturated": true,
+        "gain_dB": 67.68355094073004,
+        "ac_unity_frequency_MHz": 16.730111084651323,
+        "ac_gain_crossings": [
+          {
+            "frequency_hz": 16730111.084651323,
+            "direction": "down",
+            "phase_deg": -111.16583396641224
+          }
+        ],
+        "historical_pass_fail": "PASS",
+        "comparison": {
+          "gain_dB": {
+            "cadence": 67.68355094073004,
+            "ngspice": 67.67595287,
+            "difference": 0.007598070730040263
+          },
+          "power_uW": {
+            "cadence": 271.82764227781536,
+            "ngspice": 270.536967,
+            "difference": 1.2906752778153532
+          }
+        }
+      },
+      "csv_rows": {
+        "op.csv": 6,
+        "op_instance_map.csv": 13,
+        "VINP.csv": 1081,
+        "VDD.csv": 1081,
+        "op_devices.csv": 13,
+        "VINN.csv": 1081,
+        "VSS.csv": 1081,
+        "VOUT.csv": 1081
+      },
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "spectre_errors": 0,
+      "spectre_warnings": 0,
+      "spectre_notices": 4,
+      "dc_iterations": 16,
+      "bad_pivot_notice": true,
+      "simulation_origin": "NEW_SPECTRE_EXECUTION",
+      "evidence_sha256": {
+        "metrics.json": "60dc03a053fa227d7c9d2b499bb1123a6bd0a021d923237949ec2db32b3daf4f",
+        "op.csv": "261b38b82e34e3834e09d217edb5b54b02ed70a51f9a447cdf5d447a94bd2aae",
+        "op_instance_map.csv": "bd1a3d96371e222ec61cbf897b3530166284bf2dbcb8de85f953f1b23bf4e885",
+        "op_available_names.txt": "a315ca14d4d8addddd3dfbd5083b073ee5140ad1be6071dc2ad89a4821e1da3e",
+        "VINP.csv": "61f54bf875c4806d57118b7064159581a6934ac6e35301eb2c4c1933f3be09eb",
+        "VDD.csv": "9da76ae06f83844ef85a1e4afa3732eb54cbf8ede67353135a2bf98999b593dd",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "spectre_console.log": "83501c46a1c311f31b4c0384eb33cc6506760d9562cbdd63d8f082d6dd4a04f0",
+        "ocean_export.log": "47fc99d8976f3ccc67a973ddd51076d638c636db5b6a0692552c8194461af68e",
+        "op_devices.csv": "8c83e3588c1aef3a47e7dc65350a3246c5981d2b707495923157a66f725be721",
+        "export.ocn": "ed0dacf3206204ae65aeb78244b1b68dd54d682b930779d10d90268a6ab351cf",
+        "spectre.out": "006bedf9a5cc483969a398574e432cf528c609cde4cbcff21e75a6605bead294",
+        "netlist_audit.json": "4d5c7ced5dd785bef7bb4f4d7b5d0220fbc08d352e51457c2c50610045f7f65c",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "native_selection.json": "db6112e6660fbbc04c2a3a2bb3da3e46eb279ed1ef4dbc5db09a38586f421a8a",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "netlist.ocn": "3abcee0d25535bd47f64dd23bf143b1add6f831e6c83a9c68b8e032cf39b8a48",
+        "ocean_netlist.log": "a4f63c92a32b6e324a56ce2c0d2c4a4ba095afbf41dc7f030b71694e1bbf3a86",
+        "native_input.scs": "abc8825a28af3266baf84f67a6a617136b887808ebc2c5af355cc41e090fd17d",
+        "status.json": "cdf2bba106db0ac030827e2798b41f7608f6ed0aa85d21ca6fc6f75767658475",
+        "VINN.csv": "b1b4c34c5b923f7672dd0cfe9f9fff4ada80178bf8f2c7038f524621a7db9e5c",
+        "VSS.csv": "9da76ae06f83844ef85a1e4afa3732eb54cbf8ede67353135a2bf98999b593dd",
+        "VOUT.csv": "8ac320396d7866e118502788152b4a3b41be581d9b2656abc03e6cf920221f09",
+        "input.scs": "df1e72a29e5a416d53b61f87742970186d19017c7eea2535a5e2843f219f1427",
+        "netlist_return.txt": "83bb9f8f0c707fa04d64399c2984ac8750e879858bd0f9f758ea4807fd3a4233",
+        "native_netlist.scs": "d739b7dd42ea18365b83f6a57fe6b149d220e48f4f817e99ab1ac9e35866f056"
+      }
+    },
+    "P01_loop": {
+      "attempt": "20260913T015556Z_4c2103a6",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "power_nonnegative": true,
+          "power_le_600uW": true,
+          "devices_saturated": true,
+          "single_downward_crossing": true,
+          "correct_low_frequency_sign": true,
+          "pm_ge_55deg": true,
+          "ugb_ge_5MHz": true
+        },
+        "notes": [
+          "Legacy single-loop return ratio only; not a frontend multiloop stability certificate.",
+          "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+          "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical."
+        ],
+        "power_uW": 271.82764227781536,
+        "parallel_group_operating_points": {
+          "M3": {
+            "ids": -1.9012550900176294e-05,
+            "gm": 0.000301300211247911,
+            "gds": 1.9566605202269157e-06
+          },
+          "M4": {
+            "ids": -1.9011012620651402e-05,
+            "gm": 0.0003012778636204516,
+            "gds": 1.957089490558231e-06
+          },
+          "M7": {
+            "ids": -9.300032502822212e-05,
+            "gm": 0.0009714638668321855,
+            "gds": 3.838836307896364e-06
+          }
+        },
+        "dc_nodes": {
+          "VOUT": 0.9000120348312025,
+          "VINP": 0.9,
+          "VSS": 0.0,
+          "VBP": 0.6327533990046771,
+          "VDD": 1.8,
+          "ivdd": -0.0001510153568210085
+        },
+        "device_saturation_margin_V": {
+          "M1": 0.5028559089505,
+          "M2": 0.503646841791793,
+          "M3A": 0.9206336024513286,
+          "M3B": 0.9206336024513286,
+          "M4A": 0.9198487316731997,
+          "M4B": 0.9198487316731997,
+          "M5": 0.11618919478954604,
+          "M6": 0.7410310394733636,
+          "M7A": 0.73497476685187,
+          "M7B": 0.73497476685187,
+          "M8": 0.9975434339065925,
+          "M9": 0.9723558339050554,
+          "M10": 0.5655937258069303
+        },
+        "min_saturation_margin_V": 0.11618919478954604,
+        "all_devices_saturated": true,
+        "gain_dB": 67.68234761633134,
+        "phase_low_deg": -0.006838830912835258,
+        "crossings": [
+          {
+            "frequency_hz": 16732928.52625917,
+            "direction": "down",
+            "phase_deg": -111.2119420056509
+          }
+        ],
+        "ugb_MHz": 16.732928526259172,
+        "pm_deg": 68.7880579943491,
+        "historical_pass_fail": "PASS",
+        "comparison": {
+          "ugb_MHz": {
+            "cadence": 16.732928526259172,
+            "ngspice": 16.74544794,
+            "difference": -0.012519413740825769
+          },
+          "pm_deg": {
+            "cadence": 68.7880579943491,
+            "ngspice": 69.08291044,
+            "difference": -0.2948524456509034
+          },
+          "power_uW": {
+            "cadence": 271.82764227781536,
+            "ngspice": 270.536967,
+            "difference": 1.2906752778153532
+          }
+        }
+      },
+      "csv_rows": {
+        "op.csv": 6,
+        "op_instance_map.csv": 13,
+        "VINP.csv": 1081,
+        "VDD.csv": 1081,
+        "op_devices.csv": 13,
+        "VINN.csv": 1081,
+        "VSS.csv": 1081,
+        "VOUT.csv": 1081
+      },
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "spectre_errors": 0,
+      "spectre_warnings": 0,
+      "spectre_notices": 4,
+      "dc_iterations": 16,
+      "bad_pivot_notice": true,
+      "simulation_origin": "NEW_SPECTRE_EXECUTION",
+      "evidence_sha256": {
+        "metrics.json": "0ba32e0e84963cdf14bd59242dc168f4585696d6666b6e8ce241e0f0b6c5ed4d",
+        "op.csv": "261b38b82e34e3834e09d217edb5b54b02ed70a51f9a447cdf5d447a94bd2aae",
+        "op_instance_map.csv": "bd1a3d96371e222ec61cbf897b3530166284bf2dbcb8de85f953f1b23bf4e885",
+        "op_available_names.txt": "a315ca14d4d8addddd3dfbd5083b073ee5140ad1be6071dc2ad89a4821e1da3e",
+        "VINP.csv": "9da76ae06f83844ef85a1e4afa3732eb54cbf8ede67353135a2bf98999b593dd",
+        "VDD.csv": "9da76ae06f83844ef85a1e4afa3732eb54cbf8ede67353135a2bf98999b593dd",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "spectre_console.log": "39fa21cd0194e8446b3055799b15fd8c9eff09908888e7ef2bc402759aecbbb7",
+        "ocean_export.log": "47fc99d8976f3ccc67a973ddd51076d638c636db5b6a0692552c8194461af68e",
+        "op_devices.csv": "8c83e3588c1aef3a47e7dc65350a3246c5981d2b707495923157a66f725be721",
+        "export.ocn": "3fa258eee83bb9223921c548b154ca53ee0bab7245f62ab1ba836d7be59bec7d",
+        "spectre.out": "9684d52d0c09c4dfb4c3412d7ec8e9e1251ddfc043b914b0409cd76fde6d5c05",
+        "netlist_audit.json": "4d5c7ced5dd785bef7bb4f4d7b5d0220fbc08d352e51457c2c50610045f7f65c",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "native_selection.json": "7974b425e8e733da1e095ae271d83544323149f5d87b95b4fd3135e28777a080",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "netlist.ocn": "e7aaa7969c9439bdc2b7fa5a4a73f0cf10566cba5749a397f4c5ef872f5ffb16",
+        "ocean_netlist.log": "7aec6e0fd256fae30b30ef32f1cc88721bfc595a6f6b753868cfdd0bc9a9d631",
+        "native_input.scs": "e5fc8e43431148dc0e9f09f3ea97a7c2bba175a87958a6da52a4742109839f31",
+        "status.json": "b3fdfff24fdea3cc928dfe12310d20d4feea490c54ce99486c99301d97a7e6cf",
+        "VINN.csv": "9db48dc7e5795a0677fb44918fb0c28f437d6f3a29a77d87ce9b5307ffed4cdd",
+        "VSS.csv": "9da76ae06f83844ef85a1e4afa3732eb54cbf8ede67353135a2bf98999b593dd",
+        "VOUT.csv": "28fffc5f61a7186aaf5976b684e66ca2f3501eb87eaaec40a250d26c0ba0a564",
+        "input.scs": "864b25c4d3b8855e11c8acfd895f6f6ad612897b8bb70e1d832d428fe15de716",
+        "netlist_return.txt": "52a0de1cbb13c5df4fac46f228b1f89d506298e034f513901a05149a6d635250",
+        "native_netlist.scs": "0ecdcd26b119b4cf08a7dc3e69cac7a81f4622536bfd4828634f8e9396fbbccb"
+      }
+    },
+    "P01_step": {
+      "attempt": "20260913T015626Z_4fb84d3c",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "power_nonnegative": true,
+          "power_le_600uW": true,
+          "devices_saturated": true,
+          "sr_pos_ge_2": true,
+          "sr_neg_ge_2": true,
+          "settling_le_1p5us": true
+        },
+        "notes": [
+          "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+          "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical."
+        ],
+        "power_uW": 269.22359938842186,
+        "parallel_group_operating_points": {
+          "M3": {
+            "ids": -1.8104442407574382e-05,
+            "gm": 0.0002886734345609226,
+            "gds": 1.8728214703894578e-06
+          },
+          "M4": {
+            "ids": -1.810361486980718e-05,
+            "gm": 0.0002886613018250284,
+            "gds": 1.8730510591470745e-06
+          },
+          "M7": {
+            "ids": -9.336914042516022e-05,
+            "gm": 0.0009751861695627076,
+            "gds": 3.547408109665208e-06
+          }
+        },
+        "dc_nodes": {
+          "VOUT": 0.800006210388841,
+          "VINP": 0.8,
+          "VSS": 0.0,
+          "VBP": 0.6327533990046771,
+          "VDD": 1.8,
+          "ivdd": -0.000149568666326901
+        },
+        "device_saturation_margin_V": {
+          "M1": 0.5881979821695489,
+          "M2": 0.5886422173131078,
+          "M3A": 0.9189738335427593,
+          "M3B": 0.9189738335427593,
+          "M4A": 0.9185326646526678,
+          "M4B": 0.9185326646526678,
+          "M5": 0.035671162772397416,
+          "M6": 0.6393977002631757,
+          "M7A": 0.8349495577401002,
+          "M7B": 0.8349495577401002,
+          "M8": 0.9975434339065925,
+          "M9": 0.9723558339050554,
+          "M10": 0.5655937258069303
+        },
+        "min_saturation_margin_V": 0.035671162772397416,
+        "all_devices_saturated": true,
+        "sr_pos_V_per_us": 8.293451511322376,
+        "rise_settling_us": 0.07418622482421311,
+        "rise_overshoot_mV": 74.09554629603998,
+        "sr_neg_V_per_us": 11.456738156584684,
+        "fall_settling_us": 0.04092452631537634,
+        "fall_overshoot_mV": 1.9204854480867617,
+        "worst_settling_us": 0.07418622482421311,
+        "historical_pass_fail": "PASS",
+        "comparison": {
+          "sr_pos_V_per_us": {
+            "cadence": 8.293451511322376,
+            "ngspice": 8.202029183,
+            "difference": 0.09142232832237518
+          },
+          "sr_neg_V_per_us": {
+            "cadence": 11.456738156584684,
+            "ngspice": 11.51994781,
+            "difference": -0.06320965341531526
+          },
+          "worst_settling_us": {
+            "cadence": 0.07418622482421311,
+            "ngspice": 0.07475,
+            "difference": -0.0005637751757868875
+          }
+        }
+      },
+      "csv_rows": {
+        "op.csv": 6,
+        "op_instance_map.csv": 13,
+        "VINP.csv": 10116,
+        "op_devices.csv": 13,
+        "VOUT.csv": 10116
+      },
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "spectre_errors": 0,
+      "spectre_warnings": 0,
+      "spectre_notices": 3,
+      "dc_iterations": 13,
+      "bad_pivot_notice": true,
+      "simulation_origin": "NEW_SPECTRE_EXECUTION",
+      "evidence_sha256": {
+        "metrics.json": "0576daac71499064ab7e6e2ded12fa3ed7c6d45210925b6cc2fe2441e54f5b89",
+        "op.csv": "01b71c19e0f0d548f1cce559b2657fade70d7de0747ff176d88c37594504da2d",
+        "op_instance_map.csv": "bd1a3d96371e222ec61cbf897b3530166284bf2dbcb8de85f953f1b23bf4e885",
+        "op_available_names.txt": "23ca01a11ba7a247279aa251f2d7cf16ea466728c3f7eede6bdaf242af24b0a9",
+        "VINP.csv": "bab0037aa1ecc0d971dc564398f9b4bb0dd267b77b7fd245dbe4c27ca569671d",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "spectre_console.log": "2a235de8592eea9f114cd8a12dfb4332e5e206bde7904f3e72f74b758e4af48d",
+        "ocean_export.log": "47fc99d8976f3ccc67a973ddd51076d638c636db5b6a0692552c8194461af68e",
+        "op_devices.csv": "e3a04a414eceb35a476fb5611e18ba116b4ad94848c489989802121813be8dca",
+        "export.ocn": "7c833b328a9d7ee2480efd4bad7d1abc31b399fb86921f75d6f47a0a0a01bbce",
+        "spectre.out": "b8cce5ac145bc2e5fed2bbd8e18d8d402fc3c41f86e3d786dfc27a9703d2cf7b",
+        "netlist_audit.json": "cc4b80558bdc38eea534ed3cf2e3e5f449c5dde7c0728cd36f59c0a0f602107e",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "native_selection.json": "65781eeab68a6ada5c031097f2c8a1f7e9f69012161b280893b04878ecc023d5",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "netlist.ocn": "5db2c7152f5d47542589a7bcf5146657b0fec94be67fe25cf1865d9c878e384b",
+        "ocean_netlist.log": "76abbad3fc61810acaa80d4b01d8d307c8a9641edf46e7d3edbcad5527a359c5",
+        "native_input.scs": "45d4c48f948468d1b3a3172c8fbcbdbb141059ab3c6205a5e09baee96c00d0d5",
+        "status.json": "e18160a843fd8cf028df36f981a80d10fd211440c94ec950f509c153de939b33",
+        "VOUT.csv": "1c639aed84ae331f2d641b1ce8e9d65eb3eb4a9ff8b0778137820bf1bc0cdcd3",
+        "input.scs": "c09f1b2f375e05aebd5fe08531e43f80b5fd91290a9d7024317bcbf4eb77220e",
+        "netlist_return.txt": "99d469d89ac3a90475f71eeaa8421082c122126b7dc3420a91bf81f7a5725586",
+        "native_netlist.scs": "002ed746ca6c04a4622f3347b853389c55631ad66a6b27969050c1abd5d92d49"
+      }
+    }
+  },
+  "passive_review": "PASS_REPRODUCED_FROM_RETURNED_DATA",
+  "recovery_source_hashes_verified": true,
+  "local_simulator_execution": false,
+  "local_recalculation_comparison_tolerance": {
+    "relative": 1e-08,
+    "absolute": 1e-20,
+    "scope": "Floating point arithmetic comparison only; no simulation acceptance limits changed"
+  },
+  "historical_step_reanalysis": {
+    "sr_pos_V_per_us": 8.20202918324256,
+    "rise_settling_us": 0.07475000000000001,
+    "rise_overshoot_mV": 74.99684000000006,
+    "sr_neg_V_per_us": 11.51994780576901,
+    "fall_settling_us": 0.04075000000000042,
+    "fall_overshoot_mV": 1.858472,
+    "worst_settling_us": 0.07475000000000001
+  },
+  "remaining_pvt_jobs": 48,
+  "remaining_pvt_points": [
+    {
+      "id": "P02_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "ff",
+      "temp": 27,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P02",
+      "group": "pvt"
+    },
+    {
+      "id": "P03_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "ss",
+      "temp": 27,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P03",
+      "group": "pvt"
+    },
+    {
+      "id": "P04_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "fs",
+      "temp": 27,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P04",
+      "group": "pvt"
+    },
+    {
+      "id": "P05_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "sf",
+      "temp": 27,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P05",
+      "group": "pvt"
+    },
+    {
+      "id": "P06_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": -20,
+      "params": {
+        "VDD": 1.62,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P06",
+      "group": "pvt"
+    },
+    {
+      "id": "P07_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": 27,
+      "params": {
+        "VDD": 1.62,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P07",
+      "group": "pvt"
+    },
+    {
+      "id": "P08_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": 85,
+      "params": {
+        "VDD": 1.62,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P08",
+      "group": "pvt"
+    },
+    {
+      "id": "P09_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": -20,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P09",
+      "group": "pvt"
+    },
+    {
+      "id": "P10_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": 85,
+      "params": {
+        "VDD": 1.8,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P10",
+      "group": "pvt"
+    },
+    {
+      "id": "P11_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": -20,
+      "params": {
+        "VDD": 1.98,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P11",
+      "group": "pvt"
+    },
+    {
+      "id": "P12_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": 27,
+      "params": {
+        "VDD": 1.98,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P12",
+      "group": "pvt"
+    },
+    {
+      "id": "P13_op",
+      "cell": "p1b_tb_op",
+      "analysis": "op",
+      "corner": "tt",
+      "temp": 85,
+      "params": {
+        "VDD": 1.98,
+        "VCM": 0.9,
+        "CL": 5e-12,
+        "VTEST": 0
+      },
+      "point": "P13",
+      "group": "pvt"
+    }
+  ],
+  "limitations": [
+    "Legacy OTA TT / 1.8 V / 27 C / 5 pF || 100 kohm only; not full PVT or frontend/ADC qualification.",
+    "School width rounding and M7 parallel split differ from the frozen ngspice implementation.",
+    "The local machine does not access school PDK, native OA database or licenses.",
+    "Bad-pivot notices are retained; all four returned Spectre runs converged with zero errors and warnings.",
+    "OCEAN environment warnings (locks, library redefinition, fonts and debugger) remain; export contains complete finite data.",
+    "Step settling uses the old 1% of 0.4 V criterion (4 mV), not the newer 0.25 LSB criterion.",
+    "Step overshoot is reported; the frozen Day 4 criteria have no separate overshoot limit.",
+    "Steady-state device saturation does not certify saturation throughout the transient.",
+    "Model dependency files are not independently hash-certified; only the entry-file hash is recorded."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+  "full_chip_qualified": false,
+  "ideal_phase_fixture": false,
+  "arguments": {
+    "input_v": 0.123,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temperature": 27,
+    "reference_r": 1.0,
+    "reference_c_nf": 10.0,
+    "reference_cm_mode": "tracking",
+    "source_r": 350,
+    "input_cm_offset_mv": 0,
+    "duration_us": 12.0,
+    "phase_source": "transistor",
+    "solver": "sparse",
+    "timeout_seconds": 900,
+    "frontend": null,
+    "frontend_riso": null,
+    "extra_include": [
+      "/repo/v2/integration/candidates/20260908T045601001817Z/adc_reference_candidate.spice",
+      "/repo/v2/integration/candidates/20260908T045601001817Z/adc_tgate_dual_lvt_dummy.spice"
+    ],
+    "adc_wrapper": "/repo/v2/integration/candidates/20260908T045601001817Z/sensor_adc_candidate.spice",
+    "adc_blocks": "/repo/v2/integration/candidates/20260908T045601001817Z/adc_blocks.spice",
+    "adc_subckt": "sensor_adc_candidate",
+    "adc_preamp": "/repo/v2/integration/candidates/20260908T045601001817Z/adc_preamp.spice",
+    "gain": 1
+  },
+  "source_sha256": {
+    "integration/cosim_controller.v": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883",
+    "integration/qualify_cosim.py": "d44c318acf045215981511641481025d7c841a28fa018d3e148bb99f5bc86b2c",
+    "integration/run_adc_cosim.py": "b81d182eb20d9b9a5849d1d8d9aeb41e2e4f41c50825e668d17993876be92f6e",
+    "rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "integration/candidates/20260908T045601001817Z/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "integration/candidates/20260908T045601001817Z/sensor_adc_candidate.spice": "94c047a1f664ffa001c1588c5cfefe85fc5d09f42dd2705a7dade21f332acf6d",
+    "integration/sensor_phases.spice": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462",
+    "integration/candidates/20260908T045601001817Z/adc_preamp.spice": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782",
+    "integration/candidates/20260908T045601001817Z/adc_reference_candidate.spice": "5813ab5f1c959f5b0d6ac44473d929259c45d534dff785263e667be963283442",
+    "integration/candidates/20260908T045601001817Z/adc_tgate_dual_lvt_dummy.spice": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734"
+  },
+  "run": "integration/results/adc_20260908T045711112103Z",
+  "returncode": 0,
+  "raw_codes": [
+    2677
+  ],
+  "expected_ideal_code": 2677,
+  "code_error_lsb": [
+    0
+  ],
+  "complete_adc_qualified": false,
+  "limitations": [
+    "Only short deterministic conversion check, not full-code linearity or noise-inclusive FFT.",
+    "Live original RTL with ideal logic-voltage bridges; no mapped digital power/delay here. Phase source and amplifier inclusion are recorded in arguments.",
+    "Schematic MOS/MIM/resistor circuits; no analog layout extraction or mismatch included.",
+    "Reference network has the reported source resistance and local external capacitors, not infinite driver strength."
+  ],
+  "valid_times_s": [
+    1.100350035792e-05
+  ],
+  "analog_and_reference_port_power_w": 6.0546967124604724e-05,
+  "reference_peak_port_currents_a": {
+    "rp": 1.040355771102e-11,
+    "rn": 1.040120047228e-11,
+    "vcm": 1.473030110384e-09
+  },
+  "checks": {
+    "simulation_completed": true,
+    "all_frames_completed": true,
+    "short_nominal_code_check_within_2lsb": true
+  }
+}

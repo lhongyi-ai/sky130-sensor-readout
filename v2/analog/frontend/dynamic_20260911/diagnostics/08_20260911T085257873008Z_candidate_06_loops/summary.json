@@ -1,0 +1,182 @@
+{
+  "status": "LOOP_STABILITY_PASS",
+  "ordinal": 8,
+  "diagnostic_budget": 8,
+  "candidate": "candidate_06.spice",
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "worker_count": 1,
+  "gains": [
+    1,
+    4,
+    16
+  ],
+  "measured_loops_per_gain": [
+    "dm",
+    "stage1_cm",
+    "output_cm"
+  ],
+  "real_sampler_and_4096_unit_load_in_acquisition_state": true,
+  "formal_loop_stability_gate_pass": true,
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "noise_included": false,
+  "elapsed_s": 3.207694921991788,
+  "returncode": 0,
+  "loops": {
+    "1": {
+      "dm": {
+        "low_frequency_gain_db": 54.50103690362232,
+        "low_frequency_phase_deg": -0.004429877256527523,
+        "unity_crossings": [
+          {
+            "frequency_hz": 5105007.156721103,
+            "phase_deg": -93.62165182149651,
+            "phase_margin_deg": 86.37834817850349,
+            "direction": "down"
+          },
+          {
+            "frequency_hz": 74773418.82851367,
+            "phase_deg": -279.29082283914744,
+            "phase_margin_deg": -99.29082283914744,
+            "direction": "up"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 86.37834817850349,
+        "phase_margin_gate_pass": true
+      },
+      "stage1_cm": {
+        "low_frequency_gain_db": 44.07914361219629,
+        "low_frequency_phase_deg": -179.99826164657344,
+        "unity_crossings": [
+          {
+            "frequency_hz": 6377210.5978407655,
+            "phase_deg": -54.20690253605867,
+            "phase_margin_deg": 125.79309746394134,
+            "direction": "down"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 125.79309746394134,
+        "phase_margin_gate_pass": true
+      },
+      "output_cm": {
+        "low_frequency_gain_db": 32.29169986467545,
+        "low_frequency_phase_deg": -0.0010052510421614243,
+        "unity_crossings": [
+          {
+            "frequency_hz": 6945005.407532958,
+            "phase_deg": -56.472056245656,
+            "phase_margin_deg": 123.527943754344,
+            "direction": "down"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 123.527943754344,
+        "phase_margin_gate_pass": true
+      }
+    },
+    "4": {
+      "dm": {
+        "low_frequency_gain_db": 51.37190370067442,
+        "low_frequency_phase_deg": -0.007460659386236633,
+        "unity_crossings": [
+          {
+            "frequency_hz": 2203449.0794985876,
+            "phase_deg": -95.14242354957958,
+            "phase_margin_deg": 84.85757645042042,
+            "direction": "down"
+          },
+          {
+            "frequency_hz": 47100954.90740438,
+            "phase_deg": -280.14344536297375,
+            "phase_margin_deg": -100.14344536297375,
+            "direction": "up"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 84.85757645042042,
+        "phase_margin_gate_pass": true
+      },
+      "stage1_cm": {
+        "low_frequency_gain_db": 59.43369313086144,
+        "low_frequency_phase_deg": -179.98982137230513,
+        "unity_crossings": [
+          {
+            "frequency_hz": 6334374.113512014,
+            "phase_deg": -54.12893446401451,
+            "phase_margin_deg": 125.87106553598548,
+            "direction": "down"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 125.87106553598548,
+        "phase_margin_gate_pass": true
+      },
+      "output_cm": {
+        "low_frequency_gain_db": 37.47140458147506,
+        "low_frequency_phase_deg": -0.0018247378073472128,
+        "unity_crossings": [
+          {
+            "frequency_hz": 7118152.0203289585,
+            "phase_deg": -56.81374037394345,
+            "phase_margin_deg": 123.18625962605654,
+            "direction": "down"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 123.18625962605654,
+        "phase_margin_gate_pass": true
+      }
+    },
+    "16": {
+      "dm": {
+        "low_frequency_gain_db": 44.488573863627295,
+        "low_frequency_phase_deg": -0.011285593319559912,
+        "unity_crossings": [
+          {
+            "frequency_hz": 748868.4574265939,
+            "phase_deg": -96.70034186031778,
+            "phase_margin_deg": 83.29965813968222,
+            "direction": "down"
+          },
+          {
+            "frequency_hz": 38894699.89589727,
+            "phase_deg": -280.54503691677616,
+            "phase_margin_deg": -100.54503691677616,
+            "direction": "up"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 83.29965813968222,
+        "phase_margin_gate_pass": true
+      },
+      "stage1_cm": {
+        "low_frequency_gain_db": 57.36086163042355,
+        "low_frequency_phase_deg": -0.008016214314826109,
+        "unity_crossings": [
+          {
+            "frequency_hz": 6314104.040307918,
+            "phase_deg": -54.08964319979307,
+            "phase_margin_deg": 125.91035680020693,
+            "direction": "down"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 125.91035680020693,
+        "phase_margin_gate_pass": true
+      },
+      "output_cm": {
+        "low_frequency_gain_db": 41.931391704691166,
+        "low_frequency_phase_deg": -0.0030491632796825555,
+        "unity_crossings": [
+          {
+            "frequency_hz": 7203057.527475143,
+            "phase_deg": -56.99947485406516,
+            "phase_margin_deg": 123.00052514593483,
+            "direction": "down"
+          }
+        ],
+        "minimum_downcrossing_phase_margin_deg": 123.00052514593483,
+        "phase_margin_gate_pass": true
+      }
+    }
+  },
+  "limitations": [
+    "Voltage injection sources are testbench-only and preserve the production candidate's DC topology.",
+    "Each reported scalar loop is broken while the other two loops remain closed.",
+    "This is schematic-level TT/1.8 V/27 C stability with acquisition load, not PVT, noise, PEX, Cadence, or silicon signoff."
+  ]
+}

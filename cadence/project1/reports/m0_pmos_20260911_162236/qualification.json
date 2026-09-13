@@ -1,0 +1,22 @@
+{
+  "status": "PMOS_DC_SMOKE_PASS_WITH_DEPRECATION_WARNING",
+  "log_sha256": "3acbf5c56e25d07c9c312a2a9326b5b0c078c2c9f5554ab10e55f425e70cf428",
+  "operating_point_count": 181,
+  "operating_point_ids_contiguous": true,
+  "errors": 0,
+  "warnings": 1,
+  "warning": "SPECTRE-17101 checklimitdest=psf future deprecation",
+  "vsg_range_v": [
+    0,
+    1.8
+  ],
+  "temperature_c": 27,
+  "elapsed_seconds": 3.04,
+  "log_current_extremum": {
+    "signal": "I(VS:p)",
+    "reported_uA": 210.8
+  },
+  "drain_current_endpoint_from_screenshot_approx_uA": -211,
+  "raw_waveform_numeric_audit": "NOT_PERFORMED",
+  "full_M0": "INCOMPLETE_PASSIVES_STATISTICS_PHYSICAL_NOT_RUN"
+}

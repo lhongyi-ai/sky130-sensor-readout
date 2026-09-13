@@ -1,0 +1,32 @@
+* preamp_sf_1.98_27
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice sf
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+.include /repo/v2/analog/adc/adc_preamp.spice
+VDD vdd 0 1.98
+VCM cm 0 0.99
+VDIFF diff 0 DC 0 AC 1
+EIP ip cm diff 0 .5
+EIN inn cm diff 0 -.5
+XPRE ip inn op on vdd 0 adc_preamp
+XCMP op on q qb 0 vdd 0 adc_latched_comparator
+CQ q 0 5f
+CQB qb 0 5f
+.nodeset v(q)=0 v(qb)=1.98
+.options sparse
+
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+op
+wrdata /repo/v2/analog/adc/results/preamp_sf_1.98_27_op.tsv v(op) v(on) v(xpre.bn) v(xpre.bp) i(vdd)
+ac dec 30 1 1g
+let dg=v(op)-v(on)
+wrdata /repo/v2/analog/adc/results/preamp_sf_1.98_27_ac.tsv real(dg) imag(dg)
+
+quit
+.endc
+.end

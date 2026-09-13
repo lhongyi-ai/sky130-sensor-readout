@@ -1,0 +1,200 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE",
+  "gain": 1,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+  "baseline_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+  "ordinal": 6,
+  "diagnostic_budget": 8,
+  "worker_count": 1,
+  "configuration": {
+    "variant": "headroom_c",
+    "gain": 1,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temp": 27,
+    "dc_only": false,
+    "timeout": 90.0,
+    "calibration_from": null
+  },
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "noise_included": false,
+  "elapsed_s": 9.55919215999893,
+  "returncode": 0,
+  "dc_complete_81_points": true,
+  "max_output_cm_error_v": 0.04013991818944995,
+  "output_endpoints_v": [
+    -0.3929456376463001,
+    0.39294563762589996
+  ],
+  "source_r_ohm_per_side": 350,
+  "dc_load_isolation_r_ohm_per_side": 2600,
+  "scope": "Frontend-only deterministic DC and optional static-capacitive-load step; not SAR sampling, sampled noise, SNDR, loop phase-margin or PEX.",
+  "calibration_source": "this corner/gain nominal 1.8 V, 27 C only",
+  "calibration_coefficients": [
+    1.016578826401152,
+    1.3791648680139256e-11
+  ],
+  "max_holdout_error_lsb": 2.7636984620221483,
+  "static_accuracy_limit_lsb": 1,
+  "static_accuracy_pass": false,
+  "dc_device_headroom": {
+    "xerrp.xp1": {
+      "min_vds_minus_vdsat_v": 0.09197761189845,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.41480642441955,
+      "zero_id_a": 1.223535514958e-05,
+      "zero_gm_s": 0.0003324859237615,
+      "zero_gds_s": 3.536098955101e-06,
+      "zero_vgs_v": 0.4428083530105,
+      "zero_vth_v": 0.5436188466816
+    },
+    "xerrp.xn1": {
+      "min_vds_minus_vdsat_v": 0.3652748053287,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.40982854349479,
+      "zero_id_a": 3.497119660863e-05,
+      "zero_gm_s": 0.0008792912145317,
+      "zero_gds_s": 9.262924674095e-06,
+      "zero_vgs_v": 0.4829465061466,
+      "zero_vth_v": 0.543619145718
+    },
+    "xerrn.xp1": {
+      "min_vds_minus_vdsat_v": 0.09197761199337001,
+      "worst_target_v": -0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.41480642442565996,
+      "zero_id_a": 1.223535515144e-05,
+      "zero_gm_s": 0.0003324859238087,
+      "zero_gds_s": 3.536098955601e-06,
+      "zero_vgs_v": 0.4428083530153,
+      "zero_vth_v": 0.5436188466808
+    },
+    "xerrn.xn1": {
+      "min_vds_minus_vdsat_v": 0.36527480542174,
+      "worst_target_v": -0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.40982854349759,
+      "zero_id_a": 3.497119660993e-05,
+      "zero_gm_s": 0.0008792912145614,
+      "zero_gds_s": 9.262924674385e-06,
+      "zero_vgs_v": 0.4829465061473,
+      "zero_vth_v": 0.5436191457172
+    },
+    "xerrp.xt0": {
+      "min_vds_minus_vdsat_v": 0.034350122184029996,
+      "worst_target_v": -0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.03556939813412,
+      "zero_id_a": 7.080982585877e-05,
+      "zero_gm_s": 0.001536920884978,
+      "zero_gds_s": 8.824370503509e-05,
+      "zero_vgs_v": 0.5592006803514,
+      "zero_vth_v": 0.5480663023658
+    },
+    "xerrp.xtc0": {
+      "min_vds_minus_vdsat_v": 0.13490381342680002,
+      "worst_target_v": -0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.30309697633499,
+      "zero_id_a": 0.0001416196520337,
+      "zero_gm_s": 0.003148212485661,
+      "zero_gds_s": 2.41977891826e-05,
+      "zero_vgs_v": 0.5892724139419,
+      "zero_vth_v": 0.6108626814289
+    },
+    "xerrn.xt0": {
+      "min_vds_minus_vdsat_v": 0.03435012218406,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.035569398134100004,
+      "zero_id_a": 7.080982585876e-05,
+      "zero_gm_s": 0.001536920884978,
+      "zero_gds_s": 8.824370503516e-05,
+      "zero_vgs_v": 0.5592006803514,
+      "zero_vth_v": 0.5480663023658
+    },
+    "xerrn.xtc0": {
+      "min_vds_minus_vdsat_v": 0.13490381347376,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.30309697633017996,
+      "zero_id_a": 0.0001416196520337,
+      "zero_gm_s": 0.003148212485661,
+      "zero_gds_s": 2.419778918276e-05,
+      "zero_vgs_v": 0.5892724139419,
+      "zero_vth_v": 0.6108626814289
+    },
+    "xcasp": {
+      "min_vds_minus_vdsat_v": -0.034587281853196,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": -0.015363235112079997,
+      "zero_id_a": 2.036316907646e-08,
+      "zero_gm_s": 6.004765125483e-07,
+      "zero_gds_s": 4.09083799636e-07,
+      "zero_vgs_v": 0.4327401945876,
+      "zero_vth_v": 0.8004143272638
+    },
+    "xcasn": {
+      "min_vds_minus_vdsat_v": -0.034587281849090996,
+      "worst_target_v": -0.40000000000000013,
+      "zero_vds_minus_vdsat_v": -0.015363235111379998,
+      "zero_id_a": 2.036316907549e-08,
+      "zero_gm_s": 6.0047651252e-07,
+      "zero_gds_s": 4.09083799599e-07,
+      "zero_vgs_v": 0.4327401945859,
+      "zero_vth_v": 0.8004143272641
+    },
+    "xop": {
+      "min_vds_minus_vdsat_v": 0.32094763218169997,
+      "worst_target_v": -0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.6092873397684,
+      "zero_id_a": 9.674878233283e-05,
+      "zero_gm_s": 0.0004574048394266,
+      "zero_gds_s": 4.026252833819e-06,
+      "zero_vgs_v": 0.9455611821865,
+      "zero_vth_v": 0.5488972032095
+    },
+    "xon": {
+      "min_vds_minus_vdsat_v": 0.32094763229530004,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.6092873397625,
+      "zero_id_a": 9.674878233395e-05,
+      "zero_gm_s": 0.0004574048394288,
+      "zero_gds_s": 4.026252833878e-06,
+      "zero_vgs_v": 0.945561182189,
+      "zero_vth_v": 0.5488972032095
+    },
+    "xcmt": {
+      "min_vds_minus_vdsat_v": 0.032000802914760006,
+      "worst_target_v": 0.40000000000000013,
+      "zero_vds_minus_vdsat_v": 0.032001825548980005,
+      "zero_id_a": 5.637671152761e-05,
+      "zero_gm_s": 0.001221473298303,
+      "zero_gds_s": 7.923009915684e-05,
+      "zero_vgs_v": 0.5592007135232,
+      "zero_vth_v": 0.5480690156359
+    }
+  },
+  "frontend_vdd_and_vcm_power_w": {
+    "zero": 0.001640136388750128,
+    "max_dc_sweep": 0.0016402195902572461
+  },
+  "step_windows": {
+    "positive": {
+      "differential_mean_v": 0.35392967157014166,
+      "differential_peak_to_peak_v": 2.1567636999675344e-06,
+      "common_mode_peak_to_peak_v": 0.0001322259852498675
+    },
+    "negative": {
+      "differential_mean_v": -0.3539273992412017,
+      "differential_peak_to_peak_v": 9.260873899963329e-06,
+      "common_mode_peak_to_peak_v": 0.000575884693349904
+    },
+    "zero": {
+      "differential_mean_v": -1.630338674148212e-11,
+      "differential_peak_to_peak_v": 4.54999371513054e-11,
+      "common_mode_peak_to_peak_v": 1.460454200019612e-06
+    }
+  },
+  "step_max_output_cm_error_v": 0.12608897762765003,
+  "preliminary_quiet_window_gate": false,
+  "preliminary_step_amplitude_gate": false
+}

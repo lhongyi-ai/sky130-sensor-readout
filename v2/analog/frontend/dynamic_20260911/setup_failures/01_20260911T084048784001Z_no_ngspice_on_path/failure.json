@@ -1,0 +1,13 @@
+{
+  "status": "SETUP_FAILURE_BEFORE_SIMULATOR_LAUNCH",
+  "reason": "The host-side runner requested the executable name 'ngspice', but ngspice was not present on the host PATH.",
+  "exception_class": "FileNotFoundError",
+  "simulator_process_started": false,
+  "circuit_analysis_started": false,
+  "counts_toward_real_ngspice_diagnostic_budget": false,
+  "resolution": "Subsequent diagnostics ran one worker at a time inside the existing SKY130 container, using /foss/tools/ngspice/bin/ngspice.",
+  "claim_limits": [
+    "This directory is setup-failure evidence, not a simulator result.",
+    "It is kept separate from diagnostics/01 through diagnostics/08."
+  ]
+}

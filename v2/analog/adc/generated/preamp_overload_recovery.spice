@@ -1,0 +1,31 @@
+* preamp_overload_recovery
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+.include /repo/v2/analog/adc/adc_preamp.spice
+VDD vdd 0 1.8
+VCM cm 0 .9
+VDIFF diff 0 PWL(0 0.4 3.145e-06 0.4 3.146e-06 -0.2 3.77e-06 -0.2 3.771e-06 0.1 4.395e-06 0.1 4.396e-06 -0.05 5.02e-06 -0.05 5.021e-06 0.025 5.645e-06 0.025 5.646e-06 -0.0125 6.27e-06 -0.0125 6.271e-06 0.00625 6.895e-06 0.00625 6.896e-06 -0.003125 7.52e-06 -0.003125 7.521e-06 0.0015625 8.145e-06 0.0015625 8.146e-06 -0.00078125 8.77e-06 -0.00078125 8.771e-06 4.8828125e-05 9.395e-06 4.8828125e-05 9.396e-06 -4.8828125e-05 1.002e-05 -4.8828125e-05 1.0021e-05 9.765625e-05 1.0645e-05 9.765625e-05 1.0646e-05 -9.765625e-05)
+EIP sp cm diff 0 .5
+EIN sn cm diff 0 -.5
+RSP sp ip 350
+RSN sn inn 350
+XCP ip 0 adc_mim_bank COUNT=4096
+XCN inn 0 adc_mim_bank COUNT=4096
+XPRE ip inn op on vdd 0 adc_preamp
+VEVAL ev 0 PULSE(0 1.8 2.825u 1n 1n 250n 625n)
+XCMP op on q qb ev vdd 0 adc_latched_comparator
+CQ q 0 5f
+CQB qb 0 5f
+
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 1n 1.127e-05
+wrdata /repo/v2/analog/adc/results/preamp_overload_recovery.tsv v(ip) v(inn) v(op) v(on) v(q) v(qb) v(ev) i(vdd)
+quit
+.endc
+.end

@@ -1,0 +1,12 @@
+{
+  "status": "PASS_LOCAL_CHECKS",
+  "tests": "11 patch tests, including 17 original package regressions",
+  "returned_Spectre_data_reanalysis": "PASS",
+  "school_patch_execution": "NOT_RUN",
+  "checks": [
+    "R/MIM/RC returned-data checks and corrupt-current/capacitance/waveform/missing-point rejection",
+    "Native input hashes, latest-failure stop, evidence and model change invalidation",
+    "Install idempotence, conflict rejection, rollback, original file preservation",
+    "87 jobs remain; original OTA regressions pass; Python 3.6 syntax check"
+  ]
+}

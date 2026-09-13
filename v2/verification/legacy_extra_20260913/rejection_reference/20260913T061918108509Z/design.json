@@ -1,0 +1,1753 @@
+{
+  "version": "1.0.4",
+  "library": "project1",
+  "cells": {
+    "p1b_ota_legacy_r4": {
+      "ports": [
+        "VDD",
+        "VSS",
+        "VINP",
+        "VINN",
+        "VOUT",
+        "VBP"
+      ],
+      "instances": [
+        {
+          "name": "M8",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "VBP",
+            "G": "VBP",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "7.22u",
+            "fw": "7.22u",
+            "l": "0.8u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "M9",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "VBN",
+            "G": "VBP",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "7.22u",
+            "fw": "7.22u",
+            "l": "0.8u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "M10",
+          "lib": "sky130_fd_pr_main",
+          "cell": "nfet_01v8",
+          "terminals": {
+            "D": "VBN",
+            "G": "VBN",
+            "S": "VSS",
+            "B": "VSS"
+          },
+          "props": {
+            "w": "8.09u",
+            "fw": "8.09u",
+            "l": "0.8u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "M1",
+          "lib": "sky130_fd_pr_main",
+          "cell": "nfet_01v8",
+          "terminals": {
+            "D": "NMIR",
+            "G": "VINN",
+            "S": "TAIL",
+            "B": "VSS"
+          },
+          "props": {
+            "w": "16.84u",
+            "fw": "16.84u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "M2",
+          "lib": "sky130_fd_pr_main",
+          "cell": "nfet_01v8",
+          "terminals": {
+            "D": "VX",
+            "G": "VINP",
+            "S": "TAIL",
+            "B": "VSS"
+          },
+          "props": {
+            "w": "16.84u",
+            "fw": "16.84u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "M3A",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "NMIR",
+            "G": "NMIR",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "25u",
+            "fw": "25u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "M3B",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "NMIR",
+            "G": "NMIR",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "25u",
+            "fw": "25u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "M4A",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "VX",
+            "G": "NMIR",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "25u",
+            "fw": "25u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        },
+        {
+          "name": "M4B",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "VX",
+            "G": "NMIR",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "25u",
+            "fw": "25u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            0,
+            -10
+          ]
+        },
+        {
+          "name": "M5",
+          "lib": "sky130_fd_pr_main",
+          "cell": "nfet_01v8",
+          "terminals": {
+            "D": "TAIL",
+            "G": "VBN",
+            "S": "VSS",
+            "B": "VSS"
+          },
+          "props": {
+            "w": "25.88u",
+            "fw": "25.88u",
+            "l": "0.8u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            4,
+            -10
+          ]
+        },
+        {
+          "name": "M6",
+          "lib": "sky130_fd_pr_main",
+          "cell": "nfet_01v8",
+          "terminals": {
+            "D": "VOUT",
+            "G": "VX",
+            "S": "VSS",
+            "B": "VSS"
+          },
+          "props": {
+            "w": "8.84u",
+            "fw": "8.84u",
+            "l": "0.5u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            8,
+            -10
+          ]
+        },
+        {
+          "name": "M7A",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "VOUT",
+            "G": "VBP",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "36.1u",
+            "fw": "36.1u",
+            "l": "0.8u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            12,
+            -10
+          ]
+        },
+        {
+          "name": "M7B",
+          "lib": "sky130_fd_pr_main",
+          "cell": "pfet_01v8",
+          "terminals": {
+            "D": "VOUT",
+            "G": "VBP",
+            "S": "VDD",
+            "B": "VDD"
+          },
+          "props": {
+            "w": "36.1u",
+            "fw": "36.1u",
+            "l": "0.8u",
+            "fingers": "1",
+            "m": "1"
+          },
+          "xy": [
+            0,
+            -15
+          ]
+        },
+        {
+          "name": "RZ1",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VX",
+            "MINUS": "NCC"
+          },
+          "props": {
+            "r": "2k"
+          },
+          "xy": [
+            4,
+            -15
+          ]
+        },
+        {
+          "name": "CC1",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "NCC",
+            "MINUS": "VOUT"
+          },
+          "props": {
+            "c": "3p"
+          },
+          "xy": [
+            8,
+            -15
+          ]
+        }
+      ]
+    },
+    "p1b_tb_res": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "R0",
+          "lib": "sky130_fd_pr_main",
+          "cell": "res_high_po_0p35",
+          "terminals": {
+            "PLUS": "TEST",
+            "MINUS": "VSS",
+            "B": "VSS"
+          },
+          "props": {},
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VTEST",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "TEST",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VTEST",
+            "acm": "1"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        }
+      ]
+    },
+    "p1b_tb_mim": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "C0",
+          "lib": "sky130_fd_pr_main",
+          "cell": "cap_mim_m3__base",
+          "terminals": {
+            "PLUS": "TEST",
+            "MINUS": "VSS"
+          },
+          "props": {},
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VTEST",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "TEST",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "0.9",
+            "acm": "1"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        }
+      ]
+    },
+    "p1b_tb_rc": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "R0",
+          "lib": "sky130_fd_pr_main",
+          "cell": "res_high_po_0p35",
+          "terminals": {
+            "PLUS": "VIN",
+            "MINUS": "VOUT",
+            "B": "VSS"
+          },
+          "props": {},
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "C0",
+          "lib": "sky130_fd_pr_main",
+          "cell": "cap_mim_m3__base",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {},
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "VIN",
+          "lib": "analogLib",
+          "cell": "vpulse",
+          "terminals": {
+            "PLUS": "VIN",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "val0": "0",
+            "val1": "0.1",
+            "delay": "1n",
+            "rise": "1p",
+            "fall": "1p",
+            "width": "5n",
+            "period": "10n"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        }
+      ]
+    },
+    "p1b_tb_op": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VOUT",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_ac": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VINN",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0.5",
+            "acp": "0"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "VINN",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINN",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0.5",
+            "acp": "180"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_loop": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VINN",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "VTEST",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VTEST",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "1",
+            "acp": "0"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        },
+        {
+          "name": "LBREAK",
+          "lib": "analogLib",
+          "cell": "ind",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VINN"
+          },
+          "props": {
+            "l": "1G"
+          },
+          "xy": [
+            0,
+            -10
+          ]
+        },
+        {
+          "name": "CBREAK",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VTEST",
+            "MINUS": "VINN"
+          },
+          "props": {
+            "c": "1G"
+          },
+          "xy": [
+            4,
+            -10
+          ]
+        }
+      ]
+    },
+    "p1b_tb_step": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VOUT",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vpulse",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "val0": "0.8",
+            "val1": "1.2",
+            "delay": "1u",
+            "rise": "20n",
+            "fall": "20n",
+            "width": "2u",
+            "period": "5u"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_cm": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VINN",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "1"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "VINN",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINN",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "1"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_psrrp": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "1"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VINN",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "VINN",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINN",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_psrrm": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "1"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VINN",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "VINN",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINN",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_noise": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VINN",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "1"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        },
+        {
+          "name": "VINN",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINN",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            12,
+            -5
+          ]
+        }
+      ]
+    },
+    "p1b_tb_swing": {
+      "ports": [],
+      "instances": [
+        {
+          "name": "VSSSUP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VSS",
+            "MINUS": "0"
+          },
+          "props": {
+            "vdc": "0",
+            "acm": "0"
+          },
+          "xy": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "VDD",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VDD",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VDD",
+            "acm": "0"
+          },
+          "xy": [
+            4,
+            0
+          ]
+        },
+        {
+          "name": "IREF",
+          "lib": "analogLib",
+          "cell": "idc",
+          "terminals": {
+            "PLUS": "VBP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "idc": "10u"
+          },
+          "xy": [
+            8,
+            0
+          ]
+        },
+        {
+          "name": "RLOAD",
+          "lib": "analogLib",
+          "cell": "res",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "r": "100k"
+          },
+          "xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "name": "CLOAD",
+          "lib": "analogLib",
+          "cell": "cap",
+          "terminals": {
+            "PLUS": "VOUT",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "c": "CL"
+          },
+          "xy": [
+            0,
+            -5
+          ]
+        },
+        {
+          "name": "XOTA",
+          "lib": "project1",
+          "cell": "p1b_ota_legacy_r4",
+          "terminals": {
+            "VDD": "VDD",
+            "VSS": "VSS",
+            "VINP": "VINP",
+            "VINN": "VOUT",
+            "VOUT": "VOUT",
+            "VBP": "VBP"
+          },
+          "props": {},
+          "xy": [
+            4,
+            -5
+          ]
+        },
+        {
+          "name": "VINP",
+          "lib": "analogLib",
+          "cell": "vdc",
+          "terminals": {
+            "PLUS": "VINP",
+            "MINUS": "VSS"
+          },
+          "props": {
+            "vdc": "VCM",
+            "acm": "0"
+          },
+          "xy": [
+            8,
+            -5
+          ]
+        }
+      ]
+    }
+  }
+}

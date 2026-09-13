@@ -1,0 +1,26 @@
+* Actual SKY130 transistor frontend; ideal R/C passives, schematic only.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/results/advanced/noise_tt_1.8_27_g16_r1/frontend_pdk_snapshot.spice
+.temp 27
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+VIP SP 0 dc 0.9 ac 1
+BIN SN 0 v=1.8-v(sp)
+
+RSP SP IP 350
+RSN SN IN 350
+XPGA IP IN OP ON VDD 0 VCM sky130_v2_pga RF=10000 RG=275.0
+CLP OP 0 81.285p
+CLN ON 0 81.285p
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+
+op
+noise v(op,on) VIP dec 100 1 1g
+setplot noise1
+wrdata noise.dat onoise_spectrum inoise_spectrum
+quit
+.endc
+.end

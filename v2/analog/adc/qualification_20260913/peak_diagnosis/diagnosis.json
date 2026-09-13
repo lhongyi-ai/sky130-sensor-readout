@@ -1,0 +1,144 @@
+{
+  "same_physical_nodes": [
+    "XADC.TP",
+    "XADC.TN"
+  ],
+  "difference_definition": "V(XADC.TP) - V(XADC.TN), same node names and same frozen core in both runs",
+  "centre_s": 1.352664021822e-05,
+  "window_s": [
+    1.351664021822e-05,
+    1.353664021822e-05
+  ],
+  "runs": [
+    {
+      "profile": "baseline",
+      "summary_sha256": "4bd536b205c3da519fddf39d07cbfce5031ef5119a774c76163e22ef85035410",
+      "netlist_sha256": "2dc95db80d2f5829696a99fddcebdfc316ee6c7cb8ad4bc5f407531ec4f3b1f8",
+      "waveform_sha256": "3efaa8581dd655a095a0c149d0367e58fc4d43b8e0f7ec26fedb9bcf28a5eae4",
+      "original_points_in_window": 439,
+      "local_step_min_s": 1.7973000000716562e-13,
+      "local_step_max_s": 5.95290719999293e-10,
+      "values_at_worst_common_time_v": {
+        "xadc.tp": 0.8970127506652238,
+        "xadc.tn": 0.9447929422444428,
+        "sample": 0.0,
+        "top_sample": -0.0010241828001408468,
+        "acq": 0.00048148949732363083,
+        "conv": 1.7174105653610057,
+        "evaluate": 0.0,
+        "trial11": 1.8,
+        "rp": 1.0999920809833512,
+        "rn": 0.7000064074454444,
+        "vcm": 0.9000000099200604
+      },
+      "edge_window_s": [
+        1.349e-05,
+        1.356e-05
+      ],
+      "physical_and_digital_edges": {
+        "sample": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": [
+            1.3503500000001071e-05
+          ]
+        },
+        "top_sample": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": [
+            1.3503851498227655e-05
+          ]
+        },
+        "acq": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": [
+            1.3514886025623614e-05
+          ]
+        },
+        "conv": {
+          "rising_50percent_s": [
+            1.3526543698579204e-05
+          ],
+          "falling_50percent_s": []
+        },
+        "evaluate": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": []
+        },
+        "trial11": {
+          "rising_50percent_s": [
+            1.3503500000001071e-05
+          ],
+          "falling_50percent_s": []
+        }
+      }
+    },
+    {
+      "profile": "strict",
+      "summary_sha256": "dcd6ef179ececca1c18da2370b95559f6c3a5a05bdb337bb96b448d88982b3e8",
+      "netlist_sha256": "36066fd19fb2e85288b92175d23fc1cb6f9b490f4ff39348af603602dec588e4",
+      "waveform_sha256": "8c641983dd407c52e5a2e418de00d4023027455b293aa677479c6de4d6560d20",
+      "original_points_in_window": 1061,
+      "local_step_min_s": 2.8609999772380955e-14,
+      "local_step_max_s": 2.9761217999877863e-10,
+      "values_at_worst_common_time_v": {
+        "xadc.tp": 0.9244713264289,
+        "xadc.tn": 0.9238581742099,
+        "sample": 0.0,
+        "top_sample": -0.001268665892812,
+        "acq": 0.0002677557306571,
+        "conv": 1.710788082403,
+        "evaluate": 0.0,
+        "trial11": 1.8,
+        "rp": 1.099993071784,
+        "rn": 0.700005431428,
+        "vcm": 0.9000000098779
+      },
+      "edge_window_s": [
+        1.349e-05,
+        1.356e-05
+      ],
+      "physical_and_digital_edges": {
+        "sample": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": [
+            1.3503499999999485e-05
+          ]
+        },
+        "top_sample": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": [
+            1.350385151194603e-05
+          ]
+        },
+        "acq": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": [
+            1.3514888368437338e-05
+          ]
+        },
+        "conv": {
+          "rising_50percent_s": [
+            1.3526547549232767e-05
+          ],
+          "falling_50percent_s": []
+        },
+        "evaluate": {
+          "rising_50percent_s": [],
+          "falling_50percent_s": []
+        },
+        "trial11": {
+          "rising_50percent_s": [
+            1.3503499999999485e-05
+          ],
+          "falling_50percent_s": []
+        }
+      }
+    }
+  ],
+  "interpretation": "Strict finite-waveform comparison fails. Local accepted grids and phase crossings are diagnostics; no cause has been isolated and no waveform-error waiver is applied.",
+  "output_sha256": {
+    "baseline_original_points.csv": "c5c3f68eec6f72dc5b4b48c8772b4bcc208871f9b403e40bfa644c6c176ad556",
+    "strict_original_points.csv": "3d51d9c30f846c6a121c133fd050e562ced02c402965f9b82858ec57d7737b7b"
+  },
+  "runner_sha256": "48a6c2974e9a078040e955494b5d46f9c57d4791adb125fb1cad0d04ad54ff21"
+}

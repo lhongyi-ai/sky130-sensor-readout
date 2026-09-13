@@ -1,0 +1,89 @@
+{
+  "status": "SMALL_TRANSISTOR_SUBSET_COMPLETE_FULL_CODE_NOT_COMPLETE",
+  "generated_utc": "2026-09-10T06:30:55.344481+00:00",
+  "candidate": "20260908T045601001817Z composite, no analog or core RTL changes",
+  "retained_points": [
+    {
+      "point_id": 0,
+      "input_v": 0.123,
+      "raw_code": 2677,
+      "valid_time_s": 2.100349999999587e-05,
+      "bus_code": 2677,
+      "expected_ideal_code": 2677,
+      "raw_error_lsb": 0
+    },
+    {
+      "point_id": 1,
+      "input_v": -4.8828125e-05,
+      "raw_code": 2047,
+      "valid_time_s": 4.100350000000245e-05,
+      "bus_code": 2047,
+      "expected_ideal_code": 2047,
+      "raw_error_lsb": 0
+    },
+    {
+      "point_id": 2,
+      "input_v": 4.8828125e-05,
+      "raw_code": 2048,
+      "valid_time_s": 6.1003500000000684e-05,
+      "bus_code": 2048,
+      "expected_ideal_code": 2048,
+      "raw_error_lsb": 0
+    }
+  ],
+  "all_conversion_codes_including_discarded_warmups": [
+    2677,
+    2677,
+    2047,
+    2047,
+    2048,
+    2048
+  ],
+  "continuous_conversion_count": 6,
+  "same_process_input_changes": true,
+  "build_once_per_campaign": true,
+  "software_tests_returncode": 0,
+  "coverage_status": "SMOKE_POINTS_COMPLETE_NOT_LINEARITY",
+  "complete_adc_qualified": false,
+  "full_chip_qualified": false,
+  "all_non_cadence_work_complete": false,
+  "measured_build_seconds": 0.5923867259989493,
+  "measured_six_conversion_process_seconds": 210.51505466700473,
+  "measured_separate_load_op_process_seconds": 2.8362336110003525,
+  "estimated_transient_and_output_seconds": 207.67882105600438,
+  "projected_cost": [
+    {
+      "stage": "centres",
+      "point_count": 4096,
+      "batch_size": 8,
+      "warmup_conversions_per_point": 1,
+      "history_replay_conversions": 511,
+      "total_conversions": 8703,
+      "estimated_wall_days_one_worker_one_pvt": 3.503366596496441,
+      "estimate_only_not_measured_coverage": true
+    },
+    {
+      "stage": "ramp32",
+      "point_count": 131073,
+      "batch_size": 8,
+      "warmup_conversions_per_point": 1,
+      "history_replay_conversions": 16384,
+      "total_conversions": 278530,
+      "estimated_wall_days_one_worker_one_pvt": 112.12117227883236,
+      "estimate_only_not_measured_coverage": true
+    }
+  ],
+  "evidence": {
+    "campaigns/continuous_three_point/batches/000000/attempt_001/summary.json": "a73950550db90b22ebe59a3adc1c403eb826f14fd4530bfd3710962998680751",
+    "campaigns/continuous_three_point/op_profile_20260910T063012178492Z/summary.json": "81012a6c0b07e26fd3950ea4ded06c77ac923dbdea87e0faaf9871bbb4c2841f",
+    "campaigns/continuous_three_point/plan.json": "1637ca53d6af9c12be9a1f825fd1a7100da54545291b25841e71be81c60ebfe6",
+    "campaigns/continuous_three_point/runtime.json": "d836e3a5c3d761d3dcf14d036edbe40829655770e05719ccd6a01f3c7ff16464"
+  },
+  "limitations": [
+    "Only three retained input points and six sequential conversions at TT 1.8 V 27 C.",
+    "Model-load/OP measured separately; transient portion inferred by subtraction, not internally instrumented.",
+    "Full sweep wall estimates assume this tiny sample's throughput; not a guarantee and may change greatly with input/corner/numerical settings.",
+    "No full-code INL/DNL, no device-noise SNDR, no mismatch, no ADC layout or PEX.",
+    "The first OP profiling attempt failed to print unsaved vectors; that fixture error is retained and the next attempt corrects only the save list."
+  ]
+}

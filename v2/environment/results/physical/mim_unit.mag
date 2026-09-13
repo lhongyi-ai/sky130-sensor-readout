@@ -1,0 +1,37 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1788834407
+<< checkpaint >>
+rect -1746 -1600 1892 1600
+<< metal3 >>
+rect -486 312 486 340
+rect -486 -312 402 312
+rect 466 -312 486 312
+rect -486 -340 486 -312
+<< via3 >>
+rect 402 -312 466 312
+<< mimcap >>
+rect -446 260 154 300
+rect -446 -260 -406 260
+rect 114 -260 154 260
+rect -446 -300 154 -260
+<< mimcapcontact >>
+rect -406 -260 114 260
+<< metal4 >>
+rect 386 312 482 328
+rect -407 260 115 261
+rect -407 -260 -406 260
+rect 114 -260 115 260
+rect -407 -261 115 -260
+rect 386 -312 402 312
+rect 466 -312 482 312
+rect 386 -328 482 -312
+<< labels >>
+rlabel via3 434 0 434 0 0 C2
+port 1 nsew
+rlabel mimcapcontact -146 0 -146 0 0 C1
+port 2 nsew
+<< properties >>
+string FIXED_BBOX -486 -340 194 340
+<< end >>

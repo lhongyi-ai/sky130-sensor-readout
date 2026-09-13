@@ -1,0 +1,26 @@
+* Exploratory nominal gain-4 first prototype; unqualified targets.
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include frontend_core.spice
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+VIP SP 0 dc 0.9 ac 0.5
+VIN SN 0 dc 0.9 ac -0.5
+RSP SP IP 350
+RSN SN IN 350
+XPGA IP IN OP ON VDD 0 VCM sky130_v2_pga RF=40k
+CLP OP 0 5p
+CLN ON 0 5p
+.temp 27
+.control
+set wr_singlescale
+set wr_vecnames
+op
+print v(op) v(on) v(xpga.xamp.bn) v(xpga.xamp.bp) v(xpga.xamp.tail) v(xpga.xamp.xp) v(xpga.xamp.cmctl) i(vdd)
+ac dec 40 1 1g
+let vdiff=v(op)-v(on)
+let gain=db(vdiff)
+let phase=180/pi*cph(vdiff)
+wrdata probe_ac.dat gain phase
+quit
+.endc
+.end

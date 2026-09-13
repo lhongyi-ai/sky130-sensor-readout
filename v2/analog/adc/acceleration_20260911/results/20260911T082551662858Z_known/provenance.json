@@ -1,0 +1,79 @@
+{
+  "mode": "known",
+  "reference_directory": "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed",
+  "reference_sha256": {
+    "adc.spice": "6ff666b4a9d0b43df00967152126dea203aa976f9dae35578dcd5a04faa98cfe",
+    "waveform.dat": "94781ba52d17e220f35138f8222c7935beee1b499d03bf9a73d2c26b465c4862",
+    "summary.json": "cf2502d4f4b86304607a241977efa338d320a18cae61f75bfff39cb0fbd6b23b",
+    "bridge_certificate.json": "e2e21893253f4e1f783879f7a6348c25b4331864872a2eaf10595f0ec6a1a642",
+    ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1"
+  },
+  "runner_sha256": "a97b7e0ab7bdaa51247504c42a2b2d0faed56d2971ff44dc08b30f8f882c3757",
+  "removed_testbench_bridge_lines": [
+    "Ainputs [clk rst start gain_sel1 gain_sel0 decision] [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] logic_in",
+    ".model logic_in adc_bridge(in_low=0.45 in_high=1.35)",
+    "Asar [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] null sar_model",
+    ".model sar_model d_cosim simulation=\"/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/cosim_controller_fixed.so\"",
+    "Aoutputs [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] [ready busy valid data11 data10 data9 data8 data7 data6 data5 data4 data3 data2 data1 data0 dgain1 dgain0 gain1 gain0 sample trial11 trial10 trial9 trial8 trial7 trial6 trial5 trial4 trial3 trial2 trial1 trial0 evaluate] logic_out",
+    ".model logic_out dac_bridge(out_low=0 out_high=1.8 out_undef=0.9 t_rise=1n t_fall=1n)"
+  ],
+  "preserved_real_blocks": [
+    "sensor_phases",
+    "sensor_adc_candidate",
+    "CDAC",
+    "sampling/reference switches",
+    "preamp",
+    "dynamic comparator"
+  ],
+  "expected_codes": [
+    2677,
+    2677,
+    2047,
+    2047,
+    2048,
+    2048
+  ],
+  "predicted_inputs_v": null,
+  "source_reconstruction_gate": {
+    "status": "PASS",
+    "threshold_v": 9.765625000000002e-06,
+    "maximum_v": 1.7264074392286943e-08,
+    "per_output_max_v": {
+      "ready": 1.6866720020658477e-08,
+      "busy": 1.686651995846944e-08,
+      "valid": 1.2645420044421485e-08,
+      "data11": 1.2645420044421485e-08,
+      "data10": 1.2645219982232447e-08,
+      "data9": 1.2645219982232447e-08,
+      "data8": 1.2645219982232447e-08,
+      "data7": 1.2645219982232447e-08,
+      "data6": 1.2645219982232447e-08,
+      "data5": 1.2645219982232447e-08,
+      "data4": 1.2645219982232447e-08,
+      "data3": 1.2645219982232447e-08,
+      "data2": 1.2645219982232447e-08,
+      "data1": 1.2645219982232447e-08,
+      "data0": 1.2645219982232447e-08,
+      "dgain1": 0.0,
+      "dgain0": 0.0,
+      "gain1": 0.0,
+      "gain0": 0.0,
+      "sample": 1.429226936799921e-08,
+      "trial11": 1.4292159315407171e-08,
+      "trial10": 1.565786966750693e-08,
+      "trial9": 1.565821981797111e-08,
+      "trial8": 1.651049252870962e-08,
+      "trial7": 1.6381923595432113e-08,
+      "trial6": 1.7260521234518933e-08,
+      "trial5": 1.7260421314446717e-08,
+      "trial4": 1.603672949990198e-08,
+      "trial3": 1.6181893602862374e-08,
+      "trial2": 1.5501188554978285e-08,
+      "trial1": 1.686651995846944e-08,
+      "trial0": 1.6866720020658477e-08,
+      "evaluate": 1.7264074392286943e-08
+    },
+    "scope": "Every accepted time point in the fixed-shim reference, before analog rerun"
+  },
+  "complete_adc_qualified": false
+}

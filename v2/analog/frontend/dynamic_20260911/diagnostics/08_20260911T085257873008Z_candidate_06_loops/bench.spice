@@ -1,0 +1,175 @@
+* Formal loop injection: three isolated measurement copies per gain
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include measurement_injections.spice
+.include adc_blocks_snapshot.spice
+.include sampling_switch_snapshot.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 method=gear maxord=2 klu
+VDD VDD 0 1.8
+VCM VCM 0 .9
+VINP VINP 0 .9
+VINN VINN 0 .9
+VACQ ACQ 0 1.8
+VACQB ACQB 0 0
+VSEL0_1 SEL0_1 0 0
+VSEL1_1 SEL1_1 0 0
+RSP_g1_dm VINP IP_g1_dm 350
+RSN_g1_dm VINN IN_g1_dm 350
+XPGA_g1_dm IP_g1_dm IN_g1_dm OP_g1_dm ON_g1_dm VDD 0 VCM SEL0_1 SEL1_1 sky130_v2_switchable_pga DMAC=1 NCMAC=0 OCMAC=0
+XRIP_g1_dm OP_g1_dm FP_g1_dm 0 rd_hr R=1500
+XRIN_g1_dm ON_g1_dm FN_g1_dm 0 rd_hr R=1500
+XCFP_g1_dm FP_g1_dm 0 rd_c4p
+XCFN_g1_dm FN_g1_dm 0 rd_c4p
+XTGP_g1_dm FP_g1_dm HP_g1_dm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g1_dm FN_g1_dm HN_g1_dm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g1_dm HP_g1_dm VCM adc_mim_bank COUNT=4096
+XCN_g1_dm HN_g1_dm VCM adc_mim_bank COUNT=4096
+RLEAKP_g1_dm HP_g1_dm VCM 1g
+RLEAKN_g1_dm HN_g1_dm VCM 1g
+RSP_g1_stage1_cm VINP IP_g1_stage1_cm 350
+RSN_g1_stage1_cm VINN IN_g1_stage1_cm 350
+XPGA_g1_stage1_cm IP_g1_stage1_cm IN_g1_stage1_cm OP_g1_stage1_cm ON_g1_stage1_cm VDD 0 VCM SEL0_1 SEL1_1 sky130_v2_switchable_pga DMAC=0 NCMAC=1 OCMAC=0
+XRIP_g1_stage1_cm OP_g1_stage1_cm FP_g1_stage1_cm 0 rd_hr R=1500
+XRIN_g1_stage1_cm ON_g1_stage1_cm FN_g1_stage1_cm 0 rd_hr R=1500
+XCFP_g1_stage1_cm FP_g1_stage1_cm 0 rd_c4p
+XCFN_g1_stage1_cm FN_g1_stage1_cm 0 rd_c4p
+XTGP_g1_stage1_cm FP_g1_stage1_cm HP_g1_stage1_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g1_stage1_cm FN_g1_stage1_cm HN_g1_stage1_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g1_stage1_cm HP_g1_stage1_cm VCM adc_mim_bank COUNT=4096
+XCN_g1_stage1_cm HN_g1_stage1_cm VCM adc_mim_bank COUNT=4096
+RLEAKP_g1_stage1_cm HP_g1_stage1_cm VCM 1g
+RLEAKN_g1_stage1_cm HN_g1_stage1_cm VCM 1g
+RSP_g1_output_cm VINP IP_g1_output_cm 350
+RSN_g1_output_cm VINN IN_g1_output_cm 350
+XPGA_g1_output_cm IP_g1_output_cm IN_g1_output_cm OP_g1_output_cm ON_g1_output_cm VDD 0 VCM SEL0_1 SEL1_1 sky130_v2_switchable_pga DMAC=0 NCMAC=0 OCMAC=1
+XRIP_g1_output_cm OP_g1_output_cm FP_g1_output_cm 0 rd_hr R=1500
+XRIN_g1_output_cm ON_g1_output_cm FN_g1_output_cm 0 rd_hr R=1500
+XCFP_g1_output_cm FP_g1_output_cm 0 rd_c4p
+XCFN_g1_output_cm FN_g1_output_cm 0 rd_c4p
+XTGP_g1_output_cm FP_g1_output_cm HP_g1_output_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g1_output_cm FN_g1_output_cm HN_g1_output_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g1_output_cm HP_g1_output_cm VCM adc_mim_bank COUNT=4096
+XCN_g1_output_cm HN_g1_output_cm VCM adc_mim_bank COUNT=4096
+RLEAKP_g1_output_cm HP_g1_output_cm VCM 1g
+RLEAKN_g1_output_cm HN_g1_output_cm VCM 1g
+VSEL0_4 SEL0_4 0 1.8
+VSEL1_4 SEL1_4 0 0
+RSP_g4_dm VINP IP_g4_dm 350
+RSN_g4_dm VINN IN_g4_dm 350
+XPGA_g4_dm IP_g4_dm IN_g4_dm OP_g4_dm ON_g4_dm VDD 0 VCM SEL0_4 SEL1_4 sky130_v2_switchable_pga DMAC=1 NCMAC=0 OCMAC=0
+XRIP_g4_dm OP_g4_dm FP_g4_dm 0 rd_hr R=1500
+XRIN_g4_dm ON_g4_dm FN_g4_dm 0 rd_hr R=1500
+XCFP_g4_dm FP_g4_dm 0 rd_c4p
+XCFN_g4_dm FN_g4_dm 0 rd_c4p
+XTGP_g4_dm FP_g4_dm HP_g4_dm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g4_dm FN_g4_dm HN_g4_dm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g4_dm HP_g4_dm VCM adc_mim_bank COUNT=4096
+XCN_g4_dm HN_g4_dm VCM adc_mim_bank COUNT=4096
+RLEAKP_g4_dm HP_g4_dm VCM 1g
+RLEAKN_g4_dm HN_g4_dm VCM 1g
+RSP_g4_stage1_cm VINP IP_g4_stage1_cm 350
+RSN_g4_stage1_cm VINN IN_g4_stage1_cm 350
+XPGA_g4_stage1_cm IP_g4_stage1_cm IN_g4_stage1_cm OP_g4_stage1_cm ON_g4_stage1_cm VDD 0 VCM SEL0_4 SEL1_4 sky130_v2_switchable_pga DMAC=0 NCMAC=1 OCMAC=0
+XRIP_g4_stage1_cm OP_g4_stage1_cm FP_g4_stage1_cm 0 rd_hr R=1500
+XRIN_g4_stage1_cm ON_g4_stage1_cm FN_g4_stage1_cm 0 rd_hr R=1500
+XCFP_g4_stage1_cm FP_g4_stage1_cm 0 rd_c4p
+XCFN_g4_stage1_cm FN_g4_stage1_cm 0 rd_c4p
+XTGP_g4_stage1_cm FP_g4_stage1_cm HP_g4_stage1_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g4_stage1_cm FN_g4_stage1_cm HN_g4_stage1_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g4_stage1_cm HP_g4_stage1_cm VCM adc_mim_bank COUNT=4096
+XCN_g4_stage1_cm HN_g4_stage1_cm VCM adc_mim_bank COUNT=4096
+RLEAKP_g4_stage1_cm HP_g4_stage1_cm VCM 1g
+RLEAKN_g4_stage1_cm HN_g4_stage1_cm VCM 1g
+RSP_g4_output_cm VINP IP_g4_output_cm 350
+RSN_g4_output_cm VINN IN_g4_output_cm 350
+XPGA_g4_output_cm IP_g4_output_cm IN_g4_output_cm OP_g4_output_cm ON_g4_output_cm VDD 0 VCM SEL0_4 SEL1_4 sky130_v2_switchable_pga DMAC=0 NCMAC=0 OCMAC=1
+XRIP_g4_output_cm OP_g4_output_cm FP_g4_output_cm 0 rd_hr R=1500
+XRIN_g4_output_cm ON_g4_output_cm FN_g4_output_cm 0 rd_hr R=1500
+XCFP_g4_output_cm FP_g4_output_cm 0 rd_c4p
+XCFN_g4_output_cm FN_g4_output_cm 0 rd_c4p
+XTGP_g4_output_cm FP_g4_output_cm HP_g4_output_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g4_output_cm FN_g4_output_cm HN_g4_output_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g4_output_cm HP_g4_output_cm VCM adc_mim_bank COUNT=4096
+XCN_g4_output_cm HN_g4_output_cm VCM adc_mim_bank COUNT=4096
+RLEAKP_g4_output_cm HP_g4_output_cm VCM 1g
+RLEAKN_g4_output_cm HN_g4_output_cm VCM 1g
+VSEL0_16 SEL0_16 0 0
+VSEL1_16 SEL1_16 0 1.8
+RSP_g16_dm VINP IP_g16_dm 350
+RSN_g16_dm VINN IN_g16_dm 350
+XPGA_g16_dm IP_g16_dm IN_g16_dm OP_g16_dm ON_g16_dm VDD 0 VCM SEL0_16 SEL1_16 sky130_v2_switchable_pga DMAC=1 NCMAC=0 OCMAC=0
+XRIP_g16_dm OP_g16_dm FP_g16_dm 0 rd_hr R=1500
+XRIN_g16_dm ON_g16_dm FN_g16_dm 0 rd_hr R=1500
+XCFP_g16_dm FP_g16_dm 0 rd_c4p
+XCFN_g16_dm FN_g16_dm 0 rd_c4p
+XTGP_g16_dm FP_g16_dm HP_g16_dm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g16_dm FN_g16_dm HN_g16_dm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g16_dm HP_g16_dm VCM adc_mim_bank COUNT=4096
+XCN_g16_dm HN_g16_dm VCM adc_mim_bank COUNT=4096
+RLEAKP_g16_dm HP_g16_dm VCM 1g
+RLEAKN_g16_dm HN_g16_dm VCM 1g
+RSP_g16_stage1_cm VINP IP_g16_stage1_cm 350
+RSN_g16_stage1_cm VINN IN_g16_stage1_cm 350
+XPGA_g16_stage1_cm IP_g16_stage1_cm IN_g16_stage1_cm OP_g16_stage1_cm ON_g16_stage1_cm VDD 0 VCM SEL0_16 SEL1_16 sky130_v2_switchable_pga DMAC=0 NCMAC=1 OCMAC=0
+XRIP_g16_stage1_cm OP_g16_stage1_cm FP_g16_stage1_cm 0 rd_hr R=1500
+XRIN_g16_stage1_cm ON_g16_stage1_cm FN_g16_stage1_cm 0 rd_hr R=1500
+XCFP_g16_stage1_cm FP_g16_stage1_cm 0 rd_c4p
+XCFN_g16_stage1_cm FN_g16_stage1_cm 0 rd_c4p
+XTGP_g16_stage1_cm FP_g16_stage1_cm HP_g16_stage1_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g16_stage1_cm FN_g16_stage1_cm HN_g16_stage1_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g16_stage1_cm HP_g16_stage1_cm VCM adc_mim_bank COUNT=4096
+XCN_g16_stage1_cm HN_g16_stage1_cm VCM adc_mim_bank COUNT=4096
+RLEAKP_g16_stage1_cm HP_g16_stage1_cm VCM 1g
+RLEAKN_g16_stage1_cm HN_g16_stage1_cm VCM 1g
+RSP_g16_output_cm VINP IP_g16_output_cm 350
+RSN_g16_output_cm VINN IN_g16_output_cm 350
+XPGA_g16_output_cm IP_g16_output_cm IN_g16_output_cm OP_g16_output_cm ON_g16_output_cm VDD 0 VCM SEL0_16 SEL1_16 sky130_v2_switchable_pga DMAC=0 NCMAC=0 OCMAC=1
+XRIP_g16_output_cm OP_g16_output_cm FP_g16_output_cm 0 rd_hr R=1500
+XRIN_g16_output_cm ON_g16_output_cm FN_g16_output_cm 0 rd_hr R=1500
+XCFP_g16_output_cm FP_g16_output_cm 0 rd_c4p
+XCFN_g16_output_cm FN_g16_output_cm 0 rd_c4p
+XTGP_g16_output_cm FP_g16_output_cm HP_g16_output_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN_g16_output_cm FN_g16_output_cm HN_g16_output_cm ACQ ACQB VDD 0 rd_sampling_tgate
+XCP_g16_output_cm HP_g16_output_cm VCM adc_mim_bank COUNT=4096
+XCN_g16_output_cm HN_g16_output_cm VCM adc_mim_bank COUNT=4096
+RLEAKP_g16_output_cm HP_g16_output_cm VCM 1g
+RLEAKN_g16_output_cm HN_g16_output_cm VCM 1g
+.control
+set noaskquit
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+op
+ac dec 100 1 1g
+let g1_dm=-(v(xpga_g1_dm.sumpos)-v(xpga_g1_dm.sumneg))/(v(xpga_g1_dm.i_sumpos)-v(xpga_g1_dm.i_sumneg))
+let g1_dm_r=real(g1_dm)
+let g1_dm_i=imag(g1_dm)
+let g1_stage1_cm=-v(xpga_g1_stage1_cm.xota.ncm)/v(xpga_g1_stage1_cm.xota.ncm_gate)
+let g1_stage1_cm_r=real(g1_stage1_cm)
+let g1_stage1_cm_i=imag(g1_stage1_cm)
+let g1_output_cm=-v(xpga_g1_output_cm.xota.cms)/v(xpga_g1_output_cm.xota.cms_error)
+let g1_output_cm_r=real(g1_output_cm)
+let g1_output_cm_i=imag(g1_output_cm)
+let g4_dm=-(v(xpga_g4_dm.sumpos)-v(xpga_g4_dm.sumneg))/(v(xpga_g4_dm.i_sumpos)-v(xpga_g4_dm.i_sumneg))
+let g4_dm_r=real(g4_dm)
+let g4_dm_i=imag(g4_dm)
+let g4_stage1_cm=-v(xpga_g4_stage1_cm.xota.ncm)/v(xpga_g4_stage1_cm.xota.ncm_gate)
+let g4_stage1_cm_r=real(g4_stage1_cm)
+let g4_stage1_cm_i=imag(g4_stage1_cm)
+let g4_output_cm=-v(xpga_g4_output_cm.xota.cms)/v(xpga_g4_output_cm.xota.cms_error)
+let g4_output_cm_r=real(g4_output_cm)
+let g4_output_cm_i=imag(g4_output_cm)
+let g16_dm=-(v(xpga_g16_dm.sumpos)-v(xpga_g16_dm.sumneg))/(v(xpga_g16_dm.i_sumpos)-v(xpga_g16_dm.i_sumneg))
+let g16_dm_r=real(g16_dm)
+let g16_dm_i=imag(g16_dm)
+let g16_stage1_cm=-v(xpga_g16_stage1_cm.xota.ncm)/v(xpga_g16_stage1_cm.xota.ncm_gate)
+let g16_stage1_cm_r=real(g16_stage1_cm)
+let g16_stage1_cm_i=imag(g16_stage1_cm)
+let g16_output_cm=-v(xpga_g16_output_cm.xota.cms)/v(xpga_g16_output_cm.xota.cms_error)
+let g16_output_cm_r=real(g16_output_cm)
+let g16_output_cm_i=imag(g16_output_cm)
+wrdata loops.dat g1_dm_r g1_dm_i g1_stage1_cm_r g1_stage1_cm_i g1_output_cm_r g1_output_cm_i g4_dm_r g4_dm_i g4_stage1_cm_r g4_stage1_cm_i g4_output_cm_r g4_output_cm_i g16_dm_r g16_dm_i g16_stage1_cm_r g16_stage1_cm_i g16_output_cm_r g16_output_cm_i
+quit
+.endc
+.end

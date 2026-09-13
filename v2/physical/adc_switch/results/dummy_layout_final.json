@@ -1,0 +1,79 @@
+{
+  "status": "passed_physical_checks_only",
+  "run_tag": "dummy_layout_final",
+  "suite": "physical_only",
+  "evidence_level": "standalone_dual_lvt_switch_drc_lvs_flattened_rc",
+  "cadence_used": false,
+  "whole_adc_validated": false,
+  "candidate_model": "adc_tgate_dual_lvt_dummy",
+  "dummy_ratio": 0.5,
+  "candidate_nfet": {
+    "device": "sky130_fd_pr__nfet_01v8_lvt",
+    "w_um": 4.0,
+    "l_um": 0.15
+  },
+  "candidate_pfet": {
+    "device": "sky130_fd_pr__pfet_01v8_lvt",
+    "w_um": 8.0,
+    "l_um": 0.35
+  },
+  "magic_drc_count": 0,
+  "netgen_lvs": "unique_match",
+  "extracted_resistors": 95,
+  "extracted_capacitors": 51,
+  "bbox_um": [
+    0.25,
+    -0.095,
+    16.25,
+    17.2
+  ],
+  "bbox_area_um2": 276.71999999999997,
+  "extraction_corner": "Magic nominal RC; transistor PVT is swept, not RC corners",
+  "case_pairs": 0,
+  "transient_runs": 0,
+  "failed_view_cases": 0,
+  "quarter_lsb_v": 4.8828125e-05,
+  "load_f": 8.128512e-11,
+  "hold_test": null,
+  "limitations": [
+    "Standalone switch, not top-level extracted ADC or full sensor readout.",
+    "No mismatch/noise/CDAC reference switching, and ideal clock/supply drive.",
+    "Per-leg quarter-LSB checks are not a differential linearity or SNDR result.",
+    "Open-source DRC/LVS is not a foundry production signoff."
+  ],
+  "results": [],
+  "candidate_netlist_sha256": "4e7450ebec4c78983b58f7dc367849eda1d4f46bcc4d2d631edd356fdadc11dd",
+  "source_sha256": {
+    "v2/physical/adc_switch/physical_candidate.py": "c106d52581a114fbd71c409938206db0da2483a68f3b482d7efd872c2b649817",
+    "v2/physical/adc_switch/candidates/adc_tgate_dual_lvt_dummy.spice": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734",
+    "v2/physical/adc_switch/generate_dummy_layout.tcl": "6a6546dc671255e07cf99da63b65373813034b0468a648fc856160da03b7277b",
+    "v2/physical/adc_switch/extract_rc.tcl": "a7909d8f68873212be51e0f11f2f1d2e94745462f3068f035f874ee6ee49db84"
+  },
+  "artifact_sha256": {
+    "adc_tgate_flat.cap.spice": "f94c649f4f2f0b3dc0117ba8a6889adfc333a447625c1fccc341989a7f1dbaf9",
+    "adc_tgate_flat.ext": "63990aea20a133b684ec05d0f4d1a1a0bfe3e8da4dd7c08c8477e0dc9b60e6b5",
+    "adc_tgate_flat.lvs.spice": "aadfb88b0d3e5221af8d5a3b4f7dd71da1a625064188e3d6fdffc839079973d5",
+    "adc_tgate_flat.mag": "044d22fd2c6b903603b17ee05db9413430039fea97a75e37e774863611b8d949",
+    "adc_tgate_flat.rc.spice": "7497a012a94c1e48c1c7de7d13f61bfa4c709aec709d52faeafb06bf1867e2d5",
+    "adc_tgate_flat.res.ext": "e3e3139e9945808c5f694831bc18a7b588ce417786ab0f619d0ff36e60be8889",
+    "adc_tgate_layout.ext": "b5dffbd06c26e6d584b6d59fddec598c06fad10dff33a9186362241640f050b4",
+    "adc_tgate_layout.gds": "5e26038355c6f8ca3d10542af81bc53ca660998ca036aef55f5384585bb263e2",
+    "adc_tgate_layout.lvs.spice": "53a57b19cf8083afce36c64ca38b77fe57841f02b422827a4cd14217f90d2c37",
+    "adc_tgate_layout.mag": "86764a7ebfd0437267ab13842c96f468128bfab6a6e1ed72cf6aff66e31c4044",
+    "candidate.spice": "4e7450ebec4c78983b58f7dc367849eda1d4f46bcc4d2d631edd356fdadc11dd",
+    "layout.log": "fab5db6e644a29dcac7ec3c77b1c2828d40d3efb5fa0c070190e76084583e8b1",
+    "lvs.json": "34d776284de7a7ba493a28917542430a6ee9d136ceb79996478f3e6fabfb2433",
+    "lvs.log": "9e3fec6b17a93469490ed7c299992d1fa0ece76010dadec1272304df606cc8d1",
+    "lvs.rpt": "0b866e706319939d19e8ba6dff185217a31c1f889344b2692eadcc4e8069adb5",
+    "rc_extraction.log": "2883cf88f9b63ac2a7f9ad3aa37f8d05a5e47521935dea12b17d493b8adef7a6",
+    "reference.spice": "e69a66eda35d807764fe1f4ec2b6cbfbf672469ce0982441ca44e53a07813d61",
+    "tg_nfet_dummy.ext": "8814a21b6b0caf78d555ea8df97a8d43d64ebb64d6159c9dd583190ecce44493",
+    "tg_nfet_dummy.mag": "6b03bc8a436d6092c57d3889a1fc71230befe82b2ba6907831da151b50d48439",
+    "tg_nfet_lvt.ext": "2b7cd1b9d75db62e3695beea881954da499981825d1c99f5e4fdb046cebc561f",
+    "tg_nfet_lvt.mag": "998a3700cfca9c4b74bab7bdf96d1a08708ee6f65c20b36960aa2a9d3ed75ca6",
+    "tg_pfet_dummy.ext": "434ecbb35995656e009607e02978c0010f5f78c968ad323b40d619478c4c7959",
+    "tg_pfet_dummy.mag": "a9f778fd49f7dc3bd2dc8441dd2fe11c0a02c738cc87b9b1c255287ba556bc8c",
+    "tg_pfet_lvt.ext": "e8557179f9c31089b72e62e1eb7f9bfb0fa23759f26174591ace19c59009e0d5",
+    "tg_pfet_lvt.mag": "b0982ad46700430e922da76735a227d9ab0b9634e9393e755b8efcf1c58a84f1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "evidence_level": "digital_rtl_with_ideal_held_code_comparator",
+  "analog_adc_validated": false,
+  "physical_timing_validated": false,
+  "stages": [
+    {
+      "name": "verilog_2005_design_compile",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "name": "testbench_compile",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "name": "self_checking_simulation",
+      "returncode": 0,
+      "output": "PASS sar_controller: checks=687790 accepted=4400 completed=4384 aborted=16 ignored_busy=2293 reserved_rejected=74 back_to_back=124\n/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/tests/rtl/tb_sar_controller.sv:222: $finish called at 46914064500 (1ps)"
+    }
+  ],
+  "simulator": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "counters": {
+    "checks": 687790,
+    "accepted": 4400,
+    "completed": 4384,
+    "aborted": 16,
+    "ignored_busy": 2293,
+    "reserved_rejected": 74,
+    "back_to_back": 124
+  }
+}

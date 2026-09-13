@@ -1,0 +1,9 @@
+* Feasibility variant: main TG plus half-width shorted-diffusion dummy devices.
+* The opposite clock attempts to cancel output-side turn-off charge injection.
+* This candidate must be measured; dummy cancellation is not assumed exact.
+.subckt adc_tgate_dual_lvt_dummy A B EN ENB VDD VSS params: WN=4 WP=8 LSW=0.15 LSWP=0.35 DUMMY=0.5
+XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L={LSW} nf=1 mult=1
+XP B ENB A VDD sky130_fd_pr__pfet_01v8_lvt W={WP} L={LSWP} nf=1 mult=1
+XND B ENB B VSS sky130_fd_pr__nfet_01v8_lvt W={WN*DUMMY} L={LSW} nf=1 mult=1
+XPD B EN B VDD sky130_fd_pr__pfet_01v8_lvt W={WP*DUMMY} L={LSWP} nf=1 mult=1
+.ends adc_tgate_dual_lvt_dummy

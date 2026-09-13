@@ -1,0 +1,21 @@
+{
+  "name": "headroom_b",
+  "baseline_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+  "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+  "builder_sha256": "ee460661ce3a21321e989763129447742b80ebd7f6518cefb3877bf9077b5da1",
+  "changes": [
+    "PDK LVT input gates improve low-input source/tail headroom.",
+    "Four W624/L2 bottom tails per error pair, same-L W44/L2 reference at ~5.5 uA; target mirror ratio 56.7.",
+    "Real BT diode W5/L1 lowers cascode gate; no ideal internal bias source.",
+    "Two 100kohm PDK resistor strings set BCASC midpoint between VDD and externally specified VCM.",
+    "Output NMOS W10/L2 raises first-stage gate/drain voltage at approximately the existing output bias current.",
+    "BT diode W3.5, not W5: raise middle tail node to improve bottom-tail output resistance.",
+    "CMCTL compensation uses four actual 1 pF MIM cells instead of one."
+  ],
+  "risks": [
+    "Potential output-stage gm and phase-margin reduction.",
+    "LVT noise and leakage not inherited from standard-Vt baseline.",
+    "Reference source loading and bias startup need later qualification.",
+    "No assumed static, stability, noise, power or PVT pass."
+  ]
+}

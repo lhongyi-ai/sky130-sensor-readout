@@ -1,3 +1,19 @@
+# SKY130 Sensor Readout — 已完成工作快照
+
+截至 2026-09-13，本仓库收录旧版两级 OTA、可校准传感器读出核心 V2，以及 Cadence 迁移与验证的已完成代码、报告和结果。**这是阶段成果快照，完整芯片尚未通过验收。**
+
+| 内容 | 入口 | 当前边界 |
+|---|---|---|
+| V2 前端、ADC、数字控制与局部版图 | [V2 总览](v2/README.md) | 保留稳定性、采样噪声、全码与顶层寄生等未完成项 |
+| 本轮本地完成成果 | [2026-09-13 记录](v2/docs/local_preparation_20260913.md) | 局部通过不等于系统通过；其中学校待回传状态以最新 Cadence 报告为准 |
+| Cadence 原生 OTA 与学校结果复核 | [Cadence 状态](cadence/project1/README.md) | 87 个入口已有运行证据，性能失败及待复核项保留 |
+| 旧 OTA 设计与五日成果 | 本页下文、[最终报告](docs/sky130_two_stage_ota_report.pdf) | 保留原理图级 PVT 通过及 PSRR/ICMR 失败 |
+| 入库范围及验证 | [快照说明](docs/github_checkpoint_20260913.md) | 大型原始波形、学校原始回传和本机编译产物仍留在本地 |
+
+原版 Git 历史保留。历史报告中的路径与哈希保持原样；本次发布不把历史结果标成新的电路验收结果。
+
+---
+
 # SKY130 Two-Stage CMOS OTA
 
 Specification-driven design and robustness verification of a 1.8 V, two-stage,

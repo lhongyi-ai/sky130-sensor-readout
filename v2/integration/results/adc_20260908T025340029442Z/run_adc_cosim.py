@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Unchanged SAR RTL + real SKY130 ADC blocks, schematic mixed simulation.
+
+Phase delays and logic-voltage bridges are explicitly ideal testbench fixtures.
+This milestone cannot qualify the complete physical ADC or whole sensor chip.
+"""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import re
+import subprocess
+import numpy as np
+from qualify_cosim import controller_elements, ROOT, HERE
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input-v", type=float, default=0.123)
+    parser.add_argument("--corner", choices=("tt", "ff", "ss", "fs", "sf"), default="tt")
+    parser.add_argument("--vdd", type=float, default=1.8)
+    parser.add_argument("--temperature", type=float, default=27)
+    parser.add_argument("--reference-r", type=float, default=1.0)
+    parser.add_argument("--duration-us", type=float, default=40.0)
+    args = parser.parse_args()
+    if not -.4 <= args.input_v <= .4 or args.reference_r <= 0 or args.duration_us < 12:
+        parser.error("invalid ADC input, reference resistance, or conversion duration")
+    if args.vdd != 1.8:
+        parser.error("logic bridge is currently qualified only at nominal 1.8 V; PVT extension must qualify thresholds too")
+    out = HERE / "results" / ("adc_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
+    out.mkdir(parents=True)
+    report_path = out / "summary.json"
+    initial = {"status": "RUNNING", "full_chip_qualified": False, "ideal_phase_fixture": True, "arguments": vars(args)}
+    report_path.write_text(json.dumps(initial, indent=2) + "\n")
+    files = [HERE / "cosim_controller.v", HERE / "qualify_cosim.py", Path(__file__), ROOT / "rtl/sar_controller.v",
+             ROOT / "analog/adc/adc_blocks.spice", ROOT / "analog/adc/adc_analog12.spice"]
+    source_hashes = {}
+    for path in files:
+        data = path.read_bytes()
+        (out / path.name).write_bytes(data)
+        source_hashes[str(path.relative_to(ROOT))] = hashlib.sha256(data).hexdigest()
+    env = dict(os.environ, SPICE_USERINIT_DIR=str(out))
+    (out / ".spiceinit").write_text("set ngbehavior=hsa\nset skywaterpdk\nset ng_nomodcheck\nset num_threads=1\n")
+    build = subprocess.run(["ngspice", "vlnggen", "--", "-Wno-fatal", "--top-module", "cosim_controller",
+                            "cosim_controller.v", "sar_controller.v"], cwd=out, env=env,
+                           capture_output=True, text=True, timeout=180)
+    (out / "build.log").write_text(build.stdout+build.stderr)
+    binary = out / "cosim_controller.so"
+    if build.returncode or not binary.exists():
+        raise RuntimeError("RTL co-simulation build failed")
+    vcm = args.vdd/2
+    lines = ["SKY130 ADC real-transistor / unchanged-RTL mixed simulation; ideal phase fixture",
+             f".lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice {args.corner}",
+             ".include adc_blocks.spice", ".include adc_analog12.spice",
+             f".temp {args.temperature}", ".options reltol=1e-4 abstol=1e-12 vntol=1e-7 method=gear",
+             f"VDD vdd 0 {args.vdd}", f"VVCM vcm_ideal 0 {vcm}",
+             f"VVRP rp_ideal 0 {vcm+.2}", f"VVRN rn_ideal 0 {vcm-.2}",
+             f"RRP rp_ideal rp_local {args.reference_r}", f"RRN rn_ideal rn_local {args.reference_r}",
+             f"RVCM vcm_ideal vcm_local {args.reference_r}",
+             "CRP rp_local 0 10n", "CRN rn_local 0 10n", "CVCM vcm_local 0 10n",
+             "VPORTP rp_local rp 0", "VPORTN rn_local rn 0", "VPORTCM vcm_local vcm 0",
+             f"VINP vinp 0 {vcm+args.input_v/2}", f"VINN vinn 0 {vcm-args.input_v/2}",
+             "RINP vinp inp 350", "RINN vinn inn 350",
+             "Vclk clk 0 PULSE(0 1.8 1u 1n 1n 311.5n 625n)",
+             "Vrst rst 0 PWL(0 0 200n 0 201n 1.8)",
+             "Vstart start 0 PWL(0 0 800n 0 801n 1.8)",
+             "Vg1 gain_sel1 0 0", "Vg0 gain_sel0 0 0", *controller_elements(binary, "verilator"),
+             "* Ideal event-delay phase fixture. Top opens before bottoms switch.",
+             "Atop d_sample d_top phase_top", ".model phase_top d_buffer(rise_delay=20n fall_delay=0.5n)",
+             "Aacq d_sample d_acq phase_acq", ".model phase_acq d_buffer(rise_delay=10n fall_delay=10n)",
+             "Aconv d_sample d_conv phase_conv", ".model phase_conv d_inverter(rise_delay=30n fall_delay=0.5n)",
+             "Aphase [d_top d_acq d_conv] [top_sample acq conv] logic_out",
+             "XTOPB top_sample top_sample_b vdd 0 adc_inv",
+             "XADC inp inn decision decision_b top_sample top_sample_b acq conv evaluate "
+                 + " ".join(f"trial{i}" for i in range(11,-1,-1)) + " rp rn vcm vdd 0 adc_analog12",
+             "CQ decision 0 5f", "CQB decision_b 0 5f",
+             ".control", "set num_threads=1", "set wr_singlescale", "set wr_vecnames", "set numdgt=12",
+             f"tran 2n {args.duration_us}u 0 2n",
+             "wrdata waveform.dat v(clk) v(top_sample) v(acq) v(conv) v(evaluate) v(valid) v(xadc.tp) v(xadc.tn) v(decision) v(decision_b) v(rp) v(rn) v(vcm) i(vdd) i(vportp) i(vportn) i(vportcm)",
+             "quit", ".endc", ".end", ""]
+    (out / "adc.spice").write_text("\n".join(lines))
+    try:
+        proc = subprocess.run(["ngspice", "-b", "-o", "native.log", "adc.spice"], cwd=out, env=env,
+                              capture_output=True, text=True, timeout=300)
+        log, rc = proc.stdout+proc.stderr, proc.returncode
+    except subprocess.TimeoutExpired as error:
+        rc = None
+        log = "TIMEOUT after 300 seconds\n"+(error.stdout or b"").decode(errors="replace")+(error.stderr or b"").decode(errors="replace")
+    log += (out / "native.log").read_text(errors="replace") if (out / "native.log").exists() else ""
+    (out / "simulation.log").write_text(log)
+    codes = [int(c) for c in re.findall(r"COSIM_RESULT time_ns=[\d.]+ code=(\d+) gain_code=\d+", log)]
+    expected = min(4095, math.floor((args.input_v+.4)/(.8/4096)))
+    report = {**initial, "status": "FAIL", "source_sha256": source_hashes, "run": str(out.relative_to(ROOT)),
+              "returncode": rc, "raw_codes": codes, "expected_ideal_code": expected,
+              "code_error_lsb": [c-expected for c in codes], "complete_adc_qualified": False,
+              "limitations": ["Only short deterministic conversion check, not full-code linearity or noise-inclusive FFT.",
+                  "Live original RTL, ideal logic-voltage bridges and nonoverlap phase delays; no mapped digital power/delay here.",
+                  "Real MOS/MIM schematic ADC only; no amplifier, analog layout extraction, or mismatch included.",
+                  "Reference network has explicit source resistance and 10nF local external capacitors, not infinite driver strength."]}
+    waveform = out / "waveform.dat"
+    if waveform.exists():
+        values = np.loadtxt(waveform, skiprows=1)
+        time = values[:,0]
+        valid = values[:,6]
+        edges = np.flatnonzero((valid[:-1]<.9)&(valid[1:]>=.9))
+        report["valid_times_s"] = time[edges+1].tolist()
+        use = time >= 11.5e-6
+        if np.count_nonzero(use)>2:
+            duration = time[use][-1]-time[use][0]
+            # Device-side reference boundary energy, not generator static power.
+            power = -args.vdd*values[:,14]+values[:,11]*values[:,15]+values[:,12]*values[:,16]+values[:,13]*values[:,17]
+            report["analog_and_reference_port_power_w"] = float(np.trapezoid(power[use],time[use])/duration)
+            report["reference_peak_port_currents_a"] = {"rp": float(np.max(np.abs(values[use,15]))),
+                "rn": float(np.max(np.abs(values[use,16]))), "vcm": float(np.max(np.abs(values[use,17])))}
+        count = len(edges)
+    else:
+        count = 0
+    expected_frames = math.floor((args.duration_us-11.004)/10)+1
+    checks = {"simulation_completed": rc == 0, "all_frames_completed": len(codes)==count==expected_frames,
+              "short_nominal_code_check_within_2lsb": bool(codes) and all(abs(c-expected)<=2 for c in codes)}
+    report["checks"] = checks
+    report["status"] = "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS" if all(checks.values()) else "FAIL"
+    report_path.write_text(json.dumps(report, indent=2, allow_nan=False)+"\n")
+    (HERE / "results/adc_cosim_latest.json").write_text(json.dumps(report, indent=2, allow_nan=False)+"\n")
+    print(json.dumps({"status": report["status"], "raw_codes": codes, "expected": expected, "checks": checks, "report": str(report_path)}, indent=2))
+    return 0 if all(checks.values()) else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

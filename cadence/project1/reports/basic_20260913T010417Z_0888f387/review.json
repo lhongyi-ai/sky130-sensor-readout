@@ -1,0 +1,87 @@
+{
+  "review_status": "SIMULATION_VERIFIED_ACCEPTANCE_REVIEW_PENDING_MIM",
+  "run_id": "20260913T010221Z_e511fd36",
+  "original_status_preserved": {
+    "status": "PASS",
+    "performance_status": "FAIL"
+  },
+  "checks": {
+    "manifest_matches_run": true,
+    "manifest_matches_delivered_runtime": true,
+    "native_body_hash_matches": true,
+    "native_input_hash_matches": true,
+    "simulation_input_hash_matches": true,
+    "native_connections_and_all_pulse_values_match": true,
+    "original_metrics_reproduced": true,
+    "waveform_axes_match": true,
+    "waveforms_are_real": true,
+    "covers_0_to_10ns": true,
+    "spectre_normal_completion": true,
+    "export_complete": true,
+    "both_pulse_sources_saved": true,
+    "prior_resistor_evidence_matches": true
+  },
+  "simulator_summary": {
+    "errors": 0,
+    "warnings": 0,
+    "notices": 2
+  },
+  "samples_per_waveform": 20034,
+  "spectre_accepted_tran_steps": 20033,
+  "waveform": {
+    "rising_input_midpoint_s": 1.0004999999999998e-09,
+    "rising_output_63pct_s": 1.0434851800018631e-09,
+    "rising_63pct_delay_ps": 42.985180001863334,
+    "falling_37pct_delay_ps": 42.985184837423056,
+    "input_min_V": 0.0,
+    "input_max_V": 0.1,
+    "output_min_V": 0.0,
+    "output_max_V": 0.09999999999999847,
+    "high_plateau_max_error_V": 9.491227248581424e-12,
+    "low_plateau_max_error_V": 9.711061988769064e-12
+  },
+  "failed_criterion": {
+    "name": "tau_within_10pct_of_CDF",
+    "old_target_ps": 33.906657059,
+    "measured_delay_ps": 42.985180001863334,
+    "relative_difference_percent": 26.775045758908234
+  },
+  "diagnostic_estimate_not_new_acceptance_threshold": {
+    "prior_measured_mean_R_ohm": 1231.136636220402,
+    "CDF_C_fF_not_yet_measured": 34.6223,
+    "mean_R_times_CDF_C_ps": 42.62478196021362,
+    "delay_difference_from_rough_estimate_percent": 0.8455129271655037,
+    "interpretation": "Old target uses CDF resistance already shown to differ from this model. Using measured R explains most of the delay shift; this estimate omits nonlinear trajectory and parasitic capacitance and is not a qualification."
+  },
+  "mim_attempts": [
+    {
+      "status": "ENV_BLOCKED",
+      "performance_status": "NOT_RUN",
+      "error": "Native netlisting failed; see ocean_netlist.log"
+    },
+    {
+      "status": "ENV_BLOCKED",
+      "performance_status": "NOT_RUN",
+      "error": "Native netlisting failed; see ocean_netlist.log"
+    }
+  ],
+  "limitations": [
+    "OCEAN-exported CSV reviewed; preserved binary PSF not independently decoded.",
+    "No successful MIM AC result in this report; RC full-model acceptance remains pending.",
+    "Repair log confirms OTA step CDF save, not native OTA netlist or OTA simulation.",
+    "Spectre has no warnings; OCEAN environment, log-lock and font warnings remain in the original logs."
+  ],
+  "next_step": "Run the existing mim_ac job with the school launcher, collect report; do not repeat rc_step unchanged.",
+  "fingerprints": {
+    "status.json": "3a28b3a50f752616038cbbb679f3aa4aea58c48d0a74946aedcf7f0e8d4d676e",
+    "metrics.json": "0bfc27d4b1b198fc4274f92fd79556d3036de613feda7c6539796dd66f777674",
+    "native_netlist.scs": "20a95d0c8856e08ec9d0abc26017a1746c647eca967b389ac326ad1e8f772c4c",
+    "native_input.scs": "fc6294790bb3e1cbf8d734462568dbef649098b6526b7aae68515102bf1c584e",
+    "input.scs": "46faa3e2e7cc33d1bf6110540d8a52e4b84180d2d00fe54e6dbd8b473f6e908b",
+    "spectre.out": "3ba690cc04ff13f12e459d3e3e13197340412ba3b46931d2cf0c66a4462fe71d",
+    "VIN.csv": "83d355d1109e53dbf3e0d5c58a73ca4047097888c22a1ba38f222e82ae608d1f",
+    "VOUT.csv": "8c09fc29ae14a987ace6de0c757d6c4fbb131f22cba47406c0ddbabe00eea893",
+    "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61"
+  },
+  "report_sha256": "d56a507a6172804b59b3f24fcc1544c4d1459bdcb6c00cd936e23fffca2f94d2"
+}

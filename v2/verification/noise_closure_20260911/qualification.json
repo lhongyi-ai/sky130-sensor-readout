@@ -1,0 +1,223 @@
+{
+  "status": "BLOCKED_NATIVE_INTRINSIC_SWITCHING_NOISE_UNAVAILABLE",
+  "planning_method_status": "QUALIFIED_FOR_FINITE_BAND_FROZEN_BIAS_LTI_POWER_ACCOUNTING_ONLY",
+  "planning_method_acceptance_checks": {
+    "native_rc_ac_matches_analytic": true,
+    "native_rc_psd_matches_analytic": true,
+    "native_rc_integral_matches_analytic": true,
+    "same_sky130_noise_spectrum_preserved": true,
+    "same_sky130_ac_preserved": true,
+    "all_power_conservation_checks": true,
+    "all_seed_replay_checks": true,
+    "all_model_mean_square_checks_within_5_standard_errors": true
+  },
+  "cadence_used": false,
+  "new_download_or_install": false,
+  "source_results": "results/20260911T080040Z",
+  "simulator_runs": [
+    {
+      "case": "off_seed11",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 6.455737585987663
+      }
+    },
+    {
+      "case": "on_seed11",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 6.748083482001675
+      }
+    },
+    {
+      "case": "replay_seed11",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 6.014333953993628
+      }
+    },
+    {
+      "case": "on_seed29",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 5.324048572976608
+      }
+    }
+  ],
+  "actual_run_count": 4,
+  "physical_run_limit_exhausted": true,
+  "all_runs_completed": true,
+  "noisetran_rejected_all_runs": true,
+  "native_rc_and_verilog_a_control": {
+    "resistance_ohm": 10000.0,
+    "capacitance_f": 1e-09,
+    "temperature_k": 300.15,
+    "analytical_kt_over_c_v2": 4.1440179735e-12,
+    "native_ac_max_complex_relative_error": 4.494567159733684e-16,
+    "osdi_ac_max_complex_relative_error": 4.494567159733684e-16,
+    "native_psd_max_relative_error_to_4ktr_formula": 3.476625857201654e-07,
+    "osdi_psd_max_relative_error_to_4ktr_formula": 9.415861677020132e-07,
+    "native_log_interpolated_known_band_integral_v2": 4.143339351618716e-12,
+    "analytical_known_band_integral_v2": 4.143432335978713e-12,
+    "interpolation_and_constant_relative_error": 2.2441384933458153e-05,
+    "osdi_and_native_noise_off_are_zero": true,
+    "rc_native_and_osdi_transient_noise_on_are_zero": true,
+    "note": "Native and OSDI constants differ slightly; no rescaling is applied."
+  },
+  "same_real_sky130_single_device_regression": {
+    "same_model_implementation": "BSIM4v5 models (Berkeley Short Channel IGFET Model-4)",
+    "same_model_version": "4.5",
+    "same_selected_bin": "xm:nshort_model.29",
+    "same_bias": "W=2um L=1um, VG=.7V, VDD=1.8V, RLOAD=20kohm CLOAD=1pF, 27C",
+    "dc_current_relative_error": 0.0,
+    "ac": {
+      "shared_frequency_points": 141,
+      "max_relative_error": 2.4765901180930178e-14
+    },
+    "noise_psd": {
+      "shared_frequency_points": 141,
+      "max_relative_error": 4.951594689828198e-14
+    },
+    "noise_1hz_to_100mhz_trapezoid_rms_v": 0.0001640575426741399,
+    "noiseless_transient_std_v": 5.538807219437686e-16,
+    "time_varying_noise_seed_test": "NOT_APPLICABLE_NO_INTRINSIC_NOISE_REALIZATIONS"
+  },
+  "seed_control": {
+    "disconnected_software_rng_same_seed_replays": true,
+    "disconnected_software_rng_different_seed_changes": true,
+    "all_native_mos_time_traces_identical": true,
+    "interpretation": "The RNG works; no noise source has been inserted into any circuit."
+  },
+  "planning_models": {
+    "native_rc": {
+      "status": "FROZEN_BIAS_LTI_KNOWN_BAND_PLANNING_MODEL_ONLY",
+      "record_length": 16384,
+      "sample_rate_hz": 100000.0,
+      "noise_realizations": 128,
+      "process_or_device_mismatch_samples": 0,
+      "known_analog_band_hz": [
+        1.0,
+        99999999.9999977
+      ],
+      "outside_band_noise": "UNKNOWN_NOT_ASSERTED_ZERO",
+      "continuous_known_band_variance_v2": 4.143339351618716e-12,
+      "folded_all_sample_bins_variance_v2": 4.1433393516187165e-12,
+      "power_conservation_relative_error": 2.220446049250313e-16,
+      "direct_known_0_to_5khz_rms_v": 8.960333918899544e-07,
+      "folded_known_0_to_5khz_rms_v": 9.33210322694363e-07,
+      "known_0_to_5khz_alias_power_factor": 1.0847025949290767,
+      "rng_same_seed_bit_exact": true,
+      "rng_different_seed_different_waveform": true,
+      "mean_model_record_mean_square_v2": 4.143650499841716e-12,
+      "mean_square_expected_v2": 4.1433393516187165e-12,
+      "mean_square_standard_error_v2": 4.636530716948857e-15,
+      "mean_square_z_error": 0.06710798266955029,
+      "adc_sndr_computed": false
+    },
+    "native_sky130_single_mos": {
+      "status": "FROZEN_BIAS_LTI_KNOWN_BAND_PLANNING_MODEL_ONLY",
+      "record_length": 16384,
+      "sample_rate_hz": 100000.0,
+      "noise_realizations": 128,
+      "process_or_device_mismatch_samples": 0,
+      "known_analog_band_hz": [
+        1.0,
+        99999999.9999977
+      ],
+      "outside_band_noise": "UNKNOWN_NOT_ASSERTED_ZERO",
+      "continuous_known_band_variance_v2": 2.6912316432073208e-08,
+      "folded_all_sample_bins_variance_v2": 2.6912316432073208e-08,
+      "power_conservation_relative_error": 0.0,
+      "direct_known_0_to_5khz_rms_v": 5.875946141787872e-05,
+      "folded_known_0_to_5khz_rms_v": 7.467694590630413e-05,
+      "known_0_to_5khz_alias_power_factor": 1.6151671879416998,
+      "rng_same_seed_bit_exact": true,
+      "rng_different_seed_different_waveform": true,
+      "mean_model_record_mean_square_v2": 2.6889548949651233e-08,
+      "mean_square_expected_v2": 2.6912316432073208e-08,
+      "mean_square_standard_error_v2": 5.133384176359548e-11,
+      "mean_square_z_error": -0.44351799202609526,
+      "adc_sndr_computed": false
+    }
+  },
+  "final_noise_qualification_evidence": {
+    "same_pdk_model_version": true,
+    "intrinsic_time_varying_device_noise": false,
+    "switching_sampling_and_comparator_included": false,
+    "bandwidth_step_convergence": false,
+    "representative_bias_and_pvt_coverage": false,
+    "top_level_noise_aware_dynamic_validation": false
+  },
+  "adc_noise_qualified": false,
+  "full_chain_sndr_qualified": false,
+  "limitations": [
+    "Single fixed bias, not sampled transistor switches or comparator regeneration.",
+    "Ordinary .noise is LTI stationary Gaussian analysis, not clocked cyclostationary noise.",
+    "Ideal instantaneous sampling is an analytical assumption, not SAR acquisition/hold dynamics.",
+    "Unknown power below 1Hz and above 100MHz is not treated as a complete noise budget.",
+    "The total stationary PSD retains the selected native model noise calculation, but the finite-record model cannot track switching-dependent multi-node/source correlations, nonlinear noise mixing, clock/reference modulation, or conversion-state memory.",
+    "No PDK mismatch Monte Carlo, PVT, complete ADC, or SNDR result is established.",
+    "Native NGSPICE BSIM4v5 PSD retained; no VACASK v8 PSD or empirical correction used."
+  ],
+  "next_required_capability": "Noise-aware time-domain or periodic-noise engine preserving the actual SKY130 BSIM4v5 implementation and source correlations, followed by multi-bias/device-class and switched-RC controls before any ADC run.",
+  "alternative_engine_review": {
+    "ngspice_47": "Manual section 11.3.11 still lists generating transient noise from a transistor model among unresolved work; explicit TRNOISE sources are not intrinsic BSIM4 noise.",
+    "xyce_7_7_and_7_8": "Official feature tables do not list BSIM4 stationary-noise support (parent primary-document review); this does not establish current 7.10 behavior.",
+    "xyce_7_10": "Installed release identity recorded as 7.10-opensource. Its current official Table 2-36 also leaves BSIM4 level 14/54 Stationary Noise blank. No Xyce SKY130 noise circuit was run; no transient-noise capability is inferred.",
+    "vacask": "Installed BSIM4v8 has intrinsic transient-noise capability, but prior actual SKY130 v5 comparison failed noise equivalence; no empirical correction allowed."
+  },
+  "primary_sources": [
+    {
+      "url": "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf",
+      "version": "47, 2026-08-11",
+      "sections": [
+        "1.2.7",
+        "4.1.7",
+        "11.3.11",
+        "13.5.77"
+      ]
+    },
+    {
+      "url": "https://ngspice.sourceforge.io/osdi.html",
+      "claim": "OSDI loads Verilog-A compact models; loading does not establish intrinsic transient noise support."
+    },
+    {
+      "url": "https://ngspice.sourceforge.io/news.html",
+      "claim": "Release 47 lists small-signal noise for code models; not a claimed BSIM4 transient-noise implementation."
+    },
+    {
+      "url": "https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.7.pdf",
+      "version": "7.7",
+      "review_provenance": "Parent primary-document review; version-limited feature table."
+    },
+    {
+      "url": "https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.8.pdf",
+      "version": "7.8",
+      "review_provenance": "Parent primary-document review; subagent fetch timed out, no independent table transcription."
+    },
+    {
+      "url": "https://xyce.sandia.gov/download/2068/?tmstv=1754510749",
+      "version": "7.10",
+      "sections": [
+        "Table 2-36"
+      ],
+      "review_provenance": "Current official reference guide; BSIM4 level 14/54 has no Stationary Noise mark."
+    }
+  ],
+  "evidence_sha256": {
+    "results/20260911T080040Z/summary.json": "b1cb29b9aa5d342f72e8ad9a184b81fccb1c7400abce60073c449a53647e14ee",
+    "results/20260911T080040Z/on_seed11/summary.json": "1bd8880193eaea0b56b10f1bc270596fda88d4fe98826510bfe410ab9050c4e3",
+    "results/20260911T080040Z/on_seed11/out_noise.npz": "f4db0cec9aa085fef11430a1c34bbdcd8130d6255826547a4479d74b2da8a60d",
+    "results/20260911T080040Z/on_seed11/ac.npz": "db5447658b3564a4ddb5245767ee7b27b067426c4b91a69fdf4a689a1bab0745",
+    "probe.py": "497e2393fe1660a091b94997f6d84133eb2fc5371a64b0bfa69b6dee0747b8c9",
+    "thermal_resistor.va": "cf302a675c9683922ec6ae2d3e694da58744bc967a1516467938d7354a6d3dfc",
+    "hybrid.py": "957eb72844e206a9c7ca9ca1fc4714aa131f190630d508e7020c842eb138c930",
+    "analyze.py": "a39184e18091280de3598190a2f9488cc50f54588c096c03d46685c80c5f50f2",
+    "probe_xyce_capability.py": "765160eb469b8bbbb7341ce653708183efeaa7025b5e04a4b804cce2bbf63b23",
+    "xyce_capability.json": "1c6fca516b6f97ec20fcdb82b05a055bc0574ff280444f660029afb81b30a9cb"
+  }
+}

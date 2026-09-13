@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""Bounded syntax adapter for the installed official converter.
+
+Fix include-parent lookup, integer-valued LEVEL spelling and expression grouping;
+no compact-model value is patched. This does NOT add missing MOS/bin conversion.
+Derived PDK text stays outside the repository. Hashes, not PDK contents, are kept.
+"""
+import hashlib
+import json
+import re
+from pathlib import Path
+import sys
+
+from ng2vclib.converter import Converter
+
+
+class RelativeConverter(Converter):
+    def __init__(self):
+        super().__init__()
+        self.parents = []
+        self.inputs = {}
+        self.normalizations = []
+
+    def proces_params(self, line):
+        directive, body = line.split(None, 1)
+        assignments = list(re.finditer(r'(?<!\S)([A-Za-z_]\w*)\s*=', body))
+        if not assignments or body[:assignments[0].start()].strip():
+            raise ValueError('Unparsed parameter assignment')
+        out=[]
+        for index, match in enumerate(assignments):
+            end=assignments[index+1].start() if index+1 < len(assignments) else len(body)
+            value=body[match.end():end].strip()
+            # SPICE braces delimit expressions; in VACASK parentheses preserve
+            # their grouping, including a term after the closing brace.
+            value=value.replace('{','(').replace('}',')')
+            out.append(match.group(1)+'='+value)
+        return directive+' '+' '.join(out)
+
+    def read_file(self, filename, *args, **kwargs):
+        file = Path(filename)
+        if not file.is_absolute() and self.parents:
+            candidate = self.parents[-1]/file
+            if candidate.is_file(): file = candidate
+        file = file.absolute()
+        self.inputs[str(file)] = hashlib.sha256(file.read_bytes()).hexdigest()
+        self.parents.append(file.parent)
+        try:
+            inside, deck, absolute = super().read_file(str(file), *args, **kwargs)
+            filename, section, lines = deck
+            normalized=[]
+            for line_no, ws, core, comment, metadata in lines:
+                # Simulator selector LEVEL=54.0 and LEVEL=54 are identical;
+                # the supplied converter incorrectly calls int('54.0').
+                revised = re.sub(r'(\blevel\s*=\s*)([0-9]+)\.0+\b',r'\1\2',core) if core.startswith('.model ') else core
+                if revised != core:
+                    self.normalizations.append({'path':str(file),'line':line_no,'change':'integer-valued model LEVEL lexical normalization only'})
+                normalized.append((line_no,ws,revised,comment,metadata))
+            return inside,(filename,section,normalized),absolute
+        finally:
+            self.parents.pop()
+
+
+if __name__ == '__main__':
+    source, destination, manifest = map(Path, sys.argv[1:4])
+    if '/repo/' in str(destination.resolve()):
+        raise ValueError('Converted PDK must stay in a runtime temporary directory')
+    converter = RelativeConverter()
+    try:
+        converter.convert(str(source), str(destination))
+    finally:
+        manifest.write_text(json.dumps({'input_sha256':converter.inputs,'lexical_normalizations':converter.normalizations}, indent=2)+'\n')

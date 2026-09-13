@@ -1,0 +1,617 @@
+{
+  "generated_utc": "2026-09-11T08:55:15.958856+00:00",
+  "status": "NOMINAL_DYNAMIC_PASS__FORMAL_MULTILOOP_STABILITY_NOT_CLOSED",
+  "candidate_path": "candidate_06.spice",
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "selected_dynamic_evidence": "diagnostics/07_20260911T085157880653Z_candidate_06",
+  "selected_loop_evidence": "diagnostics/08_20260911T085257873008Z_candidate_06_loops",
+  "selected_manifests_verified": true,
+  "bounded_real_ngspice_diagnostics_used": 8,
+  "bounded_real_ngspice_diagnostics_limit": 8,
+  "setup_failure_not_counted_as_real_ngspice_run": "setup_failures/01_20260911T084048784001Z_no_ngspice_on_path",
+  "diagnostic_inventory": [
+    {
+      "ordinal": 1,
+      "folder": "diagnostics/01_20260911T084122228095Z_candidate_01",
+      "candidate": "candidate_01.spice",
+      "candidate_sha256": "6c8fdc7f3a770c4ef01b11a085bbdfe7080370877ba4a6fdab56dff96aa0eeef",
+      "status_as_recorded": "SIMULATOR_FAILURE",
+      "elapsed_s": 17.82186857398483
+    },
+    {
+      "ordinal": 2,
+      "folder": "diagnostics/02_20260911T084220000516Z_candidate_01",
+      "candidate": "candidate_01.spice",
+      "candidate_sha256": "6c8fdc7f3a770c4ef01b11a085bbdfe7080370877ba4a6fdab56dff96aa0eeef",
+      "status_as_recorded": "DIAGNOSTIC_COMPLETE",
+      "elapsed_s": 21.18932091500028
+    },
+    {
+      "ordinal": 3,
+      "folder": "diagnostics/03_20260911T084504799204Z_candidate_02",
+      "candidate": "candidate_02.spice",
+      "candidate_sha256": "8d40925bf20d15d77f24b5c02500e4fa6cb93d2e7adc10ec30b0563cdbf1741f",
+      "status_as_recorded": "DIAGNOSTIC_COMPLETE",
+      "elapsed_s": 6.774294364004163
+    },
+    {
+      "ordinal": 4,
+      "folder": "diagnostics/04_20260911T084557375155Z_candidate_03",
+      "candidate": "candidate_03.spice",
+      "candidate_sha256": "8ac47dd8c47e39d832dc8c1721d5ba17c44c7955f3e6fa7d324a2005f90dc024",
+      "status_as_recorded": "DIAGNOSTIC_COMPLETE",
+      "elapsed_s": 5.586201504978817
+    },
+    {
+      "ordinal": 5,
+      "folder": "diagnostics/05_20260911T084706433273Z_candidate_04",
+      "candidate": "candidate_04.spice",
+      "candidate_sha256": "1177d659e55bd4a582d869dd220740986d6134edf0d9780b548024e4395c20ae",
+      "status_as_recorded": "DIAGNOSTIC_COMPLETE",
+      "elapsed_s": 8.260010019002948
+    },
+    {
+      "ordinal": 6,
+      "folder": "diagnostics/06_20260911T084747555788Z_candidate_05",
+      "candidate": "candidate_05.spice",
+      "candidate_sha256": "ec47e94f1f07ce958adc70683c56430d1774f5e4166794770827efb898b7ddd3",
+      "status_as_recorded": "DIAGNOSTIC_COMPLETE",
+      "elapsed_s": 8.272497911995742
+    },
+    {
+      "ordinal": 7,
+      "folder": "diagnostics/07_20260911T085157880653Z_candidate_06",
+      "candidate": "candidate_06.spice",
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "status_as_recorded": "DIAGNOSTIC_COMPLETE",
+      "elapsed_s": 31.885086008987855
+    },
+    {
+      "ordinal": 8,
+      "folder": "diagnostics/08_20260911T085257873008Z_candidate_06_loops",
+      "candidate": "candidate_06.spice",
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "status_as_recorded": "LOOP_STABILITY_PASS",
+      "elapsed_s": 3.207694921991788
+    }
+  ],
+  "nominal_dynamic_gates": {
+    "same_source_all_three_gains": true,
+    "all_gain_static_gate_pass": true,
+    "all_gain_real_sampling_gate_pass": true,
+    "all_gain_power_gate_pass": true,
+    "all_gain_device_region_gate_pass": true,
+    "external_vcm_reference_used": true,
+    "external_vcm_endpoint_tracking_gate_pass": true
+  },
+  "nominal_dynamic_prerequisites_pass": true,
+  "gains": {
+    "1": {
+      "calibration_points_target_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "calibration_coefficients": [
+        0.9555084992180175,
+        7.171352210142027e-17
+      ],
+      "max_independent_holdout_error_lsb": 0.029641883041477968,
+      "max_static_output_cm_error_v": 0.013562691876800037,
+      "output_endpoints_v": [
+        -0.4186286837487,
+        0.4186286837504999
+      ],
+      "static_gate_pass": true,
+      "acquisition_window_s": 2.476847754e-06,
+      "acquisition_errors_v": [
+        -1.811461815104387e-06,
+        1.8915525128448962e-06,
+        -1.81145864147636e-06
+      ],
+      "max_acquisition_error_v": 1.8915525128448962e-06,
+      "post_aperture_errors_v": [
+        1.637409769217335e-06,
+        -1.5671367745717646e-06,
+        1.6374201972091385e-06
+      ],
+      "max_post_aperture_error_v": 1.6374201972091385e-06,
+      "settled_references_v": [
+        0.37676355076813073,
+        -0.3767635507681254,
+        0.3767635507682029
+      ],
+      "reference_peak_to_peak_v": [
+        1.3206000737397972e-09,
+        1.321000198117872e-09,
+        1.3205999627174947e-09
+      ],
+      "max_transient_output_cm_error_v": 0.013935023000150037,
+      "sampling_gate_pass": true,
+      "mean_frontend_vdd_vcm_power_w": 0.0007018504362734779,
+      "power_peak_to_peak_w": 0.00011638048329012148,
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xdut.xota.xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.34288535122375,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.34288535122375
+        },
+        "xdut.xota.xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.37565846918189005,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.37565846918189005
+        },
+        "xdut.xota.xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.09471601380639999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.09471601380639999
+        },
+        "xdut.xota.xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.0169427852975998,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.0169427852975998
+        },
+        "xdut.xota.xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9844867810028001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9844867810028001
+        },
+        "xdut.xota.xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5554681363772,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.5554681363772
+        },
+        "xdut.xota.xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9962118105746999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9962118105746999
+        },
+        "xdut.xota.xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.8221827230559999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.8221827230559999
+        },
+        "xdut.xota.xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.40357591518770003,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.40357591518770003
+        }
+      },
+      "device_region_gate_pass": true
+    },
+    "4": {
+      "calibration_points_target_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "calibration_coefficients": [
+        0.9902450156278235,
+        -1.25426271957036e-12
+      ],
+      "max_independent_holdout_error_lsb": 0.019547599315217212,
+      "max_static_output_cm_error_v": 0.013711515488400106,
+      "output_endpoints_v": [
+        -0.40393657711350006,
+        0.40393657710780007
+      ],
+      "static_gate_pass": true,
+      "acquisition_window_s": 2.476847754e-06,
+      "acquisition_errors_v": [
+        -1.6824177199725732e-06,
+        1.7428038638911403e-06,
+        -1.6824148851846132e-06
+      ],
+      "max_acquisition_error_v": 1.7428038638911403e-06,
+      "post_aperture_errors_v": [
+        1.440781958295112e-06,
+        -1.3883121383617691e-06,
+        1.440790918960655e-06
+      ],
+      "max_post_aperture_error_v": 1.440790918960655e-06,
+      "settled_references_v": [
+        0.3635447178941418,
+        -0.36354471789416154,
+        0.36354471789388093
+      ],
+      "reference_peak_to_peak_v": [
+        1.1735998839412787e-09,
+        1.180300190917194e-09,
+        1.175399777508801e-09
+      ],
+      "max_transient_output_cm_error_v": 0.014577624933349909,
+      "sampling_gate_pass": true,
+      "mean_frontend_vdd_vcm_power_w": 0.0006979738489585475,
+      "power_peak_to_peak_w": 0.00010344610517723464,
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xdut.xota.xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.34997359188654,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.34997359188654
+        },
+        "xdut.xota.xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.36233133382000005,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.36233133382000005
+        },
+        "xdut.xota.xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.0977011081576,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.0977011081576
+        },
+        "xdut.xota.xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.0068583532961002,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.0068583532961002
+        },
+        "xdut.xota.xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9946203500823001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9946203500823001
+        },
+        "xdut.xota.xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5707360151425,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.5707360151425
+        },
+        "xdut.xota.xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9830023425987,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9830023425987
+        },
+        "xdut.xota.xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.8154705365916001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.8154705365916001
+        },
+        "xdut.xota.xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.41155477375900007,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.41155477375900007
+        }
+      },
+      "device_region_gate_pass": true
+    },
+    "16": {
+      "calibration_points_target_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "calibration_coefficients": [
+        1.0027677141731206,
+        -3.843879088170632e-12
+      ],
+      "max_independent_holdout_error_lsb": 0.041137914313651436,
+      "max_static_output_cm_error_v": 0.01378513626900002,
+      "output_endpoints_v": [
+        -0.3988879573941,
+        0.3988879574019
+      ],
+      "static_gate_pass": true,
+      "acquisition_window_s": 2.476847754e-06,
+      "acquisition_errors_v": [
+        9.337556637289968e-06,
+        -1.0262394938842512e-05,
+        9.337575433754353e-06
+      ],
+      "max_acquisition_error_v": 1.0262394938842512e-05,
+      "post_aperture_errors_v": [
+        1.0386204002454935e-05,
+        -1.1181565549411854e-05,
+        1.0386213189716997e-05
+      ],
+      "max_post_aperture_error_v": 1.1181565549411854e-05,
+      "settled_references_v": [
+        0.35900300854689754,
+        -0.3590030085462506,
+        0.3590030085467103
+      ],
+      "reference_peak_to_peak_v": [
+        1.1231998664484877e-09,
+        1.1321000803476977e-09,
+        1.1226001239705852e-09
+      ],
+      "max_transient_output_cm_error_v": 0.014690227322549987,
+      "sampling_gate_pass": true,
+      "mean_frontend_vdd_vcm_power_w": 0.0006975210296145314,
+      "power_peak_to_peak_w": 9.969004198044445e-05,
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xdut.xota.xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.35093593419617,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.35093593419617
+        },
+        "xdut.xota.xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.3581729503938,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.3581729503938
+        },
+        "xdut.xota.xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.09923132894110001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.09923132894110001
+        },
+        "xdut.xota.xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.004335061712,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.004335061712
+        },
+        "xdut.xota.xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9971682209534,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9971682209534
+        },
+        "xdut.xota.xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5751344099784,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.5751344099784
+        },
+        "xdut.xota.xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9788889748202,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9788889748202
+        },
+        "xdut.xota.xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.8130524436796,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.8130524436796
+        },
+        "xdut.xota.xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.4141849850601,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.4141849850601
+        }
+      },
+      "device_region_gate_pass": true
+    }
+  },
+  "external_vcm_endpoint_tracking": {
+    "0.85": {
+      "external_vcm_v": 0.85,
+      "maximum_output_cm_tracking_error_v": 0.036561184925199997,
+      "full_input_range_gate_pass": true
+    },
+    "0.95": {
+      "external_vcm_v": 0.95,
+      "maximum_output_cm_tracking_error_v": 0.005208145980799994,
+      "full_input_range_gate_pass": true
+    }
+  },
+  "physical_device_legality": {
+    "miller_zero_resistor_model": "sky130_fd_pr__res_high_po_0p69",
+    "miller_zero_resistance_ohm": 1200,
+    "miller_zero_length_um": 0.8551774666232498,
+    "isolation_resistor_model": "sky130_fd_pr__res_high_po_0p35",
+    "qualified_assembly_isolation_resistance_ohm": 1500,
+    "isolation_resistor_length_um": 0.5427995971802618,
+    "minimum_pcell_length_um": 0.5,
+    "known_subminimum_resistor_length_absent": true,
+    "gate_pass": true,
+    "scope": "Schematic parameter audit only; no frontend layout, DRC, LVS, or PEX claim."
+  },
+  "loop_audit": {
+    "raw_run_status_superseded": "LOOP_STABILITY_PASS",
+    "why_superseded": "The frozen runner checked only down-crossing phase margin. It did not reject a wrong low-frequency feedback sign or a later high-frequency up-crossing.",
+    "dm_primary_downcross_phase_margin_deg": {
+      "1": 86.37834817850349,
+      "4": 84.85757645042042,
+      "16": 83.29965813968222
+    },
+    "output_cm_primary_downcross_phase_margin_deg": {
+      "1": 123.527943754344,
+      "4": 123.18625962605654,
+      "16": 123.00052514593483
+    },
+    "audited_loops": {
+      "1": {
+        "dm": {
+          "low_frequency_gain_db": 54.50103690362232,
+          "low_frequency_phase_deg": -0.004429877256527523,
+          "unity_crossings": [
+            {
+              "frequency_hz": 5105007.156721103,
+              "phase_deg": -93.62165182149651,
+              "phase_margin_deg": 86.37834817850349,
+              "direction": "down"
+            },
+            {
+              "frequency_hz": 74773418.82851367,
+              "phase_deg": -279.29082283914744,
+              "phase_margin_deg": -99.29082283914744,
+              "direction": "up"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 86.37834817850349,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.004429877256541204,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": false,
+          "audited_phase_margin_gate_pass": false
+        },
+        "stage1_cm": {
+          "low_frequency_gain_db": 44.07914361219629,
+          "low_frequency_phase_deg": -179.99826164657344,
+          "unity_crossings": [
+            {
+              "frequency_hz": 6377210.5978407655,
+              "phase_deg": -54.20690253605867,
+              "phase_margin_deg": 125.79309746394134,
+              "direction": "down"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 125.79309746394134,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -179.99826164657344,
+          "low_frequency_negative_feedback_sign": false,
+          "high_frequency_upcrossing_absent": true,
+          "audited_phase_margin_gate_pass": false
+        },
+        "output_cm": {
+          "low_frequency_gain_db": 32.29169986467545,
+          "low_frequency_phase_deg": -0.0010052510421614243,
+          "unity_crossings": [
+            {
+              "frequency_hz": 6945005.407532958,
+              "phase_deg": -56.472056245656,
+              "phase_margin_deg": 123.527943754344,
+              "direction": "down"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 123.527943754344,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.0010052510421587613,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": true,
+          "audited_phase_margin_gate_pass": true
+        }
+      },
+      "4": {
+        "dm": {
+          "low_frequency_gain_db": 51.37190370067442,
+          "low_frequency_phase_deg": -0.007460659386236633,
+          "unity_crossings": [
+            {
+              "frequency_hz": 2203449.0794985876,
+              "phase_deg": -95.14242354957958,
+              "phase_margin_deg": 84.85757645042042,
+              "direction": "down"
+            },
+            {
+              "frequency_hz": 47100954.90740438,
+              "phase_deg": -280.14344536297375,
+              "phase_margin_deg": -100.14344536297375,
+              "direction": "up"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 84.85757645042042,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.007460659386225643,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": false,
+          "audited_phase_margin_gate_pass": false
+        },
+        "stage1_cm": {
+          "low_frequency_gain_db": 59.43369313086144,
+          "low_frequency_phase_deg": -179.98982137230513,
+          "unity_crossings": [
+            {
+              "frequency_hz": 6334374.113512014,
+              "phase_deg": -54.12893446401451,
+              "phase_margin_deg": 125.87106553598548,
+              "direction": "down"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 125.87106553598548,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -179.98982137230513,
+          "low_frequency_negative_feedback_sign": false,
+          "high_frequency_upcrossing_absent": true,
+          "audited_phase_margin_gate_pass": false
+        },
+        "output_cm": {
+          "low_frequency_gain_db": 37.47140458147506,
+          "low_frequency_phase_deg": -0.0018247378073472128,
+          "unity_crossings": [
+            {
+              "frequency_hz": 7118152.0203289585,
+              "phase_deg": -56.81374037394345,
+              "phase_margin_deg": 123.18625962605654,
+              "direction": "down"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 123.18625962605654,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.0018247378073397158,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": true,
+          "audited_phase_margin_gate_pass": true
+        }
+      },
+      "16": {
+        "dm": {
+          "low_frequency_gain_db": 44.488573863627295,
+          "low_frequency_phase_deg": -0.011285593319559912,
+          "unity_crossings": [
+            {
+              "frequency_hz": 748868.4574265939,
+              "phase_deg": -96.70034186031778,
+              "phase_margin_deg": 83.29965813968222,
+              "direction": "down"
+            },
+            {
+              "frequency_hz": 38894699.89589727,
+              "phase_deg": -280.54503691677616,
+              "phase_margin_deg": -100.54503691677616,
+              "direction": "up"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 83.29965813968222,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.011285593319570353,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": false,
+          "audited_phase_margin_gate_pass": false
+        },
+        "stage1_cm": {
+          "low_frequency_gain_db": 57.36086163042355,
+          "low_frequency_phase_deg": -0.008016214314826109,
+          "unity_crossings": [
+            {
+              "frequency_hz": 6314104.040307918,
+              "phase_deg": -54.08964319979307,
+              "phase_margin_deg": 125.91035680020693,
+              "direction": "down"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 125.91035680020693,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.008016214314835679,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": true,
+          "audited_phase_margin_gate_pass": true
+        },
+        "output_cm": {
+          "low_frequency_gain_db": 41.931391704691166,
+          "low_frequency_phase_deg": -0.0030491632796825555,
+          "unity_crossings": [
+            {
+              "frequency_hz": 7203057.527475143,
+              "phase_deg": -56.99947485406516,
+              "phase_margin_deg": 123.00052514593483,
+              "direction": "down"
+            }
+          ],
+          "minimum_downcrossing_phase_margin_deg": 123.00052514593483,
+          "phase_margin_gate_pass": true,
+          "low_frequency_phase_wrapped_deg": -0.003049163279683853,
+          "low_frequency_negative_feedback_sign": true,
+          "high_frequency_upcrossing_absent": true,
+          "audited_phase_margin_gate_pass": true
+        }
+      }
+    },
+    "formal_multiloop_stability_gate_pass": false,
+    "blocking_findings": [
+      "Stage-1 common-mode scalar return ratio begins near -180 degrees at gains 1 and 4, so the assumed negative-feedback sign is not demonstrated for every gain.",
+      "Every differential return-ratio trace crosses upward through 0 dB again between about 38.9 and 74.8 MHz; a first-downcrossing phase margin alone is insufficient.",
+      "The scalar injections leave the other loops closed and do not provide a return-difference determinant or an open-loop RHP-pole count for this coupled multi-loop circuit."
+    ]
+  },
+  "formal_stability_gate_pass": false,
+  "pvt_45_screen_allowed": false,
+  "pvt_45_screen_run": false,
+  "pvt_45_screen_skip_reason": "The formal multiloop stability prerequisite failed and the eight-diagnostic tuning budget is exhausted.",
+  "noise_qualified": false,
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "cadence_used": false,
+  "layout_drc_lvs_pex_complete": false,
+  "scope": "Pre-layout SKY130/ngspice evidence only. No native transient device noise, ADC SNDR, Cadence, PEX, full-chip, tapeout, or silicon claim."
+}

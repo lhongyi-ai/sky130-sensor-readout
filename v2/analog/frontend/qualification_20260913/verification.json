@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/repo/v2/analog/frontend/qualification_20260913",
+    "-p",
+    "test_qualification.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_reconstructed_admittance_from_nodal_system (test_qualification.MultiportChecks.test_reconstructed_admittance_from_nodal_system) ... ok\ntest_density_integral_matches_native_integrated_noise (test_qualification.NoiseAudit.test_density_integral_matches_native_integrated_noise) ... ok\ntest_bilateral_known_two_port (test_qualification.QualificationChecks.test_bilateral_known_two_port) ... ok\ntest_evidence_hashes_and_scope (test_qualification.QualificationChecks.test_evidence_hashes_and_scope) ... ok\ntest_no_source_candidate_mutation (test_qualification.QualificationChecks.test_no_source_candidate_mutation) ... ok\ntest_passive_two_port_gives_no_return (test_qualification.QualificationChecks.test_passive_two_port_gives_no_return) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.124s\n\nOK\n",
+  "scope": "Independent analytical conventions, model-data integrity, same-source checks and native noise integral agreement; no formal circuit signoff."
+}

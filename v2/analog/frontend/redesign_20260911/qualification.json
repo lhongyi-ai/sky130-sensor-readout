@@ -1,0 +1,340 @@
+{
+  "generated_utc": "2026-09-11T08:30:28.111495+00:00",
+  "status": "STATIC_THREE_GAIN_PASS__DYNAMIC_AND_STABILITY_FAIL",
+  "candidate_path": "candidate_01.spice",
+  "candidate_sha256": "2c36c23fb47036272a8dfe4a7fff6ee9101a9091fdcb1f13cb742880f257891e",
+  "selected_frozen_evidence": "diagnostics/06_20260911T082721717297Z_candidate_01",
+  "selected_evidence_manifest_verified": true,
+  "same_source_all_three_gains": true,
+  "gains": {
+    "1": {
+      "same_candidate_sha256": "2c36c23fb47036272a8dfe4a7fff6ee9101a9091fdcb1f13cb742880f257891e",
+      "source_resistance_ohm_per_side": 350,
+      "dc_points": 81,
+      "calibration_training_targets_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "independent_holdout_points": 78,
+      "calibration_coefficients": [
+        0.9544998686250525,
+        -1.5901298947486754e-13
+      ],
+      "max_independent_holdout_error_lsb": 0.11726359126157604,
+      "static_accuracy_limit_lsb": 1.0,
+      "max_output_common_mode_error_v": 0.0004088646109999816,
+      "output_endpoints_v": [
+        -0.41904363751359996,
+        0.4190436375137
+      ],
+      "static_gate_pass": true,
+      "frontend_vdd_vcm_power_w": {
+        "minimum_dc": 0.0005248172041246616,
+        "maximum_dc": 0.0005348977688795581
+      },
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.37271161005715,
+          "worst_target_v": -0.4
+        },
+        "xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.4211304911056,
+          "worst_target_v": -0.4
+        },
+        "xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.0998032978598,
+          "worst_target_v": -0.4
+        },
+        "xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9516056745449,
+          "worst_target_v": -0.4
+        },
+        "xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9036489308567,
+          "worst_target_v": -0.4
+        },
+        "xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5667117116219,
+          "worst_target_v": -0.4
+        },
+        "xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.01389683837566,
+          "worst_target_v": -0.4
+        },
+        "xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.0149090644530898,
+          "worst_target_v": -0.4
+        },
+        "xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.59586856377859,
+          "worst_target_v": -0.4
+        },
+        "xcms": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.38737703290074,
+          "worst_target_v": -0.4
+        },
+        "xcmr": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.33935053168712004,
+          "worst_target_v": -0.4
+        },
+        "xcmt": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.10958153135149998,
+          "worst_target_v": -0.4
+        }
+      },
+      "all_reported_key_devices_saturated_by_20mv": true,
+      "partial_first_cycle_only": {
+        "reference_window_s": [
+          1.6e-05,
+          1.9e-05
+        ],
+        "reference_mean_v": 0.37699703141292934,
+        "reference_peak_to_peak_v": 0.014474873629899965,
+        "reference_stability_limit_v": 4.8828125e-06,
+        "acquisition_measurement_time_s": 1.2466847754000001e-05,
+        "acquisition_error_v": -7.0546699317664e-05,
+        "post_aperture_30ns_error_v": -0.00012045653722941863,
+        "settling_limit_v": 4.8828125e-05,
+        "max_output_cm_error_before_second_input_edge_v": 0.012058520638699943,
+        "dynamic_gate_pass": false,
+        "why_false": "Reference ripple exceeds the frozen limit; G1 and G16 also exceed the acquisition-error limit."
+      }
+    },
+    "4": {
+      "same_candidate_sha256": "2c36c23fb47036272a8dfe4a7fff6ee9101a9091fdcb1f13cb742880f257891e",
+      "source_resistance_ohm_per_side": 350,
+      "dc_points": 81,
+      "calibration_training_targets_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "independent_holdout_points": 78,
+      "calibration_coefficients": [
+        0.9912459214421517,
+        -4.196289174226212e-12
+      ],
+      "max_independent_holdout_error_lsb": 0.01586952947491227,
+      "static_accuracy_limit_lsb": 1.0,
+      "max_output_common_mode_error_v": 0.0004089449839000947,
+      "output_endpoints_v": [
+        -0.40352942880310005,
+        0.4035294288069
+      ],
+      "static_gate_pass": true,
+      "frontend_vdd_vcm_power_w": {
+        "minimum_dc": 0.000524822596079931,
+        "maximum_dc": 0.0005259666452743722
+      },
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.38774922272279,
+          "worst_target_v": -0.4
+        },
+        "xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.40560301274669,
+          "worst_target_v": -0.4
+        },
+        "xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.1000445128978,
+          "worst_target_v": -0.4
+        },
+        "xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9364640877261999,
+          "worst_target_v": -0.4
+        },
+        "xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9187806909540001,
+          "worst_target_v": -0.4
+        },
+        "xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5840041397404,
+          "worst_target_v": -0.4
+        },
+        "xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9979181727966001,
+          "worst_target_v": -0.4
+        },
+        "xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.0083518622639,
+          "worst_target_v": -0.4
+        },
+        "xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.6048253921327,
+          "worst_target_v": -0.4
+        },
+        "xcms": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.38739326016496,
+          "worst_target_v": -0.4
+        },
+        "xcmr": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.33725929960551004,
+          "worst_target_v": -0.4
+        },
+        "xcmt": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.1095685179209,
+          "worst_target_v": -0.4
+        }
+      },
+      "all_reported_key_devices_saturated_by_20mv": true,
+      "partial_first_cycle_only": {
+        "reference_window_s": [
+          1.6e-05,
+          1.9e-05
+        ],
+        "reference_mean_v": 0.3632366602221778,
+        "reference_peak_to_peak_v": 0.010838502227799918,
+        "reference_stability_limit_v": 4.8828125e-06,
+        "acquisition_measurement_time_s": 1.2466847754000001e-05,
+        "acquisition_error_v": -9.391439579009564e-06,
+        "post_aperture_30ns_error_v": -2.2985510077733196e-05,
+        "settling_limit_v": 4.8828125e-05,
+        "max_output_cm_error_before_second_input_edge_v": 0.028132590669949997,
+        "dynamic_gate_pass": false,
+        "why_false": "Reference ripple exceeds the frozen limit; G1 and G16 also exceed the acquisition-error limit."
+      }
+    },
+    "16": {
+      "same_candidate_sha256": "2c36c23fb47036272a8dfe4a7fff6ee9101a9091fdcb1f13cb742880f257891e",
+      "source_resistance_ohm_per_side": 350,
+      "dc_points": 81,
+      "calibration_training_targets_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "independent_holdout_points": 78,
+      "calibration_coefficients": [
+        1.0050937854259268,
+        7.672332674267462e-12
+      ],
+      "max_independent_holdout_error_lsb": 0.019776017721824246,
+      "static_accuracy_limit_lsb": 1.0,
+      "max_output_common_mode_error_v": 0.00040898369855002503,
+      "output_endpoints_v": [
+        -0.39796896897010003,
+        0.39796896896409995
+      ],
+      "static_gate_pass": true,
+      "frontend_vdd_vcm_power_w": {
+        "minimum_dc": 0.0005248248065526261,
+        "maximum_dc": 0.0005250637190541745
+      },
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.39155224467238003,
+          "worst_target_v": -0.4
+        },
+        "xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.40169884255758004,
+          "worst_target_v": -0.4
+        },
+        "xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.1000942415895,
+          "worst_target_v": -0.4
+        },
+        "xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9326462241821999,
+          "worst_target_v": -0.4
+        },
+        "xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.922596463663,
+          "worst_target_v": -0.4
+        },
+        "xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5891005421550001,
+          "worst_target_v": -0.4
+        },
+        "xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.992961710617,
+          "worst_target_v": -0.4
+        },
+        "xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.0056960041175298,
+          "worst_target_v": -0.4
+        },
+        "xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.60772994645014,
+          "worst_target_v": -0.4
+        },
+        "xcms": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.38739495379777,
+          "worst_target_v": -0.4
+        },
+        "xcmr": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.33704124421194,
+          "worst_target_v": -0.4
+        },
+        "xcmt": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.10956715926820002,
+          "worst_target_v": -0.4
+        }
+      },
+      "all_reported_key_devices_saturated_by_20mv": true,
+      "partial_first_cycle_only": {
+        "reference_window_s": [
+          1.6e-05,
+          1.9e-05
+        ],
+        "reference_mean_v": 0.35806645866596754,
+        "reference_peak_to_peak_v": 0.004801498878300059,
+        "reference_stability_limit_v": 4.8828125e-06,
+        "acquisition_measurement_time_s": 1.2466847754000001e-05,
+        "acquisition_error_v": 0.0009170681220533883,
+        "post_aperture_30ns_error_v": 0.0009117521317324462,
+        "settling_limit_v": 4.8828125e-05,
+        "max_output_cm_error_before_second_input_edge_v": 0.023738324624899998,
+        "dynamic_gate_pass": false,
+        "why_false": "Reference ripple exceeds the frozen limit; G1 and G16 also exceed the acquisition-error limit."
+      }
+    }
+  },
+  "all_three_gain_static_gate_pass": true,
+  "all_three_gain_power_gate_pass": true,
+  "all_three_gain_reported_device_region_gate_pass": true,
+  "all_three_gain_dynamic_gate_pass": false,
+  "differential_loop_phase_margin_measured": false,
+  "common_mode_loop_phase_margin_measured": false,
+  "formal_stability_gate_pass": false,
+  "real_sampler_used": true,
+  "sampler_path": "sampling_switch.spice",
+  "sample_capacitor_units_per_side": 4096,
+  "acquisition_window_s": 2.476847754e-06,
+  "transient_completed": false,
+  "recorded_transient_stop_s": 2.801e-05,
+  "transient_failure": "ngspice timestep-too-small at the third reset edge after two input cycles; first-cycle waveforms already fail the frozen quiet-reference gate.",
+  "nominal_frontend_prerequisites_pass": false,
+  "pvt_45_screen_allowed": false,
+  "pvt_45_screen_run": false,
+  "physical_layoutability_gate_pass": false,
+  "physical_layoutability_issue": {
+    "device": "two 1.2 kohm Miller nulling resistors",
+    "model": "sky130_fd_pr__res_high_po_0p35",
+    "netlist_length_um": 0.2406847935548842,
+    "pdk_pcell_minimum_length_um": 0.5,
+    "resolution": "This stopped candidate is not silently rounded. A future candidate must use a wider/lower-value PDK resistor option or at least the minimum legal geometry, then be re-simulated."
+  },
+  "feedback_network_physical_estimate": {
+    "resistor_width_um": 0.35,
+    "rin_10k_length_um_each": 9.102719033232628,
+    "rf_10p35k_length_um_each": 9.455186304128903,
+    "rf_41p4k_length_um_each": 40.72406847935549,
+    "rf_165p6k_length_um_each": 165.79959718026183,
+    "maximum_single_feedback_resistor_active_body_area_um2": 58.02985901309164,
+    "g1_differential_sensor_load_ohm_approx": 20700,
+    "g1_full_scale_current_per_input_leg_a_approx": 1.932367149758454e-05,
+    "scope": "Active resistor body only; contacts, end effects, spacing, guard rings, routing and switches increase final layout area."
+  },
+  "noise_reused_from_old_candidate": false,
+  "noise_qualified": false,
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "scope": "Pre-layout schematic-level SKY130 device evidence only. Not Cadence, not PEX, not full ADC, not silicon."
+}

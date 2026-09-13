@@ -1,0 +1,188 @@
+{
+  "policy": "Explicit migration choice: widths rounded to 0.01 um; not a claimed PDK minimum grid.",
+  "source": "reference/ota_subckt.spice",
+  "evidence": "reference/p1_m8_diagnose.txt",
+  "devices": [
+    {
+      "device": "M8",
+      "original_w_um": "7.22005",
+      "cadence_w_um": "7.22",
+      "instances": [
+        "M8"
+      ],
+      "unit_w_um": "7.22",
+      "delta_um": "-0.00005",
+      "relative_change": -6.92515979806234e-06,
+      "length_um": "0.8",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "M8 width 7.22u accepted in returned diagnostic"
+    },
+    {
+      "device": "M9",
+      "original_w_um": "7.22005",
+      "cadence_w_um": "7.22",
+      "instances": [
+        "M9"
+      ],
+      "unit_w_um": "7.22",
+      "delta_um": "-0.00005",
+      "relative_change": -6.92515979806234e-06,
+      "length_um": "0.8",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M10",
+      "original_w_um": "8.08605",
+      "cadence_w_um": "8.09",
+      "instances": [
+        "M10"
+      ],
+      "unit_w_um": "8.09",
+      "delta_um": "0.00395",
+      "relative_change": 0.0004884956189981512,
+      "length_um": "0.8",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M1",
+      "original_w_um": "16.83798",
+      "cadence_w_um": "16.84",
+      "instances": [
+        "M1"
+      ],
+      "unit_w_um": "16.84",
+      "delta_um": "0.00202",
+      "relative_change": 0.00011996688438874497,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M2",
+      "original_w_um": "16.83798",
+      "cadence_w_um": "16.84",
+      "instances": [
+        "M2"
+      ],
+      "unit_w_um": "16.84",
+      "delta_um": "0.00202",
+      "relative_change": 0.00011996688438874497,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M3A",
+      "original_w_um": "25",
+      "cadence_w_um": "25",
+      "instances": [
+        "M3A"
+      ],
+      "unit_w_um": "25",
+      "delta_um": "0.00",
+      "relative_change": 0.0,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M3B",
+      "original_w_um": "25",
+      "cadence_w_um": "25",
+      "instances": [
+        "M3B"
+      ],
+      "unit_w_um": "25",
+      "delta_um": "0.00",
+      "relative_change": 0.0,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M4A",
+      "original_w_um": "25",
+      "cadence_w_um": "25",
+      "instances": [
+        "M4A"
+      ],
+      "unit_w_um": "25",
+      "delta_um": "0.00",
+      "relative_change": 0.0,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M4B",
+      "original_w_um": "25",
+      "cadence_w_um": "25",
+      "instances": [
+        "M4B"
+      ],
+      "unit_w_um": "25",
+      "delta_um": "0.00",
+      "relative_change": 0.0,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M5",
+      "original_w_um": "25.8754",
+      "cadence_w_um": "25.88",
+      "instances": [
+        "M5"
+      ],
+      "unit_w_um": "25.88",
+      "delta_um": "0.0046",
+      "relative_change": 0.00017777502956476036,
+      "length_um": "0.8",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M6",
+      "original_w_um": "8.83907427041",
+      "cadence_w_um": "8.84",
+      "instances": [
+        "M6"
+      ],
+      "unit_w_um": "8.84",
+      "delta_um": "0.00092572959",
+      "relative_change": 0.00010473150939561684,
+      "length_um": "0.5",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    },
+    {
+      "device": "M7",
+      "original_w_um": "72.2005",
+      "cadence_w_um": "72.2",
+      "instances": [
+        "M7A",
+        "M7B"
+      ],
+      "unit_w_um": "36.1",
+      "delta_um": "-0.0005",
+      "relative_change": -6.92515979806234e-06,
+      "length_um": "0.8",
+      "fingers": 1,
+      "m": 1,
+      "evidence": "Pending Linux CDF validation"
+    }
+  ]
+}

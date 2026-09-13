@@ -1,0 +1,314 @@
+{
+  "status": "BOUNDED_LOCAL_PROGRESS_FULL_ADC_INCOMPLETE",
+  "source_snapshot_sha256": "c56d73553dcffcab20cb9b7347be23f79a572eb822293e39c74b9b2114aa7cbf",
+  "support_helper_manifest_sha256": "0d3318339ecb3db63861fac145561a20e0722bcf0b5937d2628608d9d027b99c",
+  "runs": [
+    {
+      "status": "CONTINUOUS_12_FRAME_FUNCTIONAL_PASS",
+      "profile": "baseline",
+      "wall_seconds": 393.552834800008,
+      "returncode": 0,
+      "rows": 192044,
+      "accepted_decisions": 144,
+      "checks": {
+        "all_frames_bus_log_comparator_agree": true,
+        "all_144_decisions_valid": true,
+        "all_status_checks_pass": true,
+        "valid_times_within_1ns": true,
+        "eval_times_within_1ns": true
+      },
+      "stop_us": 122.0,
+      "interval_max_deviation_ns": 4.820464502824223e-08,
+      "path": "results/20260913T061717802984Z_baseline/summary.json",
+      "sha256": "4bd536b205c3da519fddf39d07cbfce5031ef5119a774c76163e22ef85035410",
+      "codes": [
+        5,
+        4090,
+        2047,
+        2048,
+        100,
+        3995,
+        1601,
+        3000,
+        1907,
+        2203,
+        2557,
+        3311
+      ],
+      "waveform_bytes": 188396145,
+      "engine": {
+        "Total analysis time (seconds)": 385.541,
+        "Matrix load time": 238.348,
+        "Matrix factor time": 68.1883,
+        "Matrix solve time": 30.5964,
+        "Circuit Equations": 3703.0,
+        "Accepted timepoints": 192044.0,
+        "Rejected timepoints": 46422.0
+      }
+    },
+    {
+      "status": "CONTINUOUS_12_FRAME_FUNCTIONAL_PASS",
+      "profile": "strict",
+      "wall_seconds": 839.9443035699951,
+      "returncode": 0,
+      "rows": 401377,
+      "accepted_decisions": 144,
+      "checks": {
+        "all_frames_bus_log_comparator_agree": true,
+        "all_144_decisions_valid": true,
+        "all_status_checks_pass": true,
+        "valid_times_within_1ns": true,
+        "eval_times_within_1ns": true
+      },
+      "stop_us": 122.0,
+      "interval_max_deviation_ns": 2.9895180840393276e-08,
+      "path": "results/20260913T062420206403Z_strict/summary.json",
+      "sha256": "dcd6ef179ececca1c18da2370b95559f6c3a5a05bdb337bb96b448d88982b3e8",
+      "codes": [
+        5,
+        4090,
+        2047,
+        2048,
+        100,
+        3995,
+        1601,
+        3000,
+        1907,
+        2203,
+        2557,
+        3311
+      ],
+      "waveform_bytes": 393751818,
+      "engine": {
+        "Total analysis time (seconds)": 826.585,
+        "Matrix load time": 509.62,
+        "Matrix factor time": 144.305,
+        "Matrix solve time": 64.0234,
+        "Circuit Equations": 3703.0,
+        "Accepted timepoints": 401377.0,
+        "Rejected timepoints": 63455.0
+      }
+    }
+  ],
+  "numerical_comparison": {
+    "status": "NUMERICAL_CONVERGENCE_FAIL",
+    "checks": {
+      "all_waveforms_le_0_05lsb": false,
+      "all_predecision_le_0_05lsb": true,
+      "same_codes": true
+    },
+    "threshold_lsb": 0.05,
+    "threshold_v": 9.765625000000002e-06,
+    "channels": {
+      "cdac_differential": {
+        "union_grid_max_error_v": 0.04839334379821891,
+        "union_grid_max_error_lsb": 247.77392024688083,
+        "worst_time_s": 1.352664021822e-05,
+        "common_1ns_max_error_v": 0.004076773191434069,
+        "predecision_max_error_v": 1.337638422249654e-08
+      },
+      "rp": {
+        "union_grid_max_error_v": 1.6261222393065822e-06,
+        "union_grid_max_error_lsb": 0.0083257458652497,
+        "worst_time_s": 4.352686928178e-05,
+        "common_1ns_max_error_v": 1.5438980762727539e-06,
+        "predecision_max_error_v": 6.000089314284196e-12
+      },
+      "rn": {
+        "union_grid_max_error_v": 1.6056483822524115e-06,
+        "union_grid_max_error_lsb": 0.008220919717132347,
+        "worst_time_s": 4.352686928178e-05,
+        "common_1ns_max_error_v": 1.5372878082731134e-06,
+        "predecision_max_error_v": 5.294764626739834e-12
+      },
+      "vcm": {
+        "union_grid_max_error_v": 1.638155648908679e-07,
+        "union_grid_max_error_lsb": 0.0008387356922412437,
+        "worst_time_s": 1.026182573843e-06,
+        "common_1ns_max_error_v": 6.162248333829723e-08,
+        "predecision_max_error_v": 0.0
+      }
+    },
+    "reference": "/repo/v2/analog/adc/qualification_20260913/results/20260913T061717802984Z_baseline",
+    "candidate": "/repo/v2/analog/adc/qualification_20260913/results/20260913T062420206403Z_strict",
+    "summary_sha256": [
+      "4bd536b205c3da519fddf39d07cbfce5031ef5119a774c76163e22ef85035410",
+      "dcd6ef179ececca1c18da2370b95559f6c3a5a05bdb337bb96b448d88982b3e8"
+    ],
+    "scope": "12 frames at TT only; union accepted-point linear interpolation, not continuous-time proof",
+    "complete_adc_qualified": false,
+    "long_campaign_allowed": false
+  },
+  "gate": {
+    "long_campaign_allowed": false,
+    "bounded_numerical_status": "NUMERICAL_CONVERGENCE_FAIL",
+    "reason": "No complete numerical campaign qualification certificate exists. A finite functional pass cannot qualify a long all-code sweep.",
+    "required_full_grid": 131073,
+    "complete_adc_qualified": false
+  },
+  "solver_probes": [
+    {
+      "status": "OPERATING_POINT_PROBE_ONLY",
+      "returncode": 0,
+      "wall_seconds": 3.0211305269913282,
+      "transient_requested": false,
+      "speedup_measured": false,
+      "complete_adc_qualified": false,
+      "solver_related_messages": [
+        "** Compiled with KLU Direct Linear Solver",
+        "Using KLU as Direct Linear Solver",
+        "KLU",
+        "Truncation error correction, charge based, is selected:"
+      ],
+      "snapshot_sha256": "c56d73553dcffcab20cb9b7347be23f79a572eb822293e39c74b9b2114aa7cbf",
+      "runner_sha256": "8c22b42ad3aee774581b441b3745ccf8693d4052a428896497c5114177febd9b",
+      "official_option_reference": "https://ngspice.sourceforge.io/applic.html",
+      "artifact_sha256": {
+        "probe.log": "185635d7f5552a172cc29a7acdd529739712f8932ec88f94a8670ecd489902cf",
+        "probe.spice": "62304b85fbf7c81c9be005a9341a212b719e17d2686809ded61333c5f08eca51",
+        "native.log": "5f622e39cdb7753cc2174eac1da7a719cda141610a5caa67fd828443c4f30192",
+        ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1"
+      },
+      "summary_path": "solver_probe/20260913T063853964721Z/summary.json",
+      "summary_sha256": "0bce4994569e97e1200e4feb9c3fb5c4cfc21db7ab5feef118d6b4d090d98615"
+    }
+  ],
+  "validation": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/repo/v2/analog/adc/qualification_20260913",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "log": "validation/20260913T064204030977Z/check_0.log",
+      "log_sha256": "25d432a1bdaa5f14eccb679d40fbd52de82837a918489ee0c80b3aa317b9a77a"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/repo/v2/analog/adc/qualification_20260913/campaign.py",
+        "run"
+      ],
+      "returncode": 2,
+      "expected_returncode": 2,
+      "log": "validation/20260913T064204030977Z/check_1.log",
+      "log_sha256": "74a34a6661ca091267583dea7e9c45e8e91adee77cdace30f5ac77cdc650717a"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/repo/v2/analog/adc/qualification_20260913/campaign.py",
+        "collect"
+      ],
+      "returncode": 2,
+      "expected_returncode": 2,
+      "log": "validation/20260913T064204030977Z/check_2.log",
+      "log_sha256": "dce9ad701434aa8d3f8051a1fdf346dbfb350e6c6c3a2e4f272dd41b17f41dc4"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/repo/v2/analog/adc/qualification_20260913/run_checked.py",
+        "check"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "log": "validation/20260913T064204030977Z/check_3.log",
+      "log_sha256": "1a5725c2ae7c228153ac259cc011025482733ae8b2ba5c20f26c8b8f3457f40a"
+    }
+  ],
+  "historical_mismatch_audit": [
+    {
+      "file": "/repo/v2/analog/adc/results/cdac_mismatch_summary.json",
+      "file_sha256": "727ea16ee8c5d66b0f3c928f489218dd5a5992f5c9ec4ce99a8ec2a7df09c459",
+      "historical_summary": {
+        "evidence_level": "PDK MIM mismatch -> charge-conservation CDAC-only static prediction; NOT full ADC MC",
+        "corner": "tt_mm",
+        "seed": 1309026,
+        "independent_array_samples": 200,
+        "banks_per_array_pair": 26,
+        "matched_units_per_bank": "m=COUNT mult=COUNT; independently qualified root semantics",
+        "pass_count": 200,
+        "fail_count": 0,
+        "worst_inl_lsb": 0.10205869632980658,
+        "worst_min_dnl_lsb": -0.1633748851543828,
+        "worst_max_dnl_lsb": 0.1945355976524752,
+        "exclusions": [
+          "Comparator mismatch/noise",
+          "Switch mismatch/charge injection",
+          "Reference driver",
+          "Spatial gradients",
+          "Extracted parasitics",
+          "PGA mismatch",
+          "Whole-chip yield"
+        ],
+        "source_sha256": "220f65a28843e08fa5a33b2f6fe106f970c8cac103d1e582ffd8b15598f1b6ad"
+      },
+      "adc_blocks_hash_matches_composite": false,
+      "whole_adc_mismatch_evidence": false
+    },
+    {
+      "file": "/repo/v2/analog/adc/results/comparator_mismatch_summary.json",
+      "file_sha256": "40fdfc4471e7b2a9b991ca69133860a25269222bb04811572bea02f9ee1c5728",
+      "historical_summary": {
+        "evidence_level": "200 actual PDK tt_mm dynamic-comparator instances; finite staircase input-offset brackets, NOT whole ADC MC",
+        "nominal_vdd": 1.8,
+        "nominal_temperature_c": 27,
+        "sample_count": 200,
+        "comparisons": 1400,
+        "source_resistance_ohm": 350,
+        "input_capacitance_f": 8.128512e-11,
+        "output_load_f": 5e-15,
+        "resolved_sample_count": 200,
+        "monotonic_sample_count": 200,
+        "bracketed_sample_count": 143,
+        "smallest_bracket_v": 0.00025,
+        "largest_bracket_v": 0.002,
+        "limitations": [
+          "Offset midpoint is a bounded estimate, not a high-resolution measurement",
+          "No stochastic transient device noise; mismatch is not noise",
+          "No whole-ADC yield or calibration pass assertion",
+          "Only nominal VDD/temperature in this screen"
+        ],
+        "source_sha256": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591"
+      },
+      "adc_blocks_hash_matches_composite": true,
+      "whole_adc_mismatch_evidence": false
+    }
+  ],
+  "physical_dependency": {
+    "qualification": "/repo/v2/analog/adc/cdac_pex_linearity_20260911/qualification.json",
+    "sha256": "0e32c313978376eeb9e67de697b8688b4a8dd9856c8a5c5d91537baab2e73a71",
+    "status": "CDAC_PEX_STATIC_LINEARITY_FAIL_NONMONOTONIC",
+    "scope": "existing routed CDAC static PEX dependency; not changed here"
+  },
+  "full_static_grid_completed_points": 0,
+  "fft_completed_record_samples": 0,
+  "whole_adc_mismatch_samples_completed": 0,
+  "complete_adc_qualified": false,
+  "spectre_or_school_host_qualified": false,
+  "binary_abi": {
+    "format": "ELF64 little endian",
+    "e_machine": 183,
+    "architecture": "AArch64",
+    "os_qualified_here": "Linux",
+    "x86_64_school_binary_compatible": false,
+    "required_next_step": "rebuild corrected bridge on school architecture and qualify short live handshake/conversion case"
+  },
+  "measured_cost_extrapolation": {
+    "basis": "slowest completed 12-frame run; one run/profile under current machine load, not a guaranteed bound",
+    "seconds_per_conversion": 69.99535863083292,
+    "continuous_131073_points_days": 106.18636159512921,
+    "ramp_batch8_including_warmup_and_history_days": 225.64591712321638,
+    "single_16384_plus_256_warmup_record_days": 13.480587588160414,
+    "unchanged_waveform_storage_for_131073_conversions_bytes": 4300852670059.5
+  }
+}

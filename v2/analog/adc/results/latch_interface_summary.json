@@ -1,0 +1,159 @@
+{
+  "evidence_level": "SKY130 transistor comparator plus static CMOS SR latch; deterministic schematic",
+  "output_load_f": 5e-15,
+  "cases": [
+    {
+      "name": "latch_tt_1.8_27_-1",
+      "corner": "tt",
+      "vdd": 1.8,
+      "temp": 27,
+      "sign": -1,
+      "cycles": [
+        {
+          "cycle": 0,
+          "resolution_delay_s": 1.0000000000000222e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 5.548379964869393e-14,
+          "equivalent_clock_load_f": 3.082433313816329e-14
+        },
+        {
+          "cycle": 1,
+          "resolution_delay_s": 4.920813606099989e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 5.4779591238268916e-14,
+          "equivalent_clock_load_f": 3.043310624348273e-14
+        }
+      ]
+    },
+    {
+      "name": "latch_tt_1.8_27_1",
+      "corner": "tt",
+      "vdd": 1.8,
+      "temp": 27,
+      "sign": 1,
+      "cycles": [
+        {
+          "cycle": 0,
+          "resolution_delay_s": 4.929332878399997e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 5.548399377902171e-14,
+          "equivalent_clock_load_f": 3.082444098834539e-14
+        },
+        {
+          "cycle": 1,
+          "resolution_delay_s": 4.91823846429998e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 5.477968653501242e-14,
+          "equivalent_clock_load_f": 3.043315918611801e-14
+        }
+      ]
+    },
+    {
+      "name": "latch_ss_1.62_85_-1",
+      "corner": "ss",
+      "vdd": 1.62,
+      "temp": 85,
+      "sign": -1,
+      "cycles": [
+        {
+          "cycle": 0,
+          "resolution_delay_s": 1.0000000000000222e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 4.871842398102902e-14,
+          "equivalent_clock_load_f": 3.0073101222857417e-14
+        },
+        {
+          "cycle": 1,
+          "resolution_delay_s": 8.231190894199914e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 4.813883638430004e-14,
+          "equivalent_clock_load_f": 2.9715331101419776e-14
+        }
+      ]
+    },
+    {
+      "name": "latch_ss_1.62_85_1",
+      "corner": "ss",
+      "vdd": 1.62,
+      "temp": 85,
+      "sign": 1,
+      "cycles": [
+        {
+          "cycle": 0,
+          "resolution_delay_s": 8.230521453000022e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 4.871842429674623e-14,
+          "equivalent_clock_load_f": 3.007310141774458e-14
+        },
+        {
+          "cycle": 1,
+          "resolution_delay_s": 8.225348024799987e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 4.813883612084062e-14,
+          "equivalent_clock_load_f": 2.97153309387905e-14
+        }
+      ]
+    },
+    {
+      "name": "latch_ff_1.98_-20_-1",
+      "corner": "ff",
+      "vdd": 1.98,
+      "temp": -20,
+      "sign": -1,
+      "cycles": [
+        {
+          "cycle": 0,
+          "resolution_delay_s": 1.0000000000000222e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 6.265492208377907e-14,
+          "equivalent_clock_load_f": 3.1643900042312665e-14
+        },
+        {
+          "cycle": 1,
+          "resolution_delay_s": 3.327918371400001e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 6.204212233538795e-14,
+          "equivalent_clock_load_f": 3.133440521989291e-14
+        }
+      ]
+    },
+    {
+      "name": "latch_ff_1.98_-20_1",
+      "corner": "ff",
+      "vdd": 1.98,
+      "temp": -20,
+      "sign": 1,
+      "cycles": [
+        {
+          "cycle": 0,
+          "resolution_delay_s": 3.324744091800011e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 6.265661434418421e-14,
+          "equivalent_clock_load_f": 3.164475471928496e-14
+        },
+        {
+          "cycle": 1,
+          "resolution_delay_s": 3.3268427033999788e-09,
+          "resolve_250ns_pass": true,
+          "reset_hold_5ns_and_beyond_pass": true,
+          "evaluate_edge_charge_c": 6.204237902035365e-14,
+          "equivalent_clock_load_f": 3.1334534858764465e-14
+        }
+      ]
+    }
+  ],
+  "all_pass": true,
+  "max_clock_equivalent_cap_f": 3.164475471928496e-14,
+  "max_resolution_delay_s": 8.231190894199914e-09
+}

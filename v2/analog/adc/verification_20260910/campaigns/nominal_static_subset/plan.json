@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-10T06:24:32.348991+00:00",
+  "stage": "smoke",
+  "steps_per_lsb": 32,
+  "input_v": [
+    0.123,
+    -4.8828125e-05,
+    4.8828125e-05
+  ],
+  "required_points": 3,
+  "batch_size": 1,
+  "warmup_conversions": 0,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temperature_c": 27,
+  "source_ohm_per_leg": 350,
+  "reference_ohm": 1,
+  "reference_external_cap_nf": 10,
+  "reference_cm_mode": "tracking",
+  "input_cm_offset_mv": 0,
+  "numeric_profile": "baseline",
+  "numeric": {
+    "reltol": "1e-5",
+    "abstol": "1e-13",
+    "vntol": "1e-8",
+    "maxstep_ns": 2
+  },
+  "sources": {
+    "sensor_adc_candidate.spice": {
+      "source": "integration/candidates/20260908T045601001817Z/sensor_adc_candidate.spice",
+      "sha256": "94c047a1f664ffa001c1588c5cfefe85fc5d09f42dd2705a7dade21f332acf6d"
+    },
+    "adc_blocks.spice": {
+      "source": "integration/candidates/20260908T045601001817Z/adc_blocks.spice",
+      "sha256": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591"
+    },
+    "adc_preamp.spice": {
+      "source": "integration/candidates/20260908T045601001817Z/adc_preamp.spice",
+      "sha256": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782"
+    },
+    "adc_reference_candidate.spice": {
+      "source": "integration/candidates/20260908T045601001817Z/adc_reference_candidate.spice",
+      "sha256": "5813ab5f1c959f5b0d6ac44473d929259c45d534dff785263e667be963283442"
+    },
+    "adc_tgate_dual_lvt_dummy.spice": {
+      "source": "integration/candidates/20260908T045601001817Z/adc_tgate_dual_lvt_dummy.spice",
+      "sha256": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734"
+    },
+    "cosim_controller.v": {
+      "source": "integration/cosim_controller.v",
+      "sha256": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883"
+    },
+    "qualify_cosim.py": {
+      "source": "integration/qualify_cosim.py",
+      "sha256": "d44c318acf045215981511641481025d7c841a28fa018d3e148bb99f5bc86b2c"
+    },
+    "sensor_phases.spice": {
+      "source": "integration/sensor_phases.spice",
+      "sha256": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462"
+    },
+    "sar_controller.v": {
+      "source": "rtl/sar_controller.v",
+      "sha256": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+    },
+    "static_campaign.py": {
+      "source": "analog/adc/verification_20260910/static_campaign.py",
+      "sha256": "3b5a508a872560fcb2f56e97fea070540b473f9c6645e1334be67a8f1b3f4624"
+    },
+    "bridge_qualification.json": {
+      "source": "integration/results/bridge_1.8v_qualification.json",
+      "sha256": "256cd0f18ae04f8dba9ffa21b15a6a96292c1f4c06220ba398cbe1cc6f4473c1"
+    }
+  },
+  "candidate": "20260908T045601001817Z composite LVT references + four-MOS dummy top clamps + preamp",
+  "signal_bandwidth_scope": "static DC; input steps are testbench settling/history stimuli, not a dynamic SNDR test",
+  "complete_adc_qualified": false,
+  "plan_sha256": "163468ac4ba13582a2f995c64eff525ddb09c97a17bb30f696e971ef374794a5"
+}

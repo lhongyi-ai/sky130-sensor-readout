@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+"""Two bounded native closed-loop pole trials; never an unconditional stability gate."""
+import hashlib
+import argparse
+import json
+import os
+from pathlib import Path
+import re
+import resource
+import shutil
+import subprocess
+import time
+
+HERE=Path(__file__).resolve().parent
+SOURCE=HERE.parent/'results/20260910T062811944809Z_cascoded_tail_g16/candidate.spice'
+PDK=Path('/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice')
+
+
+def no_core_dump():resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--gains',type=int,nargs='+',choices=[1,16],default=[1,16]);args=parser.parse_args()
+    tag=time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())
+    out=HERE/'results'/tag;out.mkdir(parents=True)
+    shutil.copyfile(__file__,out/'probe.py.snapshot')
+    results=[]
+    for gain in args.gains:
+        case=out/f'g{gain}';case.mkdir()
+        frozen=case/'candidate.spice';shutil.copyfile(SOURCE,frozen)
+        deck=f'''Native full-device closed-loop pole audit, G={gain}
+.lib {PDK} tt
+.include {frozen}
+.temp 27
+.param mc_mm_switch=0 mc_pr_switch=0
+.options sparse reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=200 itl2=200
+VDD vdd 0 1.8
+VCM vcm 0 .9
+VIP sp 0 .9
+VIN sn 0 .9
+RSP sp ip 350
+RSN sn inn 350
+VSEL0 sel0 0 0
+VSEL1 sel1 0 {0 if gain==1 else 1.8}
+XDRV ip inn fp fn vdd 0 vcm sel0 sel1 sky130_v2_switchable_sample_driver RISO=2600
+* Static ADC load: qualified 4096 x 3um-square MIM bank, 81.28512pF/leg.
+* Both m and mult are required by the original PDK bank construction.
+XLP fp 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=4096 mult=4096
+XLN fn 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=4096 mult=4096
+.control
+set num_threads=1
+set numdgt=17
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+version
+op
+wrdata {case/'operating_point.tsv'} v(fp) v(fn) v(xdrv.corep) v(xdrv.coren) v(xdrv.xpga.xamp.cmctl) i(vdd)
+* Single-ended driving-point impedance excites both even/common and odd/diff modes.
+* It does not place an ideal voltage source across an existing powered input.
+pz fp 0 fp 0 cur pol
+print all
+write {case/'poles.raw'} all
+quit
+.endc
+.end
+'''
+        (case/'bench.spice').write_text(deck)
+        start=time.monotonic();timed_out=False
+        env=dict(os.environ,OMP_NUM_THREADS='1',SPICE_USERINIT_DIR='/foss/pdks/sky130A/libs.tech/ngspice')
+        try:
+            process=subprocess.run(['ngspice','-b',str(case/'bench.spice')],cwd=case,env=env,
+                 text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=120,preexec_fn=no_core_dump)
+            code=process.returncode;log=process.stdout
+        except subprocess.TimeoutExpired as error:
+            code=None;timed_out=True;log=error.stdout or b''
+            if isinstance(log,bytes):log=log.decode(errors='replace')
+        (case/'console.txt').write_text(log)
+        (case/'run.json').write_text(json.dumps({'returncode':code,'timeout':timed_out,'elapsed_s':time.monotonic()-start})+'\n')
+        poles=[]
+        number=r'[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?'
+        for match in re.finditer(r'pole\((\d+)\)\s*=\s*('+number+r')(?:\s*,\s*('+number+r'))?',log):
+            poles.append({'index':int(match.group(1)),'real_per_s':float(match.group(2)),
+                          'imag_rad_per_s':float(match.group(3) or 0)})
+        rhp=[p for p in poles if p['real_per_s']>0]
+        flags=[line for line in log.splitlines() if any(k in line.lower() for k in ['error','failed','not supported','convergence','warning'])]
+        status=('TIMEOUT_INCOMPLETE' if timed_out else 'NATIVE_PZ_FAILED_OR_UNAVAILABLE' if code or not poles
+                else 'RHP_POLE_FOUND_REQUIRES_CONFIRMATION' if rhp else 'ONLY_REPORTED_POLES_LHP_NOT_COMPLETE_STABILITY_PROOF')
+        result={'gain':gain,'status':status,'returncode':code,'timeout':timed_out,
+                'elapsed_s':time.monotonic()-start,'pole_count':len(poles),'poles':poles,
+                'rhp_poles':rhp,'diagnostics':flags,'source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
+                'bench_sha256':hashlib.sha256(deck.encode()).hexdigest(),
+                'complete_stability_qualified':False}
+        (case/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
+        results.append(result)
+        print(json.dumps(result),flush=True)
+    summary={'status':'BOUNDED_NATIVE_POLE_AUDIT_NOT_STABILITY_QUALIFICATION','created_utc':tag,
+             'source':str(SOURCE),'source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
+             'pdk_sha256':hashlib.sha256(PDK.read_bytes()).hexdigest(),'pdk_resolved_path':str(PDK.resolve()),
+             'port':{'excitation':'current at fp to ground','observation':'voltage fp to ground','analysis':'pz fp 0 fp 0 cur pol'},
+             'conditions':{'corner':'tt','vdd_v':1.8,'temperature_c':27,'input_cm_v':.9,'input_diff_v':0,
+                           'source_resistance_each_ohm':350,'pdk_isolation_resistance_each_ohm':2600,
+                           'internal_filter_nominal_pf':4,'external_static_mim_bank_each_pf':81.28512},
+             'gains':results,'complete_stability_qualified':False,
+             'limitations':['Only one biased linearization, not large-signal/startup/clocked load behavior.',
+                 'Single-ended port excites DM and CM but cannot certify every internal state is observable/controllable.',
+                 'Pole-zero cancellations, singular descriptor modes, numerical failures and missed roots remain possible.',
+                 'No returned RHP pole is not a full closed-loop stability proof.',
+                 'No extracted top-level parasitics, PVT or mismatch coverage in this bounded trial.'],
+             'official_reference':'https://ngspice.sourceforge.io/docs/ngspice-manual.pdf'}
+    (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+    (HERE/'latest.json').write_text(json.dumps({'path':str((out/'summary.json').relative_to(HERE)),
+        'sha256':hashlib.sha256((out/'summary.json').read_bytes()).hexdigest()},indent=2)+'\n')
+
+
+if __name__=='__main__':main()

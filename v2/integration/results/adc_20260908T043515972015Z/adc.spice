@@ -1,0 +1,85 @@
+SKY130 ADC real-transistor / unchanged-RTL mixed simulation; transistor phases
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include adc_blocks.spice
+.include adc_analog12_bottom_preamp.spice
+.include sensor_phases.spice
+.include adc_preamp.spice
+.temp 27
+.options reltol=1e-4 abstol=1e-12 vntol=1e-7 method=gear
+VDD vdd 0 1.8
+VVCM vcm_ideal 0 0.9
+VVRP rp_ideal 0 1.1
+VVRN rn_ideal 0 0.7
+RRP rp_ideal rp_local 1.0
+RRN rn_ideal rn_local 1.0
+RVCM vcm_ideal vcm_local 1.0
+CRP rp_local 0 10.0n
+CRN rn_local 0 10.0n
+CVCM vcm_local 0 10.0n
+VPORTP rp_local rp 0
+VPORTN rn_local rn 0
+VPORTCM vcm_local vcm 0
+VINP vinp 0 0.74
+VINN vinn 0 1.06
+RINP vinp sensorp 350
+RINN vinn sensorn 350
+VLINKP sensorp inp 0
+VLINKN sensorn inn 0
+Vclk clk 0 PULSE(0 1.8 1u 1n 1n 311.5n 625n)
+Vrst rst 0 PWL(0 0 200n 0 201n 1.8)
+Vstart start 0 PWL(0 0 800n 0 801n 1.8)
+Vg1 gain_sel1 0 0.0
+Vg0 gain_sel0 0 0.0
+Ainputs [clk rst start gain_sel1 gain_sel0 decision] [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] logic_in
+.model logic_in adc_bridge(in_low=0.45 in_high=1.35)
+Asar [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] null sar_model
+.model sar_model d_cosim simulation="/repo/v2/integration/results/adc_20260908T043515972015Z/cosim_controller.so"
+Aoutputs [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] [ready busy valid data11 data10 data9 data8 data7 data6 data5 data4 data3 data2 data1 data0 dgain1 dgain0 gain1 gain0 sample trial11 trial10 trial9 trial8 trial7 trial6 trial5 trial4 trial3 trial2 trial1 trial0 evaluate] logic_out
+.model logic_out dac_bridge(out_low=0 out_high=1.8 out_undef=0.9 t_rise=1n t_fall=1n)
+Rbridge_ready ready 0 1g
+Rbridge_busy busy 0 1g
+Rbridge_valid valid 0 1g
+Rbridge_data11 data11 0 1g
+Rbridge_data10 data10 0 1g
+Rbridge_data9 data9 0 1g
+Rbridge_data8 data8 0 1g
+Rbridge_data7 data7 0 1g
+Rbridge_data6 data6 0 1g
+Rbridge_data5 data5 0 1g
+Rbridge_data4 data4 0 1g
+Rbridge_data3 data3 0 1g
+Rbridge_data2 data2 0 1g
+Rbridge_data1 data1 0 1g
+Rbridge_data0 data0 0 1g
+Rbridge_dgain1 dgain1 0 1g
+Rbridge_dgain0 dgain0 0 1g
+Rbridge_gain1 gain1 0 1g
+Rbridge_gain0 gain0 0 1g
+Rbridge_sample sample 0 1g
+Rbridge_trial11 trial11 0 1g
+Rbridge_trial10 trial10 0 1g
+Rbridge_trial9 trial9 0 1g
+Rbridge_trial8 trial8 0 1g
+Rbridge_trial7 trial7 0 1g
+Rbridge_trial6 trial6 0 1g
+Rbridge_trial5 trial5 0 1g
+Rbridge_trial4 trial4 0 1g
+Rbridge_trial3 trial3 0 1g
+Rbridge_trial2 trial2 0 1g
+Rbridge_trial1 trial1 0 1g
+Rbridge_trial0 trial0 0 1g
+Rbridge_evaluate evaluate 0 1g
+XPHASE sample top_sample top_sample_b acq conv vdd 0 sensor_phases
+XADC inp inn decision decision_b top_sample top_sample_b acq conv evaluate trial11 trial10 trial9 trial8 trial7 trial6 trial5 trial4 trial3 trial2 trial1 trial0 rp rn vcm vdd 0 adc_analog12_bottom_preamp
+CQ decision 0 5f
+CQB decision_b 0 5f
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 40.0u 0 2n
+wrdata waveform.dat v(clk) v(top_sample) v(acq) v(conv) v(evaluate) v(valid) v(xadc.tp) v(xadc.tn) v(decision) v(decision_b) v(rp) v(rn) v(vcm) i(vdd) i(vportp) i(vportn) i(vportcm)
+quit
+.endc
+.end

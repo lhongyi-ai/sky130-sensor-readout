@@ -1,0 +1,31 @@
+{
+  "corner": "ff",
+  "vdd_v": 1.8,
+  "temperature_c": -20,
+  "pass": true,
+  "returncode": 0,
+  "cycles": [
+    {
+      "acquisition_dead_time_s": 1.1576884070110639e-08,
+      "conversion_dead_time_s": 1.1593046754191358e-08,
+      "top_open_lead_s": 1.0460496761631275e-08,
+      "top_close_after_acq_high_s": 1.0108633642493966e-08,
+      "actual_top_acquisition_width_s": 2.479267339260021e-06
+    },
+    {
+      "acquisition_dead_time_s": 1.1578612013986151e-08,
+      "conversion_dead_time_s": 1.1592018554114212e-08,
+      "top_open_lead_s": 1.0459942972236173e-08,
+      "top_close_after_acq_high_s": 1.0110135274618394e-08,
+      "actual_top_acquisition_width_s": 2.479264446572631e-06
+    }
+  ],
+  "checks": {
+    "no_acq_conv_overlap_above_20percent_vdd": true,
+    "both_dead_times_at_least_5ns": true,
+    "top_opens_at_least_5ns_before_bottom_release": true,
+    "top_closes_after_acq_reaches_80percent": true,
+    "two_complete_sampling_windows": true
+  },
+  "mean_generator_power_w": 2.5152699791972836e-06
+}

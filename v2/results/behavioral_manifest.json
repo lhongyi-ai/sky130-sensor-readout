@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "python": "3.12.6",
+  "numpy": "2.3.2",
+  "source_sha256": {
+    "config/spec.json": "9a9ab5d48326208d39925265bf455ec15fa297a6cdad3a1ca78759e4c69ae30e",
+    "scripts/run_behavioral.py": "17e6b2e4b140a8956f2a10e409bc18c38a9988a13942d5eeacb2e8e987c5d500",
+    "sensor_readout/__init__.py": "198e08a7ef92f065775f27868b7e49e1b701c213e93b7d2db8f079e8437a2f5f",
+    "sensor_readout/analysis.py": "ba99d5b6b3deb24b072dda41bca6a9aa0e5b27bbc559c69d8bbbe0d348ed4b07",
+    "sensor_readout/budget.py": "7cda0ad27149238445862b6ad3ddab6e07fad63b1b176dd90c18af0f1199fd56",
+    "sensor_readout/external_calibration.py": "74477c8d6460e4764441a6c13b963c1b379229ba852b249e89771539926421fd",
+    "sensor_readout/model.py": "12bfa442cbef6c925558b3729ceaf0d40f009d8b1104597e455a0c2ac08c3e8d",
+    "sensor_readout/physical_budget.py": "f8ba8d945865d0e09f6e769db406cdd494a99180c80b8ce81c6063271d4a00a5"
+  },
+  "output_sha256": {
+    "adc_transitions.csv": "651f81130747321389df57172471829c9f7077ae3135f5bca34ca5d16cecd37b",
+    "behavioral_report.md": "33518f133311e78863cec8877bfe5f8acf4cd83a48f5425526cf84a62de4b906",
+    "behavioral_summary.json": "5302e390da531e3c5f6b37b1938f07cd28701ae8f0253211652775833667df51",
+    "calibration_coefficients.json": "47520e9466e6f51b1d1bf82e1c56dbdfb1b055c688b650587062086e7e702c4d",
+    "calibration_holdout.csv": "160d175da208dd5c4a0ef8848efea2b21533abfafc73c525943a935714179ed4",
+    "error_budget.json": "b45f818bd8f9a921bb76bae329b69cb05f78823f520579afbb0283670becd7eb",
+    "linearity.json": "176a90229049f48c9d260290d0b2b2d6880fc66164cccce74f381667dedc2944",
+    "qualification_matrix.csv": "47a7596cad2c1c10f56d550546a9a345842bbfd77d3727f4a472d88c6ab61518",
+    "spectral_metrics.csv": "e68edd8ad14d35e32de778cef15520bbe8604db1f9eca519ddfaa1fc5c73c66a",
+    "tone_samples.csv": "be01df5b8b694ab249b8d4474e8f675994bca853de5d5c60ff7c58b090e217e5"
+  },
+  "seed": 1302026,
+  "evidence_level": "BEHAVIORAL_REPRODUCIBILITY_ONLY"
+}

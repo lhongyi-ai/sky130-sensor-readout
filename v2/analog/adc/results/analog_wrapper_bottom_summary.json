@@ -1,0 +1,74 @@
+{
+  "evidence_level": "single-trial full analog-wrapper transistor checks, ideal external phases/codes; NOT full SAR conversion",
+  "cases": [
+    {
+      "name": "wrapper_bottom_trial_1024_-1",
+      "code": 1024,
+      "sign": -1,
+      "input_diff_v": -0.20004882812500002,
+      "residual_before_evaluate_v": -4.8905863376025316e-05,
+      "residual_error_lsb": -0.0003980204852496033,
+      "output_diff_v": -1.7999993369977234,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_trial_1024_1",
+      "code": 1024,
+      "sign": 1,
+      "input_diff_v": -0.199951171875,
+      "residual_before_evaluate_v": 4.873085865142457e-05,
+      "residual_error_lsb": -0.0004980037047062208,
+      "output_diff_v": -1.7999993369977232,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_trial_2048_-1",
+      "code": 2048,
+      "sign": -1,
+      "input_diff_v": -4.8828125e-05,
+      "residual_before_evaluate_v": -4.871481227430863e-05,
+      "residual_error_lsb": 0.0005801611555398406,
+      "output_diff_v": -1.799999336997723,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_trial_2048_1",
+      "code": 2048,
+      "sign": 1,
+      "input_diff_v": 4.8828125e-05,
+      "residual_before_evaluate_v": 4.892191789929168e-05,
+      "residual_error_lsb": 0.00048021964437337805,
+      "output_diff_v": -1.7999993369977232,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_trial_3072_-1",
+      "code": 3072,
+      "sign": -1,
+      "input_diff_v": 0.19995117187500006,
+      "residual_before_evaluate_v": -4.86410544864313e-05,
+      "residual_error_lsb": 0.0009578010294717526,
+      "output_diff_v": 1.7999990010324018,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_trial_3072_1",
+      "code": 3072,
+      "sign": 1,
+      "input_diff_v": 0.20004882812500008,
+      "residual_before_evaluate_v": 4.899566734117844e-05,
+      "residual_error_lsb": 0.0008578167868335956,
+      "output_diff_v": 1.7999990014864111,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    }
+  ],
+  "pass_count": 3,
+  "fail_count": 3,
+  "architecture": "bottom"
+}

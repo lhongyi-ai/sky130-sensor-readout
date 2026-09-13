@@ -1,0 +1,1421 @@
+{
+  "status": "SCHEMATIC_PHASE_45PVT_PASS",
+  "source_sha256": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462",
+  "run": "results/phases_20260908T030840138613Z",
+  "counts": {
+    "total": 45,
+    "passed": 45
+  },
+  "results": [
+    {
+      "corner": "tt",
+      "vdd_v": 1.62,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2171514095135639e-08,
+          "conversion_dead_time_s": 1.2228877950774684e-08,
+          "top_open_lead_s": 1.1113237653157523e-08,
+          "top_close_after_acq_high_s": 1.0640675624070802e-08,
+          "actual_top_acquisition_width_s": 2.478090723692924e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.217944279569622e-08,
+          "conversion_dead_time_s": 1.222923322492888e-08,
+          "top_open_lead_s": 1.1113255482769923e-08,
+          "top_close_after_acq_high_s": 1.0640711950672861e-08,
+          "actual_top_acquisition_width_s": 2.4780832549033637e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.7707117602456914e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.62,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1631085120976022e-08,
+          "conversion_dead_time_s": 1.1668493879948843e-08,
+          "top_open_lead_s": 1.1570896899569224e-08,
+          "top_close_after_acq_high_s": 1.1075856580529138e-08,
+          "actual_top_acquisition_width_s": 2.478166432206367e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1637337223787208e-08,
+          "conversion_dead_time_s": 1.1668416045955795e-08,
+          "top_open_lead_s": 1.1569676632868005e-08,
+          "top_close_after_acq_high_s": 1.107640477372833e-08,
+          "actual_top_acquisition_width_s": 2.4781602149844024e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.8404751149982873e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.62,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1255873825169036e-08,
+          "conversion_dead_time_s": 1.1265071909656033e-08,
+          "top_open_lead_s": 1.2438600216589635e-08,
+          "top_close_after_acq_high_s": 1.1915052086084185e-08,
+          "actual_top_acquisition_width_s": 2.4776666888276836e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1256282664376879e-08,
+          "conversion_dead_time_s": 1.1266188267300685e-08,
+          "top_open_lead_s": 1.2438306594031743e-08,
+          "top_close_after_acq_high_s": 1.1912470781210406e-08,
+          "actual_top_acquisition_width_s": 2.477668954729386e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.24578053548978e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1794010415043937e-08,
+          "conversion_dead_time_s": 1.1833109255068907e-08,
+          "top_open_lead_s": 1.0500284065731788e-08,
+          "top_close_after_acq_high_s": 1.0100503671548833e-08,
+          "actual_top_acquisition_width_s": 2.4790419484349735e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1797964661278899e-08,
+          "conversion_dead_time_s": 1.1833030581859331e-08,
+          "top_open_lead_s": 1.0500749959177792e-08,
+          "top_close_after_acq_high_s": 1.009962496682673e-08,
+          "actual_top_acquisition_width_s": 2.4790385704588126e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.289793017808969e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1556710322865993e-08,
+          "conversion_dead_time_s": 1.15797750274295e-08,
+          "top_open_lead_s": 1.1057224375864977e-08,
+          "top_close_after_acq_high_s": 1.0635780403035997e-08,
+          "actual_top_acquisition_width_s": 2.478717270786889e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1561397950086858e-08,
+          "conversion_dead_time_s": 1.1579654198162634e-08,
+          "top_open_lead_s": 1.1057008552640393e-08,
+          "top_close_after_acq_high_s": 1.0635833914797508e-08,
+          "actual_top_acquisition_width_s": 2.47871296420211e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.441737419598627e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1373114959764452e-08,
+          "conversion_dead_time_s": 1.1369379206775988e-08,
+          "top_open_lead_s": 1.1906758336458425e-08,
+          "top_close_after_acq_high_s": 1.1459028406907262e-08,
+          "actual_top_acquisition_width_s": 2.4780468790109557e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.137292557958605e-08,
+          "conversion_dead_time_s": 1.1369418056482097e-08,
+          "top_open_lead_s": 1.1906766623083392e-08,
+          "top_close_after_acq_high_s": 1.1459029734171044e-08,
+          "actual_top_acquisition_width_s": 2.4780473021590098e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.095862164844518e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.98,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1750786955885815e-08,
+          "conversion_dead_time_s": 1.1773236012961237e-08,
+          "top_open_lead_s": 1.0171082964035566e-08,
+          "top_close_after_acq_high_s": 9.818358001060476e-09,
+          "actual_top_acquisition_width_s": 2.4793938805282133e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1753513361536394e-08,
+          "conversion_dead_time_s": 1.1773231052202243e-08,
+          "top_open_lead_s": 1.0171083201101453e-08,
+          "top_close_after_acq_high_s": 9.818879900788915e-09,
+          "actual_top_acquisition_width_s": 2.479390516240162e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.009516464207983e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.98,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1611996078765511e-08,
+          "conversion_dead_time_s": 1.1621247584739578e-08,
+          "top_open_lead_s": 1.0728352514606074e-08,
+          "top_close_after_acq_high_s": 1.0353582766887014e-08,
+          "actual_top_acquisition_width_s": 2.4789746732908485e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.16142108744782e-08,
+          "conversion_dead_time_s": 1.1620431893534337e-08,
+          "top_open_lead_s": 1.072882997968342e-08,
+          "top_close_after_acq_high_s": 1.035272740979208e-08,
+          "actual_top_acquisition_width_s": 2.478973293182078e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.268065781317975e-06
+    },
+    {
+      "corner": "tt",
+      "vdd_v": 1.98,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1501714704388034e-08,
+          "conversion_dead_time_s": 1.1492989248355667e-08,
+          "top_open_lead_s": 1.1545762899878062e-08,
+          "top_close_after_acq_high_s": 1.114771351721267e-08,
+          "actual_top_acquisition_width_s": 2.4782637924570437e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1501712413371646e-08,
+          "conversion_dead_time_s": 1.1492989359545682e-08,
+          "top_open_lead_s": 1.1545772688749842e-08,
+          "top_close_after_acq_high_s": 1.114787764039049e-08,
+          "actual_top_acquisition_width_s": 2.4782636456952995e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 4.256519765563317e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.62,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1610731811964394e-08,
+          "conversion_dead_time_s": 1.1640739391176012e-08,
+          "top_open_lead_s": 1.0928815346995301e-08,
+          "top_close_after_acq_high_s": 1.0513708194608053e-08,
+          "actual_top_acquisition_width_s": 2.478792993812901e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1614155767644593e-08,
+          "conversion_dead_time_s": 1.1640520336413161e-08,
+          "top_open_lead_s": 1.0928345578046608e-08,
+          "top_close_after_acq_high_s": 1.051043144636051e-08,
+          "actual_top_acquisition_width_s": 2.4787930398170418e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.8544745605891614e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.62,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1246458945067654e-08,
+          "conversion_dead_time_s": 1.1267641970306774e-08,
+          "top_open_lead_s": 1.1562253431199273e-08,
+          "top_close_after_acq_high_s": 1.1120594030849728e-08,
+          "actual_top_acquisition_width_s": 2.478517455507909e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.124745793438797e-08,
+          "conversion_dead_time_s": 1.126764717859717e-08,
+          "top_open_lead_s": 1.1562131172805713e-08,
+          "top_close_after_acq_high_s": 1.112107073211956e-08,
+          "actual_top_acquisition_width_s": 2.478516291826251e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.1369914159272693e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.62,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0941826684759722e-08,
+          "conversion_dead_time_s": 1.095025478172051e-08,
+          "top_open_lead_s": 1.2531009992189434e-08,
+          "top_close_after_acq_high_s": 1.2055638326240109e-08,
+          "actual_top_acquisition_width_s": 2.4778483291204414e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0942035854161035e-08,
+          "conversion_dead_time_s": 1.0949903841804684e-08,
+          "top_open_lead_s": 1.2531263989061628e-08,
+          "top_close_after_acq_high_s": 1.2055471250127346e-08,
+          "actual_top_acquisition_width_s": 2.477847945192745e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 4.721201941139634e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.8,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1576884070110639e-08,
+          "conversion_dead_time_s": 1.1593046754191358e-08,
+          "top_open_lead_s": 1.0460496761631275e-08,
+          "top_close_after_acq_high_s": 1.0108633642493966e-08,
+          "actual_top_acquisition_width_s": 2.479267339260021e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1578612013986151e-08,
+          "conversion_dead_time_s": 1.1592018554114212e-08,
+          "top_open_lead_s": 1.0459942972236173e-08,
+          "top_close_after_acq_high_s": 1.0110135274618394e-08,
+          "actual_top_acquisition_width_s": 2.479264446572631e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.5152699791972836e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1383932067133247e-08,
+          "conversion_dead_time_s": 1.1392067648554207e-08,
+          "top_open_lead_s": 1.1062273097875538e-08,
+          "top_close_after_acq_high_s": 1.0689010237459235e-08,
+          "actual_top_acquisition_width_s": 2.4788512718015948e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1384107738068573e-08,
+          "conversion_dead_time_s": 1.1395876499774299e-08,
+          "top_open_lead_s": 1.1063004525667627e-08,
+          "top_close_after_acq_high_s": 1.0689284684932277e-08,
+          "actual_top_acquisition_width_s": 2.4788507508024125e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.01808271930404e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.8,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1219251579292662e-08,
+          "conversion_dead_time_s": 1.1215834761748634e-08,
+          "top_open_lead_s": 1.1945295927600951e-08,
+          "top_close_after_acq_high_s": 1.154452495102208e-08,
+          "actual_top_acquisition_width_s": 2.4781276463881526e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1219395122580219e-08,
+          "conversion_dead_time_s": 1.1216767870711266e-08,
+          "top_open_lead_s": 1.1944760922220245e-08,
+          "top_close_after_acq_high_s": 1.1544633218812573e-08,
+          "actual_top_acquisition_width_s": 2.478127196580475e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 7.2381352242361105e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.98,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1689463556105325e-08,
+          "conversion_dead_time_s": 1.1694060157692843e-08,
+          "top_open_lead_s": 1.0135642441116578e-08,
+          "top_close_after_acq_high_s": 9.825850239862218e-09,
+          "actual_top_acquisition_width_s": 2.4794679848500218e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1692954626682292e-08,
+          "conversion_dead_time_s": 1.1694089411981874e-08,
+          "top_open_lead_s": 1.013560407993291e-08,
+          "top_close_after_acq_high_s": 9.82543563074683e-09,
+          "actual_top_acquisition_width_s": 2.4794646657822576e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.462693951725809e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.98,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1565914394499075e-08,
+          "conversion_dead_time_s": 1.1562112134138484e-08,
+          "top_open_lead_s": 1.0699699738210843e-08,
+          "top_close_after_acq_high_s": 1.03705221289984e-08,
+          "actual_top_acquisition_width_s": 2.4790209565136434e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.15663189332262e-08,
+          "conversion_dead_time_s": 1.1567594920300448e-08,
+          "top_open_lead_s": 1.069959624313951e-08,
+          "top_close_after_acq_high_s": 1.0369873364546274e-08,
+          "actual_top_acquisition_width_s": 2.4790216618891906e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 4.288446591553142e-06
+    },
+    {
+      "corner": "ff",
+      "vdd_v": 1.98,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1474427291427086e-08,
+          "conversion_dead_time_s": 1.1463767046646294e-08,
+          "top_open_lead_s": 1.1518809110183483e-08,
+          "top_close_after_acq_high_s": 1.1161437983637312e-08,
+          "actual_top_acquisition_width_s": 2.4782927862991555e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1473629669398033e-08,
+          "conversion_dead_time_s": 1.1463732681005976e-08,
+          "top_open_lead_s": 1.1518749904094964e-08,
+          "top_close_after_acq_high_s": 1.1164294372549086e-08,
+          "actual_top_acquisition_width_s": 2.478290753676585e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.1077208456970682e-05
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.62,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.300373070228296e-08,
+          "conversion_dead_time_s": 1.3064772093575156e-08,
+          "top_open_lead_s": 1.1587435960411139e-08,
+          "top_close_after_acq_high_s": 1.1035415096297709e-08,
+          "actual_top_acquisition_width_s": 2.47685140187936e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.300670365258805e-08,
+          "conversion_dead_time_s": 1.3065366452034242e-08,
+          "top_open_lead_s": 1.1578654931717491e-08,
+          "top_close_after_acq_high_s": 1.1036925204691852e-08,
+          "actual_top_acquisition_width_s": 2.476847754418895e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.7476501022907685e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.62,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2146557137968608e-08,
+          "conversion_dead_time_s": 1.2182532627176884e-08,
+          "top_open_lead_s": 1.1741355796123319e-08,
+          "top_close_after_acq_high_s": 1.1186639124276376e-08,
+          "actual_top_acquisition_width_s": 2.477529546900594e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2153782617739349e-08,
+          "conversion_dead_time_s": 1.218307284975115e-08,
+          "top_open_lead_s": 1.1741496482125223e-08,
+          "top_close_after_acq_high_s": 1.1185647127645451e-08,
+          "actual_top_acquisition_width_s": 2.4775228264528585e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.7751196506099237e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.62,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1626124249339951e-08,
+          "conversion_dead_time_s": 1.1633327306357316e-08,
+          "top_open_lead_s": 1.2439632317665585e-08,
+          "top_close_after_acq_high_s": 1.1853377337183287e-08,
+          "actual_top_acquisition_width_s": 2.477346939633363e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1627020336035118e-08,
+          "conversion_dead_time_s": 1.1626658019862028e-08,
+          "top_open_lead_s": 1.2439216549260248e-08,
+          "top_close_after_acq_high_s": 1.1856913855876527e-08,
+          "actual_top_acquisition_width_s": 2.477343703609983e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.872450365660318e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.8,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2117344541605869e-08,
+          "conversion_dead_time_s": 1.2165993676784677e-08,
+          "top_open_lead_s": 1.06314751131728e-08,
+          "top_close_after_acq_high_s": 1.0188428524492412e-08,
+          "actual_top_acquisition_width_s": 2.4786216152973217e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2128834475017396e-08,
+          "conversion_dead_time_s": 1.2169677620004905e-08,
+          "top_open_lead_s": 1.0629825153836043e-08,
+          "top_close_after_acq_high_s": 1.0189440228979417e-08,
+          "actual_top_acquisition_width_s": 2.4786092854164962e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.2001504111722415e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1804911578635695e-08,
+          "conversion_dead_time_s": 1.1828399483090666e-08,
+          "top_open_lead_s": 1.109224226516939e-08,
+          "top_close_after_acq_high_s": 1.0626945748627166e-08,
+          "actual_top_acquisition_width_s": 2.478468406330303e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1810291260896095e-08,
+          "conversion_dead_time_s": 1.1828055350635488e-08,
+          "top_open_lead_s": 1.1093330849686633e-08,
+          "top_close_after_acq_high_s": 1.0627424700934067e-08,
+          "actual_top_acquisition_width_s": 2.4784627756108592e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.278255905055769e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.8,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1587670447465673e-08,
+          "conversion_dead_time_s": 1.1577455031503784e-08,
+          "top_open_lead_s": 1.1879832588401969e-08,
+          "top_close_after_acq_high_s": 1.1385902941418578e-08,
+          "actual_top_acquisition_width_s": 2.477893615075833e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1586731339522423e-08,
+          "conversion_dead_time_s": 1.1578261765623598e-08,
+          "top_open_lead_s": 1.1878714938054596e-08,
+          "top_close_after_acq_high_s": 1.1385706050837262e-08,
+          "actual_top_acquisition_width_s": 2.4778949571049506e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.4651735864989768e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.98,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1881246189981435e-08,
+          "conversion_dead_time_s": 1.191447150415647e-08,
+          "top_open_lead_s": 1.0208160546384829e-08,
+          "top_close_after_acq_high_s": 9.81825802511839e-09,
+          "actual_top_acquisition_width_s": 2.4792529641869166e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1885989160496376e-08,
+          "conversion_dead_time_s": 1.1914719338733105e-08,
+          "top_open_lead_s": 1.020691762802572e-08,
+          "top_close_after_acq_high_s": 9.818456750811198e-09,
+          "actual_top_acquisition_width_s": 2.479247968904961e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.7940535290593515e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.98,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.173720668392733e-08,
+          "conversion_dead_time_s": 1.1747038082888512e-08,
+          "top_open_lead_s": 1.0734020717089108e-08,
+          "top_close_after_acq_high_s": 1.0321016784195526e-08,
+          "actual_top_acquisition_width_s": 2.4788703925956533e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1741748721511624e-08,
+          "conversion_dead_time_s": 1.1746785106310278e-08,
+          "top_open_lead_s": 1.073363857919097e-08,
+          "top_close_after_acq_high_s": 1.0321054161510615e-08,
+          "actual_top_acquisition_width_s": 2.4788660840965324e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.9470369867359425e-06
+    },
+    {
+      "corner": "ss",
+      "vdd_v": 1.98,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.1622644223999772e-08,
+          "conversion_dead_time_s": 1.1607262981722095e-08,
+          "top_open_lead_s": 1.1529240939818201e-08,
+          "top_close_after_acq_high_s": 1.1087822157378579e-08,
+          "actual_top_acquisition_width_s": 2.478188999184599e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.1625327749661529e-08,
+          "conversion_dead_time_s": 1.1607447716085504e-08,
+          "top_open_lead_s": 1.1529154849690407e-08,
+          "top_close_after_acq_high_s": 1.1087690459977656e-08,
+          "actual_top_acquisition_width_s": 2.4781866326098612e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.2515620819741526e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.62,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0815669392502944e-08,
+          "conversion_dead_time_s": 1.0870011795202079e-08,
+          "top_open_lead_s": 1.2330992467405543e-08,
+          "top_close_after_acq_high_s": 1.1854151950765327e-08,
+          "actual_top_acquisition_width_s": 2.4781787678425572e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.081940374370609e-08,
+          "conversion_dead_time_s": 1.0869965962880343e-08,
+          "top_open_lead_s": 1.2334731511828725e-08,
+          "top_close_after_acq_high_s": 1.1861035965019605e-08,
+          "actual_top_acquisition_width_s": 2.478168269547509e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.7812564004608493e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.62,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0354241328724026e-08,
+          "conversion_dead_time_s": 1.0392912830463346e-08,
+          "top_open_lead_s": 1.2882971369937905e-08,
+          "top_close_after_acq_high_s": 1.2373970989952286e-08,
+          "actual_top_acquisition_width_s": 2.4780874241150603e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0354792506863089e-08,
+          "conversion_dead_time_s": 1.0392985981148972e-08,
+          "top_open_lead_s": 1.2882952036889458e-08,
+          "top_close_after_acq_high_s": 1.237337295123203e-08,
+          "actual_top_acquisition_width_s": 2.478087967216201e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.8904548099951396e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.62,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0027383873846861e-08,
+          "conversion_dead_time_s": 1.0045049927474979e-08,
+          "top_open_lead_s": 1.3839191925069828e-08,
+          "top_close_after_acq_high_s": 1.3295651463802783e-08,
+          "actual_top_acquisition_width_s": 2.477455460829143e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0024518914816875e-08,
+          "conversion_dead_time_s": 1.0045241558397162e-08,
+          "top_open_lead_s": 1.3839323376895995e-08,
+          "top_close_after_acq_high_s": 1.3295616835467267e-08,
+          "actual_top_acquisition_width_s": 2.4774586417329857e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.8208805581874128e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.8,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0632659966936755e-08,
+          "conversion_dead_time_s": 1.0668731414113063e-08,
+          "top_open_lead_s": 1.1599348895907372e-08,
+          "top_close_after_acq_high_s": 1.1195903660595763e-08,
+          "actual_top_acquisition_width_s": 2.4790562996394553e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0634852504189752e-08,
+          "conversion_dead_time_s": 1.0669930042956998e-08,
+          "top_open_lead_s": 1.1599357981325066e-08,
+          "top_close_after_acq_high_s": 1.119635040943761e-08,
+          "actual_top_acquisition_width_s": 2.4790539082658428e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.3143090927930015e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0429205813883356e-08,
+          "conversion_dead_time_s": 1.0455843462886311e-08,
+          "top_open_lead_s": 1.2201829270479889e-08,
+          "top_close_after_acq_high_s": 1.1773610699363789e-08,
+          "actual_top_acquisition_width_s": 2.47865516854067e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.043092212535503e-08,
+          "conversion_dead_time_s": 1.045516192324942e-08,
+          "top_open_lead_s": 1.2199792677047573e-08,
+          "top_close_after_acq_high_s": 1.1771306616627629e-08,
+          "actual_top_acquisition_width_s": 2.478655629831447e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.525685321252628e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.8,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0266251135744446e-08,
+          "conversion_dead_time_s": 1.027072901054995e-08,
+          "top_open_lead_s": 1.3116893379013475e-08,
+          "top_close_after_acq_high_s": 1.2656358887570441e-08,
+          "actual_top_acquisition_width_s": 2.4779032782363475e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0266417227144774e-08,
+          "conversion_dead_time_s": 1.0270710043350703e-08,
+          "top_open_lead_s": 1.3116822211240025e-08,
+          "top_close_after_acq_high_s": 1.2656506611973139e-08,
+          "actual_top_acquisition_width_s": 2.4779035268481814e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.930655717706532e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.98,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0709911447315786e-08,
+          "conversion_dead_time_s": 1.0738753014422885e-08,
+          "top_open_lead_s": 1.1144318245649957e-08,
+          "top_close_after_acq_high_s": 1.079218194436008e-08,
+          "actual_top_acquisition_width_s": 2.479413787272414e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0713070437244271e-08,
+          "conversion_dead_time_s": 1.0738667725893191e-08,
+          "top_open_lead_s": 1.1144379674889524e-08,
+          "top_close_after_acq_high_s": 1.0793095779725178e-08,
+          "actual_top_acquisition_width_s": 2.4794094230720693e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.0537859768137575e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.98,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0586652624550872e-08,
+          "conversion_dead_time_s": 1.0604420309547233e-08,
+          "top_open_lead_s": 1.1738092760840501e-08,
+          "top_close_after_acq_high_s": 1.1361289098193652e-08,
+          "actual_top_acquisition_width_s": 2.478944514731166e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.0588793498491443e-08,
+          "conversion_dead_time_s": 1.0604416507386586e-08,
+          "top_open_lead_s": 1.1737993264374544e-08,
+          "top_close_after_acq_high_s": 1.1360784261687073e-08,
+          "actual_top_acquisition_width_s": 2.4789431465021954e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.396256649678619e-06
+    },
+    {
+      "corner": "fs",
+      "vdd_v": 1.98,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.0492803646302855e-08,
+          "conversion_dead_time_s": 1.0489290632065781e-08,
+          "top_open_lead_s": 1.2610685215731035e-08,
+          "top_close_after_acq_high_s": 1.220497603192691e-08,
+          "actual_top_acquisition_width_s": 2.4781662796262348e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.049287691592313e-08,
+          "conversion_dead_time_s": 1.048928258214036e-08,
+          "top_open_lead_s": 1.2610685748973003e-08,
+          "top_close_after_acq_high_s": 1.2205202693496884e-08,
+          "actual_top_acquisition_width_s": 2.4781666422395487e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 5.4470805346626515e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.62,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.3695180035183058e-08,
+          "conversion_dead_time_s": 1.374793218899697e-08,
+          "top_open_lead_s": 1.0001000757908284e-08,
+          "top_close_after_acq_high_s": 9.525024318077821e-09,
+          "actual_top_acquisition_width_s": 2.4777324152347153e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.370253217308255e-08,
+          "conversion_dead_time_s": 1.3747541894757273e-08,
+          "top_open_lead_s": 9.995291660268828e-09,
+          "top_close_after_acq_high_s": 9.523094239430587e-09,
+          "actual_top_acquisition_width_s": 2.477726715149361e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.7619343129186887e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.62,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.3046122746957635e-08,
+          "conversion_dead_time_s": 1.3081477205824314e-08,
+          "top_open_lead_s": 1.0371114339443342e-08,
+          "top_close_after_acq_high_s": 9.878756489026128e-09,
+          "actual_top_acquisition_width_s": 2.478001374649981e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.3052644029987173e-08,
+          "conversion_dead_time_s": 1.3081556971992689e-08,
+          "top_open_lead_s": 1.0371945885628977e-08,
+          "top_close_after_acq_high_s": 9.876739651099942e-09,
+          "actual_top_acquisition_width_s": 2.4779959364196586e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 1.8175360870937931e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.62,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2606432712977416e-08,
+          "conversion_dead_time_s": 1.2608356144367366e-08,
+          "top_open_lead_s": 1.1150581972753158e-08,
+          "top_close_after_acq_high_s": 1.0636069201080992e-08,
+          "actual_top_acquisition_width_s": 2.477650717454541e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2605577969112313e-08,
+          "conversion_dead_time_s": 1.2608161211299096e-08,
+          "top_open_lead_s": 1.115043764335084e-08,
+          "top_close_after_acq_high_s": 1.063685667447902e-08,
+          "actual_top_acquisition_width_s": 2.4776505970491028e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.0176745185438988e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.8,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.3067677504653006e-08,
+          "conversion_dead_time_s": 1.310967963749308e-08,
+          "top_open_lead_s": 9.4768874196974e-09,
+          "top_close_after_acq_high_s": 9.075537647110443e-09,
+          "actual_top_acquisition_width_s": 2.4788416221868354e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.3072599066460907e-08,
+          "conversion_dead_time_s": 1.3111316585077737e-08,
+          "top_open_lead_s": 9.476092647845276e-09,
+          "top_close_after_acq_high_s": 9.076492538815769e-09,
+          "actual_top_acquisition_width_s": 2.4788355182306693e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.2678377836164385e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2795986702452635e-08,
+          "conversion_dead_time_s": 1.2811278839765137e-08,
+          "top_open_lead_s": 9.98719051066327e-09,
+          "top_close_after_acq_high_s": 9.567940861195805e-09,
+          "actual_top_acquisition_width_s": 2.47859582753996e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2798464300243159e-08,
+          "conversion_dead_time_s": 1.2811682842646938e-08,
+          "top_open_lead_s": 9.98711495956335e-09,
+          "top_close_after_acq_high_s": 9.568668413085406e-09,
+          "actual_top_acquisition_width_s": 2.4785925480470475e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.3988919646921336e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.8,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2579622737036907e-08,
+          "conversion_dead_time_s": 1.2568008991780382e-08,
+          "top_open_lead_s": 1.0775593935225431e-08,
+          "top_close_after_acq_high_s": 1.033709066421169e-08,
+          "actual_top_acquisition_width_s": 2.478013173032567e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2580774544642634e-08,
+          "conversion_dead_time_s": 1.256784379533855e-08,
+          "top_open_lead_s": 1.0775097340419732e-08,
+          "top_close_after_acq_high_s": 1.0337160693490272e-08,
+          "actual_top_acquisition_width_s": 2.478011879551988e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.751258793978687e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.98,
+      "temperature_c": -20,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2883080678076499e-08,
+          "conversion_dead_time_s": 1.290626562063256e-08,
+          "top_open_lead_s": 9.251926327326094e-09,
+          "top_close_after_acq_high_s": 8.892096562237761e-09,
+          "actual_top_acquisition_width_s": 2.479232934784692e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2888620859785162e-08,
+          "conversion_dead_time_s": 1.2910115496218868e-08,
+          "top_open_lead_s": 9.25226167197284e-09,
+          "top_close_after_acq_high_s": 8.892070141791052e-09,
+          "actual_top_acquisition_width_s": 2.4792273247712908e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 2.9720476139361005e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.98,
+      "temperature_c": 27,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2725991212432738e-08,
+          "conversion_dead_time_s": 1.2731839700721435e-08,
+          "top_open_lead_s": 9.773055915129822e-09,
+          "top_close_after_acq_high_s": 9.396215554564752e-09,
+          "actual_top_acquisition_width_s": 2.4788646766392637e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.2729803020198886e-08,
+          "conversion_dead_time_s": 1.2731816404908965e-08,
+          "top_open_lead_s": 9.77301932064597e-09,
+          "top_close_after_acq_high_s": 9.397300296583734e-09,
+          "actual_top_acquisition_width_s": 2.4788592351437293e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.2019535782134806e-06
+    },
+    {
+      "corner": "sf",
+      "vdd_v": 1.98,
+      "temperature_c": 85,
+      "pass": true,
+      "returncode": 0,
+      "cycles": [
+        {
+          "acquisition_dead_time_s": 1.2599745939878897e-08,
+          "conversion_dead_time_s": 1.2581488264003092e-08,
+          "top_open_lead_s": 1.0538556267140047e-08,
+          "top_close_after_acq_high_s": 1.0143465694534756e-08,
+          "actual_top_acquisition_width_s": 2.478217197462862e-06
+        },
+        {
+          "acquisition_dead_time_s": 1.260034210558802e-08,
+          "conversion_dead_time_s": 1.2581629733463462e-08,
+          "top_open_lead_s": 1.0537609232247642e-08,
+          "top_close_after_acq_high_s": 1.0141833456176941e-08,
+          "actual_top_acquisition_width_s": 2.4782176420611732e-06
+        }
+      ],
+      "checks": {
+        "no_acq_conv_overlap_above_20percent_vdd": true,
+        "both_dead_times_at_least_5ns": true,
+        "top_opens_at_least_5ns_before_bottom_release": true,
+        "top_closes_after_acq_reaches_80percent": true,
+        "two_complete_sampling_windows": true
+      },
+      "mean_generator_power_w": 3.7543555123315486e-06
+    }
+  ],
+  "minimum_actual_top_acquisition_width_s": 2.476847754418895e-06,
+  "load_f": {
+    "top": 1e-13,
+    "topb": 1e-13,
+    "acq": 5e-13,
+    "conv": 5e-13
+  },
+  "full_adc_qualified": false,
+  "extracted": false,
+  "cadence_used": false,
+  "limitations": [
+    "Deterministic standalone schematic generator, not statistical timing or RC-extracted layout.",
+    "The real sampling circuit must settle within the measured shorter aperture, not an assumed full 2.5 us.",
+    "20 percent VDD nonoverlap is a phase-level check; actual transistor switch overlap is tested in ADC integration."
+  ]
+}

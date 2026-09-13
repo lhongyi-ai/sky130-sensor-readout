@@ -1,0 +1,40 @@
+* SKY130A 1.8-V two-stage Miller-compensated CMOS OTA core.
+* Schematic-level design source; no extracted parasitics or measurement claim.
+*
+* Pin order:
+*   VINP  non-inverting input (M2 gate)
+*   VINN  inverting input (M1 gate)
+*   VOUT  single-ended output
+*   VDD   positive supply (nominal 1.8 V)
+*   VSS   negative supply / ground
+*   IREF  10-uA reference-current input node; sink 10 uA from IREF to VSS
+*
+* M3 and M4 are each implemented as two explicit 25-um parallel devices.
+* RZ and CC are inside the OTA core.  The 100-kohm || 5-pF nominal load and
+* all feedback-break elements belong to external verification testbenches.
+
+.subckt sky130_two_stage_ota VINP VINN VOUT VDD VSS IREF
+
+* Single-IREF bias tree.
+XM8  IREF IREF VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=7.22005  nf=1 mult=1
+XM9  VBN  IREF VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=7.22005  nf=1 mult=1
+XM10 VBN  VBN  VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=8.08605  nf=1 mult=1
+
+* NMOS differential pair, PMOS current-mirror load, and tail sink.
+XM1  NMIR VINN TAIL VSS sky130_fd_pr__nfet_01v8 L=0.5 W=16.83798 nf=1 mult=1
+XM2  VX   VINP TAIL VSS sky130_fd_pr__nfet_01v8 L=0.5 W=16.83798 nf=1 mult=1
+XM3A NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25       nf=1 mult=1
+XM3B NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25       nf=1 mult=1
+XM4A VX   NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25       nf=1 mult=1
+XM4B VX   NMIR VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=25       nf=1 mult=1
+XM5  TAIL VBN  VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=25.8754  nf=1 mult=1
+
+* Common-source second stage and PMOS current-source load.
+XM6 VOUT VX   VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=8.83907427 nf=1 mult=1
+XM7 VOUT IREF VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=72.2005    nf=1 mult=1
+
+* Series-zero-resistor Miller compensation, VX -> RZ -> NCOMP -> CC -> VOUT.
+RZ1 VX NCOMP 2k
+CC1 NCOMP VOUT 3p
+
+.ends sky130_two_stage_ota

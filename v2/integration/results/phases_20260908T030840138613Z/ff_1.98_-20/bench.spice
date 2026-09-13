@@ -1,0 +1,21 @@
+Real PDK phase generator loaded schematic PVT test
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice ff
+.include ../sensor_phases.spice
+.temp -20
+.options reltol=1e-4 abstol=1e-12 vntol=1e-7 method=gear
+VDD vdd 0 1.98
+VCMD cmd 0 PULSE(0 1.98 1u 1n 1n 2.5u 10u)
+XPH cmd top topb acq conv vdd 0 sensor_phases
+CTOP top 0 100f
+CTOPB topb 0 100f
+CACQ acq 0 500f
+CCONV conv 0 500f
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 15u 0 2n
+wrdata waveform.dat v(cmd) v(top) v(topb) v(acq) v(conv) i(vdd)
+quit
+.endc
+.end

@@ -1,0 +1,83 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= max_ss_100C_1v60 Corner ===================================
+
+Startpoint: clk (clock source 'clk')
+Endpoint: comparator_evaluate (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (fall edge)
+                                  0.000000    0.000000   clock source latency
+     2    0.032928    0.000000    0.000000    0.000000 v clk (in)
+                                                         clk (net)
+                      0.003158    0.001592    0.001592 v clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     1    0.008225    0.046609    0.211429    0.213021 v clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk (net)
+                      0.046611    0.000654    0.213674 v clkbuf_1_0__f_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     1    0.004161    0.042174    0.224787    0.438462 v clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_1_0__leaf_clk (net)
+                      0.042175    0.000284    0.438746 v _144_/A (sky130_fd_sc_hd__nor2_1)
+     1    0.005390    0.197679    0.208075    0.646821 ^ _144_/Y (sky130_fd_sc_hd__nor2_1)
+                                                         net7 (net)
+                      0.197680    0.000398    0.647219 ^ output7/A (sky130_fd_sc_hd__buf_2)
+     1    0.051333    0.399675    0.492520    1.139739 ^ output7/X (sky130_fd_sc_hd__buf_2)
+                                                         comparator_evaluate (net)
+                      0.399687    0.002615    1.142354 ^ comparator_evaluate (out)
+                                              1.142354   data arrival time
+
+                                 10.000000   10.000000   max_delay
+                                  0.000000   10.000000   clock clk (rise edge)
+                                  0.000000   10.000000   clock network delay (propagated)
+                                 -1.000000    9.000000   clock uncertainty
+                                  0.000000    9.000000   clock reconvergence pessimism
+                                  0.000000    9.000019   output external delay
+                                              9.000019   data required time
+---------------------------------------------------------------------------------------------
+                                              9.000019   data required time
+                                             -1.142354   data arrival time
+---------------------------------------------------------------------------------------------
+                                              7.857665   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= max_ss_100C_1v60 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= max_ss_100C_1v60 Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 3 unannotated drivers.
+ clkload0/X
+ clkload1/X
+ clkload2/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There is 1 input port missing set_input_delay.
+  rst_n

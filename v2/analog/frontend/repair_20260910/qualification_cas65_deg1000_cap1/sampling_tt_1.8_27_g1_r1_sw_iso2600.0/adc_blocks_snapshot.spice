@@ -1,0 +1,107 @@
+* Open-source SKY130A ADC analog blocks: schematic-level, not extracted.
+* NFET/PFET terminal order is drain, gate, source, bulk; dimensions are um.
+* Clock generation and reference buffers are external interfaces, not ideal
+* devices hidden inside these subcircuits.
+
+.subckt adc_tgate A B EN ENB VDD VSS params: WN=8 WP=16 LSW=0.15
+XN B EN A VSS sky130_fd_pr__nfet_01v8 W={WN} L={LSW} nf=1 mult=1
+XP B ENB A VDD sky130_fd_pr__pfet_01v8 W={WP} L={LSW} nf=1 mult=1
+.ends adc_tgate
+
+* Four reset PMOS, NMOS input pair, cross-coupled CMOS regeneration.
+* CLK=0 resets both outputs HIGH. CLK=1 evaluates. OUTP>OUTN means INP>INN.
+* Outputs MUST be sampled while CLK=1; no static decision-retention latch here.
+* ADC_PAIR_WIDTH_SKEW is deliberate geometry sensitivity, NOT random mismatch.
+* The explicit name avoids accidental scope collisions in future integrations.
+.subckt adc_strongarm INP INN OUTP OUTN CLK VDD VSS params: ADC_PAIR_WIDTH_SKEW=0
+* Use the SAME expression form on both branches. The installed PDK/ngspice
+* path measurably changes FF/SS device models for mixed literal/expression
+* widths, even at the same printed geometry. Equal-form DC tests are symmetric.
+XIP DP INP TAIL VSS sky130_fd_pr__nfet_01v8 W={8.4*(1+ADC_PAIR_WIDTH_SKEW)} L=0.5 nf=1 mult=1
+XIN DN INN TAIL VSS sky130_fd_pr__nfet_01v8 W={8.4*(1-ADC_PAIR_WIDTH_SKEW)} L=0.5 nf=1 mult=1
+XT TAIL CLK VSS VSS sky130_fd_pr__nfet_01v8 W=16 L=0.15 nf=1 mult=1
+XLN OUTN OUTP DP VSS sky130_fd_pr__nfet_01v8 W=4 L=0.15 nf=1 mult=1
+XLP OUTP OUTN DN VSS sky130_fd_pr__nfet_01v8 W=4 L=0.15 nf=1 mult=1
+XPN OUTN OUTP VDD VDD sky130_fd_pr__pfet_01v8 W=8 L=0.15 nf=1 mult=1
+XPP OUTP OUTN VDD VDD sky130_fd_pr__pfet_01v8 W=8 L=0.15 nf=1 mult=1
+XRN OUTN CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+XRP OUTP CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+XRDN DP CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+XRDP DN CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+.ends adc_strongarm
+
+* Static CMOS NAND and cross-coupled active-low SR decision-retention latch.
+* Both StrongARM rails return HIGH on reset, so this latch retains its decision
+* across comparator reset and the SAR controller's rising-edge capture.
+.subckt adc_nand2 A B Y VDD VSS
+XP1 Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+XP2 Y B VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+XN1 Y A MID VSS sky130_fd_pr__nfet_01v8 W=2 L=0.15 nf=1 mult=1
+XN2 MID B VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=0.15 nf=1 mult=1
+.ends adc_nand2
+
+.subckt adc_inv A Y VDD VSS
+XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1
+XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W=1 L=0.15 nf=1 mult=1
+.ends adc_inv
+
+.subckt adc_latched_comparator INP INN Q QB CLK VDD VSS params: ADC_PAIR_WIDTH_SKEW=0
+XCORE INP INN DPOS DNEG CLK VDD VSS adc_strongarm ADC_PAIR_WIDTH_SKEW={ADC_PAIR_WIDTH_SKEW}
+* Matched real MIM ballast reduces the relative effect of state-dependent
+* buffer feedthrough; speed/power cost is measured rather than hidden.
+XLOADP DPOS VSS adc_mim_bank COUNT=16
+XLOADN DNEG VSS adc_mim_bank COUNT=16
+* Two symmetric buffers isolate StrongARM from the state-dependent NAND
+* Miller load. Direct NAND loading failed the small-input history test.
+XBP1 DPOS BPB VDD VSS adc_inv
+XBP2 BPB BP VDD VSS adc_inv
+XBN1 DNEG BNB VDD VSS adc_inv
+XBN2 BNB BN VDD VSS adc_inv
+XSET BN QB Q VDD VSS adc_nand2
+XRESET BP Q QB VDD VSS adc_nand2
+.ends adc_latched_comparator
+
+* Physical three-way bottom-plate switch with static CMOS decode.
+* ACQ=1 selects VCM; CONV=1 selects RP when BIT=1, RN when BIT=0.
+* ACQ/CONV must be nonoverlapping; phase generator is external and unqualified.
+.subckt adc_ref_switch BOTTOM BIT ACQ CONV RP RN VCM VDD VSS params: WN=.84 WP=1.68
+XBI BIT BITB VDD VSS adc_inv
+XAI ACQ ACQB VDD VSS adc_inv
+XPH CONV BIT PHB VDD VSS adc_nand2
+XPI PHB PH VDD VSS adc_inv
+XNL CONV BITB NLB VDD VSS adc_nand2
+XNI NLB NL VDD VSS adc_inv
+XCM BOTTOM VCM ACQ ACQB VDD VSS adc_tgate WN={WN} WP={WP}
+XRP BOTTOM RP PH PHB VDD VSS adc_tgate WN={WN} WP={WP}
+XRN BOTTOM RN NL NLB VDD VSS adc_tgate WN={WN} WP={WP}
+.ends adc_ref_switch
+
+* The selected combined deck uses continuous/models_capacitors.spice, with a
+* 0.15 um dimension correction: nominal C=2 fF/um^2*(3+.15)^2=19.845 fF.
+* COUNT represents parallel identical units. m sets nominal parallel scaling;
+* mult communicates the averaging area to the selected statistical model.
+* The root environment qualification verifies m=COUNT,mult=COUNT (no double
+* nominal scaling), unlike m-only which gives incorrect mismatch averaging.
+* Independent bank mismatch does not model spatial gradients or routing.
+.subckt adc_mim_bank TOP BOTTOM params: COUNT=1
+XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}
+.ends adc_mim_bank
+
+* Binary weights, 12 control bottom-plates and a one-unit dummy: total 4096.
+* Top-plate sampling: sample IN at TOP while all bottom plates are at VCM.
+* Conversion: TOP floats and differential bottom-plate switching shifts TOP.
+.subckt adc_cdac12 TOP B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0 DUMMY
+XC11 TOP B11 adc_mim_bank COUNT=2048
+XC10 TOP B10 adc_mim_bank COUNT=1024
+XC9 TOP B9 adc_mim_bank COUNT=512
+XC8 TOP B8 adc_mim_bank COUNT=256
+XC7 TOP B7 adc_mim_bank COUNT=128
+XC6 TOP B6 adc_mim_bank COUNT=64
+XC5 TOP B5 adc_mim_bank COUNT=32
+XC4 TOP B4 adc_mim_bank COUNT=16
+XC3 TOP B3 adc_mim_bank COUNT=8
+XC2 TOP B2 adc_mim_bank COUNT=4
+XC1 TOP B1 adc_mim_bank COUNT=2
+XC0 TOP B0 adc_mim_bank COUNT=1
+XD TOP DUMMY adc_mim_bank COUNT=1
+.ends adc_cdac12

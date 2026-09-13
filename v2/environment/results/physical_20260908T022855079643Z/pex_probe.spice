@@ -1,0 +1,22 @@
+Primitive schematic versus capacitance-extracted AC qualification
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include mim_unit_pex.spice
+.include nfet_unit_pex.spice
+VSUB VSUBS 0 0
+VCAP top 0 AC 1
+XC 0 top mim_unit
+VDS drain 0 0.9
+VGS gate 0 DC 0.9 AC 1
+XN 0 drain 0 gate nfet_unit
+.control
+set num_threads=1
+set numdgt=15
+op
+let extracted_nfet_id=-vds#branch
+print extracted_nfet_id
+ac lin 1 1000 1000
+let extracted_mim_c=-imag(vcap#branch)/(2*pi*1000)
+print extracted_mim_c
+quit
+.endc
+.end

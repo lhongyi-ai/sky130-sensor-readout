@@ -1,0 +1,49 @@
+{
+  "status": "NUMERICAL_CONVERGENCE_FAIL",
+  "checks": {
+    "all_waveforms_le_0_05lsb": false,
+    "all_predecision_le_0_05lsb": true,
+    "same_codes": true
+  },
+  "threshold_lsb": 0.05,
+  "threshold_v": 9.765625000000002e-06,
+  "channels": {
+    "cdac_differential": {
+      "union_grid_max_error_v": 0.04839334379821891,
+      "union_grid_max_error_lsb": 247.77392024688083,
+      "worst_time_s": 1.352664021822e-05,
+      "common_1ns_max_error_v": 0.004076773191434069,
+      "predecision_max_error_v": 1.337638422249654e-08
+    },
+    "rp": {
+      "union_grid_max_error_v": 1.6261222393065822e-06,
+      "union_grid_max_error_lsb": 0.0083257458652497,
+      "worst_time_s": 4.352686928178e-05,
+      "common_1ns_max_error_v": 1.5438980762727539e-06,
+      "predecision_max_error_v": 6.000089314284196e-12
+    },
+    "rn": {
+      "union_grid_max_error_v": 1.6056483822524115e-06,
+      "union_grid_max_error_lsb": 0.008220919717132347,
+      "worst_time_s": 4.352686928178e-05,
+      "common_1ns_max_error_v": 1.5372878082731134e-06,
+      "predecision_max_error_v": 5.294764626739834e-12
+    },
+    "vcm": {
+      "union_grid_max_error_v": 1.638155648908679e-07,
+      "union_grid_max_error_lsb": 0.0008387356922412437,
+      "worst_time_s": 1.026182573843e-06,
+      "common_1ns_max_error_v": 6.162248333829723e-08,
+      "predecision_max_error_v": 0.0
+    }
+  },
+  "reference": "/repo/v2/analog/adc/qualification_20260913/results/20260913T061717802984Z_baseline",
+  "candidate": "/repo/v2/analog/adc/qualification_20260913/results/20260913T062420206403Z_strict",
+  "summary_sha256": [
+    "4bd536b205c3da519fddf39d07cbfce5031ef5119a774c76163e22ef85035410",
+    "dcd6ef179ececca1c18da2370b95559f6c3a5a05bdb337bb96b448d88982b3e8"
+  ],
+  "scope": "12 frames at TT only; union accepted-point linear interpolation, not continuous-time proof",
+  "complete_adc_qualified": false,
+  "long_campaign_allowed": false
+}

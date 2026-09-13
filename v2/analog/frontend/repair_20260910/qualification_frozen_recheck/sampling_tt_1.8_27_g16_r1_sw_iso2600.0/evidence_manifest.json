@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-10T06:49:26.375999+00:00",
+  "scope": "Recorded artifact integrity only, not an electrical test PASS",
+  "files": {
+    "adc_blocks_snapshot.spice": {
+      "sha256": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+      "size_bytes": 5536
+    },
+    "experiment_config.json": {
+      "sha256": "48e9ae1e31fbce358f1e8224b2a08aee5419fa5259c32fd87a51ea4dd0d43f7d",
+      "size_bytes": 590
+    },
+    "frontend_pdk_snapshot.spice": {
+      "sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "size_bytes": 7726
+    },
+    "sampling.console.txt": {
+      "sha256": "3b9d728b2132603c27cfc57c2d9db2498cf64ef393330530efc80c3e47a3a42b",
+      "size_bytes": 623
+    },
+    "sampling.dat": {
+      "sha256": "2237b0a52a3850caebe0250b320c15992f1d1d82ce8bab10678330823992cb87",
+      "size_bytes": 6318085
+    },
+    "sampling.log": {
+      "sha256": "242bff8b35d578768faeff7c214d5733e3217917fce13b349bb4144a961241ba",
+      "size_bytes": 8645
+    },
+    "sampling.spice": {
+      "sha256": "b07f83213cb51884e51a54c4bd203174dd758fd9241715ef9180dd144e3f143d",
+      "size_bytes": 1896
+    },
+    "sampling_switch_snapshot.spice": {
+      "sha256": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734",
+      "size_bytes": 659
+    },
+    "summary.json": {
+      "sha256": "16c85ae5f9a078936504d45e674512c5fdd1992833436149e813b58fb5d33244",
+      "size_bytes": 3946
+    }
+  },
+  "producer_code": {
+    "/repo/v2/analog/frontend/qualify_advanced.py": "ac6cad1d876ea1fc1ddb5bef6ae28e30cab0f6bd456908e657cf4f03d81f311e",
+    "/repo/v2/analog/frontend/measurements.py": "f4356981f5404856edcbffbb90d1b0e7ee1034feaace4d1cf4c5c382e1568b94",
+    "/repo/v2/analog/frontend/measurement_evidence.py": "67f05a3ff95a4a567b1efb5b09f79fef3cea265011aee0374ff08a6095019c31",
+    "/repo/v2/analog/frontend/run_frontend.py": "b5712d756a526094da5768588a54cddf1f0ab29645c6dc030887f712e85f6cde"
+  }
+}

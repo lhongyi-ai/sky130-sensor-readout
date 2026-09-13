@@ -1,0 +1,14 @@
+{
+  "id": "1.0.4p1",
+  "kind": "runtime_only",
+  "base_package_version": "1.0.4",
+  "base_package_manifest_sha256": "ba14bebdf9d118cebcd415ae9a79cb3900b0a4d3ac19c95811c5d007d08f3f33",
+  "schematic_generation": "UNCHANGED",
+  "cadence_status": "NOT_RUN",
+  "changes": [
+    "Select same-directory top-level native body from OCEAN-returned input.scs",
+    "Keep system Python library environment separate from Cadence child processes",
+    "Preserve native input and selection hashes; display both result statuses"
+  ],
+  "evidence": "User-reported school res_dc attempt 20260912T091436Z_823bf643; two native bodies with identical displayed content"
+}

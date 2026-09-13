@@ -1,0 +1,7 @@
+* Independent intended topology for cdac_route_probe_flat.
+.subckt cdac_route_probe_flat TOP B0 B1
+X00 B0 TOP sky130_fd_pr__cap_mim_m3_1 w=3 l=3
+X01 B1 TOP sky130_fd_pr__cap_mim_m3_1 w=3 l=3
+X10 B1 TOP sky130_fd_pr__cap_mim_m3_1 w=3 l=3
+X11 B0 TOP sky130_fd_pr__cap_mim_m3_1 w=3 l=3
+.ends cdac_route_probe_flat

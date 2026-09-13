@@ -1,0 +1,61 @@
+{
+  "status": "FAIL",
+  "criteria": {
+    "power_nonnegative": true,
+    "power_le_600uW": true,
+    "devices_saturated": false,
+    "gain_ge_50dB": false
+  },
+  "notes": [
+    "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+    "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical.",
+    "Actual local ngspice execution using school-mapped dimensions and explicit native diffusion geometry; no Spectre run claimed."
+  ],
+  "power_uW": 208.06756597370088,
+  "parallel_group_operating_points": {
+    "M3": {
+      "ids": -3.99437520441021e-12,
+      "gm": 1.2101644995128818e-10,
+      "gds": 8.576064533924482e-13
+    },
+    "M4": {
+      "ids": -3.55424771492158e-12,
+      "gm": 1.076862571643102e-10,
+      "gds": 6.913958854484804e-12
+    },
+    "M7": {
+      "ids": -9.560018922440542e-05,
+      "gm": 0.000996610546523848,
+      "gds": 2.398895827988832e-06
+    }
+  },
+  "dc_nodes": {
+    "VDD": 1.8,
+    "VSS": 0.0,
+    "VINP": 0.0,
+    "VOUT": 0.02121303502533023,
+    "VBP": 0.6327533119255205,
+    "VINN": 0.02121303502533023,
+    "ivdd": -0.0001155930922076116
+  },
+  "device_saturation_margin_V": {
+    "M8": 0.997543449366427,
+    "M9": 0.9723557114996069,
+    "M10": 0.5655937463071362,
+    "M1": 1.3972153338776325,
+    "M2": 1.6874203410205113,
+    "M3A": 0.3183017085553241,
+    "M3B": 0.3183017085553241,
+    "M4A": 0.02809669428516913,
+    "M4B": 0.02809669428516913,
+    "M5": -0.09854163832124342,
+    "M6": -0.5376474716834838,
+    "M7A": 1.6135009155412972,
+    "M7B": 1.6135009155412972
+  },
+  "min_saturation_margin_V": -0.5376474716834838,
+  "all_devices_saturated": false,
+  "gain_dB": -28.05162024490715,
+  "ac_unity_frequency_MHz": null,
+  "ac_gain_crossings": []
+}

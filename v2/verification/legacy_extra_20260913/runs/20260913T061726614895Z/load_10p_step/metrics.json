@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "criteria": {
+    "power_nonnegative": true,
+    "power_le_600uW": true,
+    "devices_saturated": true,
+    "sr_pos_ge_2": true,
+    "sr_neg_ge_2": true,
+    "settling_le_1p5us": true
+  },
+  "notes": [
+    "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+    "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical.",
+    "Actual local ngspice execution using school-mapped dimensions and explicit native diffusion geometry; no Spectre run claimed."
+  ],
+  "power_uW": 269.22361189759846,
+  "parallel_group_operating_points": {
+    "M3": {
+      "ids": -1.8104443231467386e-05,
+      "gm": 0.0002886734015975934,
+      "gds": 1.8728249600605993e-06
+    },
+    "M4": {
+      "ids": -1.810361550570244e-05,
+      "gm": 0.0002886612661089128,
+      "gds": 1.8730546002806186e-06
+    },
+    "M7": {
+      "ids": -9.3369151953771e-05,
+      "gm": 0.0009751859171585056,
+      "gds": 3.547411245537668e-06
+    }
+  },
+  "dc_nodes": {
+    "VDD": 1.8,
+    "VSS": 0.0,
+    "VINP": 0.8,
+    "VOUT": 0.8000064964280551,
+    "VBP": 0.63275331192552,
+    "ivdd": -0.0001495686732764436
+  },
+  "device_saturation_margin_V": {
+    "M8": 0.997543449366427,
+    "M9": 0.9723557114996058,
+    "M10": 0.5655937463071365,
+    "M1": 0.5881977360876435,
+    "M2": 0.588642195678337,
+    "M3A": 0.9189738202572295,
+    "M3B": 0.9189738202572295,
+    "M4A": 0.9185325519745587,
+    "M4B": 0.9185325519745587,
+    "M5": 0.03567134931612237,
+    "M6": 0.639397927722133,
+    "M7A": 0.8349492010584665,
+    "M7B": 0.8349492010584665
+  },
+  "min_saturation_margin_V": 0.03567134931612237,
+  "all_devices_saturated": true,
+  "sr_pos_V_per_us": 5.279497881049716,
+  "rise_settling_us": 0.14050107409138474,
+  "rise_overshoot_mV": 111.89443546932698,
+  "sr_neg_V_per_us": 11.172308573715139,
+  "fall_settling_us": 0.07024999999997912,
+  "fall_overshoot_mV": 14.995067273810836,
+  "worst_settling_us": 0.14050107409138474
+}

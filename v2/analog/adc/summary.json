@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-09-08T05:04:30.365322+00:00",
+  "status": "BLOCK_AND_INTEGRATION_DEVELOPMENT_NOT_ADC_QUALIFIED",
+  "source_hashes_current": {
+    "README.md": "599f680770320255a735a1910080058851e82f010b800ea886d33119f353d10c",
+    "adc_analog12.spice": "b94dfc7a93d7f2a0407b209d7b08ef3d0680e8974d05f9f8856bc80a6540af6b",
+    "adc_analog12_bottom_preamp.spice": "a2cd8f7f4d279451632fa704027802563ecc7fe357f40c8454ad8ed6e632b7d8",
+    "adc_analog12_bottom_preamp_lvtref.spice": "6027ba8f31f90192362a8d9fe0903535c69629db0557a34d319daad3c4f98e07",
+    "adc_analog12_bottomsample.spice": "5d922b644ed066bb58e81a161396f0bacf5db8fb5d9b651fa5f65ec0646a1a1a",
+    "adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "adc_preamp.spice": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782",
+    "adc_reference_candidate.spice": "5813ab5f1c959f5b0d6ac44473d929259c45d534dff785263e667be963283442",
+    "build_summary.py": "207a729ff1b448f07470d0b4d80e6c3e01ee567668b067f2614d21c0e1e88366",
+    "generate_analog_wrapper.py": "828932654ec9ee7ff1b78713e77b11f0001157399e7e09ddf6db42b8dc35c15f",
+    "refine_comparator_offsets.py": "464c9ae6f5c84e5bddada739f2b813079e6ccd7e24989d5b073add39c4bdb9b4",
+    "run_adc.py": "90862aba2bcd81299966b3f26d1d98008112265680e622ba9a1e46f7b3003a40",
+    "run_analog_wrapper.py": "a31d9cd45b73a269fa32159aec0e4902ee3fff8600e95215eb916be218df4888",
+    "run_cdac_mismatch.py": "8f38d0bd9e9c702d1d2c460acaefd52979e5423b7649b600fac7099203ae25d2",
+    "run_comparator_mismatch.py": "2d6721f86d25be60a402986af98b9a91aab2ef8ac1c2c9b2361fbb74eb6eb480",
+    "run_latch_interface.py": "1879d69435648dd8941f584e12e6242eb690f9a3c6543cf8894c719d8d22da8a",
+    "run_preamp.py": "234e878acc03d4b5ac2473084f7d155c18c32f0ac09d039b3fd3642a86f986ec",
+    "run_preamp_pvt.py": "9b890bf3d069a98b7a9f1114ffea7fd50dcc87cd79b653609a7d6b77015844bb",
+    "run_preamp_reset_noise.py": "fa5f43a69791f8b16f4597827fba3370fbf53fd1f98796ae02d563c2c19c07bc",
+    "run_reference_switch.py": "b63b30df0b01b2edca24ecd95768a2bab48cda2369f31443ca814461cbfd6fe4",
+    "run_sar_transistor.py": "3ef9724f8ff580e6540cd12d2cc52ca381efdbd5d089506bbeddb9eaf908f021",
+    "test_adc_contracts.py": "4dd347b9ed11b7642f3b8c32d61650cd633fffcd0f756d233c51d378961d8d8b"
+  },
+  "summary_scope": "Owned ADC analog blocks only; full live-RTL conversion evidence is separately under v2/integration/results",
+  "cadence_used": false,
+  "tapeout_or_silicon_measurement": false,
+  "full_adc_qualification_pass": false,
+  "full_adc_simulations_in_this_directory": 0,
+  "suites": [
+    {
+      "id": "bare_comparator",
+      "scope": "Continuously driven deterministic StrongARM only; 90 PVT signs plus 10 TT amplitude points",
+      "cases": 100,
+      "passed": 100,
+      "failed": 0,
+      "evidence": "results/adc_block_summary.json"
+    },
+    {
+      "id": "deliberate_geometry_skew",
+      "scope": "Opposed +/-1% input width sensitivity, NOT PDK mismatch",
+      "cases": 12,
+      "correct_decisions": 8,
+      "wrong_decisions": 4,
+      "evidence": "results/adc_block_summary.json"
+    },
+    {
+      "id": "standard_tg_nominal",
+      "scope": "TT1.8V27C only, 2.5us acquire plus 400ns measured hold; later physical/PVT failure supersedes any general pass claim",
+      "cases": 51,
+      "passed": 51,
+      "failed": 0,
+      "evidence": "results/adc_block_summary.json"
+    },
+    {
+      "id": "cdac_nominal_transfer",
+      "scope": "17 selected codes, ideal bottom reference waveforms, real MIM and top TG; NOT exhaustive ADC INL/DNL",
+      "cases": 17,
+      "max_absolute_residual_lsb": 0.1672183132563987,
+      "evidence": "results/adc_block_summary.json"
+    },
+    {
+      "id": "retained_comparator_interface",
+      "scope": "Six conditions, two repeated decisions each, real SR latch and 5fF load",
+      "cases": 6,
+      "passed": 6,
+      "failed": 0,
+      "max_resolution_delay_s": 8.231190894199914e-09,
+      "max_clock_equivalent_cap_f": 3.164475471928496e-14,
+      "evidence": "results/latch_interface_summary.json"
+    },
+    {
+      "id": "cdac_only_mismatch",
+      "scope": "200 PDK tt_mm CDAC pairs; capacitors measured by AC, full-code thresholds calculated by charge conservation, ideal other circuitry",
+      "evidence": "results/cdac_mismatch_summary.json",
+      "reported": {
+        "evidence_level": "PDK MIM mismatch -> charge-conservation CDAC-only static prediction; NOT full ADC MC",
+        "corner": "tt_mm",
+        "seed": 1309026,
+        "independent_array_samples": 200,
+        "banks_per_array_pair": 26,
+        "matched_units_per_bank": "m=COUNT mult=COUNT; independently qualified root semantics",
+        "pass_count": 200,
+        "fail_count": 0,
+        "worst_inl_lsb": 0.10205869632980658,
+        "worst_min_dnl_lsb": -0.1633748851543828,
+        "worst_max_dnl_lsb": 0.1945355976524752,
+        "exclusions": [
+          "Comparator mismatch/noise",
+          "Switch mismatch/charge injection",
+          "Reference driver",
+          "Spatial gradients",
+          "Extracted parasitics",
+          "PGA mismatch",
+          "Whole-chip yield"
+        ]
+      }
+    },
+    {
+      "id": "comparator_only_mismatch",
+      "scope": "200 real tt_mm comparators, 1400 coarse decisions; not whole ADC MC",
+      "evidence": "results/comparator_mismatch_summary.json",
+      "reported": {
+        "evidence_level": "200 actual PDK tt_mm dynamic-comparator instances; finite staircase input-offset brackets, NOT whole ADC MC",
+        "nominal_vdd": 1.8,
+        "nominal_temperature_c": 27,
+        "sample_count": 200,
+        "comparisons": 1400,
+        "source_resistance_ohm": 350,
+        "input_capacitance_f": 8.128512e-11,
+        "output_load_f": 5e-15,
+        "resolved_sample_count": 200,
+        "monotonic_sample_count": 200,
+        "bracketed_sample_count": 143,
+        "smallest_bracket_v": 0.00025,
+        "largest_bracket_v": 0.002,
+        "limitations": [
+          "Offset midpoint is a bounded estimate, not a high-resolution measurement",
+          "No stochastic transient device noise; mismatch is not noise",
+          "No whole-ADC yield or calibration pass assertion",
+          "Only nominal VDD/temperature in this screen"
+        ]
+      }
+    },
+    {
+      "id": "preamp_characterization",
+      "scope": "Self-biased preamp OP/AC, stationary noise, driven-input overload recovery",
+      "evidence": "results/preamp_summary.json",
+      "reported": {
+        "status": "COMPLETE_BLOCK_CHARACTERIZATION_NOT_ADC_QUALIFICATION",
+        "power_measurement_scope": "Preamp-only separate supply; static SR-latch operating-point current excluded from OP power. Dynamic total comparator/ADC power needs integrated transient measurement.",
+        "evidence_level": "Independent self-biased PDK preamp candidate: stationary OP/AC/noise and driven-input overload recovery, NOT ADC SNDR",
+        "condition_count": 45,
+        "noise_bands": [
+          {
+            "lower_hz": 1,
+            "upper_hz": 5000.0,
+            "integrated_input_noise_spectrum_rms_v": 1.79854143052833e-05,
+            "integrated_output_noise_referred_to_dc_input_rms_v": 1.798541366692629e-05
+          },
+          {
+            "lower_hz": 1,
+            "upper_hz": 50000.0,
+            "integrated_input_noise_spectrum_rms_v": 2.298330349549655e-05,
+            "integrated_output_noise_referred_to_dc_input_rms_v": 2.2983225816787602e-05
+          },
+          {
+            "lower_hz": 1,
+            "upper_hz": 100000000.0,
+            "integrated_input_noise_spectrum_rms_v": 0.0001729037455380141,
+            "integrated_output_noise_referred_to_dc_input_rms_v": 6.302961079869089e-05
+          }
+        ],
+        "overload_recovery_pass_count": 14,
+        "overload_recovery_fail_count": 0,
+        "limitations": [
+          "Not floating-CDAC decision noise",
+          "No sampled-noise folding",
+          "No extracted layout",
+          "PVT OP/AC does not qualify PVT dynamic comparator decisions",
+          "No preamp mismatch calibration yet"
+        ]
+      }
+    },
+    {
+      "id": "preamp_reset_noise",
+      "scope": "Nominal stationary preamp noise with real reset StrongARM load and no SR-latch operating-point ambiguity",
+      "evidence": "results/preamp_reset_noise_summary.json",
+      "reported": {
+        "evidence_level": "Nominal stationary preamp noise, real reset StrongARM plus MIM load, no SR latch DC ambiguity; NOT ADC noise qualification",
+        "vdd": 1.8,
+        "temperature_c": 27,
+        "corner": "tt",
+        "dc_gain_vv": 15.310081783040198,
+        "preamp_power_w": 6.046397434762201e-05,
+        "reset_strongarm_static_power_w": 2.4545627449884e-11,
+        "noise_bands": [
+          {
+            "lower_hz": 1,
+            "upper_hz": 5000.0,
+            "output_noise_referred_to_dc_input_rms_v": 1.798541366691875e-05,
+            "integrated_input_equivalent_spectrum_rms_v": 1.79854143052783e-05
+          },
+          {
+            "lower_hz": 1,
+            "upper_hz": 50000.0,
+            "output_noise_referred_to_dc_input_rms_v": 2.2983225816777478e-05,
+            "integrated_input_equivalent_spectrum_rms_v": 2.29833034954896e-05
+          },
+          {
+            "lower_hz": 1,
+            "upper_hz": 100000000.0,
+            "output_noise_referred_to_dc_input_rms_v": 6.302961078559403e-05,
+            "integrated_input_equivalent_spectrum_rms_v": 0.00017290374553773134
+          }
+        ],
+        "limitations": [
+          "No clocked comparator noise",
+          "No sampled-noise folding",
+          "No noise below 1 Hz included",
+          "No mismatch or extracted parasitics",
+          "Output-buffer gate parasitics omitted from reset comparator ballast load"
+        ]
+      }
+    },
+    {
+      "id": "analog_wrapper_bottom_preamp_r1_c1e-08_summary",
+      "scope": "Six single-trial transistor-wrapper tests with ideal external finite-edge phases/codes, not complete ADC conversion",
+      "cases": 6,
+      "passed": 6,
+      "failed": 0,
+      "evidence": "results/analog_wrapper_bottom_preamp_r1_c1e-08_summary.json"
+    },
+    {
+      "id": "analog_wrapper_bottom_r1_c1e-08_summary",
+      "scope": "Six single-trial transistor-wrapper tests with ideal external finite-edge phases/codes, not complete ADC conversion",
+      "cases": 6,
+      "passed": 3,
+      "failed": 3,
+      "evidence": "results/analog_wrapper_bottom_r1_c1e-08_summary.json"
+    },
+    {
+      "id": "analog_wrapper_bottom_summary",
+      "scope": "Six single-trial transistor-wrapper tests with ideal external finite-edge phases/codes, not complete ADC conversion",
+      "cases": 6,
+      "passed": 3,
+      "failed": 3,
+      "evidence": "results/analog_wrapper_bottom_summary.json"
+    },
+    {
+      "id": "analog_wrapper_summary",
+      "scope": "Six single-trial transistor-wrapper tests with ideal external finite-edge phases/codes, not complete ADC conversion",
+      "cases": 6,
+      "passed": 3,
+      "failed": 3,
+      "evidence": "results/analog_wrapper_summary.json"
+    },
+    {
+      "id": "comparator_bounded_nominal_offsets",
+      "scope": "200 comparator-only instances, second identical-input decision per level, completed stable refinement round 2; not a whole ADC calibration",
+      "cases": 200,
+      "bracketed": 200,
+      "unbracketed": 0,
+      "max_bracket_width_without_guard_v": 0.0001047222222222222,
+      "guard_each_end_v": 5e-06,
+      "max_offset_estimate_uncertainty_with_guard_v": 5.73611111111111e-05,
+      "offset_estimate_min_v": -0.007165972222222221,
+      "offset_estimate_max_v": 0.009115694444444444,
+      "offset_estimate_sigma_v": 0.002896353508036333,
+      "later_finer_round_status": "Incomplete: 150-second wall-clock limit during shared-resource run, not an electrical pass/fail",
+      "evidence": "results/comparator_offset_stable_refinement_r2.json"
+    },
+    {
+      "id": "reference_switch_actual_msb_ss_tracking_summary",
+      "scope": "Isolated actual reference decoder/TG/MIM MSB-load diagnostic; NOT full ADC",
+      "completed_cases": 4,
+      "planned_cases": 4,
+      "failed_diagnostic_cases": 3,
+      "evidence": "results/reference_switch_actual_msb_ss_tracking_summary.json",
+      "note": "Keep actual MSB vs minimum-size counterexample and fixed vs tracking reference common mode separate."
+    },
+    {
+      "id": "reference_switch_actual_msb_summary",
+      "scope": "Isolated actual reference decoder/TG/MIM MSB-load diagnostic; NOT full ADC",
+      "completed_cases": 12,
+      "planned_cases": 12,
+      "failed_diagnostic_cases": 4,
+      "evidence": "results/reference_switch_actual_msb_summary.json",
+      "note": "Keep actual MSB vs minimum-size counterexample and fixed vs tracking reference common mode separate."
+    },
+    {
+      "id": "reference_switch_lvt16_ss_summary",
+      "scope": "Isolated actual reference decoder/TG/MIM MSB-load diagnostic; NOT full ADC",
+      "completed_cases": 4,
+      "planned_cases": 4,
+      "failed_diagnostic_cases": 0,
+      "evidence": "results/reference_switch_lvt16_ss_summary.json",
+      "note": "Keep actual MSB vs minimum-size counterexample and fixed vs tracking reference common mode separate."
+    },
+    {
+      "id": "reference_switch_lvt16_ss_tracking_summary",
+      "scope": "Isolated actual reference decoder/TG/MIM MSB-load diagnostic; NOT full ADC",
+      "completed_cases": 4,
+      "planned_cases": 4,
+      "failed_diagnostic_cases": 0,
+      "evidence": "results/reference_switch_lvt16_ss_tracking_summary.json",
+      "note": "Keep actual MSB vs minimum-size counterexample and fixed vs tracking reference common mode separate."
+    },
+    {
+      "id": "reference_switch_summary",
+      "scope": "Isolated actual reference decoder/TG/MIM MSB-load diagnostic; NOT full ADC",
+      "completed_cases": 14,
+      "planned_cases": 48,
+      "failed_diagnostic_cases": 9,
+      "evidence": "results/reference_switch_summary.json",
+      "note": "Keep actual MSB vs minimum-size counterexample and fixed vs tracking reference common mode separate."
+    }
+  ],
+  "interfaces": {
+    "analog_wrapper_pin_order": "INP INN Q QB SAMPLE SAMPLEB ACQ CONV EVAL B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0 RP RN VCM VDD VSS",
+    "output_polarity": "Q high iff sampled input differential exceeds current offset-binary trial threshold",
+    "threshold_volts": "0.8*trial_code/4096 - 0.4",
+    "external_phase_contract": "SAMPLE opens top path first, then ACQ opens bottom acquisition paths, then CONV closes reference paths; EVAL is delayed until residual settles; Q holds through EVAL reset"
+  },
+  "remaining_ideal_elements": [
+    "External voltage/clock sources are test fixtures, not claimed on-chip implementations",
+    "Standalone fixed-code/phase benches do not implement SAR sequencing; actual RTL bridge lives in v2/integration",
+    "Top-level VCM/VREF sources external by specification, finite reference R/C must be included in accuracy claims"
+  ],
+  "failed_or_unfinished": [
+    "Standard-Vt TG fails low-voltage cold PVT acquisition in separately retained physical tests",
+    "Unbuffered floating-CDAC comparator flips some quarter-LSB inputs from switching interaction; independent preamp candidate improves the tested six points",
+    "Reference-switch small TG sizing/PVT acquisition is not yet qualified",
+    "No full-ADC stochastic transient device noise/SNDR qualification",
+    "No exhaustive transistor-ADC all-code INL/DNL or no-missing-code demonstration",
+    "No 200-instance whole-ADC/PGA Monte Carlo",
+    "No complete ADC layout, DRC/LVS or top-level extracted performance",
+    "Early behavioral B-source SAR harness was aborted/superseded by real-RTL co-simulation, not a passing result"
+  ],
+  "provenance_note": "Current source hashes are not retroactive run hashes. New runs have individual provenance JSON and source snapshots; earlier result JSON with embedded source hashes retain those actual historical hashes. Preserve failure/history logs."
+}

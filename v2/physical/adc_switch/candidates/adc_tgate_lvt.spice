@@ -1,0 +1,6 @@
+* Candidate only: standard frozen adc_tgate remains unchanged.
+* Rail-to-rail clocks; no bootstrapping or over-voltage gate drive.
+.subckt adc_tgate_lvt A B EN ENB VDD VSS params: WN=8 WP=16 LSW=0.15
+XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L={LSW} nf=1 mult=1
+XP B ENB A VDD sky130_fd_pr__pfet_01v8 W={WP} L={LSW} nf=1 mult=1
+.ends adc_tgate_lvt

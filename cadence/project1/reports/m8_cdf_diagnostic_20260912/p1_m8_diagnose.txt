@@ -1,0 +1,131 @@
+
+BEGIN M8_DIAGNOSTIC_V1
+
+STAGE 01_DEFAULT
+w value="550n" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="550n" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="150n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+
+STAGE 02_REQUEST_WRITTEN
+w value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800.0n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+formInitProc="PasCdfFormInit"
+
+STAGE 03_AFTER_INITIALIZATION
+w value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+
+STAGE 04_REQUEST_REAPPLIED
+w value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800.0n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="145.75f" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="1.63u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+CALLBACK_BEGIN fingers "sky130_fd_pr_main_mosCB( 'fingers )"
+
+STAGE 05_AFTER_CALLBACK_fingers
+w value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800.0n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="1.91331p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="1.91331p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="14.9701u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="14.9701u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+CALLBACK_BEGIN l "sky130_fd_pr_main_mosCB( 'l )"
+
+STAGE 05_AFTER_CALLBACK_l
+w value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22005u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="1.91331p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="1.91331p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="14.9701u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="14.9701u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+CALLBACK_BEGIN fw "sky130_fd_pr_main_mosCB( 'fw )"
+
+STAGE 05_AFTER_CALLBACK_fw
+w value="7.22u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="1.9133p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="1.9133p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="14.97u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="14.97u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+CALLBACK_BEGIN m "sky130_fd_pr_main_mosCB( 'm )"
+
+STAGE 05_AFTER_CALLBACK_m
+w value="7.22u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="1.9133p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="1.9133p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="14.97u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="14.97u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+
+STAGE 06_DATABASE_READBACK
+w value="7.22u" default="550n" callback="sky130_fd_pr_main_mosCB( 'w )"
+fw value="7.22u" default="550n" callback="sky130_fd_pr_main_mosCB( 'fw )"
+l value="800n" default="150n" callback="sky130_fd_pr_main_mosCB( 'l )"
+fingers value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'fingers )"
+m value="1" default="1" callback="sky130_fd_pr_main_mosCB( 'm )"
+simW value="iPar(\"fw\")" default="iPar(\"fw\")" callback=nil
+simM value="iPar(\"m\")*iPar(\"fingers\")" default="iPar(\"m\")*iPar(\"fingers\")" callback=nil
+as value="1.9133p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'as )"
+ad value="1.9133p" default="145.75f" callback="sky130_fd_pr_main_mosCB( 'ad )"
+ps value="14.97u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'ps )"
+pd value="14.97u" default="1.63u" callback="sky130_fd_pr_main_mosCB( 'pd )"
+COMPARE w requested="7.22005u" actual="7.22u"
+COMPARE fw requested="7.22005u" actual="7.22u"
+COMPARE l requested="0.8u" actual="800n"
+COMPARE fingers requested="1" actual="1"
+COMPARE m requested="1" actual="1"
+RESULT (t); this is a diagnostic, not simulation qualification.
+FINAL_SAVE (t)

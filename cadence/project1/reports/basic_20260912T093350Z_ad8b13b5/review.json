@@ -1,0 +1,110 @@
+{
+  "run_id": "20260912T092706Z_31ca6c32",
+  "review_status": "PASS_DC_MODEL_COMPARISON_AT_REPORTED_CONDITION",
+  "original_status_preserved": {
+    "status": "PASS",
+    "performance_status": "FAIL"
+  },
+  "scope": {
+    "cell": "p1b_tb_res",
+    "corner": "tt",
+    "temperature_C": 27,
+    "tnom_C": 27,
+    "length_um": 0.35,
+    "width_um": 0.35,
+    "scan_V": [
+      0,
+      0.1,
+      0.001
+    ]
+  },
+  "source_url": "https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_pr/main/cells/res_high_po/sky130_fd_pr__res_high_po_0p35.model.spice",
+  "source_retrieval_date": "2026-09-12",
+  "reference_script_sha256": "8038004c0a81ecc1cc997ffaebe5f47677b4e080eb34020d67684fba23972cad",
+  "source_coefficients_fitted": false,
+  "checks": {
+    "package_matches_run": true,
+    "package_matches_delivered_runtime_patch": true,
+    "executed_deck_hash_matches": true,
+    "native_body_hash_matches": true,
+    "returned_input_hash_matches": true,
+    "native_topology_and_parameters_match": true,
+    "old_metrics_reproduced": true,
+    "voltage_current_axes_match": true,
+    "voltage_matches_stimulus": true,
+    "source_equation_matches_all_101_currents": true,
+    "positive_current_for_positive_voltage": true,
+    "spectre_normal_completion": true,
+    "export_completed": true
+  },
+  "point_count": 101,
+  "nonzero_point_count": 100,
+  "max_relative_current_error": 4.440892098500626e-16,
+  "max_absolute_current_error_A": 2.0328790734103208e-20,
+  "original_comparison": {
+    "mean_resistance_ohm": 1231.136636220402,
+    "cdf_ohm": 979.33,
+    "nominal_contact_plus_body_ohm": 979.3335,
+    "difference_percent": 25.71213341982803,
+    "variation_percent": 1.1835867902094683,
+    "minimum_resistance_ohm": 1223.7532942145187,
+    "maximum_resistance_ohm": 1238.3248648102526
+  },
+  "simulator_summary": {
+    "errors": 0,
+    "warnings": 0,
+    "notices": 4
+  },
+  "examples": [
+    {
+      "voltage_V": 0.01,
+      "current_A": 8.075425346104385e-06,
+      "reference_current_A": 8.075425346104382e-06,
+      "resistance_ohm": 1238.3248648102526,
+      "reference_resistance_ohm": 1238.324864810253,
+      "absolute_current_error_A": 3.3881317890172014e-21,
+      "relative_current_error": 4.440892098500626e-16
+    },
+    {
+      "voltage_V": 0.05000000000000004,
+      "current_A": 4.05845726110072e-05,
+      "reference_current_A": 4.05845726110072e-05,
+      "resistance_ohm": 1231.9952332438563,
+      "reference_resistance_ohm": 1231.9952332438563,
+      "absolute_current_error_A": 0.0,
+      "relative_current_error": 0.0
+    },
+    {
+      "voltage_V": 0.1,
+      "current_A": 8.171581680128285e-05,
+      "reference_current_A": 8.171581680128285e-05,
+      "resistance_ohm": 1223.7532942145187,
+      "reference_resistance_ohm": 1223.7532942145187,
+      "absolute_current_error_A": 0.0,
+      "relative_current_error": 0.0
+    }
+  ],
+  "fingerprints": {
+    "input.scs": "ac77e4ee263c87cce7ffb0d4bc0eec0868c486486624d5cc55d89715894db7f2",
+    "native_input.scs": "c1ac8fe13f8127880262304c2e3a870f3543c1a6a59e00e22877c3b7bfc053b2",
+    "native_netlist.scs": "5279ce3feb8b52649cfffbde4b5feda0c4a9a96d7c8a2d0f2737fe95d9ea2780",
+    "TEST.csv": "63aa56f9be6b3ed87dcabcd5dafe19f8c25ad670788f2d065f2f00e1e027f58f",
+    "VTEST_p.csv": "78250035c9f5e331ff50097efff574c5c8acbba54466dad629ccf2bd57f016e5",
+    "spectre.out": "c5715b335464188177806cf5f055154a283a4d1338c4e1699d4495b25faa0ba1",
+    "ocean_export.log": "acf5fe8de9b297f7dcb63464d7808b6118d6529cfc530c3cdd8df314eeee2d8a",
+    "metrics.json": "fb2bc8cdfdc35ce2a2a1b17471777c9e50d6cd503f12d20ddf692648d1d14bdd",
+    "status.json": "41831d32d742bf1add5c91b509a69934ec0cf8d9bb6b3e78004f034ffac100f8"
+  },
+  "report_sha256": "6bc19b686282890062fadd992030743859256111dac7ba60c615ce6f6cc6a546",
+  "limitation": [
+    "Comparison of returned Spectre CSV with public model equations; no local Cadence execution.",
+    "School model dependency files were not provided or independently hash-matched to upstream.",
+    "Binary PSF is preserved; this review does not independently decode PSF.",
+    "No MIM, RC, OTA, PVT, noise, layout or system qualification follows from this DC result."
+  ],
+  "next_steps": [
+    "Keep the old FAIL result intact; its CDF/linearity criteria were unsuitable for this model.",
+    "Run existing mim_ac and rc_step jobs independently, then return their reports.",
+    "Update passive acceptance together after reviewing capacitor and RC parasitic behavior."
+  ]
+}

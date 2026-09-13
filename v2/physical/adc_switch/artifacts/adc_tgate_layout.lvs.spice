@@ -1,0 +1,15 @@
+* NGSPICE file created from adc_tgate_layout.ext - technology: sky130A
+
+.subckt tg_nfet8 B D S G
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=0.15
+.ends
+
+.subckt tg_pfet16 B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=4.64 pd=32.58 as=4.64 ps=32.58 w=16 l=0.15
+.ends
+
+.subckt adc_tgate_layout A B EN ENB VDD VSS
+XXN VSS B A EN tg_nfet8
+XXP VDD B A ENB tg_pfet16
+.ends
+

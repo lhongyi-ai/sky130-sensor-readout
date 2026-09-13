@@ -1,0 +1,37 @@
+{
+  "test": "sampling",
+  "gain": 4,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "samples": [
+    {
+      "time_s": 1.248e-05,
+      "sampled_diff_v": 0.359120666,
+      "settled_pga_diff_v": 0.359120951,
+      "dynamic_error_v": -2.850000000442776e-07,
+      "within_0p25LSB": true
+    },
+    {
+      "time_s": 2.248e-05,
+      "sampled_diff_v": -0.359120666,
+      "settled_pga_diff_v": -0.359120951,
+      "dynamic_error_v": 2.850000000442776e-07,
+      "within_0p25LSB": true
+    },
+    {
+      "time_s": 3.248e-05,
+      "sampled_diff_v": 0.359120666,
+      "settled_pga_diff_v": 0.359120951,
+      "dynamic_error_v": -2.850000000442776e-07,
+      "within_0p25LSB": true
+    }
+  ],
+  "all_dynamic_samples_pass": true,
+  "load_pf_per_side": 81.28512,
+  "source_r_ohm_per_side": 350,
+  "isolation_r_ohm_per_side": 150,
+  "reservoir_cap_nominal_pf_per_side": 4,
+  "caution": "Real PDK TG and MIM bank with testbench CM reset. NOT full SAR bit switching/comparator kickback or a system SNDR test."
+}

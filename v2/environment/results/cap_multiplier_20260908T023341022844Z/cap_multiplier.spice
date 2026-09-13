@@ -1,0 +1,2412 @@
+Cap bank local mismatch multiplier semantics
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+.temp 27
+Vunit_0 unit_0 0 AC 1
+Xunit_0 unit_0 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_1 unit_1 0 AC 1
+Xunit_1 unit_1 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_2 unit_2 0 AC 1
+Xunit_2 unit_2 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_3 unit_3 0 AC 1
+Xunit_3 unit_3 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_4 unit_4 0 AC 1
+Xunit_4 unit_4 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_5 unit_5 0 AC 1
+Xunit_5 unit_5 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_6 unit_6 0 AC 1
+Xunit_6 unit_6 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_7 unit_7 0 AC 1
+Xunit_7 unit_7 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_8 unit_8 0 AC 1
+Xunit_8 unit_8 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_9 unit_9 0 AC 1
+Xunit_9 unit_9 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_10 unit_10 0 AC 1
+Xunit_10 unit_10 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_11 unit_11 0 AC 1
+Xunit_11 unit_11 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_12 unit_12 0 AC 1
+Xunit_12 unit_12 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_13 unit_13 0 AC 1
+Xunit_13 unit_13 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_14 unit_14 0 AC 1
+Xunit_14 unit_14 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_15 unit_15 0 AC 1
+Xunit_15 unit_15 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_16 unit_16 0 AC 1
+Xunit_16 unit_16 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_17 unit_17 0 AC 1
+Xunit_17 unit_17 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_18 unit_18 0 AC 1
+Xunit_18 unit_18 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_19 unit_19 0 AC 1
+Xunit_19 unit_19 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_20 unit_20 0 AC 1
+Xunit_20 unit_20 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_21 unit_21 0 AC 1
+Xunit_21 unit_21 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_22 unit_22 0 AC 1
+Xunit_22 unit_22 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_23 unit_23 0 AC 1
+Xunit_23 unit_23 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_24 unit_24 0 AC 1
+Xunit_24 unit_24 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_25 unit_25 0 AC 1
+Xunit_25 unit_25 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_26 unit_26 0 AC 1
+Xunit_26 unit_26 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_27 unit_27 0 AC 1
+Xunit_27 unit_27 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_28 unit_28 0 AC 1
+Xunit_28 unit_28 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_29 unit_29 0 AC 1
+Xunit_29 unit_29 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_30 unit_30 0 AC 1
+Xunit_30 unit_30 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_31 unit_31 0 AC 1
+Xunit_31 unit_31 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_32 unit_32 0 AC 1
+Xunit_32 unit_32 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_33 unit_33 0 AC 1
+Xunit_33 unit_33 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_34 unit_34 0 AC 1
+Xunit_34 unit_34 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_35 unit_35 0 AC 1
+Xunit_35 unit_35 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_36 unit_36 0 AC 1
+Xunit_36 unit_36 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_37 unit_37 0 AC 1
+Xunit_37 unit_37 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_38 unit_38 0 AC 1
+Xunit_38 unit_38 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_39 unit_39 0 AC 1
+Xunit_39 unit_39 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_40 unit_40 0 AC 1
+Xunit_40 unit_40 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_41 unit_41 0 AC 1
+Xunit_41 unit_41 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_42 unit_42 0 AC 1
+Xunit_42 unit_42 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_43 unit_43 0 AC 1
+Xunit_43 unit_43 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_44 unit_44 0 AC 1
+Xunit_44 unit_44 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_45 unit_45 0 AC 1
+Xunit_45 unit_45 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_46 unit_46 0 AC 1
+Xunit_46 unit_46 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_47 unit_47 0 AC 1
+Xunit_47 unit_47 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_48 unit_48 0 AC 1
+Xunit_48 unit_48 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_49 unit_49 0 AC 1
+Xunit_49 unit_49 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_50 unit_50 0 AC 1
+Xunit_50 unit_50 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_51 unit_51 0 AC 1
+Xunit_51 unit_51 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_52 unit_52 0 AC 1
+Xunit_52 unit_52 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_53 unit_53 0 AC 1
+Xunit_53 unit_53 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_54 unit_54 0 AC 1
+Xunit_54 unit_54 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_55 unit_55 0 AC 1
+Xunit_55 unit_55 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_56 unit_56 0 AC 1
+Xunit_56 unit_56 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_57 unit_57 0 AC 1
+Xunit_57 unit_57 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_58 unit_58 0 AC 1
+Xunit_58 unit_58 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_59 unit_59 0 AC 1
+Xunit_59 unit_59 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_60 unit_60 0 AC 1
+Xunit_60 unit_60 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_61 unit_61 0 AC 1
+Xunit_61 unit_61 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_62 unit_62 0 AC 1
+Xunit_62 unit_62 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_63 unit_63 0 AC 1
+Xunit_63 unit_63 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_64 unit_64 0 AC 1
+Xunit_64 unit_64 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_65 unit_65 0 AC 1
+Xunit_65 unit_65 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_66 unit_66 0 AC 1
+Xunit_66 unit_66 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_67 unit_67 0 AC 1
+Xunit_67 unit_67 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_68 unit_68 0 AC 1
+Xunit_68 unit_68 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_69 unit_69 0 AC 1
+Xunit_69 unit_69 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_70 unit_70 0 AC 1
+Xunit_70 unit_70 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_71 unit_71 0 AC 1
+Xunit_71 unit_71 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_72 unit_72 0 AC 1
+Xunit_72 unit_72 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_73 unit_73 0 AC 1
+Xunit_73 unit_73 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_74 unit_74 0 AC 1
+Xunit_74 unit_74 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_75 unit_75 0 AC 1
+Xunit_75 unit_75 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_76 unit_76 0 AC 1
+Xunit_76 unit_76 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_77 unit_77 0 AC 1
+Xunit_77 unit_77 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_78 unit_78 0 AC 1
+Xunit_78 unit_78 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_79 unit_79 0 AC 1
+Xunit_79 unit_79 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_80 unit_80 0 AC 1
+Xunit_80 unit_80 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_81 unit_81 0 AC 1
+Xunit_81 unit_81 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_82 unit_82 0 AC 1
+Xunit_82 unit_82 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_83 unit_83 0 AC 1
+Xunit_83 unit_83 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_84 unit_84 0 AC 1
+Xunit_84 unit_84 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_85 unit_85 0 AC 1
+Xunit_85 unit_85 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_86 unit_86 0 AC 1
+Xunit_86 unit_86 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_87 unit_87 0 AC 1
+Xunit_87 unit_87 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_88 unit_88 0 AC 1
+Xunit_88 unit_88 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_89 unit_89 0 AC 1
+Xunit_89 unit_89 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_90 unit_90 0 AC 1
+Xunit_90 unit_90 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_91 unit_91 0 AC 1
+Xunit_91 unit_91 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_92 unit_92 0 AC 1
+Xunit_92 unit_92 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_93 unit_93 0 AC 1
+Xunit_93 unit_93 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_94 unit_94 0 AC 1
+Xunit_94 unit_94 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_95 unit_95 0 AC 1
+Xunit_95 unit_95 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_96 unit_96 0 AC 1
+Xunit_96 unit_96 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_97 unit_97 0 AC 1
+Xunit_97 unit_97 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_98 unit_98 0 AC 1
+Xunit_98 unit_98 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_99 unit_99 0 AC 1
+Xunit_99 unit_99 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_100 unit_100 0 AC 1
+Xunit_100 unit_100 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_101 unit_101 0 AC 1
+Xunit_101 unit_101 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_102 unit_102 0 AC 1
+Xunit_102 unit_102 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_103 unit_103 0 AC 1
+Xunit_103 unit_103 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_104 unit_104 0 AC 1
+Xunit_104 unit_104 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_105 unit_105 0 AC 1
+Xunit_105 unit_105 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_106 unit_106 0 AC 1
+Xunit_106 unit_106 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_107 unit_107 0 AC 1
+Xunit_107 unit_107 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_108 unit_108 0 AC 1
+Xunit_108 unit_108 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_109 unit_109 0 AC 1
+Xunit_109 unit_109 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_110 unit_110 0 AC 1
+Xunit_110 unit_110 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_111 unit_111 0 AC 1
+Xunit_111 unit_111 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_112 unit_112 0 AC 1
+Xunit_112 unit_112 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_113 unit_113 0 AC 1
+Xunit_113 unit_113 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_114 unit_114 0 AC 1
+Xunit_114 unit_114 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_115 unit_115 0 AC 1
+Xunit_115 unit_115 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_116 unit_116 0 AC 1
+Xunit_116 unit_116 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_117 unit_117 0 AC 1
+Xunit_117 unit_117 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_118 unit_118 0 AC 1
+Xunit_118 unit_118 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_119 unit_119 0 AC 1
+Xunit_119 unit_119 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_120 unit_120 0 AC 1
+Xunit_120 unit_120 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_121 unit_121 0 AC 1
+Xunit_121 unit_121 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_122 unit_122 0 AC 1
+Xunit_122 unit_122 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_123 unit_123 0 AC 1
+Xunit_123 unit_123 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_124 unit_124 0 AC 1
+Xunit_124 unit_124 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_125 unit_125 0 AC 1
+Xunit_125 unit_125 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_126 unit_126 0 AC 1
+Xunit_126 unit_126 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_127 unit_127 0 AC 1
+Xunit_127 unit_127 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_128 unit_128 0 AC 1
+Xunit_128 unit_128 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_129 unit_129 0 AC 1
+Xunit_129 unit_129 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_130 unit_130 0 AC 1
+Xunit_130 unit_130 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_131 unit_131 0 AC 1
+Xunit_131 unit_131 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_132 unit_132 0 AC 1
+Xunit_132 unit_132 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_133 unit_133 0 AC 1
+Xunit_133 unit_133 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_134 unit_134 0 AC 1
+Xunit_134 unit_134 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_135 unit_135 0 AC 1
+Xunit_135 unit_135 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_136 unit_136 0 AC 1
+Xunit_136 unit_136 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_137 unit_137 0 AC 1
+Xunit_137 unit_137 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_138 unit_138 0 AC 1
+Xunit_138 unit_138 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_139 unit_139 0 AC 1
+Xunit_139 unit_139 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_140 unit_140 0 AC 1
+Xunit_140 unit_140 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_141 unit_141 0 AC 1
+Xunit_141 unit_141 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_142 unit_142 0 AC 1
+Xunit_142 unit_142 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_143 unit_143 0 AC 1
+Xunit_143 unit_143 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_144 unit_144 0 AC 1
+Xunit_144 unit_144 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_145 unit_145 0 AC 1
+Xunit_145 unit_145 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_146 unit_146 0 AC 1
+Xunit_146 unit_146 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_147 unit_147 0 AC 1
+Xunit_147 unit_147 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_148 unit_148 0 AC 1
+Xunit_148 unit_148 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_149 unit_149 0 AC 1
+Xunit_149 unit_149 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_150 unit_150 0 AC 1
+Xunit_150 unit_150 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_151 unit_151 0 AC 1
+Xunit_151 unit_151 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_152 unit_152 0 AC 1
+Xunit_152 unit_152 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_153 unit_153 0 AC 1
+Xunit_153 unit_153 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_154 unit_154 0 AC 1
+Xunit_154 unit_154 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_155 unit_155 0 AC 1
+Xunit_155 unit_155 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_156 unit_156 0 AC 1
+Xunit_156 unit_156 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_157 unit_157 0 AC 1
+Xunit_157 unit_157 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_158 unit_158 0 AC 1
+Xunit_158 unit_158 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_159 unit_159 0 AC 1
+Xunit_159 unit_159 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_160 unit_160 0 AC 1
+Xunit_160 unit_160 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_161 unit_161 0 AC 1
+Xunit_161 unit_161 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_162 unit_162 0 AC 1
+Xunit_162 unit_162 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_163 unit_163 0 AC 1
+Xunit_163 unit_163 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_164 unit_164 0 AC 1
+Xunit_164 unit_164 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_165 unit_165 0 AC 1
+Xunit_165 unit_165 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_166 unit_166 0 AC 1
+Xunit_166 unit_166 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_167 unit_167 0 AC 1
+Xunit_167 unit_167 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_168 unit_168 0 AC 1
+Xunit_168 unit_168 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_169 unit_169 0 AC 1
+Xunit_169 unit_169 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_170 unit_170 0 AC 1
+Xunit_170 unit_170 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_171 unit_171 0 AC 1
+Xunit_171 unit_171 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_172 unit_172 0 AC 1
+Xunit_172 unit_172 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_173 unit_173 0 AC 1
+Xunit_173 unit_173 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_174 unit_174 0 AC 1
+Xunit_174 unit_174 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_175 unit_175 0 AC 1
+Xunit_175 unit_175 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_176 unit_176 0 AC 1
+Xunit_176 unit_176 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_177 unit_177 0 AC 1
+Xunit_177 unit_177 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_178 unit_178 0 AC 1
+Xunit_178 unit_178 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_179 unit_179 0 AC 1
+Xunit_179 unit_179 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_180 unit_180 0 AC 1
+Xunit_180 unit_180 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_181 unit_181 0 AC 1
+Xunit_181 unit_181 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_182 unit_182 0 AC 1
+Xunit_182 unit_182 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_183 unit_183 0 AC 1
+Xunit_183 unit_183 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_184 unit_184 0 AC 1
+Xunit_184 unit_184 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_185 unit_185 0 AC 1
+Xunit_185 unit_185 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_186 unit_186 0 AC 1
+Xunit_186 unit_186 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_187 unit_187 0 AC 1
+Xunit_187 unit_187 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_188 unit_188 0 AC 1
+Xunit_188 unit_188 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_189 unit_189 0 AC 1
+Xunit_189 unit_189 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_190 unit_190 0 AC 1
+Xunit_190 unit_190 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_191 unit_191 0 AC 1
+Xunit_191 unit_191 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_192 unit_192 0 AC 1
+Xunit_192 unit_192 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_193 unit_193 0 AC 1
+Xunit_193 unit_193 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_194 unit_194 0 AC 1
+Xunit_194 unit_194 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_195 unit_195 0 AC 1
+Xunit_195 unit_195 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_196 unit_196 0 AC 1
+Xunit_196 unit_196 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_197 unit_197 0 AC 1
+Xunit_197 unit_197 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_198 unit_198 0 AC 1
+Xunit_198 unit_198 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vunit_199 unit_199 0 AC 1
+Xunit_199 unit_199 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 
+Vm64_only_0 m64_only_0 0 AC 1
+Xm64_only_0 m64_only_0 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_1 m64_only_1 0 AC 1
+Xm64_only_1 m64_only_1 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_2 m64_only_2 0 AC 1
+Xm64_only_2 m64_only_2 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_3 m64_only_3 0 AC 1
+Xm64_only_3 m64_only_3 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_4 m64_only_4 0 AC 1
+Xm64_only_4 m64_only_4 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_5 m64_only_5 0 AC 1
+Xm64_only_5 m64_only_5 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_6 m64_only_6 0 AC 1
+Xm64_only_6 m64_only_6 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_7 m64_only_7 0 AC 1
+Xm64_only_7 m64_only_7 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_8 m64_only_8 0 AC 1
+Xm64_only_8 m64_only_8 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_9 m64_only_9 0 AC 1
+Xm64_only_9 m64_only_9 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_10 m64_only_10 0 AC 1
+Xm64_only_10 m64_only_10 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_11 m64_only_11 0 AC 1
+Xm64_only_11 m64_only_11 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_12 m64_only_12 0 AC 1
+Xm64_only_12 m64_only_12 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_13 m64_only_13 0 AC 1
+Xm64_only_13 m64_only_13 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_14 m64_only_14 0 AC 1
+Xm64_only_14 m64_only_14 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_15 m64_only_15 0 AC 1
+Xm64_only_15 m64_only_15 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_16 m64_only_16 0 AC 1
+Xm64_only_16 m64_only_16 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_17 m64_only_17 0 AC 1
+Xm64_only_17 m64_only_17 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_18 m64_only_18 0 AC 1
+Xm64_only_18 m64_only_18 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_19 m64_only_19 0 AC 1
+Xm64_only_19 m64_only_19 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_20 m64_only_20 0 AC 1
+Xm64_only_20 m64_only_20 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_21 m64_only_21 0 AC 1
+Xm64_only_21 m64_only_21 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_22 m64_only_22 0 AC 1
+Xm64_only_22 m64_only_22 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_23 m64_only_23 0 AC 1
+Xm64_only_23 m64_only_23 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_24 m64_only_24 0 AC 1
+Xm64_only_24 m64_only_24 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_25 m64_only_25 0 AC 1
+Xm64_only_25 m64_only_25 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_26 m64_only_26 0 AC 1
+Xm64_only_26 m64_only_26 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_27 m64_only_27 0 AC 1
+Xm64_only_27 m64_only_27 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_28 m64_only_28 0 AC 1
+Xm64_only_28 m64_only_28 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_29 m64_only_29 0 AC 1
+Xm64_only_29 m64_only_29 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_30 m64_only_30 0 AC 1
+Xm64_only_30 m64_only_30 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_31 m64_only_31 0 AC 1
+Xm64_only_31 m64_only_31 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_32 m64_only_32 0 AC 1
+Xm64_only_32 m64_only_32 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_33 m64_only_33 0 AC 1
+Xm64_only_33 m64_only_33 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_34 m64_only_34 0 AC 1
+Xm64_only_34 m64_only_34 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_35 m64_only_35 0 AC 1
+Xm64_only_35 m64_only_35 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_36 m64_only_36 0 AC 1
+Xm64_only_36 m64_only_36 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_37 m64_only_37 0 AC 1
+Xm64_only_37 m64_only_37 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_38 m64_only_38 0 AC 1
+Xm64_only_38 m64_only_38 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_39 m64_only_39 0 AC 1
+Xm64_only_39 m64_only_39 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_40 m64_only_40 0 AC 1
+Xm64_only_40 m64_only_40 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_41 m64_only_41 0 AC 1
+Xm64_only_41 m64_only_41 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_42 m64_only_42 0 AC 1
+Xm64_only_42 m64_only_42 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_43 m64_only_43 0 AC 1
+Xm64_only_43 m64_only_43 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_44 m64_only_44 0 AC 1
+Xm64_only_44 m64_only_44 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_45 m64_only_45 0 AC 1
+Xm64_only_45 m64_only_45 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_46 m64_only_46 0 AC 1
+Xm64_only_46 m64_only_46 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_47 m64_only_47 0 AC 1
+Xm64_only_47 m64_only_47 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_48 m64_only_48 0 AC 1
+Xm64_only_48 m64_only_48 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_49 m64_only_49 0 AC 1
+Xm64_only_49 m64_only_49 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_50 m64_only_50 0 AC 1
+Xm64_only_50 m64_only_50 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_51 m64_only_51 0 AC 1
+Xm64_only_51 m64_only_51 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_52 m64_only_52 0 AC 1
+Xm64_only_52 m64_only_52 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_53 m64_only_53 0 AC 1
+Xm64_only_53 m64_only_53 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_54 m64_only_54 0 AC 1
+Xm64_only_54 m64_only_54 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_55 m64_only_55 0 AC 1
+Xm64_only_55 m64_only_55 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_56 m64_only_56 0 AC 1
+Xm64_only_56 m64_only_56 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_57 m64_only_57 0 AC 1
+Xm64_only_57 m64_only_57 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_58 m64_only_58 0 AC 1
+Xm64_only_58 m64_only_58 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_59 m64_only_59 0 AC 1
+Xm64_only_59 m64_only_59 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_60 m64_only_60 0 AC 1
+Xm64_only_60 m64_only_60 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_61 m64_only_61 0 AC 1
+Xm64_only_61 m64_only_61 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_62 m64_only_62 0 AC 1
+Xm64_only_62 m64_only_62 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_63 m64_only_63 0 AC 1
+Xm64_only_63 m64_only_63 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_64 m64_only_64 0 AC 1
+Xm64_only_64 m64_only_64 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_65 m64_only_65 0 AC 1
+Xm64_only_65 m64_only_65 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_66 m64_only_66 0 AC 1
+Xm64_only_66 m64_only_66 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_67 m64_only_67 0 AC 1
+Xm64_only_67 m64_only_67 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_68 m64_only_68 0 AC 1
+Xm64_only_68 m64_only_68 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_69 m64_only_69 0 AC 1
+Xm64_only_69 m64_only_69 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_70 m64_only_70 0 AC 1
+Xm64_only_70 m64_only_70 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_71 m64_only_71 0 AC 1
+Xm64_only_71 m64_only_71 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_72 m64_only_72 0 AC 1
+Xm64_only_72 m64_only_72 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_73 m64_only_73 0 AC 1
+Xm64_only_73 m64_only_73 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_74 m64_only_74 0 AC 1
+Xm64_only_74 m64_only_74 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_75 m64_only_75 0 AC 1
+Xm64_only_75 m64_only_75 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_76 m64_only_76 0 AC 1
+Xm64_only_76 m64_only_76 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_77 m64_only_77 0 AC 1
+Xm64_only_77 m64_only_77 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_78 m64_only_78 0 AC 1
+Xm64_only_78 m64_only_78 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_79 m64_only_79 0 AC 1
+Xm64_only_79 m64_only_79 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_80 m64_only_80 0 AC 1
+Xm64_only_80 m64_only_80 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_81 m64_only_81 0 AC 1
+Xm64_only_81 m64_only_81 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_82 m64_only_82 0 AC 1
+Xm64_only_82 m64_only_82 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_83 m64_only_83 0 AC 1
+Xm64_only_83 m64_only_83 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_84 m64_only_84 0 AC 1
+Xm64_only_84 m64_only_84 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_85 m64_only_85 0 AC 1
+Xm64_only_85 m64_only_85 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_86 m64_only_86 0 AC 1
+Xm64_only_86 m64_only_86 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_87 m64_only_87 0 AC 1
+Xm64_only_87 m64_only_87 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_88 m64_only_88 0 AC 1
+Xm64_only_88 m64_only_88 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_89 m64_only_89 0 AC 1
+Xm64_only_89 m64_only_89 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_90 m64_only_90 0 AC 1
+Xm64_only_90 m64_only_90 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_91 m64_only_91 0 AC 1
+Xm64_only_91 m64_only_91 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_92 m64_only_92 0 AC 1
+Xm64_only_92 m64_only_92 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_93 m64_only_93 0 AC 1
+Xm64_only_93 m64_only_93 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_94 m64_only_94 0 AC 1
+Xm64_only_94 m64_only_94 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_95 m64_only_95 0 AC 1
+Xm64_only_95 m64_only_95 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_96 m64_only_96 0 AC 1
+Xm64_only_96 m64_only_96 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_97 m64_only_97 0 AC 1
+Xm64_only_97 m64_only_97 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_98 m64_only_98 0 AC 1
+Xm64_only_98 m64_only_98 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_99 m64_only_99 0 AC 1
+Xm64_only_99 m64_only_99 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_100 m64_only_100 0 AC 1
+Xm64_only_100 m64_only_100 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_101 m64_only_101 0 AC 1
+Xm64_only_101 m64_only_101 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_102 m64_only_102 0 AC 1
+Xm64_only_102 m64_only_102 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_103 m64_only_103 0 AC 1
+Xm64_only_103 m64_only_103 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_104 m64_only_104 0 AC 1
+Xm64_only_104 m64_only_104 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_105 m64_only_105 0 AC 1
+Xm64_only_105 m64_only_105 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_106 m64_only_106 0 AC 1
+Xm64_only_106 m64_only_106 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_107 m64_only_107 0 AC 1
+Xm64_only_107 m64_only_107 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_108 m64_only_108 0 AC 1
+Xm64_only_108 m64_only_108 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_109 m64_only_109 0 AC 1
+Xm64_only_109 m64_only_109 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_110 m64_only_110 0 AC 1
+Xm64_only_110 m64_only_110 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_111 m64_only_111 0 AC 1
+Xm64_only_111 m64_only_111 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_112 m64_only_112 0 AC 1
+Xm64_only_112 m64_only_112 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_113 m64_only_113 0 AC 1
+Xm64_only_113 m64_only_113 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_114 m64_only_114 0 AC 1
+Xm64_only_114 m64_only_114 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_115 m64_only_115 0 AC 1
+Xm64_only_115 m64_only_115 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_116 m64_only_116 0 AC 1
+Xm64_only_116 m64_only_116 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_117 m64_only_117 0 AC 1
+Xm64_only_117 m64_only_117 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_118 m64_only_118 0 AC 1
+Xm64_only_118 m64_only_118 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_119 m64_only_119 0 AC 1
+Xm64_only_119 m64_only_119 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_120 m64_only_120 0 AC 1
+Xm64_only_120 m64_only_120 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_121 m64_only_121 0 AC 1
+Xm64_only_121 m64_only_121 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_122 m64_only_122 0 AC 1
+Xm64_only_122 m64_only_122 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_123 m64_only_123 0 AC 1
+Xm64_only_123 m64_only_123 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_124 m64_only_124 0 AC 1
+Xm64_only_124 m64_only_124 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_125 m64_only_125 0 AC 1
+Xm64_only_125 m64_only_125 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_126 m64_only_126 0 AC 1
+Xm64_only_126 m64_only_126 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_127 m64_only_127 0 AC 1
+Xm64_only_127 m64_only_127 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_128 m64_only_128 0 AC 1
+Xm64_only_128 m64_only_128 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_129 m64_only_129 0 AC 1
+Xm64_only_129 m64_only_129 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_130 m64_only_130 0 AC 1
+Xm64_only_130 m64_only_130 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_131 m64_only_131 0 AC 1
+Xm64_only_131 m64_only_131 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_132 m64_only_132 0 AC 1
+Xm64_only_132 m64_only_132 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_133 m64_only_133 0 AC 1
+Xm64_only_133 m64_only_133 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_134 m64_only_134 0 AC 1
+Xm64_only_134 m64_only_134 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_135 m64_only_135 0 AC 1
+Xm64_only_135 m64_only_135 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_136 m64_only_136 0 AC 1
+Xm64_only_136 m64_only_136 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_137 m64_only_137 0 AC 1
+Xm64_only_137 m64_only_137 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_138 m64_only_138 0 AC 1
+Xm64_only_138 m64_only_138 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_139 m64_only_139 0 AC 1
+Xm64_only_139 m64_only_139 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_140 m64_only_140 0 AC 1
+Xm64_only_140 m64_only_140 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_141 m64_only_141 0 AC 1
+Xm64_only_141 m64_only_141 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_142 m64_only_142 0 AC 1
+Xm64_only_142 m64_only_142 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_143 m64_only_143 0 AC 1
+Xm64_only_143 m64_only_143 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_144 m64_only_144 0 AC 1
+Xm64_only_144 m64_only_144 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_145 m64_only_145 0 AC 1
+Xm64_only_145 m64_only_145 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_146 m64_only_146 0 AC 1
+Xm64_only_146 m64_only_146 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_147 m64_only_147 0 AC 1
+Xm64_only_147 m64_only_147 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_148 m64_only_148 0 AC 1
+Xm64_only_148 m64_only_148 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_149 m64_only_149 0 AC 1
+Xm64_only_149 m64_only_149 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_150 m64_only_150 0 AC 1
+Xm64_only_150 m64_only_150 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_151 m64_only_151 0 AC 1
+Xm64_only_151 m64_only_151 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_152 m64_only_152 0 AC 1
+Xm64_only_152 m64_only_152 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_153 m64_only_153 0 AC 1
+Xm64_only_153 m64_only_153 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_154 m64_only_154 0 AC 1
+Xm64_only_154 m64_only_154 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_155 m64_only_155 0 AC 1
+Xm64_only_155 m64_only_155 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_156 m64_only_156 0 AC 1
+Xm64_only_156 m64_only_156 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_157 m64_only_157 0 AC 1
+Xm64_only_157 m64_only_157 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_158 m64_only_158 0 AC 1
+Xm64_only_158 m64_only_158 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_159 m64_only_159 0 AC 1
+Xm64_only_159 m64_only_159 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_160 m64_only_160 0 AC 1
+Xm64_only_160 m64_only_160 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_161 m64_only_161 0 AC 1
+Xm64_only_161 m64_only_161 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_162 m64_only_162 0 AC 1
+Xm64_only_162 m64_only_162 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_163 m64_only_163 0 AC 1
+Xm64_only_163 m64_only_163 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_164 m64_only_164 0 AC 1
+Xm64_only_164 m64_only_164 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_165 m64_only_165 0 AC 1
+Xm64_only_165 m64_only_165 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_166 m64_only_166 0 AC 1
+Xm64_only_166 m64_only_166 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_167 m64_only_167 0 AC 1
+Xm64_only_167 m64_only_167 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_168 m64_only_168 0 AC 1
+Xm64_only_168 m64_only_168 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_169 m64_only_169 0 AC 1
+Xm64_only_169 m64_only_169 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_170 m64_only_170 0 AC 1
+Xm64_only_170 m64_only_170 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_171 m64_only_171 0 AC 1
+Xm64_only_171 m64_only_171 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_172 m64_only_172 0 AC 1
+Xm64_only_172 m64_only_172 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_173 m64_only_173 0 AC 1
+Xm64_only_173 m64_only_173 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_174 m64_only_174 0 AC 1
+Xm64_only_174 m64_only_174 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_175 m64_only_175 0 AC 1
+Xm64_only_175 m64_only_175 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_176 m64_only_176 0 AC 1
+Xm64_only_176 m64_only_176 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_177 m64_only_177 0 AC 1
+Xm64_only_177 m64_only_177 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_178 m64_only_178 0 AC 1
+Xm64_only_178 m64_only_178 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_179 m64_only_179 0 AC 1
+Xm64_only_179 m64_only_179 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_180 m64_only_180 0 AC 1
+Xm64_only_180 m64_only_180 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_181 m64_only_181 0 AC 1
+Xm64_only_181 m64_only_181 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_182 m64_only_182 0 AC 1
+Xm64_only_182 m64_only_182 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_183 m64_only_183 0 AC 1
+Xm64_only_183 m64_only_183 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_184 m64_only_184 0 AC 1
+Xm64_only_184 m64_only_184 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_185 m64_only_185 0 AC 1
+Xm64_only_185 m64_only_185 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_186 m64_only_186 0 AC 1
+Xm64_only_186 m64_only_186 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_187 m64_only_187 0 AC 1
+Xm64_only_187 m64_only_187 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_188 m64_only_188 0 AC 1
+Xm64_only_188 m64_only_188 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_189 m64_only_189 0 AC 1
+Xm64_only_189 m64_only_189 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_190 m64_only_190 0 AC 1
+Xm64_only_190 m64_only_190 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_191 m64_only_191 0 AC 1
+Xm64_only_191 m64_only_191 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_192 m64_only_192 0 AC 1
+Xm64_only_192 m64_only_192 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_193 m64_only_193 0 AC 1
+Xm64_only_193 m64_only_193 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_194 m64_only_194 0 AC 1
+Xm64_only_194 m64_only_194 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_195 m64_only_195 0 AC 1
+Xm64_only_195 m64_only_195 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_196 m64_only_196 0 AC 1
+Xm64_only_196 m64_only_196 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_197 m64_only_197 0 AC 1
+Xm64_only_197 m64_only_197 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_198 m64_only_198 0 AC 1
+Xm64_only_198 m64_only_198 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_only_199 m64_only_199 0 AC 1
+Xm64_only_199 m64_only_199 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+Vm64_mult64_0 m64_mult64_0 0 AC 1
+Xm64_mult64_0 m64_mult64_0 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_1 m64_mult64_1 0 AC 1
+Xm64_mult64_1 m64_mult64_1 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_2 m64_mult64_2 0 AC 1
+Xm64_mult64_2 m64_mult64_2 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_3 m64_mult64_3 0 AC 1
+Xm64_mult64_3 m64_mult64_3 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_4 m64_mult64_4 0 AC 1
+Xm64_mult64_4 m64_mult64_4 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_5 m64_mult64_5 0 AC 1
+Xm64_mult64_5 m64_mult64_5 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_6 m64_mult64_6 0 AC 1
+Xm64_mult64_6 m64_mult64_6 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_7 m64_mult64_7 0 AC 1
+Xm64_mult64_7 m64_mult64_7 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_8 m64_mult64_8 0 AC 1
+Xm64_mult64_8 m64_mult64_8 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_9 m64_mult64_9 0 AC 1
+Xm64_mult64_9 m64_mult64_9 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_10 m64_mult64_10 0 AC 1
+Xm64_mult64_10 m64_mult64_10 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_11 m64_mult64_11 0 AC 1
+Xm64_mult64_11 m64_mult64_11 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_12 m64_mult64_12 0 AC 1
+Xm64_mult64_12 m64_mult64_12 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_13 m64_mult64_13 0 AC 1
+Xm64_mult64_13 m64_mult64_13 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_14 m64_mult64_14 0 AC 1
+Xm64_mult64_14 m64_mult64_14 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_15 m64_mult64_15 0 AC 1
+Xm64_mult64_15 m64_mult64_15 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_16 m64_mult64_16 0 AC 1
+Xm64_mult64_16 m64_mult64_16 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_17 m64_mult64_17 0 AC 1
+Xm64_mult64_17 m64_mult64_17 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_18 m64_mult64_18 0 AC 1
+Xm64_mult64_18 m64_mult64_18 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_19 m64_mult64_19 0 AC 1
+Xm64_mult64_19 m64_mult64_19 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_20 m64_mult64_20 0 AC 1
+Xm64_mult64_20 m64_mult64_20 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_21 m64_mult64_21 0 AC 1
+Xm64_mult64_21 m64_mult64_21 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_22 m64_mult64_22 0 AC 1
+Xm64_mult64_22 m64_mult64_22 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_23 m64_mult64_23 0 AC 1
+Xm64_mult64_23 m64_mult64_23 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_24 m64_mult64_24 0 AC 1
+Xm64_mult64_24 m64_mult64_24 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_25 m64_mult64_25 0 AC 1
+Xm64_mult64_25 m64_mult64_25 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_26 m64_mult64_26 0 AC 1
+Xm64_mult64_26 m64_mult64_26 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_27 m64_mult64_27 0 AC 1
+Xm64_mult64_27 m64_mult64_27 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_28 m64_mult64_28 0 AC 1
+Xm64_mult64_28 m64_mult64_28 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_29 m64_mult64_29 0 AC 1
+Xm64_mult64_29 m64_mult64_29 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_30 m64_mult64_30 0 AC 1
+Xm64_mult64_30 m64_mult64_30 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_31 m64_mult64_31 0 AC 1
+Xm64_mult64_31 m64_mult64_31 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_32 m64_mult64_32 0 AC 1
+Xm64_mult64_32 m64_mult64_32 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_33 m64_mult64_33 0 AC 1
+Xm64_mult64_33 m64_mult64_33 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_34 m64_mult64_34 0 AC 1
+Xm64_mult64_34 m64_mult64_34 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_35 m64_mult64_35 0 AC 1
+Xm64_mult64_35 m64_mult64_35 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_36 m64_mult64_36 0 AC 1
+Xm64_mult64_36 m64_mult64_36 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_37 m64_mult64_37 0 AC 1
+Xm64_mult64_37 m64_mult64_37 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_38 m64_mult64_38 0 AC 1
+Xm64_mult64_38 m64_mult64_38 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_39 m64_mult64_39 0 AC 1
+Xm64_mult64_39 m64_mult64_39 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_40 m64_mult64_40 0 AC 1
+Xm64_mult64_40 m64_mult64_40 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_41 m64_mult64_41 0 AC 1
+Xm64_mult64_41 m64_mult64_41 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_42 m64_mult64_42 0 AC 1
+Xm64_mult64_42 m64_mult64_42 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_43 m64_mult64_43 0 AC 1
+Xm64_mult64_43 m64_mult64_43 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_44 m64_mult64_44 0 AC 1
+Xm64_mult64_44 m64_mult64_44 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_45 m64_mult64_45 0 AC 1
+Xm64_mult64_45 m64_mult64_45 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_46 m64_mult64_46 0 AC 1
+Xm64_mult64_46 m64_mult64_46 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_47 m64_mult64_47 0 AC 1
+Xm64_mult64_47 m64_mult64_47 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_48 m64_mult64_48 0 AC 1
+Xm64_mult64_48 m64_mult64_48 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_49 m64_mult64_49 0 AC 1
+Xm64_mult64_49 m64_mult64_49 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_50 m64_mult64_50 0 AC 1
+Xm64_mult64_50 m64_mult64_50 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_51 m64_mult64_51 0 AC 1
+Xm64_mult64_51 m64_mult64_51 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_52 m64_mult64_52 0 AC 1
+Xm64_mult64_52 m64_mult64_52 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_53 m64_mult64_53 0 AC 1
+Xm64_mult64_53 m64_mult64_53 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_54 m64_mult64_54 0 AC 1
+Xm64_mult64_54 m64_mult64_54 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_55 m64_mult64_55 0 AC 1
+Xm64_mult64_55 m64_mult64_55 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_56 m64_mult64_56 0 AC 1
+Xm64_mult64_56 m64_mult64_56 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_57 m64_mult64_57 0 AC 1
+Xm64_mult64_57 m64_mult64_57 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_58 m64_mult64_58 0 AC 1
+Xm64_mult64_58 m64_mult64_58 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_59 m64_mult64_59 0 AC 1
+Xm64_mult64_59 m64_mult64_59 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_60 m64_mult64_60 0 AC 1
+Xm64_mult64_60 m64_mult64_60 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_61 m64_mult64_61 0 AC 1
+Xm64_mult64_61 m64_mult64_61 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_62 m64_mult64_62 0 AC 1
+Xm64_mult64_62 m64_mult64_62 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_63 m64_mult64_63 0 AC 1
+Xm64_mult64_63 m64_mult64_63 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_64 m64_mult64_64 0 AC 1
+Xm64_mult64_64 m64_mult64_64 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_65 m64_mult64_65 0 AC 1
+Xm64_mult64_65 m64_mult64_65 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_66 m64_mult64_66 0 AC 1
+Xm64_mult64_66 m64_mult64_66 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_67 m64_mult64_67 0 AC 1
+Xm64_mult64_67 m64_mult64_67 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_68 m64_mult64_68 0 AC 1
+Xm64_mult64_68 m64_mult64_68 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_69 m64_mult64_69 0 AC 1
+Xm64_mult64_69 m64_mult64_69 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_70 m64_mult64_70 0 AC 1
+Xm64_mult64_70 m64_mult64_70 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_71 m64_mult64_71 0 AC 1
+Xm64_mult64_71 m64_mult64_71 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_72 m64_mult64_72 0 AC 1
+Xm64_mult64_72 m64_mult64_72 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_73 m64_mult64_73 0 AC 1
+Xm64_mult64_73 m64_mult64_73 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_74 m64_mult64_74 0 AC 1
+Xm64_mult64_74 m64_mult64_74 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_75 m64_mult64_75 0 AC 1
+Xm64_mult64_75 m64_mult64_75 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_76 m64_mult64_76 0 AC 1
+Xm64_mult64_76 m64_mult64_76 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_77 m64_mult64_77 0 AC 1
+Xm64_mult64_77 m64_mult64_77 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_78 m64_mult64_78 0 AC 1
+Xm64_mult64_78 m64_mult64_78 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_79 m64_mult64_79 0 AC 1
+Xm64_mult64_79 m64_mult64_79 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_80 m64_mult64_80 0 AC 1
+Xm64_mult64_80 m64_mult64_80 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_81 m64_mult64_81 0 AC 1
+Xm64_mult64_81 m64_mult64_81 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_82 m64_mult64_82 0 AC 1
+Xm64_mult64_82 m64_mult64_82 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_83 m64_mult64_83 0 AC 1
+Xm64_mult64_83 m64_mult64_83 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_84 m64_mult64_84 0 AC 1
+Xm64_mult64_84 m64_mult64_84 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_85 m64_mult64_85 0 AC 1
+Xm64_mult64_85 m64_mult64_85 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_86 m64_mult64_86 0 AC 1
+Xm64_mult64_86 m64_mult64_86 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_87 m64_mult64_87 0 AC 1
+Xm64_mult64_87 m64_mult64_87 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_88 m64_mult64_88 0 AC 1
+Xm64_mult64_88 m64_mult64_88 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_89 m64_mult64_89 0 AC 1
+Xm64_mult64_89 m64_mult64_89 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_90 m64_mult64_90 0 AC 1
+Xm64_mult64_90 m64_mult64_90 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_91 m64_mult64_91 0 AC 1
+Xm64_mult64_91 m64_mult64_91 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_92 m64_mult64_92 0 AC 1
+Xm64_mult64_92 m64_mult64_92 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_93 m64_mult64_93 0 AC 1
+Xm64_mult64_93 m64_mult64_93 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_94 m64_mult64_94 0 AC 1
+Xm64_mult64_94 m64_mult64_94 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_95 m64_mult64_95 0 AC 1
+Xm64_mult64_95 m64_mult64_95 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_96 m64_mult64_96 0 AC 1
+Xm64_mult64_96 m64_mult64_96 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_97 m64_mult64_97 0 AC 1
+Xm64_mult64_97 m64_mult64_97 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_98 m64_mult64_98 0 AC 1
+Xm64_mult64_98 m64_mult64_98 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_99 m64_mult64_99 0 AC 1
+Xm64_mult64_99 m64_mult64_99 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_100 m64_mult64_100 0 AC 1
+Xm64_mult64_100 m64_mult64_100 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_101 m64_mult64_101 0 AC 1
+Xm64_mult64_101 m64_mult64_101 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_102 m64_mult64_102 0 AC 1
+Xm64_mult64_102 m64_mult64_102 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_103 m64_mult64_103 0 AC 1
+Xm64_mult64_103 m64_mult64_103 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_104 m64_mult64_104 0 AC 1
+Xm64_mult64_104 m64_mult64_104 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_105 m64_mult64_105 0 AC 1
+Xm64_mult64_105 m64_mult64_105 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_106 m64_mult64_106 0 AC 1
+Xm64_mult64_106 m64_mult64_106 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_107 m64_mult64_107 0 AC 1
+Xm64_mult64_107 m64_mult64_107 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_108 m64_mult64_108 0 AC 1
+Xm64_mult64_108 m64_mult64_108 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_109 m64_mult64_109 0 AC 1
+Xm64_mult64_109 m64_mult64_109 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_110 m64_mult64_110 0 AC 1
+Xm64_mult64_110 m64_mult64_110 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_111 m64_mult64_111 0 AC 1
+Xm64_mult64_111 m64_mult64_111 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_112 m64_mult64_112 0 AC 1
+Xm64_mult64_112 m64_mult64_112 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_113 m64_mult64_113 0 AC 1
+Xm64_mult64_113 m64_mult64_113 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_114 m64_mult64_114 0 AC 1
+Xm64_mult64_114 m64_mult64_114 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_115 m64_mult64_115 0 AC 1
+Xm64_mult64_115 m64_mult64_115 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_116 m64_mult64_116 0 AC 1
+Xm64_mult64_116 m64_mult64_116 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_117 m64_mult64_117 0 AC 1
+Xm64_mult64_117 m64_mult64_117 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_118 m64_mult64_118 0 AC 1
+Xm64_mult64_118 m64_mult64_118 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_119 m64_mult64_119 0 AC 1
+Xm64_mult64_119 m64_mult64_119 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_120 m64_mult64_120 0 AC 1
+Xm64_mult64_120 m64_mult64_120 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_121 m64_mult64_121 0 AC 1
+Xm64_mult64_121 m64_mult64_121 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_122 m64_mult64_122 0 AC 1
+Xm64_mult64_122 m64_mult64_122 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_123 m64_mult64_123 0 AC 1
+Xm64_mult64_123 m64_mult64_123 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_124 m64_mult64_124 0 AC 1
+Xm64_mult64_124 m64_mult64_124 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_125 m64_mult64_125 0 AC 1
+Xm64_mult64_125 m64_mult64_125 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_126 m64_mult64_126 0 AC 1
+Xm64_mult64_126 m64_mult64_126 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_127 m64_mult64_127 0 AC 1
+Xm64_mult64_127 m64_mult64_127 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_128 m64_mult64_128 0 AC 1
+Xm64_mult64_128 m64_mult64_128 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_129 m64_mult64_129 0 AC 1
+Xm64_mult64_129 m64_mult64_129 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_130 m64_mult64_130 0 AC 1
+Xm64_mult64_130 m64_mult64_130 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_131 m64_mult64_131 0 AC 1
+Xm64_mult64_131 m64_mult64_131 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_132 m64_mult64_132 0 AC 1
+Xm64_mult64_132 m64_mult64_132 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_133 m64_mult64_133 0 AC 1
+Xm64_mult64_133 m64_mult64_133 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_134 m64_mult64_134 0 AC 1
+Xm64_mult64_134 m64_mult64_134 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_135 m64_mult64_135 0 AC 1
+Xm64_mult64_135 m64_mult64_135 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_136 m64_mult64_136 0 AC 1
+Xm64_mult64_136 m64_mult64_136 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_137 m64_mult64_137 0 AC 1
+Xm64_mult64_137 m64_mult64_137 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_138 m64_mult64_138 0 AC 1
+Xm64_mult64_138 m64_mult64_138 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_139 m64_mult64_139 0 AC 1
+Xm64_mult64_139 m64_mult64_139 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_140 m64_mult64_140 0 AC 1
+Xm64_mult64_140 m64_mult64_140 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_141 m64_mult64_141 0 AC 1
+Xm64_mult64_141 m64_mult64_141 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_142 m64_mult64_142 0 AC 1
+Xm64_mult64_142 m64_mult64_142 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_143 m64_mult64_143 0 AC 1
+Xm64_mult64_143 m64_mult64_143 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_144 m64_mult64_144 0 AC 1
+Xm64_mult64_144 m64_mult64_144 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_145 m64_mult64_145 0 AC 1
+Xm64_mult64_145 m64_mult64_145 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_146 m64_mult64_146 0 AC 1
+Xm64_mult64_146 m64_mult64_146 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_147 m64_mult64_147 0 AC 1
+Xm64_mult64_147 m64_mult64_147 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_148 m64_mult64_148 0 AC 1
+Xm64_mult64_148 m64_mult64_148 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_149 m64_mult64_149 0 AC 1
+Xm64_mult64_149 m64_mult64_149 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_150 m64_mult64_150 0 AC 1
+Xm64_mult64_150 m64_mult64_150 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_151 m64_mult64_151 0 AC 1
+Xm64_mult64_151 m64_mult64_151 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_152 m64_mult64_152 0 AC 1
+Xm64_mult64_152 m64_mult64_152 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_153 m64_mult64_153 0 AC 1
+Xm64_mult64_153 m64_mult64_153 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_154 m64_mult64_154 0 AC 1
+Xm64_mult64_154 m64_mult64_154 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_155 m64_mult64_155 0 AC 1
+Xm64_mult64_155 m64_mult64_155 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_156 m64_mult64_156 0 AC 1
+Xm64_mult64_156 m64_mult64_156 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_157 m64_mult64_157 0 AC 1
+Xm64_mult64_157 m64_mult64_157 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_158 m64_mult64_158 0 AC 1
+Xm64_mult64_158 m64_mult64_158 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_159 m64_mult64_159 0 AC 1
+Xm64_mult64_159 m64_mult64_159 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_160 m64_mult64_160 0 AC 1
+Xm64_mult64_160 m64_mult64_160 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_161 m64_mult64_161 0 AC 1
+Xm64_mult64_161 m64_mult64_161 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_162 m64_mult64_162 0 AC 1
+Xm64_mult64_162 m64_mult64_162 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_163 m64_mult64_163 0 AC 1
+Xm64_mult64_163 m64_mult64_163 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_164 m64_mult64_164 0 AC 1
+Xm64_mult64_164 m64_mult64_164 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_165 m64_mult64_165 0 AC 1
+Xm64_mult64_165 m64_mult64_165 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_166 m64_mult64_166 0 AC 1
+Xm64_mult64_166 m64_mult64_166 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_167 m64_mult64_167 0 AC 1
+Xm64_mult64_167 m64_mult64_167 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_168 m64_mult64_168 0 AC 1
+Xm64_mult64_168 m64_mult64_168 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_169 m64_mult64_169 0 AC 1
+Xm64_mult64_169 m64_mult64_169 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_170 m64_mult64_170 0 AC 1
+Xm64_mult64_170 m64_mult64_170 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_171 m64_mult64_171 0 AC 1
+Xm64_mult64_171 m64_mult64_171 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_172 m64_mult64_172 0 AC 1
+Xm64_mult64_172 m64_mult64_172 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_173 m64_mult64_173 0 AC 1
+Xm64_mult64_173 m64_mult64_173 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_174 m64_mult64_174 0 AC 1
+Xm64_mult64_174 m64_mult64_174 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_175 m64_mult64_175 0 AC 1
+Xm64_mult64_175 m64_mult64_175 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_176 m64_mult64_176 0 AC 1
+Xm64_mult64_176 m64_mult64_176 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_177 m64_mult64_177 0 AC 1
+Xm64_mult64_177 m64_mult64_177 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_178 m64_mult64_178 0 AC 1
+Xm64_mult64_178 m64_mult64_178 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_179 m64_mult64_179 0 AC 1
+Xm64_mult64_179 m64_mult64_179 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_180 m64_mult64_180 0 AC 1
+Xm64_mult64_180 m64_mult64_180 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_181 m64_mult64_181 0 AC 1
+Xm64_mult64_181 m64_mult64_181 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_182 m64_mult64_182 0 AC 1
+Xm64_mult64_182 m64_mult64_182 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_183 m64_mult64_183 0 AC 1
+Xm64_mult64_183 m64_mult64_183 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_184 m64_mult64_184 0 AC 1
+Xm64_mult64_184 m64_mult64_184 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_185 m64_mult64_185 0 AC 1
+Xm64_mult64_185 m64_mult64_185 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_186 m64_mult64_186 0 AC 1
+Xm64_mult64_186 m64_mult64_186 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_187 m64_mult64_187 0 AC 1
+Xm64_mult64_187 m64_mult64_187 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_188 m64_mult64_188 0 AC 1
+Xm64_mult64_188 m64_mult64_188 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_189 m64_mult64_189 0 AC 1
+Xm64_mult64_189 m64_mult64_189 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_190 m64_mult64_190 0 AC 1
+Xm64_mult64_190 m64_mult64_190 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_191 m64_mult64_191 0 AC 1
+Xm64_mult64_191 m64_mult64_191 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_192 m64_mult64_192 0 AC 1
+Xm64_mult64_192 m64_mult64_192 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_193 m64_mult64_193 0 AC 1
+Xm64_mult64_193 m64_mult64_193 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_194 m64_mult64_194 0 AC 1
+Xm64_mult64_194 m64_mult64_194 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_195 m64_mult64_195 0 AC 1
+Xm64_mult64_195 m64_mult64_195 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_196 m64_mult64_196 0 AC 1
+Xm64_mult64_196 m64_mult64_196 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_197 m64_mult64_197 0 AC 1
+Xm64_mult64_197 m64_mult64_197 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_198 m64_mult64_198 0 AC 1
+Xm64_mult64_198 m64_mult64_198 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+Vm64_mult64_199 m64_mult64_199 0 AC 1
+Xm64_mult64_199 m64_mult64_199 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64 mult=64
+.control
+set num_threads=1
+set numdgt=15
+setseed 1302026
+reset
+ac lin 1 1000 1000
+let c_unit_0=-imag(vunit_0#branch)/(2*pi*1000)
+print c_unit_0
+let c_unit_1=-imag(vunit_1#branch)/(2*pi*1000)
+print c_unit_1
+let c_unit_2=-imag(vunit_2#branch)/(2*pi*1000)
+print c_unit_2
+let c_unit_3=-imag(vunit_3#branch)/(2*pi*1000)
+print c_unit_3
+let c_unit_4=-imag(vunit_4#branch)/(2*pi*1000)
+print c_unit_4
+let c_unit_5=-imag(vunit_5#branch)/(2*pi*1000)
+print c_unit_5
+let c_unit_6=-imag(vunit_6#branch)/(2*pi*1000)
+print c_unit_6
+let c_unit_7=-imag(vunit_7#branch)/(2*pi*1000)
+print c_unit_7
+let c_unit_8=-imag(vunit_8#branch)/(2*pi*1000)
+print c_unit_8
+let c_unit_9=-imag(vunit_9#branch)/(2*pi*1000)
+print c_unit_9
+let c_unit_10=-imag(vunit_10#branch)/(2*pi*1000)
+print c_unit_10
+let c_unit_11=-imag(vunit_11#branch)/(2*pi*1000)
+print c_unit_11
+let c_unit_12=-imag(vunit_12#branch)/(2*pi*1000)
+print c_unit_12
+let c_unit_13=-imag(vunit_13#branch)/(2*pi*1000)
+print c_unit_13
+let c_unit_14=-imag(vunit_14#branch)/(2*pi*1000)
+print c_unit_14
+let c_unit_15=-imag(vunit_15#branch)/(2*pi*1000)
+print c_unit_15
+let c_unit_16=-imag(vunit_16#branch)/(2*pi*1000)
+print c_unit_16
+let c_unit_17=-imag(vunit_17#branch)/(2*pi*1000)
+print c_unit_17
+let c_unit_18=-imag(vunit_18#branch)/(2*pi*1000)
+print c_unit_18
+let c_unit_19=-imag(vunit_19#branch)/(2*pi*1000)
+print c_unit_19
+let c_unit_20=-imag(vunit_20#branch)/(2*pi*1000)
+print c_unit_20
+let c_unit_21=-imag(vunit_21#branch)/(2*pi*1000)
+print c_unit_21
+let c_unit_22=-imag(vunit_22#branch)/(2*pi*1000)
+print c_unit_22
+let c_unit_23=-imag(vunit_23#branch)/(2*pi*1000)
+print c_unit_23
+let c_unit_24=-imag(vunit_24#branch)/(2*pi*1000)
+print c_unit_24
+let c_unit_25=-imag(vunit_25#branch)/(2*pi*1000)
+print c_unit_25
+let c_unit_26=-imag(vunit_26#branch)/(2*pi*1000)
+print c_unit_26
+let c_unit_27=-imag(vunit_27#branch)/(2*pi*1000)
+print c_unit_27
+let c_unit_28=-imag(vunit_28#branch)/(2*pi*1000)
+print c_unit_28
+let c_unit_29=-imag(vunit_29#branch)/(2*pi*1000)
+print c_unit_29
+let c_unit_30=-imag(vunit_30#branch)/(2*pi*1000)
+print c_unit_30
+let c_unit_31=-imag(vunit_31#branch)/(2*pi*1000)
+print c_unit_31
+let c_unit_32=-imag(vunit_32#branch)/(2*pi*1000)
+print c_unit_32
+let c_unit_33=-imag(vunit_33#branch)/(2*pi*1000)
+print c_unit_33
+let c_unit_34=-imag(vunit_34#branch)/(2*pi*1000)
+print c_unit_34
+let c_unit_35=-imag(vunit_35#branch)/(2*pi*1000)
+print c_unit_35
+let c_unit_36=-imag(vunit_36#branch)/(2*pi*1000)
+print c_unit_36
+let c_unit_37=-imag(vunit_37#branch)/(2*pi*1000)
+print c_unit_37
+let c_unit_38=-imag(vunit_38#branch)/(2*pi*1000)
+print c_unit_38
+let c_unit_39=-imag(vunit_39#branch)/(2*pi*1000)
+print c_unit_39
+let c_unit_40=-imag(vunit_40#branch)/(2*pi*1000)
+print c_unit_40
+let c_unit_41=-imag(vunit_41#branch)/(2*pi*1000)
+print c_unit_41
+let c_unit_42=-imag(vunit_42#branch)/(2*pi*1000)
+print c_unit_42
+let c_unit_43=-imag(vunit_43#branch)/(2*pi*1000)
+print c_unit_43
+let c_unit_44=-imag(vunit_44#branch)/(2*pi*1000)
+print c_unit_44
+let c_unit_45=-imag(vunit_45#branch)/(2*pi*1000)
+print c_unit_45
+let c_unit_46=-imag(vunit_46#branch)/(2*pi*1000)
+print c_unit_46
+let c_unit_47=-imag(vunit_47#branch)/(2*pi*1000)
+print c_unit_47
+let c_unit_48=-imag(vunit_48#branch)/(2*pi*1000)
+print c_unit_48
+let c_unit_49=-imag(vunit_49#branch)/(2*pi*1000)
+print c_unit_49
+let c_unit_50=-imag(vunit_50#branch)/(2*pi*1000)
+print c_unit_50
+let c_unit_51=-imag(vunit_51#branch)/(2*pi*1000)
+print c_unit_51
+let c_unit_52=-imag(vunit_52#branch)/(2*pi*1000)
+print c_unit_52
+let c_unit_53=-imag(vunit_53#branch)/(2*pi*1000)
+print c_unit_53
+let c_unit_54=-imag(vunit_54#branch)/(2*pi*1000)
+print c_unit_54
+let c_unit_55=-imag(vunit_55#branch)/(2*pi*1000)
+print c_unit_55
+let c_unit_56=-imag(vunit_56#branch)/(2*pi*1000)
+print c_unit_56
+let c_unit_57=-imag(vunit_57#branch)/(2*pi*1000)
+print c_unit_57
+let c_unit_58=-imag(vunit_58#branch)/(2*pi*1000)
+print c_unit_58
+let c_unit_59=-imag(vunit_59#branch)/(2*pi*1000)
+print c_unit_59
+let c_unit_60=-imag(vunit_60#branch)/(2*pi*1000)
+print c_unit_60
+let c_unit_61=-imag(vunit_61#branch)/(2*pi*1000)
+print c_unit_61
+let c_unit_62=-imag(vunit_62#branch)/(2*pi*1000)
+print c_unit_62
+let c_unit_63=-imag(vunit_63#branch)/(2*pi*1000)
+print c_unit_63
+let c_unit_64=-imag(vunit_64#branch)/(2*pi*1000)
+print c_unit_64
+let c_unit_65=-imag(vunit_65#branch)/(2*pi*1000)
+print c_unit_65
+let c_unit_66=-imag(vunit_66#branch)/(2*pi*1000)
+print c_unit_66
+let c_unit_67=-imag(vunit_67#branch)/(2*pi*1000)
+print c_unit_67
+let c_unit_68=-imag(vunit_68#branch)/(2*pi*1000)
+print c_unit_68
+let c_unit_69=-imag(vunit_69#branch)/(2*pi*1000)
+print c_unit_69
+let c_unit_70=-imag(vunit_70#branch)/(2*pi*1000)
+print c_unit_70
+let c_unit_71=-imag(vunit_71#branch)/(2*pi*1000)
+print c_unit_71
+let c_unit_72=-imag(vunit_72#branch)/(2*pi*1000)
+print c_unit_72
+let c_unit_73=-imag(vunit_73#branch)/(2*pi*1000)
+print c_unit_73
+let c_unit_74=-imag(vunit_74#branch)/(2*pi*1000)
+print c_unit_74
+let c_unit_75=-imag(vunit_75#branch)/(2*pi*1000)
+print c_unit_75
+let c_unit_76=-imag(vunit_76#branch)/(2*pi*1000)
+print c_unit_76
+let c_unit_77=-imag(vunit_77#branch)/(2*pi*1000)
+print c_unit_77
+let c_unit_78=-imag(vunit_78#branch)/(2*pi*1000)
+print c_unit_78
+let c_unit_79=-imag(vunit_79#branch)/(2*pi*1000)
+print c_unit_79
+let c_unit_80=-imag(vunit_80#branch)/(2*pi*1000)
+print c_unit_80
+let c_unit_81=-imag(vunit_81#branch)/(2*pi*1000)
+print c_unit_81
+let c_unit_82=-imag(vunit_82#branch)/(2*pi*1000)
+print c_unit_82
+let c_unit_83=-imag(vunit_83#branch)/(2*pi*1000)
+print c_unit_83
+let c_unit_84=-imag(vunit_84#branch)/(2*pi*1000)
+print c_unit_84
+let c_unit_85=-imag(vunit_85#branch)/(2*pi*1000)
+print c_unit_85
+let c_unit_86=-imag(vunit_86#branch)/(2*pi*1000)
+print c_unit_86
+let c_unit_87=-imag(vunit_87#branch)/(2*pi*1000)
+print c_unit_87
+let c_unit_88=-imag(vunit_88#branch)/(2*pi*1000)
+print c_unit_88
+let c_unit_89=-imag(vunit_89#branch)/(2*pi*1000)
+print c_unit_89
+let c_unit_90=-imag(vunit_90#branch)/(2*pi*1000)
+print c_unit_90
+let c_unit_91=-imag(vunit_91#branch)/(2*pi*1000)
+print c_unit_91
+let c_unit_92=-imag(vunit_92#branch)/(2*pi*1000)
+print c_unit_92
+let c_unit_93=-imag(vunit_93#branch)/(2*pi*1000)
+print c_unit_93
+let c_unit_94=-imag(vunit_94#branch)/(2*pi*1000)
+print c_unit_94
+let c_unit_95=-imag(vunit_95#branch)/(2*pi*1000)
+print c_unit_95
+let c_unit_96=-imag(vunit_96#branch)/(2*pi*1000)
+print c_unit_96
+let c_unit_97=-imag(vunit_97#branch)/(2*pi*1000)
+print c_unit_97
+let c_unit_98=-imag(vunit_98#branch)/(2*pi*1000)
+print c_unit_98
+let c_unit_99=-imag(vunit_99#branch)/(2*pi*1000)
+print c_unit_99
+let c_unit_100=-imag(vunit_100#branch)/(2*pi*1000)
+print c_unit_100
+let c_unit_101=-imag(vunit_101#branch)/(2*pi*1000)
+print c_unit_101
+let c_unit_102=-imag(vunit_102#branch)/(2*pi*1000)
+print c_unit_102
+let c_unit_103=-imag(vunit_103#branch)/(2*pi*1000)
+print c_unit_103
+let c_unit_104=-imag(vunit_104#branch)/(2*pi*1000)
+print c_unit_104
+let c_unit_105=-imag(vunit_105#branch)/(2*pi*1000)
+print c_unit_105
+let c_unit_106=-imag(vunit_106#branch)/(2*pi*1000)
+print c_unit_106
+let c_unit_107=-imag(vunit_107#branch)/(2*pi*1000)
+print c_unit_107
+let c_unit_108=-imag(vunit_108#branch)/(2*pi*1000)
+print c_unit_108
+let c_unit_109=-imag(vunit_109#branch)/(2*pi*1000)
+print c_unit_109
+let c_unit_110=-imag(vunit_110#branch)/(2*pi*1000)
+print c_unit_110
+let c_unit_111=-imag(vunit_111#branch)/(2*pi*1000)
+print c_unit_111
+let c_unit_112=-imag(vunit_112#branch)/(2*pi*1000)
+print c_unit_112
+let c_unit_113=-imag(vunit_113#branch)/(2*pi*1000)
+print c_unit_113
+let c_unit_114=-imag(vunit_114#branch)/(2*pi*1000)
+print c_unit_114
+let c_unit_115=-imag(vunit_115#branch)/(2*pi*1000)
+print c_unit_115
+let c_unit_116=-imag(vunit_116#branch)/(2*pi*1000)
+print c_unit_116
+let c_unit_117=-imag(vunit_117#branch)/(2*pi*1000)
+print c_unit_117
+let c_unit_118=-imag(vunit_118#branch)/(2*pi*1000)
+print c_unit_118
+let c_unit_119=-imag(vunit_119#branch)/(2*pi*1000)
+print c_unit_119
+let c_unit_120=-imag(vunit_120#branch)/(2*pi*1000)
+print c_unit_120
+let c_unit_121=-imag(vunit_121#branch)/(2*pi*1000)
+print c_unit_121
+let c_unit_122=-imag(vunit_122#branch)/(2*pi*1000)
+print c_unit_122
+let c_unit_123=-imag(vunit_123#branch)/(2*pi*1000)
+print c_unit_123
+let c_unit_124=-imag(vunit_124#branch)/(2*pi*1000)
+print c_unit_124
+let c_unit_125=-imag(vunit_125#branch)/(2*pi*1000)
+print c_unit_125
+let c_unit_126=-imag(vunit_126#branch)/(2*pi*1000)
+print c_unit_126
+let c_unit_127=-imag(vunit_127#branch)/(2*pi*1000)
+print c_unit_127
+let c_unit_128=-imag(vunit_128#branch)/(2*pi*1000)
+print c_unit_128
+let c_unit_129=-imag(vunit_129#branch)/(2*pi*1000)
+print c_unit_129
+let c_unit_130=-imag(vunit_130#branch)/(2*pi*1000)
+print c_unit_130
+let c_unit_131=-imag(vunit_131#branch)/(2*pi*1000)
+print c_unit_131
+let c_unit_132=-imag(vunit_132#branch)/(2*pi*1000)
+print c_unit_132
+let c_unit_133=-imag(vunit_133#branch)/(2*pi*1000)
+print c_unit_133
+let c_unit_134=-imag(vunit_134#branch)/(2*pi*1000)
+print c_unit_134
+let c_unit_135=-imag(vunit_135#branch)/(2*pi*1000)
+print c_unit_135
+let c_unit_136=-imag(vunit_136#branch)/(2*pi*1000)
+print c_unit_136
+let c_unit_137=-imag(vunit_137#branch)/(2*pi*1000)
+print c_unit_137
+let c_unit_138=-imag(vunit_138#branch)/(2*pi*1000)
+print c_unit_138
+let c_unit_139=-imag(vunit_139#branch)/(2*pi*1000)
+print c_unit_139
+let c_unit_140=-imag(vunit_140#branch)/(2*pi*1000)
+print c_unit_140
+let c_unit_141=-imag(vunit_141#branch)/(2*pi*1000)
+print c_unit_141
+let c_unit_142=-imag(vunit_142#branch)/(2*pi*1000)
+print c_unit_142
+let c_unit_143=-imag(vunit_143#branch)/(2*pi*1000)
+print c_unit_143
+let c_unit_144=-imag(vunit_144#branch)/(2*pi*1000)
+print c_unit_144
+let c_unit_145=-imag(vunit_145#branch)/(2*pi*1000)
+print c_unit_145
+let c_unit_146=-imag(vunit_146#branch)/(2*pi*1000)
+print c_unit_146
+let c_unit_147=-imag(vunit_147#branch)/(2*pi*1000)
+print c_unit_147
+let c_unit_148=-imag(vunit_148#branch)/(2*pi*1000)
+print c_unit_148
+let c_unit_149=-imag(vunit_149#branch)/(2*pi*1000)
+print c_unit_149
+let c_unit_150=-imag(vunit_150#branch)/(2*pi*1000)
+print c_unit_150
+let c_unit_151=-imag(vunit_151#branch)/(2*pi*1000)
+print c_unit_151
+let c_unit_152=-imag(vunit_152#branch)/(2*pi*1000)
+print c_unit_152
+let c_unit_153=-imag(vunit_153#branch)/(2*pi*1000)
+print c_unit_153
+let c_unit_154=-imag(vunit_154#branch)/(2*pi*1000)
+print c_unit_154
+let c_unit_155=-imag(vunit_155#branch)/(2*pi*1000)
+print c_unit_155
+let c_unit_156=-imag(vunit_156#branch)/(2*pi*1000)
+print c_unit_156
+let c_unit_157=-imag(vunit_157#branch)/(2*pi*1000)
+print c_unit_157
+let c_unit_158=-imag(vunit_158#branch)/(2*pi*1000)
+print c_unit_158
+let c_unit_159=-imag(vunit_159#branch)/(2*pi*1000)
+print c_unit_159
+let c_unit_160=-imag(vunit_160#branch)/(2*pi*1000)
+print c_unit_160
+let c_unit_161=-imag(vunit_161#branch)/(2*pi*1000)
+print c_unit_161
+let c_unit_162=-imag(vunit_162#branch)/(2*pi*1000)
+print c_unit_162
+let c_unit_163=-imag(vunit_163#branch)/(2*pi*1000)
+print c_unit_163
+let c_unit_164=-imag(vunit_164#branch)/(2*pi*1000)
+print c_unit_164
+let c_unit_165=-imag(vunit_165#branch)/(2*pi*1000)
+print c_unit_165
+let c_unit_166=-imag(vunit_166#branch)/(2*pi*1000)
+print c_unit_166
+let c_unit_167=-imag(vunit_167#branch)/(2*pi*1000)
+print c_unit_167
+let c_unit_168=-imag(vunit_168#branch)/(2*pi*1000)
+print c_unit_168
+let c_unit_169=-imag(vunit_169#branch)/(2*pi*1000)
+print c_unit_169
+let c_unit_170=-imag(vunit_170#branch)/(2*pi*1000)
+print c_unit_170
+let c_unit_171=-imag(vunit_171#branch)/(2*pi*1000)
+print c_unit_171
+let c_unit_172=-imag(vunit_172#branch)/(2*pi*1000)
+print c_unit_172
+let c_unit_173=-imag(vunit_173#branch)/(2*pi*1000)
+print c_unit_173
+let c_unit_174=-imag(vunit_174#branch)/(2*pi*1000)
+print c_unit_174
+let c_unit_175=-imag(vunit_175#branch)/(2*pi*1000)
+print c_unit_175
+let c_unit_176=-imag(vunit_176#branch)/(2*pi*1000)
+print c_unit_176
+let c_unit_177=-imag(vunit_177#branch)/(2*pi*1000)
+print c_unit_177
+let c_unit_178=-imag(vunit_178#branch)/(2*pi*1000)
+print c_unit_178
+let c_unit_179=-imag(vunit_179#branch)/(2*pi*1000)
+print c_unit_179
+let c_unit_180=-imag(vunit_180#branch)/(2*pi*1000)
+print c_unit_180
+let c_unit_181=-imag(vunit_181#branch)/(2*pi*1000)
+print c_unit_181
+let c_unit_182=-imag(vunit_182#branch)/(2*pi*1000)
+print c_unit_182
+let c_unit_183=-imag(vunit_183#branch)/(2*pi*1000)
+print c_unit_183
+let c_unit_184=-imag(vunit_184#branch)/(2*pi*1000)
+print c_unit_184
+let c_unit_185=-imag(vunit_185#branch)/(2*pi*1000)
+print c_unit_185
+let c_unit_186=-imag(vunit_186#branch)/(2*pi*1000)
+print c_unit_186
+let c_unit_187=-imag(vunit_187#branch)/(2*pi*1000)
+print c_unit_187
+let c_unit_188=-imag(vunit_188#branch)/(2*pi*1000)
+print c_unit_188
+let c_unit_189=-imag(vunit_189#branch)/(2*pi*1000)
+print c_unit_189
+let c_unit_190=-imag(vunit_190#branch)/(2*pi*1000)
+print c_unit_190
+let c_unit_191=-imag(vunit_191#branch)/(2*pi*1000)
+print c_unit_191
+let c_unit_192=-imag(vunit_192#branch)/(2*pi*1000)
+print c_unit_192
+let c_unit_193=-imag(vunit_193#branch)/(2*pi*1000)
+print c_unit_193
+let c_unit_194=-imag(vunit_194#branch)/(2*pi*1000)
+print c_unit_194
+let c_unit_195=-imag(vunit_195#branch)/(2*pi*1000)
+print c_unit_195
+let c_unit_196=-imag(vunit_196#branch)/(2*pi*1000)
+print c_unit_196
+let c_unit_197=-imag(vunit_197#branch)/(2*pi*1000)
+print c_unit_197
+let c_unit_198=-imag(vunit_198#branch)/(2*pi*1000)
+print c_unit_198
+let c_unit_199=-imag(vunit_199#branch)/(2*pi*1000)
+print c_unit_199
+let c_m64_only_0=-imag(vm64_only_0#branch)/(2*pi*1000)
+print c_m64_only_0
+let c_m64_only_1=-imag(vm64_only_1#branch)/(2*pi*1000)
+print c_m64_only_1
+let c_m64_only_2=-imag(vm64_only_2#branch)/(2*pi*1000)
+print c_m64_only_2
+let c_m64_only_3=-imag(vm64_only_3#branch)/(2*pi*1000)
+print c_m64_only_3
+let c_m64_only_4=-imag(vm64_only_4#branch)/(2*pi*1000)
+print c_m64_only_4
+let c_m64_only_5=-imag(vm64_only_5#branch)/(2*pi*1000)
+print c_m64_only_5
+let c_m64_only_6=-imag(vm64_only_6#branch)/(2*pi*1000)
+print c_m64_only_6
+let c_m64_only_7=-imag(vm64_only_7#branch)/(2*pi*1000)
+print c_m64_only_7
+let c_m64_only_8=-imag(vm64_only_8#branch)/(2*pi*1000)
+print c_m64_only_8
+let c_m64_only_9=-imag(vm64_only_9#branch)/(2*pi*1000)
+print c_m64_only_9
+let c_m64_only_10=-imag(vm64_only_10#branch)/(2*pi*1000)
+print c_m64_only_10
+let c_m64_only_11=-imag(vm64_only_11#branch)/(2*pi*1000)
+print c_m64_only_11
+let c_m64_only_12=-imag(vm64_only_12#branch)/(2*pi*1000)
+print c_m64_only_12
+let c_m64_only_13=-imag(vm64_only_13#branch)/(2*pi*1000)
+print c_m64_only_13
+let c_m64_only_14=-imag(vm64_only_14#branch)/(2*pi*1000)
+print c_m64_only_14
+let c_m64_only_15=-imag(vm64_only_15#branch)/(2*pi*1000)
+print c_m64_only_15
+let c_m64_only_16=-imag(vm64_only_16#branch)/(2*pi*1000)
+print c_m64_only_16
+let c_m64_only_17=-imag(vm64_only_17#branch)/(2*pi*1000)
+print c_m64_only_17
+let c_m64_only_18=-imag(vm64_only_18#branch)/(2*pi*1000)
+print c_m64_only_18
+let c_m64_only_19=-imag(vm64_only_19#branch)/(2*pi*1000)
+print c_m64_only_19
+let c_m64_only_20=-imag(vm64_only_20#branch)/(2*pi*1000)
+print c_m64_only_20
+let c_m64_only_21=-imag(vm64_only_21#branch)/(2*pi*1000)
+print c_m64_only_21
+let c_m64_only_22=-imag(vm64_only_22#branch)/(2*pi*1000)
+print c_m64_only_22
+let c_m64_only_23=-imag(vm64_only_23#branch)/(2*pi*1000)
+print c_m64_only_23
+let c_m64_only_24=-imag(vm64_only_24#branch)/(2*pi*1000)
+print c_m64_only_24
+let c_m64_only_25=-imag(vm64_only_25#branch)/(2*pi*1000)
+print c_m64_only_25
+let c_m64_only_26=-imag(vm64_only_26#branch)/(2*pi*1000)
+print c_m64_only_26
+let c_m64_only_27=-imag(vm64_only_27#branch)/(2*pi*1000)
+print c_m64_only_27
+let c_m64_only_28=-imag(vm64_only_28#branch)/(2*pi*1000)
+print c_m64_only_28
+let c_m64_only_29=-imag(vm64_only_29#branch)/(2*pi*1000)
+print c_m64_only_29
+let c_m64_only_30=-imag(vm64_only_30#branch)/(2*pi*1000)
+print c_m64_only_30
+let c_m64_only_31=-imag(vm64_only_31#branch)/(2*pi*1000)
+print c_m64_only_31
+let c_m64_only_32=-imag(vm64_only_32#branch)/(2*pi*1000)
+print c_m64_only_32
+let c_m64_only_33=-imag(vm64_only_33#branch)/(2*pi*1000)
+print c_m64_only_33
+let c_m64_only_34=-imag(vm64_only_34#branch)/(2*pi*1000)
+print c_m64_only_34
+let c_m64_only_35=-imag(vm64_only_35#branch)/(2*pi*1000)
+print c_m64_only_35
+let c_m64_only_36=-imag(vm64_only_36#branch)/(2*pi*1000)
+print c_m64_only_36
+let c_m64_only_37=-imag(vm64_only_37#branch)/(2*pi*1000)
+print c_m64_only_37
+let c_m64_only_38=-imag(vm64_only_38#branch)/(2*pi*1000)
+print c_m64_only_38
+let c_m64_only_39=-imag(vm64_only_39#branch)/(2*pi*1000)
+print c_m64_only_39
+let c_m64_only_40=-imag(vm64_only_40#branch)/(2*pi*1000)
+print c_m64_only_40
+let c_m64_only_41=-imag(vm64_only_41#branch)/(2*pi*1000)
+print c_m64_only_41
+let c_m64_only_42=-imag(vm64_only_42#branch)/(2*pi*1000)
+print c_m64_only_42
+let c_m64_only_43=-imag(vm64_only_43#branch)/(2*pi*1000)
+print c_m64_only_43
+let c_m64_only_44=-imag(vm64_only_44#branch)/(2*pi*1000)
+print c_m64_only_44
+let c_m64_only_45=-imag(vm64_only_45#branch)/(2*pi*1000)
+print c_m64_only_45
+let c_m64_only_46=-imag(vm64_only_46#branch)/(2*pi*1000)
+print c_m64_only_46
+let c_m64_only_47=-imag(vm64_only_47#branch)/(2*pi*1000)
+print c_m64_only_47
+let c_m64_only_48=-imag(vm64_only_48#branch)/(2*pi*1000)
+print c_m64_only_48
+let c_m64_only_49=-imag(vm64_only_49#branch)/(2*pi*1000)
+print c_m64_only_49
+let c_m64_only_50=-imag(vm64_only_50#branch)/(2*pi*1000)
+print c_m64_only_50
+let c_m64_only_51=-imag(vm64_only_51#branch)/(2*pi*1000)
+print c_m64_only_51
+let c_m64_only_52=-imag(vm64_only_52#branch)/(2*pi*1000)
+print c_m64_only_52
+let c_m64_only_53=-imag(vm64_only_53#branch)/(2*pi*1000)
+print c_m64_only_53
+let c_m64_only_54=-imag(vm64_only_54#branch)/(2*pi*1000)
+print c_m64_only_54
+let c_m64_only_55=-imag(vm64_only_55#branch)/(2*pi*1000)
+print c_m64_only_55
+let c_m64_only_56=-imag(vm64_only_56#branch)/(2*pi*1000)
+print c_m64_only_56
+let c_m64_only_57=-imag(vm64_only_57#branch)/(2*pi*1000)
+print c_m64_only_57
+let c_m64_only_58=-imag(vm64_only_58#branch)/(2*pi*1000)
+print c_m64_only_58
+let c_m64_only_59=-imag(vm64_only_59#branch)/(2*pi*1000)
+print c_m64_only_59
+let c_m64_only_60=-imag(vm64_only_60#branch)/(2*pi*1000)
+print c_m64_only_60
+let c_m64_only_61=-imag(vm64_only_61#branch)/(2*pi*1000)
+print c_m64_only_61
+let c_m64_only_62=-imag(vm64_only_62#branch)/(2*pi*1000)
+print c_m64_only_62
+let c_m64_only_63=-imag(vm64_only_63#branch)/(2*pi*1000)
+print c_m64_only_63
+let c_m64_only_64=-imag(vm64_only_64#branch)/(2*pi*1000)
+print c_m64_only_64
+let c_m64_only_65=-imag(vm64_only_65#branch)/(2*pi*1000)
+print c_m64_only_65
+let c_m64_only_66=-imag(vm64_only_66#branch)/(2*pi*1000)
+print c_m64_only_66
+let c_m64_only_67=-imag(vm64_only_67#branch)/(2*pi*1000)
+print c_m64_only_67
+let c_m64_only_68=-imag(vm64_only_68#branch)/(2*pi*1000)
+print c_m64_only_68
+let c_m64_only_69=-imag(vm64_only_69#branch)/(2*pi*1000)
+print c_m64_only_69
+let c_m64_only_70=-imag(vm64_only_70#branch)/(2*pi*1000)
+print c_m64_only_70
+let c_m64_only_71=-imag(vm64_only_71#branch)/(2*pi*1000)
+print c_m64_only_71
+let c_m64_only_72=-imag(vm64_only_72#branch)/(2*pi*1000)
+print c_m64_only_72
+let c_m64_only_73=-imag(vm64_only_73#branch)/(2*pi*1000)
+print c_m64_only_73
+let c_m64_only_74=-imag(vm64_only_74#branch)/(2*pi*1000)
+print c_m64_only_74
+let c_m64_only_75=-imag(vm64_only_75#branch)/(2*pi*1000)
+print c_m64_only_75
+let c_m64_only_76=-imag(vm64_only_76#branch)/(2*pi*1000)
+print c_m64_only_76
+let c_m64_only_77=-imag(vm64_only_77#branch)/(2*pi*1000)
+print c_m64_only_77
+let c_m64_only_78=-imag(vm64_only_78#branch)/(2*pi*1000)
+print c_m64_only_78
+let c_m64_only_79=-imag(vm64_only_79#branch)/(2*pi*1000)
+print c_m64_only_79
+let c_m64_only_80=-imag(vm64_only_80#branch)/(2*pi*1000)
+print c_m64_only_80
+let c_m64_only_81=-imag(vm64_only_81#branch)/(2*pi*1000)
+print c_m64_only_81
+let c_m64_only_82=-imag(vm64_only_82#branch)/(2*pi*1000)
+print c_m64_only_82
+let c_m64_only_83=-imag(vm64_only_83#branch)/(2*pi*1000)
+print c_m64_only_83
+let c_m64_only_84=-imag(vm64_only_84#branch)/(2*pi*1000)
+print c_m64_only_84
+let c_m64_only_85=-imag(vm64_only_85#branch)/(2*pi*1000)
+print c_m64_only_85
+let c_m64_only_86=-imag(vm64_only_86#branch)/(2*pi*1000)
+print c_m64_only_86
+let c_m64_only_87=-imag(vm64_only_87#branch)/(2*pi*1000)
+print c_m64_only_87
+let c_m64_only_88=-imag(vm64_only_88#branch)/(2*pi*1000)
+print c_m64_only_88
+let c_m64_only_89=-imag(vm64_only_89#branch)/(2*pi*1000)
+print c_m64_only_89
+let c_m64_only_90=-imag(vm64_only_90#branch)/(2*pi*1000)
+print c_m64_only_90
+let c_m64_only_91=-imag(vm64_only_91#branch)/(2*pi*1000)
+print c_m64_only_91
+let c_m64_only_92=-imag(vm64_only_92#branch)/(2*pi*1000)
+print c_m64_only_92
+let c_m64_only_93=-imag(vm64_only_93#branch)/(2*pi*1000)
+print c_m64_only_93
+let c_m64_only_94=-imag(vm64_only_94#branch)/(2*pi*1000)
+print c_m64_only_94
+let c_m64_only_95=-imag(vm64_only_95#branch)/(2*pi*1000)
+print c_m64_only_95
+let c_m64_only_96=-imag(vm64_only_96#branch)/(2*pi*1000)
+print c_m64_only_96
+let c_m64_only_97=-imag(vm64_only_97#branch)/(2*pi*1000)
+print c_m64_only_97
+let c_m64_only_98=-imag(vm64_only_98#branch)/(2*pi*1000)
+print c_m64_only_98
+let c_m64_only_99=-imag(vm64_only_99#branch)/(2*pi*1000)
+print c_m64_only_99
+let c_m64_only_100=-imag(vm64_only_100#branch)/(2*pi*1000)
+print c_m64_only_100
+let c_m64_only_101=-imag(vm64_only_101#branch)/(2*pi*1000)
+print c_m64_only_101
+let c_m64_only_102=-imag(vm64_only_102#branch)/(2*pi*1000)
+print c_m64_only_102
+let c_m64_only_103=-imag(vm64_only_103#branch)/(2*pi*1000)
+print c_m64_only_103
+let c_m64_only_104=-imag(vm64_only_104#branch)/(2*pi*1000)
+print c_m64_only_104
+let c_m64_only_105=-imag(vm64_only_105#branch)/(2*pi*1000)
+print c_m64_only_105
+let c_m64_only_106=-imag(vm64_only_106#branch)/(2*pi*1000)
+print c_m64_only_106
+let c_m64_only_107=-imag(vm64_only_107#branch)/(2*pi*1000)
+print c_m64_only_107
+let c_m64_only_108=-imag(vm64_only_108#branch)/(2*pi*1000)
+print c_m64_only_108
+let c_m64_only_109=-imag(vm64_only_109#branch)/(2*pi*1000)
+print c_m64_only_109
+let c_m64_only_110=-imag(vm64_only_110#branch)/(2*pi*1000)
+print c_m64_only_110
+let c_m64_only_111=-imag(vm64_only_111#branch)/(2*pi*1000)
+print c_m64_only_111
+let c_m64_only_112=-imag(vm64_only_112#branch)/(2*pi*1000)
+print c_m64_only_112
+let c_m64_only_113=-imag(vm64_only_113#branch)/(2*pi*1000)
+print c_m64_only_113
+let c_m64_only_114=-imag(vm64_only_114#branch)/(2*pi*1000)
+print c_m64_only_114
+let c_m64_only_115=-imag(vm64_only_115#branch)/(2*pi*1000)
+print c_m64_only_115
+let c_m64_only_116=-imag(vm64_only_116#branch)/(2*pi*1000)
+print c_m64_only_116
+let c_m64_only_117=-imag(vm64_only_117#branch)/(2*pi*1000)
+print c_m64_only_117
+let c_m64_only_118=-imag(vm64_only_118#branch)/(2*pi*1000)
+print c_m64_only_118
+let c_m64_only_119=-imag(vm64_only_119#branch)/(2*pi*1000)
+print c_m64_only_119
+let c_m64_only_120=-imag(vm64_only_120#branch)/(2*pi*1000)
+print c_m64_only_120
+let c_m64_only_121=-imag(vm64_only_121#branch)/(2*pi*1000)
+print c_m64_only_121
+let c_m64_only_122=-imag(vm64_only_122#branch)/(2*pi*1000)
+print c_m64_only_122
+let c_m64_only_123=-imag(vm64_only_123#branch)/(2*pi*1000)
+print c_m64_only_123
+let c_m64_only_124=-imag(vm64_only_124#branch)/(2*pi*1000)
+print c_m64_only_124
+let c_m64_only_125=-imag(vm64_only_125#branch)/(2*pi*1000)
+print c_m64_only_125
+let c_m64_only_126=-imag(vm64_only_126#branch)/(2*pi*1000)
+print c_m64_only_126
+let c_m64_only_127=-imag(vm64_only_127#branch)/(2*pi*1000)
+print c_m64_only_127
+let c_m64_only_128=-imag(vm64_only_128#branch)/(2*pi*1000)
+print c_m64_only_128
+let c_m64_only_129=-imag(vm64_only_129#branch)/(2*pi*1000)
+print c_m64_only_129
+let c_m64_only_130=-imag(vm64_only_130#branch)/(2*pi*1000)
+print c_m64_only_130
+let c_m64_only_131=-imag(vm64_only_131#branch)/(2*pi*1000)
+print c_m64_only_131
+let c_m64_only_132=-imag(vm64_only_132#branch)/(2*pi*1000)
+print c_m64_only_132
+let c_m64_only_133=-imag(vm64_only_133#branch)/(2*pi*1000)
+print c_m64_only_133
+let c_m64_only_134=-imag(vm64_only_134#branch)/(2*pi*1000)
+print c_m64_only_134
+let c_m64_only_135=-imag(vm64_only_135#branch)/(2*pi*1000)
+print c_m64_only_135
+let c_m64_only_136=-imag(vm64_only_136#branch)/(2*pi*1000)
+print c_m64_only_136
+let c_m64_only_137=-imag(vm64_only_137#branch)/(2*pi*1000)
+print c_m64_only_137
+let c_m64_only_138=-imag(vm64_only_138#branch)/(2*pi*1000)
+print c_m64_only_138
+let c_m64_only_139=-imag(vm64_only_139#branch)/(2*pi*1000)
+print c_m64_only_139
+let c_m64_only_140=-imag(vm64_only_140#branch)/(2*pi*1000)
+print c_m64_only_140
+let c_m64_only_141=-imag(vm64_only_141#branch)/(2*pi*1000)
+print c_m64_only_141
+let c_m64_only_142=-imag(vm64_only_142#branch)/(2*pi*1000)
+print c_m64_only_142
+let c_m64_only_143=-imag(vm64_only_143#branch)/(2*pi*1000)
+print c_m64_only_143
+let c_m64_only_144=-imag(vm64_only_144#branch)/(2*pi*1000)
+print c_m64_only_144
+let c_m64_only_145=-imag(vm64_only_145#branch)/(2*pi*1000)
+print c_m64_only_145
+let c_m64_only_146=-imag(vm64_only_146#branch)/(2*pi*1000)
+print c_m64_only_146
+let c_m64_only_147=-imag(vm64_only_147#branch)/(2*pi*1000)
+print c_m64_only_147
+let c_m64_only_148=-imag(vm64_only_148#branch)/(2*pi*1000)
+print c_m64_only_148
+let c_m64_only_149=-imag(vm64_only_149#branch)/(2*pi*1000)
+print c_m64_only_149
+let c_m64_only_150=-imag(vm64_only_150#branch)/(2*pi*1000)
+print c_m64_only_150
+let c_m64_only_151=-imag(vm64_only_151#branch)/(2*pi*1000)
+print c_m64_only_151
+let c_m64_only_152=-imag(vm64_only_152#branch)/(2*pi*1000)
+print c_m64_only_152
+let c_m64_only_153=-imag(vm64_only_153#branch)/(2*pi*1000)
+print c_m64_only_153
+let c_m64_only_154=-imag(vm64_only_154#branch)/(2*pi*1000)
+print c_m64_only_154
+let c_m64_only_155=-imag(vm64_only_155#branch)/(2*pi*1000)
+print c_m64_only_155
+let c_m64_only_156=-imag(vm64_only_156#branch)/(2*pi*1000)
+print c_m64_only_156
+let c_m64_only_157=-imag(vm64_only_157#branch)/(2*pi*1000)
+print c_m64_only_157
+let c_m64_only_158=-imag(vm64_only_158#branch)/(2*pi*1000)
+print c_m64_only_158
+let c_m64_only_159=-imag(vm64_only_159#branch)/(2*pi*1000)
+print c_m64_only_159
+let c_m64_only_160=-imag(vm64_only_160#branch)/(2*pi*1000)
+print c_m64_only_160
+let c_m64_only_161=-imag(vm64_only_161#branch)/(2*pi*1000)
+print c_m64_only_161
+let c_m64_only_162=-imag(vm64_only_162#branch)/(2*pi*1000)
+print c_m64_only_162
+let c_m64_only_163=-imag(vm64_only_163#branch)/(2*pi*1000)
+print c_m64_only_163
+let c_m64_only_164=-imag(vm64_only_164#branch)/(2*pi*1000)
+print c_m64_only_164
+let c_m64_only_165=-imag(vm64_only_165#branch)/(2*pi*1000)
+print c_m64_only_165
+let c_m64_only_166=-imag(vm64_only_166#branch)/(2*pi*1000)
+print c_m64_only_166
+let c_m64_only_167=-imag(vm64_only_167#branch)/(2*pi*1000)
+print c_m64_only_167
+let c_m64_only_168=-imag(vm64_only_168#branch)/(2*pi*1000)
+print c_m64_only_168
+let c_m64_only_169=-imag(vm64_only_169#branch)/(2*pi*1000)
+print c_m64_only_169
+let c_m64_only_170=-imag(vm64_only_170#branch)/(2*pi*1000)
+print c_m64_only_170
+let c_m64_only_171=-imag(vm64_only_171#branch)/(2*pi*1000)
+print c_m64_only_171
+let c_m64_only_172=-imag(vm64_only_172#branch)/(2*pi*1000)
+print c_m64_only_172
+let c_m64_only_173=-imag(vm64_only_173#branch)/(2*pi*1000)
+print c_m64_only_173
+let c_m64_only_174=-imag(vm64_only_174#branch)/(2*pi*1000)
+print c_m64_only_174
+let c_m64_only_175=-imag(vm64_only_175#branch)/(2*pi*1000)
+print c_m64_only_175
+let c_m64_only_176=-imag(vm64_only_176#branch)/(2*pi*1000)
+print c_m64_only_176
+let c_m64_only_177=-imag(vm64_only_177#branch)/(2*pi*1000)
+print c_m64_only_177
+let c_m64_only_178=-imag(vm64_only_178#branch)/(2*pi*1000)
+print c_m64_only_178
+let c_m64_only_179=-imag(vm64_only_179#branch)/(2*pi*1000)
+print c_m64_only_179
+let c_m64_only_180=-imag(vm64_only_180#branch)/(2*pi*1000)
+print c_m64_only_180
+let c_m64_only_181=-imag(vm64_only_181#branch)/(2*pi*1000)
+print c_m64_only_181
+let c_m64_only_182=-imag(vm64_only_182#branch)/(2*pi*1000)
+print c_m64_only_182
+let c_m64_only_183=-imag(vm64_only_183#branch)/(2*pi*1000)
+print c_m64_only_183
+let c_m64_only_184=-imag(vm64_only_184#branch)/(2*pi*1000)
+print c_m64_only_184
+let c_m64_only_185=-imag(vm64_only_185#branch)/(2*pi*1000)
+print c_m64_only_185
+let c_m64_only_186=-imag(vm64_only_186#branch)/(2*pi*1000)
+print c_m64_only_186
+let c_m64_only_187=-imag(vm64_only_187#branch)/(2*pi*1000)
+print c_m64_only_187
+let c_m64_only_188=-imag(vm64_only_188#branch)/(2*pi*1000)
+print c_m64_only_188
+let c_m64_only_189=-imag(vm64_only_189#branch)/(2*pi*1000)
+print c_m64_only_189
+let c_m64_only_190=-imag(vm64_only_190#branch)/(2*pi*1000)
+print c_m64_only_190
+let c_m64_only_191=-imag(vm64_only_191#branch)/(2*pi*1000)
+print c_m64_only_191
+let c_m64_only_192=-imag(vm64_only_192#branch)/(2*pi*1000)
+print c_m64_only_192
+let c_m64_only_193=-imag(vm64_only_193#branch)/(2*pi*1000)
+print c_m64_only_193
+let c_m64_only_194=-imag(vm64_only_194#branch)/(2*pi*1000)
+print c_m64_only_194
+let c_m64_only_195=-imag(vm64_only_195#branch)/(2*pi*1000)
+print c_m64_only_195
+let c_m64_only_196=-imag(vm64_only_196#branch)/(2*pi*1000)
+print c_m64_only_196
+let c_m64_only_197=-imag(vm64_only_197#branch)/(2*pi*1000)
+print c_m64_only_197
+let c_m64_only_198=-imag(vm64_only_198#branch)/(2*pi*1000)
+print c_m64_only_198
+let c_m64_only_199=-imag(vm64_only_199#branch)/(2*pi*1000)
+print c_m64_only_199
+let c_m64_mult64_0=-imag(vm64_mult64_0#branch)/(2*pi*1000)
+print c_m64_mult64_0
+let c_m64_mult64_1=-imag(vm64_mult64_1#branch)/(2*pi*1000)
+print c_m64_mult64_1
+let c_m64_mult64_2=-imag(vm64_mult64_2#branch)/(2*pi*1000)
+print c_m64_mult64_2
+let c_m64_mult64_3=-imag(vm64_mult64_3#branch)/(2*pi*1000)
+print c_m64_mult64_3
+let c_m64_mult64_4=-imag(vm64_mult64_4#branch)/(2*pi*1000)
+print c_m64_mult64_4
+let c_m64_mult64_5=-imag(vm64_mult64_5#branch)/(2*pi*1000)
+print c_m64_mult64_5
+let c_m64_mult64_6=-imag(vm64_mult64_6#branch)/(2*pi*1000)
+print c_m64_mult64_6
+let c_m64_mult64_7=-imag(vm64_mult64_7#branch)/(2*pi*1000)
+print c_m64_mult64_7
+let c_m64_mult64_8=-imag(vm64_mult64_8#branch)/(2*pi*1000)
+print c_m64_mult64_8
+let c_m64_mult64_9=-imag(vm64_mult64_9#branch)/(2*pi*1000)
+print c_m64_mult64_9
+let c_m64_mult64_10=-imag(vm64_mult64_10#branch)/(2*pi*1000)
+print c_m64_mult64_10
+let c_m64_mult64_11=-imag(vm64_mult64_11#branch)/(2*pi*1000)
+print c_m64_mult64_11
+let c_m64_mult64_12=-imag(vm64_mult64_12#branch)/(2*pi*1000)
+print c_m64_mult64_12
+let c_m64_mult64_13=-imag(vm64_mult64_13#branch)/(2*pi*1000)
+print c_m64_mult64_13
+let c_m64_mult64_14=-imag(vm64_mult64_14#branch)/(2*pi*1000)
+print c_m64_mult64_14
+let c_m64_mult64_15=-imag(vm64_mult64_15#branch)/(2*pi*1000)
+print c_m64_mult64_15
+let c_m64_mult64_16=-imag(vm64_mult64_16#branch)/(2*pi*1000)
+print c_m64_mult64_16
+let c_m64_mult64_17=-imag(vm64_mult64_17#branch)/(2*pi*1000)
+print c_m64_mult64_17
+let c_m64_mult64_18=-imag(vm64_mult64_18#branch)/(2*pi*1000)
+print c_m64_mult64_18
+let c_m64_mult64_19=-imag(vm64_mult64_19#branch)/(2*pi*1000)
+print c_m64_mult64_19
+let c_m64_mult64_20=-imag(vm64_mult64_20#branch)/(2*pi*1000)
+print c_m64_mult64_20
+let c_m64_mult64_21=-imag(vm64_mult64_21#branch)/(2*pi*1000)
+print c_m64_mult64_21
+let c_m64_mult64_22=-imag(vm64_mult64_22#branch)/(2*pi*1000)
+print c_m64_mult64_22
+let c_m64_mult64_23=-imag(vm64_mult64_23#branch)/(2*pi*1000)
+print c_m64_mult64_23
+let c_m64_mult64_24=-imag(vm64_mult64_24#branch)/(2*pi*1000)
+print c_m64_mult64_24
+let c_m64_mult64_25=-imag(vm64_mult64_25#branch)/(2*pi*1000)
+print c_m64_mult64_25
+let c_m64_mult64_26=-imag(vm64_mult64_26#branch)/(2*pi*1000)
+print c_m64_mult64_26
+let c_m64_mult64_27=-imag(vm64_mult64_27#branch)/(2*pi*1000)
+print c_m64_mult64_27
+let c_m64_mult64_28=-imag(vm64_mult64_28#branch)/(2*pi*1000)
+print c_m64_mult64_28
+let c_m64_mult64_29=-imag(vm64_mult64_29#branch)/(2*pi*1000)
+print c_m64_mult64_29
+let c_m64_mult64_30=-imag(vm64_mult64_30#branch)/(2*pi*1000)
+print c_m64_mult64_30
+let c_m64_mult64_31=-imag(vm64_mult64_31#branch)/(2*pi*1000)
+print c_m64_mult64_31
+let c_m64_mult64_32=-imag(vm64_mult64_32#branch)/(2*pi*1000)
+print c_m64_mult64_32
+let c_m64_mult64_33=-imag(vm64_mult64_33#branch)/(2*pi*1000)
+print c_m64_mult64_33
+let c_m64_mult64_34=-imag(vm64_mult64_34#branch)/(2*pi*1000)
+print c_m64_mult64_34
+let c_m64_mult64_35=-imag(vm64_mult64_35#branch)/(2*pi*1000)
+print c_m64_mult64_35
+let c_m64_mult64_36=-imag(vm64_mult64_36#branch)/(2*pi*1000)
+print c_m64_mult64_36
+let c_m64_mult64_37=-imag(vm64_mult64_37#branch)/(2*pi*1000)
+print c_m64_mult64_37
+let c_m64_mult64_38=-imag(vm64_mult64_38#branch)/(2*pi*1000)
+print c_m64_mult64_38
+let c_m64_mult64_39=-imag(vm64_mult64_39#branch)/(2*pi*1000)
+print c_m64_mult64_39
+let c_m64_mult64_40=-imag(vm64_mult64_40#branch)/(2*pi*1000)
+print c_m64_mult64_40
+let c_m64_mult64_41=-imag(vm64_mult64_41#branch)/(2*pi*1000)
+print c_m64_mult64_41
+let c_m64_mult64_42=-imag(vm64_mult64_42#branch)/(2*pi*1000)
+print c_m64_mult64_42
+let c_m64_mult64_43=-imag(vm64_mult64_43#branch)/(2*pi*1000)
+print c_m64_mult64_43
+let c_m64_mult64_44=-imag(vm64_mult64_44#branch)/(2*pi*1000)
+print c_m64_mult64_44
+let c_m64_mult64_45=-imag(vm64_mult64_45#branch)/(2*pi*1000)
+print c_m64_mult64_45
+let c_m64_mult64_46=-imag(vm64_mult64_46#branch)/(2*pi*1000)
+print c_m64_mult64_46
+let c_m64_mult64_47=-imag(vm64_mult64_47#branch)/(2*pi*1000)
+print c_m64_mult64_47
+let c_m64_mult64_48=-imag(vm64_mult64_48#branch)/(2*pi*1000)
+print c_m64_mult64_48
+let c_m64_mult64_49=-imag(vm64_mult64_49#branch)/(2*pi*1000)
+print c_m64_mult64_49
+let c_m64_mult64_50=-imag(vm64_mult64_50#branch)/(2*pi*1000)
+print c_m64_mult64_50
+let c_m64_mult64_51=-imag(vm64_mult64_51#branch)/(2*pi*1000)
+print c_m64_mult64_51
+let c_m64_mult64_52=-imag(vm64_mult64_52#branch)/(2*pi*1000)
+print c_m64_mult64_52
+let c_m64_mult64_53=-imag(vm64_mult64_53#branch)/(2*pi*1000)
+print c_m64_mult64_53
+let c_m64_mult64_54=-imag(vm64_mult64_54#branch)/(2*pi*1000)
+print c_m64_mult64_54
+let c_m64_mult64_55=-imag(vm64_mult64_55#branch)/(2*pi*1000)
+print c_m64_mult64_55
+let c_m64_mult64_56=-imag(vm64_mult64_56#branch)/(2*pi*1000)
+print c_m64_mult64_56
+let c_m64_mult64_57=-imag(vm64_mult64_57#branch)/(2*pi*1000)
+print c_m64_mult64_57
+let c_m64_mult64_58=-imag(vm64_mult64_58#branch)/(2*pi*1000)
+print c_m64_mult64_58
+let c_m64_mult64_59=-imag(vm64_mult64_59#branch)/(2*pi*1000)
+print c_m64_mult64_59
+let c_m64_mult64_60=-imag(vm64_mult64_60#branch)/(2*pi*1000)
+print c_m64_mult64_60
+let c_m64_mult64_61=-imag(vm64_mult64_61#branch)/(2*pi*1000)
+print c_m64_mult64_61
+let c_m64_mult64_62=-imag(vm64_mult64_62#branch)/(2*pi*1000)
+print c_m64_mult64_62
+let c_m64_mult64_63=-imag(vm64_mult64_63#branch)/(2*pi*1000)
+print c_m64_mult64_63
+let c_m64_mult64_64=-imag(vm64_mult64_64#branch)/(2*pi*1000)
+print c_m64_mult64_64
+let c_m64_mult64_65=-imag(vm64_mult64_65#branch)/(2*pi*1000)
+print c_m64_mult64_65
+let c_m64_mult64_66=-imag(vm64_mult64_66#branch)/(2*pi*1000)
+print c_m64_mult64_66
+let c_m64_mult64_67=-imag(vm64_mult64_67#branch)/(2*pi*1000)
+print c_m64_mult64_67
+let c_m64_mult64_68=-imag(vm64_mult64_68#branch)/(2*pi*1000)
+print c_m64_mult64_68
+let c_m64_mult64_69=-imag(vm64_mult64_69#branch)/(2*pi*1000)
+print c_m64_mult64_69
+let c_m64_mult64_70=-imag(vm64_mult64_70#branch)/(2*pi*1000)
+print c_m64_mult64_70
+let c_m64_mult64_71=-imag(vm64_mult64_71#branch)/(2*pi*1000)
+print c_m64_mult64_71
+let c_m64_mult64_72=-imag(vm64_mult64_72#branch)/(2*pi*1000)
+print c_m64_mult64_72
+let c_m64_mult64_73=-imag(vm64_mult64_73#branch)/(2*pi*1000)
+print c_m64_mult64_73
+let c_m64_mult64_74=-imag(vm64_mult64_74#branch)/(2*pi*1000)
+print c_m64_mult64_74
+let c_m64_mult64_75=-imag(vm64_mult64_75#branch)/(2*pi*1000)
+print c_m64_mult64_75
+let c_m64_mult64_76=-imag(vm64_mult64_76#branch)/(2*pi*1000)
+print c_m64_mult64_76
+let c_m64_mult64_77=-imag(vm64_mult64_77#branch)/(2*pi*1000)
+print c_m64_mult64_77
+let c_m64_mult64_78=-imag(vm64_mult64_78#branch)/(2*pi*1000)
+print c_m64_mult64_78
+let c_m64_mult64_79=-imag(vm64_mult64_79#branch)/(2*pi*1000)
+print c_m64_mult64_79
+let c_m64_mult64_80=-imag(vm64_mult64_80#branch)/(2*pi*1000)
+print c_m64_mult64_80
+let c_m64_mult64_81=-imag(vm64_mult64_81#branch)/(2*pi*1000)
+print c_m64_mult64_81
+let c_m64_mult64_82=-imag(vm64_mult64_82#branch)/(2*pi*1000)
+print c_m64_mult64_82
+let c_m64_mult64_83=-imag(vm64_mult64_83#branch)/(2*pi*1000)
+print c_m64_mult64_83
+let c_m64_mult64_84=-imag(vm64_mult64_84#branch)/(2*pi*1000)
+print c_m64_mult64_84
+let c_m64_mult64_85=-imag(vm64_mult64_85#branch)/(2*pi*1000)
+print c_m64_mult64_85
+let c_m64_mult64_86=-imag(vm64_mult64_86#branch)/(2*pi*1000)
+print c_m64_mult64_86
+let c_m64_mult64_87=-imag(vm64_mult64_87#branch)/(2*pi*1000)
+print c_m64_mult64_87
+let c_m64_mult64_88=-imag(vm64_mult64_88#branch)/(2*pi*1000)
+print c_m64_mult64_88
+let c_m64_mult64_89=-imag(vm64_mult64_89#branch)/(2*pi*1000)
+print c_m64_mult64_89
+let c_m64_mult64_90=-imag(vm64_mult64_90#branch)/(2*pi*1000)
+print c_m64_mult64_90
+let c_m64_mult64_91=-imag(vm64_mult64_91#branch)/(2*pi*1000)
+print c_m64_mult64_91
+let c_m64_mult64_92=-imag(vm64_mult64_92#branch)/(2*pi*1000)
+print c_m64_mult64_92
+let c_m64_mult64_93=-imag(vm64_mult64_93#branch)/(2*pi*1000)
+print c_m64_mult64_93
+let c_m64_mult64_94=-imag(vm64_mult64_94#branch)/(2*pi*1000)
+print c_m64_mult64_94
+let c_m64_mult64_95=-imag(vm64_mult64_95#branch)/(2*pi*1000)
+print c_m64_mult64_95
+let c_m64_mult64_96=-imag(vm64_mult64_96#branch)/(2*pi*1000)
+print c_m64_mult64_96
+let c_m64_mult64_97=-imag(vm64_mult64_97#branch)/(2*pi*1000)
+print c_m64_mult64_97
+let c_m64_mult64_98=-imag(vm64_mult64_98#branch)/(2*pi*1000)
+print c_m64_mult64_98
+let c_m64_mult64_99=-imag(vm64_mult64_99#branch)/(2*pi*1000)
+print c_m64_mult64_99
+let c_m64_mult64_100=-imag(vm64_mult64_100#branch)/(2*pi*1000)
+print c_m64_mult64_100
+let c_m64_mult64_101=-imag(vm64_mult64_101#branch)/(2*pi*1000)
+print c_m64_mult64_101
+let c_m64_mult64_102=-imag(vm64_mult64_102#branch)/(2*pi*1000)
+print c_m64_mult64_102
+let c_m64_mult64_103=-imag(vm64_mult64_103#branch)/(2*pi*1000)
+print c_m64_mult64_103
+let c_m64_mult64_104=-imag(vm64_mult64_104#branch)/(2*pi*1000)
+print c_m64_mult64_104
+let c_m64_mult64_105=-imag(vm64_mult64_105#branch)/(2*pi*1000)
+print c_m64_mult64_105
+let c_m64_mult64_106=-imag(vm64_mult64_106#branch)/(2*pi*1000)
+print c_m64_mult64_106
+let c_m64_mult64_107=-imag(vm64_mult64_107#branch)/(2*pi*1000)
+print c_m64_mult64_107
+let c_m64_mult64_108=-imag(vm64_mult64_108#branch)/(2*pi*1000)
+print c_m64_mult64_108
+let c_m64_mult64_109=-imag(vm64_mult64_109#branch)/(2*pi*1000)
+print c_m64_mult64_109
+let c_m64_mult64_110=-imag(vm64_mult64_110#branch)/(2*pi*1000)
+print c_m64_mult64_110
+let c_m64_mult64_111=-imag(vm64_mult64_111#branch)/(2*pi*1000)
+print c_m64_mult64_111
+let c_m64_mult64_112=-imag(vm64_mult64_112#branch)/(2*pi*1000)
+print c_m64_mult64_112
+let c_m64_mult64_113=-imag(vm64_mult64_113#branch)/(2*pi*1000)
+print c_m64_mult64_113
+let c_m64_mult64_114=-imag(vm64_mult64_114#branch)/(2*pi*1000)
+print c_m64_mult64_114
+let c_m64_mult64_115=-imag(vm64_mult64_115#branch)/(2*pi*1000)
+print c_m64_mult64_115
+let c_m64_mult64_116=-imag(vm64_mult64_116#branch)/(2*pi*1000)
+print c_m64_mult64_116
+let c_m64_mult64_117=-imag(vm64_mult64_117#branch)/(2*pi*1000)
+print c_m64_mult64_117
+let c_m64_mult64_118=-imag(vm64_mult64_118#branch)/(2*pi*1000)
+print c_m64_mult64_118
+let c_m64_mult64_119=-imag(vm64_mult64_119#branch)/(2*pi*1000)
+print c_m64_mult64_119
+let c_m64_mult64_120=-imag(vm64_mult64_120#branch)/(2*pi*1000)
+print c_m64_mult64_120
+let c_m64_mult64_121=-imag(vm64_mult64_121#branch)/(2*pi*1000)
+print c_m64_mult64_121
+let c_m64_mult64_122=-imag(vm64_mult64_122#branch)/(2*pi*1000)
+print c_m64_mult64_122
+let c_m64_mult64_123=-imag(vm64_mult64_123#branch)/(2*pi*1000)
+print c_m64_mult64_123
+let c_m64_mult64_124=-imag(vm64_mult64_124#branch)/(2*pi*1000)
+print c_m64_mult64_124
+let c_m64_mult64_125=-imag(vm64_mult64_125#branch)/(2*pi*1000)
+print c_m64_mult64_125
+let c_m64_mult64_126=-imag(vm64_mult64_126#branch)/(2*pi*1000)
+print c_m64_mult64_126
+let c_m64_mult64_127=-imag(vm64_mult64_127#branch)/(2*pi*1000)
+print c_m64_mult64_127
+let c_m64_mult64_128=-imag(vm64_mult64_128#branch)/(2*pi*1000)
+print c_m64_mult64_128
+let c_m64_mult64_129=-imag(vm64_mult64_129#branch)/(2*pi*1000)
+print c_m64_mult64_129
+let c_m64_mult64_130=-imag(vm64_mult64_130#branch)/(2*pi*1000)
+print c_m64_mult64_130
+let c_m64_mult64_131=-imag(vm64_mult64_131#branch)/(2*pi*1000)
+print c_m64_mult64_131
+let c_m64_mult64_132=-imag(vm64_mult64_132#branch)/(2*pi*1000)
+print c_m64_mult64_132
+let c_m64_mult64_133=-imag(vm64_mult64_133#branch)/(2*pi*1000)
+print c_m64_mult64_133
+let c_m64_mult64_134=-imag(vm64_mult64_134#branch)/(2*pi*1000)
+print c_m64_mult64_134
+let c_m64_mult64_135=-imag(vm64_mult64_135#branch)/(2*pi*1000)
+print c_m64_mult64_135
+let c_m64_mult64_136=-imag(vm64_mult64_136#branch)/(2*pi*1000)
+print c_m64_mult64_136
+let c_m64_mult64_137=-imag(vm64_mult64_137#branch)/(2*pi*1000)
+print c_m64_mult64_137
+let c_m64_mult64_138=-imag(vm64_mult64_138#branch)/(2*pi*1000)
+print c_m64_mult64_138
+let c_m64_mult64_139=-imag(vm64_mult64_139#branch)/(2*pi*1000)
+print c_m64_mult64_139
+let c_m64_mult64_140=-imag(vm64_mult64_140#branch)/(2*pi*1000)
+print c_m64_mult64_140
+let c_m64_mult64_141=-imag(vm64_mult64_141#branch)/(2*pi*1000)
+print c_m64_mult64_141
+let c_m64_mult64_142=-imag(vm64_mult64_142#branch)/(2*pi*1000)
+print c_m64_mult64_142
+let c_m64_mult64_143=-imag(vm64_mult64_143#branch)/(2*pi*1000)
+print c_m64_mult64_143
+let c_m64_mult64_144=-imag(vm64_mult64_144#branch)/(2*pi*1000)
+print c_m64_mult64_144
+let c_m64_mult64_145=-imag(vm64_mult64_145#branch)/(2*pi*1000)
+print c_m64_mult64_145
+let c_m64_mult64_146=-imag(vm64_mult64_146#branch)/(2*pi*1000)
+print c_m64_mult64_146
+let c_m64_mult64_147=-imag(vm64_mult64_147#branch)/(2*pi*1000)
+print c_m64_mult64_147
+let c_m64_mult64_148=-imag(vm64_mult64_148#branch)/(2*pi*1000)
+print c_m64_mult64_148
+let c_m64_mult64_149=-imag(vm64_mult64_149#branch)/(2*pi*1000)
+print c_m64_mult64_149
+let c_m64_mult64_150=-imag(vm64_mult64_150#branch)/(2*pi*1000)
+print c_m64_mult64_150
+let c_m64_mult64_151=-imag(vm64_mult64_151#branch)/(2*pi*1000)
+print c_m64_mult64_151
+let c_m64_mult64_152=-imag(vm64_mult64_152#branch)/(2*pi*1000)
+print c_m64_mult64_152
+let c_m64_mult64_153=-imag(vm64_mult64_153#branch)/(2*pi*1000)
+print c_m64_mult64_153
+let c_m64_mult64_154=-imag(vm64_mult64_154#branch)/(2*pi*1000)
+print c_m64_mult64_154
+let c_m64_mult64_155=-imag(vm64_mult64_155#branch)/(2*pi*1000)
+print c_m64_mult64_155
+let c_m64_mult64_156=-imag(vm64_mult64_156#branch)/(2*pi*1000)
+print c_m64_mult64_156
+let c_m64_mult64_157=-imag(vm64_mult64_157#branch)/(2*pi*1000)
+print c_m64_mult64_157
+let c_m64_mult64_158=-imag(vm64_mult64_158#branch)/(2*pi*1000)
+print c_m64_mult64_158
+let c_m64_mult64_159=-imag(vm64_mult64_159#branch)/(2*pi*1000)
+print c_m64_mult64_159
+let c_m64_mult64_160=-imag(vm64_mult64_160#branch)/(2*pi*1000)
+print c_m64_mult64_160
+let c_m64_mult64_161=-imag(vm64_mult64_161#branch)/(2*pi*1000)
+print c_m64_mult64_161
+let c_m64_mult64_162=-imag(vm64_mult64_162#branch)/(2*pi*1000)
+print c_m64_mult64_162
+let c_m64_mult64_163=-imag(vm64_mult64_163#branch)/(2*pi*1000)
+print c_m64_mult64_163
+let c_m64_mult64_164=-imag(vm64_mult64_164#branch)/(2*pi*1000)
+print c_m64_mult64_164
+let c_m64_mult64_165=-imag(vm64_mult64_165#branch)/(2*pi*1000)
+print c_m64_mult64_165
+let c_m64_mult64_166=-imag(vm64_mult64_166#branch)/(2*pi*1000)
+print c_m64_mult64_166
+let c_m64_mult64_167=-imag(vm64_mult64_167#branch)/(2*pi*1000)
+print c_m64_mult64_167
+let c_m64_mult64_168=-imag(vm64_mult64_168#branch)/(2*pi*1000)
+print c_m64_mult64_168
+let c_m64_mult64_169=-imag(vm64_mult64_169#branch)/(2*pi*1000)
+print c_m64_mult64_169
+let c_m64_mult64_170=-imag(vm64_mult64_170#branch)/(2*pi*1000)
+print c_m64_mult64_170
+let c_m64_mult64_171=-imag(vm64_mult64_171#branch)/(2*pi*1000)
+print c_m64_mult64_171
+let c_m64_mult64_172=-imag(vm64_mult64_172#branch)/(2*pi*1000)
+print c_m64_mult64_172
+let c_m64_mult64_173=-imag(vm64_mult64_173#branch)/(2*pi*1000)
+print c_m64_mult64_173
+let c_m64_mult64_174=-imag(vm64_mult64_174#branch)/(2*pi*1000)
+print c_m64_mult64_174
+let c_m64_mult64_175=-imag(vm64_mult64_175#branch)/(2*pi*1000)
+print c_m64_mult64_175
+let c_m64_mult64_176=-imag(vm64_mult64_176#branch)/(2*pi*1000)
+print c_m64_mult64_176
+let c_m64_mult64_177=-imag(vm64_mult64_177#branch)/(2*pi*1000)
+print c_m64_mult64_177
+let c_m64_mult64_178=-imag(vm64_mult64_178#branch)/(2*pi*1000)
+print c_m64_mult64_178
+let c_m64_mult64_179=-imag(vm64_mult64_179#branch)/(2*pi*1000)
+print c_m64_mult64_179
+let c_m64_mult64_180=-imag(vm64_mult64_180#branch)/(2*pi*1000)
+print c_m64_mult64_180
+let c_m64_mult64_181=-imag(vm64_mult64_181#branch)/(2*pi*1000)
+print c_m64_mult64_181
+let c_m64_mult64_182=-imag(vm64_mult64_182#branch)/(2*pi*1000)
+print c_m64_mult64_182
+let c_m64_mult64_183=-imag(vm64_mult64_183#branch)/(2*pi*1000)
+print c_m64_mult64_183
+let c_m64_mult64_184=-imag(vm64_mult64_184#branch)/(2*pi*1000)
+print c_m64_mult64_184
+let c_m64_mult64_185=-imag(vm64_mult64_185#branch)/(2*pi*1000)
+print c_m64_mult64_185
+let c_m64_mult64_186=-imag(vm64_mult64_186#branch)/(2*pi*1000)
+print c_m64_mult64_186
+let c_m64_mult64_187=-imag(vm64_mult64_187#branch)/(2*pi*1000)
+print c_m64_mult64_187
+let c_m64_mult64_188=-imag(vm64_mult64_188#branch)/(2*pi*1000)
+print c_m64_mult64_188
+let c_m64_mult64_189=-imag(vm64_mult64_189#branch)/(2*pi*1000)
+print c_m64_mult64_189
+let c_m64_mult64_190=-imag(vm64_mult64_190#branch)/(2*pi*1000)
+print c_m64_mult64_190
+let c_m64_mult64_191=-imag(vm64_mult64_191#branch)/(2*pi*1000)
+print c_m64_mult64_191
+let c_m64_mult64_192=-imag(vm64_mult64_192#branch)/(2*pi*1000)
+print c_m64_mult64_192
+let c_m64_mult64_193=-imag(vm64_mult64_193#branch)/(2*pi*1000)
+print c_m64_mult64_193
+let c_m64_mult64_194=-imag(vm64_mult64_194#branch)/(2*pi*1000)
+print c_m64_mult64_194
+let c_m64_mult64_195=-imag(vm64_mult64_195#branch)/(2*pi*1000)
+print c_m64_mult64_195
+let c_m64_mult64_196=-imag(vm64_mult64_196#branch)/(2*pi*1000)
+print c_m64_mult64_196
+let c_m64_mult64_197=-imag(vm64_mult64_197#branch)/(2*pi*1000)
+print c_m64_mult64_197
+let c_m64_mult64_198=-imag(vm64_mult64_198#branch)/(2*pi*1000)
+print c_m64_mult64_198
+let c_m64_mult64_199=-imag(vm64_mult64_199#branch)/(2*pi*1000)
+print c_m64_mult64_199
+quit
+.endc
+.end

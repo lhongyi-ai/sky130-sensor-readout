@@ -1,0 +1,169 @@
+{
+  "scope": "Four actual ngspice processes maximum: one known event replay, two preserved predicted-fixture aborts, and one completed independent predicted trace. A PATH launch failure started no simulator and is listed separately.",
+  "complete_adc_qualified": false,
+  "full_code_problem_resolved": false,
+  "long_all_code_gate": {
+    "numeric_equivalence_0_05_lsb_pass": false,
+    "independent_prediction_72_of_72_pass": true,
+    "long_all_code_campaign_allowed": false,
+    "reason": "The event-PWL full-waveform numerical equivalence gate failed; a correct finite predicted trace cannot override it.",
+    "complete_adc_qualified": false
+  },
+  "event_compression": {
+    "outputs": 33,
+    "logic_edges": 367,
+    "pwl_points": 800,
+    "old_rdp_pwl_points": 120372,
+    "point_count_reduction": 150.465,
+    "source_reconstruction_max_error_v": 1.7264074392286943e-08,
+    "source_threshold_v": 9.765625000000002e-06,
+    "source_gate": "PASS"
+  },
+  "known_trace_real_spice": {
+    "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082551662858Z_known",
+    "status": "NUMERICAL_GATE_FAIL",
+    "wall_seconds": 178.0863857299846,
+    "fixed_shim_reference_wall_seconds": 180.2837227449927,
+    "observed_speedup": 1.01233860188695,
+    "accepted_real_comparator_decisions": 72,
+    "required_real_comparator_decisions": 72,
+    "union_accepted_point_numeric_gate": {
+      "status": "FAIL",
+      "threshold_v": 9.765625000000002e-06,
+      "maximum_v": 0.0005278798711657595,
+      "channels": {
+        "cdac_differential": {
+          "max_error_v": 0.0005278798711657595,
+          "worst_time_s": 1.01548628008e-06
+        },
+        "reference_positive": {
+          "max_error_v": 4.593790903228978e-07,
+          "worst_time_s": 5.353038323813e-05
+        },
+        "reference_negative": {
+          "max_error_v": 4.581437396122823e-07,
+          "worst_time_s": 5.353038323813e-05
+        },
+        "reference_common_mode": {
+          "max_error_v": 5.135782465970351e-09,
+          "worst_time_s": 1.026180895063e-06
+        }
+      },
+      "grid": "union of every accepted time point from reference and candidate, linearly interpolated",
+      "limitation": "Finite saved points are not a continuous-time mathematical bound."
+    },
+    "legacy_one_ns_and_predecision_view": {
+      "status": "FAIL",
+      "threshold_v": 9.765625000000002e-06,
+      "channels": {
+        "cdac_differential": {
+          "one_ns_grid_max_error_v": 5.3542316075905205e-05,
+          "predecision_max_error_v": 2.6670532449202256e-10,
+          "worst_one_ns_grid_time_s": 5.3530000000000004e-05
+        },
+        "rp": {
+          "one_ns_grid_max_error_v": 3.943034954101421e-07,
+          "predecision_max_error_v": 0.0,
+          "worst_one_ns_grid_time_s": 5.3530000000000004e-05
+        },
+        "rn": {
+          "one_ns_grid_max_error_v": 3.9330924439529014e-07,
+          "predecision_max_error_v": 9.470202400052585e-14,
+          "worst_one_ns_grid_time_s": 5.3530000000000004e-05
+        },
+        "vcm": {
+          "one_ns_grid_max_error_v": 1.9910114668064693e-09,
+          "predecision_max_error_v": 0.0,
+          "worst_one_ns_grid_time_s": 1.033e-06
+        }
+      },
+      "scope": "Legacy 1 ns common grid plus all 72 predecision points; union-grid result remains authoritative in the run summary."
+    }
+  },
+  "independent_prediction": {
+    "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T083114860787Z_predicted",
+    "status": "PREDICTED_TRACE_ACCEPTED",
+    "input_differential_v": [
+      0.18603515625,
+      -0.08720703125000001,
+      -0.027441406250000022,
+      0.030371093750000022,
+      0.09951171874999998,
+      0.24677734375000004
+    ],
+    "predicted_codes": [
+      3000,
+      1601,
+      1907,
+      2203,
+      2557,
+      3311
+    ],
+    "accepted_real_comparator_decisions": 72,
+    "required_real_comparator_decisions": 72,
+    "negative_test": {
+      "mutation": "flip predicted LSB of frame 0 without changing the saved transistor waveform",
+      "status": "PASS",
+      "accepted_decisions_after_mutation": 71
+    },
+    "wall_seconds": 184.28398362299777,
+    "claim_limit": "Finite six-input conditional trace certificate, not all-code or live-RTL-in-loop signoff."
+  },
+  "preserved_failures": {
+    "no_process_launch": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082521485574Z_known",
+    "actual_spice_aborts": [
+      {
+        "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082931655937Z_predicted",
+        "status": "INCOMPLETE",
+        "wall_seconds": 7.658931833982933,
+        "failure": "Timestep too small; time = 3.503e-06, timestep = 2.5e-21",
+        "waveform_sha256": "39a0fb829163295ec7a7c4606be4fca08efe437f62954593c9d8f3eefdd082b8"
+      },
+      {
+        "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T083032868118Z_predicted",
+        "status": "INCOMPLETE",
+        "wall_seconds": 7.764876227010973,
+        "failure": "Timestep too small; time = 3.503e-06, timestep = 2.5e-21",
+        "waveform_sha256": "60836e7fb7c13d037607330d6c4361af3ed084769e985f4142a1b16c6fa590f4"
+      }
+    ]
+  },
+  "profile": {
+    "deck_lines": 117632,
+    "circuit_equations": 3703,
+    "accepted_timepoints": 96936.0,
+    "total_iterations": 322957.0,
+    "analysis_seconds": 173.446,
+    "wall_seconds": 178.0863857299846,
+    "matrix_load_factor_solve_seconds": 153.79649999999998,
+    "matrix_fraction_of_analysis": 0.8867111377604556,
+    "nonanalysis_wall_seconds": 4.640385729984615,
+    "optimistic_speedup_if_all_nonanalysis_and_output_cost_vanished": 1.026754065991632,
+    "interpretation": "Saving fewer nodes can reduce about 95 MB/6 conversions of raw output, but cannot remove the dominant nonlinear matrix work."
+  },
+  "full_grid_lower_bound": {
+    "required_inputs": 131073,
+    "required_real_comparator_decisions": 1572876,
+    "single_worker_days_from_observed_known_run": 45.02761735491179,
+    "single_worker_days_even_if_nonanalysis_cost_vanished": 43.85433556712963,
+    "naive_raw_waveform_storage_tb_decimal": 2.0774021260635,
+    "limitations": [
+      "This is an optimistic continuous-run linear extrapolation, not a promised runtime.",
+      "The resumable batch runner's history replay/warmup estimate remains about 96.86 days for batch size 8.",
+      "Tighter numerical controls required to pass 0.05 LSB may increase runtime."
+    ]
+  },
+  "source_binding": {
+    "fixed_shim_reference": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed",
+    "fixed_shim_reference_hashes": {
+      "adc.spice": "6ff666b4a9d0b43df00967152126dea203aa976f9dae35578dcd5a04faa98cfe",
+      "waveform.dat": "94781ba52d17e220f35138f8222c7935beee1b499d03bf9a73d2c26b465c4862",
+      "summary.json": "cf2502d4f4b86304607a241977efa338d320a18cae61f75bfff39cb0fbd6b23b",
+      "bridge_certificate.json": "e2e21893253f4e1f783879f7a6348c25b4331864872a2eaf10595f0ec6a1a642",
+      ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1"
+    },
+    "current_runner_sha256": "593035a3d2fd1bba0fbed1afc89163e78644832ff906c067d763285605eccf80",
+    "exact_executed_decks_are_preserved_per_result": true,
+    "pdk_or_restricted_files_copied": false
+  }
+}

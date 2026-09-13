@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-09-13T06:17:17.704615+00:00",
+  "source_campaign_plan_sha256": "75eb391e8d05b37fed171903ef2b84cad3b1d9e141006efba94af8dbc8a1f569",
+  "repair_certificate_sha256": "e2e21893253f4e1f783879f7a6348c25b4331864872a2eaf10595f0ec6a1a642",
+  "runner_sha256": "4cb357369ac7da5503cba505701838581d8970b675d18ab68c036da8940f8464",
+  "source_paths": {
+    "campaign": "/repo/v2/analog/adc/verification_20260910/campaigns/continuous_three_point",
+    "repair": "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed"
+  },
+  "input_v": [
+    -0.399,
+    0.399,
+    -4.8828125e-05,
+    4.8828125e-05,
+    -0.38037109375,
+    0.38037109375,
+    -0.08720703125000001,
+    0.18603515625,
+    -0.027441406250000022,
+    0.030371093750000022,
+    0.09951171874999998,
+    0.24677734375000004
+  ],
+  "profiles": {
+    "baseline": {
+      "maxstep_ns": 2,
+      "reltol": "1e-5",
+      "abstol": "1e-13",
+      "vntol": "1e-8"
+    },
+    "strict": {
+      "maxstep_ns": 1,
+      "reltol": "1e-6",
+      "abstol": "1e-14",
+      "vntol": "1e-9"
+    }
+  },
+  "conditions": {
+    "corner": "tt",
+    "vdd_v": 1.8,
+    "temperature_c": 27,
+    "source_ohm_per_leg": 350,
+    "reference_ohm": 1,
+    "reference_cap_nf": 10,
+    "clock_hz": 1600000,
+    "sample_rate_hz": 100000,
+    "edge_ns": 1,
+    "reset_once": true,
+    "warmups_discarded": 0,
+    "duration_us": 122
+  },
+  "scope": "12 consecutive real-comparator conversions, unchanged SAR RTL, local corrected 33-bit shim; schematic only",
+  "files": {
+    ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1",
+    "cosim_controller_fixed.so": "598841a7f41e2c8ffbf95fda4b2dc7997a06992e443f5f17a513619f3621f512",
+    "frozen/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "frozen/adc_preamp.spice": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782",
+    "frozen/adc_reference_candidate.spice": "5813ab5f1c959f5b0d6ac44473d929259c45d534dff785263e667be963283442",
+    "frozen/adc_tgate_dual_lvt_dummy.spice": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734",
+    "frozen/bridge_qualification.json": "256cd0f18ae04f8dba9ffa21b15a6a96292c1f4c06220ba398cbe1cc6f4473c1",
+    "frozen/cosim_controller.v": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883",
+    "frozen/qualify_cosim.py": "d44c318acf045215981511641481025d7c841a28fa018d3e148bb99f5bc86b2c",
+    "frozen/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "frozen/sensor_adc_candidate.spice": "94c047a1f664ffa001c1588c5cfefe85fc5d09f42dd2705a7dade21f332acf6d",
+    "frozen/sensor_phases.spice": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462",
+    "frozen/static_campaign.py": "a33dc7d7321fc376e9e9fa611415c278cedf57a7ad622ac5a83d2fc554ab7a0e",
+    "reference.spice": "6ff666b4a9d0b43df00967152126dea203aa976f9dae35578dcd5a04faa98cfe",
+    "runtime.json": "d836e3a5c3d761d3dcf14d036edbe40829655770e05719ccd6a01f3c7ff16464",
+    "spec.json": "9a9ab5d48326208d39925265bf455ec15fa297a6cdad3a1ca78759e4c69ae30e"
+  },
+  "complete_adc_qualified": false
+}

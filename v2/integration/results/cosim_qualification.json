@@ -1,0 +1,50 @@
+{
+  "status": "LIVE_RTL_SPICE_BRIDGE_PASS",
+  "analog_is_ideal": true,
+  "physical_adc_qualified": false,
+  "cadence_used": false,
+  "backend": "verilator",
+  "vdd_v": 1.98,
+  "conversion_timing_source": "SPICE data_valid analog rising crossings, not Verilog $realtime",
+  "checks": {
+    "simulation_completed": true,
+    "three_complete_frames": true,
+    "all_codes_match_ideal_fixture": true,
+    "gain_port_mapped_correctly": true,
+    "spice_valid_edges_match_record_count": true,
+    "100ksps_no_extra_idle_clock": true
+  },
+  "raw_results": [
+    {
+      "time_ns": 11003.499999999998,
+      "raw_code": 2677,
+      "gain_code": 1,
+      "verilog_reported_time_ns": 0.0
+    },
+    {
+      "time_ns": 21003.5,
+      "raw_code": 2677,
+      "gain_code": 1,
+      "verilog_reported_time_ns": 0.0
+    },
+    {
+      "time_ns": 31003.500000000004,
+      "raw_code": 2677,
+      "gain_code": 1,
+      "verilog_reported_time_ns": 0.0
+    }
+  ],
+  "expected_ideal_code": 2677,
+  "run": "results/bridge_20260908T031157927437Z",
+  "source_sha256": {
+    "integration/cosim_controller.v": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883",
+    "integration/qualify_cosim.py": "d44c318acf045215981511641481025d7c841a28fa018d3e148bb99f5bc86b2c",
+    "rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+  },
+  "method_source": "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf (d_cosim/Icarus, 10.3)",
+  "limitations": [
+    "Ideal ADC/DAC fixture, not transistor conversion evidence.",
+    "XSPICE bridges are ideal logic-voltage interfaces, not level-shifter/driver designs.",
+    "The wrapper uses unchanged synthesizable RTL; no mapped-cell delay or power included."
+  ]
+}

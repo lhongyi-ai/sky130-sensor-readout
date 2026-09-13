@@ -1,0 +1,40 @@
+SKY130 device/statistical qualification, not circuit performance
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+.temp 27
+.options reltol=1e-7 abstol=1e-15
+VDD vdd 0 1.8
+VGN gn 0 0.9
+VGP gp 0 0.9
+VNA dn_a 0 0.9
+VNB dn_b 0 0.9
+VPA dp_a 0 0.9
+VPB dp_b 0 0.9
+XNA dn_a gn 0 0 sky130_fd_pr__nfet_01v8 L=1 W=2 nf=1 mult=1
+XNB dn_b gn 0 0 sky130_fd_pr__nfet_01v8 L=1 W=2 nf=1 mult=1
+XPA dp_a gp vdd vdd sky130_fd_pr__pfet_01v8 L=1 W=4 nf=1 mult=1
+XPB dp_b gp vdd vdd sky130_fd_pr__pfet_01v8 L=1 W=4 nf=1 mult=1
+VCA ca 0 DC 0 AC 1
+VCB cb 0 DC 0 AC 1
+VCM cm 0 DC 0 AC 1
+XCA ca 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3
+XCB cb 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3
+XCM cm 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=64
+.control
+set num_threads=1
+set numdgt=15
+setseed 1302085
+reset
+op
+let id_na=-vna#branch
+let id_nb=-vnb#branch
+let id_pa=vpa#branch
+let id_pb=vpb#branch
+print id_na id_nb id_pa id_pb
+ac lin 1 1000 1000
+let cap_a=-imag(vca#branch)/(2*pi*1000)
+let cap_b=-imag(vcb#branch)/(2*pi*1000)
+let cap_64=-imag(vcm#branch)/(2*pi*1000)
+print cap_a cap_b cap_64
+quit
+.endc
+.end

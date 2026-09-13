@@ -1,0 +1,106 @@
+{
+  "library": "project1",
+  "status": "PREPARED_NOT_RUN_IN_CADENCE",
+  "sources": [
+    {
+      "source": "results/generated/day4/day4_manifest.json",
+      "snapshot": "reference/day4_manifest.json",
+      "sha256": "35e95bff40400b418668d3f762a65b9ce8125d3e2b02848b65b1df6e58c5d7a0"
+    },
+    {
+      "source": "results/generated/day4/ota_subckt.spice",
+      "snapshot": "reference/ota_subckt.spice",
+      "sha256": "e4b7e68fbd7d5b363ffdfe6efd9ff37b5191c8c7dba49a739af65ed5f8791b11"
+    },
+    {
+      "source": "netlists/ota/two_stage_ota_core.spice",
+      "snapshot": "reference/two_stage_ota_core.spice",
+      "sha256": "fb84f6fa15e2b856ad195a01ad5a9ddf7fbb4cec749eca9c1fb41bfc82be4c30"
+    },
+    {
+      "source": "results/pvt_summary.csv",
+      "snapshot": "reference/pvt_summary.csv",
+      "sha256": "5eee3fb91fb6d5eaa00893906249e9b279803fcfae64d3339f7de357bdc5f69f"
+    },
+    {
+      "source": "results/raw/day4/pvt/P01_op.tsv",
+      "snapshot": "reference/P01_op.tsv",
+      "sha256": "687e5d1394cde30e61789143b42344aeb05734a1d307cbf0f59ad145cfe96ca3"
+    },
+    {
+      "source": "results/raw/day4/pvt/P01_loop.tsv",
+      "snapshot": "reference/P01_loop.tsv",
+      "sha256": "1c50fde1c40f6313539b7d551b7be91872a0720c4e345b935c876609e7032bec"
+    },
+    {
+      "source": "results/raw/day4/pvt/P01_diff_ac.tsv",
+      "snapshot": "reference/P01_diff_ac.tsv",
+      "sha256": "adf7d6467cf5a9ca0ad529a26b80d25e341d645825844f08d44369bb625ac1d0"
+    },
+    {
+      "source": "results/raw/day4/pvt/P01_transient.tsv",
+      "snapshot": "reference/P01_transient.tsv",
+      "sha256": "711eead2827fb62f181b9508b3e90b9124b2bd5cd45938b5718d420b81e6e485"
+    },
+    {
+      "source": "results/raw/day1/nfet_characterization_l0p5.tsv",
+      "snapshot": "reference/nfet_characterization_l0p5.tsv",
+      "sha256": "798bdfdfdf09639168bd926919558f189d0afdd5787b37f1f3d8abfe1fc497e1"
+    }
+  ],
+  "nominal_reference_ngspice": {
+    "point_id": "P01",
+    "process": "TT",
+    "VDD_V": "1.8",
+    "temp_C": "27",
+    "CL_pF": "5",
+    "RL_kOhm": "100",
+    "gain_dB": "67.67595287",
+    "actual_diff_input_at_1Hz_V": "1",
+    "gain_flatness_1_to_10Hz_dB": "-6.822833285e-06",
+    "ugb_MHz": "16.74544794",
+    "pm_deg": "69.08291044",
+    "loop_phase_1Hz_deg": "-0.006827572168",
+    "zero_dB_downward_crossings": "1",
+    "zero_dB_all_crossings": "1",
+    "ivdd_signed_uA": "-150.298315",
+    "power_uW": "270.536967",
+    "sr_pos_V_per_us": "8.202029183",
+    "sr_neg_V_per_us": "11.51994781",
+    "sr_pos_fit_points": "62",
+    "sr_neg_fit_points": "47",
+    "rise_settling_us": "0.07475",
+    "fall_settling_us": "0.04075",
+    "worst_settling_us": "0.07475",
+    "rise_settling_status": "PASS",
+    "fall_settling_status": "PASS",
+    "settling_status": "PASS",
+    "min_saturation_margin_V": "0.1161336645",
+    "all_devices_saturated": "True",
+    "first_downward_crossing_index": "866",
+    "ugb_crossing_at_boundary": "0",
+    "rise_input_50_us": "1.01",
+    "fall_input_50_us": "3.03",
+    "overshoot_mv": "74.99684",
+    "undershoot_mv": "1.858472",
+    "tail_high_pp_mv": "0",
+    "tail_low_pp_mv": "0",
+    "run_status": "COMPLETE",
+    "pass_fail": "PASS",
+    "raw_evidence_path": "results/raw/day4/pvt/P01_diff_ac.tsv;results/raw/day4/pvt/P01_loop.tsv;results/raw/day4/pvt/P01_op.tsv;results/raw/day4/pvt/P01_transient.tsv",
+    "notes": "Nominal; external ideal 10-uA IREF",
+    "manifest_sha256": "6b90c7326a881914a362e3b2e6e96e4716b20c8b8196590f22c2ce5e1ab460ab"
+  },
+  "nmos_test": {
+    "model": "sky130_fd_pr__nfet_01v8",
+    "w_um": 5,
+    "l_um": 0.5,
+    "vds_v": 0.9,
+    "vgs_start_v": 0,
+    "vgs_stop_v": 1.8,
+    "step_v": 0.01,
+    "corner": "tt",
+    "temperature_c": 27
+  },
+  "cadence_measurements": null
+}

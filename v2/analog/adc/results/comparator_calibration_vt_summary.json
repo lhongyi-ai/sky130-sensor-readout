@@ -1,0 +1,46 @@
+{
+  "evidence_level": "PDK comparator-only mismatch offset calibration and four V/T extremes; NOT system calibration or yield",
+  "sample_count": 200,
+  "statistical_process_corner": "tt_mm",
+  "replay_pass": true,
+  "nominal_calibration_file": "comparator_offset_calibration.json",
+  "maximum_nominal_bracket_width_v": 0.00011472222222222179,
+  "offset_min_v": -0.007165972222222221,
+  "offset_max_v": 0.009115694444444444,
+  "offset_sigma_v": 0.002896353508036333,
+  "conditions": [
+    {
+      "vdd": 1.62,
+      "temperature_c": -20,
+      "pass_count": 188,
+      "fail_count": 12
+    },
+    {
+      "vdd": 1.62,
+      "temperature_c": 85,
+      "pass_count": 199,
+      "fail_count": 1
+    },
+    {
+      "vdd": 1.98,
+      "temperature_c": -20,
+      "pass_count": 200,
+      "fail_count": 0
+    },
+    {
+      "vdd": 1.98,
+      "temperature_c": 85,
+      "pass_count": 168,
+      "fail_count": 32
+    }
+  ],
+  "fixed_per_instance": true,
+  "retuned_at_vt": false,
+  "limitations": [
+    "No extracted parasitics",
+    "No stochastic transient noise",
+    "No process-corner transfer beyond tt_mm",
+    "Continuously driven comparator input, not floating switched CDAC",
+    "No full ADC/system calibration claim"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "evidence_level": "ANALYTICAL_BUDGET_ONLY",
+  "lsb_v": 0.0001953125,
+  "half_lsb_v": 9.765625e-05,
+  "settling_error_limit_v": 4.8828125e-05,
+  "acquisition_time_s": 2.5e-06,
+  "conversion_time_s": 7.5e-06,
+  "frame_time_s": 1e-05,
+  "input_signal_rms_v": 0.25208383283729746,
+  "total_error_allowance_v_rms_for_nominal_sndr": 0.00014175715661678828,
+  "max_single_pole_tau_s_for_full_scale_step": 2.5762411444445777e-07,
+  "candidate_cdac_unit_cap_f": 2e-14,
+  "candidate_cdac_total_per_side_f": 8.192e-11,
+  "candidate_differential_ktc_v_rms": 1.0987380004921947e-05,
+  "minimum_cap_per_side_from_ktc_only_f": 8.07313370367347e-12,
+  "gains": [
+    {
+      "gain": 1,
+      "sensor_input_full_scale_vpp": 0.8,
+      "sensor_input_lsb_v": 0.0001953125,
+      "frontend_output_noise_v_rms": 5e-06,
+      "sampling_noise_v_rms": 3.5e-05,
+      "comparator_noise_v_rms": 5.5e-05,
+      "quantization_noise_v_rms": 5.6381862225549396e-05,
+      "unmodeled_reserve_v_rms": 5.5e-05,
+      "rss_total_v_rms": 0.00010236656870297468,
+      "heuristic_sndr_db": 67.82773694774916,
+      "rms_margin_v": 3.939058791381361e-05,
+      "allocation_fits": true
+    },
+    {
+      "gain": 4,
+      "sensor_input_full_scale_vpp": 0.2,
+      "sensor_input_lsb_v": 4.8828125e-05,
+      "frontend_output_noise_v_rms": 2e-05,
+      "sampling_noise_v_rms": 3.5e-05,
+      "comparator_noise_v_rms": 5.5e-05,
+      "quantization_noise_v_rms": 5.6381862225549396e-05,
+      "unmodeled_reserve_v_rms": 5.5e-05,
+      "rss_total_v_rms": 0.00010418212124938153,
+      "heuristic_sndr_db": 67.67503595301902,
+      "rms_margin_v": 3.757503536740675e-05,
+      "allocation_fits": true
+    },
+    {
+      "gain": 16,
+      "sensor_input_full_scale_vpp": 0.05,
+      "sensor_input_lsb_v": 1.220703125e-05,
+      "frontend_output_noise_v_rms": 8e-05,
+      "sampling_noise_v_rms": 3.5e-05,
+      "comparator_noise_v_rms": 5.5e-05,
+      "quantization_noise_v_rms": 5.6381862225549396e-05,
+      "unmodeled_reserve_v_rms": 5.5e-05,
+      "rss_total_v_rms": 0.00012982262664120163,
+      "heuristic_sndr_db": 65.76389203464902,
+      "rms_margin_v": 1.1934529975586648e-05,
+      "allocation_fits": true
+    }
+  ],
+  "limitations": [
+    "kT/C omits matching, parasitics, switch topology and comparator effects.",
+    "One-pole settling is not a stability or transistor bandwidth proof.",
+    "Unit capacitor realizability and matching require actual PDK evidence.",
+    "RSS treats comparator noise approximately and is not an ENOB prediction.",
+    "Power and area cannot be inferred from this model."
+  ]
+}

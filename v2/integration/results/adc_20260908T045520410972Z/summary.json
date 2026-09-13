@@ -1,0 +1,26 @@
+{
+  "status": "ABORTED_QUEUE_RECONFIGURATION",
+  "full_chip_qualified": false,
+  "ideal_phase_fixture": false,
+  "arguments": {
+    "input_v": 0.32,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temperature": 27,
+    "reference_r": 100.0,
+    "reference_c_nf": 10.0,
+    "reference_cm_mode": "tracking",
+    "source_r": 350,
+    "input_cm_offset_mv": 0,
+    "duration_us": 40.0,
+    "phase_source": "transistor",
+    "solver": "sparse",
+    "timeout_seconds": 900,
+    "frontend": null,
+    "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+    "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+    "adc_subckt": "adc_analog12_bottom_preamp",
+    "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+    "gain": 1
+  }
+}

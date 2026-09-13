@@ -1,0 +1,30 @@
+* ref_switch_lvt_s16.0_ss_1.62_-20_1_c1024_tracking
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice ss
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp -20
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+.include /repo/v2/analog/adc/adc_reference_candidate.spice
+VDD vdd 0 1.62
+VSOURCE src 0 PWL(0 0.81 20n 0.81 21n 1.01)
+RS src sample 350
+VRP srp 0 1.01
+VRN srn 0 0.6100000000000001
+RRP srp rp 1
+RRN srn rn 1
+VACQ acq 0 PWL(0 1.62 2.476847754u 1.62 2.477847754u 0)
+VCONV conv 0 PWL(0 0 2.50u 0 2.501u 1.62)
+VBIT bit 0 0
+XSW hold bit acq conv rp rn sample vdd 0 adc_ref_switch_lvt WN=13.44 WP=26.88
+XC hold 0 adc_mim_bank COUNT=1024
+.ic v(hold)=0.81
+
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 3.2u uic
+wrdata /repo/v2/analog/adc/results/ref_switch_lvt_s16.0_ss_1.62_-20_1_c1024_tracking.tsv v(src) v(sample) v(hold) v(acq) v(conv) i(vdd)
+quit
+.endc
+.end

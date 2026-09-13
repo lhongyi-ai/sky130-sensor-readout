@@ -1,0 +1,14 @@
+{
+  "test": "noise",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gain_implementation": "real transistor gain-select network, fixed select during this test",
+  "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+  "output_noise_1_to_5000Hz_rms_v": 7.767321041210439e-05,
+  "output_noise_1_to_50000Hz_rms_v": 9.593041578223496e-05,
+  "output_noise_1_to_1e+09Hz_rms_v": 0.00016793651335903121,
+  "noise_at_1khz_v_per_rtHz": 8.93684597e-07,
+  "caution": "Continuous-time noise after150ohm/4pF isolation, static81.285pF/side load. NOT sampled/aliased system noise or SNDR. Consult retained deck for older revisions."
+}

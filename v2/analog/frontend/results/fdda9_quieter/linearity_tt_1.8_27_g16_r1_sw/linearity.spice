@@ -1,0 +1,32 @@
+* SKY130 transistor frontend pre-layout experiment; inspect included snapshot for passive types.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/results/fdda9_quieter/linearity_tt_1.8_27_g16_r1_sw/frontend_pdk_snapshot.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=200 itl2=200
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+VIP SP 0 0.9
+BIN SN 0 v=1.8-v(sp)
+
+RSP SP IP 350
+RSN SN IN 350
+VSEL0 SEL0 0 0
+VSEL1 SEL1 0 1.8
+XPGA IP IN OP ON VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga
+CLP OP 0 81.285p
+CLN ON 0 81.285p
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+
+op
+wrdata op_nodes.dat all
+dc VIP 0.8875000000000001 0.9125 0.0003125
+let od=v(op)-v(on)
+let id=v(sp)-v(sn)
+let cm=(v(op)+v(on))/2
+wrdata linearity.dat id od cm
+quit
+.endc
+.end

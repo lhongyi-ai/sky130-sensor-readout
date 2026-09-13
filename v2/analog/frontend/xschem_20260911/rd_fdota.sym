@@ -1,0 +1,33 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist rd_fdota"
+template="name=XOTA"
+}
+V {}
+S {}
+F {}
+E {}
+P 4 5 -90 -100 -90 100 90 65 90 -65 -90 -100 {fill=false}
+L 4 -90 -38 -65 -38 {}
+L 4 -90 38 -65 38 {}
+L 4 90 -38 115 -38 {}
+L 4 90 38 115 38 {}
+L 4 -35 -110 -35 -87 {}
+L 4 0 87 0 110 {}
+L 4 35 -110 35 -87 {}
+B 5 -117.5 -40.5 -112.5 -35.5 {name=INP dir=in pinnumber=1}
+B 5 -117.5 35.5 -112.5 40.5 {name=INN dir=in pinnumber=2}
+B 5 112.5 -40.5 117.5 -35.5 {name=OUTP dir=out pinnumber=3}
+B 5 112.5 35.5 117.5 40.5 {name=OUTN dir=out pinnumber=4}
+B 5 -37.5 -112.5 -32.5 -107.5 {name=VDD dir=inout pinnumber=5}
+B 5 -2.5 107.5 2.5 112.5 {name=VSS dir=inout pinnumber=6}
+B 5 32.5 -112.5 37.5 -107.5 {name=VCM dir=in pinnumber=7}
+T {RD FD OTA} 0 -48 0 0 0.38 0.38 {hcenter=true}
+T {2-stage / 2-output} 0 -8 0 0 0.26 0.26 {hcenter=true}
+T {continuous CMFB} 0 24 0 0 0.26 0.26 {hcenter=true}
+T {@name} 0 56 0 0 0.2 0.2 {hcenter=true}
+T {+} -62 -54 0 0 0.36 0.36 {}
+T {-} -62 22 0 0 0.36 0.36 {}
+T {P} 75 -52 0 0 0.2 0.2 {}
+T {N} 75 24 0 0 0.2 0.2 {}

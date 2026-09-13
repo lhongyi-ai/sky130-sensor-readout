@@ -1,0 +1,13 @@
+* NGSPICE file created from cdac_route_probe_flat.ext - technology: sky130A
+
+.subckt cdac_route_probe_flat TOP B0 B1
+X0 B1 TOP sky130_fd_pr__cap_mim_m3_1 l=3 w=3
+X1 B1 TOP sky130_fd_pr__cap_mim_m3_1 l=3 w=3
+X2 B0 TOP sky130_fd_pr__cap_mim_m3_1 l=3 w=3
+X3 B0 TOP sky130_fd_pr__cap_mim_m3_1 l=3 w=3
+C0 TOP B1 2.41734f
+C1 B0 TOP 2.54279f
+C2 B0 B1 1.80016f
+C3 TOP VSUBS 13.29458f
+.ends
+

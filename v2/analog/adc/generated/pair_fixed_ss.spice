@@ -1,0 +1,22 @@
+* pair_symmetry
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice ss
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 85
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+.param ADC_PAIR_WIDTH_SKEW=0
+VG g 0 .81
+VD1 d1 0 .8
+VD2 d2 0 .8
+VS s 0 .05
+X1 d1 g s 0 sky130_fd_pr__nfet_01v8 W={8*(1+ADC_PAIR_WIDTH_SKEW)} L=.5 nf=1 mult=1
+X2 d2 g s 0 sky130_fd_pr__nfet_01v8 W=8 L=.5 nf=1 mult=1
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+op
+wrdata /repo/v2/analog/adc/results/pair_fixed_ss.tsv i(vd1) i(vd2)
+quit
+.endc
+.end

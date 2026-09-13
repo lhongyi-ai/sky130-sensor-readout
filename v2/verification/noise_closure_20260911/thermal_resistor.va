@@ -1,0 +1,13 @@
+// Minimal intrinsic-noise control, not a SKY130 model replacement.
+`include "constants.vams"
+`include "disciplines.vams"
+module closure_thermal_resistor(p, n);
+    inout p, n;
+    electrical p, n;
+    parameter real r = 10000 from (0:inf);
+    parameter integer noisy = 1 from [0:1];
+    analog begin
+        I(p,n) <+ V(p,n)/r;
+        I(p,n) <+ white_noise(noisy*4*`P_K*$temperature/r, "thermal");
+    end
+endmodule

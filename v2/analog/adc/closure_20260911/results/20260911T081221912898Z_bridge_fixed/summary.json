@@ -1,0 +1,50 @@
+{
+  "status": "TRANSISTOR_WAVEFORM_COMPLETE_NOT_CERTIFIED",
+  "scope": "live_record",
+  "wall_seconds": 180.2837227449927,
+  "returncode": 0,
+  "complete_adc_qualified": false,
+  "live_rtl_inside_analog_run": true,
+  "expected_codes_are_predictions_not_measurements": false,
+  "time_step_statistics": {
+    "rows": 96947,
+    "stop_us": 62.0,
+    "dt_ns_percentiles": {
+      "min": 5.133000009196684e-05,
+      "p1": 0.00029486999728869576,
+      "p10": 0.001158749999571147,
+      "p50": 0.012069454999469873,
+      "p90": 2.0000000000009974,
+      "p99": 2.0000000000043854,
+      "max": 2.0000000050001856
+    },
+    "steps_below_1ps": 7636,
+    "steps_below_100ps": 60727,
+    "step_count_is_not_cpu_profile": true,
+    "phase_step_counts": {
+      "startup": 534,
+      "acquisition": 15517,
+      "evaluate": 32127,
+      "hold_reset_cdac_settle": 48768
+    }
+  },
+  "rows": 96947,
+  "expected_codes": [
+    2677,
+    2677,
+    2047,
+    2047,
+    2048,
+    2048
+  ],
+  "source_and_output_sha256": {
+    "provenance.json": "ee7624ae84555dd9a7315fdb2676a179b04382ed8d6185ce74e1c3c89be359fd",
+    "waveform.dat": "94781ba52d17e220f35138f8222c7935beee1b499d03bf9a73d2c26b465c4862",
+    "trace_replay.py": "be53235f330e4adcc7a0fa2bc3fd3c281f16e6f66d43626b5b189a903bdb7bbd",
+    "bridge_fix.py": "3c498dd6999ad20e923205a21b1bd24ed0a07ea6c9c27ea1ae2f04c95262a18b",
+    "native.log": "950448c2887a28c9b09738f1b6d19161c68daa890ea858fa9125a859accd62e8",
+    ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1",
+    "adc.spice": "6ff666b4a9d0b43df00967152126dea203aa976f9dae35578dcd5a04faa98cfe",
+    "simulation.log": "921c995120e8e7db63ed08e1c411b0a09012d39b275107d7b94ba81c69faf894"
+  }
+}

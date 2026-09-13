@@ -1,0 +1,35 @@
+* Experimental continuous-time resistively loaded differential preamplifier.
+* Separate candidate; does NOT change the frozen integrated comparator.
+* All resistors/MOS/capacitors are actual SKY130 devices. No ideal IREF.
+* Bias topology reused from verified frontend beta-multiplier/startup candidate.
+.subckt adc_pre_r A B SUB params: R=10000
+XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}
+.ends adc_pre_r
+.subckt adc_pre_r75k A B SUB
+XR0 A N1 SUB adc_pre_r
+XR1 N1 N2 SUB adc_pre_r
+XR2 N2 N3 SUB adc_pre_r
+XR3 N3 N4 SUB adc_pre_r
+XR4 N4 N5 SUB adc_pre_r
+XR5 N5 N6 SUB adc_pre_r
+XR6 N6 N7 SUB adc_pre_r
+XR7 N7 B SUB adc_pre_r R=5000
+.ends adc_pre_r75k
+
+.subckt adc_preamp INP INN OUTP OUTN VDD VSS
+XBP1 BP BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XBP2 BN BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XBN1 BN BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8
+XBN2 BP BN BRS VSS sky130_fd_pr__nfet_01v8 L=1 W=32
+XRBIAS BRS VSS VSS adc_pre_r R=10000
+XSTPU START VSS VDD VDD sky130_fd_pr__pfet_01v8 L=10 W=0.42
+XSTOFF START BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+XSTINJ BP START VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=0.5
+XIP OUTN INP TAIL VSS sky130_fd_pr__nfet_01v8 W=30 L=1
+XIN OUTP INN TAIL VSS sky130_fd_pr__nfet_01v8 W=30 L=1
+XTAIL TAIL BN VSS VSS sky130_fd_pr__nfet_01v8 W=32 L=1
+XRP VDD OUTP VSS adc_pre_r75k
+XRN VDD OUTN VSS adc_pre_r75k
+XCP OUTP VSS adc_mim_bank COUNT=4
+XCN OUTN VSS adc_mim_bank COUNT=4
+.ends adc_preamp

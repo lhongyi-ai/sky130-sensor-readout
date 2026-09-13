@@ -1,0 +1,11 @@
+* NGSPICE file created from nfet_unit.ext - technology: sky130A
+
+.subckt nfet_unit B D S G
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=1
+C0 D G 0.10986f
+C1 S D 0.05958f
+C2 S G 0.10986f
+C3 S B 0.44533f
+C4 D B 0.44533f
+.ends
+

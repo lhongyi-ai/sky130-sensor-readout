@@ -1,0 +1,49 @@
+* Frozen candidate_06: G4, acquire
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include candidate_06.spice
+.include adc_blocks.spice
+.include sampling_switch.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=300 itl2=300 method=gear maxord=2
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+VINP VINP 0 0.9 ac .5
+VINN VINN 0 0.9 ac -.5
+VACQ ACQ 0 1.8
+VACQB ACQB 0 0
+VSEL0 SEL0 0 1.8
+VSEL1 SEL1 0 0
+RSP VINP IP 350
+RSN VINN IN 350
+XPGA IP IN OP ON VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga 
+XRIP OP FP 0 rd_hr R=1500
+XRIN ON FN 0 rd_hr R=1500
+XCFP FP 0 rd_c4p
+XCFN FN 0 rd_c4p
+XTGP FP HP ACQ ACQB VDD 0 rd_sampling_tgate
+XTGN FN HN ACQ ACQB VDD 0 rd_sampling_tgate
+XCP HP VCM adc_mim_bank COUNT=4096
+XCN HN VCM adc_mim_bank COUNT=4096
+RLEAKP HP VCM 1g
+RLEAKN HN VCM 1g
+.control
+set noaskquit
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+set filetype=ascii
+op
+wrdata op.dat v(op) v(on) v(fp) v(fn) i(vdd) i(vcm)
+ac dec 120 1 1g
+let gain=mag(v(fp)-v(fn))
+wrdata gain.dat gain
+noise v(fp,fn) VINP dec 120 1 1g
+setplot noise1
+wrdata noise_density.dat onoise_spectrum inoise_spectrum
+setplot noise2
+print all
+write noise_integrated.raw all
+quit
+.endc
+.end

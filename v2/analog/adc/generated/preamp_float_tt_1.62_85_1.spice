@@ -1,0 +1,38 @@
+* preamp_float_tt_1.62_85_1
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 85
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+.include /repo/v2/analog/adc/adc_preamp.spice
+.include /repo/v2/analog/adc/adc_analog12_bottom_preamp.spice
+VDD vdd 0 1.62
+VCM cm 0 0.81
+VRP srp 0 1.1
+VRN srn 0 .7
+RRP srp rp 1
+RRN srn rn 1
+CEXTP rp 0 10n
+CEXTN rn 0 10n
+VIP sp 0 0.8100244140625
+VIN sn 0 0.8099755859375
+RSP sp ip 350
+RSN sn inn 350
+VSAMP sample 0 PWL(0 1.62 2.49u 1.62 2.491u 0)
+VSAMPB sampleb 0 PWL(0 0 2.49u 0 2.491u 1.62)
+VACQ acq 0 PWL(0 1.62 2.5u 1.62 2.501u 0)
+VCONV conv 0 PWL(0 0 2.52u 0 2.521u 1.62)
+VEVAL ev 0 PULSE(0 1.62 2.825u 1n 1n 250n 625n)
+XADC ip inn q qb sample sampleb acq conv ev vdd 0 0 0 0 0 0 0 0 0 0 0 rp rn cm vdd 0 adc_analog12_bottom_preamp
+CQ q 0 5f
+CQB qb 0 5f
+.ic V(q)=0 V(qb)=1.62
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 3.2u
+wrdata /repo/v2/analog/adc/results/preamp_float_tt_1.62_85_1.tsv v(xadc.tn) v(xadc.tp) v(xadc.prep) v(xadc.pren) v(q) v(qb) v(ev) i(vdd)
+quit
+.endc
+.end

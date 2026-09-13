@@ -1,0 +1,148 @@
+{
+  "live_directory": "/repo/v2/analog/adc/closure_20260911/results/20260911T080054695882Z_live",
+  "live_summary_sha256": "7ba71ea12fef9a878cea8b6aa70fa2170d9a138119cf6fe14eb7c5d4f2a7203d",
+  "compressed_driver_errors": {
+    "ready": {
+      "kept_points": 28092,
+      "max_error_v": 9.959533198156123e-11
+    },
+    "busy": {
+      "kept_points": 5,
+      "max_error_v": 1.3877787807814457e-17
+    },
+    "valid": {
+      "kept_points": 2781,
+      "max_error_v": 9.553632884795604e-11
+    },
+    "data11": {
+      "kept_points": 1381,
+      "max_error_v": 9.553632884795604e-11
+    },
+    "data10": {
+      "kept_points": 912,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data9": {
+      "kept_points": 904,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data8": {
+      "kept_points": 912,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data7": {
+      "kept_points": 912,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data6": {
+      "kept_points": 904,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data5": {
+      "kept_points": 904,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data4": {
+      "kept_points": 904,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data3": {
+      "kept_points": 912,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data2": {
+      "kept_points": 904,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data1": {
+      "kept_points": 912,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "data0": {
+      "kept_points": 904,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "dgain1": {
+      "kept_points": 2,
+      "max_error_v": 0.0
+    },
+    "dgain0": {
+      "kept_points": 2,
+      "max_error_v": 0.0
+    },
+    "gain1": {
+      "kept_points": 2,
+      "max_error_v": 0.0
+    },
+    "gain0": {
+      "kept_points": 2,
+      "max_error_v": 0.0
+    },
+    "sample": {
+      "kept_points": 4904,
+      "max_error_v": 9.988454507947608e-11
+    },
+    "trial11": {
+      "kept_points": 4141,
+      "max_error_v": 9.965916980547718e-11
+    },
+    "trial10": {
+      "kept_points": 3378,
+      "max_error_v": 9.722578298010376e-11
+    },
+    "trial9": {
+      "kept_points": 3911,
+      "max_error_v": 9.713874149497315e-11
+    },
+    "trial8": {
+      "kept_points": 3449,
+      "max_error_v": 9.807310519249768e-11
+    },
+    "trial7": {
+      "kept_points": 3636,
+      "max_error_v": 9.898437625111001e-11
+    },
+    "trial6": {
+      "kept_points": 3995,
+      "max_error_v": 9.897926922519673e-11
+    },
+    "trial5": {
+      "kept_points": 3846,
+      "max_error_v": 9.671907719166484e-11
+    },
+    "trial4": {
+      "kept_points": 3843,
+      "max_error_v": 9.954859159222451e-11
+    },
+    "trial3": {
+      "kept_points": 3422,
+      "max_error_v": 9.972800363300394e-11
+    },
+    "trial2": {
+      "kept_points": 3922,
+      "max_error_v": 9.745582119080609e-11
+    },
+    "trial1": {
+      "kept_points": 3361,
+      "max_error_v": 9.925082977702004e-11
+    },
+    "trial0": {
+      "kept_points": 4221,
+      "max_error_v": 9.566725189813496e-11
+    },
+    "evaluate": {
+      "kept_points": 28092,
+      "max_error_v": 9.959533198156123e-11
+    }
+  },
+  "removed_testbench_lines": [
+    "Ainputs [clk rst start gain_sel1 gain_sel0 decision] [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] logic_in",
+    ".model logic_in adc_bridge(in_low=0.45 in_high=1.35)",
+    "Asar [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] null sar_model",
+    ".model sar_model d_cosim simulation=\"/repo/v2/analog/adc/verification_20260910/campaigns/continuous_three_point/build/cosim_controller.so\"",
+    "Aoutputs [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] [ready busy valid data11 data10 data9 data8 data7 data6 data5 data4 data3 data2 data1 data0 dgain1 dgain0 gain1 gain0 sample trial11 trial10 trial9 trial8 trial7 trial6 trial5 trial4 trial3 trial2 trial1 trial0 evaluate] logic_out",
+    ".model logic_out dac_bridge(out_low=0 out_high=1.8 out_undef=0.9 t_rise=1n t_fall=1n)"
+  ],
+  "real_comparator_phase_cdac_and_switches_preserved": true,
+  "predictive_capability_tested": false
+}

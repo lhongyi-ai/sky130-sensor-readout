@@ -1,0 +1,72 @@
+[
+  {
+   "pins": [
+      [
+        "1",
+        "2",
+        "3",
+        "4"
+      ], [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "1",
+        "2",
+        "3",
+        "4"
+      ], [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "adc_tgate_layout",
+      "adc_tgate_dual_lvt_dummy"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__nfet_01v8_lvt", 2],
+         ["sky130_fd_pr__pfet_01v8_lvt", 2 ]
+       ], [
+         ["sky130_fd_pr__nfet_01v8_lvt", 2 ],
+         ["sky130_fd_pr__pfet_01v8_lvt", 2 ]
+       ]
+   ],
+   "nets": [
+    6,
+    6
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "B",
+        "EN",
+        "A",
+        "VSS",
+        "ENB",
+        "VDD"
+      ], [
+        "B",
+        "EN",
+        "A",
+        "VSS",
+        "ENB",
+        "VDD"
+      ]
+   ]
+  }
+]

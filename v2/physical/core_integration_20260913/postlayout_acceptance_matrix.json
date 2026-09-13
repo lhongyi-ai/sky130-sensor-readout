@@ -1,0 +1,2728 @@
+{
+  "scope": "FULL_CORE_REQUIRED; NO SIMULATIONS EXECUTED BY THIS FILE",
+  "spec_sha256": "9a9ab5d48326208d39925265bf455ec15fa297a6cdad3a1ca78759e4c69ae30e",
+  "lsb_v": 0.0001953125,
+  "system_mismatch_static_samples_min": 200,
+  "rows": [
+    {
+      "id": "G1_TT_1.62V_-20.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.62V_27.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.62V_85.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.8V_-20.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.8V_27.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 65.0,
+        "core_power_w_max": 0.002,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 1.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.8V_85.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.98V_-20.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.98V_27.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_TT_1.98V_85.0C",
+      "gain": 1,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.62V_-20.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.62V_27.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.62V_85.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.8V_-20.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.8V_27.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.8V_85.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.98V_-20.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.98V_27.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FF_1.98V_85.0C",
+      "gain": 1,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.62V_-20.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.62V_27.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.62V_85.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.8V_-20.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.8V_27.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.8V_85.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.98V_-20.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.98V_27.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SS_1.98V_85.0C",
+      "gain": 1,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.62V_-20.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.62V_27.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.62V_85.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.8V_-20.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.8V_27.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.8V_85.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.98V_-20.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.98V_27.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_FS_1.98V_85.0C",
+      "gain": 1,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.62V_-20.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.62V_27.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.62V_85.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.8V_-20.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.8V_27.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.8V_85.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.98V_-20.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.98V_27.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G1_SF_1.98V_85.0C",
+      "gain": 1,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.62V_-20.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.62V_27.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.62V_85.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.8V_-20.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.8V_27.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 65.0,
+        "core_power_w_max": 0.002,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 1.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.8V_85.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.98V_-20.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.98V_27.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_TT_1.98V_85.0C",
+      "gain": 4,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.62V_-20.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.62V_27.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.62V_85.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.8V_-20.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.8V_27.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.8V_85.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.98V_-20.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.98V_27.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FF_1.98V_85.0C",
+      "gain": 4,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.62V_-20.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.62V_27.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.62V_85.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.8V_-20.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.8V_27.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.8V_85.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.98V_-20.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.98V_27.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SS_1.98V_85.0C",
+      "gain": 4,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.62V_-20.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.62V_27.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.62V_85.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.8V_-20.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.8V_27.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.8V_85.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.98V_-20.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.98V_27.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_FS_1.98V_85.0C",
+      "gain": 4,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.62V_-20.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.62V_27.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.62V_85.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.8V_-20.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.8V_27.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.8V_85.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.98V_-20.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.98V_27.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G4_SF_1.98V_85.0C",
+      "gain": 4,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.62V_-20.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.62V_27.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.62V_85.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.8V_-20.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.8V_27.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 65.0,
+        "core_power_w_max": 0.002,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 1.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.8V_85.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.98V_-20.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.98V_27.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_TT_1.98V_85.0C",
+      "gain": 16,
+      "process": "TT",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.62V_-20.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.62V_27.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.62V_85.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.8V_-20.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.8V_27.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.8V_85.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.98V_-20.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.98V_27.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FF_1.98V_85.0C",
+      "gain": 16,
+      "process": "FF",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.62V_-20.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.62V_27.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.62V_85.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.8V_-20.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.8V_27.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.8V_85.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.98V_-20.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.98V_27.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SS_1.98V_85.0C",
+      "gain": 16,
+      "process": "SS",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.62V_-20.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.62V_27.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.62V_85.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.8V_-20.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.8V_27.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.8V_85.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.98V_-20.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.98V_27.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_FS_1.98V_85.0C",
+      "gain": 16,
+      "process": "FS",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.62V_-20.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.62V_27.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.62V_85.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.62,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.8V_-20.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.8V_27.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.8V_85.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.8,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.98V_-20.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": -20.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.98V_27.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": 27.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    },
+    {
+      "id": "G16_SF_1.98V_85.0C",
+      "gain": 16,
+      "process": "SF",
+      "vdd_v": 1.98,
+      "temperature_c": 85.0,
+      "status": "NOT_RUN",
+      "requirements": {
+        "sndr_db_min": 62.0,
+        "core_power_w_max": 0.003,
+        "settling_error_lsb_max": 0.25,
+        "calibration_residual_lsb_max": 4.0,
+        "inl_abs_lsb_max": 1.5,
+        "dnl_min_lsb_min": -0.9,
+        "dnl_max_lsb_max": 1.5,
+        "phase_margin_deg_min": 60.0,
+        "sample_rate_hz_min": 100000.0,
+        "fft_samples_min": 16384
+      }
+    }
+  ],
+  "stimulus_contract": {
+    "source_resistance_per_leg_ohm": 350.0,
+    "common_mode_offsets_v": [
+      -0.05,
+      0.0,
+      0.05
+    ],
+    "source_resistance_sensitivity_ohm": [
+      0.0,
+      1000.0
+    ],
+    "frontend_tones_hz": [
+      1000.0,
+      5000.0
+    ],
+    "adc_tone_hz": 45000.0,
+    "calibration": "One frozen affine coefficient pair per gain at nominal; use independent holdout, do not refit each corner.",
+    "noise": "SNDR evidence must include a qualified time-varying device-noise method, not only noiseless transient FFT.",
+    "reference_mode": "UNFROZEN: tracking versus fixed must be selected or both qualified."
+  }
+}

@@ -1,0 +1,213 @@
+[
+  {
+   "pins": [
+      [
+        "1",
+        "2"
+      ], [
+        "1",
+        "2"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "cdac_side_n_routed",
+      "cdac_side_n_routed"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__cap_mim_m3_1", 14 ]
+       ], [
+         ["sky130_fd_pr__cap_mim_m3_1", 14 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "EDGE_BIAS",
+        "B6",
+        "B11",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B0",
+        "DUMMY",
+        "TOP"
+      ], [
+        "EDGE_BIAS",
+        "B6",
+        "B11",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B0",
+        "DUMMY",
+        "TOP"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "cdac_side_p_routed",
+      "cdac_side_p_routed"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_pr__cap_mim_m3_1", 14 ]
+       ], [
+         ["sky130_fd_pr__cap_mim_m3_1", 14 ]
+       ]
+   ],
+   "nets": [
+    15,
+    15
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "EDGE_BIAS",
+        "B11",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B5",
+        "B4",
+        "B3",
+        "B2",
+        "B1",
+        "B0",
+        "DUMMY",
+        "TOP"
+      ], [
+        "EDGE_BIAS",
+        "B11",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B5",
+        "B4",
+        "B3",
+        "B2",
+        "B1",
+        "B0",
+        "DUMMY",
+        "TOP"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "cdac_diff_routed",
+      "cdac_diff_routed"
+   ],
+   "devices": [
+       [
+         ["cdac_side_n_routed", 1],
+         ["cdac_side_p_routed", 1 ]
+       ], [
+         ["cdac_side_n_routed", 1 ],
+         ["cdac_side_p_routed", 1 ]
+       ]
+   ],
+   "nets": [
+    30,
+    30
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "P_TOP",
+        "P_B11",
+        "P_B10",
+        "P_B9",
+        "P_B8",
+        "P_B7",
+        "P_B6",
+        "P_B5",
+        "P_B4",
+        "P_B3",
+        "P_B2",
+        "P_B1",
+        "P_B0",
+        "P_DUMMY",
+        "P_EDGE_BIAS",
+        "N_TOP",
+        "N_B11",
+        "N_B10",
+        "N_B9",
+        "N_B8",
+        "N_B7",
+        "N_B6",
+        "N_B5",
+        "N_B4",
+        "N_B3",
+        "N_B2",
+        "N_B1",
+        "N_B0",
+        "N_DUMMY",
+        "N_EDGE_BIAS"
+      ], [
+        "P_TOP",
+        "P_B11",
+        "P_B10",
+        "P_B9",
+        "P_B8",
+        "P_B7",
+        "P_B6",
+        "P_B5",
+        "P_B4",
+        "P_B3",
+        "P_B2",
+        "P_B1",
+        "P_B0",
+        "P_DUMMY",
+        "P_EDGE_BIAS",
+        "N_TOP",
+        "N_B11",
+        "N_B10",
+        "N_B9",
+        "N_B8",
+        "N_B7",
+        "N_B6",
+        "N_B5",
+        "N_B4",
+        "N_B3",
+        "N_B2",
+        "N_B1",
+        "N_B0",
+        "N_DUMMY",
+        "N_EDGE_BIAS"
+      ]
+   ]
+  }
+]

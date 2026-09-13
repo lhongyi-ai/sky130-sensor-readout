@@ -1,0 +1,20 @@
+{
+  "package": "project1_probe",
+  "version": "1.0.0",
+  "type": "READ_ONLY_ENVIRONMENT_HANDOFF",
+  "files": {
+    "run.sh": "0c325c7d216b060f6d1a84d2bd2dbd873010f60f8ce8a1083402e7965c53342a",
+    "probe.py": "5ca70ce39ca5447687c840dd4f96f56ca1de6bd375ab327a4705301984660311",
+    "probe_cadence.il": "bd4a5c64475064bf7481c70f1562d409619228e8a67729b063c07af3e7dcfbf1",
+    "开始这里.md": "df80fab97112708e5f302f47181a3296d0226cf83a0e3041e46a2895d1225661"
+  },
+  "validation": {
+    "behavioral_tests_passed": 8,
+    "python_ast": "PASS",
+    "bash_syntax": "PASS",
+    "skill_lexical_balance": "PASS",
+    "skill_runtime": "NOT_RUN_REQUIRES_VIRTUOSO",
+    "cadence_simulation": "NOT_RUN"
+  },
+  "first_test_attempt": "One fixture assertion failed because macOS aliases /var to /private/var; fixed by comparing resolved paths. No Cadence execution occurred."
+}

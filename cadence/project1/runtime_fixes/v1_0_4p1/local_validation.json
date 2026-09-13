@@ -1,0 +1,12 @@
+{
+  "status": "PASS_LOCAL_CHECKS_ONLY",
+  "cadence_status": "NOT_RUN",
+  "checks": [
+    "Python 3.6 syntax compatibility (no actual Linux interpreter/loader validation)",
+    "Top-level selection with two netlists, missing/stale/internal paths and wrong circuit rejection",
+    "Subprocess environment, stdin and exit-code propagation; shell argument forwarding",
+    "Clean ZIP install, repeat install, conflict rejection, rollback and old-state preservation",
+    "87-job CLI and original 17 behavior regressions against patched installation"
+  ],
+  "limitation": "No local Virtuoso, school PDK, Spectre or license execution"
+}

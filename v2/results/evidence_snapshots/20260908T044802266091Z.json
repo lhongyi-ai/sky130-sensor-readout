@@ -1,0 +1,498 @@
+{
+  "generated_at_utc": "2026-09-08T04:48:02.264521+00:00",
+  "status": "IN_PROGRESS_WITH_OPEN_CIRCUIT_FAILURES",
+  "full_chip_qualified": false,
+  "all_non_cadence_work_complete": false,
+  "cadence": "DEFERRED_BY_USER",
+  "silicon_measured": false,
+  "v1_commit": "6e7f782fccecc0c2a047435744b26ffeb0db175f",
+  "tracked_v1_unchanged": true,
+  "evidence": [
+    {
+      "id": "model_and_code",
+      "path": "results/validation.json",
+      "scope": "Software/model/RTL tests only",
+      "exists": true,
+      "sha256": "345c9b19eff6840cfbc5318e9ba1dc2185fc6506b8edcecc2b0c385b485d0159",
+      "reported_status": "LOCAL_MODEL_AND_DIGITAL_TESTS_PASS",
+      "reported_evidence_level": null,
+      "counts": null
+    },
+    {
+      "id": "device_environment",
+      "path": "environment/results/device_qualification.json",
+      "scope": "PDK single devices, 45 PVT and local mismatch controls",
+      "exists": true,
+      "sha256": "121ca2bd199db5e1e33587fbc38fac1a17aa9b191957fa27e99c3a4f068b8e73",
+      "reported_status": "OPEN_DEVICE_ENVIRONMENT_PASS",
+      "reported_evidence_level": "PDK_DEVICE_AND_STATISTICAL_ACTIVATION_TEST",
+      "counts": null
+    },
+    {
+      "id": "mim_multiplier",
+      "path": "environment/results/cap_multiplier_qualification.json",
+      "scope": "Unit-capacitor local mismatch scaling, not chip yield",
+      "exists": true,
+      "sha256": "158fa7636450631b5d2f4ce7f94858f1d4a58e990aba19d1b5ba03e2071ffe2a",
+      "reported_status": "CAP_MULTIPLIER_SEMANTICS_PASS",
+      "reported_evidence_level": "PDK_MISMATCH_PARAMETER_QUALIFICATION",
+      "counts": null
+    },
+    {
+      "id": "primitive_physical",
+      "path": "environment/results/physical_qualification.json",
+      "scope": "MIM/NMOS tiny layouts; capacitive PEX",
+      "exists": true,
+      "sha256": "405257e18cc9b7cb1e99410853b3cf087adec3488dbb6b06c1331e251195a6df",
+      "reported_status": "OPEN_PRIMITIVE_PHYSICAL_PASS",
+      "reported_evidence_level": null,
+      "counts": null
+    },
+    {
+      "id": "digital_macro",
+      "path": "physical/digital/results/physical_validation.json",
+      "scope": "Digital macro only: routed DRC/LVS/RC/STA",
+      "exists": true,
+      "sha256": "939233ef3b489437cf7199dddb8f110077b062ec83b8ae08338f9e121c1ad6aa",
+      "reported_status": "passed",
+      "reported_evidence_level": "standalone_digital_macro_routed_drc_lvs_rc_extraction_sta",
+      "counts": null,
+      "current_source_comparison": {
+        "status": "MATCH",
+        "checked": 9,
+        "changed": [],
+        "missing": []
+      }
+    },
+    {
+      "id": "digital_interface",
+      "path": "physical/digital/results/interface_validation.json",
+      "scope": "Digital comparator-input loading/timing contract",
+      "exists": true,
+      "sha256": "c84b9198b7ecfd6e22b4826daa3813083729b38235ff06aaf1e68d81803763ff",
+      "reported_status": null,
+      "reported_evidence_level": "routed_digital_macro_liberty_interface",
+      "counts": null
+    },
+    {
+      "id": "sampling_switch",
+      "path": "physical/adc_switch/results/switch_validation.json",
+      "scope": "Check report model/run: old failures remain evidence",
+      "exists": true,
+      "sha256": "0ad2e4e2788b3b9e6d0d2499c8af11d9b70ce13b1bfaf45d2d6eb5c542081711",
+      "reported_status": "failed_specification",
+      "reported_evidence_level": "standalone_sampling_tg_drc_lvs_flattened_rc_transient",
+      "counts": null
+    },
+    {
+      "id": "sampling_dummy_schematic",
+      "path": "physical/adc_switch/runs/dummy_w4w8_full/summary.json",
+      "scope": "Four-device switch standalone schematic grid only",
+      "exists": false
+    },
+    {
+      "id": "sampling_dummy_rc",
+      "path": "physical/adc_switch/runs/dummy_w4w8_rc_full/summary.json",
+      "scope": "Four-device switch standalone RC grid only",
+      "exists": false
+    },
+    {
+      "id": "phase_generator",
+      "path": "integration/results/phase_qualification.json",
+      "scope": "45 deterministic standalone schematic phase PVT points",
+      "exists": true,
+      "sha256": "a098793e1559df96d9d64a1adf89e34cf5466c1337928fb3ae9967ea7b1dd8ba",
+      "reported_status": "SCHEMATIC_PHASE_45PVT_PASS",
+      "reported_evidence_level": null,
+      "counts": {
+        "total": 45,
+        "passed": 45
+      },
+      "current_phase_source_matches": true
+    },
+    {
+      "id": "cdac_mismatch",
+      "path": "analog/adc/results/cdac_mismatch_summary.json",
+      "scope": "200 capacitor-array-only PDK samples; computed ideal charge transfer",
+      "exists": true,
+      "sha256": "727ea16ee8c5d66b0f3c928f489218dd5a5992f5c9ec4ce99a8ec2a7df09c459",
+      "reported_status": null,
+      "reported_evidence_level": "PDK MIM mismatch -> charge-conservation CDAC-only static prediction; NOT full ADC MC",
+      "counts": null
+    },
+    {
+      "id": "comparator_initial_mismatch",
+      "path": "analog/adc/results/comparator_mismatch_summary.json",
+      "scope": "Initial comparator-only screen; wider refinements are separate",
+      "exists": true,
+      "sha256": "40fdfc4471e7b2a9b991ca69133860a25269222bb04811572bea02f9ee1c5728",
+      "reported_status": null,
+      "reported_evidence_level": "200 actual PDK tt_mm dynamic-comparator instances; finite staircase input-offset brackets, NOT whole ADC MC",
+      "counts": null
+    },
+    {
+      "id": "adc_preamp",
+      "path": "analog/adc/results/preamp_summary.json",
+      "scope": "Continuous preamp characterization, not sampled ADC noise",
+      "exists": true,
+      "sha256": "e99fa99326e4a454763326837fc3d6f35b5ec00d1c2c071c851bd3bdd54ec980",
+      "reported_status": "SUPERSEDED_POWER_FIXTURE_MEASUREMENT_PENDING",
+      "reported_evidence_level": "Independent self-biased PDK preamp candidate: stationary OP/AC/noise and driven-input overload recovery, NOT ADC SNDR",
+      "counts": null
+    },
+    {
+      "id": "original_frontend_matrix",
+      "path": "analog/frontend/results/gm3x_rz_matrix/summary.json",
+      "scope": "135 front-end sampling subset, includes real failures",
+      "exists": true,
+      "sha256": "10307fe07a8e63f9ebb317043354b02b4d06bc29758f9e3d5b13816691d3f251",
+      "reported_status": null,
+      "reported_evidence_level": null,
+      "counts": null
+    }
+  ],
+  "short_integration_runs": [
+    {
+      "path": "integration/results/adc_20260908T025340029442Z/summary.json",
+      "sha256": "34a976a72948e21bfe9149d7e15e0e0902511d179344f475a4450124bf82d9b5",
+      "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+      "returncode": 0,
+      "arguments": {
+        "input_v": 0.123,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "duration_us": 40.0
+      },
+      "raw_codes": [
+        2678,
+        2678,
+        2678
+      ],
+      "checks": {
+        "simulation_completed": true,
+        "all_frames_completed": true,
+        "short_nominal_code_check_within_2lsb": true
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T030052163248Z/summary.json",
+      "sha256": "84316eb2cf2aa54a138b253ba4304dabc492dc082aca00083ce08d54bbdb7401",
+      "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+      "returncode": 0,
+      "arguments": {
+        "input_v": 0.123,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": null,
+        "gain": 1
+      },
+      "raw_codes": [
+        2678,
+        2678,
+        2678
+      ],
+      "checks": {
+        "simulation_completed": true,
+        "all_frames_completed": true,
+        "short_nominal_code_check_within_2lsb": true
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T030209041530Z/summary.json",
+      "sha256": "b9d3f46b061078b4414015be12914a847c7647fd10c99a4fcee223f2247c074e",
+      "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+      "returncode": 0,
+      "arguments": {
+        "input_v": 0.123,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": "/repo/v2/analog/frontend/results/gm3x_rz/noise_tt_1.8_27_g16_r1_sw_iso1800.0/frontend_pdk_snapshot.spice",
+        "gain": 16
+      },
+      "raw_codes": [
+        2677,
+        2677,
+        2677
+      ],
+      "checks": {
+        "simulation_completed": true,
+        "all_frames_completed": true,
+        "short_nominal_code_check_within_2lsb": true
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T031301825644Z/summary.json",
+      "sha256": "f46f0a7949c750cd83a989f91593c1bbdacd0010cef9d46a941fa2c7663ea9ed",
+      "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+      "returncode": 0,
+      "arguments": {
+        "input_v": 0.123,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/analog/adc/adc_analog12_bottom_preamp.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/analog/adc/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": [
+        2677,
+        2677,
+        2677
+      ],
+      "checks": {
+        "simulation_completed": true,
+        "all_frames_completed": true,
+        "short_nominal_code_check_within_2lsb": true
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T043515931329Z/summary.json",
+      "sha256": "d492bc1dd7b9562c656b77527b7ef005a2fe09cd81bdda832da0eb51310b8b41",
+      "status": "FAIL",
+      "returncode": null,
+      "arguments": {
+        "input_v": -0.36,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": [],
+      "checks": {
+        "simulation_completed": false,
+        "all_frames_completed": false,
+        "short_nominal_code_check_within_2lsb": false
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T043515972015Z/summary.json",
+      "sha256": "0080e8f10b4b9bf9f11845730477702443b3c685392ce63097bac35ac78a54ef",
+      "status": "FAIL",
+      "returncode": null,
+      "arguments": {
+        "input_v": -0.32,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": [],
+      "checks": {
+        "simulation_completed": false,
+        "all_frames_completed": false,
+        "short_nominal_code_check_within_2lsb": false
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T044018040450Z/summary.json",
+      "sha256": "1646d4061ee1c53a3b8f9534cd8952cdf55e71a759a425afe982e3c8962c352a",
+      "status": "FAIL",
+      "returncode": null,
+      "arguments": {
+        "input_v": -0.123,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": [
+        1418,
+        1418,
+        1418
+      ],
+      "checks": {
+        "simulation_completed": false,
+        "all_frames_completed": false,
+        "short_nominal_code_check_within_2lsb": true
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T044018056198Z/summary.json",
+      "sha256": "29e0ad9c7db3ae7a9da93a65bc50c180625f038e4a7ebc5689e91cf7e8a36f4d",
+      "status": "FAIL",
+      "returncode": null,
+      "arguments": {
+        "input_v": 0.0,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": [
+        2048,
+        2048,
+        2048
+      ],
+      "checks": {
+        "simulation_completed": false,
+        "all_frames_completed": false,
+        "short_nominal_code_check_within_2lsb": true
+      },
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T044302996753Z/summary.json",
+      "sha256": "448be09ffd0a2fb2eb2c3a786f1b68fb367ecadb3096997adc5a7b75b33d2325",
+      "status": "RUNNING",
+      "returncode": null,
+      "arguments": {
+        "input_v": -0.36,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "solver": "klu",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": null,
+      "checks": null,
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T044518824953Z/summary.json",
+      "sha256": "2668fc31d83dbcb83085ddb70df0e8a1a86c0b78586902edcaa2744068d8039f",
+      "status": "RUNNING",
+      "returncode": null,
+      "arguments": {
+        "input_v": 0.123,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "solver": "klu",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": null,
+      "checks": null,
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    },
+    {
+      "path": "integration/results/adc_20260908T044518919221Z/summary.json",
+      "sha256": "f48d412ddfd977261ebd24ca3ef43c80fa81ff032835fc4e66e93eaf6974df71",
+      "status": "RUNNING",
+      "returncode": null,
+      "arguments": {
+        "input_v": 0.32,
+        "corner": "tt",
+        "vdd": 1.8,
+        "temperature": 27,
+        "reference_r": 1.0,
+        "reference_c_nf": 10.0,
+        "source_r": 350,
+        "input_cm_offset_mv": 0,
+        "duration_us": 40.0,
+        "phase_source": "transistor",
+        "solver": "klu",
+        "frontend": null,
+        "adc_wrapper": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_analog12_bottom_preamp.spice",
+        "adc_blocks": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_blocks.spice",
+        "adc_subckt": "adc_analog12_bottom_preamp",
+        "adc_preamp": "/repo/v2/integration/results/matrix_20260908T043515424818Z/adc_preamp.spice",
+        "gain": 1
+      },
+      "raw_codes": null,
+      "checks": null,
+      "scope": "Short deterministic schematic/RTL integration; not full ADC or system qualification"
+    }
+  ],
+  "unclosed_acceptance": [
+    "One frozen full-chain candidate with all three gains",
+    "45-PVT times three gains of full-system specified accuracy/power",
+    "Qualified dynamic device-noise-inclusive SNDR and long coherent records",
+    "All-code independent ADC INL/DNL and missing-code check",
+    "Full-chain 200-real-mismatch static screen and representative dynamic reruns",
+    "Fixed nominal calibration and independent complete VT holdouts",
+    "Differential/common-mode loop phase margins and all boundary/interference tests",
+    "Complete analog/core layout and top-level parasitic physical regression",
+    "Cadence native schematic, physical closure, and common-stimulus comparison"
+  ],
+  "interpretation": "This report only indexes scoped evidence. Missing or changed sources cannot inherit PASS from an older report; frozen source snapshots remain historical evidence."
+}

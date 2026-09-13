@@ -1,0 +1,19 @@
+{
+  "kind": "noise",
+  "gain": 4,
+  "sampler_state": "acquire",
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temperature_c": 27,
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "complete_frontend_qualified": false,
+  "formal_stability_gate_pass": false,
+  "single_worker": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 1.9778570939961355,
+  "simulator_diagnostics": [
+    "Error: no such vector onoise_spectrum"
+  ],
+  "status": "SIMULATOR_FAILURE"
+}

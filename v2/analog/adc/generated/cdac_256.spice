@@ -1,0 +1,53 @@
+* cdac_256
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+VDD vdd 0 1.8
+VCM cm 0 .9
+VIP ip 0 .9
+VIN inn 0 .9
+VEN en 0 PWL(0 1.8 2.5u 1.8 2.501u 0)
+VENB enb 0 PWL(0 0 2.5u 0 2.501u 1.8)
+XSP ip tp en enb vdd 0 adc_tgate
+XSN inn tn en enb vdd 0 adc_tgate
+RP tp 0 1e15
+RN tn 0 1e15
+VBP0 bp0 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN0 bn0 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP1 bp1 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN1 bn1 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP2 bp2 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN2 bn2 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP3 bp3 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN3 bn3 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP4 bp4 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN4 bn4 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP5 bp5 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN5 bn5 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP6 bp6 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN6 bn6 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP7 bp7 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN7 bn7 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP8 bp8 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBN8 bn8 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBP9 bp9 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN9 bn9 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP10 bp10 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN10 bn10 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VBP11 bp11 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VBN11 bn11 0 PWL(0 .9 2.52u .9 2.521u 0.7)
+VDP dp 0 PWL(0 .9 2.52u .9 2.521u 1.1)
+VDN dn 0 PWL(0 .9 2.52u .9 2.521u .7)
+XCP tp bp11 bp10 bp9 bp8 bp7 bp6 bp5 bp4 bp3 bp2 bp1 bp0 dp adc_cdac12
+XCN tn bn11 bn10 bn9 bn8 bn7 bn6 bn5 bn4 bn3 bn2 bn1 bn0 dn adc_cdac12
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 1n 3u
+wrdata /repo/v2/analog/adc/results/cdac_256.tsv v(tp) v(tn)
+quit
+.endc
+.end

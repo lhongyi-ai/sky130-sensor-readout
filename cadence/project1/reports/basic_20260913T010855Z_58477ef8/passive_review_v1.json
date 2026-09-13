@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "kind": "REANALYSIS_OF_RETAINED_SPECTRE_RESULTS",
+  "acceptance_revision": "M0_MODEL_REVIEW_V1",
+  "package_sha256": "3502851b9bacef25d0c2e9f21aee3aef4de3baf5a88e9e7476bde57417e54933",
+  "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+  "site": {
+    "ocean": "/project/engineering/cadence21/ic/tools/dfII/bin/ocean",
+    "spectre": "/project/engineering/cadence21/spectre/tools/bin/spectre",
+    "workdir": "/home/compute/l.hongyi/cadence_skywater",
+    "model": "/project/engineering/cadence21/CDK/sky130_release_0.0.3/models/sky130.lib.spice"
+  },
+  "current_site_model_checked": false,
+  "records": {
+    "res_dc": {
+      "attempt": "20260912T092706Z_31ca6c32",
+      "source_status": "PASS",
+      "source_performance_status": "FAIL",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "dc_axis_and_voltage_match": true,
+          "positive_current": true,
+          "current_matches_public_model": true,
+          "current_is_real": true
+        },
+        "acceptance_revision": "M0_MODEL_REVIEW_V1",
+        "scope": "Default passive geometries, TT 27 C only; no OTA/PVT qualification",
+        "mean_resistance_ohm": 1231.136636220402,
+        "max_current_error_A": 2.0328790734103208e-20,
+        "cdf_resistance_ohm": 979.33
+      },
+      "fingerprints": {
+        "status.json": "41831d32d742bf1add5c91b509a69934ec0cf8d9bb6b3e78004f034ffac100f8",
+        "metrics.json": "fb2bc8cdfdc35ce2a2a1b17471777c9e50d6cd503f12d20ddf692648d1d14bdd",
+        "native_netlist.scs": "5279ce3feb8b52649cfffbde4b5feda0c4a9a96d7c8a2d0f2737fe95d9ea2780",
+        "native_input.scs": "c1ac8fe13f8127880262304c2e3a870f3543c1a6a59e00e22877c3b7bfc053b2",
+        "native_selection.json": "894b2393e408d63801c943767647b505b03d072bef7d077dd82c911137614db1",
+        "input.scs": "ac77e4ee263c87cce7ffb0d4bc0eec0868c486486624d5cc55d89715894db7f2",
+        "spectre.out": "c5715b335464188177806cf5f055154a283a4d1338c4e1699d4495b25faa0ba1",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "TEST.csv": "63aa56f9be6b3ed87dcabcd5dafe19f8c25ad670788f2d065f2f00e1e027f58f",
+        "VTEST_p.csv": "78250035c9f5e331ff50097efff574c5c8acbba54466dad629ccf2bd57f016e5"
+      }
+    },
+    "mim_ac": {
+      "attempt": "20260913T010810Z_fd60e286",
+      "source_status": "PASS",
+      "source_performance_status": "PASS",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "ac_grid_and_stimulus_match": true,
+          "positive_capacitance": true,
+          "within_5pct_of_CDF": true,
+          "capacitance_flat_in_measurement_band": true,
+          "series_resistance_bounded_for_RC_reference": true
+        },
+        "acceptance_revision": "M0_MODEL_REVIEW_V1",
+        "scope": "Default passive geometries, TT 27 C only; no OTA/PVT qualification",
+        "capacitance_F": 3.462225e-14,
+        "cdf_capacitance_F": 3.46223e-14,
+        "difference_percent": -0.00014441559340605536,
+        "max_series_resistance_ohm": 0.11467934812705209
+      },
+      "fingerprints": {
+        "status.json": "584a5108e713b9ee2bcf28a4a742b685f7b8767e960a08b45ad7c431d6e0c512",
+        "metrics.json": "0a9786aa07c3423bc569ab8b16a5a5ec25240e4bcf17260ed921b1ac96ce2de0",
+        "native_netlist.scs": "753bc207c1b5a0f441d0eddf08141ce43efffd75ac1a6463c8aaf0a29423242c",
+        "native_input.scs": "f8ff5d3354dcdb1a003cc4c1064463c371a8b9e7805109f9df1ec6ffa601c81e",
+        "native_selection.json": "6720bb7686e4fabb7728e47d0339a4e319cde46f64f61867987b594afdd2fac2",
+        "input.scs": "69d106a0928258ce416788682d4a4d20ca9b15be566692c374401e250ef8d2c9",
+        "spectre.out": "55bbecbbafc3cf04ea929df857f4026bc7eac177baa5e1d3a15571a119e0bbe6",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "TEST.csv": "f76c68f8426000f7956efe7e67ffc40b6d8cf757e8ae64ae0a70d12ec794009a",
+        "VTEST_p.csv": "b550d4918b9e9bbcb7ca14d114d6ca5997b9aa8743fbad30e0bb37e448f7ca99"
+      }
+    },
+    "rc_step": {
+      "attempt": "20260913T010221Z_e511fd36",
+      "source_status": "PASS",
+      "source_performance_status": "FAIL",
+      "metrics": {
+        "status": "PASS",
+        "criteria": {
+          "time_coverage_and_step_size": true,
+          "real_waveforms": true,
+          "input_pulse_matches": true,
+          "output_in_range": true,
+          "both_delays_within_0p5pct_of_model": true,
+          "charge_balance_within_250uV": true,
+          "settles_high_and_low": true
+        },
+        "acceptance_revision": "M0_MODEL_REVIEW_V1",
+        "scope": "Default passive geometries, TT 27 C only; no OTA/PVT qualification",
+        "rise_delay_s": 4.2985180001863335e-11,
+        "fall_delay_s": 4.298518483742306e-11,
+        "model_delay_s": 4.298361250565332e-11,
+        "resistor_output_parasitic_F": 3.2860449999999993e-16,
+        "max_charge_balance_error_V": 9.17590289554386e-06,
+        "old_CDF_delay_s": 3.3906657059e-11
+      },
+      "fingerprints": {
+        "status.json": "3a28b3a50f752616038cbbb679f3aa4aea58c48d0a74946aedcf7f0e8d4d676e",
+        "metrics.json": "0bfc27d4b1b198fc4274f92fd79556d3036de613feda7c6539796dd66f777674",
+        "native_netlist.scs": "20a95d0c8856e08ec9d0abc26017a1746c647eca967b389ac326ad1e8f772c4c",
+        "native_input.scs": "fc6294790bb3e1cbf8d734462568dbef649098b6526b7aae68515102bf1c584e",
+        "native_selection.json": "b3e0bc1ab0affc4fcfce33496845afe332c0ee2a551367633b1ad511e7aa5e88",
+        "input.scs": "46faa3e2e7cc33d1bf6110540d8a52e4b84180d2d00fe54e6dbd8b473f6e908b",
+        "spectre.out": "3ba690cc04ff13f12e459d3e3e13197340412ba3b46931d2cf0c66a4462fe71d",
+        "log_audit.json": "e1f41fbcc444eede22fc439b1c377f65800319bb6c1b8ed7e936899c7d4ebd61",
+        "export_complete.txt": "a4bccf5c13ef5ff8311e59b34d492bc7072a55298723601a6a9c127053aee8fc",
+        "spectre_version.txt": "f9777d58ad1b69dcc613a321f579b227a6f9606bad4e52f2c8fd2e04a7466941",
+        "VIN.csv": "83d355d1109e53dbf3e0d5c58a73ca4047097888c22a1ba38f222e82ae608d1f",
+        "VOUT.csv": "8c09fc29ae14a987ace6de0c757d6c4fbb131f22cba47406c0ddbabe00eea893"
+      }
+    }
+  },
+  "scope": "Default passive migration tests at TT / 27 C only",
+  "limitations": [
+    "No new simulation was run by this reanalysis.",
+    "PDK model dependency files are not independently hash-certified.",
+    "MOS, OTA, PVT, noise, layout and ADC qualification are separate.",
+    "Local review does not access the installed school model; Linux recheck requires its entry hash to match."
+  ],
+  "source_report_sha256": "5078faaa47b0d14824d1bc450a8c9fcf674ae2aed7c987afebba9fea6f5f1df2",
+  "local_review_status": "PASS_RETURNED_DATA_REVIEW",
+  "school_patch_execution": "NOT_RUN"
+}

@@ -1,0 +1,183 @@
+{
+  "status": "PASS_RAW_COVERAGE_AND_BASELINE_ADAPTER",
+  "manifest_entries_verified": 634,
+  "job_checks": [
+    {
+      "job": "icmr_00",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_01",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_02",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_03",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_04",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_05",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_06",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_07",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_08",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_09",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_10",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_11",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_12",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_13",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_14",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_15",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_16",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_17",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "icmr_18",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_10p_loop",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_10p_step",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_1p_loop",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_1p_step",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_20p_loop",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_20p_step",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_2p_loop",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "load_2p_step",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "nom_cm",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "nom_noise",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "nom_psrrm",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "nom_psrrp",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "nom_swing",
+      "coverage": "PASS",
+      "OP_devices": 13
+    },
+    {
+      "job": "support_nominal_ac",
+      "coverage": "PASS",
+      "OP_devices": 13
+    }
+  ],
+  "all_13_device_baseline_relative_errors": {
+    "ids": 1.322278946046901e-07,
+    "gm": 4.287840259109707e-07,
+    "gds": 1.9337643492173336e-06,
+    "vds": 1.8063581943698145e-07,
+    "vdsat": 4.2763124169906934e-07
+  },
+  "unpaired_local_fields": [
+    "vgs: not exported by the school source"
+  ],
+  "first_check_attempt": "Exited 1 with KeyError vgs: initial checker assumed a school CSV field that was not exported. Corrected to compare the five fields actually present; no waveform or circuit changed.",
+  "limitations": "Data and adapter validation only; device operating-region failures at ICMR edges are preserved, not overridden."
+}

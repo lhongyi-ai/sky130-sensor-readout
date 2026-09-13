@@ -1,0 +1,36 @@
+* SKY130 transistor frontend pre-layout experiment; inspect included snapshot for passive types.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/results/fdda10_dual_cascode/loops_tt_1.8_27_g16/measurement_cm.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=200 itl2=200
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+
+VIP SP 0 0.9
+VIN SN 0 0.9
+RSP SP IP 350
+RSN SN IN 350
+VSEL0 SEL0 0 0
+VSEL1 SEL1 0 1.8
+XPGA IP IN OP ON VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga
+XRIP OP FP 0 frontend_r R=2800.0
+XRIN ON FN 0 frontend_r R=2800.0
+XCFP FP 0 frontend_c4p
+XCFN FN 0 frontend_c4p
+* Explicit static test load, no sampling-noise claim.
+CLP FP 0 81.28512p
+CLN FN 0 81.28512p
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+wrdata cm_op.dat all
+ac dec 100 1 1g
+let loop=-v(xpga.xamp.cmsense)/v(xpga.xamp.icmsense)
+let lr=real(loop)
+let li=imag(loop)
+wrdata cm_ac.dat lr li
+quit
+.endc
+.end

@@ -1,0 +1,143 @@
+{
+  "1": {
+    "schema": "sensor_readout.affine_calibration.v1",
+    "method": "external_affine_least_squares",
+    "code_convention": "offset_binary_code_center",
+    "bits": 12,
+    "gain": 1,
+    "instance_id": "assumed_budget_instance",
+    "vdd_v": 1.8,
+    "temperature_c": 27.0,
+    "slope": 0.9958962769180407,
+    "intercept": 7.3755170672327495,
+    "raw_means": [
+      403.37646484375,
+      2048.537841796875,
+      3693.678955078125
+    ],
+    "expected_codes": [
+      409.0999999999998,
+      2047.5,
+      3685.9
+    ],
+    "fit_max_abs_residual_lsb": 0.006726838458916973,
+    "fit_rms_residual_lsb": 0.004756593090357114,
+    "clipping": "none",
+    "rounding": "none",
+    "evidence_level": "SYNTHETIC_BEHAVIORAL_CALIBRATION",
+    "acquisitions": [
+      {
+        "sensor_input_v": -0.32000000000000006,
+        "raw_mean": 403.37646484375,
+        "raw_std_lsb": 0.4905083487263882,
+        "samples": 4096
+      },
+      {
+        "sensor_input_v": 0.0,
+        "raw_mean": 2048.537841796875,
+        "raw_std_lsb": 0.5034389842962812,
+        "samples": 4096
+      },
+      {
+        "sensor_input_v": 0.32000000000000006,
+        "raw_mean": 3693.678955078125,
+        "raw_std_lsb": 0.47722186141591955,
+        "samples": 4096
+      }
+    ]
+  },
+  "4": {
+    "schema": "sensor_readout.affine_calibration.v1",
+    "method": "external_affine_least_squares",
+    "code_convention": "offset_binary_code_center",
+    "bits": 12,
+    "gain": 4,
+    "instance_id": "assumed_budget_instance",
+    "vdd_v": 1.8,
+    "temperature_c": 27.0,
+    "slope": 0.9960535515086061,
+    "intercept": 4.732209410391306,
+    "raw_means": [
+      405.9716796875,
+      2050.85791015625,
+      3695.754638671875
+    ],
+    "expected_codes": [
+      409.0999999999998,
+      2047.5,
+      3685.9
+    ],
+    "fit_max_abs_residual_lsb": 0.003485538958102552,
+    "fit_rms_residual_lsb": 0.0024646482331942155,
+    "clipping": "none",
+    "rounding": "none",
+    "evidence_level": "SYNTHETIC_BEHAVIORAL_CALIBRATION",
+    "acquisitions": [
+      {
+        "sensor_input_v": -0.08000000000000002,
+        "raw_mean": 405.9716796875,
+        "raw_std_lsb": 0.3829606995501005,
+        "samples": 4096
+      },
+      {
+        "sensor_input_v": 0.0,
+        "raw_mean": 2050.85791015625,
+        "raw_std_lsb": 0.42196287017118056,
+        "samples": 4096
+      },
+      {
+        "sensor_input_v": 0.08000000000000002,
+        "raw_mean": 3695.754638671875,
+        "raw_std_lsb": 0.4604504485129058,
+        "samples": 4096
+      }
+    ]
+  },
+  "16": {
+    "schema": "sensor_readout.affine_calibration.v1",
+    "method": "external_affine_least_squares",
+    "code_convention": "offset_binary_code_center",
+    "bits": 12,
+    "gain": 16,
+    "instance_id": "assumed_budget_instance",
+    "vdd_v": 1.8,
+    "temperature_c": 27.0,
+    "slope": 0.9966631639074205,
+    "intercept": -5.707794065794587,
+    "raw_means": [
+      416.203125,
+      2060.06884765625,
+      3703.973876953125
+    ],
+    "expected_codes": [
+      409.0999999999998,
+      2047.5,
+      3685.9
+    ],
+    "fit_max_abs_residual_lsb": 0.013058493602784438,
+    "fit_rms_residual_lsb": 0.009233749378816596,
+    "clipping": "none",
+    "rounding": "none",
+    "evidence_level": "SYNTHETIC_BEHAVIORAL_CALIBRATION",
+    "acquisitions": [
+      {
+        "sensor_input_v": -0.020000000000000004,
+        "raw_mean": 416.203125,
+        "raw_std_lsb": 0.6049518963314356,
+        "samples": 4096
+      },
+      {
+        "sensor_input_v": 0.0,
+        "raw_mean": 2060.06884765625,
+        "raw_std_lsb": 0.5942812099325384,
+        "samples": 4096
+      },
+      {
+        "sensor_input_v": 0.020000000000000004,
+        "raw_mean": 3703.973876953125,
+        "raw_std_lsb": 0.6104167445663385,
+        "samples": 4096
+      }
+    ]
+  }
+}

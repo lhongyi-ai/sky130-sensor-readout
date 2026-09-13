@@ -1,0 +1,52 @@
+95: 
+96: #ifndef WITH_TIMING
+97: /* The simple case is when the Verilog source contained no time delays,
+98:  * or was compiled with compiled with --no-timing.
+99:  */
+100: 
+101: #define VL_DATA(size, name, msb, lsb)        \
+102:   for (i = msb; i >= lsb; --i) {             \
+103:     if (topp->name & (1 << i))               \
+104:       bit = 1;                               \
+105:     else                                     \
+106:       bit = 0;                               \
+107:     if (bit ^ previous_output[index]) {      \
+108:       previous_output[index] = bit;          \
+109:       oval.state = (Digital_State_t)bit;     \
+110:       (*pinfo->out_fn)(pinfo, index, &oval); \
+111:     }                                        \
+112:     ++index;                                 \
+113:   }
+114: 
+115: static void step(struct co_info *pinfo)
+116: {
+117:     static Digital_t  oval = {ZERO, STRONG};
+118:     Vlng             *topp;
+119:     int               index, i;
+120:     unsigned char     bit;
+121: 
+122:     topp = (Vlng *)pinfo->handle;
+123:     topp->eval();
+124: 
+125:     /* Now scan the outputs for changes. */
+126: 
+127:     index = 0;
+128: #include "outputs.h"
+129: #include "inouts.h"
+130: }
+131: 
+132: #else /* WITH_TIMING */
+133: 
+134: #define VL_DATA(size, name, msb, lsb)        \
+135:   for (i = msb; i >= lsb; --i) {             \
+136:     if (topp->name & (1 << i))               \
+137:       bit = 1;                               \
+138:     else                                     \
+139:       bit = 0;                               \
+140:     if (bit ^ previous_output[index]) {      \
+141:       stop = 1;                              \
+142:       previous_output[index] = bit;          \
+143:       oval.state = (Digital_State_t)bit;     \
+144:       (*pinfo->out_fn)(pinfo, index, &oval); \
+145:     }                                        \
+146:     ++index;                                 \

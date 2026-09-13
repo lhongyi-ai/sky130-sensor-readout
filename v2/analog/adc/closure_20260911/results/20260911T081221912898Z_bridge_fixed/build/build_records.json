@@ -1,0 +1,72 @@
+[
+  {
+    "command": [
+      "g++",
+      "-Os",
+      "-fPIC",
+      "-I/repo/v2/analog/adc/verification_20260910/campaigns/continuous_three_point/build/cosim_controller_obj_dir",
+      "-I/foss/tools/verilator/share/verilator/include",
+      "-I/foss/tools/verilator/share/verilator/include/vltstd",
+      "-I/foss/tools/ngspice/share/ngspice/scripts/src",
+      "-DVERILATOR=1",
+      "-DVM_COVERAGE=0",
+      "-DVM_SC=0",
+      "-DVM_TIMING=0",
+      "-DVM_TRACE=0",
+      "-c",
+      "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/verilator_shim_fixed.cpp",
+      "-o",
+      "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/verilator_shim.o"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "g++",
+      "--shared",
+      "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/verilator_shim.o",
+      "/repo/v2/analog/adc/verification_20260910/campaigns/continuous_three_point/build/cosim_controller_obj_dir/verilated.o",
+      "/repo/v2/analog/adc/verification_20260910/campaigns/continuous_three_point/build/cosim_controller_obj_dir/verilated_threads.o",
+      "/repo/v2/analog/adc/verification_20260910/campaigns/continuous_three_point/build/cosim_controller_obj_dir/Vlng__ALL.a",
+      "-pthread",
+      "-lpthread",
+      "-o",
+      "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/cosim_controller_fixed.so"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "g++",
+      "-Os",
+      "-std=c++17",
+      "/repo/v2/analog/adc/closure_20260911/mask_reproducer.cpp",
+      "-o",
+      "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/mask_reproducer"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/repo/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed/build/mask_reproducer"
+    ],
+    "returncode": 0,
+    "stdout": "legacy_error hot=0 observed_bit=32 value=1 expected=0\nlegacy_error hot=32 observed_bit=31 value=1 expected=0\nlegacy_error hot=32 observed_bit=32 value=0 expected=1\nlegacy_errors=3 fixed_errors=0 checked=1089\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "g++",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  }
+]

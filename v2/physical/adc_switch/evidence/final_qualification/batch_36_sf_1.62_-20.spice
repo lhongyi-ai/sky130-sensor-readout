@@ -1,0 +1,344 @@
+* Independent switch qualification replicas: batch_36_sf_1.62_-20
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice sf
+.include /repo/v2/physical/adc_switch/runs/dummy_w4w8_rc_full/candidate.spice
+.include /repo/v2/physical/adc_switch/runs/dummy_w4w8_rc_full/reference.spice
+.temp -20
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+VDD vdd 0 1.62
+VEN en 0 PWL(0 1.62 2.476847754e-06 1.62 2.477847754e-06 0)
+VENB enb 0 PWL(0 0 2.476847754e-06 0 2.477847754e-06 1.62)
+.include /repo/v2/physical/adc_switch/runs/dummy_w4w8_rc_full/adc_tgate_flat.rc.spice
+VIN0 src0 0 PWL(0 0.76 20n 0.76 21n 0.56 2.676847754e-06 0.56 2.677847754e-06 0.96)
+RS0 src0 inp0 0.001
+XSW0 inp0 hold0 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH0 hold0 0 adc_mim_bank COUNT=4096
+RDC0 hold0 0 1e15
+.ic v(hold0)=0.76
+VIN1 src1 0 PWL(0 0.76 20n 0.76 21n 0.56 2.676847754e-06 0.56 2.677847754e-06 0.96)
+RS1 src1 inp1 0.001
+XSW1 inp1 hold1 en enb vdd 0 adc_tgate_flat
+XH1 hold1 0 adc_mim_bank COUNT=4096
+RDC1 hold1 0 1e15
+.ic v(hold1)=0.76
+VIN2 src2 0 PWL(0 0.81 20n 0.81 21n 0.61 2.676847754e-06 0.61 2.677847754e-06 1.01)
+RS2 src2 inp2 0.001
+XSW2 inp2 hold2 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH2 hold2 0 adc_mim_bank COUNT=4096
+RDC2 hold2 0 1e15
+.ic v(hold2)=0.81
+VIN3 src3 0 PWL(0 0.81 20n 0.81 21n 0.61 2.676847754e-06 0.61 2.677847754e-06 1.01)
+RS3 src3 inp3 0.001
+XSW3 inp3 hold3 en enb vdd 0 adc_tgate_flat
+XH3 hold3 0 adc_mim_bank COUNT=4096
+RDC3 hold3 0 1e15
+.ic v(hold3)=0.81
+VIN4 src4 0 PWL(0 0.86 20n 0.86 21n 0.66 2.676847754e-06 0.66 2.677847754e-06 1.06)
+RS4 src4 inp4 0.001
+XSW4 inp4 hold4 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH4 hold4 0 adc_mim_bank COUNT=4096
+RDC4 hold4 0 1e15
+.ic v(hold4)=0.86
+VIN5 src5 0 PWL(0 0.86 20n 0.86 21n 0.66 2.676847754e-06 0.66 2.677847754e-06 1.06)
+RS5 src5 inp5 0.001
+XSW5 inp5 hold5 en enb vdd 0 adc_tgate_flat
+XH5 hold5 0 adc_mim_bank COUNT=4096
+RDC5 hold5 0 1e15
+.ic v(hold5)=0.86
+VIN6 src6 0 PWL(0 0.76 20n 0.76 21n 0.56 2.676847754e-06 0.56 2.677847754e-06 0.96)
+RS6 src6 inp6 350
+XSW6 inp6 hold6 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH6 hold6 0 adc_mim_bank COUNT=4096
+RDC6 hold6 0 1e15
+.ic v(hold6)=0.76
+VIN7 src7 0 PWL(0 0.76 20n 0.76 21n 0.56 2.676847754e-06 0.56 2.677847754e-06 0.96)
+RS7 src7 inp7 350
+XSW7 inp7 hold7 en enb vdd 0 adc_tgate_flat
+XH7 hold7 0 adc_mim_bank COUNT=4096
+RDC7 hold7 0 1e15
+.ic v(hold7)=0.76
+VIN8 src8 0 PWL(0 0.81 20n 0.81 21n 0.61 2.676847754e-06 0.61 2.677847754e-06 1.01)
+RS8 src8 inp8 350
+XSW8 inp8 hold8 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH8 hold8 0 adc_mim_bank COUNT=4096
+RDC8 hold8 0 1e15
+.ic v(hold8)=0.81
+VIN9 src9 0 PWL(0 0.81 20n 0.81 21n 0.61 2.676847754e-06 0.61 2.677847754e-06 1.01)
+RS9 src9 inp9 350
+XSW9 inp9 hold9 en enb vdd 0 adc_tgate_flat
+XH9 hold9 0 adc_mim_bank COUNT=4096
+RDC9 hold9 0 1e15
+.ic v(hold9)=0.81
+VIN10 src10 0 PWL(0 0.86 20n 0.86 21n 0.66 2.676847754e-06 0.66 2.677847754e-06 1.06)
+RS10 src10 inp10 350
+XSW10 inp10 hold10 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH10 hold10 0 adc_mim_bank COUNT=4096
+RDC10 hold10 0 1e15
+.ic v(hold10)=0.86
+VIN11 src11 0 PWL(0 0.86 20n 0.86 21n 0.66 2.676847754e-06 0.66 2.677847754e-06 1.06)
+RS11 src11 inp11 350
+XSW11 inp11 hold11 en enb vdd 0 adc_tgate_flat
+XH11 hold11 0 adc_mim_bank COUNT=4096
+RDC11 hold11 0 1e15
+.ic v(hold11)=0.86
+VIN12 src12 0 PWL(0 0.76 20n 0.76 21n 0.56 2.676847754e-06 0.56 2.677847754e-06 0.96)
+RS12 src12 inp12 1000
+XSW12 inp12 hold12 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH12 hold12 0 adc_mim_bank COUNT=4096
+RDC12 hold12 0 1e15
+.ic v(hold12)=0.76
+VIN13 src13 0 PWL(0 0.76 20n 0.76 21n 0.56 2.676847754e-06 0.56 2.677847754e-06 0.96)
+RS13 src13 inp13 1000
+XSW13 inp13 hold13 en enb vdd 0 adc_tgate_flat
+XH13 hold13 0 adc_mim_bank COUNT=4096
+RDC13 hold13 0 1e15
+.ic v(hold13)=0.76
+VIN14 src14 0 PWL(0 0.81 20n 0.81 21n 0.61 2.676847754e-06 0.61 2.677847754e-06 1.01)
+RS14 src14 inp14 1000
+XSW14 inp14 hold14 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH14 hold14 0 adc_mim_bank COUNT=4096
+RDC14 hold14 0 1e15
+.ic v(hold14)=0.81
+VIN15 src15 0 PWL(0 0.81 20n 0.81 21n 0.61 2.676847754e-06 0.61 2.677847754e-06 1.01)
+RS15 src15 inp15 1000
+XSW15 inp15 hold15 en enb vdd 0 adc_tgate_flat
+XH15 hold15 0 adc_mim_bank COUNT=4096
+RDC15 hold15 0 1e15
+.ic v(hold15)=0.81
+VIN16 src16 0 PWL(0 0.86 20n 0.86 21n 0.66 2.676847754e-06 0.66 2.677847754e-06 1.06)
+RS16 src16 inp16 1000
+XSW16 inp16 hold16 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH16 hold16 0 adc_mim_bank COUNT=4096
+RDC16 hold16 0 1e15
+.ic v(hold16)=0.86
+VIN17 src17 0 PWL(0 0.86 20n 0.86 21n 0.66 2.676847754e-06 0.66 2.677847754e-06 1.06)
+RS17 src17 inp17 1000
+XSW17 inp17 hold17 en enb vdd 0 adc_tgate_flat
+XH17 hold17 0 adc_mim_bank COUNT=4096
+RDC17 hold17 0 1e15
+.ic v(hold17)=0.86
+VIN18 src18 0 PWL(0 0.76 20n 0.76 21n 0.76 2.676847754e-06 0.76 2.677847754e-06 0.76)
+RS18 src18 inp18 0.001
+XSW18 inp18 hold18 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH18 hold18 0 adc_mim_bank COUNT=4096
+RDC18 hold18 0 1e15
+.ic v(hold18)=0.76
+VIN19 src19 0 PWL(0 0.76 20n 0.76 21n 0.76 2.676847754e-06 0.76 2.677847754e-06 0.76)
+RS19 src19 inp19 0.001
+XSW19 inp19 hold19 en enb vdd 0 adc_tgate_flat
+XH19 hold19 0 adc_mim_bank COUNT=4096
+RDC19 hold19 0 1e15
+.ic v(hold19)=0.76
+VIN20 src20 0 PWL(0 0.81 20n 0.81 21n 0.81 2.676847754e-06 0.81 2.677847754e-06 0.81)
+RS20 src20 inp20 0.001
+XSW20 inp20 hold20 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH20 hold20 0 adc_mim_bank COUNT=4096
+RDC20 hold20 0 1e15
+.ic v(hold20)=0.81
+VIN21 src21 0 PWL(0 0.81 20n 0.81 21n 0.81 2.676847754e-06 0.81 2.677847754e-06 0.81)
+RS21 src21 inp21 0.001
+XSW21 inp21 hold21 en enb vdd 0 adc_tgate_flat
+XH21 hold21 0 adc_mim_bank COUNT=4096
+RDC21 hold21 0 1e15
+.ic v(hold21)=0.81
+VIN22 src22 0 PWL(0 0.86 20n 0.86 21n 0.86 2.676847754e-06 0.86 2.677847754e-06 0.86)
+RS22 src22 inp22 0.001
+XSW22 inp22 hold22 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH22 hold22 0 adc_mim_bank COUNT=4096
+RDC22 hold22 0 1e15
+.ic v(hold22)=0.86
+VIN23 src23 0 PWL(0 0.86 20n 0.86 21n 0.86 2.676847754e-06 0.86 2.677847754e-06 0.86)
+RS23 src23 inp23 0.001
+XSW23 inp23 hold23 en enb vdd 0 adc_tgate_flat
+XH23 hold23 0 adc_mim_bank COUNT=4096
+RDC23 hold23 0 1e15
+.ic v(hold23)=0.86
+VIN24 src24 0 PWL(0 0.76 20n 0.76 21n 0.76 2.676847754e-06 0.76 2.677847754e-06 0.76)
+RS24 src24 inp24 350
+XSW24 inp24 hold24 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH24 hold24 0 adc_mim_bank COUNT=4096
+RDC24 hold24 0 1e15
+.ic v(hold24)=0.76
+VIN25 src25 0 PWL(0 0.76 20n 0.76 21n 0.76 2.676847754e-06 0.76 2.677847754e-06 0.76)
+RS25 src25 inp25 350
+XSW25 inp25 hold25 en enb vdd 0 adc_tgate_flat
+XH25 hold25 0 adc_mim_bank COUNT=4096
+RDC25 hold25 0 1e15
+.ic v(hold25)=0.76
+VIN26 src26 0 PWL(0 0.81 20n 0.81 21n 0.81 2.676847754e-06 0.81 2.677847754e-06 0.81)
+RS26 src26 inp26 350
+XSW26 inp26 hold26 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH26 hold26 0 adc_mim_bank COUNT=4096
+RDC26 hold26 0 1e15
+.ic v(hold26)=0.81
+VIN27 src27 0 PWL(0 0.81 20n 0.81 21n 0.81 2.676847754e-06 0.81 2.677847754e-06 0.81)
+RS27 src27 inp27 350
+XSW27 inp27 hold27 en enb vdd 0 adc_tgate_flat
+XH27 hold27 0 adc_mim_bank COUNT=4096
+RDC27 hold27 0 1e15
+.ic v(hold27)=0.81
+VIN28 src28 0 PWL(0 0.86 20n 0.86 21n 0.86 2.676847754e-06 0.86 2.677847754e-06 0.86)
+RS28 src28 inp28 350
+XSW28 inp28 hold28 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH28 hold28 0 adc_mim_bank COUNT=4096
+RDC28 hold28 0 1e15
+.ic v(hold28)=0.86
+VIN29 src29 0 PWL(0 0.86 20n 0.86 21n 0.86 2.676847754e-06 0.86 2.677847754e-06 0.86)
+RS29 src29 inp29 350
+XSW29 inp29 hold29 en enb vdd 0 adc_tgate_flat
+XH29 hold29 0 adc_mim_bank COUNT=4096
+RDC29 hold29 0 1e15
+.ic v(hold29)=0.86
+VIN30 src30 0 PWL(0 0.76 20n 0.76 21n 0.76 2.676847754e-06 0.76 2.677847754e-06 0.76)
+RS30 src30 inp30 1000
+XSW30 inp30 hold30 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH30 hold30 0 adc_mim_bank COUNT=4096
+RDC30 hold30 0 1e15
+.ic v(hold30)=0.76
+VIN31 src31 0 PWL(0 0.76 20n 0.76 21n 0.76 2.676847754e-06 0.76 2.677847754e-06 0.76)
+RS31 src31 inp31 1000
+XSW31 inp31 hold31 en enb vdd 0 adc_tgate_flat
+XH31 hold31 0 adc_mim_bank COUNT=4096
+RDC31 hold31 0 1e15
+.ic v(hold31)=0.76
+VIN32 src32 0 PWL(0 0.81 20n 0.81 21n 0.81 2.676847754e-06 0.81 2.677847754e-06 0.81)
+RS32 src32 inp32 1000
+XSW32 inp32 hold32 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH32 hold32 0 adc_mim_bank COUNT=4096
+RDC32 hold32 0 1e15
+.ic v(hold32)=0.81
+VIN33 src33 0 PWL(0 0.81 20n 0.81 21n 0.81 2.676847754e-06 0.81 2.677847754e-06 0.81)
+RS33 src33 inp33 1000
+XSW33 inp33 hold33 en enb vdd 0 adc_tgate_flat
+XH33 hold33 0 adc_mim_bank COUNT=4096
+RDC33 hold33 0 1e15
+.ic v(hold33)=0.81
+VIN34 src34 0 PWL(0 0.86 20n 0.86 21n 0.86 2.676847754e-06 0.86 2.677847754e-06 0.86)
+RS34 src34 inp34 1000
+XSW34 inp34 hold34 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH34 hold34 0 adc_mim_bank COUNT=4096
+RDC34 hold34 0 1e15
+.ic v(hold34)=0.86
+VIN35 src35 0 PWL(0 0.86 20n 0.86 21n 0.86 2.676847754e-06 0.86 2.677847754e-06 0.86)
+RS35 src35 inp35 1000
+XSW35 inp35 hold35 en enb vdd 0 adc_tgate_flat
+XH35 hold35 0 adc_mim_bank COUNT=4096
+RDC35 hold35 0 1e15
+.ic v(hold35)=0.86
+VIN36 src36 0 PWL(0 0.76 20n 0.76 21n 0.96 2.676847754e-06 0.96 2.677847754e-06 0.56)
+RS36 src36 inp36 0.001
+XSW36 inp36 hold36 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH36 hold36 0 adc_mim_bank COUNT=4096
+RDC36 hold36 0 1e15
+.ic v(hold36)=0.76
+VIN37 src37 0 PWL(0 0.76 20n 0.76 21n 0.96 2.676847754e-06 0.96 2.677847754e-06 0.56)
+RS37 src37 inp37 0.001
+XSW37 inp37 hold37 en enb vdd 0 adc_tgate_flat
+XH37 hold37 0 adc_mim_bank COUNT=4096
+RDC37 hold37 0 1e15
+.ic v(hold37)=0.76
+VIN38 src38 0 PWL(0 0.81 20n 0.81 21n 1.01 2.676847754e-06 1.01 2.677847754e-06 0.61)
+RS38 src38 inp38 0.001
+XSW38 inp38 hold38 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH38 hold38 0 adc_mim_bank COUNT=4096
+RDC38 hold38 0 1e15
+.ic v(hold38)=0.81
+VIN39 src39 0 PWL(0 0.81 20n 0.81 21n 1.01 2.676847754e-06 1.01 2.677847754e-06 0.61)
+RS39 src39 inp39 0.001
+XSW39 inp39 hold39 en enb vdd 0 adc_tgate_flat
+XH39 hold39 0 adc_mim_bank COUNT=4096
+RDC39 hold39 0 1e15
+.ic v(hold39)=0.81
+VIN40 src40 0 PWL(0 0.86 20n 0.86 21n 1.06 2.676847754e-06 1.06 2.677847754e-06 0.66)
+RS40 src40 inp40 0.001
+XSW40 inp40 hold40 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH40 hold40 0 adc_mim_bank COUNT=4096
+RDC40 hold40 0 1e15
+.ic v(hold40)=0.86
+VIN41 src41 0 PWL(0 0.86 20n 0.86 21n 1.06 2.676847754e-06 1.06 2.677847754e-06 0.66)
+RS41 src41 inp41 0.001
+XSW41 inp41 hold41 en enb vdd 0 adc_tgate_flat
+XH41 hold41 0 adc_mim_bank COUNT=4096
+RDC41 hold41 0 1e15
+.ic v(hold41)=0.86
+VIN42 src42 0 PWL(0 0.76 20n 0.76 21n 0.96 2.676847754e-06 0.96 2.677847754e-06 0.56)
+RS42 src42 inp42 350
+XSW42 inp42 hold42 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH42 hold42 0 adc_mim_bank COUNT=4096
+RDC42 hold42 0 1e15
+.ic v(hold42)=0.76
+VIN43 src43 0 PWL(0 0.76 20n 0.76 21n 0.96 2.676847754e-06 0.96 2.677847754e-06 0.56)
+RS43 src43 inp43 350
+XSW43 inp43 hold43 en enb vdd 0 adc_tgate_flat
+XH43 hold43 0 adc_mim_bank COUNT=4096
+RDC43 hold43 0 1e15
+.ic v(hold43)=0.76
+VIN44 src44 0 PWL(0 0.81 20n 0.81 21n 1.01 2.676847754e-06 1.01 2.677847754e-06 0.61)
+RS44 src44 inp44 350
+XSW44 inp44 hold44 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH44 hold44 0 adc_mim_bank COUNT=4096
+RDC44 hold44 0 1e15
+.ic v(hold44)=0.81
+VIN45 src45 0 PWL(0 0.81 20n 0.81 21n 1.01 2.676847754e-06 1.01 2.677847754e-06 0.61)
+RS45 src45 inp45 350
+XSW45 inp45 hold45 en enb vdd 0 adc_tgate_flat
+XH45 hold45 0 adc_mim_bank COUNT=4096
+RDC45 hold45 0 1e15
+.ic v(hold45)=0.81
+VIN46 src46 0 PWL(0 0.86 20n 0.86 21n 1.06 2.676847754e-06 1.06 2.677847754e-06 0.66)
+RS46 src46 inp46 350
+XSW46 inp46 hold46 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH46 hold46 0 adc_mim_bank COUNT=4096
+RDC46 hold46 0 1e15
+.ic v(hold46)=0.86
+VIN47 src47 0 PWL(0 0.86 20n 0.86 21n 1.06 2.676847754e-06 1.06 2.677847754e-06 0.66)
+RS47 src47 inp47 350
+XSW47 inp47 hold47 en enb vdd 0 adc_tgate_flat
+XH47 hold47 0 adc_mim_bank COUNT=4096
+RDC47 hold47 0 1e15
+.ic v(hold47)=0.86
+VIN48 src48 0 PWL(0 0.76 20n 0.76 21n 0.96 2.676847754e-06 0.96 2.677847754e-06 0.56)
+RS48 src48 inp48 1000
+XSW48 inp48 hold48 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH48 hold48 0 adc_mim_bank COUNT=4096
+RDC48 hold48 0 1e15
+.ic v(hold48)=0.76
+VIN49 src49 0 PWL(0 0.76 20n 0.76 21n 0.96 2.676847754e-06 0.96 2.677847754e-06 0.56)
+RS49 src49 inp49 1000
+XSW49 inp49 hold49 en enb vdd 0 adc_tgate_flat
+XH49 hold49 0 adc_mim_bank COUNT=4096
+RDC49 hold49 0 1e15
+.ic v(hold49)=0.76
+VIN50 src50 0 PWL(0 0.81 20n 0.81 21n 1.01 2.676847754e-06 1.01 2.677847754e-06 0.61)
+RS50 src50 inp50 1000
+XSW50 inp50 hold50 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH50 hold50 0 adc_mim_bank COUNT=4096
+RDC50 hold50 0 1e15
+.ic v(hold50)=0.81
+VIN51 src51 0 PWL(0 0.81 20n 0.81 21n 1.01 2.676847754e-06 1.01 2.677847754e-06 0.61)
+RS51 src51 inp51 1000
+XSW51 inp51 hold51 en enb vdd 0 adc_tgate_flat
+XH51 hold51 0 adc_mim_bank COUNT=4096
+RDC51 hold51 0 1e15
+.ic v(hold51)=0.81
+VIN52 src52 0 PWL(0 0.86 20n 0.86 21n 1.06 2.676847754e-06 1.06 2.677847754e-06 0.66)
+RS52 src52 inp52 1000
+XSW52 inp52 hold52 en enb vdd 0 adc_tgate_dual_lvt_dummy WN=4.0 WP=8.0 DUMMY=0.5
+XH52 hold52 0 adc_mim_bank COUNT=4096
+RDC52 hold52 0 1e15
+.ic v(hold52)=0.86
+VIN53 src53 0 PWL(0 0.86 20n 0.86 21n 1.06 2.676847754e-06 1.06 2.677847754e-06 0.66)
+RS53 src53 inp53 1000
+XSW53 inp53 hold53 en enb vdd 0 adc_tgate_flat
+XH53 hold53 0 adc_mim_bank COUNT=4096
+RDC53 hold53 0 1e15
+.ic v(hold53)=0.86
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 5n 10u uic
+wrdata /repo/v2/physical/adc_switch/runs/dummy_w4w8_rc_full/batch_36_sf_1.62_-20.tsv v(hold0) v(hold1) v(hold2) v(hold3) v(hold4) v(hold5) v(hold6) v(hold7) v(hold8) v(hold9) v(hold10) v(hold11) v(hold12) v(hold13) v(hold14) v(hold15) v(hold16) v(hold17) v(hold18) v(hold19) v(hold20) v(hold21) v(hold22) v(hold23) v(hold24) v(hold25) v(hold26) v(hold27) v(hold28) v(hold29) v(hold30) v(hold31) v(hold32) v(hold33) v(hold34) v(hold35) v(hold36) v(hold37) v(hold38) v(hold39) v(hold40) v(hold41) v(hold42) v(hold43) v(hold44) v(hold45) v(hold46) v(hold47) v(hold48) v(hold49) v(hold50) v(hold51) v(hold52) v(hold53)
+quit
+.endc
+.end

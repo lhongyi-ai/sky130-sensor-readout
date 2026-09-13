@@ -1,0 +1,23 @@
+[
+  {
+    "corner": "tt",
+    "vdd_v": 1.8,
+    "temp_c": 27.0,
+    "gain_setting": 4,
+    "load_pf_per_output": 5.0,
+    "measured_dc_gain_vv": 3.981358910371187,
+    "gain_error_percent": -0.46602724072032364,
+    "output_common_mode_v": 0.889205291,
+    "bias_bn_v": 0.694466511,
+    "bias_bp_v": 0.587212386,
+    "power_w": 0.000784560942,
+    "bandwidth_3db_hz": 5956621.44,
+    "step_positive_final_v": 0.35831346049999996,
+    "step_negative_final_v": -0.35831346049999996,
+    "settling_positive_s": 6.869292799999996e-07,
+    "settling_negative_s": 6.86929300000001e-07,
+    "cm_deviation_during_step_v": 0.04187783700000003,
+    "settling_reference": "own settled endpoint; excludes static gain/offset error",
+    "evidence_level": "actual SKY130 MOS, ideal passives, pre-layout ngspice"
+  }
+]

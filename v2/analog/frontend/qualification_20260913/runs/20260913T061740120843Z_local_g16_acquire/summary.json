@@ -1,0 +1,138 @@
+{
+  "kind": "local",
+  "gain": 16,
+  "sampler_state": "acquire",
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temperature_c": 27,
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "complete_frontend_qualified": false,
+  "formal_stability_gate_pass": false,
+  "single_worker": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 3.0284262810018845,
+  "simulator_diagnostics": [],
+  "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+  "loops": {
+    "dm": {
+      "tian_bilateral_local_diagnostic": {
+        "low_frequency_gain_db": 44.48857386345754,
+        "low_frequency_phase_deg": -0.011290816099430884,
+        "unity_crossings": [
+          {
+            "frequency_hz": 761829.5661115756,
+            "phase_deg": -98.03823999116453,
+            "phase_margin_deg": 81.96176000883547,
+            "direction": "down"
+          }
+        ],
+        "min_distance_to_minus_one": 0.9795440678944065
+      },
+      "old_voltage_ratio_diagnostic": {
+        "low_frequency_gain_db": 44.48857386355581,
+        "low_frequency_phase_deg": -0.011285593319472159,
+        "unity_crossings": [
+          {
+            "frequency_hz": 748872.4350751722,
+            "phase_deg": -96.70070117125624,
+            "phase_margin_deg": 83.29929882874376,
+            "direction": "down"
+          },
+          {
+            "frequency_hz": 38894846.76992694,
+            "phase_deg": -280.5453391009019,
+            "phase_margin_deg": -100.54533910090191,
+            "direction": "up"
+          }
+        ],
+        "min_distance_to_minus_one": 0.9959688476590021
+      },
+      "minimum_formula_denominator_abs": 0.0059290985385024005,
+      "complete_multiloop_signoff": false
+    },
+    "input_cm": {
+      "tian_bilateral_local_diagnostic": {
+        "low_frequency_gain_db": -59.95018443556411,
+        "low_frequency_phase_deg": 179.99998676227025,
+        "unity_crossings": [],
+        "min_distance_to_minus_one": 0.998994248293285
+      },
+      "old_voltage_ratio_diagnostic": {
+        "low_frequency_gain_db": -59.95018443521181,
+        "low_frequency_phase_deg": 179.99948299611202,
+        "unity_crossings": [
+          {
+            "frequency_hz": 127704025.68826453,
+            "phase_deg": 63.556633771683856,
+            "phase_margin_deg": 243.55663377168386,
+            "direction": "up"
+          }
+        ],
+        "min_distance_to_minus_one": 0.9989942482932855
+      },
+      "minimum_formula_denominator_abs": 0.9998898648888283,
+      "complete_multiloop_signoff": false
+    },
+    "stage1_cm": {
+      "tian_bilateral_local_diagnostic": {
+        "low_frequency_gain_db": 57.36086162538722,
+        "low_frequency_phase_deg": -0.008319971512003626,
+        "unity_crossings": [
+          {
+            "frequency_hz": 4399657.371170967,
+            "phase_deg": -82.834843422566,
+            "phase_margin_deg": 97.165156577434,
+            "direction": "down"
+          }
+        ],
+        "min_distance_to_minus_one": 0.9344051069197914
+      },
+      "old_voltage_ratio_diagnostic": {
+        "low_frequency_gain_db": 57.36086163170868,
+        "low_frequency_phase_deg": -0.00801621431603571,
+        "unity_crossings": [
+          {
+            "frequency_hz": 6314097.5645577945,
+            "phase_deg": -54.08969187035422,
+            "phase_margin_deg": 125.91030812964578,
+            "direction": "down"
+          }
+        ],
+        "min_distance_to_minus_one": 1.609498286565697
+      },
+      "minimum_formula_denominator_abs": 0.0013532212973005892,
+      "complete_multiloop_signoff": false
+    },
+    "output_cm": {
+      "tian_bilateral_local_diagnostic": {
+        "low_frequency_gain_db": 41.93139170454447,
+        "low_frequency_phase_deg": -0.0030511825797618387,
+        "unity_crossings": [
+          {
+            "frequency_hz": 6667092.063791613,
+            "phase_deg": -58.780549120522664,
+            "phase_margin_deg": 121.21945087947734,
+            "direction": "down"
+          }
+        ],
+        "min_distance_to_minus_one": 0.9699606332873938
+      },
+      "old_voltage_ratio_diagnostic": {
+        "low_frequency_gain_db": 41.931391704551686,
+        "low_frequency_phase_deg": -0.003049163279656363,
+        "unity_crossings": [
+          {
+            "frequency_hz": 7203061.776794632,
+            "phase_deg": -56.99890627517939,
+            "phase_margin_deg": 123.0010937248206,
+            "direction": "down"
+          }
+        ],
+        "min_distance_to_minus_one": 0.9977605134572128
+      },
+      "minimum_formula_denominator_abs": 0.007942682085899768,
+      "complete_multiloop_signoff": false
+    }
+  }
+}

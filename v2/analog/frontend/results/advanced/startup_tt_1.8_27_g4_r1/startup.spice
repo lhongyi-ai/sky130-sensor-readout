@@ -1,0 +1,25 @@
+* Actual SKY130 transistor frontend; ideal R/C passives, schematic only.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/results/advanced/startup_tt_1.8_27_g4_r1/frontend_pdk_snapshot.spice
+.temp 27
+VDD VDD 0 PWL(0 0 1e-06 1.8 0.0001 1.8)
+BVCM VCM 0 v=v(vdd)/2
+BIP SP 0 v=v(vdd)/2
+BIN SN 0 v=v(vdd)/2
+
+RSP SP IP 350
+RSN SN IN 350
+XPGA IP IN OP ON VDD 0 VCM sky130_v2_pga RF=10000 RG=2150.0
+CLP OP 0 81.285p
+CLN ON 0 81.285p
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+
+tran 20n 0.0001 uic
+let cm=(v(op)+v(on))/2
+wrdata startup.dat v(vdd) cm v(xpga.xamp.bn) v(xpga.xamp.bp) v(xpga.xamp.start) i(vdd)
+quit
+.endc
+.end

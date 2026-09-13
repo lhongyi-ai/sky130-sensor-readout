@@ -1,0 +1,40 @@
+{
+  "evidence_level": "Nominal stationary preamp noise, real reset StrongARM plus MIM load, no SR latch DC ambiguity; NOT ADC noise qualification",
+  "vdd": 1.8,
+  "temperature_c": 27,
+  "corner": "tt",
+  "dc_gain_vv": 15.310081783040198,
+  "preamp_power_w": 6.046397434762201e-05,
+  "reset_strongarm_static_power_w": 2.4545627449884e-11,
+  "noise_bands": [
+    {
+      "lower_hz": 1,
+      "upper_hz": 5000.0,
+      "output_noise_referred_to_dc_input_rms_v": 1.798541366691875e-05,
+      "integrated_input_equivalent_spectrum_rms_v": 1.79854143052783e-05
+    },
+    {
+      "lower_hz": 1,
+      "upper_hz": 50000.0,
+      "output_noise_referred_to_dc_input_rms_v": 2.2983225816777478e-05,
+      "integrated_input_equivalent_spectrum_rms_v": 2.29833034954896e-05
+    },
+    {
+      "lower_hz": 1,
+      "upper_hz": 100000000.0,
+      "output_noise_referred_to_dc_input_rms_v": 6.302961078559403e-05,
+      "integrated_input_equivalent_spectrum_rms_v": 0.00017290374553773134
+    }
+  ],
+  "source_sha256": {
+    "adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "adc_preamp.spice": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782"
+  },
+  "limitations": [
+    "No clocked comparator noise",
+    "No sampled-noise folding",
+    "No noise below 1 Hz included",
+    "No mismatch or extracted parasitics",
+    "Output-buffer gate parasitics omitted from reset comparator ballast load"
+  ]
+}

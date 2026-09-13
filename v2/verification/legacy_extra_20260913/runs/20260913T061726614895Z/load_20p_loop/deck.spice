@@ -1,0 +1,58 @@
+* LOCAL NGSPICE COUNTERPART; NOT A CADENCE RUN
+.lib "/foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.temp 27
+.options reltol=1e-5 abstol=1e-12 vntol=1e-7
+.subckt p1b_ota_legacy_r4 VDD VSS VINP VINN VOUT VBP
+XM8 VBP VBP VDD VDD sky130_fd_pr__pfet_01v8 w=7.22 l=0.8 as=1.9133 ad=1.9133 ps=14.97 pd=14.97 nf=1 mult=1
+XM9 VBN VBP VDD VDD sky130_fd_pr__pfet_01v8 w=7.22 l=0.8 as=1.9133 ad=1.9133 ps=14.97 pd=14.97 nf=1 mult=1
+XM10 VBN VBN VSS VSS sky130_fd_pr__nfet_01v8 w=8.09 l=0.8 as=2.14385 ad=2.14385 ps=16.71 pd=16.71 nf=1 mult=1
+XM1 NMIR VINN TAIL VSS sky130_fd_pr__nfet_01v8 w=16.84 l=0.5 as=4.4626 ad=4.4626 ps=34.21 pd=34.21 nf=1 mult=1
+XM2 VX VINP TAIL VSS sky130_fd_pr__nfet_01v8 w=16.84 l=0.5 as=4.4626 ad=4.4626 ps=34.21 pd=34.21 nf=1 mult=1
+XM3A NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 w=25 l=0.5 as=6.625 ad=6.625 ps=50.53 pd=50.53 nf=1 mult=1
+XM3B NMIR NMIR VDD VDD sky130_fd_pr__pfet_01v8 w=25 l=0.5 as=6.625 ad=6.625 ps=50.53 pd=50.53 nf=1 mult=1
+XM4A VX NMIR VDD VDD sky130_fd_pr__pfet_01v8 w=25 l=0.5 as=6.625 ad=6.625 ps=50.53 pd=50.53 nf=1 mult=1
+XM4B VX NMIR VDD VDD sky130_fd_pr__pfet_01v8 w=25 l=0.5 as=6.625 ad=6.625 ps=50.53 pd=50.53 nf=1 mult=1
+XM5 TAIL VBN VSS VSS sky130_fd_pr__nfet_01v8 w=25.88 l=0.8 as=6.8582 ad=6.8582 ps=52.29 pd=52.29 nf=1 mult=1
+XM6 VOUT VX VSS VSS sky130_fd_pr__nfet_01v8 w=8.84 l=0.5 as=2.3426 ad=2.3426 ps=18.21 pd=18.21 nf=1 mult=1
+XM7A VOUT VBP VDD VDD sky130_fd_pr__pfet_01v8 w=36.1 l=0.8 as=9.5665 ad=9.5665 ps=72.73 pd=72.73 nf=1 mult=1
+XM7B VOUT VBP VDD VDD sky130_fd_pr__pfet_01v8 w=36.1 l=0.8 as=9.5665 ad=9.5665 ps=72.73 pd=72.73 nf=1 mult=1
+RZ1 VX NCC 2k
+CC1 NCC VOUT 3p
+.ends p1b_ota_legacy_r4
+VSSSUP VSS 0 DC 0 AC 0 0
+VDD VDD VSS DC 1.8 AC 0 0
+IREF VBP VSS 9.999999999999999e-06
+RLOAD VOUT VSS 100000
+CLOAD VOUT VSS 2e-11
+XOTA VDD VSS VINP VINN VOUT VBP p1b_ota_legacy_r4
+VINP VINP VSS DC 0.9 AC 0 0
+VTEST VTEST VSS DC 0 AC 1 0
+LBREAK VOUT VINN 1000000000
+CBREAK VTEST VINN 1000000000
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+op
+wrdata op.tsv v(VDD) v(VSS) v(VINP) v(VOUT) v(VBP) v(VINN) i(VDD) @m.xota.xm8.msky130_fd_pr__pfet_01v8[id] @m.xota.xm8.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm8.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm8.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm8.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm8.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm9.msky130_fd_pr__pfet_01v8[id] @m.xota.xm9.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm9.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm9.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm9.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm9.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm10.msky130_fd_pr__nfet_01v8[id] @m.xota.xm10.msky130_fd_pr__nfet_01v8[gm] @m.xota.xm10.msky130_fd_pr__nfet_01v8[gds] @m.xota.xm10.msky130_fd_pr__nfet_01v8[vgs] @m.xota.xm10.msky130_fd_pr__nfet_01v8[vds] @m.xota.xm10.msky130_fd_pr__nfet_01v8[vdsat] @m.xota.xm1.msky130_fd_pr__nfet_01v8[id] @m.xota.xm1.msky130_fd_pr__nfet_01v8[gm] @m.xota.xm1.msky130_fd_pr__nfet_01v8[gds] @m.xota.xm1.msky130_fd_pr__nfet_01v8[vgs] @m.xota.xm1.msky130_fd_pr__nfet_01v8[vds] @m.xota.xm1.msky130_fd_pr__nfet_01v8[vdsat] @m.xota.xm2.msky130_fd_pr__nfet_01v8[id] @m.xota.xm2.msky130_fd_pr__nfet_01v8[gm] @m.xota.xm2.msky130_fd_pr__nfet_01v8[gds] @m.xota.xm2.msky130_fd_pr__nfet_01v8[vgs] @m.xota.xm2.msky130_fd_pr__nfet_01v8[vds] @m.xota.xm2.msky130_fd_pr__nfet_01v8[vdsat] @m.xota.xm3a.msky130_fd_pr__pfet_01v8[id] @m.xota.xm3a.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm3a.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm3a.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm3a.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm3a.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm3b.msky130_fd_pr__pfet_01v8[id] @m.xota.xm3b.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm3b.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm3b.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm3b.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm3b.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm4a.msky130_fd_pr__pfet_01v8[id] @m.xota.xm4a.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm4a.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm4a.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm4a.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm4a.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm4b.msky130_fd_pr__pfet_01v8[id] @m.xota.xm4b.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm4b.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm4b.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm4b.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm4b.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm5.msky130_fd_pr__nfet_01v8[id] @m.xota.xm5.msky130_fd_pr__nfet_01v8[gm] @m.xota.xm5.msky130_fd_pr__nfet_01v8[gds] @m.xota.xm5.msky130_fd_pr__nfet_01v8[vgs] @m.xota.xm5.msky130_fd_pr__nfet_01v8[vds] @m.xota.xm5.msky130_fd_pr__nfet_01v8[vdsat] @m.xota.xm6.msky130_fd_pr__nfet_01v8[id] @m.xota.xm6.msky130_fd_pr__nfet_01v8[gm] @m.xota.xm6.msky130_fd_pr__nfet_01v8[gds] @m.xota.xm6.msky130_fd_pr__nfet_01v8[vgs] @m.xota.xm6.msky130_fd_pr__nfet_01v8[vds] @m.xota.xm6.msky130_fd_pr__nfet_01v8[vdsat] @m.xota.xm7a.msky130_fd_pr__pfet_01v8[id] @m.xota.xm7a.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm7a.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm7a.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm7a.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm7a.msky130_fd_pr__pfet_01v8[vdsat] @m.xota.xm7b.msky130_fd_pr__pfet_01v8[id] @m.xota.xm7b.msky130_fd_pr__pfet_01v8[gm] @m.xota.xm7b.msky130_fd_pr__pfet_01v8[gds] @m.xota.xm7b.msky130_fd_pr__pfet_01v8[vgs] @m.xota.xm7b.msky130_fd_pr__pfet_01v8[vds] @m.xota.xm7b.msky130_fd_pr__pfet_01v8[vdsat]
+ac dec 120 1 1G
+let r_VOUT=real(v(VOUT))
+let i_VOUT=imag(v(VOUT))
+wrdata VOUT.tsv r_VOUT i_VOUT
+let r_VINP=real(v(VINP))
+let i_VINP=imag(v(VINP))
+wrdata VINP.tsv r_VINP i_VINP
+let r_VINN=real(v(VINN))
+let i_VINN=imag(v(VINN))
+wrdata VINN.tsv r_VINN i_VINN
+let r_VDD=real(v(VDD))
+let i_VDD=imag(v(VDD))
+wrdata VDD.tsv r_VDD i_VDD
+let r_VSS=real(v(VSS))
+let i_VSS=imag(v(VSS))
+wrdata VSS.tsv r_VSS i_VSS
+echo LOCAL_ANALYSIS_FINISHED
+quit
+.endc
+.end

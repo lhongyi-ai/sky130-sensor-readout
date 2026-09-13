@@ -1,0 +1,203 @@
+{
+  "status": "GENERATED_NOT_YET_PHYSICALLY_QUALIFIED",
+  "evidence_level": "Generated real-metal routing input; DRC/LVS/PEX determined only after tools run",
+  "assignment_preserved": true,
+  "pitch_um": {
+    "x": 6.0,
+    "y": 6.0
+  },
+  "prior_pitch_um": {
+    "x": 6.0,
+    "y": 4.54
+  },
+  "pitch_change_percent": {
+    "x": 0.0,
+    "y": 32.15859030837005
+  },
+  "routing": {
+    "top": "metal3 mesh physically overlaps every active C2 terminal",
+    "bank_escape": "metal4 C1 fingers and row-channel buses",
+    "bank_trunks": "metal5 with real 1.18um via4 contacts and 1.60um-wide M5",
+    "periphery": "distinct metal4 buses, 2.0um pitch",
+    "edge_dummies": "both plates shorted and tied to separate EDGE_BIAS metal3 ring",
+    "detached_connectivity_labels": false
+  },
+  "route_summary": {
+    "P": {
+      "active_units": 4096,
+      "edge_dummies": 260,
+      "contiguous_row_runs": 140,
+      "metal5_trunks": 24,
+      "trunks_by_net_um": {
+        "B0": [
+          191.27
+        ],
+        "B1": [
+          11.27,
+          377.27
+        ],
+        "B10": [
+          -16.8,
+          406.8
+        ],
+        "B11": [
+          -20.0,
+          410.0
+        ],
+        "B2": [
+          17.27,
+          365.27
+        ],
+        "B3": [
+          35.27,
+          347.27
+        ],
+        "B4": [
+          71.27,
+          311.27
+        ],
+        "B5": [
+          143.27,
+          239.27
+        ],
+        "B6": [
+          -4.0,
+          394.0
+        ],
+        "B7": [
+          -7.2,
+          397.2
+        ],
+        "B8": [
+          -10.4,
+          400.4
+        ],
+        "B9": [
+          -13.600000000000001,
+          403.6
+        ],
+        "DUMMY": [
+          197.27
+        ]
+      },
+      "counts_by_net": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      }
+    },
+    "N": {
+      "active_units": 4096,
+      "edge_dummies": 260,
+      "contiguous_row_runs": 140,
+      "metal5_trunks": 24,
+      "trunks_by_net_um": {
+        "B0": [
+          197.27
+        ],
+        "B1": [
+          11.27,
+          377.27
+        ],
+        "B10": [
+          -16.8,
+          406.8
+        ],
+        "B11": [
+          -20.0,
+          410.0
+        ],
+        "B2": [
+          17.27,
+          365.27
+        ],
+        "B3": [
+          35.27,
+          347.27
+        ],
+        "B4": [
+          71.27,
+          311.27
+        ],
+        "B5": [
+          143.27,
+          239.27
+        ],
+        "B6": [
+          -4.0,
+          394.0
+        ],
+        "B7": [
+          -7.2,
+          397.2
+        ],
+        "B8": [
+          -10.4,
+          400.4
+        ],
+        "B9": [
+          -13.600000000000001,
+          403.6
+        ],
+        "DUMMY": [
+          191.27
+        ]
+      },
+      "counts_by_net": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1
+      }
+    }
+  },
+  "geometry": {
+    "side_bbox_estimate_um": [
+      -20.8,
+      -1.7,
+      410.8,
+      420.8
+    ],
+    "side_width_height_um": [
+      431.6,
+      422.5
+    ],
+    "side_area_mm2": 0.182351,
+    "differential_bbox_estimate_um": [
+      893.2,
+      422.5
+    ],
+    "differential_area_mm2": 0.377377
+  },
+  "sources_sha256": {
+    "v2/physical/cdac/cdac_p_assignment.csv": "5c604dd024ba0c9fb5970ed5424c02e7a75f0b4b5695f208856f28f176272d88",
+    "v2/physical/cdac/cdac_n_assignment.csv": "498bf0359188651409dfbba9b273e8c02c522107d5768723f479f50fc965df34",
+    "v2/physical/cdac/assignment_summary.json": "13e1086f7d73e8568d5b9452b676765ed4fbb49ba3c6c0e1d3c17a538000135d",
+    "v2/physical/cdac_layout_20260911/artifacts/mim_unit.mag": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e"
+  },
+  "generated_sha256": {
+    "generate_routed_cdac.tcl": "8fb38ce99ad1ac2d7787db21ef157421efcfa6d5543517c4511a3171aed6dd03",
+    "cdac_side_p_routed_flat.reference.spice": "48080d275b81bed345f7300a70cb32da1db94051c53b8b2ded2ea5aab648925b",
+    "cdac_side_n_routed_flat.reference.spice": "cb637a8cdd0993da122f92c9c804d5c47a7fcba123466d6f7688d6580d0a5566",
+    "cdac_diff_routed.reference.spice": "4241ef0384946d7498009646e0ac8b075a6281060976e2219843ad7d47aeddf2"
+  }
+}

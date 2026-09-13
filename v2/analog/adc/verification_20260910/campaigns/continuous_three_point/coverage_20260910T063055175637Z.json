@@ -1,0 +1,20 @@
+{
+  "status": "SMOKE_POINTS_COMPLETE_NOT_LINEARITY",
+  "stage": "smoke",
+  "plan_sha256": "75eb391e8d05b37fed171903ef2b84cad3b1d9e141006efba94af8dbc8a1f569",
+  "required_points": 3,
+  "completed_points": 3,
+  "missing_batches": [],
+  "incomplete_batches": [],
+  "errors": [],
+  "complete_adc_qualified": false,
+  "full_chip_qualified": false,
+  "limitations": [
+    "Deterministic transistor static test; no device-noise SNDR or mismatch claim.",
+    "Ideal logic-voltage bridges; unchanged RTL, not routed digital power or delay.",
+    "Schematic composite ADC; no whole-ADC extracted layout.",
+    "Each batch starts from OP/reset and replays one preceding point; history protocol is finite.",
+    "A single numerical profile is not a convergence study or final static signoff."
+  ],
+  "observed_unique_codes": 3
+}

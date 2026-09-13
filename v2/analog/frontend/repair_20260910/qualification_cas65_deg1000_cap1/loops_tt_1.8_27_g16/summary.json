@@ -1,0 +1,49 @@
+{
+  "test": "FDDA scalar voltage-return-ratio diagnostic",
+  "gain": 16,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "source_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+  "loops": {
+    "dm": {
+      "low_frequency_gain_db": 54.3184418810977,
+      "low_frequency_phase_deg": -0.015645155641091698,
+      "unity_crossings": [
+        {
+          "frequency_hz": 1661785.7155606283,
+          "phase_deg": -73.95859916364444,
+          "scalar_phase_margin_deg": 106.04140083635556,
+          "direction": "down"
+        },
+        {
+          "frequency_hz": 30609178.132165268,
+          "phase_deg": 88.19061048674257,
+          "scalar_phase_margin_deg": 268.19061048674257,
+          "direction": "up"
+        }
+      ],
+      "scalar_downcrossings_meet_60deg": true
+    },
+    "cm": {
+      "low_frequency_gain_db": 89.34848333827482,
+      "low_frequency_phase_deg": -179.83619448976305,
+      "unity_crossings": [
+        {
+          "frequency_hz": 3640575.550564807,
+          "phase_deg": -119.84544701986157,
+          "scalar_phase_margin_deg": 60.15455298013843,
+          "direction": "down"
+        }
+      ],
+      "scalar_downcrossings_meet_60deg": true
+    }
+  },
+  "formal_multiloop_stability_signoff": false,
+  "limitations": [
+    "Static 81.28512 pF/side test load after physical isolation network.",
+    "Opposite loop remains connected; no independent open-loop RHP pole count.",
+    "Scalar injection assumes useful unidirectional return-ratio separation; all unity crossings retained.",
+    "Switched-load transient, layout parasitics, and full PVT are separate evidence."
+  ]
+}

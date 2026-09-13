@@ -1,0 +1,23 @@
+SKY130 nominal transistor compatibility control
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.param mc_mm_switch=0 mc_pr_switch=0
+VDD vdd 0 1.8
+VG gate 0 DC .7 AC 1
+RLOAD vdd out 20k
+CLOAD out 0 1p
+XM out gate 0 0 sky130_fd_pr__nfet_01v8 W=2 L=1
+.temp 27
+.control
+set wr_vecnames
+set wr_singlescale
+set numdgt=15
+op
+wrdata /repo/v2/verification/noise_20260910/results/20260910T062837Z/sky130_nfet/ngspice_op.tsv v(out) i(vdd)
+noise v(out) VG dec 40 10 100meg
+setplot noise1
+wrdata /repo/v2/verification/noise_20260910/results/20260910T062837Z/sky130_nfet/ngspice_noise.tsv onoise_spectrum
+tran 1n 20u
+wrdata /repo/v2/verification/noise_20260910/results/20260910T062837Z/sky130_nfet/ngspice_tran.tsv v(out)
+quit
+.endc
+.end

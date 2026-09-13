@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-11T08:05:49.247496+00:00",
+  "scope": "Recorded artifact integrity only, not an electrical test PASS",
+  "files": {
+    "bench.spice": {
+      "sha256": "38dcae12394e373d7d1b63a628bc09b82aabb1f5e124dd8978303f396ae114b9",
+      "size_bytes": 1372
+    },
+    "console.txt": {
+      "sha256": "d1ebaa7bb1548d46a57f9c9cb270e8eb111a4af948a5d7537f0ae79e7984806f",
+      "size_bytes": 515
+    },
+    "experiment_config.json": {
+      "sha256": "07f171d22a9d2d1098a4e3d3b1f30528455127b1057f51e5afb33f4784cc6c66",
+      "size_bytes": 43
+    },
+    "frontend_pdk_snapshot.spice": {
+      "sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+      "size_bytes": 8091
+    },
+    "helper_snapshot.py": {
+      "sha256": "0d508ec9649eeb3eeec05124202e08078363f891b4b26106da25da01db1f6da5",
+      "size_bytes": 13449
+    },
+    "loops.dat": {
+      "sha256": "82767edf793bef8498a4d87e6f94b4784837b266ea880fdbd6c18505d7522624",
+      "size_bytes": 91102
+    },
+    "measurement_injections.spice": {
+      "sha256": "1647bd79a41b689233624e3dbf4ba12ce8432be03a9c24c307599ad123e742e5",
+      "size_bytes": 8252
+    },
+    "op.dat": {
+      "sha256": "7c124bb9d33325075dd96319d2b83811423b9fab264e4182e671976e119f64f3",
+      "size_bytes": 202
+    },
+    "runner_snapshot.py": {
+      "sha256": "fb2f22d5ba0aa809f16e7c79927efa00c741461eb5a731e4eaec4249c3c8f3dd",
+      "size_bytes": 7148
+    },
+    "simulator.log": {
+      "sha256": "07421a314ae08559cf7bbd3d5614fd77cf1ea249f639d52fe2ba651643bdd295",
+      "size_bytes": 812
+    },
+    "summary.json": {
+      "sha256": "f54b2958975e353ba23fd943c569f72158a6e323482999c5c78256c69dd13586",
+      "size_bytes": 1845
+    }
+  },
+  "producer_code": {
+    "/repo/v2/analog/frontend/closure_20260911/run_loop_diagnostic.py": "fb2f22d5ba0aa809f16e7c79927efa00c741461eb5a731e4eaec4249c3c8f3dd",
+    "/repo/v2/analog/frontend/closure_20260911/run_diagnostic.py": "0d508ec9649eeb3eeec05124202e08078363f891b4b26106da25da01db1f6da5"
+  }
+}

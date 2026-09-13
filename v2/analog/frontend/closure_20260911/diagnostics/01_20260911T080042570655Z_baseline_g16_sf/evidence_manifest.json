@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-11T08:00:48.832044+00:00",
+  "scope": "Recorded artifact integrity only, not an electrical test PASS",
+  "files": {
+    "bench.spice": {
+      "sha256": "eab59ff893c63ee6eb2eafcd5d25909884164c172197eee79eaf6d773aad5842",
+      "size_bytes": 28007
+    },
+    "calibration_source_core.spice": {
+      "sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "size_bytes": 7726
+    },
+    "calibration_source_metadata.json": {
+      "sha256": "50a0403074725f33a13d6e89788816fe3316659ebf50fbf8fa4eb455a19b7a48",
+      "size_bytes": 244
+    },
+    "calibration_source_summary.json": {
+      "sha256": "4cd2cba86ea95f5798954f68c06423da9d36e98e6d5201880a868edaaf209766",
+      "size_bytes": 1232
+    },
+    "columns.json": {
+      "sha256": "13f7c774cb58c08ad85804a535ff82997af4a31f59a6c6298ccbd9cc6a1600c2",
+      "size_bytes": 3170
+    },
+    "console.txt": {
+      "sha256": "d1ebaa7bb1548d46a57f9c9cb270e8eb111a4af948a5d7537f0ae79e7984806f",
+      "size_bytes": 515
+    },
+    "dc.dat": {
+      "sha256": "1087199fa7a2af97be51c45a6f7631cb52db9819d86f9ff4d72dedab1bd08211",
+      "size_bytes": 323504
+    },
+    "experiment_config.json": {
+      "sha256": "a56bec16e4670226ddcc00e880587319cb8d712dccf87e6c38a3d37028e5a606",
+      "size_bytes": 293
+    },
+    "frontend_pdk_snapshot.spice": {
+      "sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "size_bytes": 7726
+    },
+    "measurement_evidence_snapshot.py": {
+      "sha256": "67f05a3ff95a4a567b1efb5b09f79fef3cea265011aee0374ff08a6095019c31",
+      "size_bytes": 4294
+    },
+    "op.dat": {
+      "sha256": "24972861a4e6ea3a5018f1e04df7b99aaae250ff803c4bb9f16595527d70caa8",
+      "size_bytes": 13024
+    },
+    "runner_snapshot.py": {
+      "sha256": "0d508ec9649eeb3eeec05124202e08078363f891b4b26106da25da01db1f6da5",
+      "size_bytes": 13449
+    },
+    "simulator.log": {
+      "sha256": "cc72a42717c6488088b477776aa4e929fd36e7614fc33dfefa3e5a919d1458d9",
+      "size_bytes": 6816
+    },
+    "summary.json": {
+      "sha256": "ef6755d81cfd5346c007a23086b8cf47530fd9bfcc33900a77d0cc6ff9654bb7",
+      "size_bytes": 6336
+    }
+  },
+  "producer_code": {
+    "/repo/v2/analog/frontend/closure_20260911/run_diagnostic.py": "0d508ec9649eeb3eeec05124202e08078363f891b4b26106da25da01db1f6da5",
+    "/repo/v2/analog/frontend/measurement_evidence.py": "67f05a3ff95a4a567b1efb5b09f79fef3cea265011aee0374ff08a6095019c31"
+  }
+}

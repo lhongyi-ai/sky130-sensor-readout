@@ -1,0 +1,15 @@
+{
+  "status": "PASS_LOCAL_STATIC_AND_NATIVE_AUDIT_CHECKS",
+  "skill_runtime": "NOT_RUN",
+  "repair_file_sha256": "f2cdd9cb6f613b32cd6219b3630c71c40ebf77304beb6b9769edf8637577c43c",
+  "source_design_sha256": "4a39408cf4b421a43eb64a7dc55d3b720b1e12143b0e1df24d8eed164adbf6b6",
+  "affected_sources": 2,
+  "parameters_checked": 14,
+  "checks": [
+    "SKILL lexical balance",
+    "All frozen pulse sources covered with exact values",
+    "CDF target names present in school analogLib source metadata",
+    "Actual failed native RC netlist rejected",
+    "Correct native fixture accepted; seven altered pulse values rejected"
+  ]
+}

@@ -1,0 +1,36 @@
+Native full-device closed-loop pole audit, G=16
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/repair_20260910/pole_audit/results/20260910T064427Z/g16/candidate.spice
+.temp 27
+.param mc_mm_switch=0 mc_pr_switch=0
+.options sparse reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=200 itl2=200
+VDD vdd 0 1.8
+VCM vcm 0 .9
+VIP sp 0 .9
+VIN sn 0 .9
+RSP sp ip 350
+RSN sn inn 350
+VSEL0 sel0 0 0
+VSEL1 sel1 0 1.8
+XDRV ip inn fp fn vdd 0 vcm sel0 sel1 sky130_v2_switchable_sample_driver RISO=2600
+* Static ADC load: qualified 4096 x 3um-square MIM bank, 81.28512pF/leg.
+* Both m and mult are required by the original PDK bank construction.
+XLP fp 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=4096 mult=4096
+XLN fn 0 sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m=4096 mult=4096
+.control
+set num_threads=1
+set numdgt=17
+set wr_singlescale
+set wr_vecnames
+set filetype=ascii
+version
+op
+wrdata /repo/v2/analog/frontend/repair_20260910/pole_audit/results/20260910T064427Z/g16/operating_point.tsv v(fp) v(fn) v(xdrv.corep) v(xdrv.coren) v(xdrv.xpga.xamp.cmctl) i(vdd)
+* Single-ended driving-point impedance excites both even/common and odd/diff modes.
+* It does not place an ideal voltage source across an existing powered input.
+pz fp 0 fp 0 cur pol
+print all
+write /repo/v2/analog/frontend/repair_20260910/pole_audit/results/20260910T064427Z/g16/poles.raw all
+quit
+.endc
+.end

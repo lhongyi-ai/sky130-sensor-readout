@@ -1,0 +1,26 @@
+* sample_350_1.10000
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear
+
+VDD vdd 0 1.8
+VIN src 0 PWL(0 .9 20n .9 21n 1.1)
+RS src inp 350
+VEN en 0 PWL(0 1.8 2.5u 1.8 2.501u 0)
+VENB enb 0 PWL(0 0 2.5u 0 2.501u 1.8)
+XSW inp hold en enb vdd 0 adc_tgate
+XH hold 0 adc_mim_bank COUNT=4096
+RDC hold 0 1e15
+.ic v(hold)=.9
+
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 1n 3u uic
+wrdata /repo/v2/analog/adc/results/sample_350_1.10000.tsv v(src) v(inp) v(hold) i(vdd)
+quit
+.endc
+.end

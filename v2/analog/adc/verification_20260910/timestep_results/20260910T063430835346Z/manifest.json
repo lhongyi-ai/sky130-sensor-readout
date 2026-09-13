@@ -1,0 +1,33 @@
+{
+  "status": "RUNNING",
+  "original_plan_sha256": "75eb391e8d05b37fed171903ef2b84cad3b1d9e141006efba94af8dbc8a1f569",
+  "original_deck_sha256": "ae1c137fd9d48f5ddc03f3e7b032f44a83e5b1a84db5528341a044fd4c5f5038",
+  "original_summary_sha256": "a73950550db90b22ebe59a3adc1c403eb826f14fd4530bfd3710962998680751",
+  "runtime_sha256": "d836e3a5c3d761d3dcf14d036edbe40829655770e05719ccd6a01f3c7ff16464",
+  "binary_sha256": "623bc217d88c868f8be9e7f6a03e90dfcf5c28b5a5dd4e6b2ea68dcde783f4ac",
+  "columns": {
+    "time": 0,
+    "valid": 1,
+    "inp": 2,
+    "inn": 3,
+    "clk": 16,
+    "evaluate": 17,
+    "top_sample": 18,
+    "acq": 19,
+    "conv": 20,
+    "tp": 21,
+    "tn": 22,
+    "rp": 23,
+    "rn": 24,
+    "vcm": 25,
+    "prep": 26,
+    "pren": 27,
+    "decision": 28,
+    "decision_b": 29
+  },
+  "approved_timesteps_ns": [
+    2,
+    10
+  ],
+  "complete_adc_qualified": false
+}

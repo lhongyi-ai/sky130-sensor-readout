@@ -1,0 +1,36 @@
+{
+  "status": "BATCH_COMPLETE_NOT_ADC_QUALIFIED",
+  "returncode": 0,
+  "plan_sha256": "163468ac4ba13582a2f995c64eff525ddb09c97a17bb30f696e971ef374794a5",
+  "sequence": [
+    {
+      "point_id": 0,
+      "input_v": 0.123,
+      "kind": "retained"
+    }
+  ],
+  "raw_codes": [
+    2677
+  ],
+  "rows": [
+    {
+      "point_id": 0,
+      "input_v": 0.123,
+      "raw_code": 2677,
+      "valid_time_s": 1.1003499999998276e-05,
+      "bus_code": 2677
+    }
+  ],
+  "complete_adc_qualified": false,
+  "wall_seconds": 43.07944366600714,
+  "deck_sha256": "a6a9e12429a122f4dabee2127b4b3b5a340a6154b670048c2192af96f44341f6",
+  "runtime_sha256": "d836e3a5c3d761d3dcf14d036edbe40829655770e05719ccd6a01f3c7ff16464",
+  "binary_sha256": "720ee5b1cb979475d6b0068cb8ae9c76b4a4907d4d080aa3cb27a144a0a01055",
+  "artifact_sha256": {
+    "waveform.dat": "cd3727ce0ef77dd1ba65bd50468b6d9b0b06ac15679c2462da9fa6f8325594a2",
+    "native.log": "251d48c6dd0b4ba8f0dc3473900d35cbd3e2242c2b23cfbf49e053fd75e757df",
+    ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1",
+    "adc.spice": "a6a9e12429a122f4dabee2127b4b3b5a340a6154b670048c2192af96f44341f6",
+    "simulation.log": "2fda04dcb17833f4f3ef047a068a72ea1d582c6b13334c4b1cb643c8debd3c96"
+  }
+}

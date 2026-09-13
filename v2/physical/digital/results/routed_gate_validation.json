@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "run_tag": "final",
+  "timing_simulation": false,
+  "evidence_level": "routed_netlist_zero_delay_functional_verification",
+  "counters": {
+    "checks": 687790,
+    "accepted": 4400,
+    "completed": 4384,
+    "aborted": 16,
+    "ignored_busy": 2293,
+    "reserved_rejected": 74,
+    "back_to_back": 124
+  },
+  "annotated_pin_activities": 1028,
+  "unannotated_pin_activities": 0,
+  "estimated_workload_power_W": {
+    "internal": 5.959833e-06,
+    "switching": 2.157406e-06,
+    "leakage": 5.442e-09,
+    "total": 8.122681e-06
+  },
+  "power_report_scope": "TT25C1.8V Liberty + nominal SPEF + zero-delay exhaustive-test VCD; not full-chip power",
+  "netlist_sha256": "aa03ed293b43a7c1176aedfd581aafa7a8c6927996fd68ef3156a492669073d9",
+  "vcd_sha256": "f3eab2711e962242cd651ae87a868f575f2eaba400790166dc8b0af689b1f56c",
+  "testbench_sha256": "ca68ee09eeca1b8194e0bc7859d19637974ba1ca3ef992dbc728fdeb2a46ad99"
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "noise",
+  "gain": 4,
+  "sampler_state": "hold",
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temperature_c": 27,
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "complete_frontend_qualified": false,
+  "formal_stability_gate_pass": false,
+  "single_worker": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 1.9707451199938077,
+  "simulator_diagnostics": [],
+  "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+  "output_rms_v": {
+    "5000": 5.863629472101667e-05,
+    "50000": 7.586432631187944e-05,
+    "1000000000": 0.0002461694787397592
+  },
+  "calibration_record": {
+    "calibration_points_target_v": [
+      -0.32,
+      0,
+      0.32
+    ],
+    "calibration_coefficients": [
+      0.9902450156278235,
+      -1.25426271957036e-12
+    ]
+  },
+  "provisional_output_budget_v": 0.000113,
+  "static_budget_diagnostic_pass": false,
+  "sampled_noise_signoff": false,
+  "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1"
+}

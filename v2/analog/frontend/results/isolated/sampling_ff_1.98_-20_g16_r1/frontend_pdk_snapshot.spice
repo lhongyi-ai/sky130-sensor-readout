@@ -1,0 +1,97 @@
+* Actual SKY130 MOS + high-poly resistor + MIM capacitor prototype.
+* Electrical geometry candidate only: complete layout/DRC/LVS not yet done.
+* Three gain configurations are STATIC PARAMETER SETTINGS, not a switched PGA.
+* R feedback fixed at 10 kohm; external source resistance must be 350 ohm/leg.
+* RG = 10000/G - 350, for G=1,4,16. No hidden ideal current source.
+
+* Nominal TT/27C resistor fit was measured with the installed combined PDK.
+* R=72.75744875 + 56.642069825*L for W=5.73 um.
+* Long values are divided into physical series units, each <=~175 um.
+.subckt frontend_r A B SUB params: R=10000
+XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}
+.ends frontend_r
+.subckt frontend_r100k A B SUB
+XR0 A N1 SUB frontend_r R=10000
+XR1 N1 N2 SUB frontend_r R=10000
+XR2 N2 N3 SUB frontend_r R=10000
+XR3 N3 N4 SUB frontend_r R=10000
+XR4 N4 N5 SUB frontend_r R=10000
+XR5 N5 N6 SUB frontend_r R=10000
+XR6 N6 N7 SUB frontend_r R=10000
+XR7 N7 N8 SUB frontend_r R=10000
+XR8 N8 N9 SUB frontend_r R=10000
+XR9 N9 B SUB frontend_r R=10000
+.ends frontend_r100k
+.subckt frontend_c1p A B
+XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215
+.ends frontend_c1p
+.subckt frontend_c4p A B
+XC0 A B frontend_c1p
+XC1 A B frontend_c1p
+XC2 A B frontend_c1p
+XC3 A B frontend_c1p
+.ends frontend_c4p
+.subckt frontend_c8p A B
+XC0 A B frontend_c4p
+XC1 A B frontend_c4p
+.ends frontend_c8p
+
+.subckt sky130_v2_frontend INP INN OUTP OUTN VDD VSS VCM
+* Resistor-degenerated self-biased beta multiplier and MOS startup injector.
+XBP1 BP BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XBP2 BN BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XBN1 BN BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8
+XBN2 BP BN BRS VSS sky130_fd_pr__nfet_01v8 L=1 W=32
+XRBIAS BRS VSS VSS frontend_r R=10000
+XSTPU START VSS VDD VDD sky130_fd_pr__pfet_01v8 L=10 W=0.42
+XSTOFF START BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+XSTINJ BP START VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=0.5
+
+* Fully differential input stage with cascoded tail.
+XINP XP INP TAIL VSS sky130_fd_pr__nfet_01v8 L=2 W=800
+XINN XN INN TAIL VSS sky130_fd_pr__nfet_01v8 L=2 W=800
+XLP XP CMCTL VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=48
+XLN XN CMCTL VDD VDD sky130_fd_pr__pfet_01v8 L=0.8 W=48
+XTAIL BT BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=96
+XTCAS TAIL VCM BT VSS sky130_fd_pr__nfet_01v8 L=0.5 W=40
+
+* Two common-source output stages, each with real Rz-MIM compensation.
+XOP OUTP XP VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=60
+XON OUTN XN VSS VSS sky130_fd_pr__nfet_01v8 L=0.8 W=60
+XIP OUTP BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=400
+XIN OUTN BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=400
+XRZP XP CZP VSS frontend_r R=10000
+XRZN XN CZN VSS frontend_r R=10000
+XCCP CZP OUTP frontend_c8p
+XCCN CZN OUTN frontend_c8p
+
+* Current-output common-mode detector: BOTH PMOS loads diode connected.
+* This avoids the unstable extra high-impedance gain node of revision 0.
+XRCMP OUTP CMSENSE VSS frontend_r100k
+XRCMN OUTN CMSENSE VSS frontend_r100k
+XCMREF CMD VCM CMTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+XCMSENSE CMCTL CMSENSE CMTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+XCMPL CMD CMD VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=20
+XCMPM CMCTL CMCTL VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=20
+XCMT CMTAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=32
+XCCM CMCTL VSS frontend_c1p
+.ends sky130_v2_frontend
+
+.subckt sky130_v2_pga VINP VINN OUTP OUTN VDD VSS VCM params: RF=10000 RG=2150
+XRGP VINP INP VSS frontend_r R={RG}
+XRGN VINN INN VSS frontend_r R={RG}
+XRFP OUTN INP VSS frontend_r R={RF}
+XRFN OUTP INN VSS frontend_r R={RF}
+XAMP INP INN OUTP OUTN VDD VSS VCM sky130_v2_frontend
+.ends sky130_v2_pga
+
+* Recommended integration boundary: isolated sampler driver. OUTP/OUTN go
+* to ADC acquisition switches. Feedback senses core nodes BEFORE isolation.
+* GAIN is a static elaboration parameter, not a runtime digital control.
+.subckt sky130_v2_sample_driver VINP VINN OUTP OUTN VDD VSS VCM params: GAIN=4
+XPGA VINP VINN COREP COREN VDD VSS VCM sky130_v2_pga RF=10000 RG={10000/GAIN-350}
+XRIP COREP OUTP VSS frontend_r R=150
+XRIN COREN OUTN VSS frontend_r R=150
+XCFP OUTP VSS frontend_c4p
+XCFN OUTN VSS frontend_c4p
+.ends sky130_v2_sample_driver

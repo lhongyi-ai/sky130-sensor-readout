@@ -1,0 +1,749 @@
+{
+  "status": "INCOMPLETE_FRONTEND_CLOSURE",
+  "updated_utc": "2026-09-11T08:12:32.822590+00:00",
+  "diagnostic_count": 8,
+  "diagnostic_limit": 8,
+  "full_45_pvt_screen_count": 0,
+  "full_45_pvt_screen_limit": 2,
+  "new_full_pvt_status": "NOT_RUN_PREREQUISITE_GATES_FAILED",
+  "worker_count": 1,
+  "latest_candidate_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+  "source_groups": {
+    "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c": {
+      "source_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "experiments": [
+        {
+          "path": "diagnostics/01_20260911T080042570655Z_baseline_g16_sf/summary.json",
+          "summary_sha256": "ef6755d81cfd5346c007a23086b8cf47530fd9bfcc33900a77d0cc6ff9654bb7",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 1,
+          "gain": 16,
+          "source_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+          "elapsed_s": 6.243221701995935,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "60d072ad721003a73494d2f15978c641b347629fe9f19d23cdc0b04621823658",
+          "corner": "sf",
+          "vdd_v": 1.98,
+          "temp_c": 85.0,
+          "max_holdout_error_lsb": 457.8280905023328,
+          "static_accuracy_limit_lsb": 4,
+          "static_accuracy_pass": false,
+          "max_output_cm_error_v": 0.0033541504541999556,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.0023045883904923865,
+            "max_dc_sweep": 0.0023045883904923865
+          },
+          "frontend_or_chip_qualified": false
+        },
+        {
+          "path": "diagnostics/02_20260911T080058207115Z_baseline_g1_tt/summary.json",
+          "summary_sha256": "7f860344401fb667456d4fb7370cb31195f199a6170fe56a2a14c7eb192d62e8",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 2,
+          "gain": 1,
+          "source_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+          "elapsed_s": 15.718140473996755,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "0cd532cb2f9e8e27d9fba424d82ee6645ae0a2198ea9b9f7a3e8f077ed7aae7a",
+          "corner": "tt",
+          "vdd_v": 1.8,
+          "temp_c": 27,
+          "max_holdout_error_lsb": 1.6265024918087079,
+          "static_accuracy_limit_lsb": 1,
+          "static_accuracy_pass": false,
+          "max_output_cm_error_v": 0.004798787697300022,
+          "step_max_output_cm_error_v": 0.31778148398234995,
+          "preliminary_quiet_window_gate": false,
+          "preliminary_step_amplitude_gate": true,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.001803697482383857,
+            "max_dc_sweep": 0.001803697482383857
+          },
+          "step_windows": {
+            "positive": {
+              "differential_mean_v": 0.3581917000675811,
+              "differential_peak_to_peak_v": 0.0008990829138998402,
+              "common_mode_peak_to_peak_v": 0.03855822410434995
+            },
+            "negative": {
+              "differential_mean_v": -0.35788724243893266,
+              "differential_peak_to_peak_v": 0.0019262087519000826,
+              "common_mode_peak_to_peak_v": 0.06337591127419984
+            },
+            "zero": {
+              "differential_mean_v": -1.4205313825874949e-11,
+              "differential_peak_to_peak_v": 5.250000434386948e-11,
+              "common_mode_peak_to_peak_v": 8.866999356982319e-10
+            }
+          },
+          "frontend_or_chip_qualified": false
+        }
+      ],
+      "full_frontend_qualified": false,
+      "full_chip_qualified": false,
+      "nominal_gains_with_complete_dc": [
+        1
+      ],
+      "same_source_three_gain_nominal_static_pass": false,
+      "same_source_three_gain_preliminary_step_pass": false
+    },
+    "cfda3cfd7c62e8110d4e9a8d551008aabb8a2fa4c3b3fb135469082abad9a1e3": {
+      "source_sha256": "cfda3cfd7c62e8110d4e9a8d551008aabb8a2fa4c3b3fb135469082abad9a1e3",
+      "experiments": [
+        {
+          "path": "diagnostics/03_20260911T080252346155Z_headroom_a_g1_tt/summary.json",
+          "summary_sha256": "1c039319f03e8005e4cbd01e1d6e29d0d70e785339890d21d6d0e0a58712e37d",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 3,
+          "gain": 1,
+          "source_sha256": "cfda3cfd7c62e8110d4e9a8d551008aabb8a2fa4c3b3fb135469082abad9a1e3",
+          "elapsed_s": 11.415484605997335,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "1e1a86cd8e17d18b93cc593d45dc9a3841710473de6100fab471dc1dfd201c20",
+          "corner": "tt",
+          "vdd_v": 1.8,
+          "temp_c": 27,
+          "max_holdout_error_lsb": 0.9019449290761372,
+          "static_accuracy_limit_lsb": 1,
+          "static_accuracy_pass": true,
+          "max_output_cm_error_v": 0.030368217766799988,
+          "step_max_output_cm_error_v": 0.1785265143825,
+          "preliminary_quiet_window_gate": false,
+          "preliminary_step_amplitude_gate": false,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.0016731102972610801,
+            "max_dc_sweep": 0.0016731102972610801
+          },
+          "step_windows": {
+            "positive": {
+              "differential_mean_v": 0.3556752557329539,
+              "differential_peak_to_peak_v": 7.916804049978854e-05,
+              "common_mode_peak_to_peak_v": 0.004311454769200029
+            },
+            "negative": {
+              "differential_mean_v": -0.3556706923364816,
+              "differential_peak_to_peak_v": 0.0002800100460998989,
+              "common_mode_peak_to_peak_v": 0.01593202486785006
+            },
+            "zero": {
+              "differential_mean_v": -6.114283887645213e-12,
+              "differential_peak_to_peak_v": 5.0599968659525985e-11,
+              "common_mode_peak_to_peak_v": 9.187804969990054e-05
+            }
+          },
+          "frontend_or_chip_qualified": false
+        }
+      ],
+      "full_frontend_qualified": false,
+      "full_chip_qualified": false,
+      "nominal_gains_with_complete_dc": [
+        1
+      ],
+      "same_source_three_gain_nominal_static_pass": false,
+      "same_source_three_gain_preliminary_step_pass": false
+    },
+    "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5": {
+      "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+      "experiments": [
+        {
+          "path": "diagnostics/04_20260911T080354337049Z_headroom_b_g1_tt/summary.json",
+          "summary_sha256": "105d28c44960fbc88ef6535cd0297b1982a7df45dafed9918e5145e0de960af3",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 4,
+          "gain": 1,
+          "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+          "elapsed_s": 10.75930766397505,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "f5592744a8607e11643d83f0b5ee49350a606cff917e900eef6aa65379a26545",
+          "corner": "tt",
+          "vdd_v": 1.8,
+          "temp_c": 27,
+          "max_holdout_error_lsb": 1.0227458445055504,
+          "static_accuracy_limit_lsb": 1,
+          "static_accuracy_pass": false,
+          "max_output_cm_error_v": 0.023724540545600026,
+          "step_max_output_cm_error_v": 0.19331308599699992,
+          "preliminary_quiet_window_gate": false,
+          "preliminary_step_amplitude_gate": false,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.001699914829357512,
+            "max_dc_sweep": 0.001699914829357512
+          },
+          "step_windows": {
+            "positive": {
+              "differential_mean_v": 0.35547592923932714,
+              "differential_peak_to_peak_v": 0.00018617569579992832,
+              "common_mode_peak_to_peak_v": 0.009821200629399951
+            },
+            "negative": {
+              "differential_mean_v": -0.35540630722488187,
+              "differential_peak_to_peak_v": 0.0007904013852998437,
+              "common_mode_peak_to_peak_v": 0.03403181376050013
+            },
+            "zero": {
+              "differential_mean_v": -4.691542039991802e-12,
+              "differential_peak_to_peak_v": 5.170008865462705e-11,
+              "common_mode_peak_to_peak_v": 0.0002770743148500232
+            }
+          },
+          "frontend_or_chip_qualified": false
+        },
+        {
+          "path": "diagnostics/05_20260911T080546848274Z_headroom_b_g1_loops/summary.json",
+          "summary_sha256": "f54b2958975e353ba23fd943c569f72158a6e323482999c5c78256c69dd13586",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 5,
+          "gain": 1,
+          "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+          "elapsed_s": 2.3904644180147443,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "1f2fc6c50e2b11502bf1a2a53aa7ec2c9127af2cbe12c972eaf9fe0546a2ae1f",
+          "loops": {
+            "cm": {
+              "low_frequency_gain_db": 66.2802701253017,
+              "low_frequency_phase_deg": -179.9791897359093,
+              "unity_crossings": [
+                {
+                  "frequency_hz": 1803622.4270112119,
+                  "phase_deg": -167.08091236215006,
+                  "scalar_phase_margin_deg": 12.919087637849941,
+                  "direction": "down"
+                }
+              ],
+              "scalar_downcrossings_meet_60deg": false
+            },
+            "dm": {
+              "low_frequency_gain_db": 37.96806105831735,
+              "low_frequency_phase_deg": -0.00038853104488129384,
+              "unity_crossings": [
+                {
+                  "frequency_hz": 5834240.709733147,
+                  "phase_deg": -63.22532861088882,
+                  "scalar_phase_margin_deg": 116.77467138911118,
+                  "direction": "down"
+                },
+                {
+                  "frequency_hz": 12248675.742779583,
+                  "phase_deg": 48.31545014870024,
+                  "scalar_phase_margin_deg": 228.31545014870025,
+                  "direction": "up"
+                }
+              ],
+              "scalar_downcrossings_meet_60deg": true
+            }
+          },
+          "frontend_or_chip_qualified": false
+        }
+      ],
+      "full_frontend_qualified": false,
+      "full_chip_qualified": false,
+      "nominal_gains_with_complete_dc": [
+        1
+      ],
+      "same_source_three_gain_nominal_static_pass": false,
+      "same_source_three_gain_preliminary_step_pass": false
+    },
+    "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397": {
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "experiments": [
+        {
+          "path": "diagnostics/06_20260911T080744016263Z_headroom_c_g1_tt/summary.json",
+          "summary_sha256": "bb28fc96a3f48cf65bfbc3f4c6741d28486f1dacacd8ac696c625d652d69e7f3",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 6,
+          "gain": 1,
+          "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+          "elapsed_s": 9.55919215999893,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "779c5c4b944b920e2397519289c9935e4a32b0012c0740de857a662a90247f98",
+          "corner": "tt",
+          "vdd_v": 1.8,
+          "temp_c": 27,
+          "max_holdout_error_lsb": 2.7636984620221483,
+          "static_accuracy_limit_lsb": 1,
+          "static_accuracy_pass": false,
+          "max_output_cm_error_v": 0.04013991818944995,
+          "step_max_output_cm_error_v": 0.12608897762765003,
+          "preliminary_quiet_window_gate": false,
+          "preliminary_step_amplitude_gate": false,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.001640136388750128,
+            "max_dc_sweep": 0.0016402195902572461
+          },
+          "step_windows": {
+            "positive": {
+              "differential_mean_v": 0.35392967157014166,
+              "differential_peak_to_peak_v": 2.1567636999675344e-06,
+              "common_mode_peak_to_peak_v": 0.0001322259852498675
+            },
+            "negative": {
+              "differential_mean_v": -0.3539273992412017,
+              "differential_peak_to_peak_v": 9.260873899963329e-06,
+              "common_mode_peak_to_peak_v": 0.000575884693349904
+            },
+            "zero": {
+              "differential_mean_v": -1.630338674148212e-11,
+              "differential_peak_to_peak_v": 4.54999371513054e-11,
+              "common_mode_peak_to_peak_v": 1.460454200019612e-06
+            }
+          },
+          "frontend_or_chip_qualified": false
+        },
+        {
+          "path": "diagnostics/07_20260911T080815000979Z_headroom_c_g4_tt/summary.json",
+          "summary_sha256": "27c9370d25843bcef5abfa339e85ab505e21d0d0cc66acc536079ac5f8ebf730",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 7,
+          "gain": 4,
+          "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+          "elapsed_s": 10.345916563004721,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "752fa688a33b7a0ce76957f444779d536a45fadeb722c847b59209270eacbb66",
+          "corner": "tt",
+          "vdd_v": 1.8,
+          "temp_c": 27,
+          "max_holdout_error_lsb": 0.3576636753527396,
+          "static_accuracy_limit_lsb": 1,
+          "static_accuracy_pass": true,
+          "max_output_cm_error_v": 0.039642519461900005,
+          "step_max_output_cm_error_v": 0.08694075715265004,
+          "preliminary_quiet_window_gate": false,
+          "preliminary_step_amplitude_gate": true,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.001640317573423836,
+            "max_dc_sweep": 0.001640317573423836
+          },
+          "step_windows": {
+            "positive": {
+              "differential_mean_v": 0.35943146169304335,
+              "differential_peak_to_peak_v": 3.3332490001480863e-07,
+              "common_mode_peak_to_peak_v": 5.891637900212743e-06
+            },
+            "negative": {
+              "differential_mean_v": -0.3594324685283301,
+              "differential_peak_to_peak_v": 1.4379842998568648e-06,
+              "common_mode_peak_to_peak_v": 2.3516721000094165e-05
+            },
+            "zero": {
+              "differential_mean_v": -3.1381506543673876e-11,
+              "differential_peak_to_peak_v": 3.389988290081192e-11,
+              "common_mode_peak_to_peak_v": 3.0118314997551465e-07
+            }
+          },
+          "frontend_or_chip_qualified": false
+        },
+        {
+          "path": "diagnostics/08_20260911T080851749897Z_headroom_c_g16_tt/summary.json",
+          "summary_sha256": "db4188ac9c838cbb82b85a76b57e50f915acc62bae09122dd9d48dddb83e0bf6",
+          "status": "DIAGNOSTIC_COMPLETE",
+          "ordinal": 8,
+          "gain": 16,
+          "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+          "elapsed_s": 10.536808148986893,
+          "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+          "manifest_sha256": "841666df3d868ab49089606f33dd5d87c0daee4856809b60c9fa72e299509f9f",
+          "corner": "tt",
+          "vdd_v": 1.8,
+          "temp_c": 27,
+          "max_holdout_error_lsb": 1.1259126057217372,
+          "static_accuracy_limit_lsb": 1,
+          "static_accuracy_pass": false,
+          "max_output_cm_error_v": 0.039584545139199956,
+          "step_max_output_cm_error_v": 0.05480876400965007,
+          "preliminary_quiet_window_gate": false,
+          "preliminary_step_amplitude_gate": true,
+          "frontend_vdd_and_vcm_power_w": {
+            "zero": 0.001640349075848256,
+            "max_dc_sweep": 0.001640349075848256
+          },
+          "step_windows": {
+            "positive": {
+              "differential_mean_v": 0.3583336949486066,
+              "differential_peak_to_peak_v": 2.239062000031211e-06,
+              "common_mode_peak_to_peak_v": 6.068109300039204e-06
+            },
+            "negative": {
+              "differential_mean_v": -0.35833484013852973,
+              "differential_peak_to_peak_v": 5.931007400095112e-06,
+              "common_mode_peak_to_peak_v": 1.527428710001999e-05
+            },
+            "zero": {
+              "differential_mean_v": 1.6513769295377548e-11,
+              "differential_peak_to_peak_v": 5.137998915216713e-10,
+              "common_mode_peak_to_peak_v": 1.895584000877193e-07
+            }
+          },
+          "frontend_or_chip_qualified": false
+        }
+      ],
+      "full_frontend_qualified": false,
+      "full_chip_qualified": false,
+      "nominal_gains_with_complete_dc": [
+        1,
+        4,
+        16
+      ],
+      "same_source_three_gain_nominal_static_pass": false,
+      "same_source_three_gain_preliminary_step_pass": false
+    }
+  },
+  "experiments": [
+    {
+      "path": "diagnostics/01_20260911T080042570655Z_baseline_g16_sf/summary.json",
+      "summary_sha256": "ef6755d81cfd5346c007a23086b8cf47530fd9bfcc33900a77d0cc6ff9654bb7",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 1,
+      "gain": 16,
+      "source_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "elapsed_s": 6.243221701995935,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "60d072ad721003a73494d2f15978c641b347629fe9f19d23cdc0b04621823658",
+      "corner": "sf",
+      "vdd_v": 1.98,
+      "temp_c": 85.0,
+      "max_holdout_error_lsb": 457.8280905023328,
+      "static_accuracy_limit_lsb": 4,
+      "static_accuracy_pass": false,
+      "max_output_cm_error_v": 0.0033541504541999556,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.0023045883904923865,
+        "max_dc_sweep": 0.0023045883904923865
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/02_20260911T080058207115Z_baseline_g1_tt/summary.json",
+      "summary_sha256": "7f860344401fb667456d4fb7370cb31195f199a6170fe56a2a14c7eb192d62e8",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 2,
+      "gain": 1,
+      "source_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "elapsed_s": 15.718140473996755,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "0cd532cb2f9e8e27d9fba424d82ee6645ae0a2198ea9b9f7a3e8f077ed7aae7a",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27,
+      "max_holdout_error_lsb": 1.6265024918087079,
+      "static_accuracy_limit_lsb": 1,
+      "static_accuracy_pass": false,
+      "max_output_cm_error_v": 0.004798787697300022,
+      "step_max_output_cm_error_v": 0.31778148398234995,
+      "preliminary_quiet_window_gate": false,
+      "preliminary_step_amplitude_gate": true,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.001803697482383857,
+        "max_dc_sweep": 0.001803697482383857
+      },
+      "step_windows": {
+        "positive": {
+          "differential_mean_v": 0.3581917000675811,
+          "differential_peak_to_peak_v": 0.0008990829138998402,
+          "common_mode_peak_to_peak_v": 0.03855822410434995
+        },
+        "negative": {
+          "differential_mean_v": -0.35788724243893266,
+          "differential_peak_to_peak_v": 0.0019262087519000826,
+          "common_mode_peak_to_peak_v": 0.06337591127419984
+        },
+        "zero": {
+          "differential_mean_v": -1.4205313825874949e-11,
+          "differential_peak_to_peak_v": 5.250000434386948e-11,
+          "common_mode_peak_to_peak_v": 8.866999356982319e-10
+        }
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/03_20260911T080252346155Z_headroom_a_g1_tt/summary.json",
+      "summary_sha256": "1c039319f03e8005e4cbd01e1d6e29d0d70e785339890d21d6d0e0a58712e37d",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 3,
+      "gain": 1,
+      "source_sha256": "cfda3cfd7c62e8110d4e9a8d551008aabb8a2fa4c3b3fb135469082abad9a1e3",
+      "elapsed_s": 11.415484605997335,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "1e1a86cd8e17d18b93cc593d45dc9a3841710473de6100fab471dc1dfd201c20",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27,
+      "max_holdout_error_lsb": 0.9019449290761372,
+      "static_accuracy_limit_lsb": 1,
+      "static_accuracy_pass": true,
+      "max_output_cm_error_v": 0.030368217766799988,
+      "step_max_output_cm_error_v": 0.1785265143825,
+      "preliminary_quiet_window_gate": false,
+      "preliminary_step_amplitude_gate": false,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.0016731102972610801,
+        "max_dc_sweep": 0.0016731102972610801
+      },
+      "step_windows": {
+        "positive": {
+          "differential_mean_v": 0.3556752557329539,
+          "differential_peak_to_peak_v": 7.916804049978854e-05,
+          "common_mode_peak_to_peak_v": 0.004311454769200029
+        },
+        "negative": {
+          "differential_mean_v": -0.3556706923364816,
+          "differential_peak_to_peak_v": 0.0002800100460998989,
+          "common_mode_peak_to_peak_v": 0.01593202486785006
+        },
+        "zero": {
+          "differential_mean_v": -6.114283887645213e-12,
+          "differential_peak_to_peak_v": 5.0599968659525985e-11,
+          "common_mode_peak_to_peak_v": 9.187804969990054e-05
+        }
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/04_20260911T080354337049Z_headroom_b_g1_tt/summary.json",
+      "summary_sha256": "105d28c44960fbc88ef6535cd0297b1982a7df45dafed9918e5145e0de960af3",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 4,
+      "gain": 1,
+      "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+      "elapsed_s": 10.75930766397505,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "f5592744a8607e11643d83f0b5ee49350a606cff917e900eef6aa65379a26545",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27,
+      "max_holdout_error_lsb": 1.0227458445055504,
+      "static_accuracy_limit_lsb": 1,
+      "static_accuracy_pass": false,
+      "max_output_cm_error_v": 0.023724540545600026,
+      "step_max_output_cm_error_v": 0.19331308599699992,
+      "preliminary_quiet_window_gate": false,
+      "preliminary_step_amplitude_gate": false,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.001699914829357512,
+        "max_dc_sweep": 0.001699914829357512
+      },
+      "step_windows": {
+        "positive": {
+          "differential_mean_v": 0.35547592923932714,
+          "differential_peak_to_peak_v": 0.00018617569579992832,
+          "common_mode_peak_to_peak_v": 0.009821200629399951
+        },
+        "negative": {
+          "differential_mean_v": -0.35540630722488187,
+          "differential_peak_to_peak_v": 0.0007904013852998437,
+          "common_mode_peak_to_peak_v": 0.03403181376050013
+        },
+        "zero": {
+          "differential_mean_v": -4.691542039991802e-12,
+          "differential_peak_to_peak_v": 5.170008865462705e-11,
+          "common_mode_peak_to_peak_v": 0.0002770743148500232
+        }
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/05_20260911T080546848274Z_headroom_b_g1_loops/summary.json",
+      "summary_sha256": "f54b2958975e353ba23fd943c569f72158a6e323482999c5c78256c69dd13586",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 5,
+      "gain": 1,
+      "source_sha256": "f6ad5a3674827e1294e7514068260203b33f46b698a66ac1702fdacd394068b5",
+      "elapsed_s": 2.3904644180147443,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "1f2fc6c50e2b11502bf1a2a53aa7ec2c9127af2cbe12c972eaf9fe0546a2ae1f",
+      "loops": {
+        "cm": {
+          "low_frequency_gain_db": 66.2802701253017,
+          "low_frequency_phase_deg": -179.9791897359093,
+          "unity_crossings": [
+            {
+              "frequency_hz": 1803622.4270112119,
+              "phase_deg": -167.08091236215006,
+              "scalar_phase_margin_deg": 12.919087637849941,
+              "direction": "down"
+            }
+          ],
+          "scalar_downcrossings_meet_60deg": false
+        },
+        "dm": {
+          "low_frequency_gain_db": 37.96806105831735,
+          "low_frequency_phase_deg": -0.00038853104488129384,
+          "unity_crossings": [
+            {
+              "frequency_hz": 5834240.709733147,
+              "phase_deg": -63.22532861088882,
+              "scalar_phase_margin_deg": 116.77467138911118,
+              "direction": "down"
+            },
+            {
+              "frequency_hz": 12248675.742779583,
+              "phase_deg": 48.31545014870024,
+              "scalar_phase_margin_deg": 228.31545014870025,
+              "direction": "up"
+            }
+          ],
+          "scalar_downcrossings_meet_60deg": true
+        }
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/06_20260911T080744016263Z_headroom_c_g1_tt/summary.json",
+      "summary_sha256": "bb28fc96a3f48cf65bfbc3f4c6741d28486f1dacacd8ac696c625d652d69e7f3",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 6,
+      "gain": 1,
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "elapsed_s": 9.55919215999893,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "779c5c4b944b920e2397519289c9935e4a32b0012c0740de857a662a90247f98",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27,
+      "max_holdout_error_lsb": 2.7636984620221483,
+      "static_accuracy_limit_lsb": 1,
+      "static_accuracy_pass": false,
+      "max_output_cm_error_v": 0.04013991818944995,
+      "step_max_output_cm_error_v": 0.12608897762765003,
+      "preliminary_quiet_window_gate": false,
+      "preliminary_step_amplitude_gate": false,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.001640136388750128,
+        "max_dc_sweep": 0.0016402195902572461
+      },
+      "step_windows": {
+        "positive": {
+          "differential_mean_v": 0.35392967157014166,
+          "differential_peak_to_peak_v": 2.1567636999675344e-06,
+          "common_mode_peak_to_peak_v": 0.0001322259852498675
+        },
+        "negative": {
+          "differential_mean_v": -0.3539273992412017,
+          "differential_peak_to_peak_v": 9.260873899963329e-06,
+          "common_mode_peak_to_peak_v": 0.000575884693349904
+        },
+        "zero": {
+          "differential_mean_v": -1.630338674148212e-11,
+          "differential_peak_to_peak_v": 4.54999371513054e-11,
+          "common_mode_peak_to_peak_v": 1.460454200019612e-06
+        }
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/07_20260911T080815000979Z_headroom_c_g4_tt/summary.json",
+      "summary_sha256": "27c9370d25843bcef5abfa339e85ab505e21d0d0cc66acc536079ac5f8ebf730",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 7,
+      "gain": 4,
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "elapsed_s": 10.345916563004721,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "752fa688a33b7a0ce76957f444779d536a45fadeb722c847b59209270eacbb66",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27,
+      "max_holdout_error_lsb": 0.3576636753527396,
+      "static_accuracy_limit_lsb": 1,
+      "static_accuracy_pass": true,
+      "max_output_cm_error_v": 0.039642519461900005,
+      "step_max_output_cm_error_v": 0.08694075715265004,
+      "preliminary_quiet_window_gate": false,
+      "preliminary_step_amplitude_gate": true,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.001640317573423836,
+        "max_dc_sweep": 0.001640317573423836
+      },
+      "step_windows": {
+        "positive": {
+          "differential_mean_v": 0.35943146169304335,
+          "differential_peak_to_peak_v": 3.3332490001480863e-07,
+          "common_mode_peak_to_peak_v": 5.891637900212743e-06
+        },
+        "negative": {
+          "differential_mean_v": -0.3594324685283301,
+          "differential_peak_to_peak_v": 1.4379842998568648e-06,
+          "common_mode_peak_to_peak_v": 2.3516721000094165e-05
+        },
+        "zero": {
+          "differential_mean_v": -3.1381506543673876e-11,
+          "differential_peak_to_peak_v": 3.389988290081192e-11,
+          "common_mode_peak_to_peak_v": 3.0118314997551465e-07
+        }
+      },
+      "frontend_or_chip_qualified": false
+    },
+    {
+      "path": "diagnostics/08_20260911T080851749897Z_headroom_c_g16_tt/summary.json",
+      "summary_sha256": "db4188ac9c838cbb82b85a76b57e50f915acc62bae09122dd9d48dddb83e0bf6",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "ordinal": 8,
+      "gain": 16,
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "elapsed_s": 10.536808148986893,
+      "integrity_status": "VERIFIED_IMMUTABLE_MANIFEST",
+      "manifest_sha256": "841666df3d868ab49089606f33dd5d87c0daee4856809b60c9fa72e299509f9f",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temp_c": 27,
+      "max_holdout_error_lsb": 1.1259126057217372,
+      "static_accuracy_limit_lsb": 1,
+      "static_accuracy_pass": false,
+      "max_output_cm_error_v": 0.039584545139199956,
+      "step_max_output_cm_error_v": 0.05480876400965007,
+      "preliminary_quiet_window_gate": false,
+      "preliminary_step_amplitude_gate": true,
+      "frontend_vdd_and_vcm_power_w": {
+        "zero": 0.001640349075848256,
+        "max_dc_sweep": 0.001640349075848256
+      },
+      "step_windows": {
+        "positive": {
+          "differential_mean_v": 0.3583336949486066,
+          "differential_peak_to_peak_v": 2.239062000031211e-06,
+          "common_mode_peak_to_peak_v": 6.068109300039204e-06
+        },
+        "negative": {
+          "differential_mean_v": -0.35833484013852973,
+          "differential_peak_to_peak_v": 5.931007400095112e-06,
+          "common_mode_peak_to_peak_v": 1.527428710001999e-05
+        },
+        "zero": {
+          "differential_mean_v": 1.6513769295377548e-11,
+          "differential_peak_to_peak_v": 5.137998915216713e-10,
+          "common_mode_peak_to_peak_v": 1.895584000877193e-07
+        }
+      },
+      "frontend_or_chip_qualified": false
+    }
+  ],
+  "baseline_45_pvt_analyses": [
+    {
+      "path": "baseline_analysis/20260911T080129932826Z/summary.json",
+      "sha256": "f4de9f687893288b748196e143c975f25cf4d5705d5ffe29aa916ad013c64840",
+      "manifest_verified": true
+    }
+  ],
+  "static_cap_load_settling_analyses": [
+    {
+      "path": "settling_analysis/20260911T081232652844Z/summary.json",
+      "sha256": "0ffd8f7b9ad173d8723ae95380961dcd993de567866477e508950d89e224c4a3",
+      "manifest_verified": true
+    }
+  ],
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "all_non_cadence_work_complete": false,
+  "static_noise_qualified": false,
+  "sampled_sndr_qualified": false,
+  "pvt_qualified": false,
+  "scope_notes": [
+    "All new DC cases use 81 full-range points. Three-point fitting is only at the nominal VT; the baseline hot case uses frozen baseline nominal coefficients.",
+    "DC+step diagnostics use RISO2600,4pF and static81.285pF per side, not a real SAR switched load.",
+    "Transient tests contain a +50mV input common-mode step and \u00b10.36V output-equivalent differential steps. They do not cover negative common-mode perturbation, startup, overdrive or all corners.",
+    "Quiet-window gates are preliminary and do not establish the 2.476847754us acquisition settling requirement.",
+    "The 50mV output-CM diagnostic bound is not the separate specified input-CM range.",
+    "Loop scalar down-crossing results are not formal stability when additional up-crossings or unknown RHP poles exist.",
+    "Reported power includes the frontend VDD and VCM ports only, not ADC/control/reference full-chip power.",
+    "Never combine candidate A static pass with candidate C reduced ringing or baseline noise to claim one passing frontend."
+  ]
+}

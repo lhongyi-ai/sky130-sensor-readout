@@ -1,0 +1,57 @@
+{
+  "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+  "full_chip_qualified": false,
+  "ideal_phase_fixture": true,
+  "arguments": {
+    "input_v": 0.123,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temperature": 27,
+    "reference_r": 1.0,
+    "duration_us": 40.0
+  },
+  "source_sha256": {
+    "integration/cosim_controller.v": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883",
+    "integration/qualify_cosim.py": "cc51764bd4c507e95a25247a05a2f06c8efd310119e266830637899d9d9e6451",
+    "integration/run_adc_cosim.py": "601fde2c0a9a9241d2ace28a80a4ebd81c4222b5faee04854e188a72262582c6",
+    "rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "analog/adc/adc_blocks.spice": "967e336a4b53482f1b3c9e60f450b158cbeef25b79fb756cc4941d0d24c953d5",
+    "analog/adc/adc_analog12.spice": "b94dfc7a93d7f2a0407b209d7b08ef3d0680e8974d05f9f8856bc80a6540af6b"
+  },
+  "run": "integration/results/adc_20260908T025340029442Z",
+  "returncode": 0,
+  "raw_codes": [
+    2678,
+    2678,
+    2678
+  ],
+  "expected_ideal_code": 2677,
+  "code_error_lsb": [
+    1,
+    1,
+    1
+  ],
+  "complete_adc_qualified": false,
+  "limitations": [
+    "Only short deterministic conversion check, not full-code linearity or noise-inclusive FFT.",
+    "Live original RTL, ideal logic-voltage bridges and nonoverlap phase delays; no mapped digital power/delay here.",
+    "Real MOS/MIM schematic ADC only; no amplifier, analog layout extraction, or mismatch included.",
+    "Reference network has explicit source resistance and 10nF local external capacitors, not infinite driver strength."
+  ],
+  "valid_times_s": [
+    1.100350119049e-05,
+    2.10035e-05,
+    3.10035e-05
+  ],
+  "analog_and_reference_port_power_w": 4.820115760627735e-06,
+  "reference_peak_port_currents_a": {
+    "rp": 0.001566884581554,
+    "rn": 0.001502861257258,
+    "vcm": 0.0002301103597266
+  },
+  "checks": {
+    "simulation_completed": true,
+    "all_frames_completed": true,
+    "short_nominal_code_check_within_2lsb": true
+  }
+}

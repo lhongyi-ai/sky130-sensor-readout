@@ -1,0 +1,85 @@
+{
+  "rc_noise_enabled": true,
+  "seed": 29,
+  "notrnoise_switch_scope": "independent TRNOISE sources only; none present",
+  "mos_intrinsic_transient_enable_available": false,
+  "no_external_noise_source": true,
+  "original_model_implementation": "BSIM4v5 models (Berkeley Short Channel IGFET Model-4)",
+  "original_model_version": "4.5",
+  "original_selected_bin": "xm:nshort_model.29",
+  "op": {
+    "out": 1.718068324769174,
+    "vdd#branch": -4.0965837615413055e-06,
+    "rc_native": 0.0,
+    "rc_osdi": 0.0
+  },
+  "osdi_load_messages": [],
+  "pdk_sha256": "48de7c677e2c6e7d09b2559279de9f818be71010a4aa933d728eb4db3b133c84",
+  "pdk_resolved_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sky130.lib.spice",
+  "input_sha256": "2fb5b0c1559ee4908ba93987aea0d95480684ff284cf32a11eb6697e7d9cad63",
+  "noise": {
+    "out": {
+      "known_band_hz": [
+        1.0,
+        99999999.9999977
+      ],
+      "rms_v": 0.0001640575426741399
+    },
+    "rc_native": {
+      "known_band_hz": [
+        1.0,
+        99999999.9999977
+      ],
+      "rms_v": 2.0356318379678036e-06
+    },
+    "rc_osdi": {
+      "known_band_hz": [
+        1.0,
+        99999999.9999977
+      ],
+      "rms_v": 2.03563315018574e-06
+    }
+  },
+  "transient": {
+    "out": {
+      "std_v": 5.538807219437686e-16,
+      "peak_to_peak_v": 7.016609515630989e-14,
+      "uniform_sample_sha256": "bd3e5d5b79889ee4ae1d4b58fd70c50d7dcea885f19423d7ea1c11f0f3ce0a31"
+    },
+    "rc_native": {
+      "std_v": 0.0,
+      "peak_to_peak_v": 0.0,
+      "uniform_sample_sha256": "28682dcbfb8a9964fd970c80e8d3f5e33dc9f302b8ca91424737a69a6078fa64"
+    },
+    "rc_osdi": {
+      "std_v": 0.0,
+      "peak_to_peak_v": 0.0,
+      "uniform_sample_sha256": "28682dcbfb8a9964fd970c80e8d3f5e33dc9f302b8ca91424737a69a6078fa64"
+    }
+  },
+  "transient_end_s": 0.002,
+  "disconnected_rng_control": {
+    "sha256": "58398b07165587f2b8050d5bc01310db4d6dbb8f0ffdb58eb6bd0e1b48bb1b1e",
+    "values": [
+      1.3548809767035526,
+      -0.5995214274651542,
+      -0.06713720974471021,
+      -0.7072298747553191,
+      -0.12713543670202693,
+      1.06379829320893,
+      0.8299067247876324,
+      -0.3580270395151581,
+      -0.2947922265319209,
+      0.032625584074370585,
+      -0.800165533697462,
+      -1.344981190587356,
+      -0.05563529786218072,
+      0.6431160263559764,
+      0.5945589297987038,
+      -1.4854166360811696
+    ],
+    "not_a_circuit_noise_source": true
+  },
+  "noisetran_command_response": [],
+  "status": "CONTROL_RUN_COMPLETE_NOT_INTRINSIC_TRANSIENT_NOISE_QUALIFIED"
+}

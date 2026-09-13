@@ -1,0 +1,101 @@
+{
+  "evidence_level": "routed_digital_macro_liberty_interface",
+  "max_comparator_bit_capacitance_ff": 3.5,
+  "max_setup_ns": 3.0673,
+  "max_hold_ns": -0.48501,
+  "analog_test_contract": {
+    "comparator_output_load_ff": 5,
+    "comparator_clock_load_limit_ff": 50,
+    "decision_max_after_falling_edge_ns": 250,
+    "preserve_decision_after_capture_ns": 5
+  },
+  "limitations": [
+    "Receiver values are conditional on the routed macro's characterized SDC input slew and load assumptions.",
+    "Negative internal hold does not authorize an analog comparator reset race; keep the independent 5ns post-capture hold test.",
+    "Top-level interconnect capacitance and skew are additional integration requirements."
+  ],
+  "corners": [
+    {
+      "corner": "max_ff_n40C_1v95",
+      "comparator_bit_capacitance_ff": 3.5,
+      "hold_rising_rise_ns": -0.49639,
+      "hold_rising_fall_ns": -0.71067,
+      "setup_rising_rise_ns": 0.67626,
+      "setup_rising_fall_ns": 1.00802,
+      "liberty_sha256": "221ea2948ea359895a8f3c229a2fd835fb226f22d0025e9c023b5534b392c47e"
+    },
+    {
+      "corner": "max_ss_100C_1v60",
+      "comparator_bit_capacitance_ff": 3.3,
+      "hold_rising_rise_ns": -1.72358,
+      "hold_rising_fall_ns": -1.97703,
+      "setup_rising_rise_ns": 2.37052,
+      "setup_rising_fall_ns": 3.0673,
+      "liberty_sha256": "6cc40d7c424b1959155152c2fea7d4a2621097ceeecccfdaaf148b1fa72d2754"
+    },
+    {
+      "corner": "max_tt_025C_1v80",
+      "comparator_bit_capacitance_ff": 3.4,
+      "hold_rising_rise_ns": -0.85914,
+      "hold_rising_fall_ns": -1.0491,
+      "setup_rising_rise_ns": 1.16431,
+      "setup_rising_fall_ns": 1.57585,
+      "liberty_sha256": "2eb5da737b3abf03c839b21cd94e91441b50bd16cea6b0d865a72ffeab6c2f6d"
+    },
+    {
+      "corner": "min_ff_n40C_1v95",
+      "comparator_bit_capacitance_ff": 3.3,
+      "hold_rising_rise_ns": -0.48501,
+      "hold_rising_fall_ns": -0.70182,
+      "setup_rising_rise_ns": 0.6572,
+      "setup_rising_fall_ns": 0.98731,
+      "liberty_sha256": "8f8dcb8e6d71293a60cd7bab726a4146515fd68ec23e0118bef43f4a66e44b82"
+    },
+    {
+      "corner": "min_ss_100C_1v60",
+      "comparator_bit_capacitance_ff": 3.2,
+      "hold_rising_rise_ns": -1.68749,
+      "hold_rising_fall_ns": -1.95028,
+      "setup_rising_rise_ns": 2.31368,
+      "setup_rising_fall_ns": 3.03176,
+      "liberty_sha256": "d3f7da839d648fe9b3246154a1ab086af93a8610d0c7d0a7d6cf367c841ce715"
+    },
+    {
+      "corner": "min_tt_025C_1v80",
+      "comparator_bit_capacitance_ff": 3.2,
+      "hold_rising_rise_ns": -0.83959,
+      "hold_rising_fall_ns": -1.03469,
+      "setup_rising_rise_ns": 1.13305,
+      "setup_rising_fall_ns": 1.5422,
+      "liberty_sha256": "14554b152aa5f3869b10a37a6741df2db2dcaf555865cf63bc0ad00a2d27f113"
+    },
+    {
+      "corner": "nom_ff_n40C_1v95",
+      "comparator_bit_capacitance_ff": 3.4,
+      "hold_rising_rise_ns": -0.4908,
+      "hold_rising_fall_ns": -0.70736,
+      "setup_rising_rise_ns": 0.66742,
+      "setup_rising_fall_ns": 0.99865,
+      "liberty_sha256": "f77381be58289c9f3a7eaaf85f7e5bc27db1551a91281d98ed5b181a1b9f8c63"
+    },
+    {
+      "corner": "nom_ss_100C_1v60",
+      "comparator_bit_capacitance_ff": 3.2,
+      "hold_rising_rise_ns": -1.70532,
+      "hold_rising_fall_ns": -1.9627,
+      "setup_rising_rise_ns": 2.33802,
+      "setup_rising_fall_ns": 3.0494,
+      "liberty_sha256": "ea9c655633b757d8d13d401350ba524fe4f7a9c961932a888138b03708a0f053"
+    },
+    {
+      "corner": "nom_tt_025C_1v80",
+      "comparator_bit_capacitance_ff": 3.3,
+      "hold_rising_rise_ns": -0.84956,
+      "hold_rising_fall_ns": -1.04204,
+      "setup_rising_rise_ns": 1.14904,
+      "setup_rising_fall_ns": 1.55783,
+      "liberty_sha256": "cbc0167ad4d72cfde20d4b705d72abb28c665db288151b485a8b975d0feea9bb"
+    }
+  ],
+  "script_sha256": "1a63b9dac725196ccf07909c0a98bba08c46f597a4d96f648cf12fb3db54720f"
+}

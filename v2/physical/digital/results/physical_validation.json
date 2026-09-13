@@ -1,0 +1,249 @@
+{
+  "status": "passed",
+  "run_tag": "final",
+  "evidence_level": "standalone_digital_macro_routed_drc_lvs_rc_extraction_sta",
+  "analog_frontend_validated": false,
+  "full_chip_validated": false,
+  "cadence_used": false,
+  "silicon_measured": false,
+  "clock_period_ns": 625,
+  "output_load_pf": 0.05,
+  "die_bbox_um": "0.0 0.0 150.0 150.0",
+  "macro_rectangle_area_um2": 22500,
+  "standard_cell_area_including_clock_and_repair_um2": 3674.77,
+  "checks": {
+    "design__instance_unmapped__count": {
+      "value": 0,
+      "passed": true
+    },
+    "synthesis__check_error__count": {
+      "value": 0,
+      "passed": true
+    },
+    "route__drc_errors": {
+      "value": 0,
+      "passed": true
+    },
+    "antenna__violating__nets": {
+      "value": 0,
+      "passed": true
+    },
+    "antenna__violating__pins": {
+      "value": 0,
+      "passed": true
+    },
+    "design__disconnected_pin__count": {
+      "value": 0,
+      "passed": true
+    },
+    "design__critical_disconnected_pin__count": {
+      "value": 0,
+      "passed": true
+    },
+    "design__xor_difference__count": {
+      "value": 0,
+      "passed": true
+    },
+    "magic__drc_error__count": {
+      "value": 0,
+      "passed": true
+    },
+    "klayout__drc_error__count": {
+      "value": 0,
+      "passed": true
+    },
+    "magic__illegal_overlap__count": {
+      "value": 0,
+      "passed": true
+    },
+    "design__lvs_error__count": {
+      "value": 0,
+      "passed": true
+    },
+    "design__lvs_unmatched_pin__count": {
+      "value": 0,
+      "passed": true
+    },
+    "design__max_slew_violation__count": {
+      "value": 0,
+      "passed": true
+    },
+    "design__max_cap_violation__count": {
+      "value": 0,
+      "passed": true
+    },
+    "timing__unannotated_net_filtered__count": {
+      "value": 0,
+      "passed": true
+    },
+    "lvs_unique_match": {
+      "passed": true
+    },
+    "routed_exhaustive_functional_test": {
+      "passed": true,
+      "run_tag": "final",
+      "counters": {
+        "checks": 687790,
+        "accepted": 4400,
+        "completed": 4384,
+        "aborted": 16,
+        "ignored_busy": 2293,
+        "reserved_rejected": 74,
+        "back_to_back": 124
+      }
+    }
+  },
+  "timing_corners": [
+    {
+      "corner": "min_tt_025C_1v80",
+      "setup_slack_ns": 8.361411355516848,
+      "hold_slack_ns": 0.5570877250519279,
+      "passed": true
+    },
+    {
+      "corner": "min_ss_100C_1v60",
+      "setup_slack_ns": 7.880203379541187,
+      "hold_slack_ns": 1.176597519384217,
+      "passed": true
+    },
+    {
+      "corner": "min_ff_n40C_1v95",
+      "setup_slack_ns": 8.562068629770476,
+      "hold_slack_ns": 0.1392040966342589,
+      "passed": true
+    },
+    {
+      "corner": "nom_tt_025C_1v80",
+      "setup_slack_ns": 8.355215422685788,
+      "hold_slack_ns": 0.5568942131732628,
+      "passed": true
+    },
+    {
+      "corner": "nom_ss_100C_1v60",
+      "setup_slack_ns": 7.869857877015929,
+      "hold_slack_ns": 1.1756485007159274,
+      "passed": true
+    },
+    {
+      "corner": "nom_ff_n40C_1v95",
+      "setup_slack_ns": 8.557776951525108,
+      "hold_slack_ns": 0.14690382659470497,
+      "passed": true
+    },
+    {
+      "corner": "max_tt_025C_1v80",
+      "setup_slack_ns": 8.347683669473717,
+      "hold_slack_ns": 0.5558749173855269,
+      "passed": true
+    },
+    {
+      "corner": "max_ss_100C_1v60",
+      "setup_slack_ns": 7.857664963325447,
+      "hold_slack_ns": 1.1747053662298346,
+      "passed": true
+    },
+    {
+      "corner": "max_ff_n40C_1v95",
+      "setup_slack_ns": 8.552234718029434,
+      "hold_slack_ns": 0.15249613115020552,
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Only standalone SAR digital controller; not PGA, CDAC, comparator or whole-chip layout.",
+    "Nine characterized digital Liberty \u00d7 RC corners are not the requested analog 45-point PVT matrix.",
+    "Functional gate simulation is zero-delay; STA checks timing separately.",
+    "Asynchronous reset release and analog phase nonoverlap need system-level verification.",
+    "No same-edge synchronous hold check applies to the asynchronous comparator_evaluate output; its 10ns propagation bound remains checked.",
+    "Power log uses an explicit exhaustive-test workload, not worst-case or full-chip transistor current.",
+    "Open-source DRC/LVS decks establish this flow's checks, not foundry production signoff or tapeout readiness."
+  ],
+  "source_sha256": {
+    "v2/physical/digital/config.json": "7a6a9c7cf5a619fc38e2be5b1f59dc8edfdee82fc0280e0981683459af0a06da",
+    "v2/physical/digital/run.sh": "9e9bd6b5d6ef65669d63155ebc2d8c30ca0f01ac2d609928b48b3ff0c23deeea",
+    "v2/physical/digital/summarize.py": "45c0b2bbb79372bfb4db6fc66d6e62b5668699a919b05803be6d954633584ff9",
+    "v2/physical/digital/verify_routed.py": "9b55730727f934e34d1a46bee5e07ad7a2377ea33e2736274d479664ccf7a8f6",
+    "v2/physical/digital/power.tcl": "ae954318cddc206979fef7318dff2822e59cbb8d29c6688359dc331c3ae7717b",
+    "v2/physical/digital/activity_trace.sv": "ab75b229bc8d762fc7b3f2d636e3064208cab7b7649e77bde4cc5855e811b092",
+    "v2/digital/constraints.sdc": "64e7bbdc7f4f8063785549e5e5c01b8c280332b210f4ed9f4bfac9662650a317",
+    "v2/rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "v2/tests/rtl/tb_sar_controller.sv": "ca68ee09eeca1b8194e0bc7859d19637974ba1ca3ef992dbc728fdeb2a46ad99"
+  },
+  "artifact_sha256": {
+    "v2/physical/digital/artifacts/def/sar_controller.def": "95210eab4b0b4a215163e137c35cec9c9e0fb246903984c65ffd1697b2717188",
+    "v2/physical/digital/artifacts/gds/sar_controller.gds": "fe595917121dd4963c439b6e0b323345f10ef0dfb7925c0b4b9c39e5b51c99a7",
+    "v2/physical/digital/artifacts/lef/sar_controller.lef": "8aba16ea7700e8e24f28a6058ea0f5f68d76ef3e1e6ddb48b0cb2e304e3161a9",
+    "v2/physical/digital/artifacts/lib/max_ff_n40C_1v95/sar_controller__max_ff_n40C_1v95.lib": "221ea2948ea359895a8f3c229a2fd835fb226f22d0025e9c023b5534b392c47e",
+    "v2/physical/digital/artifacts/lib/max_ss_100C_1v60/sar_controller__max_ss_100C_1v60.lib": "6cc40d7c424b1959155152c2fea7d4a2621097ceeecccfdaaf148b1fa72d2754",
+    "v2/physical/digital/artifacts/lib/max_tt_025C_1v80/sar_controller__max_tt_025C_1v80.lib": "2eb5da737b3abf03c839b21cd94e91441b50bd16cea6b0d865a72ffeab6c2f6d",
+    "v2/physical/digital/artifacts/lib/min_ff_n40C_1v95/sar_controller__min_ff_n40C_1v95.lib": "8f8dcb8e6d71293a60cd7bab726a4146515fd68ec23e0118bef43f4a66e44b82",
+    "v2/physical/digital/artifacts/lib/min_ss_100C_1v60/sar_controller__min_ss_100C_1v60.lib": "d3f7da839d648fe9b3246154a1ab086af93a8610d0c7d0a7d6cf367c841ce715",
+    "v2/physical/digital/artifacts/lib/min_tt_025C_1v80/sar_controller__min_tt_025C_1v80.lib": "14554b152aa5f3869b10a37a6741df2db2dcaf555865cf63bc0ad00a2d27f113",
+    "v2/physical/digital/artifacts/lib/nom_ff_n40C_1v95/sar_controller__nom_ff_n40C_1v95.lib": "f77381be58289c9f3a7eaaf85f7e5bc27db1551a91281d98ed5b181a1b9f8c63",
+    "v2/physical/digital/artifacts/lib/nom_ss_100C_1v60/sar_controller__nom_ss_100C_1v60.lib": "ea9c655633b757d8d13d401350ba524fe4f7a9c961932a888138b03708a0f053",
+    "v2/physical/digital/artifacts/lib/nom_tt_025C_1v80/sar_controller__nom_tt_025C_1v80.lib": "cbc0167ad4d72cfde20d4b705d72abb28c665db288151b485a8b975d0feea9bb",
+    "v2/physical/digital/artifacts/nl/sar_controller.nl.v": "aa03ed293b43a7c1176aedfd581aafa7a8c6927996fd68ef3156a492669073d9",
+    "v2/physical/digital/artifacts/odb/sar_controller.odb": "44f622b2b3851641428394a08c75938bae79f510659acd4609b5ffe744daa6fc",
+    "v2/physical/digital/artifacts/pnl/sar_controller.pnl.v": "8ed66706f318de68eb9bd8edf88e05195c53a64c207d6f0511fcdd5e54f9e3a5",
+    "v2/physical/digital/artifacts/render/sar_controller.png": "2022e39469b1cf07ecaa5ceac1e74d70df9eaeee157b1c8a7c45d8e5b5d94127",
+    "v2/physical/digital/artifacts/sdf/max_ff_n40C_1v95/sar_controller__max_ff_n40C_1v95.sdf": "9570d90466a2c6c0fa9922fa6b526a391096afe749775596e4366f60c0d7fbe8",
+    "v2/physical/digital/artifacts/sdf/max_ss_100C_1v60/sar_controller__max_ss_100C_1v60.sdf": "220d7ecc57a847a25c46bbb207eb6ce2a046616938ec7f8d87a224523ee4978a",
+    "v2/physical/digital/artifacts/sdf/max_tt_025C_1v80/sar_controller__max_tt_025C_1v80.sdf": "22ab87dabb9b29811a31190284152c6f8d5942609baf2eae4ef4fdc58f6e519b",
+    "v2/physical/digital/artifacts/sdf/min_ff_n40C_1v95/sar_controller__min_ff_n40C_1v95.sdf": "ddf8f93793011c6dcc67de969d026514de91c186356142dce273d0ee940814a0",
+    "v2/physical/digital/artifacts/sdf/min_ss_100C_1v60/sar_controller__min_ss_100C_1v60.sdf": "ac0ddf2926df2530fc47477ae3f98ae0f4237c6249b4cc885f0b2de10da2415c",
+    "v2/physical/digital/artifacts/sdf/min_tt_025C_1v80/sar_controller__min_tt_025C_1v80.sdf": "92be844d91728196252b2f099b4389ad3f1b14b3b30556501f946b47988e5d59",
+    "v2/physical/digital/artifacts/sdf/nom_ff_n40C_1v95/sar_controller__nom_ff_n40C_1v95.sdf": "5fe154ce95d5906b28b200b67c5b46c3cc4308f05a09873ffba6fd38c446ba5b",
+    "v2/physical/digital/artifacts/sdf/nom_ss_100C_1v60/sar_controller__nom_ss_100C_1v60.sdf": "68a163ffa5a90b40e3fc4a253abbb53ceaeb3c491221ada5f3abcc6437e7a165",
+    "v2/physical/digital/artifacts/sdf/nom_tt_025C_1v80/sar_controller__nom_tt_025C_1v80.sdf": "89c83d9960f557182c4dd651f5758bdacd496930864762dc95804ec57cc15883",
+    "v2/physical/digital/artifacts/spef/max/sar_controller.max.spef": "01b95e6ad7c084b105f07363ede3aca53091eb6d2178bebb73c5709e9f13bd3e",
+    "v2/physical/digital/artifacts/spef/min/sar_controller.min.spef": "081ad61977863cd0097b6aa5c53f8c7a62771d7bbbf0492f022a4494b4a95a30",
+    "v2/physical/digital/artifacts/spef/nom/sar_controller.nom.spef": "ee882fcb1ba1e6c37e1f3b100a5a48609906913e79849e4ce7cac95f256ed2d5",
+    "v2/physical/digital/artifacts/spice/sar_controller.spice": "5cf8ff4897511338c59a98286f454a878dd0914bcc702e2bafa0a64e1890b353",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ff_n40C_1v95/checks.rpt": "89e4b84cb976d4924c779f327c83eb2ef59611f9050013ba84c4498f6d17b39c",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ff_n40C_1v95/power.rpt": "e2bea9287797816be23eb5accf87b3de544794676807cbdb400929eed0069da8",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ff_n40C_1v95/ws.max.rpt": "5c9af859d7c9c6dd20bd9d38de21d494a4f29c9ca6aa4922c863abb4bf3f5419",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ff_n40C_1v95/ws.min.rpt": "282fc6a45b8139852dcfbafe46299e4615107c26065d5316ef37b3e5c85ef72b",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt": "1a45e5c34b6dfb21107776420619782691081f0957da6342964aa25d9a7516a3",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ss_100C_1v60/power.rpt": "568bc39c9a2e99359b051bba5a87e0fd1e75cc5789ac4d2da01bc037b1e7a821",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ss_100C_1v60/ws.max.rpt": "1951e44be955753422693df918739fe3bf5cd230c5d9d65d162f2debdd6a8699",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_ss_100C_1v60/ws.min.rpt": "d662dc9da218a789d0a15ae5c83a2e8fcd29a9e4d35b631e302fb5fed9994129",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt": "e80aed9fe8ddcc2ef2635a007a4731fbcdd1ed1087c53121bf295c8c80ae121c",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_tt_025C_1v80/power.rpt": "980d038392dd861055c34d3096ebb899a619df3299b14962d5f5ef9a0b4b30f1",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_tt_025C_1v80/ws.max.rpt": "b55dc2e5bc27a117ff7a876f39afc70af8ef96a833b3dea2b68ef5042bb51130",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/max_tt_025C_1v80/ws.min.rpt": "3d724fcee8d772869b69ec4baa7059bfe42f458e00c3a223a55404d000195f05",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ff_n40C_1v95/checks.rpt": "1a2b54eb5f12f8a1711458430cd1d97fb16aec2072b62fa558d6c70059bd2c10",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ff_n40C_1v95/power.rpt": "34a2d8cef42e2c29246ac469ac10100d88f4da78ccf3fefe1ea5e5bd6e09116e",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ff_n40C_1v95/ws.max.rpt": "6330cbeac5600334d528abec44d1be318abd22fe59c1d9a85bdac1958b95be93",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ff_n40C_1v95/ws.min.rpt": "f34ea1981b1176ac2d4c8956d76b83b3751b2808fe6c5816ea0e4e97752c2e39",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt": "0c261b82fb7d6cb8ba65cf5bb10b28d4011f5e2a24d15e3423682da2d3eb6f9b",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ss_100C_1v60/power.rpt": "e57a6fa0c6dd1805b18803ecc05b588c2f8b595c14f7b0b81ebc20bd506cfaf0",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ss_100C_1v60/ws.max.rpt": "efb01e56c05f84a11c896123e30e4fb15d50a59fa5466b29660cd3d84178d010",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_ss_100C_1v60/ws.min.rpt": "d1f64a86f90f897018e08ba1102f977e9c69423f9d5c1615e9554e5357106636",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_tt_025C_1v80/checks.rpt": "465b3dd770f1458c4a5755d7527fe8eb30fb2ef94a40df122408e79f01db80c5",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_tt_025C_1v80/power.rpt": "ac8e98c6c0fa91c74cbb2efa3495bc72fe8afe34337ae042e78a64059a7a2011",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_tt_025C_1v80/ws.max.rpt": "98d6738a870a0143a2501b216b89db8eaff927a0cee197b0387844c53a5809ae",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/min_tt_025C_1v80/ws.min.rpt": "992974af3141605d09889125d137cf1a8255f41a495ef1ecc32638ff7d5a41ef",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ff_n40C_1v95/checks.rpt": "680254b45a263bda6de02f26b0ed35b04dda63508f41ee3f0e0748b088a5a3e5",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ff_n40C_1v95/power.rpt": "61d6b9b594e7c0bfc9240675d711b316d04189cd4a77eed38f5b639b5649ca82",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ff_n40C_1v95/ws.max.rpt": "e8c877c878a6004670adc58346c5e72a989747fd68284dbda60790d5786d5503",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ff_n40C_1v95/ws.min.rpt": "7063c3d9c1cae9e9326c5c6831210f533ecfb32b4f5a6361d355680fff27eaab",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt": "c8b28972a1410a958f970b3c47aec6d2cbf667e98be8c8be34cdf78a1c769764",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ss_100C_1v60/power.rpt": "1fc5ebb8415af11ac28dd56e8fb6e0cba10cbe2f90bb7309a73cefcc4529ee88",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ss_100C_1v60/ws.max.rpt": "8d4c605c1c5cae4f403a8be1eb835a136b908567473ce51b0784895bde256b03",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_ss_100C_1v60/ws.min.rpt": "2206f98bb08bbfcf49d88554bd0ad6fe6cf9c152bded85319e8bf62379bf6df5",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt": "3c42cf504b692edcf33a824e24e435b834b04f00fefb0a651fe59c4296e7c88d",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_tt_025C_1v80/power.rpt": "efe10cfdc02e94431b595eecb729605c336db77cdc9bdd6f88586ccae89740b1",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_tt_025C_1v80/ws.max.rpt": "907a7092f9a563229c968f049af3f60e9ea26c4d1467a3c9c8f20b12fbfa0ba4",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/nom_tt_025C_1v80/ws.min.rpt": "40e63703c5ae53f66cc91c491475b61bb592981408c8d5c0347299ecfb8dfbd2",
+    "v2/physical/digital/evidence/56-openroad-stapostpnr/summary.rpt": "e9019a527b9be8c908d5c610ddc867a40baf43af2906a924e65ffed1a65aefd5",
+    "v2/physical/digital/evidence/65-magic-drc/reports/drc.magic.rpt": "afd988858840b867fec19e7a9074cfb88dca8f08f23d1356c74e252de69f7929",
+    "v2/physical/digital/evidence/66-klayout-drc/reports/drc.klayout.json": "16214d2fe423079d5337d46df5591231798a14dab8ecb9650e6bc52519a27d42",
+    "v2/physical/digital/evidence/71-netgen-lvs/reports/lvs.netgen.rpt": "7f5af873dab1bff25f6844161741dd67e64d48b74d31804a3237ff195e645732",
+    "v2/physical/digital/evidence/77-misc-reportmanufacturability/manufacturability.rpt": "038bd8e28c459644f9838180d7a82ccd04cac768605e2348af10b43fa259cf29",
+    "v2/physical/digital/evidence/77-misc-reportmanufacturability/state_out.json": "d84851835ec772bb2df49b6e358396f0f887846ebc106c3a41afda3d04bfdaf4",
+    "v2/physical/digital/evidence/config.json": "7a6a9c7cf5a619fc38e2be5b1f59dc8edfdee82fc0280e0981683459af0a06da",
+    "v2/physical/digital/evidence/constraints.sdc": "64e7bbdc7f4f8063785549e5e5c01b8c280332b210f4ed9f4bfac9662650a317",
+    "v2/physical/digital/evidence/resolved.json": "13b2d1626d331c210d327f701a9d2e59c770a77b91aceaa4017b444a48c6648b",
+    "v2/physical/digital/evidence/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+  }
+}

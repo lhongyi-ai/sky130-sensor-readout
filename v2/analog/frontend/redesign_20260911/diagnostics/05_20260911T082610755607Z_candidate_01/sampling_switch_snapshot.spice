@@ -1,0 +1,10 @@
+* Existing project sampling-switch topology copied as a local immutable input
+* to each redesign diagnostic.  Main LVT transmission gate plus half-width
+* shorted-diffusion dummy devices; this is a physical four-MOS switch, not an
+* ideal testbench switch.  Functional reuse does not transfer any noise claim.
+.subckt rd_sampling_tgate A B EN ENB VDD VSS params: WN=4 WP=8 LSW=0.15 LSWP=0.35 DUMMY=0.5
+XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L={LSW} nf=1 mult=1
+XP B ENB A VDD sky130_fd_pr__pfet_01v8_lvt W={WP} L={LSWP} nf=1 mult=1
+XND B ENB B VSS sky130_fd_pr__nfet_01v8_lvt W={WN*DUMMY} L={LSW} nf=1 mult=1
+XPD B EN B VDD sky130_fd_pr__pfet_01v8_lvt W={WP*DUMMY} L={LSWP} nf=1 mult=1
+.ends rd_sampling_tgate

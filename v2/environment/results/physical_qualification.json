@@ -1,0 +1,59 @@
+{
+  "status": "OPEN_PRIMITIVE_PHYSICAL_PASS",
+  "cadence_qualified": false,
+  "chip_qualified": false,
+  "run": "results/physical_20260908T022855079643Z",
+  "checks": {
+    "magic_completed": true,
+    "mim_unit_drc_zero": true,
+    "mim_unit_lvs_match": true,
+    "nfet_unit_drc_zero": true,
+    "nfet_unit_lvs_match": true,
+    "capacitance_extracted_simulation": true
+  },
+  "bbox_magic_internal_units": {
+    "mim_unit": [
+      -486.0,
+      -340.0,
+      486.0,
+      340.0
+    ],
+    "nfet_unit": [
+      -296.0,
+      -410.0,
+      296.0,
+      410.0
+    ]
+  },
+  "measured": {
+    "extracted_nfet_id": 2.398774545581499e-05,
+    "extracted_mim_c": 2.082272e-14
+  },
+  "limitations": [
+    "Only two primitive cells, not any complete analog or digital block.",
+    "Capacitance extraction only; interconnect resistance and complete post-layout circuit performance remain unverified.",
+    "Magic/Netgen open rule decks, not Cadence or foundry signoff.",
+    "Bare MIM 3x3 um plate is not full cell/array/core area."
+  ],
+  "artifact_sha256": {
+    "magic.log": "70932b57c1fa50632b3d6bd0affd73f74b4a0f46242dca4cd9652b6b830d505e",
+    "mim_unit.ext": "4163855188695dc25370f057aac1edd4d2950f00f7d952bee2a82edaa555c326",
+    "mim_unit.gds": "13ab1cc156fd913e15bb1faa46a7c14999dcb2c3bb8c90b097d7838a1a186129",
+    "mim_unit.mag": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e",
+    "mim_unit_lvs.log": "25c9eb2f542d2b6b60e4c6b1d2d1e0e6e4fb7d8c60898b3c6004a3a9404cfa10",
+    "mim_unit_lvs.spice": "1b1271c10b5b56a181eac49a0bb5353127d44e155766549dfa8a10ac1858bd61",
+    "mim_unit_netgen.log": "9069efa5470f7e8f2dd91f052ec50e89ee3af27f03f485f9b466f923d3e7c3ae",
+    "mim_unit_pex.spice": "164540c68b5bc06fe39b1e9bdc90ec49c904cd016b91dfa557f5529238d6ccca",
+    "mim_unit_reference.spice": "0614a7b277eebd0700eb038c970776f5dd6af2d2b99b1adc6b2477cb0ef315a3",
+    "nfet_unit.ext": "0716b3cbe1e6709b1b804fbfc1c35ee1416f1f759d6feae395979df813bdb9e2",
+    "nfet_unit.gds": "502c5b522b7b9faf9739851d5b7e52539b4e959bbf221ad96e9cc30d8de4fb09",
+    "nfet_unit.mag": "f1486540a80b2ceb826278b7f58eea9abbbd296b36f50b90bb0149f7f6b256eb",
+    "nfet_unit_lvs.log": "e983e76842bbe26eb355ac0d754377eee2a52207bdbaa32eb1f788d0f4a4f5fc",
+    "nfet_unit_lvs.spice": "07a051dc3906e7e76794cb3651a094a2d8e6be044526f26fb5ac0bba55dbf4d4",
+    "nfet_unit_netgen.log": "02035d87145e98f8f8d81a36e18f4e0816f0fab2ed30b76c025700a1d465f7cd",
+    "nfet_unit_pex.spice": "f25096e18e135c8cdb30754652e6776104bdfbad93152d4e3e67e2b81e1880cc",
+    "nfet_unit_reference.spice": "2f9dcee9ce30c2ae860cf74720306cbc27230ab1768fb2277639fa54593dd352",
+    "pex_ngspice.log": "60db0df07e1c75980d5ddc09e286cb14dffdeef4d62a349926e25d0b3cbd6880",
+    "pex_probe.spice": "7dd0dbe4cf2460d4a63e3b776a80fae78c0f7e74413988134078c1af3f098848"
+  }
+}

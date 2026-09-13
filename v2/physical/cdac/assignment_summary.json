@@ -1,0 +1,296 @@
+{
+  "status": "PLACEMENT_ASSIGNMENT_PASS",
+  "evidence_level": "Deterministic unit-capacitor placement assignment; not GDS/DRC/LVS/PEX",
+  "geometry": {
+    "active_rows": 64,
+    "active_columns": 64,
+    "active_units_per_side": 4096,
+    "differential_active_units": 8192,
+    "edge_dummy_rings": 1,
+    "physical_units_per_side_including_edge_dummies": 4356,
+    "unit_plate_um": [
+      3.0,
+      3.0
+    ],
+    "provisional_pitch_um": 4.0,
+    "provisional_array_bbox_um_per_side": [
+      264.0,
+      264.0
+    ],
+    "active_plate_area_um2_both_sides": 73728.0
+  },
+  "p_side": {
+    "counts": {
+      "B0": 1,
+      "B1": 2,
+      "B10": 1024,
+      "B11": 2048,
+      "B2": 4,
+      "B3": 8,
+      "B4": 16,
+      "B5": 32,
+      "B6": 64,
+      "B7": 128,
+      "B8": 256,
+      "B9": 512,
+      "DUMMY": 1
+    },
+    "centroids_row_col": {
+      "B0": [
+        31.0,
+        31.0
+      ],
+      "B1": [
+        31.5,
+        31.5
+      ],
+      "B10": [
+        31.5,
+        31.5
+      ],
+      "B11": [
+        31.5,
+        31.5
+      ],
+      "B2": [
+        31.5,
+        31.5
+      ],
+      "B3": [
+        31.5,
+        31.5
+      ],
+      "B4": [
+        31.5,
+        31.5
+      ],
+      "B5": [
+        31.5,
+        31.5
+      ],
+      "B6": [
+        31.5,
+        31.5
+      ],
+      "B7": [
+        31.5,
+        31.5
+      ],
+      "B8": [
+        31.5,
+        31.5
+      ],
+      "B9": [
+        31.5,
+        31.5
+      ],
+      "DUMMY": [
+        32.0,
+        32.0
+      ]
+    },
+    "centroid_error_cells": {
+      "B0": [
+        -0.5,
+        -0.5
+      ],
+      "B1": [
+        0.0,
+        0.0
+      ],
+      "B10": [
+        0.0,
+        0.0
+      ],
+      "B11": [
+        0.0,
+        0.0
+      ],
+      "B2": [
+        0.0,
+        0.0
+      ],
+      "B3": [
+        0.0,
+        0.0
+      ],
+      "B4": [
+        0.0,
+        0.0
+      ],
+      "B5": [
+        0.0,
+        0.0
+      ],
+      "B6": [
+        0.0,
+        0.0
+      ],
+      "B7": [
+        0.0,
+        0.0
+      ],
+      "B8": [
+        0.0,
+        0.0
+      ],
+      "B9": [
+        0.0,
+        0.0
+      ],
+      "DUMMY": [
+        0.5,
+        0.5
+      ]
+    },
+    "checks": {
+      "exact_binary_counts": true,
+      "all_core_locations_assigned_once": true,
+      "b11_through_b1_exact_common_centroid": true,
+      "b0_plus_dummy_are_central_mirror_pair": true
+    }
+  },
+  "n_side": {
+    "counts": {
+      "B0": 1,
+      "B1": 2,
+      "B10": 1024,
+      "B11": 2048,
+      "B2": 4,
+      "B3": 8,
+      "B4": 16,
+      "B5": 32,
+      "B6": 64,
+      "B7": 128,
+      "B8": 256,
+      "B9": 512,
+      "DUMMY": 1
+    },
+    "centroids_row_col": {
+      "B0": [
+        31.0,
+        32.0
+      ],
+      "B1": [
+        31.5,
+        31.5
+      ],
+      "B10": [
+        31.5,
+        31.5
+      ],
+      "B11": [
+        31.5,
+        31.5
+      ],
+      "B2": [
+        31.5,
+        31.5
+      ],
+      "B3": [
+        31.5,
+        31.5
+      ],
+      "B4": [
+        31.5,
+        31.5
+      ],
+      "B5": [
+        31.5,
+        31.5
+      ],
+      "B6": [
+        31.5,
+        31.5
+      ],
+      "B7": [
+        31.5,
+        31.5
+      ],
+      "B8": [
+        31.5,
+        31.5
+      ],
+      "B9": [
+        31.5,
+        31.5
+      ],
+      "DUMMY": [
+        32.0,
+        31.0
+      ]
+    },
+    "centroid_error_cells": {
+      "B0": [
+        -0.5,
+        0.5
+      ],
+      "B1": [
+        0.0,
+        0.0
+      ],
+      "B10": [
+        0.0,
+        0.0
+      ],
+      "B11": [
+        0.0,
+        0.0
+      ],
+      "B2": [
+        0.0,
+        0.0
+      ],
+      "B3": [
+        0.0,
+        0.0
+      ],
+      "B4": [
+        0.0,
+        0.0
+      ],
+      "B5": [
+        0.0,
+        0.0
+      ],
+      "B6": [
+        0.0,
+        0.0
+      ],
+      "B7": [
+        0.0,
+        0.0
+      ],
+      "B8": [
+        0.0,
+        0.0
+      ],
+      "B9": [
+        0.0,
+        0.0
+      ],
+      "DUMMY": [
+        0.5,
+        -0.5
+      ]
+    },
+    "checks": {
+      "exact_binary_counts": true,
+      "all_core_locations_assigned_once": true,
+      "b11_through_b1_exact_common_centroid": true,
+      "b0_plus_dummy_are_central_mirror_pair": true
+    }
+  },
+  "limitations": [
+    "No metal routing, shields, taps, reference switches, comparator or frontend are placed.",
+    "The 4 um pitch is provisional until the routed SKY130 DRC result is known.",
+    "Edge dummies are physical placeholders and are not part of the 4096-unit electrical sum.",
+    "B0 and electrical DUMMY are a central mirror pair; each singleton cannot independently have an exact centroid.",
+    "No spatial-gradient, parasitic, reference-droop, noise or mismatch result is inferred from this assignment."
+  ],
+  "artifact_sha256": {
+    "cdac_p_assignment.csv": "5c604dd024ba0c9fb5970ed5424c02e7a75f0b4b5695f208856f28f176272d88",
+    "cdac_n_assignment.csv": "498bf0359188651409dfbba9b273e8c02c522107d5768723f479f50fc965df34",
+    "cdac_assignment.svg": "8006ab6f6bde7b61dfa789262fa2a9e908e035f98bab1ebd6a98af7e17a66b5a"
+  }
+}

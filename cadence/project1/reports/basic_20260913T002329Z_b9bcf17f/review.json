@@ -1,0 +1,18 @@
+{
+  "report_sha256": "f683961c8516b09905768cfa8bd23daf4c8233fab75aa34cb9de668a5596307c",
+  "attempt": "rc_step/20260913T002314Z_79b26ef4",
+  "environment": "OCEAN and native netlisting now execute successfully",
+  "native_netlisting": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "simulation": "NOT_RUN",
+  "root_cause": "Generator writes Spectre output names directly to analogLib/vpulse instead of its CDF names; all seven waveform values must be mapped.",
+  "bad_native_pulse": "VIN (VIN VSS) vsource type=pulse val0=0 val1=0",
+  "affected_cells": [
+    "p1b_tb_rc/VIN",
+    "p1b_tb_step/VINP"
+  ],
+  "mim": "No new attempt; the user split the launcher and arguments into separate commands",
+  "action": "Deliver narrowly scoped CDF-validated SKILL property repair; rerun native audit before simulation"
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "project": "SKY130 calibrated sensor readout core",
+  "evidence_level": "BEHAVIORAL_AND_RTL_ONLY",
+  "cadence_status": "DEFERRED_BY_USER",
+  "spec": {
+    "bits": 12,
+    "full_scale_vpp": 0.8,
+    "sample_rate_hz": 100000.0,
+    "master_clock_hz": 1600000.0,
+    "acquisition_cycles": 4,
+    "conversion_cycles": 12
+  },
+  "gains": [1, 4, 16],
+  "qualification": {
+    "nominal_sndr_db": 65.0,
+    "corner_sndr_db": 62.0,
+    "nominal_core_power_w": 0.002,
+    "corner_core_power_w": 0.003,
+    "settling_error_lsb": 0.25,
+    "nominal_calibration_residual_lsb": 1.0,
+    "corner_calibration_residual_lsb": 4.0,
+    "inl_abs_lsb": 1.5,
+    "dnl_min_lsb": -0.9,
+    "dnl_max_lsb": 1.5,
+    "phase_margin_deg": 60.0,
+    "process_corners": ["TT", "FF", "SS", "FS", "SF"],
+    "supply_voltages_v": [1.62, 1.8, 1.98],
+    "temperatures_c": [-20.0, 27.0, 85.0],
+    "common_mode_offsets_v": [-0.05, 0.0, 0.05],
+    "source_resistance_per_leg_ohm": 350.0,
+    "source_resistance_sensitivity_ohm": [0.0, 1000.0],
+    "mismatch_static_samples_min": 200
+  },
+  "analysis": {
+    "fft_samples": 16384,
+    "tone_targets_hz": [1000.0, 5000.0],
+    "adc_tone_target_hz": 45000.0,
+    "amplitude_dbfs": -1.0,
+    "calibration_input_fractions": [-0.8, 0.0, 0.8],
+    "calibration_samples_per_point": 4096,
+    "holdout_samples_per_point": 2048,
+    "seed": 1302026
+  },
+  "illustrative_budget_scenario": {
+    "provenance": "ASSUMED_SYSTEM_BUDGET_NOT_PDK_FITTED",
+    "frontend": {
+      "dc_gain_db": 86.0,
+      "gain_error": 0.004,
+      "offset_input_v": 0.00015,
+      "noise_input_rms_v": 0.000005,
+      "cubic_per_v2": 0.0015,
+      "settling_tau_s": 0.00000018
+    },
+    "adc": {
+      "comparator_offset_v": 0.00005,
+      "comparator_noise_rms_v": 0.000055,
+      "sampling_noise_rms_v": 0.000035
+    }
+  },
+  "budget_assumptions": {
+    "unit_capacitor_candidate_f": 2e-14,
+    "sampled_noise_allocation_v_rms": 0.000035,
+    "noise_temperature_c": 85.0,
+    "unmodeled_rms_reserve_v": 0.000055,
+    "notes": "Capacitor is a candidate, not a verified PDK device. Noise figures are assumed sampled RMS, not integrated transistor noise. The residual reserve does not model actual noise folding or reference interference."
+  }
+}

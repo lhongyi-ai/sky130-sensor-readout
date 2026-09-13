@@ -1,0 +1,8 @@
+.subckt adc_tgate A B EN ENB VDD VSS params: WN=8 WP=16 LSW=0.15
+XN B EN A VSS sky130_fd_pr__nfet_01v8 W={WN} L={LSW} nf=1 mult=1
+XP B ENB A VDD sky130_fd_pr__pfet_01v8 W={WP} L={LSW} nf=1 mult=1
+.ends adc_tgate
+
+.subckt adc_mim_bank TOP BOTTOM params: COUNT=1
+XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}
+.ends adc_mim_bank

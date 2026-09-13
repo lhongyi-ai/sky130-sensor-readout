@@ -1,0 +1,108 @@
+magic
+tech sky130A
+timestamp 1789115829
+<< checkpaint >>
+rect -510 -800 43910 42710
+rect 45650 -800 90070 42710
+<< metal3 >>
+rect 2987 570 3047 630
+rect 49147 570 49207 630
+rect 2387 -30 2447 30
+rect 48547 -30 48607 30
+<< metal4 >>
+rect 24180 41980 24220 42020
+rect 70340 41980 70380 42020
+rect 24180 41780 24220 41820
+rect 70340 41780 70380 41820
+rect 24180 41580 24220 41620
+rect 70340 41580 70380 41620
+rect 24180 41380 24220 41420
+rect 70340 41380 70380 41420
+rect 24180 41180 24220 41220
+rect 70340 41180 70380 41220
+rect 24180 40980 24220 41020
+rect 70340 40980 70380 41020
+rect 24180 40780 24220 40820
+rect 70340 40780 70380 40820
+rect 24180 40580 24220 40620
+rect 70340 40580 70380 40620
+rect 24180 40380 24220 40420
+rect 70340 40380 70380 40420
+rect 24180 40180 24220 40220
+rect 70340 40180 70380 40220
+rect 24180 39980 24220 40020
+rect 70340 39980 70380 40020
+rect 24180 39780 24220 39820
+rect 70340 39780 70380 39820
+rect 24180 39580 24220 39620
+rect 70340 39580 70380 39620
+use cdac_side_n_routed  X_CDAC_N
+timestamp 1789115816
+transform 1 0 48360 0 1 0
+box -2080 -170 41080 42080
+use cdac_side_p_routed  X_CDAC_P
+timestamp 1789115802
+transform 1 0 2200 0 1 0
+box -2080 -170 41080 42080
+<< labels >>
+rlabel metal3 2987 570 3047 630 0 P_TOP
+port 1 nsew signal bidirectional
+rlabel metal4 24180 39580 24220 39620 0 P_B11
+port 2 nsew signal bidirectional
+rlabel metal4 24180 39780 24220 39820 0 P_B10
+port 3 nsew signal bidirectional
+rlabel metal4 24180 39980 24220 40020 0 P_B9
+port 4 nsew signal bidirectional
+rlabel metal4 24180 40180 24220 40220 0 P_B8
+port 5 nsew signal bidirectional
+rlabel metal4 24180 40380 24220 40420 0 P_B7
+port 6 nsew signal bidirectional
+rlabel metal4 24180 40580 24220 40620 0 P_B6
+port 7 nsew signal bidirectional
+rlabel metal4 24180 40780 24220 40820 0 P_B5
+port 8 nsew signal bidirectional
+rlabel metal4 24180 40980 24220 41020 0 P_B4
+port 9 nsew signal bidirectional
+rlabel metal4 24180 41180 24220 41220 0 P_B3
+port 10 nsew signal bidirectional
+rlabel metal4 24180 41380 24220 41420 0 P_B2
+port 11 nsew signal bidirectional
+rlabel metal4 24180 41580 24220 41620 0 P_B1
+port 12 nsew signal bidirectional
+rlabel metal4 24180 41780 24220 41820 0 P_B0
+port 13 nsew signal bidirectional
+rlabel metal4 24180 41980 24220 42020 0 P_DUMMY
+port 14 nsew signal bidirectional
+rlabel metal3 2387 -30 2447 30 0 P_EDGE_BIAS
+port 15 nsew signal bidirectional
+rlabel metal3 49147 570 49207 630 0 N_TOP
+port 16 nsew signal bidirectional
+rlabel metal4 70340 39580 70380 39620 0 N_B11
+port 17 nsew signal bidirectional
+rlabel metal4 70340 39780 70380 39820 0 N_B10
+port 18 nsew signal bidirectional
+rlabel metal4 70340 39980 70380 40020 0 N_B9
+port 19 nsew signal bidirectional
+rlabel metal4 70340 40180 70380 40220 0 N_B8
+port 20 nsew signal bidirectional
+rlabel metal4 70340 40380 70380 40420 0 N_B7
+port 21 nsew signal bidirectional
+rlabel metal4 70340 40580 70380 40620 0 N_B6
+port 22 nsew signal bidirectional
+rlabel metal4 70340 40780 70380 40820 0 N_B5
+port 23 nsew signal bidirectional
+rlabel metal4 70340 40980 70380 41020 0 N_B4
+port 24 nsew signal bidirectional
+rlabel metal4 70340 41180 70380 41220 0 N_B3
+port 25 nsew signal bidirectional
+rlabel metal4 70340 41380 70380 41420 0 N_B2
+port 26 nsew signal bidirectional
+rlabel metal4 70340 41580 70380 41620 0 N_B1
+port 27 nsew signal bidirectional
+rlabel metal4 70340 41780 70380 41820 0 N_B0
+port 28 nsew signal bidirectional
+rlabel metal4 70340 41980 70380 42020 0 N_DUMMY
+port 29 nsew signal bidirectional
+rlabel metal3 48547 -30 48607 30 0 N_EDGE_BIAS
+port 30 nsew signal bidirectional
+<< end >>

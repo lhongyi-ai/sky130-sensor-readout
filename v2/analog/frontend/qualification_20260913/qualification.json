@@ -1,0 +1,2972 @@
+{
+  "generated_utc": "2026-09-13T06:27:38.604620+00:00",
+  "status": "LOCAL_PROGRESS__FORMAL_STABILITY_AND_SAMPLED_NOISE_NOT_QUALIFIED",
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "real_simulator_runs": 26,
+  "simulator_runs_with_postprocess_failure": 6,
+  "formal_stability_gate_pass": false,
+  "sampled_noise_qualified": false,
+  "pvt_45_run": false,
+  "pvt_skip_reason": "Formal stability prerequisite remains unresolved. No relaxation of acceptance thresholds.",
+  "cadence_executed": false,
+  "circuit_modified": false,
+  "local_bilateral": [
+    {
+      "kind": "local",
+      "gain": 1,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 4.956852397997864,
+      "simulator_diagnostics": [],
+      "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+      "loops": {
+        "dm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 54.50103690351254,
+            "low_frequency_phase_deg": -0.0044345399060114424,
+            "unity_crossings": [
+              {
+                "frequency_hz": 5449226.045835562,
+                "phase_deg": -98.21274950368623,
+                "phase_margin_deg": 81.78725049631377,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9165278848733972
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 54.501036903552624,
+            "low_frequency_phase_deg": -0.004429877256493212,
+            "unity_crossings": [
+              {
+                "frequency_hz": 5105053.008307693,
+                "phase_deg": -93.6215169457867,
+                "phase_margin_deg": 86.3784830542133,
+                "direction": "down"
+              },
+              {
+                "frequency_hz": 74772454.166708,
+                "phase_deg": -279.2903626645906,
+                "phase_margin_deg": -99.29036266459059,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9821230248759173
+          },
+          "minimum_formula_denominator_abs": 0.001879883618426195,
+          "complete_multiloop_signoff": false
+        },
+        "input_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": -41.30883930975155,
+            "low_frequency_phase_deg": 179.99998754985154,
+            "unity_crossings": [],
+            "min_distance_to_minus_one": 0.9913988200373576
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": -41.30883930974967,
+            "low_frequency_phase_deg": 179.99995481774374,
+            "unity_crossings": [
+              {
+                "frequency_hz": 213239951.7196606,
+                "phase_deg": 67.83300149637813,
+                "phase_margin_deg": 247.83300149637813,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9913988200373578
+          },
+          "minimum_formula_denominator_abs": 0.9985584282399226,
+          "complete_multiloop_signoff": false
+        },
+        "stage1_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 44.07914361161388,
+            "low_frequency_phase_deg": -179.99821036809826,
+            "unity_crossings": [
+              {
+                "frequency_hz": 4437790.399204536,
+                "phase_deg": -83.16423757795273,
+                "phase_margin_deg": 96.83576242204727,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9349425236419001
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 44.0791436119071,
+            "low_frequency_phase_deg": -179.9982616465735,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6377113.63010338,
+                "phase_deg": -54.207621852209215,
+                "phase_margin_deg": 125.79237814779079,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 1.608131094935705
+          },
+          "minimum_formula_denominator_abs": 0.006291681099852059,
+          "complete_multiloop_signoff": false
+        },
+        "output_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 32.29169986458391,
+            "low_frequency_phase_deg": -0.0010067227393102843,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6429462.873808005,
+                "phase_deg": -58.2738458734572,
+                "phase_margin_deg": 121.72615412654281,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9713555875154626
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 32.29169986458465,
+            "low_frequency_phase_deg": -0.00100525104215002,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6945001.99211807,
+                "phase_deg": -56.4714422476147,
+                "phase_margin_deg": 123.5285577523853,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9989781784176968
+          },
+          "minimum_formula_denominator_abs": 0.02371332047304391,
+          "complete_multiloop_signoff": false
+        }
+      },
+      "path": "runs/20260913T061724258712Z_local_g1_acquire"
+    },
+    {
+      "kind": "local",
+      "gain": 1,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.7962414140056353,
+      "simulator_diagnostics": [],
+      "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+      "loops": {
+        "dm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 54.501167629522136,
+            "low_frequency_phase_deg": -0.0039969366433722005,
+            "unity_crossings": [
+              {
+                "frequency_hz": 7222493.919551072,
+                "phase_deg": -105.7783968734027,
+                "phase_margin_deg": 74.2216031265973,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.8674218967023505
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 54.501167629561984,
+            "low_frequency_phase_deg": -0.003992273965860524,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6669028.578048529,
+                "phase_deg": -99.629989980152,
+                "phase_margin_deg": 80.370010019848,
+                "direction": "down"
+              },
+              {
+                "frequency_hz": 74519085.2430027,
+                "phase_deg": -279.133245373416,
+                "phase_margin_deg": -99.133245373416,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9110573802078902
+          },
+          "minimum_formula_denominator_abs": 0.0018798553788454842,
+          "complete_multiloop_signoff": false
+        },
+        "input_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": -41.30883357523245,
+            "low_frequency_phase_deg": -179.99999593194744,
+            "unity_crossings": [],
+            "min_distance_to_minus_one": 0.990135060750961
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": -41.30883357523075,
+            "low_frequency_phase_deg": 179.999971335966,
+            "unity_crossings": [
+              {
+                "frequency_hz": 213346136.75037742,
+                "phase_deg": 67.8128303381085,
+                "phase_margin_deg": 247.81283033810848,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9901894987610373
+          },
+          "minimum_formula_denominator_abs": 0.998566655074884,
+          "complete_multiloop_signoff": false
+        },
+        "stage1_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 44.079135710059745,
+            "low_frequency_phase_deg": -179.99823314674924,
+            "unity_crossings": [
+              {
+                "frequency_hz": 4031334.5294113425,
+                "phase_deg": -85.2547988103634,
+                "phase_margin_deg": 94.7452011896366,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9349480308478632
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 44.07913571034832,
+            "low_frequency_phase_deg": -179.99828442516704,
+            "unity_crossings": [
+              {
+                "frequency_hz": 5551987.424338582,
+                "phase_deg": -56.723127704626364,
+                "phase_margin_deg": 123.27687229537364,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 1.608091417435637
+          },
+          "minimum_formula_denominator_abs": 0.006291686859408441,
+          "complete_multiloop_signoff": false
+        },
+        "output_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 32.29190931749919,
+            "low_frequency_phase_deg": -0.00030410751080549856,
+            "unity_crossings": [
+              {
+                "frequency_hz": 9359134.209374057,
+                "phase_deg": -73.70681475287952,
+                "phase_margin_deg": 106.29318524712048,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.971409998360078
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 32.29190931749957,
+            "low_frequency_phase_deg": -0.00030263580760279767,
+            "unity_crossings": [
+              {
+                "frequency_hz": 9874991.315661862,
+                "phase_deg": -71.99027295160471,
+                "phase_margin_deg": 108.00972704839529,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9991221583974422
+          },
+          "minimum_formula_denominator_abs": 0.023712762212532768,
+          "complete_multiloop_signoff": false
+        }
+      },
+      "path": "runs/20260913T061729255343Z_local_g1_hold"
+    },
+    {
+      "kind": "local",
+      "gain": 4,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.2789462040236685,
+      "simulator_diagnostics": [],
+      "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+      "loops": {
+        "dm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 51.371903700508526,
+            "low_frequency_phase_deg": -0.007465564292709146,
+            "unity_crossings": [
+              {
+                "frequency_hz": 2298225.454837363,
+                "phase_deg": -98.09453230377622,
+                "phase_margin_deg": 81.90546769622378,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9486689850735341
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 51.37190370057272,
+            "low_frequency_phase_deg": -0.007460659386147997,
+            "unity_crossings": [
+              {
+                "frequency_hz": 2203457.2037634193,
+                "phase_deg": -95.14237260340333,
+                "phase_margin_deg": 84.85762739659667,
+                "direction": "down"
+              },
+              {
+                "frequency_hz": 47100694.432364,
+                "phase_deg": -280.14318392756127,
+                "phase_margin_deg": -100.14318392756127,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9920003740233567
+          },
+          "minimum_formula_denominator_abs": 0.0026929834814984456,
+          "complete_multiloop_signoff": false
+        },
+        "input_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": -49.308411867803116,
+            "low_frequency_phase_deg": 179.9999870275559,
+            "unity_crossings": [],
+            "min_distance_to_minus_one": 0.9965756400693708
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": -49.308411867778084,
+            "low_frequency_phase_deg": 179.9998608227066,
+            "unity_crossings": [
+              {
+                "frequency_hz": 145978222.07359093,
+                "phase_deg": 65.38350705266085,
+                "phase_margin_deg": 245.38350705266083,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9965756400693712
+          },
+          "minimum_formula_denominator_abs": 0.9995726460954474,
+          "complete_multiloop_signoff": false
+        },
+        "stage1_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 59.43369312236224,
+            "low_frequency_phase_deg": -179.989463030213,
+            "unity_crossings": [
+              {
+                "frequency_hz": 4411929.461557941,
+                "phase_deg": -82.94085111660159,
+                "phase_margin_deg": 97.05914888339841,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9344465357837394
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 59.43369313249585,
+            "low_frequency_phase_deg": -179.98982137230325,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6334338.632341228,
+                "phase_deg": -54.12919998966037,
+                "phase_margin_deg": 125.87080001033962,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 1.6095493893849373
+          },
+          "minimum_formula_denominator_abs": 0.0010685113623191728,
+          "complete_multiloop_signoff": false
+        },
+        "output_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 37.47140458135375,
+            "low_frequency_phase_deg": -0.0018264240482896825,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6588738.8051801855,
+                "phase_deg": -58.602179379453055,
+                "phase_margin_deg": 121.39782062054695,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9704378357465788
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 37.47140458135635,
+            "low_frequency_phase_deg": -0.00182473780731958,
+            "unity_crossings": [
+              {
+                "frequency_hz": 7118153.350833301,
+                "phase_deg": -56.813562265783524,
+                "phase_margin_deg": 123.18643773421647,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9980731270707435
+          },
+          "minimum_formula_denominator_abs": 0.01320254905761924,
+          "complete_multiloop_signoff": false
+        }
+      },
+      "path": "runs/20260913T061733078435Z_local_g4_acquire"
+    },
+    {
+      "kind": "local",
+      "gain": 4,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.7014416939928196,
+      "simulator_diagnostics": [],
+      "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+      "loops": {
+        "dm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 51.37212865152818,
+            "low_frequency_phase_deg": -0.006712623094158803,
+            "unity_crossings": [
+              {
+                "frequency_hz": 3121304.311353456,
+                "phase_deg": -98.79410128345464,
+                "phase_margin_deg": 81.20589871654536,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9071800493321662
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 51.37212865159199,
+            "low_frequency_phase_deg": -0.0067077181742144385,
+            "unity_crossings": [
+              {
+                "frequency_hz": 2938566.613675269,
+                "phase_deg": -94.6054659644406,
+                "phase_margin_deg": 85.3945340355594,
+                "direction": "down"
+              },
+              {
+                "frequency_hz": 46959425.6357868,
+                "phase_deg": -279.83498050169226,
+                "phase_margin_deg": -99.83498050169226,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9449381422835574
+          },
+          "minimum_formula_denominator_abs": 0.0026929139261223766,
+          "complete_multiloop_signoff": false
+        },
+        "input_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": -49.308406219166436,
+            "low_frequency_phase_deg": -179.99999617062792,
+            "unity_crossings": [],
+            "min_distance_to_minus_one": 0.9960762074311879
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": -49.30840621914652,
+            "low_frequency_phase_deg": 179.99987762460484,
+            "unity_crossings": [
+              {
+                "frequency_hz": 145989683.9184783,
+                "phase_deg": 65.37417438722962,
+                "phase_margin_deg": 245.37417438722963,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9961854832163121
+          },
+          "minimum_formula_denominator_abs": 0.9995749999256737,
+          "complete_multiloop_signoff": false
+        },
+        "stage1_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 59.433674972372835,
+            "low_frequency_phase_deg": -179.98951708080884,
+            "unity_crossings": [
+              {
+                "frequency_hz": 3997685.175058496,
+                "phase_deg": -85.01784924631062,
+                "phase_margin_deg": 94.98215075368938,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.934452846303846
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 59.43367498245506,
+            "low_frequency_phase_deg": -179.98987542212532,
+            "unity_crossings": [
+              {
+                "frequency_hz": 5497599.808785225,
+                "phase_deg": -56.64856917843166,
+                "phase_margin_deg": 123.35143082156834,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 1.6095073677880116
+          },
+          "minimum_formula_denominator_abs": 0.001068513597463171,
+          "complete_multiloop_signoff": false
+        },
+        "output_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 37.471785509616225,
+            "low_frequency_phase_deg": -0.000549455829908896,
+            "unity_crossings": [
+              {
+                "frequency_hz": 9570287.005169224,
+                "phase_deg": -74.26279081503813,
+                "phase_margin_deg": 105.73720918496187,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9705252157412472
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 37.47178550961727,
+            "low_frequency_phase_deg": -0.0005477695674428689,
+            "unity_crossings": [
+              {
+                "frequency_hz": 10090611.897716755,
+                "phase_deg": -72.5450553096822,
+                "phase_margin_deg": 107.4549446903178,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9982327908715695
+          },
+          "minimum_formula_denominator_abs": 0.013201977703337472,
+          "complete_multiloop_signoff": false
+        }
+      },
+      "path": "runs/20260913T061736384023Z_local_g4_hold"
+    },
+    {
+      "kind": "local",
+      "gain": 16,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.0284262810018845,
+      "simulator_diagnostics": [],
+      "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+      "loops": {
+        "dm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 44.48857386345754,
+            "low_frequency_phase_deg": -0.011290816099430884,
+            "unity_crossings": [
+              {
+                "frequency_hz": 761829.5661115756,
+                "phase_deg": -98.03823999116453,
+                "phase_margin_deg": 81.96176000883547,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9795440678944065
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 44.48857386355581,
+            "low_frequency_phase_deg": -0.011285593319472159,
+            "unity_crossings": [
+              {
+                "frequency_hz": 748872.4350751722,
+                "phase_deg": -96.70070117125624,
+                "phase_margin_deg": 83.29929882874376,
+                "direction": "down"
+              },
+              {
+                "frequency_hz": 38894846.76992694,
+                "phase_deg": -280.5453391009019,
+                "phase_margin_deg": -100.54533910090191,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9959688476590021
+          },
+          "minimum_formula_denominator_abs": 0.0059290985385024005,
+          "complete_multiloop_signoff": false
+        },
+        "input_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": -59.95018443556411,
+            "low_frequency_phase_deg": 179.99998676227025,
+            "unity_crossings": [],
+            "min_distance_to_minus_one": 0.998994248293285
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": -59.95018443521181,
+            "low_frequency_phase_deg": 179.99948299611202,
+            "unity_crossings": [
+              {
+                "frequency_hz": 127704025.68826453,
+                "phase_deg": 63.556633771683856,
+                "phase_margin_deg": 243.55663377168386,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9989942482932855
+          },
+          "minimum_formula_denominator_abs": 0.9998898648888283,
+          "complete_multiloop_signoff": false
+        },
+        "stage1_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 57.36086162538722,
+            "low_frequency_phase_deg": -0.008319971512003626,
+            "unity_crossings": [
+              {
+                "frequency_hz": 4399657.371170967,
+                "phase_deg": -82.834843422566,
+                "phase_margin_deg": 97.165156577434,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9344051069197914
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 57.36086163170868,
+            "low_frequency_phase_deg": -0.00801621431603571,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6314097.5645577945,
+                "phase_deg": -54.08969187035422,
+                "phase_margin_deg": 125.91030812964578,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 1.609498286565697
+          },
+          "minimum_formula_denominator_abs": 0.0013532212973005892,
+          "complete_multiloop_signoff": false
+        },
+        "output_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 41.93139170454447,
+            "low_frequency_phase_deg": -0.0030511825797618387,
+            "unity_crossings": [
+              {
+                "frequency_hz": 6667092.063791613,
+                "phase_deg": -58.780549120522664,
+                "phase_margin_deg": 121.21945087947734,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9699606332873938
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 41.931391704551686,
+            "low_frequency_phase_deg": -0.003049163279656363,
+            "unity_crossings": [
+              {
+                "frequency_hz": 7203061.776794632,
+                "phase_deg": -56.99890627517939,
+                "phase_margin_deg": 123.0010937248206,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9977605134572128
+          },
+          "minimum_formula_denominator_abs": 0.007942682085899768,
+          "complete_multiloop_signoff": false
+        }
+      },
+      "path": "runs/20260913T061740120843Z_local_g16_acquire"
+    },
+    {
+      "kind": "local",
+      "gain": 16,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.678657231008401,
+      "simulator_diagnostics": [],
+      "status": "BILATERAL_LOCAL_DIAGNOSTICS_COMPLETE",
+      "loops": {
+        "dm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 44.48891773937052,
+            "low_frequency_phase_deg": -0.010139995776499704,
+            "unity_crossings": [
+              {
+                "frequency_hz": 946383.191081147,
+                "phase_deg": -92.66905061729803,
+                "phase_margin_deg": 87.33094938270197,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9613746544967054
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 44.488917739467794,
+            "low_frequency_phase_deg": -0.010134772994928681,
+            "unity_crossings": [
+              {
+                "frequency_hz": 924092.8581051774,
+                "phase_deg": -91.15939538976988,
+                "phase_margin_deg": 88.84060461023012,
+                "direction": "down"
+              },
+              {
+                "frequency_hz": 38816480.88747265,
+                "phase_deg": -280.42023537917675,
+                "phase_margin_deg": -100.42023537917675,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9802095149180577
+          },
+          "minimum_formula_denominator_abs": 0.005928865200632837,
+          "complete_multiloop_signoff": false
+        },
+        "input_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": -59.95017882239087,
+            "low_frequency_phase_deg": -179.9999962960737,
+            "unity_crossings": [],
+            "min_distance_to_minus_one": 0.9988481738451904
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": -59.9501788220611,
+            "low_frequency_phase_deg": 179.99949993809378,
+            "unity_crossings": [
+              {
+                "frequency_hz": 127700480.10378312,
+                "phase_deg": 63.554232269562355,
+                "phase_margin_deg": 243.55423226956236,
+                "direction": "up"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9989545846611202
+          },
+          "minimum_formula_denominator_abs": 0.9998904492844024,
+          "complete_multiloop_signoff": false
+        },
+        "stage1_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 57.36086579795142,
+            "low_frequency_phase_deg": -0.008307373508969044,
+            "unity_crossings": [
+              {
+                "frequency_hz": 3981583.3390038335,
+                "phase_deg": -84.9057459970231,
+                "phase_margin_deg": 95.0942540029769,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9344114899938918
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 57.36086580426279,
+            "low_frequency_phase_deg": -0.00800361617286334,
+            "unity_crossings": [
+              {
+                "frequency_hz": 5471799.96318583,
+                "phase_deg": -56.60937362086299,
+                "phase_margin_deg": 123.39062637913702,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 1.6094563163147757
+          },
+          "minimum_formula_denominator_abs": 0.001353220648114231,
+          "complete_multiloop_signoff": false
+        },
+        "output_cm": {
+          "tian_bilateral_local_diagnostic": {
+            "low_frequency_gain_db": 41.93202892856536,
+            "low_frequency_phase_deg": -0.0009161124960850939,
+            "unity_crossings": [
+              {
+                "frequency_hz": 9671643.607200043,
+                "phase_deg": -74.55929972097394,
+                "phase_margin_deg": 105.44070027902606,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.9700540420425141
+          },
+          "old_voltage_ratio_diagnostic": {
+            "low_frequency_gain_db": 41.93202892856796,
+            "low_frequency_phase_deg": -0.0009140931346805174,
+            "unity_crossings": [
+              {
+                "frequency_hz": 10193929.035601543,
+                "phase_deg": -72.8400504939043,
+                "phase_margin_deg": 107.1599495060957,
+                "direction": "down"
+              }
+            ],
+            "min_distance_to_minus_one": 0.997921403448984
+          },
+          "minimum_formula_denominator_abs": 0.007942104034895876,
+          "complete_multiloop_signoff": false
+        }
+      },
+      "path": "runs/20260913T061743179701Z_local_g16_hold"
+    }
+  ],
+  "coupled_multiport": [
+    {
+      "kind": "local",
+      "gain": 1,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.6396495299995877,
+      "simulator_diagnostics": [],
+      "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+      "port_count": 4,
+      "port_order": [
+        "dm",
+        "input_cm",
+        "stage1_cm",
+        "output_cm"
+      ],
+      "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+      "max_reconstruction_relative_residual": 2.08266975326825e-16,
+      "max_C_condition_number": 5020.22706498281,
+      "return_difference_low": {
+        "real": 6948524.624173991,
+        "imag": -8165.265079370845
+      },
+      "return_difference_high": {
+        "real": 0.9253845280486239,
+        "imag": -0.06668112262015118
+      },
+      "min_abs_return_difference": 0.9277838632276689,
+      "minimum_singular_value_of_normalized_return_difference": 0.806128683397828,
+      "finite_positive_axis_phase_change_deg": -4.054152505732353,
+      "reference_RHP_pole_count": null,
+      "winding_number_qualified": false,
+      "unobserved_internal_modes_excluded": false,
+      "path": "runs/20260913T062140630755Z_local_g1_acquire"
+    },
+    {
+      "kind": "local",
+      "gain": 1,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 3.561299199995119,
+      "simulator_diagnostics": [],
+      "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+      "port_count": 4,
+      "port_order": [
+        "dm",
+        "input_cm",
+        "stage1_cm",
+        "output_cm"
+      ],
+      "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+      "max_reconstruction_relative_residual": 2.0478254822162898e-16,
+      "max_C_condition_number": 5020.276132880855,
+      "return_difference_low": {
+        "real": 6948747.7226643935,
+        "imag": -8052.315898806663
+      },
+      "return_difference_high": {
+        "real": 0.9253954976678948,
+        "imag": -0.06667793375117118
+      },
+      "min_abs_return_difference": 0.9277945752985066,
+      "minimum_singular_value_of_normalized_return_difference": 0.7364894514510775,
+      "finite_positive_axis_phase_change_deg": -4.054840880317656,
+      "reference_RHP_pole_count": null,
+      "winding_number_qualified": false,
+      "unobserved_internal_modes_excluded": false,
+      "path": "runs/20260913T062144379444Z_local_g1_hold"
+    },
+    {
+      "kind": "local",
+      "gain": 4,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 4.513915326009737,
+      "simulator_diagnostics": [],
+      "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+      "port_count": 4,
+      "port_order": [
+        "dm",
+        "input_cm",
+        "stage1_cm",
+        "output_cm"
+      ],
+      "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+      "max_reconstruction_relative_residual": 2.0566148370913388e-16,
+      "max_C_condition_number": 3252.1020055848726,
+      "return_difference_low": {
+        "real": 9458540.144910876,
+        "imag": -21276.83736851582
+      },
+      "return_difference_high": {
+        "real": 0.9253827948745242,
+        "imag": -0.06584326085795537
+      },
+      "min_abs_return_difference": 0.9277222925262681,
+      "minimum_singular_value_of_normalized_return_difference": 0.8855146435976363,
+      "finite_positive_axis_phase_change_deg": -3.94099093006751,
+      "reference_RHP_pole_count": null,
+      "winding_number_qualified": false,
+      "unobserved_internal_modes_excluded": false,
+      "path": "runs/20260913T062148025545Z_local_g4_acquire"
+    },
+    {
+      "kind": "local",
+      "gain": 4,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 4.810143356997287,
+      "simulator_diagnostics": [],
+      "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+      "port_count": 4,
+      "port_order": [
+        "dm",
+        "input_cm",
+        "stage1_cm",
+        "output_cm"
+      ],
+      "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+      "max_reconstruction_relative_residual": 1.9235099422613808e-16,
+      "max_C_condition_number": 3252.1792535667237,
+      "return_difference_low": {
+        "real": 9459108.962457497,
+        "imag": -20990.321981811383
+      },
+      "return_difference_high": {
+        "real": 0.9253937245704833,
+        "imag": -0.06584082170555655
+      },
+      "min_abs_return_difference": 0.9277330215516176,
+      "minimum_singular_value_of_normalized_return_difference": 0.8524465930126095,
+      "finite_positive_axis_phase_change_deg": -3.9425359880591624,
+      "reference_RHP_pole_count": null,
+      "winding_number_qualified": false,
+      "unobserved_internal_modes_excluded": false,
+      "path": "runs/20260913T062152629547Z_local_g4_hold"
+    },
+    {
+      "kind": "local",
+      "gain": 16,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 4.154685573012102,
+      "simulator_diagnostics": [],
+      "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+      "port_count": 4,
+      "port_order": [
+        "dm",
+        "input_cm",
+        "stage1_cm",
+        "output_cm"
+      ],
+      "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+      "max_reconstruction_relative_residual": 2.0160503115839724e-16,
+      "max_C_condition_number": 2454.335988041801,
+      "return_difference_low": {
+        "real": 7993478.28541219,
+        "imag": -32940.63947453773
+      },
+      "return_difference_high": {
+        "real": 0.9255245740152775,
+        "imag": -0.065646798062935
+      },
+      "min_abs_return_difference": 0.9278497934483129,
+      "minimum_singular_value_of_normalized_return_difference": 0.8856828917889027,
+      "finite_positive_axis_phase_change_deg": -3.821042992283117,
+      "reference_RHP_pole_count": null,
+      "winding_number_qualified": false,
+      "unobserved_internal_modes_excluded": false,
+      "path": "runs/20260913T062157548713Z_local_g16_acquire"
+    },
+    {
+      "kind": "local",
+      "gain": 16,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 4.158182516985107,
+      "simulator_diagnostics": [],
+      "status": "COUPLED_PORT_RETURN_DIFFERENCE_COMPUTED__BASELINE_POLE_COUNT_UNVERIFIED",
+      "port_count": 4,
+      "port_order": [
+        "dm",
+        "input_cm",
+        "stage1_cm",
+        "output_cm"
+      ],
+      "scope": "Finite-axis Schur port model. det(K)/det(Yee+Yff). Reference can be active; no zero-RHP-pole assumption. Hidden modes and contour closure not certified.",
+      "max_reconstruction_relative_residual": 2.0392843188730106e-16,
+      "max_C_condition_number": 2454.4333677392274,
+      "return_difference_low": {
+        "real": 7994311.390084512,
+        "imag": -32524.423669854474
+      },
+      "return_difference_high": {
+        "real": 0.9255352989663878,
+        "imag": -0.06564451583586128
+      },
+      "min_abs_return_difference": 0.9278603300562673,
+      "minimum_singular_value_of_normalized_return_difference": 0.885729831428659,
+      "finite_positive_axis_phase_change_deg": -3.8238631629515254,
+      "reference_RHP_pole_count": null,
+      "winding_number_qualified": false,
+      "unobserved_internal_modes_excluded": false,
+      "path": "runs/20260913T062201808868Z_local_g16_hold"
+    }
+  ],
+  "static_noise": [
+    {
+      "kind": "noise",
+      "gain": 1,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.1225466710166074,
+      "simulator_diagnostics": [],
+      "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+      "output_rms_v": {
+        "5000": 2.3753661031588755e-05,
+        "50000": 3.0473656518417688e-05,
+        "1000000000": 7.475115181743505e-05
+      },
+      "calibration_record": {
+        "calibration_points_target_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_coefficients": [
+          0.9555084992180175,
+          7.171352210142027e-17
+        ]
+      },
+      "provisional_output_budget_v": 0.000113,
+      "static_budget_diagnostic_pass": true,
+      "sampled_noise_signoff": false,
+      "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "path": "runs/20260913T061858306610Z_noise_g1_acquire",
+      "calibrated_output_rms_v": {
+        "5000": 2.2696825003226878e-05,
+        "50000": 2.9117837805598642e-05,
+        "1000000000": 7.142536088789555e-05
+      },
+      "noise_formal_pass": null,
+      "budget_comparison_scope": "Diagnostic only. 113 uV is an older provisional frontend output screen, not a frozen sampled-noise limit for this exact resistor-input PGA/filter and sampler phase. This run is 1 Hz\u20131 GHz continuous-time output noise at FP-FN, including 350 ohm/leg source noise; acquisition/hold fixed states. No switching noise folding or 65 dB SNDR assertion."
+    },
+    {
+      "kind": "noise",
+      "gain": 1,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.0265010409930255,
+      "simulator_diagnostics": [],
+      "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+      "output_rms_v": {
+        "5000": 2.3753726331203466e-05,
+        "50000": 3.0477547070284998e-05,
+        "1000000000": 0.0001340335574177503
+      },
+      "calibration_record": {
+        "calibration_points_target_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_coefficients": [
+          0.9555084992180175,
+          7.171352210142027e-17
+        ]
+      },
+      "provisional_output_budget_v": 0.000113,
+      "static_budget_diagnostic_pass": false,
+      "sampled_noise_signoff": false,
+      "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "path": "runs/20260913T061900439919Z_noise_g1_hold",
+      "calibrated_output_rms_v": {
+        "5000": 2.2696887397563727e-05,
+        "50000": 2.9121555260974503e-05,
+        "1000000000": 0.0001280702032930866
+      },
+      "noise_formal_pass": null,
+      "budget_comparison_scope": "Diagnostic only. 113 uV is an older provisional frontend output screen, not a frozen sampled-noise limit for this exact resistor-input PGA/filter and sampler phase. This run is 1 Hz\u20131 GHz continuous-time output noise at FP-FN, including 350 ohm/leg source noise; acquisition/hold fixed states. No switching noise folding or 65 dB SNDR assertion."
+    },
+    {
+      "kind": "noise",
+      "gain": 4,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.0217245660023764,
+      "simulator_diagnostics": [],
+      "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+      "output_rms_v": {
+        "5000": 5.8636137248366134e-05,
+        "50000": 7.585514410618575e-05,
+        "1000000000": 0.00015266054892615504
+      },
+      "calibration_record": {
+        "calibration_points_target_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_coefficients": [
+          0.9902450156278235,
+          -1.25426271957036e-12
+        ]
+      },
+      "provisional_output_budget_v": 0.000113,
+      "static_budget_diagnostic_pass": false,
+      "sampled_noise_signoff": false,
+      "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "path": "runs/20260913T061902474549Z_noise_g4_acquire",
+      "calibrated_output_rms_v": {
+        "5000": 5.806414264586353e-05,
+        "50000": 7.511517836088071e-05,
+        "1000000000": 0.0001511713476571325
+      },
+      "noise_formal_pass": null,
+      "budget_comparison_scope": "Diagnostic only. 113 uV is an older provisional frontend output screen, not a frozen sampled-noise limit for this exact resistor-input PGA/filter and sampler phase. This run is 1 Hz\u20131 GHz continuous-time output noise at FP-FN, including 350 ohm/leg source noise; acquisition/hold fixed states. No switching noise folding or 65 dB SNDR assertion."
+    },
+    {
+      "kind": "noise",
+      "gain": 4,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 1.9707451199938077,
+      "simulator_diagnostics": [],
+      "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+      "output_rms_v": {
+        "5000": 5.863629472101667e-05,
+        "50000": 7.586432631187944e-05,
+        "1000000000": 0.0002461694787397592
+      },
+      "calibration_record": {
+        "calibration_points_target_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_coefficients": [
+          0.9902450156278235,
+          -1.25426271957036e-12
+        ]
+      },
+      "provisional_output_budget_v": 0.000113,
+      "static_budget_diagnostic_pass": false,
+      "sampled_noise_signoff": false,
+      "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "path": "runs/20260913T061904503488Z_noise_g4_hold",
+      "calibrated_output_rms_v": {
+        "5000": 5.8064298582370815e-05,
+        "50000": 7.512427099430136e-05,
+        "1000000000": 0.000243768099321746
+      },
+      "noise_formal_pass": null,
+      "budget_comparison_scope": "Diagnostic only. 113 uV is an older provisional frontend output screen, not a frozen sampled-noise limit for this exact resistor-input PGA/filter and sampler phase. This run is 1 Hz\u20131 GHz continuous-time output noise at FP-FN, including 350 ohm/leg source noise; acquisition/hold fixed states. No switching noise folding or 65 dB SNDR assertion."
+    },
+    {
+      "kind": "noise",
+      "gain": 16,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.12535547700827,
+      "simulator_diagnostics": [],
+      "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+      "output_rms_v": {
+        "5000": 0.0001974804197881768,
+        "50000": 0.00025652491365199786,
+        "1000000000": 0.00043055136150913073
+      },
+      "calibration_record": {
+        "calibration_points_target_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_coefficients": [
+          1.0027677141731206,
+          -3.843879088170632e-12
+        ]
+      },
+      "provisional_output_budget_v": 0.000113,
+      "static_budget_diagnostic_pass": false,
+      "sampled_noise_signoff": false,
+      "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "path": "runs/20260913T061906481479Z_noise_g16_acquire",
+      "calibrated_output_rms_v": {
+        "5000": 0.00019802698914493837,
+        "50000": 0.000257234901291271,
+        "1000000000": 0.00043174300461463593
+      },
+      "noise_formal_pass": null,
+      "budget_comparison_scope": "Diagnostic only. 113 uV is an older provisional frontend output screen, not a frozen sampled-noise limit for this exact resistor-input PGA/filter and sampler phase. This run is 1 Hz\u20131 GHz continuous-time output noise at FP-FN, including 350 ohm/leg source noise; acquisition/hold fixed states. No switching noise folding or 65 dB SNDR assertion."
+    },
+    {
+      "kind": "noise",
+      "gain": 16,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.0222068699949887,
+      "simulator_diagnostics": [],
+      "status": "STATIC_NOISE_DIAGNOSTIC_COMPLETE",
+      "output_rms_v": {
+        "5000": 0.0001974809313793681,
+        "50000": 0.0002565492522546499,
+        "1000000000": 0.0005345838169832322
+      },
+      "calibration_record": {
+        "calibration_points_target_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_coefficients": [
+          1.0027677141731206,
+          -3.843879088170632e-12
+        ]
+      },
+      "provisional_output_budget_v": 0.000113,
+      "static_budget_diagnostic_pass": false,
+      "sampled_noise_signoff": false,
+      "gain_reference_source_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "path": "runs/20260913T061908614801Z_noise_g16_hold",
+      "calibrated_output_rms_v": {
+        "5000": 0.00019802750215206782,
+        "50000": 0.0002572593072562186,
+        "1000000000": 0.0005360633921902176
+      },
+      "noise_formal_pass": null,
+      "budget_comparison_scope": "Diagnostic only. 113 uV is an older provisional frontend output screen, not a frozen sampled-noise limit for this exact resistor-input PGA/filter and sampler phase. This run is 1 Hz\u20131 GHz continuous-time output noise at FP-FN, including 350 ohm/leg source noise; acquisition/hold fixed states. No switching noise folding or 65 dB SNDR assertion."
+    }
+  ],
+  "closed_loop_pz": [
+    {
+      "kind": "pz",
+      "gain": 1,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.8238554350100458,
+      "simulator_diagnostics": [],
+      "status": "PZ_REQUIRES_RESIDUAL_AND_MODE_COMPLETENESS_AUDIT",
+      "reported_poles": [
+        {
+          "real_per_s": -798109793.397146,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -600165314.845281,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -598977687.724118,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -468678092.146027,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -467529865.585094,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -407258557.024953,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -147332364.543115,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -100000000.001478,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -84761735.6066785,
+          "imag_per_s": 72800818.45102403
+        },
+        {
+          "real_per_s": -84761735.6066785,
+          "imag_per_s": -72800818.451024
+        },
+        {
+          "real_per_s": -57180403.5001802,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -50668865.7929531,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -18961951.9584897,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -18863194.1869835,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -12171578.5248159,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -9792684.02240833,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -6892485.4729612,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -5971597.55267986,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -4553538.43757929,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -3273890.10928948,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -902828.818541192,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -378010.45087891,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -88550.2291240154,
+          "imag_per_s": 100000000.0
+        },
+        {
+          "real_per_s": -88550.2291240154,
+          "imag_per_s": -100000000.0
+        },
+        {
+          "real_per_s": -88550.2286769651,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -40854.0240952201,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -9502.14517515461,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -5083.81565851362,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -1826.35884822362,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -483.084957149371,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -249.771188741853,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -245.119234144038,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -225.323495400285,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -216.793798843616,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -202.567864374736,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -189.012837118464,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -175.868611820998,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -163.343756504916,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -151.590978991768,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -140.726528558965,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -130.855534597347,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -122.098788892153,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -114.62351710189,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -108.666974489823,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -100.0,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -95.7568651627826,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -89.9760296291694,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -80.9596673322871,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -79.7223071797701,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -77.4806458131669,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -76.8285465728577,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -73.9792563305666,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -73.2282663753598,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -68.0768569055662,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -67.5077400314437,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -64.8424360398504,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -63.5437992569231,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -61.7290208482748,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -60.5941419599934,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -54.7699079248778,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -51.8146023436638,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -44.8686640247611,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -44.4192835736251,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -40.9821626958668,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -39.782839274487,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -39.2916586618905,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -35.1567351617025,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -33.8498344782967,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -31.3588533606302,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -30.9552298111398,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -29.4388770827068,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -27.7658697849882,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -23.9819739505281,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -23.6792530658193,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -22.5491226121822,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -22.0434578438523,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -20.5914965402816,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -19.274887257698,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -17.319125889703,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -17.0392757435331,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -15.8846750548333,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -15.1635782733972,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -14.8563770044952,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -14.0637389223276,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -13.2401021509148,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -12.9072657042056,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -12.5374416502705,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -11.9227326666583,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -11.6864620622734,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -11.3561207924968,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -11.0597618943624,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -10.6563283862692,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -9.99999999998455,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -9.56599424169694,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -9.20447474313656,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -8.91338429672862,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -8.58080968720371,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -7.81469152148219,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -7.02020218356449,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -6.78826013233614,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -6.44834444221591,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -5.96352998051098,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -5.63861400305687,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -5.50469970952467,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -4.82756215979696,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -4.49466320689788,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -4.18519784608105,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -3.54671635110546,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -3.03437485413176,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -2.4883290209476,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -1.34091556081421,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -1.13917018320702,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -0.852286350359214,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -0.422574947743977,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": -0.0390933027563484,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 0.7720240131846057,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 1.255505565448166,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 1.767618537526054,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 2.225986787225006,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 2.740505206429995,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 3.176977077421724,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 3.467256778898828,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 3.704419207422944,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 4.4105084233253,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 5.059562154820227,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 5.480903776299333,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 5.738560057009895,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 6.07016955659671,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 6.564799445310032,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 6.933017776668894,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 7.157233516274554,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 7.973741960069869,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 8.191392890495736,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 9.081359788513348,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 9.636673321408978,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 10.08173600697896,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 10.86578779030917,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 11.24976275462917,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 12.0387474760595,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 12.24409626417798,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 12.93240959947529,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13.4607377549174,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13.92571145647814,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 15.04816529247197,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 15.60066723907096,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 16.09469730045527,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 16.54786811007995,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 16.85176455433121,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 17.47328717789136,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 17.54637552380024,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 17.7720715208581,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 18.40096503871705,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 18.57626402040045,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 19.47769965685317,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 21.06734110688942,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 22.07881921561583,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 23.04382931738355,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 24.6840041603541,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 26.98804713344369,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 29.48728347741724,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 31.12523960869784,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 32.60218287729737,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 33.65306992000602,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 34.0810982248208,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 36.67155733747612,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 37.47087150715333,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 38.19863999758216,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 39.78495657730419,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 41.12106506089233,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 43.0493551194498,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 45.32082379495475,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 46.55120007194273,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 47.45957877046185,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 50.71986763447126,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 53.21313488654107,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 57.20140963273212,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 58.30683589716183,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 59.60829887663179,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 61.12522579726766,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 63.75714908023622,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 63.78746994853832,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 66.03906211889893,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 68.14832876521099,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 69.89781181419065,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 71.2235156517151,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 72.0060612067781,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 74.00784183530945,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 74.8003957226947,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 77.41549824077129,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 79.33767822986472,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 80.5429306025378,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 83.40169500855578,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 85.28129258954391,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 86.37952736189047,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 88.3920144445531,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 89.42053343277385,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 91.8785071027977,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 92.51618372032682,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 94.38356910924779,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 99.99999999981961,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 101.6791070939819,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 118.4116642246784,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 119.5652670999192,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 122.2216087311729,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 122.9323819618353,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 126.3184827672818,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 127.0077699478806,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 128.9919292475801,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 129.8464271945516,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 130.5970718859272,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 132.6271409321808,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 134.4389531628038,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 138.7193748867555,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 142.9417407475843,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 146.409889082332,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 148.1545815083132,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 148.9718716074186,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 155.0631975341868,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 156.314865078298,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 158.2539691465964,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 159.0496029002045,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 161.1402364356865,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 162.4621743076055,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 165.3960850135492,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 169.7909483192948,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 172.1723708468571,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 173.1840255158181,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 181.3740282966274,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 189.9740827113925,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 195.7607290540398,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 198.2175772504605,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 198.995801299452,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 206.1780359967329,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 207.502275985802,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 208.4505255818689,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 211.5818675493277,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 217.6843826858877,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 218.3510893210556,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 223.7200767794298,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 225.5582009411395,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 227.9549775470586,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 228.7111454413936,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 231.868964622271,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 233.4031890705799,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 235.1205077219761,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 236.1138639024486,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 237.0317516964213,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 238.561481043901,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 239.1009868181437,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 239.5478875496104,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 240.1541944319235,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 243.2975630398273,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 244.5518680809433,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 245.5621460056464,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 246.9572213328001,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 247.8491698401899,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 250.3817566896024,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 250.887415796411,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 252.8585655409763,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 253.2325754294783,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 255.7023381626548,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 258.1165857184014,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 262.7670054020976,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 272.9070697763681,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 274.233324734681,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 275.2698104796849,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 277.7743183418203,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 278.3322735079047,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 288.6528465744665,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 304.5014701514758,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 306.6197995290814,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 307.5772172032975,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 309.3317338213415,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 313.7284647437805,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 314.4840448307067,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 319.9154300284496,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 320.5180430032141,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 334.9889597743365,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 335.8076327837024,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 344.9931793894744,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 350.2803493166438,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 369.536854084691,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 370.6304428943674,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 379.0554259440754,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 385.4879481390093,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 399.4010400481752,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 400.4228070111614,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 414.2556911256668,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 415.2852965718859,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 428.5769160509561,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 429.8670182561943,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 433.793856963041,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 443.8475081660648,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 456.6529917094448,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 466.487991543641,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 479.3717041529604,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 480.3941569122121,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 545.3752476841751,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 546.781050826022,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 921.4590264714705,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 929.877684775669,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 937.3327208284816,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 938.6088181888188,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 944.1500496390523,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 949.52837056093,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 957.6976768490636,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 963.7197355880014,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 997.6904185682297,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 999.9999999983359,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 12751.72387323949,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 12905.00466740813,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13074.40650317246,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13221.95711795415,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13353.30164042151,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13441.86716071948,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13500.51059379976,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13579.97342528539,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13647.28257265206,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13695.26684536293,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13778.29346921963,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 13922.37113765984,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 14184.88007430667,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 14210.52647454632,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 17580.57645573844,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 17631.91555324887,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 26117.16632993175,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 26208.68460360118,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 26916.89455231826,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 26986.79127720801,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 33124.07120008547,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 33224.39819829124,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 53601.24313011773,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 53769.88375090726,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 119787.477430283,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 120170.4207886609,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 235585.8846638966,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 237079.5178908602,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 238082.2944273946,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 241850.7781962701,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 246179.4008644953,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 246782.1791062443,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 252582.102225633,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 254515.4099320682,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 292334.2994347364,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 293139.424293726,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 1074212.847111364,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 2818435.254670499,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 7745799.14730075,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 9999999.999992663,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 30959652.17410775,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 119551653.9845124,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 211759170.1188555,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 417268268.5379921,
+          "imag_per_s": 0.0
+        },
+        {
+          "real_per_s": 830178706.3067417,
+          "imag_per_s": 0.0
+        }
+      ],
+      "reported_rhp_count": 239,
+      "eigenmode_completeness_verified": false,
+      "path": "runs/20260913T061919454523Z_pz_g1_acquire"
+    }
+  ],
+  "migration_canary": [
+    {
+      "kind": "noise",
+      "gain": 4,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.0553668400098104,
+      "simulator_diagnostics": [],
+      "status": "LOCAL_G4_CANARY_COMPLETE",
+      "dc_targets_v": [
+        -0.32,
+        0.0,
+        0.32
+      ],
+      "dc_differential_outputs_v": [
+        -0.32315183488601185,
+        -1.7924550732573152e-12,
+        0.32315183488172383
+      ],
+      "zero_output_common_mode_v": 0.8862885131945579,
+      "ac_1khz_target_to_output_gain": 1.009873411330294,
+      "school_cadence_run": false,
+      "candidate_phase": "acquire",
+      "scope": "Connectivity/reference values only, not frontend qualification.",
+      "path": "runs/20260913T062412790986Z_noise_g4_acquire"
+    }
+  ],
+  "preserved_failures": [
+    {
+      "kind": "noise",
+      "gain": 1,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.077326767001068,
+      "simulator_diagnostics": [
+        "Error: no such vector onoise_spectrum"
+      ],
+      "status": "SIMULATOR_FAILURE",
+      "path": "runs/20260913T061805517268Z_noise_g1_acquire"
+    },
+    {
+      "kind": "noise",
+      "gain": 1,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 2.024513065989595,
+      "simulator_diagnostics": [
+        "Error: no such vector onoise_spectrum"
+      ],
+      "status": "SIMULATOR_FAILURE",
+      "path": "runs/20260913T061807601996Z_noise_g1_hold"
+    },
+    {
+      "kind": "noise",
+      "gain": 4,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 1.9778570939961355,
+      "simulator_diagnostics": [
+        "Error: no such vector onoise_spectrum"
+      ],
+      "status": "SIMULATOR_FAILURE",
+      "path": "runs/20260913T061809635692Z_noise_g4_acquire"
+    },
+    {
+      "kind": "noise",
+      "gain": 4,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 1.9209916800027713,
+      "simulator_diagnostics": [
+        "Error: no such vector onoise_spectrum"
+      ],
+      "status": "SIMULATOR_FAILURE",
+      "path": "runs/20260913T061811621850Z_noise_g4_hold"
+    },
+    {
+      "kind": "noise",
+      "gain": 16,
+      "sampler_state": "acquire",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 1.9716214459913317,
+      "simulator_diagnostics": [
+        "Error: no such vector onoise_spectrum"
+      ],
+      "status": "SIMULATOR_FAILURE",
+      "path": "runs/20260913T061813548879Z_noise_g16_acquire"
+    },
+    {
+      "kind": "noise",
+      "gain": 16,
+      "sampler_state": "hold",
+      "corner": "tt",
+      "vdd_v": 1.8,
+      "temperature_c": 27,
+      "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+      "complete_frontend_qualified": false,
+      "formal_stability_gate_pass": false,
+      "single_worker": true,
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_s": 1.921378632017877,
+      "simulator_diagnostics": [
+        "Error: no such vector onoise_spectrum"
+      ],
+      "status": "SIMULATOR_FAILURE",
+      "path": "runs/20260913T061815526148Z_noise_g16_hold"
+    }
+  ]
+}

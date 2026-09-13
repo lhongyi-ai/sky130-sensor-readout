@@ -1,0 +1,20 @@
+{
+  "status": "NMOS_DC_SMOKE_PASS_WITH_DEPRECATION_WARNING",
+  "log_sha256": "90c92910dc219be256e8c50d2c7a2df2e7260f10b19dda8ee5456c34801f5091",
+  "spectre_version": "21.1.0.132.isr1",
+  "completed_operating_point_records": 181,
+  "operating_point_ids_contiguous": true,
+  "errors": 0,
+  "warnings": 1,
+  "warning": "SPECTRE-17101: checklimitdest=psf deprecated for future releases",
+  "model_loading": "TT_NFET_01V8_READ_AND_SIMULATED",
+  "license_for_this_run": "SUCCESS",
+  "temperature_c": 27,
+  "vgs_start_v": 0,
+  "vgs_stop_v": 1.8,
+  "vgs_step_v": 0.01,
+  "max_drain_current_reported_mA": 1.129,
+  "elapsed_seconds": 3.73,
+  "raw_waveform_numeric_audit": "NOT_PERFORMED_PSF_OR_CSV_NOT_RECEIVED",
+  "full_M0": "INCOMPLETE_PMOS_PASSIVES_STATISTICS_PHYSICAL_NOT_RUN"
+}

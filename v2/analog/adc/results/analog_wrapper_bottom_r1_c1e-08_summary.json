@@ -1,0 +1,76 @@
+{
+  "evidence_level": "single-trial full analog-wrapper transistor checks, ideal external phases/codes; NOT full SAR conversion",
+  "cases": [
+    {
+      "name": "wrapper_bottom_r1_c1e-08_trial_1024_-1",
+      "code": 1024,
+      "sign": -1,
+      "input_diff_v": -0.20004882812500002,
+      "residual_before_evaluate_v": -4.889589575018949e-05,
+      "residual_error_lsb": -0.00034698624097016795,
+      "output_diff_v": -1.799999336997723,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_r1_c1e-08_trial_1024_1",
+      "code": 1024,
+      "sign": 1,
+      "input_diff_v": -0.199951171875,
+      "residual_before_evaluate_v": 4.8740825979165514e-05,
+      "residual_error_lsb": -0.00044697098667258184,
+      "output_diff_v": -1.7999993369977232,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_r1_c1e-08_trial_2048_-1",
+      "code": 2048,
+      "sign": -1,
+      "input_diff_v": -4.8828125e-05,
+      "residual_before_evaluate_v": -4.874219489148235e-05,
+      "residual_error_lsb": 0.00043996215561038776,
+      "output_diff_v": -1.7999993369977236,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_r1_c1e-08_trial_2048_1",
+      "code": 2048,
+      "sign": 1,
+      "input_diff_v": 4.8828125e-05,
+      "residual_before_evaluate_v": 4.889453562373358e-05,
+      "residual_error_lsb": 0.00034002239351592356,
+      "output_diff_v": -1.799999336997723,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_r1_c1e-08_trial_3072_-1",
+      "code": 3072,
+      "sign": -1,
+      "input_diff_v": 0.19995117187500006,
+      "residual_before_evaluate_v": -4.86522585235738e-05,
+      "residual_error_lsb": 0.0009004363593021619,
+      "output_diff_v": 1.799999001068317,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_bottom_r1_c1e-08_trial_3072_1",
+      "code": 3072,
+      "sign": 1,
+      "input_diff_v": 0.20004882812500008,
+      "residual_before_evaluate_v": 4.8984463396850586e-05,
+      "residual_error_lsb": 0.0008004525918749866,
+      "output_diff_v": 1.7999990015062624,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    }
+  ],
+  "pass_count": 3,
+  "fail_count": 3,
+  "architecture": "bottom",
+  "external_reference_resistance_ohm": 1.0,
+  "external_reference_capacitance_f": 1e-08
+}

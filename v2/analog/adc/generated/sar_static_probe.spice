@@ -1,0 +1,179 @@
+* sar_static_probe
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+* Testbench digital sequencer is ideal; analog decision path is SKY130 MOS/MIM.
+VDD vdd 0 1.8
+VCM cm 0 .9
+VRP srp 0 1.1
+VRN srn 0 .7
+RRP srp rp 10
+RRN srn rn 10
+VIP srcp 0 0.75
+VIN srcn 0 1.05
+RSP srcp ip 350
+RSN srcn inn 350
+VEN en 0 PWL(0 1.8 2.49u 1.8 2.491u 0)
+VENB enb 0 PWL(0 0 2.49u 0 2.491u 1.8)
+VACQ acq 0 PWL(0 1.8 2.50u 1.8 2.501u 0)
+VCONV conv 0 PWL(0 0 2.52u 0 2.521u 1.8)
+XSP ip tp en enb vdd 0 adc_tgate
+XSN inn tn en enb vdd 0 adc_tgate
+RDC_P tp 0 1e15
+RDC_N tn 0 1e15
+XCMP tp tn op on clk vdd 0 adc_latched_comparator DSIZE=0
+CLOADP op 0 5f
+CLOADN on 0 5f
+.ic V(op)=0 V(on)=1.8
+BDEC decision 0 V=.9*(1+tanh((V(op)-V(on))/.02))
+.model MEMSW sw ron=1 roff=1e18 vt=.9 vh=.1
+VSAVE11 save11 0 PWL(0 0 3.099e-06 0 3.1e-06 1.8 3.115e-06 1.8 3.116e-06 0)
+SSAVE11 decision mem11 save11 0 MEMSW
+CMEM11 mem11 0 1p
+RMEM11 mem11 0 1e15
+.ic V(mem11)=0
+BBIT11 bit11 0 V=0
+BNBIT11 nbit11 0 V=1.8-V(bit11)
+Bp11_bit p11_bit 0 V=V(nbit11)
+Xp11_mux bp11 p11_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+Bn11_bit n11_bit 0 V=V(bit11)
+Xn11_mux bn11 n11_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+VSAVE10 save10 0 PWL(0 0 3.724e-06 0 3.725e-06 1.8 3.74e-06 1.8 3.741e-06 0)
+SSAVE10 decision mem10 save10 0 MEMSW
+CMEM10 mem10 0 1p
+RMEM10 mem10 0 1e15
+.ic V(mem10)=0
+BBIT10 bit10 0 V=0
+BNBIT10 nbit10 0 V=1.8-V(bit10)
+Bp10_bit p10_bit 0 V=V(nbit10)
+Xp10_mux bp10 p10_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+Bn10_bit n10_bit 0 V=V(bit10)
+Xn10_mux bn10 n10_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+VSAVE9 save9 0 PWL(0 0 4.349e-06 0 4.35e-06 1.8 4.365e-06 1.8 4.366e-06 0)
+SSAVE9 decision mem9 save9 0 MEMSW
+CMEM9 mem9 0 1p
+RMEM9 mem9 0 1e15
+.ic V(mem9)=0
+BBIT9 bit9 0 V=0
+BNBIT9 nbit9 0 V=1.8-V(bit9)
+Bp9_bit p9_bit 0 V=V(nbit9)
+Xp9_mux bp9 p9_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+Bn9_bit n9_bit 0 V=V(bit9)
+Xn9_mux bn9 n9_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+VSAVE8 save8 0 PWL(0 0 4.974e-06 0 4.975e-06 1.8 4.99e-06 1.8 4.991e-06 0)
+SSAVE8 decision mem8 save8 0 MEMSW
+CMEM8 mem8 0 1p
+RMEM8 mem8 0 1e15
+.ic V(mem8)=0
+BBIT8 bit8 0 V=0
+BNBIT8 nbit8 0 V=1.8-V(bit8)
+Bp8_bit p8_bit 0 V=V(nbit8)
+Xp8_mux bp8 p8_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+Bn8_bit n8_bit 0 V=V(bit8)
+Xn8_mux bn8 n8_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+VSAVE7 save7 0 PWL(0 0 5.599e-06 0 5.6e-06 1.8 5.615e-06 1.8 5.616e-06 0)
+SSAVE7 decision mem7 save7 0 MEMSW
+CMEM7 mem7 0 1p
+RMEM7 mem7 0 1e15
+.ic V(mem7)=0
+BBIT7 bit7 0 V=0
+BNBIT7 nbit7 0 V=1.8-V(bit7)
+Bp7_bit p7_bit 0 V=V(nbit7)
+Xp7_mux bp7 p7_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+Bn7_bit n7_bit 0 V=V(bit7)
+Xn7_mux bn7 n7_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=8 WP=16
+VSAVE6 save6 0 PWL(0 0 6.224e-06 0 6.225e-06 1.8 6.24e-06 1.8 6.241e-06 0)
+SSAVE6 decision mem6 save6 0 MEMSW
+CMEM6 mem6 0 1p
+RMEM6 mem6 0 1e15
+.ic V(mem6)=0
+BBIT6 bit6 0 V=0
+BNBIT6 nbit6 0 V=1.8-V(bit6)
+Bp6_bit p6_bit 0 V=V(nbit6)
+Xp6_mux bp6 p6_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=6.72 WP=13.44
+Bn6_bit n6_bit 0 V=V(bit6)
+Xn6_mux bn6 n6_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=6.72 WP=13.44
+VSAVE5 save5 0 PWL(0 0 6.849e-06 0 6.85e-06 1.8 6.865e-06 1.8 6.866e-06 0)
+SSAVE5 decision mem5 save5 0 MEMSW
+CMEM5 mem5 0 1p
+RMEM5 mem5 0 1e15
+.ic V(mem5)=0
+BBIT5 bit5 0 V=0
+BNBIT5 nbit5 0 V=1.8-V(bit5)
+Bp5_bit p5_bit 0 V=V(nbit5)
+Xp5_mux bp5 p5_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=4.7517576 WP=9.5035151
+Bn5_bit n5_bit 0 V=V(bit5)
+Xn5_mux bn5 n5_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=4.7517576 WP=9.5035151
+VSAVE4 save4 0 PWL(0 0 7.474e-06 0 7.475e-06 1.8 7.49e-06 1.8 7.491e-06 0)
+SSAVE4 decision mem4 save4 0 MEMSW
+CMEM4 mem4 0 1p
+RMEM4 mem4 0 1e15
+.ic V(mem4)=0
+BBIT4 bit4 0 V=0
+BNBIT4 nbit4 0 V=1.8-V(bit4)
+Bp4_bit p4_bit 0 V=V(nbit4)
+Xp4_mux bp4 p4_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=3.36 WP=6.72
+Bn4_bit n4_bit 0 V=V(bit4)
+Xn4_mux bn4 n4_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=3.36 WP=6.72
+VSAVE3 save3 0 PWL(0 0 8.099e-06 0 8.1e-06 1.8 8.115e-06 1.8 8.116e-06 0)
+SSAVE3 decision mem3 save3 0 MEMSW
+CMEM3 mem3 0 1p
+RMEM3 mem3 0 1e15
+.ic V(mem3)=0
+BBIT3 bit3 0 V=0
+BNBIT3 nbit3 0 V=1.8-V(bit3)
+Bp3_bit p3_bit 0 V=V(nbit3)
+Xp3_mux bp3 p3_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=2.3758788 WP=4.7517576
+Bn3_bit n3_bit 0 V=V(bit3)
+Xn3_mux bn3 n3_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=2.3758788 WP=4.7517576
+VSAVE2 save2 0 PWL(0 0 8.724e-06 0 8.725e-06 1.8 8.74e-06 1.8 8.741e-06 0)
+SSAVE2 decision mem2 save2 0 MEMSW
+CMEM2 mem2 0 1p
+RMEM2 mem2 0 1e15
+.ic V(mem2)=0
+BBIT2 bit2 0 V=0
+BNBIT2 nbit2 0 V=1.8-V(bit2)
+Bp2_bit p2_bit 0 V=V(nbit2)
+Xp2_mux bp2 p2_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=1.68 WP=3.36
+Bn2_bit n2_bit 0 V=V(bit2)
+Xn2_mux bn2 n2_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=1.68 WP=3.36
+VSAVE1 save1 0 PWL(0 0 9.349e-06 0 9.35e-06 1.8 9.365e-06 1.8 9.366e-06 0)
+SSAVE1 decision mem1 save1 0 MEMSW
+CMEM1 mem1 0 1p
+RMEM1 mem1 0 1e15
+.ic V(mem1)=0
+BBIT1 bit1 0 V=0
+BNBIT1 nbit1 0 V=1.8-V(bit1)
+Bp1_bit p1_bit 0 V=V(nbit1)
+Xp1_mux bp1 p1_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=1.1879394 WP=2.3758788
+Bn1_bit n1_bit 0 V=V(bit1)
+Xn1_mux bn1 n1_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=1.1879394 WP=2.3758788
+VSAVE0 save0 0 PWL(0 0 9.974e-06 0 9.975e-06 1.8 9.99e-06 1.8 9.991e-06 0)
+SSAVE0 decision mem0 save0 0 MEMSW
+CMEM0 mem0 0 1p
+RMEM0 mem0 0 1e15
+.ic V(mem0)=0
+BBIT0 bit0 0 V=0
+BNBIT0 nbit0 0 V=1.8-V(bit0)
+Bp0_bit p0_bit 0 V=V(nbit0)
+Xp0_mux bp0 p0_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=0.84 WP=1.68
+Bn0_bit n0_bit 0 V=V(bit0)
+Xn0_mux bn0 n0_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=0.84 WP=1.68
+VCLK clk 0 PWL(0 0 2.5u 0 2.815e-06 0 2.816e-06 1.8 3.121e-06 1.8 3.122e-06 0 3.44e-06 0 3.441e-06 1.8 3.746e-06 1.8 3.747e-06 0 4.065e-06 0 4.066e-06 1.8 4.371e-06 1.8 4.372e-06 0 4.69e-06 0 4.691e-06 1.8 4.996e-06 1.8 4.997e-06 0 5.315e-06 0 5.316e-06 1.8 5.621e-06 1.8 5.622e-06 0 5.94e-06 0 5.941e-06 1.8 6.246e-06 1.8 6.247e-06 0 6.565e-06 0 6.566e-06 1.8 6.871e-06 1.8 6.872e-06 0 7.19e-06 0 7.191e-06 1.8 7.496e-06 1.8 7.497e-06 0 7.815e-06 0 7.816e-06 1.8 8.121e-06 1.8 8.122e-06 0 8.44e-06 0 8.441e-06 1.8 8.746e-06 1.8 8.747e-06 0 9.065e-06 0 9.066e-06 1.8 9.371e-06 1.8 9.372e-06 0 9.69e-06 0 9.691e-06 1.8 9.996e-06 1.8 9.997e-06 0)
+Bpdummy_bit pdummy_bit 0 V=1.8
+Xpdummy_mux dp pdummy_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=0.84 WP=1.68
+Bndummy_bit ndummy_bit 0 V=0
+Xndummy_mux dn ndummy_bit acq conv rp rn cm vdd 0 adc_ref_switch WN=0.84 WP=1.68
+XCP tp bp11 bp10 bp9 bp8 bp7 bp6 bp5 bp4 bp3 bp2 bp1 bp0 dp adc_cdac12
+XCN tn bn11 bn10 bn9 bn8 bn7 bn6 bn5 bn4 bn3 bn2 bn1 bn0 dn adc_cdac12
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 10.1u
+wrdata /repo/v2/analog/adc/results/sar_static_probe.tsv v(tp) v(tn) v(op) v(on) v(clk) v(rp) v(rn) i(vdd) i(vrp) i(vrn) v(mem11) v(mem10) v(mem9) v(mem8) v(mem7) v(mem6) v(mem5) v(mem4) v(mem3) v(mem2) v(mem1) v(mem0)
+quit
+.endc
+.end

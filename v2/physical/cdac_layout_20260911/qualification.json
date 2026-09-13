@@ -1,0 +1,673 @@
+{
+  "status": "SKY130_CDAC_PLACEMENT_FLOORPLAN_PASS",
+  "generated_at_utc": "2026-09-11T08:19:35.253144+00:00",
+  "evidence_level": "Open-source SKY130A hierarchical placement floorplan with placement-only Magic DRC and KLayout GDS readback",
+  "cadence_qualified": false,
+  "final_cdac_layout": false,
+  "completion": {
+    "binary_assignment": true,
+    "all_8192_active_units_placed": true,
+    "edge_dummy_ring_placed": true,
+    "placement_only_drc": true,
+    "routing": false,
+    "lvs": false,
+    "pex": false,
+    "post_layout_performance": false
+  },
+  "toolchain": {
+    "container_image_sha256": "sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7",
+    "pdk_resolved_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A",
+    "pdk_version": "026824c7969ce6f4fc9678e6ca04b0a06a596c4b",
+    "magic": "Magic 8.3 revision 681 - Compiled on Tue Aug 25 11:43:38 AM CEST 2026.",
+    "klayout": "KLayout 0.30.11"
+  },
+  "primitive": {
+    "type": "sky130_fd_pr__cap_mim_m3_1",
+    "requested_plate_um": [
+      3.0,
+      3.0
+    ],
+    "actual_geometry_bbox_um": [
+      -2.43,
+      -1.7,
+      2.43,
+      1.7
+    ],
+    "actual_geometry_width_height_um": [
+      4.86,
+      3.4
+    ],
+    "source_mag": "v2/environment/results/physical_20260908T022855079643Z/mim_unit.mag",
+    "source_mag_sha256": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e"
+  },
+  "pitch_qualification": {
+    "provisional_csv_pitch_um": 4.0,
+    "criterion": "Magic DRC count is zero AND both capacitor terminals remain separate in extracted two-cell topology",
+    "minimum_safe_tested_pitch_um": {
+      "x": 6.0,
+      "y": 4.54
+    },
+    "used_pitch_um": {
+      "x": 6.0,
+      "y": 4.54
+    },
+    "relative_to_4um": {
+      "x_increase_percent": 50.0,
+      "y_increase_percent": 13.5
+    },
+    "four_um_observation": {
+      "x_drc_count": 5,
+      "x_terminal_topology_separate": false,
+      "y_drc_count": 2,
+      "y_terminal_topology_separate": true
+    },
+    "boundary_observations": {
+      "x_5p99": {
+        "axis": "x",
+        "pitch_um": 5.99,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p990.spice"
+      },
+      "x_6p00": {
+        "axis": "x",
+        "pitch_um": 6.0,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_x_6p000.spice"
+      },
+      "y_4p53": {
+        "axis": "y",
+        "pitch_um": 4.53,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p530.spice"
+      },
+      "y_4p54": {
+        "axis": "y",
+        "pitch_um": 4.54,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_4p540.spice"
+      }
+    },
+    "all_probes": [
+      {
+        "axis": "x",
+        "pitch_um": 4.0,
+        "drc_count": 5,
+        "terminal_topology_separate": false,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_4p000.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 4.8,
+        "drc_count": 0,
+        "terminal_topology_separate": false,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_4p800.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.0,
+        "drc_count": 4,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p000.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.1,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p100.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.15,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p150.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.16,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p160.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.17,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p170.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.18,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p180.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.2,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p200.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.25,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_x_5p250.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 3.4,
+        "drc_count": 3,
+        "terminal_topology_separate": false,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_3p400.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 3.5,
+        "drc_count": 4,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_3p500.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 3.6,
+        "drc_count": 4,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_3p600.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 3.7,
+        "drc_count": 4,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_3p700.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 3.8,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_3p800.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 3.9,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_3p900.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.0,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_artifacts/probe_y_4p000.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.25,
+        "drc_count": 3,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p250.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.3,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p300.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.35,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p350.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.4,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p400.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.45,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p450.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.5,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p500.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.6,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p600.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.8,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p800.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.98,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p980.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 5.99,
+        "drc_count": 1,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_x_5p990.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 6.0,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_x_6p000.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 6.01,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_x_6p010.spice"
+      },
+      {
+        "axis": "x",
+        "pitch_um": 6.2,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_x_6p200.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.0,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p000.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.1,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p100.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.2,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p200.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.3,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p300.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.4,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p400.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.5,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p500.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.52,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p520.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.53,
+        "drc_count": 2,
+        "terminal_topology_separate": true,
+        "safe": false,
+        "netlist": "probe_refine/refine_y_4p530.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.54,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_4p540.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.55,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_4p550.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.6,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_4p600.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 4.8,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_4p800.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 5.0,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_5p000.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 5.2,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_5p200.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 5.4,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_5p400.spice"
+      },
+      {
+        "axis": "y",
+        "pitch_um": 5.6,
+        "drc_count": 0,
+        "terminal_topology_separate": true,
+        "safe": true,
+        "netlist": "probe_refine/refine_y_5p600.spice"
+      }
+    ]
+  },
+  "instance_counts": {
+    "physical_per_side": {
+      "P": 4356,
+      "N": 4356
+    },
+    "active_per_side": {
+      "P": 4096,
+      "N": 4096
+    },
+    "edge_dummy_per_side": {
+      "P": 260,
+      "N": 260
+    },
+    "physical_total": 8712,
+    "active_total": 8192,
+    "edge_dummy_total": 520,
+    "by_net": {
+      "P": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1,
+        "EDGE": 260
+      },
+      "N": {
+        "B0": 1,
+        "B1": 2,
+        "B10": 1024,
+        "B11": 2048,
+        "B2": 4,
+        "B3": 8,
+        "B4": 16,
+        "B5": 32,
+        "B6": 64,
+        "B7": 128,
+        "B8": 256,
+        "B9": 512,
+        "DUMMY": 1,
+        "EDGE": 260
+      }
+    }
+  },
+  "geometry": {
+    "side_bbox_um": [
+      -2.43,
+      -1.7,
+      392.43,
+      296.8
+    ],
+    "side_width_um": 394.86,
+    "side_height_um": 298.5,
+    "side_area_um2": 117865.71,
+    "differential_top_bbox_um": [
+      -2.43,
+      -1.7,
+      817.29,
+      296.8
+    ],
+    "differential_top_bbox_area_um2": 244686.41999999998,
+    "reserved_inter_side_routing_gap_um": 30.0,
+    "provisional_4um_side_bbox_um": [
+      264.0,
+      264.0
+    ],
+    "side_area_increase_vs_provisional_percent": 69.11402376033058,
+    "active_plate_area_um2_both_sides": 73728.0,
+    "active_plate_area_fraction_of_two_side_bboxes": 0.3127627195390415
+  },
+  "magic_drc_counts": {
+    "p_side": 0,
+    "n_side": 0,
+    "top": 0
+  },
+  "klayout_readback": {
+    "reader": "KLayout pya",
+    "gds": "cdac_diff_floorplan.gds",
+    "dbu_um": 0.001,
+    "top_cell": "cdac_diff_floorplan",
+    "top_bbox_um": [
+      -2.43,
+      -1.7,
+      817.29,
+      296.8
+    ],
+    "side_p_bbox_um": [
+      -2.43,
+      -1.7,
+      392.43,
+      296.8
+    ],
+    "side_n_bbox_um": [
+      -2.43,
+      -1.7,
+      392.43,
+      296.8
+    ],
+    "top_direct_instances": 2,
+    "side_p_direct_instances": 4356,
+    "side_n_direct_instances": 4356,
+    "top_direct_shapes_and_texts": 84,
+    "planned_marker_labels": [
+      "PLAN_N_B0",
+      "PLAN_N_B1",
+      "PLAN_N_B10",
+      "PLAN_N_B11",
+      "PLAN_N_B2",
+      "PLAN_N_B3",
+      "PLAN_N_B4",
+      "PLAN_N_B5",
+      "PLAN_N_B6",
+      "PLAN_N_B7",
+      "PLAN_N_B8",
+      "PLAN_N_B9",
+      "PLAN_N_DUMMY",
+      "PLAN_N_TOP",
+      "PLAN_P_B0",
+      "PLAN_P_B1",
+      "PLAN_P_B10",
+      "PLAN_P_B11",
+      "PLAN_P_B2",
+      "PLAN_P_B3",
+      "PLAN_P_B4",
+      "PLAN_P_B5",
+      "PLAN_P_B6",
+      "PLAN_P_B7",
+      "PLAN_P_B8",
+      "PLAN_P_B9",
+      "PLAN_P_DUMMY",
+      "PLAN_P_TOP"
+    ],
+    "cell_count": 4,
+    "cells": [
+      "cdac_diff_floorplan",
+      "cdac_side_n",
+      "cdac_side_p",
+      "mim_unit"
+    ]
+  },
+  "checks": {
+    "generator_completed": true,
+    "source_assignment_pass": true,
+    "placement_index_has_8712_unique_instances": true,
+    "each_side_has_4096_active_units": true,
+    "each_side_has_260_edge_dummies": true,
+    "each_side_has_4356_physical_mim_units": true,
+    "coarse_pitch_probe_completed": true,
+    "refined_pitch_probe_completed": true,
+    "four_um_x_is_rejected": true,
+    "four_um_y_is_rejected": true,
+    "x_5p99_fails_and_6p00_passes": true,
+    "y_4p53_fails_and_4p54_passes": true,
+    "used_pitch_matches_first_safe_boundary": true,
+    "magic_floorplan_completed": true,
+    "placement_only_magic_drc_zero": true,
+    "klayout_readback_completed": true,
+    "klayout_hierarchy_is_two_sides_of_4356_units": true,
+    "all_28_planning_markers_are_present": true,
+    "render_is_nonempty": true
+  },
+  "limitations": [
+    "This is a placement-only floorplan. None of the MIM terminals are routed.",
+    "The 28 metal5 labels are unconnected planning markers, not electrical pins.",
+    "Placement-only DRC does not prove connectivity; LVS is intentionally not claimed.",
+    "No parasitic extraction or post-layout ADC simulation has been performed on this floorplan.",
+    "Reference switches, comparator, frontend, bias, and digital control are not placed in this floorplan.",
+    "The measured pitch is the first passing pairwise placement boundary for this exact PCell, not a routed-array pitch guarantee.",
+    "Magic/KLayout open decks were used; this is not Cadence or foundry signoff."
+  ],
+  "artifact_sha256": {
+    "cdac_diff_floorplan.gds": "93ff17773093e0b017fed7c2f857494612657615b2fa72600dd881dfdff40fce",
+    "cdac_diff_floorplan.mag": "f454b59aee7d3fb6f23191060c6ce5cba72a6136c17dcf835a4c597bdf5941e6",
+    "cdac_diff_floorplan.png": "59b37cb90ce5764121a523047ab731c949454687172b507bcab6ba648a2f35ee",
+    "cdac_pin_corridor.png": "104a124e9dce15fd8e38efdbdb62938f99eb7af6ec1cfb5647dca54c214f91ba",
+    "cdac_side_n.gds": "554bc9b5408067ec1419da1ee6ebcec46d78e3366d8747b62639cd6629f356ad",
+    "cdac_side_n.mag": "95fe834c6557c81d42110a4fb86eeaa69f9a23d1b2f738ac1d8c4ba1b3098677",
+    "cdac_side_p.gds": "ca4ceafa2502c62f3c001930182ad998d803aecd8802beb18351ee941b4a2fcf",
+    "cdac_side_p.mag": "ef95434d155396c959d39dc5688baf7b6a9890854428b94aecc875d4e502640f",
+    "generate_cdac_floorplan.tcl": "6982769f6929631222e1ec22fec64f034c4737bde0bbf8948485818b12fc89d2",
+    "generation_manifest.json": "c9ab05be13ad7ac575410a198f1b0458d5aa4f7f1886e4090f7c2a24b0b7ec01",
+    "generator.log": "75ad55abb8eddfe96372d2290e562555d4e1f05be818959d012914abf8274399",
+    "klayout_render.log": "363786fc7146322731187b458b290eaf7399fc79d7e426d5565d6618b88942ec",
+    "klayout_summary.json": "eaedf8b7d6877d5bd136247903252eb9e6f1070b85386fd1e4960d446fce14f6",
+    "magic_floorplan.log": "11a734bc95cb88cb91852a32e5b59336b96d75747343e07d88b1bdefaf7d21cb",
+    "mim_unit.mag": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e",
+    "pitch_probe.log": "ad756958b28517cde93966dcaed1f52addd5a49985813dfae52e6fd9ea68352d",
+    "pitch_probe_refine.log": "84f362a6facbfcf0f9f5d37cd7bfa092578a34df2bbfacb310dbd54ec6b172bf",
+    "placement_index.csv": "53667bd5e0cf168329bc53d30e240de068e49d2d7be2693e441ef8cb3c68c9b9"
+  },
+  "source_sha256": {
+    "generate_floorplan.py": "c0900e86f8a32e45ff68b350b711272127a44d16172260fa117691f59e849c5c",
+    "pitch_probe.tcl": "ab3c9ff4c6fd911f9096d8a2cf3fb6d9a9feef791c03399ed439f3446c2e56b3",
+    "pitch_probe_refine.tcl": "32ace101e5653000aafb79524b0418e9a2cb88b62a9d2b13889021a3365933f3",
+    "render_klayout.py": "e65844ef52a4e62a395600e1a2a5a39a2610fb87aa7a018d0547b7d08c846397",
+    "qualify.py": "64a77e82d80c902e0a18e99ee23f6b3750b23308255e486b411539ae9de24294"
+  }
+}

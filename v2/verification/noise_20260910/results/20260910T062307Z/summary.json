@@ -1,0 +1,140 @@
+{
+  "status": "CAPABILITY_PROBE_ONLY_NOT_ADC_NOISE_QUALIFICATION",
+  "created_utc": "20260910T062307Z",
+  "source_sha256": "38c7eb766503ad292e1fd30c129196fa61b08d449f5b4447381efa1d4659b6ef",
+  "simulators": {
+    "ngspice": "/foss/tools/bin/ngspice",
+    "Xyce": "/foss/tools/bin/Xyce",
+    "vacask": "/foss/tools/bin/vacask"
+  },
+  "rc_controls": [
+    {
+      "name": "off",
+      "seed": 11,
+      "noise_enabled": false,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 0.17524751099699643
+      },
+      "points": 200008,
+      "end_s": 0.02,
+      "variance_v2": 0.0,
+      "rms_v": 0.0,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 0.0,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "a34efa97db672de6dedcfb4bd7d4f87382b93a6509332c79728d06b543145851"
+    },
+    {
+      "name": "on_seed11",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 1.9894135350041324
+      },
+      "points": 1789063,
+      "end_s": 0.02,
+      "variance_v2": 4.36767690389865e-12,
+      "rms_v": 2.089898803715235e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0539715155264517,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "20bedfe27d39537141c7ac6aca067a0eca37b372752f685388a127e74b69b628"
+    },
+    {
+      "name": "replay_seed11",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 1.917016623003292
+      },
+      "points": 1789063,
+      "end_s": 0.02,
+      "variance_v2": 4.36767690389865e-12,
+      "rms_v": 2.089898803715235e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0539715155264517,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "20bedfe27d39537141c7ac6aca067a0eca37b372752f685388a127e74b69b628"
+    },
+    {
+      "name": "on_seed29",
+      "seed": 29,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 2.0577843859937275
+      },
+      "points": 1788332,
+      "end_s": 0.02,
+      "variance_v2": 4.305986164227129e-12,
+      "rms_v": 2.0822717960611123e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0390848185898025,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "ff8a039bc6adcbb226e29f576558ba8e2a7c5964318f108ddf7162668097694e"
+    },
+    {
+      "name": "on_os12",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 12,
+      "mode": "zoh",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 3.2207826970116002
+      },
+      "points": 3102590,
+      "end_s": 0.02,
+      "variance_v2": 4.224291484224446e-12,
+      "rms_v": 2.056764076885803e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.0193709369114168,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "407ed6df8a9bb19ea9ca3ee43c74142a7e2ec596a959be490c3a1b1ee8d5f35b"
+    },
+    {
+      "name": "on_sde",
+      "seed": 11,
+      "noise_enabled": true,
+      "oversample": 6,
+      "mode": "sde",
+      "run": {
+        "returncode": 0,
+        "elapsed_s": 0.2987612269935198
+      },
+      "points": 243413,
+      "end_s": 0.02,
+      "variance_v2": 4.332107671075503e-12,
+      "rms_v": 2.0813943934320783e-06,
+      "kt_over_c_v2": 4.1440179735e-12,
+      "variance_over_ktc": 1.04538824367517,
+      "small_signal_integral_v2": 4.1009348932555845e-12,
+      "waveform_sha256": "41c3c586f7ff7bfa8289bf4a4df6d634e837f3c6f2af9a5b0d3b3453524c7017"
+    }
+  ],
+  "sky130_mos": {
+    "ngspice": {
+      "returncode": 0,
+      "elapsed_s": 3.9290232849889435
+    },
+    "conversion": {
+      "returncode": 1,
+      "elapsed_s": 0.04561997400014661
+    },
+    "converted_pdk_location": "/tmp/sensor_noise_pdk_pluxx665",
+    "pdk_deck_sha256": "48de7c677e2c6e7d09b2559279de9f818be71010a4aa933d728eb4db3b133c84",
+    "pdk_resolved_path": "/foss/pdks/ciel/sky130/versions/026824c7969ce6f4fc9678e6ca04b0a06a596c4b/sky130A/libs.tech/combined/sky130.lib.spice",
+    "status": "PENDING_CONVERSION_INSPECTION"
+  }
+}

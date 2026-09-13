@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""One fixed-geometry numerical SKY130 bin probe, NOT a PDK port.
+
+Query all explicitly supplied model parameters after ngspice has selected the
+actual bin and evaluated its expressions. Preserve Given/default distinctions:
+do not dump all defaults as if supplied. Runtime PDK-derived models stay /tmp.
+VACASK's unknown-version fallback is a FAIL, not accepted model equivalence.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+import re
+import shutil
+import tempfile
+import time
+
+import ngspyce as ns
+import numpy as np
+from rawfile import rawread
+
+from probe import HERE, PDK, run
+
+DEVICE='m.xm.msky130_fd_pr__nfet_01v8'
+MODELFILE=PDK.parent/'continuous/models_fet/sky130_fd_pr__nfet_01v8.spice'
+VACMODEL=Path('/foss/tools/vacask/src/vacask/devices/spice/bsim4v8.va')
+
+
+def query_real(target, parameter):
+    lines=ns.cmd(f'print @{target}[{parameter}]')
+    if len(lines)!=1 or '=' not in lines[0]:
+        raise ValueError(f'No unique scalar query for {target}[{parameter}]')
+    value=float(lines[0].split('=',1)[1].strip())
+    if not np.isfinite(value): raise ValueError('Nonfinite model value')
+    return value
+
+
+def model_card(text,name):
+    cards=[];active=None
+    for line in text.splitlines():
+        stripped=line.strip()
+        if stripped.startswith('*') or not stripped:continue
+        if stripped.startswith('+'):
+            if active is not None:active+=' '+stripped[1:]
+        else:
+            if active is not None:cards.append(active)
+            active=stripped
+    if active is not None:cards.append(active)
+    matches=[c for c in cards if re.match(r'^\.model\s+'+re.escape(name)+r'\s',c,re.I)]
+    if len(matches)!=1:raise ValueError('Ambiguous selected model card')
+    return matches[0]
+
+
+def main():
+    tag=time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())
+    folder=HERE/'results'/('single_mos_'+tag);folder.mkdir(parents=True)
+    temp=Path(tempfile.mkdtemp(prefix='sensor_numeric_bin_'))
+    shutil.copyfile(__file__,folder/'single_mos_numeric.py.snapshot')
+    hardware=f'''SKY130 selected-bin extraction control
+.lib {PDK} tt
+.param mc_mm_switch=0 mc_pr_switch=0
+VDD vdd 0 1.8
+VG gate 0 DC .7 AC 1
+RLOAD vdd out 20k
+CLOAD out 0 1p
+XM out gate 0 0 sky130_fd_pr__nfet_01v8 W=2 L=1
+.temp 27
+.end
+'''
+    source=folder/'original_device.spice';source.write_text(hardware)
+    ns.source(str(source));ns.cmd('set numdgt=17');ns.operating_point()
+    device_lines=list(ns.cmd('show '+DEVICE));model_lines=list(ns.cmd('showmod '+DEVICE))
+    parsed_model=next(l.split()[1] for l in model_lines if l.split()[0]=='model')
+    version=next(l.split()[1] for l in model_lines if l.split()[0]=='version')
+    selected_name=parsed_model.split(':')[-1]
+    selected=model_card(MODELFILE.read_text(),selected_name)
+    keys=re.findall(r'\b([A-Za-z_][\w]*)\s*=',selected)
+    if len(keys)!=len(set(keys)):raise ValueError('Duplicate explicit model parameter')
+    values={};constant_fallbacks=[]
+    for key in keys:
+        if key.lower()=='level':
+            values[key]=54
+        elif key.lower()=='version':values[key]=version
+        else:
+            try:
+                value=query_real(parsed_model,key)
+            except ValueError:
+                literal=re.search(r'\b'+re.escape(key)+r'\s*=\s*([^\s]+)',selected).group(1)
+                # Some native query interfaces lack a field even though it is
+                # supplied in the source card. Preserve a literal exactly; never
+                # guess or drop an expression that could not be evaluated.
+                if not re.fullmatch(r'[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?',literal):raise
+                value=float(literal)
+                constant_fallbacks.append({'parameter':key,'reason':'query unavailable; original literal preserved'})
+            if key.lower()=='tnom':value-=273.15 # query API returns Kelvin; card takes Celsius.
+            values[key]=value
+    instance={k:query_real(DEVICE,k) for k in ['l','w','m','nf','ad','as','pd','ps','nrd','nrs','sa','sb','sd','delvto']}
+    original_op={k:float(ns.vector(k)[0]) for k in ['out','vdd#branch']}
+    ns.cmd('ac dec 40 10 100meg')
+    ac_f=ns.vector('frequency').real.copy();ac_v=ns.vector('out').copy()
+    np.savez(folder/'ngspice_ac.npz',frequency=ac_f,voltage=ac_v)
+    ns.cmd('noise v(out) vg dec 40 10 100meg')
+    ns.cmd('setplot noise1')
+    nf=ns.vector('frequency').real.copy();noise=ns.vector('onoise_spectrum').copy()
+    np.savez(folder/'ngspice_noise.npz',frequency=nf,amplitude_spectrum=noise)
+    payload={'model_values':values,'instance_values':instance,'selected_model':parsed_model,
+             'original_card':selected,'model_header':model_lines[0],
+             'unit_transform':'tnom Kelvin query to Celsius card; geometry query already in metres',
+             'dispatch':'level 54 nmos mapped to sp_bsim4v8 type=1; keep version=4.5 explicitly',
+             'constant_fallbacks':constant_fallbacks}
+    payloadfile=temp/'parsed_parameters.json';payloadfile.write_text(json.dumps(payload,indent=2)+'\n')
+    # No Given/default-state changing parameter omissions. LEVEL is simulator
+    # dispatch metadata, represented by selecting the native model implementation.
+    modelargs=[]
+    for name,value in values.items():
+        if name.lower()=='level':continue
+        modelargs.append(f'{name}='+('"'+value+'"' if isinstance(value,str) else format(value,'.17g')))
+    # The installed model's header explicitly maps ngspice m to $mfactor.
+    instanceargs=' '.join(f'{"$mfactor" if k=="m" else k}={v:.17g}' for k,v in instance.items())
+    native=f'''Fixed SKY130 numeric bin comparison, version fallback must fail qualification
+load "spice/bsim4v8.osdi"
+load "spice/resistor.osdi"
+load "spice/capacitor.osdi"
+model n sp_bsim4v8 type=1 {' '.join(modelargs)}
+model r sp_resistor
+model c sp_capacitor
+model v vsource
+vdd (vdd 0) v dc=1.8
+vg (gate 0) v dc=.7 mag=1
+rload (vdd out) r r=20k
+cload (out 0) c c=1p
+m1 (out gate 0 0) n {instanceargs}
+control
+  abort always
+  options temp=27 reltol=1e-6 vntol=1e-10 abstol=1e-15 rawfile="binary"
+  save v(out) i(vdd)
+  analysis op1 op
+  analysis ac1 ac from=10 to=100meg mode="dec" points=40
+  analysis noise1 noise out="out" in="vg" from=10 to=100meg mode="dec" points=40
+  analysis off tran stop=20u step=1n maxstep=1n
+  analysis on tran stop=20u step=1n noisefmax=100meg noisefmin=10k noiseseed=11 noisemode="sde" oversample=6
+endc
+'''
+    nativefile=temp/'device.sim';nativefile.write_text(native)
+    vacrun=run(['vacask','-sp','-qp',str(nativefile)],temp,folder/'vacask.log')
+    log=(folder/'vacask.log').read_text()
+    summary={'status':'SINGLE_BIN_PROBE_NOT_QUALIFIED','original_model_implementation':model_lines[0],
+             'selected_model':parsed_model,'original_version':version,'ngspice_op':original_op,
+             'explicit_model_parameter_count':len(values),'instance_parameter_count':len(instance),
+             'constant_fallbacks':constant_fallbacks,
+             'numeric_model_runtime_path':str(nativefile),'numeric_parameters_sha256':hashlib.sha256(payloadfile.read_bytes()).hexdigest(),
+             'native_deck_sha256':hashlib.sha256(nativefile.read_bytes()).hexdigest(),
+             'ngspice_model_file_sha256':hashlib.sha256(MODELFILE.read_bytes()).hexdigest(),
+             'vacask_model_source_sha256':hashlib.sha256(VACMODEL.read_bytes()).hexdigest(),
+             'run':vacrun,'unknown_version_fallback':'unknown BSIM4 version' in log,
+             'adc_noise_qualified':False,'sky130_model_equivalence_qualified':False}
+    if vacrun['returncode']==0:
+        for file in temp.glob('*.raw'):shutil.copyfile(file,folder/file.name)
+        op=rawread(str(temp/'op1.raw')).get()
+        summary['vacask_op']={k:float(op[k][0]) for k in ['out','vdd:flow(br)']}
+        summary['dc_current_relative_error']=float(abs(op['vdd:flow(br)'][0]/original_op['vdd#branch']-1))
+        vn=rawread(str(temp/'noise1.raw')).get()
+        expected=np.interp(vn['frequency'].real,nf,noise**2)
+        ratio=vn['onoise'].real/expected
+        summary['noise_psd_ratio_minmax']=[float(np.min(ratio)),float(np.max(ratio))]
+        summary['ngspice_noise_rms_v']=float(np.sqrt(np.trapezoid(noise**2,nf)))
+        summary['vacask_noise_rms_v']=float(np.sqrt(np.trapezoid(vn['onoise'].real,vn['frequency'].real)))
+        for mode in ['off','on']:
+            data=rawread(str(temp/(mode+'.raw'))).get()
+            ts=np.arange(1e-6,20e-6,1e-9);vs=np.interp(ts,data['time'].real,data['out'].real)
+            summary[mode+'_std_v']=float(np.std(vs))
+    (folder/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+    print(json.dumps(summary,indent=2))
+
+
+if __name__=='__main__':main()

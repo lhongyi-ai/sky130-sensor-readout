@@ -1,0 +1,32 @@
+{
+  "kind": "noise",
+  "gain": 4,
+  "sampler_state": "acquire",
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temperature_c": 27,
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "complete_frontend_qualified": false,
+  "formal_stability_gate_pass": false,
+  "single_worker": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 2.0553668400098104,
+  "simulator_diagnostics": [],
+  "status": "LOCAL_G4_CANARY_COMPLETE",
+  "dc_targets_v": [
+    -0.32,
+    0.0,
+    0.32
+  ],
+  "dc_differential_outputs_v": [
+    -0.32315183488601185,
+    -1.7924550732573152e-12,
+    0.32315183488172383
+  ],
+  "zero_output_common_mode_v": 0.8862885131945579,
+  "ac_1khz_target_to_output_gain": 1.009873411330294,
+  "school_cadence_run": false,
+  "candidate_phase": "acquire",
+  "scope": "Connectivity/reference values only, not frontend qualification."
+}

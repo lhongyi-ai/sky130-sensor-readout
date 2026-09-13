@@ -1,0 +1,95 @@
+{
+  "status": "DIAGNOSTIC_COMPLETED",
+  "arguments": {
+    "kind": "cascoded_tail",
+    "gain": 1,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temp": 27,
+    "method": "gear",
+    "step_ns": 2
+  },
+  "source_sha256": "951034fc5fe3bf4caf6c6d18c4cebc775b2048fbb690d6548dce677c115050f3",
+  "base_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+  "script_sha256": "0b69d6868f9bbe74bcb77e64731664f94cc5b8cc07e24a8d7690ffdfc39aea11",
+  "scope": "Static-capacitive-load common-mode/differential step diagnostic only",
+  "full_frontend_qualified": false,
+  "extra_waveform_columns": {
+    "13": "v(xpga.xamp.xerrn.tail)",
+    "14": "v(xpga.xamp.bt)",
+    "15": "v(xpga.xamp.xerrp.ts)",
+    "16": "v(xpga.xamp.xerrn.ts)",
+    "17": "@m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[id]",
+    "18": "@m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[vds]",
+    "19": "@m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[vdsat]",
+    "20": "@m.xpga.xamp.xerrp.xtc0.msky130_fd_pr__nfet_01v8[id]",
+    "21": "@m.xpga.xamp.xerrp.xtc0.msky130_fd_pr__nfet_01v8[vds]",
+    "22": "@m.xpga.xamp.xerrp.xtc0.msky130_fd_pr__nfet_01v8[vdsat]",
+    "23": "@m.xpga.xamp.xerrn.xt0.msky130_fd_pr__nfet_01v8[id]",
+    "24": "@m.xpga.xamp.xerrn.xt0.msky130_fd_pr__nfet_01v8[vds]",
+    "25": "@m.xpga.xamp.xerrn.xt0.msky130_fd_pr__nfet_01v8[vdsat]",
+    "26": "@m.xpga.xamp.xerrn.xtc0.msky130_fd_pr__nfet_01v8[id]",
+    "27": "@m.xpga.xamp.xerrn.xtc0.msky130_fd_pr__nfet_01v8[vds]",
+    "28": "@m.xpga.xamp.xerrn.xtc0.msky130_fd_pr__nfet_01v8[vdsat]"
+  },
+  "elapsed_s": 6.03440285200486,
+  "returncode": 0,
+  "common_mode_max_error_v": 0.31634768018465,
+  "late_common_mode_peak_to_peak_v": 3.231950040927245e-09,
+  "late_differential_peak_to_peak_v": 2.793000275502777e-10,
+  "mean_vdd_and_vcm_power_w": 0.00174504052589976,
+  "windows": {
+    "positive": {
+      "output_mean_v": 0.3588837305582203,
+      "output_peak_to_peak_v": 7.517838500170626e-06,
+      "common_mode_peak_to_peak_v": 0.0005973271386500167,
+      "tail_stack": {
+        "p": {
+          "bottom_min_vds_minus_vdsat_v": 0.015272802325979995,
+          "upper_min_vds_minus_vdsat_v": 0.29942420377062,
+          "one_bottom_mean_id_a": 0.00015103770410090198
+        },
+        "n": {
+          "bottom_min_vds_minus_vdsat_v": 0.0101184203715,
+          "upper_min_vds_minus_vdsat_v": 0.008370591685289995,
+          "one_bottom_mean_id_a": 0.0001495909177169469
+        }
+      }
+    },
+    "negative": {
+      "output_mean_v": -0.3588837630631445,
+      "output_peak_to_peak_v": 6.1416593000185316e-06,
+      "common_mode_peak_to_peak_v": 0.00040294063854995343,
+      "tail_stack": {
+        "p": {
+          "bottom_min_vds_minus_vdsat_v": 0.010128740699630004,
+          "upper_min_vds_minus_vdsat_v": 0.00840381367227,
+          "one_bottom_mean_id_a": 0.0001495908392103934
+        },
+        "n": {
+          "bottom_min_vds_minus_vdsat_v": 0.015278664320989996,
+          "upper_min_vds_minus_vdsat_v": 0.29946087735693,
+          "one_bottom_mean_id_a": 0.00015103758692562434
+        }
+      }
+    },
+    "zero": {
+      "output_mean_v": -3.5211059130559724e-11,
+      "output_peak_to_peak_v": 2.793000275502777e-10,
+      "common_mode_peak_to_peak_v": 3.231950040927245e-09,
+      "tail_stack": {
+        "p": {
+          "bottom_min_vds_minus_vdsat_v": 0.014276127942400005,
+          "upper_min_vds_minus_vdsat_v": 0.1524400775789,
+          "one_bottom_mean_id_a": 0.00015076870187687535
+        },
+        "n": {
+          "bottom_min_vds_minus_vdsat_v": 0.014276127942400005,
+          "upper_min_vds_minus_vdsat_v": 0.15244007758195,
+          "one_bottom_mean_id_a": 0.00015076870187687684
+        }
+      }
+    }
+  },
+  "diagnostic_stability_gate": false
+}

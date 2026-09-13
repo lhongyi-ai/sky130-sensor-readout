@@ -1,0 +1,79 @@
+{
+  "status": "passed_physical_checks_only",
+  "run_tag": "dummy_layout_r2",
+  "suite": "physical_only",
+  "evidence_level": "standalone_dual_lvt_switch_drc_lvs_flattened_rc",
+  "cadence_used": false,
+  "whole_adc_validated": false,
+  "candidate_model": "adc_tgate_dual_lvt_dummy",
+  "dummy_ratio": 0.5,
+  "candidate_nfet": {
+    "device": "sky130_fd_pr__nfet_01v8_lvt",
+    "w_um": 4.0,
+    "l_um": 0.15
+  },
+  "candidate_pfet": {
+    "device": "sky130_fd_pr__pfet_01v8_lvt",
+    "w_um": 8.0,
+    "l_um": 0.35
+  },
+  "magic_drc_count": 0,
+  "netgen_lvs": "unique_match",
+  "extracted_resistors": 95,
+  "extracted_capacitors": 51,
+  "bbox_um": [
+    0.25,
+    -0.095,
+    16.25,
+    17.2
+  ],
+  "bbox_area_um2": 276.71999999999997,
+  "extraction_corner": "Magic nominal RC; transistor PVT is swept, not RC corners",
+  "case_pairs": 0,
+  "transient_runs": 0,
+  "failed_view_cases": 0,
+  "quarter_lsb_v": 4.8828125e-05,
+  "load_f": 8.128512e-11,
+  "hold_test": "2.5us acquisition +7.5us hold; source flips to opposite excursion at2.7us",
+  "limitations": [
+    "Standalone switch, not top-level extracted ADC or full sensor readout.",
+    "No mismatch/noise/CDAC reference switching, and ideal clock/supply drive.",
+    "Per-leg quarter-LSB checks are not a differential linearity or SNDR result.",
+    "Open-source DRC/LVS is not a foundry production signoff."
+  ],
+  "results": [],
+  "candidate_netlist_sha256": "4e7450ebec4c78983b58f7dc367849eda1d4f46bcc4d2d631edd356fdadc11dd",
+  "source_sha256": {
+    "v2/physical/adc_switch/physical_candidate.py": "ade571ba7d69106e056b3e3a8bc83631c92fc9a9704d443f233fb825b329368a",
+    "v2/physical/adc_switch/candidates/adc_tgate_dual_lvt_dummy.spice": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734",
+    "v2/physical/adc_switch/generate_dummy_layout.tcl": "6a6546dc671255e07cf99da63b65373813034b0468a648fc856160da03b7277b",
+    "v2/physical/adc_switch/extract_rc.tcl": "a7909d8f68873212be51e0f11f2f1d2e94745462f3068f035f874ee6ee49db84"
+  },
+  "artifact_sha256": {
+    "adc_tgate_flat.cap.spice": "8e4644f36497ca9f124942ad71e32a98e3ff59e61c691d814c42221fa0a52634",
+    "adc_tgate_flat.ext": "cfe680cac40175aceb1e1778759030b81b38e6a646284020100e0e67a73c2223",
+    "adc_tgate_flat.lvs.spice": "aadfb88b0d3e5221af8d5a3b4f7dd71da1a625064188e3d6fdffc839079973d5",
+    "adc_tgate_flat.mag": "d92a18c1b73094904235825392eec2343d4f147fbb0b49e02e9e0401b5270395",
+    "adc_tgate_flat.rc.spice": "7497a012a94c1e48c1c7de7d13f61bfa4c709aec709d52faeafb06bf1867e2d5",
+    "adc_tgate_flat.res.ext": "e3e3139e9945808c5f694831bc18a7b588ce417786ab0f619d0ff36e60be8889",
+    "adc_tgate_layout.ext": "f29f3a0b761314d656f1af15c0d0b547a49cc36326812928a303b5be40fbc926",
+    "adc_tgate_layout.gds": "73bbc35cae33ac22a5b46ff18d71f176144025144ee8465c88ce34f10b373c72",
+    "adc_tgate_layout.lvs.spice": "53a57b19cf8083afce36c64ca38b77fe57841f02b422827a4cd14217f90d2c37",
+    "adc_tgate_layout.mag": "df65a5912f3cee0d1198bbb23d814864a0bd167793fd6752d8d8416fd8bd55ee",
+    "candidate.spice": "4e7450ebec4c78983b58f7dc367849eda1d4f46bcc4d2d631edd356fdadc11dd",
+    "layout.log": "fab5db6e644a29dcac7ec3c77b1c2828d40d3efb5fa0c070190e76084583e8b1",
+    "lvs.json": "34d776284de7a7ba493a28917542430a6ee9d136ceb79996478f3e6fabfb2433",
+    "lvs.log": "bc50f945503faa42f2cce0d7a2d5fee64993c731727c043faf3183fdd2294871",
+    "lvs.rpt": "0b866e706319939d19e8ba6dff185217a31c1f889344b2692eadcc4e8069adb5",
+    "rc_extraction.log": "2883cf88f9b63ac2a7f9ad3aa37f8d05a5e47521935dea12b17d493b8adef7a6",
+    "reference.spice": "e69a66eda35d807764fe1f4ec2b6cbfbf672469ce0982441ca44e53a07813d61",
+    "tg_nfet_dummy.ext": "e8601ed2b7308414c7bd10aee6585a9a63a651a1d5d377120d34349d2315eead",
+    "tg_nfet_dummy.mag": "74a3c02ee514c87c1a41ec29d063e87d71d76297835f2067d926921842bafd52",
+    "tg_nfet_lvt.ext": "400f4a86e4f6428b016d8178c6d4b0dabb38fdb3b76f419efc6bb039ec9b26eb",
+    "tg_nfet_lvt.mag": "0992e7170d88f51ff9af48e566658dc9e75701c3c6819b79c5f7a0f63df5681d",
+    "tg_pfet_dummy.ext": "87e7b7bc788ac117032bc9d1ae6f28d1b6fb2fab39857e2cb444af43cb36e341",
+    "tg_pfet_dummy.mag": "e5e4e0cab99dbe3b04bbd43159f381be2874d2e8c0ace4cd7ba6f003487b3806",
+    "tg_pfet_lvt.ext": "da6c94d5ceb99234be76192c30d9025618c48727ca2dbfe7712e9777defbf92e",
+    "tg_pfet_lvt.mag": "1b2e4da9d649920d551130df3275b11211a3880ec9f69011b204a80e09141a5a"
+  }
+}

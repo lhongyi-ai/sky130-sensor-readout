@@ -1,0 +1,24 @@
+{
+  "name": "headroom_c",
+  "baseline_sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+  "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+  "builder_sha256": "d28a2dceb4735edd046583632a23bd5c8b77c94d6af64196bf56c3f183c9c61f",
+  "changes": [
+    "PDK LVT input gates improve low-input source/tail headroom.",
+    "Four W624/L2 bottom tails per error pair, same-L W44/L2 reference at ~5.5 uA; target mirror ratio 56.7.",
+    "Real BT diode W5/L1 lowers cascode gate; no ideal internal bias source.",
+    "Two 100kohm PDK resistor strings set BCASC midpoint between VDD and externally specified VCM.",
+    "Output NMOS W10/L2 raises first-stage gate/drain voltage at approximately the existing output bias current.",
+    "BT diode W3.5, not W5: raise middle tail node to improve bottom-tail output resistance.",
+    "CMCTL compensation uses four actual 1 pF MIM cells instead of one.",
+    "CM tail bottom W998.4/L2 total, upper W640/L1 total: exactly 0.4 geometric scale of an input error-pair tail at identical BNT/BT bias.",
+    "CM error attenuator uses real 100k output strings and 3333.333ohm shunt to external VCM, with 2pF/30pF corresponding capacitive division.",
+    "Intended common-mode crossover reduction from measured 1.804MHz toward 0.3MHz; no assumed stability pass."
+  ],
+  "risks": [
+    "Potential output-stage gm and phase-margin reduction.",
+    "LVT noise and leakage not inherited from standard-Vt baseline.",
+    "Reference source loading and bias startup need later qualification.",
+    "No assumed static, stability, noise, power or PVT pass."
+  ]
+}

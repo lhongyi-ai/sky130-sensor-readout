@@ -1,0 +1,387 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4588,
+      "path": "frontend_top.sch",
+      "sha256": "55eed9f3ef27bc60e2f9c23b839b8443101a5ad0dcdc91add0f878290e09627d"
+    },
+    {
+      "bytes": 6400,
+      "path": "sky130_v2_switchable_pga.sch",
+      "sha256": "7c16bcc3ecc7f4833c578ffbce8653cec06dfec2ea5cf2c34256bc38d1371df7"
+    },
+    {
+      "bytes": 7049,
+      "path": "rd_fdota.sch",
+      "sha256": "82ed792471053aaffac515d9a9e0309627311a68fc9158ce20d73fd2c33228cc"
+    },
+    {
+      "bytes": 427,
+      "path": "rd_c4p.sym",
+      "sha256": "55368175a1dc8586efb5d17bd33ff4a033bd3390ba0d6e05ba03e9fa1d802384"
+    },
+    {
+      "bytes": 764,
+      "path": "rd_fbbranch.sym",
+      "sha256": "ca71d82ef94ed5eb9cd7642ebb44dfcff7690a361fe2e360cf33e39e7b199e36"
+    },
+    {
+      "bytes": 1085,
+      "path": "rd_fdota.sym",
+      "sha256": "6432717fb13c935a9c624ba0e94c132e4f1c83871dffadfa94bc90d90e98a86f"
+    },
+    {
+      "bytes": 541,
+      "path": "rd_hr.sym",
+      "sha256": "2037434c90d527d361110552cea605239aa5a0e57ed65780e8dbe11e5dd306c8"
+    },
+    {
+      "bytes": 1490,
+      "path": "sky130_v2_switchable_pga.sym",
+      "sha256": "237dc110ff55e03ef72b411baa79245cec8279c2e8e4795b78f547cd0994450f"
+    },
+    {
+      "bytes": 7630,
+      "path": "README.md",
+      "sha256": "0bb85cdd0ab56d390ca4238b5557a07eedcd72f6c81946a68468aadbd0e2b31c"
+    },
+    {
+      "bytes": 2573,
+      "path": "qualification.json",
+      "sha256": "3c121f4b96d2803151bc4703f3912ea483c21daf848aeba2c6ec25631c88dea2"
+    },
+    {
+      "bytes": 1325,
+      "path": "render_headless.sh",
+      "sha256": "9954631ce3e17ff651a997f2705fb6ddd940f84dc9173fbc0aff1b72c7cc1924"
+    },
+    {
+      "bytes": 12578,
+      "path": "build_manifest.py",
+      "sha256": "d93e74089002f58f3c68045c89e38fb032e7fb12496e0e648d8b9e4a7ca61407"
+    },
+    {
+      "bytes": 6848,
+      "path": "test_xschem_delivery.py",
+      "sha256": "ca6fd17f34b2b5ccaf69d9d294cc7f883bdb81bf220a6405492ac8d12d075734"
+    },
+    {
+      "bytes": 125015,
+      "dimensions_px": [
+        2400,
+        1600
+      ],
+      "path": "renders/frontend_top.png",
+      "sha256": "6bf80b90976d1d8e60d6b0f795cde8bb59928513a715a2269486516e856de0c6"
+    },
+    {
+      "bytes": 11996,
+      "path": "renders/frontend_top.svg",
+      "sha256": "5741e7cd088805245aa8220e5c51a528a43b73879549d028d73c327ac1cf0161"
+    },
+    {
+      "bytes": 133244,
+      "dimensions_px": [
+        2400,
+        1600
+      ],
+      "path": "renders/switchable_pga.png",
+      "sha256": "f24e7fd1e85abb77c9bd493c686604dfe11a53f9b20cf3da49788e249c45a425"
+    },
+    {
+      "bytes": 16485,
+      "path": "renders/switchable_pga.svg",
+      "sha256": "990ac950c575005cc5129ae8be326316296ddbd7803a81eadeb48b7177b1145f"
+    },
+    {
+      "bytes": 138350,
+      "dimensions_px": [
+        2400,
+        1600
+      ],
+      "path": "renders/rd_fdota.png",
+      "sha256": "59d41333529e4c05343df499ce1783a5e192b7b34bc9813c634b1c2ce6379d24"
+    },
+    {
+      "bytes": 20564,
+      "path": "renders/rd_fdota.svg",
+      "sha256": "36d251a3da73f4217ae41ced536be34e2b0207e9e9908c5e10bb11f2b1bc9472"
+    }
+  ],
+  "authoritative_sources": {
+    "candidate_bytes": 6434,
+    "candidate_path_from_this_directory": "../dynamic_20260911/candidate_06.spice",
+    "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+    "hash_matches_local_qualification": true,
+    "hash_matches_source_qualification": true,
+    "local_visual_qualification_path": "qualification.json",
+    "local_visual_qualification_sha256": "3c121f4b96d2803151bc4703f3912ea483c21daf848aeba2c6ec25631c88dea2",
+    "qualification_path_from_this_directory": "../dynamic_20260911/qualification.json",
+    "qualification_sha256": "44d6f30e4d9d08d9b96ca79a0a60dbc3d06a6343a8b1d977d6ecc0d7cfa8d5af",
+    "sampler_path_from_this_directory": "../dynamic_20260911/sampling_switch.spice",
+    "sampler_sha256": "f8595a6f9b00daf91298a3b8fe2c625bf30168e9834114163b0a23a34a396f45"
+  },
+  "frozen_candidate_truth": {
+    "all_three_device_region_pass": true,
+    "all_three_dynamic_pass": true,
+    "all_three_power_pass": true,
+    "all_three_static_pass": true,
+    "dynamic_max_acquisition_error_v": {
+      "1": 1.8915525128448962e-06,
+      "16": 1.0262394938842512e-05,
+      "4": 1.7428038638911403e-06
+    },
+    "external_vcm_endpoint_tracking_pass": true,
+    "first_downcross_dm_phase_margin_deg": {
+      "1": 86.37834817850349,
+      "16": 83.29965813968222,
+      "4": 84.85757645042042
+    },
+    "first_downcross_output_cm_phase_margin_deg": {
+      "1": 123.527943754344,
+      "16": 123.00052514593483,
+      "4": 123.18625962605654
+    },
+    "formal_multiloop_stability_pass": false,
+    "isolation_resistor": {
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "qualified_assembly_length_um": 0.5427995971802618,
+      "qualified_assembly_ohm": 1500,
+      "subcircuit_default_ohm": 1800
+    },
+    "layout_drc_lvs_pex_complete": false,
+    "mean_frontend_vdd_vcm_power_w": {
+      "1": 0.0007018504362734779,
+      "16": 0.0006975210296145314,
+      "4": 0.0006979738489585475
+    },
+    "miller_zero_resistor": {
+      "length_um": 0.8551774666232498,
+      "model": "sky130_fd_pr__res_high_po_0p69",
+      "resistance_ohm": 1200
+    },
+    "noise_qualified": false,
+    "physical_parameter_audit_pass": true,
+    "pvt_45_run": false,
+    "qualification_status": "NOMINAL_DYNAMIC_PASS__FORMAL_MULTILOOP_STABILITY_NOT_CLOSED",
+    "same_source_all_three_gains": true,
+    "stability_blocking_findings": [
+      "Stage-1 common-mode scalar return ratio begins near -180 degrees at gains 1 and 4, so the assumed negative-feedback sign is not demonstrated for every gain.",
+      "Every differential return-ratio trace crosses upward through 0 dB again between about 38.9 and 74.8 MHz; a first-downcrossing phase margin alone is insufficient.",
+      "The scalar injections leave the other loops closed and do not provide a return-difference determinant or an open-loop RHP-pole count for this coupled multi-loop circuit."
+    ],
+    "static_max_holdout_error_lsb": {
+      "1": 0.029641883041477968,
+      "16": 0.041137914313651436,
+      "4": 0.019547599315217212
+    }
+  },
+  "generated_utc": "2026-09-11T09:06:48.682909+00:00",
+  "hierarchy": [
+    {
+      "page": "frontend_top.sch",
+      "shows": "sensor boundary, switchable PGA, tested 1.5-kohm RC isolation, 4x-MIM filter load and real SAR sampler boundary"
+    },
+    {
+      "page": "sky130_v2_switchable_pga.sch",
+      "shows": "10-kohm inputs, six cross-feedback branches, G=1/4/16 values, decoder truth table and rd_fdota boundary"
+    },
+    {
+      "page": "rd_fdota.sch",
+      "shows": "two-input/two-output signal path, two stages, startup bias, direct NCM sensing, VCM-referenced CMG loop and 8-MIM Miller paths"
+    }
+  ],
+  "integrity_pass": true,
+  "limitations": [
+    "These pages are non-Cadence review drawings, not a Cadence Virtuoso library or signoff schematic.",
+    "The authoritative electrical implementation remains dynamic_20260911/candidate_06.spice; do not substitute an Xschem-generated netlist.",
+    "Nominal static, real-sampler dynamic, power, device-region and endpoint VCM checks pass for all three gains.",
+    "Formal coupled multiloop stability is not closed: every DM trace has a high-frequency up-crossing and the stage-1 CM return sign is anomalous at gains 1 and 4.",
+    "The 45-PVT screen and noise qualification have not run.",
+    "The resistor parameter audit passes, but no frontend layout, DRC, LVS, PEX or post-layout result exists.",
+    "The no-overlap assessment is a recorded human visual review of the final PNGs, not an algorithmic geometry proof."
+  ],
+  "port_audit": {
+    "rd_fdota": {
+      "expected": [
+        "INP",
+        "INN",
+        "OUTP",
+        "OUTN",
+        "VDD",
+        "VSS",
+        "VCM"
+      ],
+      "observed": [
+        "INP",
+        "INN",
+        "OUTP",
+        "OUTN",
+        "VDD",
+        "VSS",
+        "VCM"
+      ],
+      "pass": true
+    },
+    "sky130_v2_switchable_pga": {
+      "expected": [
+        "VINP",
+        "VINN",
+        "OUTP",
+        "OUTN",
+        "VDD",
+        "VSS",
+        "VCM",
+        "SEL0",
+        "SEL1"
+      ],
+      "observed": [
+        "VINP",
+        "VINN",
+        "OUTP",
+        "OUTN",
+        "VDD",
+        "VSS",
+        "VCM",
+        "SEL0",
+        "SEL1"
+      ],
+      "pass": true
+    },
+    "sky130_v2_switchable_sample_driver": {
+      "expected": [
+        "VINP",
+        "VINN",
+        "OUTP",
+        "OUTN",
+        "VDD",
+        "VSS",
+        "VCM",
+        "SEL0",
+        "SEL1",
+        "params:",
+        "RISO=1800"
+      ],
+      "observed": [
+        "VINP",
+        "VINN",
+        "OUTP",
+        "OUTN",
+        "VDD",
+        "VSS",
+        "VCM",
+        "SEL0",
+        "SEL1",
+        "params:",
+        "RISO=1800"
+      ],
+      "pass": true
+    }
+  },
+  "rendering": {
+    "ascii_only_schematic_labels": true,
+    "command": "./render_headless.sh (inside the configured SKY130 container login environment)",
+    "formats": [
+      "PNG",
+      "SVG"
+    ],
+    "incident": {
+      "affects_final_artifacts": false,
+      "cleanup": "The exact 13-MB temporary core file was deleted. The final script uses the configured login environment, one export per process, an explicit timeout and an EXIT trap for Xvfb.",
+      "description": "An unconfigured direct-shell attempt made Xschem dump core while combining two exports in one process.",
+      "occurred": true
+    },
+    "live_xschem_process_after_final_render": false,
+    "missing_symbol_marker_present": false,
+    "png_dimensions_px": [
+      2400,
+      1600
+    ],
+    "rendered_pages": 3,
+    "visual_no_overlap_audit": {
+      "algorithmic_proof": false,
+      "all_pages_pass": true,
+      "method": "Manual visual inspection of each final 2400x1600 PNG at original resolution",
+      "pages": {
+        "frontend_top.png": {
+          "missing_symbol_or_garbled_glyph": false,
+          "module_spacing_clear": true,
+          "review_note": "Top-level sensor, PGA, RC-isolation, sampler and evidence panels have clear gutters.",
+          "text_vs_border_overlap": false,
+          "text_vs_device_overlap": false,
+          "text_vs_text_overlap": false,
+          "text_vs_wire_overlap": false
+        },
+        "rd_fdota.png": {
+          "missing_symbol_or_garbled_glyph": false,
+          "module_spacing_clear": true,
+          "review_note": "Stage headings, device labels, sizes, gate names, rails and both CM-loop notes are visually separated.",
+          "text_vs_border_overlap": false,
+          "text_vs_device_overlap": false,
+          "text_vs_text_overlap": false,
+          "text_vs_wire_overlap": false
+        },
+        "switchable_pga.png": {
+          "missing_symbol_or_garbled_glyph": false,
+          "module_spacing_clear": true,
+          "review_note": "All six feedback branches remain inside their banks; labels, lines, boxes and the main signal panel are separated.",
+          "text_vs_border_overlap": false,
+          "text_vs_device_overlap": false,
+          "text_vs_text_overlap": false,
+          "text_vs_wire_overlap": false
+        }
+      },
+      "scope": "Human visual review of the final raster pages; this is not a computational geometry proof."
+    }
+  },
+  "schema_version": 2,
+  "scope": {
+    "cadence_native": false,
+    "purpose": "Browsable non-Cadence review pages bound to the authoritative SPICE candidate",
+    "signoff_schematic": false,
+    "silicon_measured": false,
+    "technology": "SKY130A device names and layout-capable primitives",
+    "tool": "Xschem 3.4.8RC"
+  },
+  "status": "XSCHEM_REVIEW_VISUAL_PASS__SOURCE_FORMAL_STABILITY_OPEN",
+  "structural_token_audit": {
+    "XCCN CZN OUTN rd_c8p": true,
+    "XCCP CZP OUTP rd_c8p": true,
+    "XCFN OUTN VSS rd_c4p": true,
+    "XCFP OUTP VSS rd_c4p": true,
+    "XCMR CMG VCM CR VSS sky130_fd_pr__nfet_01v8 L=1 W=20": true,
+    "XCMS DS CMS CS VSS sky130_fd_pr__nfet_01v8 L=1 W=20": true,
+    "XCMT CTAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8": true,
+    "XCN1 N1 NCM rd_c1p": true,
+    "XCN2 N2 NCM rd_c1p": true,
+    "XFN1 OUTP SUMNEG E1 E1B VDD VSS rd_fbbranch RFB=10350": true,
+    "XFN16 OUTP SUMNEG E16 E16B VDD VSS rd_fbbranch RFB=165600": true,
+    "XFN4 OUTP SUMNEG E4 E4B VDD VSS rd_fbbranch RFB=41400": true,
+    "XFP1 OUTN SUMPOS E1 E1B VDD VSS rd_fbbranch RFB=10350": true,
+    "XFP16 OUTN SUMPOS E16 E16B VDD VSS rd_fbbranch RFB=165600": true,
+    "XFP4 OUTN SUMPOS E4 E4B VDD VSS rd_fbbranch RFB=41400": true,
+    "XMIN N2 INN TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=80": true,
+    "XMIP N1 INP TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=80": true,
+    "XMLN N2 NCM VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=64": true,
+    "XMLP N1 NCM VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=64": true,
+    "XMON OUTN CMG VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=9": true,
+    "XMOP OUTP CMG VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=9": true,
+    "XMSN OUTN N2 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=180": true,
+    "XMSP OUTP N1 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=180": true,
+    "XMTAIL TAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40": true,
+    "XRCMG VDD CMG VSS rd_hr R=105000": true,
+    "XRCMN OUTN CMS VSS rd_hr R=100000": true,
+    "XRCMP OUTP CMS VSS rd_hr R=100000": true,
+    "XRDS VDD DS VSS rd_hr R=105000": true,
+    "XRIN COREN OUTN VSS rd_hr R={RISO}": true,
+    "XRINN VINN SUMNEG VSS rd_hr R=10000": true,
+    "XRINP VINP SUMPOS VSS rd_hr R=10000": true,
+    "XRIP COREP OUTP VSS rd_hr R={RISO}": true,
+    "XRN1 N1 NCM VSS rd_hr R=100000": true,
+    "XRN2 N2 NCM VSS rd_hr R=100000": true,
+    "XRSCR CR CTAIL VSS rd_hr R=10000": true,
+    "XRSCS CS CTAIL VSS rd_hr R=10000": true,
+    "XRZN N2 CZN VSS rd_lr R=1200": true,
+    "XRZP N1 CZP VSS rd_lr R=1200": true
+  }
+}

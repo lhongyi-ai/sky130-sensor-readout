@@ -1,0 +1,73 @@
+{
+  "status": "FAIL",
+  "criteria": {
+    "power_nonnegative": true,
+    "power_le_600uW": true,
+    "devices_saturated": true,
+    "single_downward_crossing": true,
+    "correct_low_frequency_sign": true,
+    "pm_ge_55deg": false,
+    "ugb_ge_5MHz": true
+  },
+  "notes": [
+    "Legacy single-loop return ratio only; not a frontend multiloop stability certificate.",
+    "Old OTA limits are Day 4 limits; they are not the newer frontend/ADC specification.",
+    "Cadence OTA uses explicit width mapping in size_mapping.json; original ngspice device sizes are preserved separately and are not identical.",
+    "Actual local ngspice execution using school-mapped dimensions and explicit native diffusion geometry; no Spectre run claimed."
+  ],
+  "power_uW": 271.82766044412665,
+  "parallel_group_operating_points": {
+    "M3": {
+      "ids": -1.901255281905678e-05,
+      "gm": 0.0003013001899905714,
+      "gds": 1.956664254990278e-06
+    },
+    "M4": {
+      "ids": -1.901101435637746e-05,
+      "gm": 0.0003012778397092462,
+      "gds": 1.9570932751081163e-06
+    },
+    "M7": {
+      "ids": -9.30003373254593e-05,
+      "gm": 0.0009714636240887118,
+      "gds": 3.838838742088364e-06
+    }
+  },
+  "dc_nodes": {
+    "VDD": 1.8,
+    "VSS": 0.0,
+    "VINP": 0.9,
+    "VOUT": 0.9000120362262549,
+    "VBP": 0.63275331192552,
+    "VINN": 0.9000120362262549,
+    "ivdd": -0.0001510153669134037
+  },
+  "device_saturation_margin_V": {
+    "M8": 0.997543449366427,
+    "M9": 0.9723557114996058,
+    "M10": 0.5655937463071365,
+    "M1": 0.502855901189472,
+    "M2": 0.5036469266756293,
+    "M3A": 0.9206335907885718,
+    "M3B": 0.9206335907885718,
+    "M4A": 0.919848628073314,
+    "M4B": 0.919848628073314,
+    "M5": 0.11618913385727858,
+    "M6": 0.741030989321251,
+    "M7A": 0.7349746948920187,
+    "M7B": 0.7349746948920187
+  },
+  "min_saturation_margin_V": 0.11618913385727858,
+  "all_devices_saturated": true,
+  "gain_dB": 67.68233672451456,
+  "phase_low_deg": -0.007078115304073281,
+  "crossings": [
+    {
+      "frequency_hz": 10435892.616136583,
+      "direction": "down",
+      "phase_deg": -139.4459843161728
+    }
+  ],
+  "ugb_MHz": 10.435892616136583,
+  "pm_deg": 40.5540156838272
+}

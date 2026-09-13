@@ -1,0 +1,514 @@
+* sar_+0.0000000
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+* Testbench digital sequencer is ideal; analog decision path is SKY130 MOS/MIM.
+VDD vdd 0 1.8
+VCM cm 0 .9
+VRP srp 0 1.1
+VRN srn 0 .7
+RRP srp rp 10
+RRN srn rn 10
+VIP srcp 0 0.9
+VIN srcn 0 0.9
+RSP srcp ip 350
+RSN srcn inn 350
+VEN en 0 PWL(0 1.8 2.49u 1.8 2.491u 0)
+VENB enb 0 PWL(0 0 2.49u 0 2.491u 1.8)
+XSP ip tp en enb vdd 0 adc_tgate
+XSN inn tn en enb vdd 0 adc_tgate
+RDC_P tp 0 1e15
+RDC_N tn 0 1e15
+XCMP tp tn op on clk vdd 0 adc_latched_comparator DSIZE=0
+CLOADP op 0 5f
+CLOADN on 0 5f
+BDEC decision 0 V=.9*(1+tanh((V(op)-V(on))/.02))
+.model MEMSW sw ron=1 roff=1e18 vt=.9 vh=.1
+VSAVE11 save11 0 PWL(0 0 3.099e-06 0 3.1e-06 1.8 3.115e-06 1.8 3.116e-06 0)
+SSAVE11 decision mem11 save11 0 MEMSW
+CMEM11 mem11 0 1p
+RMEM11 mem11 0 1e15
+.ic V(mem11)=0
+BBIT11 bit11 0 V=(.5*(1+tanh((time-2.5e-06)/.5n)))*(1.8+(.5*(1+tanh((time-3.117e-06)/.5n)))*(V(mem11)-1.8))
+BNBIT11 nbit11 0 V=1.8-V(bit11)
+Bp11_cm_en p11_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp11_cm_en p11_cm_en_raw p11_cm_en 1k
+Cp11_cm_en p11_cm_en 0 1p
+Bp11_cm_enb p11_cm_enb 0 V=1.8-V(p11_cm_en)
+Xp11_cm bp11 cm p11_cm_en p11_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bp11_rp_en p11_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit11)-.9)/.05))))
+Rp11_rp_en p11_rp_en_raw p11_rp_en 1k
+Cp11_rp_en p11_rp_en 0 1p
+Bp11_rp_enb p11_rp_enb 0 V=1.8-V(p11_rp_en)
+Xp11_rp bp11 rp p11_rp_en p11_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bp11_rn_en p11_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit11)-.9)/.05)))))
+Rp11_rn_en p11_rn_en_raw p11_rn_en 1k
+Cp11_rn_en p11_rn_en 0 1p
+Bp11_rn_enb p11_rn_enb 0 V=1.8-V(p11_rn_en)
+Xp11_rn bp11 rn p11_rn_en p11_rn_enb vdd 0 adc_tgate WN=8 WP=16
+Bn11_cm_en n11_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn11_cm_en n11_cm_en_raw n11_cm_en 1k
+Cn11_cm_en n11_cm_en 0 1p
+Bn11_cm_enb n11_cm_enb 0 V=1.8-V(n11_cm_en)
+Xn11_cm bn11 cm n11_cm_en n11_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bn11_rp_en n11_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit11)-.9)/.05))))
+Rn11_rp_en n11_rp_en_raw n11_rp_en 1k
+Cn11_rp_en n11_rp_en 0 1p
+Bn11_rp_enb n11_rp_enb 0 V=1.8-V(n11_rp_en)
+Xn11_rp bn11 rp n11_rp_en n11_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bn11_rn_en n11_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit11)-.9)/.05)))))
+Rn11_rn_en n11_rn_en_raw n11_rn_en 1k
+Cn11_rn_en n11_rn_en 0 1p
+Bn11_rn_enb n11_rn_enb 0 V=1.8-V(n11_rn_en)
+Xn11_rn bn11 rn n11_rn_en n11_rn_enb vdd 0 adc_tgate WN=8 WP=16
+VSAVE10 save10 0 PWL(0 0 3.724e-06 0 3.725e-06 1.8 3.74e-06 1.8 3.741e-06 0)
+SSAVE10 decision mem10 save10 0 MEMSW
+CMEM10 mem10 0 1p
+RMEM10 mem10 0 1e15
+.ic V(mem10)=0
+BBIT10 bit10 0 V=(.5*(1+tanh((time-3.125e-06)/.5n)))*(1.8+(.5*(1+tanh((time-3.742e-06)/.5n)))*(V(mem10)-1.8))
+BNBIT10 nbit10 0 V=1.8-V(bit10)
+Bp10_cm_en p10_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp10_cm_en p10_cm_en_raw p10_cm_en 1k
+Cp10_cm_en p10_cm_en 0 1p
+Bp10_cm_enb p10_cm_enb 0 V=1.8-V(p10_cm_en)
+Xp10_cm bp10 cm p10_cm_en p10_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bp10_rp_en p10_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit10)-.9)/.05))))
+Rp10_rp_en p10_rp_en_raw p10_rp_en 1k
+Cp10_rp_en p10_rp_en 0 1p
+Bp10_rp_enb p10_rp_enb 0 V=1.8-V(p10_rp_en)
+Xp10_rp bp10 rp p10_rp_en p10_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bp10_rn_en p10_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit10)-.9)/.05)))))
+Rp10_rn_en p10_rn_en_raw p10_rn_en 1k
+Cp10_rn_en p10_rn_en 0 1p
+Bp10_rn_enb p10_rn_enb 0 V=1.8-V(p10_rn_en)
+Xp10_rn bp10 rn p10_rn_en p10_rn_enb vdd 0 adc_tgate WN=8 WP=16
+Bn10_cm_en n10_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn10_cm_en n10_cm_en_raw n10_cm_en 1k
+Cn10_cm_en n10_cm_en 0 1p
+Bn10_cm_enb n10_cm_enb 0 V=1.8-V(n10_cm_en)
+Xn10_cm bn10 cm n10_cm_en n10_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bn10_rp_en n10_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit10)-.9)/.05))))
+Rn10_rp_en n10_rp_en_raw n10_rp_en 1k
+Cn10_rp_en n10_rp_en 0 1p
+Bn10_rp_enb n10_rp_enb 0 V=1.8-V(n10_rp_en)
+Xn10_rp bn10 rp n10_rp_en n10_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bn10_rn_en n10_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit10)-.9)/.05)))))
+Rn10_rn_en n10_rn_en_raw n10_rn_en 1k
+Cn10_rn_en n10_rn_en 0 1p
+Bn10_rn_enb n10_rn_enb 0 V=1.8-V(n10_rn_en)
+Xn10_rn bn10 rn n10_rn_en n10_rn_enb vdd 0 adc_tgate WN=8 WP=16
+VSAVE9 save9 0 PWL(0 0 4.349e-06 0 4.35e-06 1.8 4.365e-06 1.8 4.366e-06 0)
+SSAVE9 decision mem9 save9 0 MEMSW
+CMEM9 mem9 0 1p
+RMEM9 mem9 0 1e15
+.ic V(mem9)=0
+BBIT9 bit9 0 V=(.5*(1+tanh((time-3.75e-06)/.5n)))*(1.8+(.5*(1+tanh((time-4.367e-06)/.5n)))*(V(mem9)-1.8))
+BNBIT9 nbit9 0 V=1.8-V(bit9)
+Bp9_cm_en p9_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp9_cm_en p9_cm_en_raw p9_cm_en 1k
+Cp9_cm_en p9_cm_en 0 1p
+Bp9_cm_enb p9_cm_enb 0 V=1.8-V(p9_cm_en)
+Xp9_cm bp9 cm p9_cm_en p9_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bp9_rp_en p9_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit9)-.9)/.05))))
+Rp9_rp_en p9_rp_en_raw p9_rp_en 1k
+Cp9_rp_en p9_rp_en 0 1p
+Bp9_rp_enb p9_rp_enb 0 V=1.8-V(p9_rp_en)
+Xp9_rp bp9 rp p9_rp_en p9_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bp9_rn_en p9_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit9)-.9)/.05)))))
+Rp9_rn_en p9_rn_en_raw p9_rn_en 1k
+Cp9_rn_en p9_rn_en 0 1p
+Bp9_rn_enb p9_rn_enb 0 V=1.8-V(p9_rn_en)
+Xp9_rn bp9 rn p9_rn_en p9_rn_enb vdd 0 adc_tgate WN=8 WP=16
+Bn9_cm_en n9_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn9_cm_en n9_cm_en_raw n9_cm_en 1k
+Cn9_cm_en n9_cm_en 0 1p
+Bn9_cm_enb n9_cm_enb 0 V=1.8-V(n9_cm_en)
+Xn9_cm bn9 cm n9_cm_en n9_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bn9_rp_en n9_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit9)-.9)/.05))))
+Rn9_rp_en n9_rp_en_raw n9_rp_en 1k
+Cn9_rp_en n9_rp_en 0 1p
+Bn9_rp_enb n9_rp_enb 0 V=1.8-V(n9_rp_en)
+Xn9_rp bn9 rp n9_rp_en n9_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bn9_rn_en n9_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit9)-.9)/.05)))))
+Rn9_rn_en n9_rn_en_raw n9_rn_en 1k
+Cn9_rn_en n9_rn_en 0 1p
+Bn9_rn_enb n9_rn_enb 0 V=1.8-V(n9_rn_en)
+Xn9_rn bn9 rn n9_rn_en n9_rn_enb vdd 0 adc_tgate WN=8 WP=16
+VSAVE8 save8 0 PWL(0 0 4.974e-06 0 4.975e-06 1.8 4.99e-06 1.8 4.991e-06 0)
+SSAVE8 decision mem8 save8 0 MEMSW
+CMEM8 mem8 0 1p
+RMEM8 mem8 0 1e15
+.ic V(mem8)=0
+BBIT8 bit8 0 V=(.5*(1+tanh((time-4.375e-06)/.5n)))*(1.8+(.5*(1+tanh((time-4.992e-06)/.5n)))*(V(mem8)-1.8))
+BNBIT8 nbit8 0 V=1.8-V(bit8)
+Bp8_cm_en p8_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp8_cm_en p8_cm_en_raw p8_cm_en 1k
+Cp8_cm_en p8_cm_en 0 1p
+Bp8_cm_enb p8_cm_enb 0 V=1.8-V(p8_cm_en)
+Xp8_cm bp8 cm p8_cm_en p8_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bp8_rp_en p8_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit8)-.9)/.05))))
+Rp8_rp_en p8_rp_en_raw p8_rp_en 1k
+Cp8_rp_en p8_rp_en 0 1p
+Bp8_rp_enb p8_rp_enb 0 V=1.8-V(p8_rp_en)
+Xp8_rp bp8 rp p8_rp_en p8_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bp8_rn_en p8_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit8)-.9)/.05)))))
+Rp8_rn_en p8_rn_en_raw p8_rn_en 1k
+Cp8_rn_en p8_rn_en 0 1p
+Bp8_rn_enb p8_rn_enb 0 V=1.8-V(p8_rn_en)
+Xp8_rn bp8 rn p8_rn_en p8_rn_enb vdd 0 adc_tgate WN=8 WP=16
+Bn8_cm_en n8_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn8_cm_en n8_cm_en_raw n8_cm_en 1k
+Cn8_cm_en n8_cm_en 0 1p
+Bn8_cm_enb n8_cm_enb 0 V=1.8-V(n8_cm_en)
+Xn8_cm bn8 cm n8_cm_en n8_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bn8_rp_en n8_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit8)-.9)/.05))))
+Rn8_rp_en n8_rp_en_raw n8_rp_en 1k
+Cn8_rp_en n8_rp_en 0 1p
+Bn8_rp_enb n8_rp_enb 0 V=1.8-V(n8_rp_en)
+Xn8_rp bn8 rp n8_rp_en n8_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bn8_rn_en n8_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit8)-.9)/.05)))))
+Rn8_rn_en n8_rn_en_raw n8_rn_en 1k
+Cn8_rn_en n8_rn_en 0 1p
+Bn8_rn_enb n8_rn_enb 0 V=1.8-V(n8_rn_en)
+Xn8_rn bn8 rn n8_rn_en n8_rn_enb vdd 0 adc_tgate WN=8 WP=16
+VSAVE7 save7 0 PWL(0 0 5.599e-06 0 5.6e-06 1.8 5.615e-06 1.8 5.616e-06 0)
+SSAVE7 decision mem7 save7 0 MEMSW
+CMEM7 mem7 0 1p
+RMEM7 mem7 0 1e15
+.ic V(mem7)=0
+BBIT7 bit7 0 V=(.5*(1+tanh((time-5e-06)/.5n)))*(1.8+(.5*(1+tanh((time-5.617e-06)/.5n)))*(V(mem7)-1.8))
+BNBIT7 nbit7 0 V=1.8-V(bit7)
+Bp7_cm_en p7_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp7_cm_en p7_cm_en_raw p7_cm_en 1k
+Cp7_cm_en p7_cm_en 0 1p
+Bp7_cm_enb p7_cm_enb 0 V=1.8-V(p7_cm_en)
+Xp7_cm bp7 cm p7_cm_en p7_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bp7_rp_en p7_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit7)-.9)/.05))))
+Rp7_rp_en p7_rp_en_raw p7_rp_en 1k
+Cp7_rp_en p7_rp_en 0 1p
+Bp7_rp_enb p7_rp_enb 0 V=1.8-V(p7_rp_en)
+Xp7_rp bp7 rp p7_rp_en p7_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bp7_rn_en p7_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit7)-.9)/.05)))))
+Rp7_rn_en p7_rn_en_raw p7_rn_en 1k
+Cp7_rn_en p7_rn_en 0 1p
+Bp7_rn_enb p7_rn_enb 0 V=1.8-V(p7_rn_en)
+Xp7_rn bp7 rn p7_rn_en p7_rn_enb vdd 0 adc_tgate WN=8 WP=16
+Bn7_cm_en n7_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn7_cm_en n7_cm_en_raw n7_cm_en 1k
+Cn7_cm_en n7_cm_en 0 1p
+Bn7_cm_enb n7_cm_enb 0 V=1.8-V(n7_cm_en)
+Xn7_cm bn7 cm n7_cm_en n7_cm_enb vdd 0 adc_tgate WN=8 WP=16
+Bn7_rp_en n7_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit7)-.9)/.05))))
+Rn7_rp_en n7_rp_en_raw n7_rp_en 1k
+Cn7_rp_en n7_rp_en 0 1p
+Bn7_rp_enb n7_rp_enb 0 V=1.8-V(n7_rp_en)
+Xn7_rp bn7 rp n7_rp_en n7_rp_enb vdd 0 adc_tgate WN=8 WP=16
+Bn7_rn_en n7_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit7)-.9)/.05)))))
+Rn7_rn_en n7_rn_en_raw n7_rn_en 1k
+Cn7_rn_en n7_rn_en 0 1p
+Bn7_rn_enb n7_rn_enb 0 V=1.8-V(n7_rn_en)
+Xn7_rn bn7 rn n7_rn_en n7_rn_enb vdd 0 adc_tgate WN=8 WP=16
+VSAVE6 save6 0 PWL(0 0 6.224e-06 0 6.225e-06 1.8 6.24e-06 1.8 6.241e-06 0)
+SSAVE6 decision mem6 save6 0 MEMSW
+CMEM6 mem6 0 1p
+RMEM6 mem6 0 1e15
+.ic V(mem6)=0
+BBIT6 bit6 0 V=(.5*(1+tanh((time-5.625e-06)/.5n)))*(1.8+(.5*(1+tanh((time-6.242e-06)/.5n)))*(V(mem6)-1.8))
+BNBIT6 nbit6 0 V=1.8-V(bit6)
+Bp6_cm_en p6_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp6_cm_en p6_cm_en_raw p6_cm_en 1k
+Cp6_cm_en p6_cm_en 0 1p
+Bp6_cm_enb p6_cm_enb 0 V=1.8-V(p6_cm_en)
+Xp6_cm bp6 cm p6_cm_en p6_cm_enb vdd 0 adc_tgate WN=6.72 WP=13.44
+Bp6_rp_en p6_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit6)-.9)/.05))))
+Rp6_rp_en p6_rp_en_raw p6_rp_en 1k
+Cp6_rp_en p6_rp_en 0 1p
+Bp6_rp_enb p6_rp_enb 0 V=1.8-V(p6_rp_en)
+Xp6_rp bp6 rp p6_rp_en p6_rp_enb vdd 0 adc_tgate WN=6.72 WP=13.44
+Bp6_rn_en p6_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit6)-.9)/.05)))))
+Rp6_rn_en p6_rn_en_raw p6_rn_en 1k
+Cp6_rn_en p6_rn_en 0 1p
+Bp6_rn_enb p6_rn_enb 0 V=1.8-V(p6_rn_en)
+Xp6_rn bp6 rn p6_rn_en p6_rn_enb vdd 0 adc_tgate WN=6.72 WP=13.44
+Bn6_cm_en n6_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn6_cm_en n6_cm_en_raw n6_cm_en 1k
+Cn6_cm_en n6_cm_en 0 1p
+Bn6_cm_enb n6_cm_enb 0 V=1.8-V(n6_cm_en)
+Xn6_cm bn6 cm n6_cm_en n6_cm_enb vdd 0 adc_tgate WN=6.72 WP=13.44
+Bn6_rp_en n6_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit6)-.9)/.05))))
+Rn6_rp_en n6_rp_en_raw n6_rp_en 1k
+Cn6_rp_en n6_rp_en 0 1p
+Bn6_rp_enb n6_rp_enb 0 V=1.8-V(n6_rp_en)
+Xn6_rp bn6 rp n6_rp_en n6_rp_enb vdd 0 adc_tgate WN=6.72 WP=13.44
+Bn6_rn_en n6_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit6)-.9)/.05)))))
+Rn6_rn_en n6_rn_en_raw n6_rn_en 1k
+Cn6_rn_en n6_rn_en 0 1p
+Bn6_rn_enb n6_rn_enb 0 V=1.8-V(n6_rn_en)
+Xn6_rn bn6 rn n6_rn_en n6_rn_enb vdd 0 adc_tgate WN=6.72 WP=13.44
+VSAVE5 save5 0 PWL(0 0 6.849e-06 0 6.85e-06 1.8 6.865e-06 1.8 6.866e-06 0)
+SSAVE5 decision mem5 save5 0 MEMSW
+CMEM5 mem5 0 1p
+RMEM5 mem5 0 1e15
+.ic V(mem5)=0
+BBIT5 bit5 0 V=(.5*(1+tanh((time-6.25e-06)/.5n)))*(1.8+(.5*(1+tanh((time-6.867e-06)/.5n)))*(V(mem5)-1.8))
+BNBIT5 nbit5 0 V=1.8-V(bit5)
+Bp5_cm_en p5_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp5_cm_en p5_cm_en_raw p5_cm_en 1k
+Cp5_cm_en p5_cm_en 0 1p
+Bp5_cm_enb p5_cm_enb 0 V=1.8-V(p5_cm_en)
+Xp5_cm bp5 cm p5_cm_en p5_cm_enb vdd 0 adc_tgate WN=4.7517576 WP=9.5035151
+Bp5_rp_en p5_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit5)-.9)/.05))))
+Rp5_rp_en p5_rp_en_raw p5_rp_en 1k
+Cp5_rp_en p5_rp_en 0 1p
+Bp5_rp_enb p5_rp_enb 0 V=1.8-V(p5_rp_en)
+Xp5_rp bp5 rp p5_rp_en p5_rp_enb vdd 0 adc_tgate WN=4.7517576 WP=9.5035151
+Bp5_rn_en p5_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit5)-.9)/.05)))))
+Rp5_rn_en p5_rn_en_raw p5_rn_en 1k
+Cp5_rn_en p5_rn_en 0 1p
+Bp5_rn_enb p5_rn_enb 0 V=1.8-V(p5_rn_en)
+Xp5_rn bp5 rn p5_rn_en p5_rn_enb vdd 0 adc_tgate WN=4.7517576 WP=9.5035151
+Bn5_cm_en n5_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn5_cm_en n5_cm_en_raw n5_cm_en 1k
+Cn5_cm_en n5_cm_en 0 1p
+Bn5_cm_enb n5_cm_enb 0 V=1.8-V(n5_cm_en)
+Xn5_cm bn5 cm n5_cm_en n5_cm_enb vdd 0 adc_tgate WN=4.7517576 WP=9.5035151
+Bn5_rp_en n5_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit5)-.9)/.05))))
+Rn5_rp_en n5_rp_en_raw n5_rp_en 1k
+Cn5_rp_en n5_rp_en 0 1p
+Bn5_rp_enb n5_rp_enb 0 V=1.8-V(n5_rp_en)
+Xn5_rp bn5 rp n5_rp_en n5_rp_enb vdd 0 adc_tgate WN=4.7517576 WP=9.5035151
+Bn5_rn_en n5_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit5)-.9)/.05)))))
+Rn5_rn_en n5_rn_en_raw n5_rn_en 1k
+Cn5_rn_en n5_rn_en 0 1p
+Bn5_rn_enb n5_rn_enb 0 V=1.8-V(n5_rn_en)
+Xn5_rn bn5 rn n5_rn_en n5_rn_enb vdd 0 adc_tgate WN=4.7517576 WP=9.5035151
+VSAVE4 save4 0 PWL(0 0 7.474e-06 0 7.475e-06 1.8 7.49e-06 1.8 7.491e-06 0)
+SSAVE4 decision mem4 save4 0 MEMSW
+CMEM4 mem4 0 1p
+RMEM4 mem4 0 1e15
+.ic V(mem4)=0
+BBIT4 bit4 0 V=(.5*(1+tanh((time-6.875e-06)/.5n)))*(1.8+(.5*(1+tanh((time-7.492e-06)/.5n)))*(V(mem4)-1.8))
+BNBIT4 nbit4 0 V=1.8-V(bit4)
+Bp4_cm_en p4_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp4_cm_en p4_cm_en_raw p4_cm_en 1k
+Cp4_cm_en p4_cm_en 0 1p
+Bp4_cm_enb p4_cm_enb 0 V=1.8-V(p4_cm_en)
+Xp4_cm bp4 cm p4_cm_en p4_cm_enb vdd 0 adc_tgate WN=3.36 WP=6.72
+Bp4_rp_en p4_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit4)-.9)/.05))))
+Rp4_rp_en p4_rp_en_raw p4_rp_en 1k
+Cp4_rp_en p4_rp_en 0 1p
+Bp4_rp_enb p4_rp_enb 0 V=1.8-V(p4_rp_en)
+Xp4_rp bp4 rp p4_rp_en p4_rp_enb vdd 0 adc_tgate WN=3.36 WP=6.72
+Bp4_rn_en p4_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit4)-.9)/.05)))))
+Rp4_rn_en p4_rn_en_raw p4_rn_en 1k
+Cp4_rn_en p4_rn_en 0 1p
+Bp4_rn_enb p4_rn_enb 0 V=1.8-V(p4_rn_en)
+Xp4_rn bp4 rn p4_rn_en p4_rn_enb vdd 0 adc_tgate WN=3.36 WP=6.72
+Bn4_cm_en n4_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn4_cm_en n4_cm_en_raw n4_cm_en 1k
+Cn4_cm_en n4_cm_en 0 1p
+Bn4_cm_enb n4_cm_enb 0 V=1.8-V(n4_cm_en)
+Xn4_cm bn4 cm n4_cm_en n4_cm_enb vdd 0 adc_tgate WN=3.36 WP=6.72
+Bn4_rp_en n4_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit4)-.9)/.05))))
+Rn4_rp_en n4_rp_en_raw n4_rp_en 1k
+Cn4_rp_en n4_rp_en 0 1p
+Bn4_rp_enb n4_rp_enb 0 V=1.8-V(n4_rp_en)
+Xn4_rp bn4 rp n4_rp_en n4_rp_enb vdd 0 adc_tgate WN=3.36 WP=6.72
+Bn4_rn_en n4_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit4)-.9)/.05)))))
+Rn4_rn_en n4_rn_en_raw n4_rn_en 1k
+Cn4_rn_en n4_rn_en 0 1p
+Bn4_rn_enb n4_rn_enb 0 V=1.8-V(n4_rn_en)
+Xn4_rn bn4 rn n4_rn_en n4_rn_enb vdd 0 adc_tgate WN=3.36 WP=6.72
+VSAVE3 save3 0 PWL(0 0 8.099e-06 0 8.1e-06 1.8 8.115e-06 1.8 8.116e-06 0)
+SSAVE3 decision mem3 save3 0 MEMSW
+CMEM3 mem3 0 1p
+RMEM3 mem3 0 1e15
+.ic V(mem3)=0
+BBIT3 bit3 0 V=(.5*(1+tanh((time-7.5e-06)/.5n)))*(1.8+(.5*(1+tanh((time-8.117e-06)/.5n)))*(V(mem3)-1.8))
+BNBIT3 nbit3 0 V=1.8-V(bit3)
+Bp3_cm_en p3_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp3_cm_en p3_cm_en_raw p3_cm_en 1k
+Cp3_cm_en p3_cm_en 0 1p
+Bp3_cm_enb p3_cm_enb 0 V=1.8-V(p3_cm_en)
+Xp3_cm bp3 cm p3_cm_en p3_cm_enb vdd 0 adc_tgate WN=2.3758788 WP=4.7517576
+Bp3_rp_en p3_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit3)-.9)/.05))))
+Rp3_rp_en p3_rp_en_raw p3_rp_en 1k
+Cp3_rp_en p3_rp_en 0 1p
+Bp3_rp_enb p3_rp_enb 0 V=1.8-V(p3_rp_en)
+Xp3_rp bp3 rp p3_rp_en p3_rp_enb vdd 0 adc_tgate WN=2.3758788 WP=4.7517576
+Bp3_rn_en p3_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit3)-.9)/.05)))))
+Rp3_rn_en p3_rn_en_raw p3_rn_en 1k
+Cp3_rn_en p3_rn_en 0 1p
+Bp3_rn_enb p3_rn_enb 0 V=1.8-V(p3_rn_en)
+Xp3_rn bp3 rn p3_rn_en p3_rn_enb vdd 0 adc_tgate WN=2.3758788 WP=4.7517576
+Bn3_cm_en n3_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn3_cm_en n3_cm_en_raw n3_cm_en 1k
+Cn3_cm_en n3_cm_en 0 1p
+Bn3_cm_enb n3_cm_enb 0 V=1.8-V(n3_cm_en)
+Xn3_cm bn3 cm n3_cm_en n3_cm_enb vdd 0 adc_tgate WN=2.3758788 WP=4.7517576
+Bn3_rp_en n3_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit3)-.9)/.05))))
+Rn3_rp_en n3_rp_en_raw n3_rp_en 1k
+Cn3_rp_en n3_rp_en 0 1p
+Bn3_rp_enb n3_rp_enb 0 V=1.8-V(n3_rp_en)
+Xn3_rp bn3 rp n3_rp_en n3_rp_enb vdd 0 adc_tgate WN=2.3758788 WP=4.7517576
+Bn3_rn_en n3_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit3)-.9)/.05)))))
+Rn3_rn_en n3_rn_en_raw n3_rn_en 1k
+Cn3_rn_en n3_rn_en 0 1p
+Bn3_rn_enb n3_rn_enb 0 V=1.8-V(n3_rn_en)
+Xn3_rn bn3 rn n3_rn_en n3_rn_enb vdd 0 adc_tgate WN=2.3758788 WP=4.7517576
+VSAVE2 save2 0 PWL(0 0 8.724e-06 0 8.725e-06 1.8 8.74e-06 1.8 8.741e-06 0)
+SSAVE2 decision mem2 save2 0 MEMSW
+CMEM2 mem2 0 1p
+RMEM2 mem2 0 1e15
+.ic V(mem2)=0
+BBIT2 bit2 0 V=(.5*(1+tanh((time-8.125e-06)/.5n)))*(1.8+(.5*(1+tanh((time-8.742e-06)/.5n)))*(V(mem2)-1.8))
+BNBIT2 nbit2 0 V=1.8-V(bit2)
+Bp2_cm_en p2_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp2_cm_en p2_cm_en_raw p2_cm_en 1k
+Cp2_cm_en p2_cm_en 0 1p
+Bp2_cm_enb p2_cm_enb 0 V=1.8-V(p2_cm_en)
+Xp2_cm bp2 cm p2_cm_en p2_cm_enb vdd 0 adc_tgate WN=1.68 WP=3.36
+Bp2_rp_en p2_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit2)-.9)/.05))))
+Rp2_rp_en p2_rp_en_raw p2_rp_en 1k
+Cp2_rp_en p2_rp_en 0 1p
+Bp2_rp_enb p2_rp_enb 0 V=1.8-V(p2_rp_en)
+Xp2_rp bp2 rp p2_rp_en p2_rp_enb vdd 0 adc_tgate WN=1.68 WP=3.36
+Bp2_rn_en p2_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit2)-.9)/.05)))))
+Rp2_rn_en p2_rn_en_raw p2_rn_en 1k
+Cp2_rn_en p2_rn_en 0 1p
+Bp2_rn_enb p2_rn_enb 0 V=1.8-V(p2_rn_en)
+Xp2_rn bp2 rn p2_rn_en p2_rn_enb vdd 0 adc_tgate WN=1.68 WP=3.36
+Bn2_cm_en n2_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn2_cm_en n2_cm_en_raw n2_cm_en 1k
+Cn2_cm_en n2_cm_en 0 1p
+Bn2_cm_enb n2_cm_enb 0 V=1.8-V(n2_cm_en)
+Xn2_cm bn2 cm n2_cm_en n2_cm_enb vdd 0 adc_tgate WN=1.68 WP=3.36
+Bn2_rp_en n2_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit2)-.9)/.05))))
+Rn2_rp_en n2_rp_en_raw n2_rp_en 1k
+Cn2_rp_en n2_rp_en 0 1p
+Bn2_rp_enb n2_rp_enb 0 V=1.8-V(n2_rp_en)
+Xn2_rp bn2 rp n2_rp_en n2_rp_enb vdd 0 adc_tgate WN=1.68 WP=3.36
+Bn2_rn_en n2_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit2)-.9)/.05)))))
+Rn2_rn_en n2_rn_en_raw n2_rn_en 1k
+Cn2_rn_en n2_rn_en 0 1p
+Bn2_rn_enb n2_rn_enb 0 V=1.8-V(n2_rn_en)
+Xn2_rn bn2 rn n2_rn_en n2_rn_enb vdd 0 adc_tgate WN=1.68 WP=3.36
+VSAVE1 save1 0 PWL(0 0 9.349e-06 0 9.35e-06 1.8 9.365e-06 1.8 9.366e-06 0)
+SSAVE1 decision mem1 save1 0 MEMSW
+CMEM1 mem1 0 1p
+RMEM1 mem1 0 1e15
+.ic V(mem1)=0
+BBIT1 bit1 0 V=(.5*(1+tanh((time-8.75e-06)/.5n)))*(1.8+(.5*(1+tanh((time-9.367e-06)/.5n)))*(V(mem1)-1.8))
+BNBIT1 nbit1 0 V=1.8-V(bit1)
+Bp1_cm_en p1_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp1_cm_en p1_cm_en_raw p1_cm_en 1k
+Cp1_cm_en p1_cm_en 0 1p
+Bp1_cm_enb p1_cm_enb 0 V=1.8-V(p1_cm_en)
+Xp1_cm bp1 cm p1_cm_en p1_cm_enb vdd 0 adc_tgate WN=1.1879394 WP=2.3758788
+Bp1_rp_en p1_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit1)-.9)/.05))))
+Rp1_rp_en p1_rp_en_raw p1_rp_en 1k
+Cp1_rp_en p1_rp_en 0 1p
+Bp1_rp_enb p1_rp_enb 0 V=1.8-V(p1_rp_en)
+Xp1_rp bp1 rp p1_rp_en p1_rp_enb vdd 0 adc_tgate WN=1.1879394 WP=2.3758788
+Bp1_rn_en p1_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit1)-.9)/.05)))))
+Rp1_rn_en p1_rn_en_raw p1_rn_en 1k
+Cp1_rn_en p1_rn_en 0 1p
+Bp1_rn_enb p1_rn_enb 0 V=1.8-V(p1_rn_en)
+Xp1_rn bp1 rn p1_rn_en p1_rn_enb vdd 0 adc_tgate WN=1.1879394 WP=2.3758788
+Bn1_cm_en n1_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn1_cm_en n1_cm_en_raw n1_cm_en 1k
+Cn1_cm_en n1_cm_en 0 1p
+Bn1_cm_enb n1_cm_enb 0 V=1.8-V(n1_cm_en)
+Xn1_cm bn1 cm n1_cm_en n1_cm_enb vdd 0 adc_tgate WN=1.1879394 WP=2.3758788
+Bn1_rp_en n1_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit1)-.9)/.05))))
+Rn1_rp_en n1_rp_en_raw n1_rp_en 1k
+Cn1_rp_en n1_rp_en 0 1p
+Bn1_rp_enb n1_rp_enb 0 V=1.8-V(n1_rp_en)
+Xn1_rp bn1 rp n1_rp_en n1_rp_enb vdd 0 adc_tgate WN=1.1879394 WP=2.3758788
+Bn1_rn_en n1_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit1)-.9)/.05)))))
+Rn1_rn_en n1_rn_en_raw n1_rn_en 1k
+Cn1_rn_en n1_rn_en 0 1p
+Bn1_rn_enb n1_rn_enb 0 V=1.8-V(n1_rn_en)
+Xn1_rn bn1 rn n1_rn_en n1_rn_enb vdd 0 adc_tgate WN=1.1879394 WP=2.3758788
+VSAVE0 save0 0 PWL(0 0 9.974e-06 0 9.975e-06 1.8 9.99e-06 1.8 9.991e-06 0)
+SSAVE0 decision mem0 save0 0 MEMSW
+CMEM0 mem0 0 1p
+RMEM0 mem0 0 1e15
+.ic V(mem0)=0
+BBIT0 bit0 0 V=(.5*(1+tanh((time-9.375e-06)/.5n)))*(1.8+(.5*(1+tanh((time-9.992e-06)/.5n)))*(V(mem0)-1.8))
+BNBIT0 nbit0 0 V=1.8-V(bit0)
+Bp0_cm_en p0_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rp0_cm_en p0_cm_en_raw p0_cm_en 1k
+Cp0_cm_en p0_cm_en 0 1p
+Bp0_cm_enb p0_cm_enb 0 V=1.8-V(p0_cm_en)
+Xp0_cm bp0 cm p0_cm_en p0_cm_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bp0_rp_en p0_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(nbit0)-.9)/.05))))
+Rp0_rp_en p0_rp_en_raw p0_rp_en 1k
+Cp0_rp_en p0_rp_en 0 1p
+Bp0_rp_enb p0_rp_enb 0 V=1.8-V(p0_rp_en)
+Xp0_rp bp0 rp p0_rp_en p0_rp_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bp0_rn_en p0_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(nbit0)-.9)/.05)))))
+Rp0_rn_en p0_rn_en_raw p0_rn_en 1k
+Cp0_rn_en p0_rn_en 0 1p
+Bp0_rn_enb p0_rn_enb 0 V=1.8-V(p0_rn_en)
+Xp0_rn bp0 rn p0_rn_en p0_rn_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bn0_cm_en n0_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rn0_cm_en n0_cm_en_raw n0_cm_en 1k
+Cn0_cm_en n0_cm_en 0 1p
+Bn0_cm_enb n0_cm_enb 0 V=1.8-V(n0_cm_en)
+Xn0_cm bn0 cm n0_cm_en n0_cm_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bn0_rp_en n0_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((V(bit0)-.9)/.05))))
+Rn0_rp_en n0_rp_en_raw n0_rp_en 1k
+Cn0_rp_en n0_rp_en 0 1p
+Bn0_rp_enb n0_rp_enb 0 V=1.8-V(n0_rp_en)
+Xn0_rp bn0 rp n0_rp_en n0_rp_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bn0_rn_en n0_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((V(bit0)-.9)/.05)))))
+Rn0_rn_en n0_rn_en_raw n0_rn_en 1k
+Cn0_rn_en n0_rn_en 0 1p
+Bn0_rn_enb n0_rn_enb 0 V=1.8-V(n0_rn_en)
+Xn0_rn bn0 rn n0_rn_en n0_rn_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+VCLK clk 0 PWL(0 0 2.5u 0 2.815e-06 0 2.816e-06 1.8 3.121e-06 1.8 3.122e-06 0 3.44e-06 0 3.441e-06 1.8 3.746e-06 1.8 3.747e-06 0 4.065e-06 0 4.066e-06 1.8 4.371e-06 1.8 4.372e-06 0 4.69e-06 0 4.691e-06 1.8 4.996e-06 1.8 4.997e-06 0 5.315e-06 0 5.316e-06 1.8 5.621e-06 1.8 5.622e-06 0 5.94e-06 0 5.941e-06 1.8 6.246e-06 1.8 6.247e-06 0 6.565e-06 0 6.566e-06 1.8 6.871e-06 1.8 6.872e-06 0 7.19e-06 0 7.191e-06 1.8 7.496e-06 1.8 7.497e-06 0 7.815e-06 0 7.816e-06 1.8 8.121e-06 1.8 8.122e-06 0 8.44e-06 0 8.441e-06 1.8 8.746e-06 1.8 8.747e-06 0 9.065e-06 0 9.066e-06 1.8 9.371e-06 1.8 9.372e-06 0 9.69e-06 0 9.691e-06 1.8 9.996e-06 1.8 9.997e-06 0)
+Bpdummy_cm_en pdummy_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rpdummy_cm_en pdummy_cm_en_raw pdummy_cm_en 1k
+Cpdummy_cm_en pdummy_cm_en 0 1p
+Bpdummy_cm_enb pdummy_cm_enb 0 V=1.8-V(pdummy_cm_en)
+Xpdummy_cm dp cm pdummy_cm_en pdummy_cm_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bpdummy_rp_en pdummy_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((1.8-.9)/.05))))
+Rpdummy_rp_en pdummy_rp_en_raw pdummy_rp_en 1k
+Cpdummy_rp_en pdummy_rp_en 0 1p
+Bpdummy_rp_enb pdummy_rp_enb 0 V=1.8-V(pdummy_rp_en)
+Xpdummy_rp dp rp pdummy_rp_en pdummy_rp_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bpdummy_rn_en pdummy_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((1.8-.9)/.05)))))
+Rpdummy_rn_en pdummy_rn_en_raw pdummy_rn_en 1k
+Cpdummy_rn_en pdummy_rn_en 0 1p
+Bpdummy_rn_enb pdummy_rn_enb 0 V=1.8-V(pdummy_rn_en)
+Xpdummy_rn dp rn pdummy_rn_en pdummy_rn_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bndummy_cm_en ndummy_cm_en_raw 0 V=1.8*((.5*(1-tanh((time-2.50u)/.5n))))
+Rndummy_cm_en ndummy_cm_en_raw ndummy_cm_en 1k
+Cndummy_cm_en ndummy_cm_en 0 1p
+Bndummy_cm_enb ndummy_cm_enb 0 V=1.8-V(ndummy_cm_en)
+Xndummy_cm dn cm ndummy_cm_en ndummy_cm_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bndummy_rp_en ndummy_rp_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(.5*(1+tanh((0-.9)/.05))))
+Rndummy_rp_en ndummy_rp_en_raw ndummy_rp_en 1k
+Cndummy_rp_en ndummy_rp_en 0 1p
+Bndummy_rp_enb ndummy_rp_enb 0 V=1.8-V(ndummy_rp_en)
+Xndummy_rp dn rp ndummy_rp_en ndummy_rp_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+Bndummy_rn_en ndummy_rn_en_raw 0 V=1.8*((.5*(1+tanh((time-2.52u)/.5n)))*(1-(.5*(1+tanh((0-.9)/.05)))))
+Rndummy_rn_en ndummy_rn_en_raw ndummy_rn_en 1k
+Cndummy_rn_en ndummy_rn_en 0 1p
+Bndummy_rn_enb ndummy_rn_enb 0 V=1.8-V(ndummy_rn_en)
+Xndummy_rn dn rn ndummy_rn_en ndummy_rn_enb vdd 0 adc_tgate WN=0.84 WP=1.68
+XCP tp bp11 bp10 bp9 bp8 bp7 bp6 bp5 bp4 bp3 bp2 bp1 bp0 dp adc_cdac12
+XCN tn bn11 bn10 bn9 bn8 bn7 bn6 bn5 bn4 bn3 bn2 bn1 bn0 dn adc_cdac12
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 10.1u uic
+wrdata /repo/v2/analog/adc/results/sar_+0.0000000.tsv v(tp) v(tn) v(op) v(on) v(clk) v(rp) v(rn) i(vdd) i(vrp) i(vrn) v(mem11) v(mem10) v(mem9) v(mem8) v(mem7) v(mem6) v(mem5) v(mem4) v(mem3) v(mem2) v(mem1) v(mem0)
+quit
+.endc
+.end

@@ -1,0 +1,45 @@
+* Actual SKY130 transistor frontend; ideal R/C passives, schematic only.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice ss
+.include /repo/v2/analog/frontend/results/isolated/sampling_ss_1.62_85_g16_r1/frontend_pdk_snapshot.spice
+.temp 85.0
+VDD VDD 0 1.62
+VCM VCM 0 0.81
+.include /repo/v2/analog/frontend/results/isolated/sampling_ss_1.62_85_g16_r1/adc_blocks_snapshot.spice
+
+VIP SP 0 PULSE(0.7987500000000001 0.82125 10u 10n 10n 10u 20u)
+VIN SN 0 PULSE(0.82125 0.7987500000000001 10u 10n 10n 10u 20u)
+
+RSP SP IP 350
+RSN SN IN 350
+XPGA IP IN OP ON VDD 0 VCM sky130_v2_pga RF=10000 RG=275.0
+
+VACQ ACQ 0 PULSE(0 1.62 10u 1n 1n 2.49u 10u)
+BACQB ACQB 0 v=1.62-v(acq)
+VRST RST 0 PULSE(0 1.62 8u 1n 1n 1u 10u)
+BRSTB RSTB 0 v=1.62-v(rst)
+XRIP OP FILTP 0 frontend_r R=150
+XRIN ON FILTN 0 frontend_r R=150
+XCFP FILTP 0 frontend_c4p
+XCFN FILTN 0 frontend_c4p
+XTGP FILTP HP ACQ ACQB VDD 0 adc_tgate
+XTGN FILTN HN ACQ ACQB VDD 0 adc_tgate
+XCP HP VCM adc_mim_bank COUNT=4096
+XCN HN VCM adc_mim_bank COUNT=4096
+XRSTP VCM HP RST RSTB VDD 0 adc_tgate
+XRSTN VCM HN RST RSTB VDD 0 adc_tgate
+* Explicit testbench leakage only, avoids mathematically floating held nodes.
+RLEAKP HP VCM 1g
+RLEAKN HN VCM 1g
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+
+tran 5n 40u
+let od=v(op)-v(on)
+let hd=v(hp)-v(hn)
+let cm=(v(op)+v(on))/2
+wrdata sampling.dat od hd cm v(acq) v(sp) v(sn)
+quit
+.endc
+.end

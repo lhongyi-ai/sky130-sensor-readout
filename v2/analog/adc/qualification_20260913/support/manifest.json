@@ -1,0 +1,20 @@
+{
+  "active_source_sha256": {
+    "v2/analog/adc/qualification_20260913/qualify.py": "4cb357369ac7da5503cba505701838581d8970b675d18ab68c036da8940f8464",
+    "v2/analog/adc/verification_20260910/static_campaign.py": "a33dc7d7321fc376e9e9fa611415c278cedf57a7ad622ac5a83d2fc554ab7a0e",
+    "v2/analog/adc/closure_20260911/trace_replay.py": "be53235f330e4adcc7a0fa2bc3fd3c281f16e6f66d43626b5b189a903bdb7bbd",
+    "v2/analog/adc/verification_20260910/timestep_convergence.py": "3b4850b0b5566dd87e36da63fc9bb0377aa547a55452b561add47f1da817b753"
+  },
+  "snapshot_sha256": {
+    "static_campaign.py": "a33dc7d7321fc376e9e9fa611415c278cedf57a7ad622ac5a83d2fc554ab7a0e",
+    "trace_replay.py": "be53235f330e4adcc7a0fa2bc3fd3c281f16e6f66d43626b5b189a903bdb7bbd",
+    "timestep_convergence.py": "3b4850b0b5566dd87e36da63fc9bb0377aa547a55452b561add47f1da817b753",
+    "qualify.py": "4cb357369ac7da5503cba505701838581d8970b675d18ab68c036da8940f8464"
+  },
+  "helper_matches_preexisting_frozen_evidence": {
+    "static_campaign.py": true,
+    "trace_replay.py": true,
+    "timestep_convergence.py": true
+  },
+  "scope": "Supplemental imported-helper audit; this was recorded after the baseline run, and matches pre-existing frozen helper source."
+}

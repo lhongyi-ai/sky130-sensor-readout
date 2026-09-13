@@ -1,0 +1,41 @@
+* SKY130 transistor frontend pre-layout experiment; inspect included snapshot for passive types.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/repair_20260910/qualification_frozen_recheck/noise_tt_1.8_27_g16_r1_sw_iso2600.0/frontend_pdk_snapshot.spice
+.temp 27
+.options reltol=1e-6 abstol=1e-14 vntol=1e-9 chgtol=1e-18 itl1=200 itl2=200
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+VIP SP 0 dc 0.9 ac 1
+BIN SN 0 v=1.8-v(sp)
+
+RSP SP IP 350
+RSN SN IN 350
+VSEL0 SEL0 0 0
+VSEL1 SEL1 0 1.8
+XPGA IP IN OP ON VDD 0 VCM SEL0 SEL1 sky130_v2_switchable_pga
+
+XRIP OP NOP 0 frontend_r R=2600.0
+XRIN ON NON 0 frontend_r R=2600.0
+XCFP NOP 0 frontend_c4p
+XCFN NON 0 frontend_c4p
+CLP NOP 0 81.285p
+CLN NON 0 81.285p
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+
+op
+wrdata op_nodes.dat all
+let pdc=-v(vdd)*i(vdd)
+let pvcm=-v(vcm)*i(vcm)
+wrdata power.dat pdc pvcm
+wrdata device_op.dat @m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8[id] @m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8[gm] @m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8[gds] @m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8[vds] @m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8[vdsat] @m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[id] @m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[gm] @m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[gds] @m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[vds] @m.xpga.xamp.xerrp.xt0.msky130_fd_pr__nfet_01v8[vdsat] @m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8[id] @m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8[gm] @m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8[gds] @m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8[vds] @m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8[vdsat] @m.xpga.xamp.xcmt.msky130_fd_pr__nfet_01v8[id] @m.xpga.xamp.xcmt.msky130_fd_pr__nfet_01v8[gm] @m.xpga.xamp.xcmt.msky130_fd_pr__nfet_01v8[gds] @m.xpga.xamp.xcmt.msky130_fd_pr__nfet_01v8[vds] @m.xpga.xamp.xcmt.msky130_fd_pr__nfet_01v8[vdsat] @m.xpga.xamp.xbn1.msky130_fd_pr__nfet_01v8[id] @m.xpga.xamp.xbn1.msky130_fd_pr__nfet_01v8[gm] @m.xpga.xamp.xbn1.msky130_fd_pr__nfet_01v8[gds] @m.xpga.xamp.xbn1.msky130_fd_pr__nfet_01v8[vds] @m.xpga.xamp.xbn1.msky130_fd_pr__nfet_01v8[vdsat]
+noise v(nop,non) VIP dec 100 1 1g 1
+setplot noise1
+display
+wrdata noise.dat onoise_spectrum inoise_spectrum
+wrdata contributors.dat onoise.m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xp2.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xp3.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xp4.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xp5.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xp6.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xn1.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xn2.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xn3.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xn4.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xn5.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrp.xn6.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xp1.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xp2.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xp3.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xp4.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xp5.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xp6.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xn1.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xn2.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xn3.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xn4.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xn5.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xerrn.xn6.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xlp.msky130_fd_pr__pfet_01v8 onoise.m.xpga.xamp.xlp2.msky130_fd_pr__pfet_01v8 onoise.m.xpga.xamp.xln.msky130_fd_pr__pfet_01v8 onoise.m.xpga.xamp.xln2.msky130_fd_pr__pfet_01v8 onoise.m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xon.msky130_fd_pr__nfet_01v8 onoise.m.xpga.xamp.xlp3.msky130_fd_pr__pfet_01v8 onoise.m.xpga.xamp.xln3.msky130_fd_pr__pfet_01v8 onoise.m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xp2.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xp3.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xp4.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xp5.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xp6.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xn1.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xn2.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xn3.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xn4.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xn5.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xn6.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xp1.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xp2.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xp3.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xp4.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xp5.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xp6.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xn1.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xn2.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xn3.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xn4.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xn5.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xerrn.xn6.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xlp.msky130_fd_pr__pfet_01v8.1overf onoise.m.xpga.xamp.xlp2.msky130_fd_pr__pfet_01v8.1overf onoise.m.xpga.xamp.xln.msky130_fd_pr__pfet_01v8.1overf onoise.m.xpga.xamp.xln2.msky130_fd_pr__pfet_01v8.1overf onoise.m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xon.msky130_fd_pr__nfet_01v8.1overf onoise.m.xpga.xamp.xlp3.msky130_fd_pr__pfet_01v8.1overf onoise.m.xpga.xamp.xln3.msky130_fd_pr__pfet_01v8.1overf onoise.m.xpga.xamp.xerrp.xp1.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xp2.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xp3.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xp4.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xp5.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xp6.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xn1.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xn2.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xn3.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xn4.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xn5.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrp.xn6.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xp1.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xp2.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xp3.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xp4.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xp5.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xp6.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xn1.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xn2.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xn3.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xn4.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xn5.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xerrn.xn6.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xlp.msky130_fd_pr__pfet_01v8.id onoise.m.xpga.xamp.xlp2.msky130_fd_pr__pfet_01v8.id onoise.m.xpga.xamp.xln.msky130_fd_pr__pfet_01v8.id onoise.m.xpga.xamp.xln2.msky130_fd_pr__pfet_01v8.id onoise.m.xpga.xamp.xop.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xon.msky130_fd_pr__nfet_01v8.id onoise.m.xpga.xamp.xlp3.msky130_fd_pr__pfet_01v8.id onoise.m.xpga.xamp.xln3.msky130_fd_pr__pfet_01v8.id
+quit
+.endc
+.end

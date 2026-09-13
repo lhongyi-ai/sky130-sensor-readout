@@ -1,0 +1,32 @@
+Inspected current project source (not substituted for frozen waveform evidence)
+Path: /Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/scripts/analyze_day4.py
+SHA256: 2bbd361618cd2c2e1badb25e08b9ea172d52d62b6c8227700e4e03b44ec55b1b
+
+        failures: list[str] = []
+        tests = (
+            ("GAIN_FAIL", record["gain_dB"], lambda x: x >= 50.0),
+            ("UGB_FAIL", record["ugb_MHz"], lambda x: x >= 5.0),
+            ("PM_FAIL", record["pm_deg"], lambda x: x >= 55.0),
+            ("POWER_FAIL", record["power_uW"], lambda x: x <= 600.0),
+            ("SR_POS_FAIL", record["sr_pos_V_per_us"], lambda x: x >= 2.0),
+            ("SR_NEG_FAIL", record["sr_neg_V_per_us"], lambda x: x >= 2.0),
+        )
+        for label, value, predicate in tests:
+            if not isinstance(value, (int, float, np.floating)) or not math.isfinite(float(value)) or not predicate(float(value)):
+                failures.append(label)
+        if math.isfinite(float(record["actual_diff_input_at_1Hz_V"])) and not math.isclose(
+            float(record["actual_diff_input_at_1Hz_V"]), 1.0, rel_tol=1e-6, abs_tol=1e-6
+        ):
+            failures.append("DIFFERENTIAL_STIMULUS_FAIL")
+        if math.isfinite(float(record["gain_flatness_1_to_10Hz_dB"])) and abs(float(record["gain_flatness_1_to_10Hz_dB"])) > 0.1:
+            failures.append("GAIN_PLATEAU_FAIL")
+        if not bool(record["all_devices_saturated"]):
+            failures.append("SATURATION")
+        if math.isfinite(float(record["zero_dB_downward_crossings"])) and float(record["zero_dB_downward_crossings"]) == 0:
+            failures.append("NO_0DB_DOWNWARD_CROSSING")
+        if math.isfinite(float(record["loop_phase_1Hz_deg"])) and abs(float(record["loop_phase_1Hz_deg"])) > 5.0:
+            failures.append("LOOP_SIGN_FAIL")
+        if math.isfinite(float(record["zero_dB_downward_crossings"])) and float(record["zero_dB_downward_crossings"]) > 1:
+            failures.append("MULTIPLE_0DB_DOWNWARD_CROSSINGS")
+        if float(record.get("ugb_crossing_at_boundary", 0.0)) == 1.0:
+            failures.append("UGB_CROSSING_AT_BOUNDARY")

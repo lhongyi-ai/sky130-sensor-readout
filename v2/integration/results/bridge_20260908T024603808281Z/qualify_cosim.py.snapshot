@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+"""Qualify live SPICE/RTL feedback with an explicitly IDEAL analog ADC.
+
+Success proves the digital/analog simulator bridge and raw-code port mapping,
+not a physical ADC. Real transistor subcircuits can then replace this fixture.
+"""
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+NG_LIB = Path("/foss/tools/ngspice/lib/ngspice")
+
+
+def output_names():
+    return (["ready", "busy", "valid"] + [f"data{i}" for i in range(11, -1, -1)]
+            + ["dgain1", "dgain0", "gain1", "gain0", "sample"]
+            + [f"trial{i}" for i in range(11, -1, -1)] + ["evaluate"])
+
+
+def controller_elements(binary):
+    inputs = ["clk", "rst", "start", "gain_sel1", "gain_sel0", "decision"]
+    outputs = output_names()
+    return [
+        "Ainputs [" + " ".join(inputs) + "] [" + " ".join("d_"+s for s in inputs) + "] logic_in",
+        ".model logic_in adc_bridge(in_low=0.45 in_high=1.35)",
+        "Asar [" + " ".join("d_"+s for s in inputs) + "] [" + " ".join("d_"+s for s in outputs) + "] null sar_model",
+        f'.model sar_model d_cosim simulation="{NG_LIB}/ivlng" sim_args=["{binary}"]',
+        f'+ lib_args=["/foss/tools/iverilog/lib/libvvp.so" "{NG_LIB}/ivlng.vpi" "vvp.log"]',
+        "Aoutputs [" + " ".join("d_"+s for s in outputs) + "] [" + " ".join(outputs) + "] logic_out",
+        ".model logic_out dac_bridge(out_low=0 out_high=1.8 out_undef=0.9 t_rise=1n t_fall=1n)",
+        *[f"Rbridge_{s} {s} 0 1g" for s in outputs],
+    ]
+
+
+def main():
+    out = HERE / "results" / ("bridge_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
+    out.mkdir(parents=True)
+    latest = HERE / "results/cosim_qualification.json"
+    latest.write_text(json.dumps({"status": "RUNNING", "analog_is_ideal": True}))
+    for path in (HERE / "cosim_controller.v", Path(__file__), ROOT / "rtl/sar_controller.v"):
+        (out / (path.name + ".snapshot")).write_bytes(path.read_bytes())
+    binary = out / "controller.vvp"
+    command = ["iverilog", "-g2012", "-s", "cosim_controller", "-o", str(binary),
+               str(HERE / "cosim_controller.v"), str(ROOT / "rtl/sar_controller.v")]
+    compiled = subprocess.run(command, capture_output=True, text=True, timeout=45)
+    (out / "compile.log").write_text(compiled.stdout + compiled.stderr)
+    if compiled.returncode:
+        raise RuntimeError("co-simulation wrapper compilation failed")
+    expression = "+".join(f"{2**i}*v(trial{i})/1.8" for i in range(12))
+    lines = ["Live unchanged SAR RTL bridge qualification with ideal ADC analog fixture",
+             "Vclk clk 0 PULSE(0 1.8 1u 1n 1n 311.5n 625n)",
+             "Vrst rst 0 PWL(0 0 200n 0 201n 1.8)",
+             "Vstart start 0 PWL(0 0 800n 0 801n 1.8)",
+             "Vg1 gain_sel1 0 0", "Vg0 gain_sel0 0 1.8",
+             "Vsignal vin_diff 0 0.123", *controller_elements(binary),
+             f"Bdac ideal_dac 0 V=-0.4+(0.8/4096)*({expression})",
+             "Bdecision decision 0 V=1.8*(v(vin_diff)>=v(ideal_dac))",
+             ".control", "set num_threads=1", "set wr_singlescale", "set wr_vecnames", "set numdgt=12",
+             "tran 1n 40u", "wrdata bridge_waveform.dat v(clk) v(sample) v(evaluate) v(valid) v(ideal_dac) v(decision)",
+             "quit", ".endc", ".end", ""]
+    source = out / "bridge.spice"
+    source.write_text("\n".join(lines))
+    # Use standard ngspice startup here to load XSPICE; there are no PDK
+    # transistors in this particular fixture and thus no PDK compatibility flag.
+    try:
+        proc = subprocess.run(["ngspice", "-b", "-o", str(out / "native.log"), str(source)], cwd=out,
+                              capture_output=True, text=True, timeout=60)
+        returncode = proc.returncode
+        log = proc.stdout + proc.stderr
+    except subprocess.TimeoutExpired as error:
+        returncode = None
+        log = "TIMEOUT after 60 seconds\n" + (error.stdout or b"").decode(errors="replace") + (error.stderr or b"").decode(errors="replace")
+    for name in ("native.log", "vvp.log"):
+        if (out / name).exists():
+            log += (out / name).read_text(errors="replace")
+    (out / "simulation.log").write_text(log)
+    results = [{"time_ns": float(t), "raw_code": int(c), "gain_code": int(g)}
+        for t, c, g in re.findall(r"COSIM_RESULT time_ns=([\d.]+) code=(\d+) gain_code=(\d+)", log)]
+    expected = int((0.123 + 0.4)/(0.8/4096))
+    checks = {"simulation_completed": returncode == 0,
+              "three_complete_frames": len(results) == 3,
+              "all_codes_match_ideal_fixture": bool(results) and all(r["raw_code"] == expected for r in results),
+              "gain_port_mapped_correctly": bool(results) and all(r["gain_code"] == 1 for r in results),
+              "100ksps_no_extra_idle_clock": len(results) >= 2 and all(abs(b["time_ns"]-a["time_ns"]-10000)<0.01 for a,b in zip(results, results[1:]))}
+    report = {"status": "LIVE_RTL_SPICE_BRIDGE_PASS" if all(checks.values()) else "FAIL",
+        "analog_is_ideal": True, "physical_adc_qualified": False, "cadence_used": False,
+        "checks": checks, "raw_results": results, "expected_ideal_code": expected,
+        "run": str(out.relative_to(HERE)), "source_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in (HERE / "cosim_controller.v", Path(__file__), ROOT / "rtl/sar_controller.v")},
+        "method_source": "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf (d_cosim/Icarus, 10.3)",
+        "limitations": ["Ideal ADC/DAC fixture, not transistor conversion evidence.",
+                         "XSPICE bridges are ideal logic-voltage interfaces, not level-shifter/driver designs.",
+                         "The wrapper uses unchanged synthesizable RTL; no mapped-cell delay or power included."]}
+    latest.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+    print(json.dumps({"status": report["status"], "checks": checks, "results": results}, indent=2))
+    return 0 if all(checks.values()) else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

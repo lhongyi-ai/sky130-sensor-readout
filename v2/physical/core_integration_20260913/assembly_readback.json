@@ -1,0 +1,984 @@
+{
+  "status": "REAL_MACRO_ASSEMBLY_UNROUTED",
+  "gds_sha256": "fecc5958586daa836ba114301f3fa7c05ef13dfa6c9050f2ac0e46796bf02e83",
+  "top_cell": "REUSABLE_MACROS_UNROUTED_20260913",
+  "top_direct_instances": 4,
+  "bbox_um": [
+    0.0,
+    0.0,
+    1093.2,
+    469.795
+  ],
+  "instances": [
+    {
+      "instance": "CDAC",
+      "module": "cdac",
+      "source_cell": "cdac_diff_routed",
+      "bbox_um": [
+        0.0,
+        0.0,
+        893.2,
+        422.5
+      ],
+      "translation_um": [
+        -1.2,
+        1.7
+      ]
+    },
+    {
+      "instance": "CLAMP_P",
+      "module": "sampling_switch",
+      "source_cell": "adc_tgate_layout",
+      "bbox_um": [
+        20.0,
+        452.5,
+        36.0,
+        469.795
+      ],
+      "translation_um": [
+        19.75,
+        452.595
+      ]
+    },
+    {
+      "instance": "CLAMP_N",
+      "module": "sampling_switch",
+      "source_cell": "adc_tgate_layout",
+      "bbox_um": [
+        481.6,
+        452.5,
+        497.6,
+        469.795
+      ],
+      "translation_um": [
+        481.35,
+        452.595
+      ]
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "module": "digital",
+      "source_cell": "sar_controller",
+      "bbox_um": [
+        943.2,
+        0.0,
+        1093.2,
+        150.0
+      ],
+      "translation_um": [
+        943.2,
+        0.0
+      ]
+    }
+  ],
+  "direct_pin_labels": [
+    {
+      "instance": "CDAC",
+      "pin": "P_B11",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 397.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B10",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 399.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B9",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 401.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B8",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 403.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B7",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 405.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B6",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 407.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B5",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 409.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B4",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 411.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B3",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 413.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B2",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 415.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B1",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 417.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_B0",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 419.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_DUMMY",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 240.8,
+      "y_um": 421.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B11",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 397.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B10",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 399.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B9",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 401.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B8",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 403.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B7",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 405.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B6",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 407.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B5",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 409.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B4",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 411.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B3",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 413.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B2",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 415.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B1",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 417.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_B0",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 419.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_DUMMY",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 702.4,
+      "y_um": 421.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_TOP",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 28.97,
+      "y_um": 7.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "P_EDGE_BIAS",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 22.97,
+      "y_um": 1.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_TOP",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 490.57,
+      "y_um": 7.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CDAC",
+      "pin": "N_EDGE_BIAS",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 484.57,
+      "y_um": 1.7,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_P",
+      "pin": "EN",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 32.75,
+      "y_um": 469.595,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_P",
+      "pin": "ENB",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 34.25,
+      "y_um": 469.595,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_P",
+      "pin": "VDD",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 35.75,
+      "y_um": 452.795,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_P",
+      "pin": "VSS",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 20.25,
+      "y_um": 452.795,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_P",
+      "pin": "A",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 21.95,
+      "y_um": 465.095,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_P",
+      "pin": "B",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 21.95,
+      "y_um": 464.095,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_N",
+      "pin": "EN",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 494.35,
+      "y_um": 469.595,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_N",
+      "pin": "ENB",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 495.85,
+      "y_um": 469.595,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_N",
+      "pin": "VDD",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 497.35,
+      "y_um": 452.795,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_N",
+      "pin": "VSS",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 481.85,
+      "y_um": 452.795,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_N",
+      "pin": "A",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 483.55,
+      "y_um": 465.095,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "CLAMP_N",
+      "pin": "B",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 483.55,
+      "y_um": 464.095,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 1077.42,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 1047.42,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 1017.4200000000001,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 987.4200000000001,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 957.4200000000001,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 1073.72,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 1043.72,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 1013.72,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 983.72,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 71,
+      "gds_datatype": 5,
+      "x_um": 953.72,
+      "y_um": 74.8,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "busy",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 60.18,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "clk",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 107.78,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[0]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 71.06,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[10]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 86.02,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[11]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 75.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[1]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 102.34,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[4]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 94.18,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[5]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 91.46000000000001,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[6]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 83.3,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[7]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 61.54,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data_gain[0]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 50.660000000000004,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data_valid",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 56.1,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "ready",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 58.82,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[0]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 73.78,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[10]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 87.38,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[11]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 943.5,
+      "y_um": 76.5,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[5]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 90.10000000000001,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[6]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 81.94,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[7]",
+      "gds_layer": 70,
+      "gds_datatype": 5,
+      "x_um": 1092.9,
+      "y_um": 64.26,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "comparator_bit",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1036.35,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "comparator_evaluate",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1020.71,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[2]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1033.59,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[3]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1021.63,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[8]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1010.59,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data[9]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 994.95,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "data_gain[1]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1031.75,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "gain_latched[0]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1033.59,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "gain_latched[1]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1029.91,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "gain_sel[0]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1030.83,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "gain_sel[1]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1028.99,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "rst_n",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1048.31,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "sample_en",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 996.7900000000001,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "start",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1027.15,
+      "y_um": 0.14,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[1]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1047.39,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[2]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1034.51,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[3]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1023.47,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[4]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1011.51,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[8]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 1009.6700000000001,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "trial_code[9]",
+      "gds_layer": 69,
+      "gds_datatype": 5,
+      "x_um": 997.71,
+      "y_um": 149.86,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 109.58,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 79.58,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 49.58,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VGND",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 19.580000000000002,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 135.88,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 105.88,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 75.88,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 45.88,
+      "connected_by_top_routing": false
+    },
+    {
+      "instance": "SAR_DIGITAL",
+      "pin": "VPWR",
+      "gds_layer": 72,
+      "gds_datatype": 5,
+      "x_um": 1018.1800000000001,
+      "y_um": 15.88,
+      "connected_by_top_routing": false
+    }
+  ],
+  "overlap_pairs": [],
+  "gds_readback_pass": true,
+  "top_interconnect_count": 0,
+  "drc": null,
+  "lvs": null,
+  "top_pex": null,
+  "full_core_complete": false,
+  "scope": "Real existing macro GDS hierarchy only; no dummy placeholders, no missing analog blocks, no routing. Area is this provisional assembly only."
+}

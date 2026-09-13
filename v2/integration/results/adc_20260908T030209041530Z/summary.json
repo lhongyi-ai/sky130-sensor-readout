@@ -1,0 +1,62 @@
+{
+  "status": "SHORT_LIVE_RTL_TRANSISTOR_CONVERSION_PASS",
+  "full_chip_qualified": false,
+  "ideal_phase_fixture": false,
+  "arguments": {
+    "input_v": 0.123,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temperature": 27,
+    "reference_r": 1.0,
+    "duration_us": 40.0,
+    "phase_source": "transistor",
+    "frontend": "/repo/v2/analog/frontend/results/gm3x_rz/noise_tt_1.8_27_g16_r1_sw_iso1800.0/frontend_pdk_snapshot.spice",
+    "gain": 16
+  },
+  "source_sha256": {
+    "integration/cosim_controller.v": "f274cd330b41e82a2033e3cb3ef3ccaef4e1e596ed8b7cde59bbc4154fc1e883",
+    "integration/qualify_cosim.py": "cc51764bd4c507e95a25247a05a2f06c8efd310119e266830637899d9d9e6451",
+    "integration/run_adc_cosim.py": "174707c4854d0d19d9a1451f3def566bb6a49a46b532a3a5b483f40cd2889f95",
+    "rtl/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "analog/adc/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "analog/adc/adc_analog12.spice": "b94dfc7a93d7f2a0407b209d7b08ef3d0680e8974d05f9f8856bc80a6540af6b",
+    "integration/sensor_phases.spice": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462",
+    "analog/frontend/results/gm3x_rz/noise_tt_1.8_27_g16_r1_sw_iso1800.0/frontend_pdk_snapshot.spice": "b0259b64457b614f2166e0f776f47ba0148b8482e3a564c13ccfea47bb060f5a"
+  },
+  "run": "integration/results/adc_20260908T030209041530Z",
+  "returncode": 0,
+  "raw_codes": [
+    2677,
+    2677,
+    2677
+  ],
+  "expected_ideal_code": 2677,
+  "code_error_lsb": [
+    0,
+    0,
+    0
+  ],
+  "complete_adc_qualified": false,
+  "limitations": [
+    "Only short deterministic conversion check, not full-code linearity or noise-inclusive FFT.",
+    "Live original RTL with ideal logic-voltage bridges; no mapped digital power/delay here. Phase source and amplifier inclusion are recorded in arguments.",
+    "Schematic MOS/MIM/resistor circuits; no analog layout extraction or mismatch included.",
+    "Reference network has explicit source resistance and 10nF local external capacitors, not infinite driver strength."
+  ],
+  "valid_times_s": [
+    1.100350107139e-05,
+    2.100350107739e-05,
+    3.100350107739e-05
+  ],
+  "analog_and_reference_port_power_w": 0.0012255920800095638,
+  "reference_peak_port_currents_a": {
+    "rp": 0.001567127412097,
+    "rn": 0.001502608669378,
+    "vcm": 0.0009637444783761
+  },
+  "checks": {
+    "simulation_completed": true,
+    "all_frames_completed": true,
+    "short_nominal_code_check_within_2lsb": true
+  }
+}

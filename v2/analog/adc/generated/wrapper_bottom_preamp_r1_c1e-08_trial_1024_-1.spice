@@ -1,0 +1,50 @@
+* wrapper_bottom_preamp_r1_c1e-08_trial_1024_-1
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/adc_blocks.spice
+.temp 27
+.options reltol=1e-5 abstol=1e-14 vntol=1e-8 method=gear klu
+.include /repo/v2/analog/adc/adc_preamp.spice
+.include /repo/v2/analog/adc/adc_analog12_bottom_preamp.spice
+VDD vdd 0 1.8
+VCM cm 0 .9
+VRP srp 0 1.1
+VRN srn 0 .7
+RRP srp rp 1.0
+RRN srn rn 1.0
+VIP sp 0 0.799975585937
+VIN sn 0 1.00002441406
+RSP sp ip 350
+RSN sn inn 350
+VSAMP sample 0 PWL(0 1.8 2.49u 1.8 2.491u 0)
+VSAMPB sampleb 0 PWL(0 0 2.49u 0 2.491u 1.8)
+VACQ acq 0 PWL(0 1.8 2.50u 1.8 2.501u 0)
+VCONV conv 0 PWL(0 0 2.52u 0 2.521u 1.8)
+VEVAL ev 0 PULSE(0 1.8 2.825u 1n 1n 250n 625n)
+VB0 b0 0 0
+VB1 b1 0 0
+VB2 b2 0 0
+VB3 b3 0 0
+VB4 b4 0 0
+VB5 b5 0 0
+VB6 b6 0 0
+VB7 b7 0 0
+VB8 b8 0 0
+VB9 b9 0 0
+VB10 b10 0 1.8
+VB11 b11 0 0
+CEXTP rp 0 1e-08
+CEXTN rn 0 1e-08
+XADC ip inn q qb sample sampleb acq conv ev b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 b0 rp rn cm vdd 0 adc_analog12_bottom_preamp
+CQ q 0 5f
+CQB qb 0 5f
+.ic V(q)=0 V(qb)=1.8
+.control
+set num_threads=1
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+tran 2n 3.2u
+wrdata /repo/v2/analog/adc/results/wrapper_bottom_preamp_r1_c1e-08_trial_1024_-1.tsv v(xadc.tn) v(xadc.tp) v(q) v(qb) v(ev) v(rp) v(rn)
+quit
+.endc
+.end

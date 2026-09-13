@@ -1,0 +1,159 @@
+{
+  "status": "DERIVED_FROM_EXISTING_FROZEN_WAVEFORMS_NO_NEW_SIMULATION",
+  "rows": [
+    {
+      "source_summary_path": "diagnostics/06_20260911T080744016263Z_headroom_c_g1_tt/summary.json",
+      "source_summary_sha256": "bb28fc96a3f48cf65bfbc3f4c6741d28486f1dacacd8ac696c625d652d69e7f3",
+      "dc_sha256": "ad51b91939121cbdde7b7266ac3d79834a171f3652ea2743698c4277319b8496",
+      "transient_sha256": "557e92ba475be051e747199e304301c1f114c5fb98f43a04953759e1e3615bc8",
+      "source_manifest_sha256": "779c5c4b944b920e2397519289c9935e4a32b0012c0740de857a662a90247f98",
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "gain": 1,
+      "windows": [
+        {
+          "target_output_equivalent_v": 0.36,
+          "step_onset_s": 8e-06,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 1.0476847754e-05,
+          "dc_steady_output_v": 0.35393006770649993,
+          "transient_filtered_output_v": 0.3539539750001537,
+          "dynamic_minus_dc_residual_v": 2.3907293653757655e-05,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": true
+        },
+        {
+          "target_output_equivalent_v": -0.36,
+          "step_onset_s": 1.3e-05,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 1.5476847754e-05,
+          "dc_steady_output_v": -0.3539300676881,
+          "transient_filtered_output_v": -0.3540348040052227,
+          "dynamic_minus_dc_residual_v": -0.00010473631712271114,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": false
+        },
+        {
+          "target_output_equivalent_v": 0,
+          "step_onset_s": 1.8e-05,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 2.0476847754e-05,
+          "dc_steady_output_v": 4.100053629940703e-12,
+          "transient_filtered_output_v": -4.524133906836885e-06,
+          "dynamic_minus_dc_residual_v": -4.524138006890515e-06,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": true
+        }
+      ],
+      "all_static_cap_load_step_windows_pass": false
+    },
+    {
+      "source_summary_path": "diagnostics/07_20260911T080815000979Z_headroom_c_g4_tt/summary.json",
+      "source_summary_sha256": "27c9370d25843bcef5abfa339e85ab505e21d0d0cc66acc536079ac5f8ebf730",
+      "dc_sha256": "248a1e39035cd07efcb04269535d502a97fc1b33e696ae0881a8274ba3259cbd",
+      "transient_sha256": "4db4860179072cebdd8698830ec5ad06d9b845febd1971b2b8af1b47096bf60a",
+      "source_manifest_sha256": "752fa688a33b7a0ce76957f444779d536a45fadeb722c847b59209270eacbb66",
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "gain": 4,
+      "windows": [
+        {
+          "target_output_equivalent_v": 0.36,
+          "step_onset_s": 8e-06,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 1.0476847754e-05,
+          "dc_steady_output_v": 0.3594312119679002,
+          "transient_filtered_output_v": 0.35941546969678084,
+          "dynamic_minus_dc_residual_v": -1.574227111933446e-05,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": true
+        },
+        {
+          "target_output_equivalent_v": -0.36,
+          "step_onset_s": 1.3e-05,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 1.5476847754e-05,
+          "dc_steady_output_v": -0.35943121191290006,
+          "transient_filtered_output_v": -0.3593663186929292,
+          "dynamic_minus_dc_residual_v": 6.489321997088515e-05,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": false
+        },
+        {
+          "target_output_equivalent_v": 0,
+          "step_onset_s": 1.8e-05,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 2.0476847754e-05,
+          "dc_steady_output_v": -2.7900015631132646e-11,
+          "transient_filtered_output_v": -2.253582870229889e-06,
+          "dynamic_minus_dc_residual_v": -2.253554970214258e-06,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": true
+        }
+      ],
+      "all_static_cap_load_step_windows_pass": false
+    },
+    {
+      "source_summary_path": "diagnostics/08_20260911T080851749897Z_headroom_c_g16_tt/summary.json",
+      "source_summary_sha256": "db4188ac9c838cbb82b85a76b57e50f915acc62bae09122dd9d48dddb83e0bf6",
+      "dc_sha256": "630e6fb0acef550bcbdda3112398feea14fddcb5e6bbaec5ee529c5ae1d1f6ff",
+      "transient_sha256": "f6960170556e82376ce4f7e5c23ee64c1218a65f7b88de72306b45ab3e4f408b",
+      "source_manifest_sha256": "841666df3d868ab49089606f33dd5d87c0daee4856809b60c9fa72e299509f9f",
+      "source_sha256": "6f4684dc07d9d832dd25fe72a17a30aeba9984b751cc3f03e55d07fb92db9397",
+      "gain": 16,
+      "windows": [
+        {
+          "target_output_equivalent_v": 0.36,
+          "step_onset_s": 8e-06,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 1.0476847754e-05,
+          "dc_steady_output_v": 0.35833352043740063,
+          "transient_filtered_output_v": 0.3583214242620739,
+          "dynamic_minus_dc_residual_v": -1.2096175326714587e-05,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": true
+        },
+        {
+          "target_output_equivalent_v": -0.36,
+          "step_onset_s": 1.3e-05,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 1.5476847754e-05,
+          "dc_steady_output_v": -0.35833352079340053,
+          "transient_filtered_output_v": -0.3582607380933369,
+          "dynamic_minus_dc_residual_v": 7.278270006361165e-05,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": false
+        },
+        {
+          "target_output_equivalent_v": 0,
+          "step_onset_s": 1.8e-05,
+          "input_transition_duration_s": 1e-08,
+          "elapsed_from_step_onset_s": 2.476847754e-06,
+          "measurement_time_s": 2.0476847754e-05,
+          "dc_steady_output_v": -6.579992106736654e-11,
+          "transient_filtered_output_v": -1.3651904728778925e-05,
+          "dynamic_minus_dc_residual_v": -1.3651838928857857e-05,
+          "limit_v": 4.8828125e-05,
+          "dynamic_residual_within_0p25_lsb": true
+        }
+      ],
+      "all_static_cap_load_step_windows_pass": false
+    }
+  ],
+  "noise_included": false,
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "scope": "Static 81.285pF plus4pF per side through realRISO2600; no sampling switch or charge kickback. Residual is relative to the same-candidate DC transfer, separating static gain error.",
+  "limitations": [
+    "Measurement uses linear interpolation of a maximum5ns-step waveform.",
+    "The2.476847754us interval starts at input transition onset, not after its10ns ramp.",
+    "These failures show that even the easier static-capacitive-load diagnostic is not closed; passing would still not qualify real SAR acquisition.",
+    "Neither per-point calibration nor new fitting is used for this dynamic-minus-DC residual."
+  ]
+}

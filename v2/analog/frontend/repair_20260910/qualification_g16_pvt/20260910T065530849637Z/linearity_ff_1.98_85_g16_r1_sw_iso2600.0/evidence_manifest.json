@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-10T06:56:20.828701+00:00",
+  "scope": "Recorded artifact integrity only, not an electrical test PASS",
+  "files": {
+    "calibration_source_frontend.spice": {
+      "sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "size_bytes": 7726
+    },
+    "calibration_source_metadata.json": {
+      "sha256": "185910d84ada803714f64482d438546769d2144971857241b603b504dd14dfa3",
+      "size_bytes": 596
+    },
+    "calibration_source_summary.json": {
+      "sha256": "d1884c91b0735d05710bf469f0f8d4a79880b2020602303ce604988903666caf",
+      "size_bytes": 1233
+    },
+    "experiment_config.json": {
+      "sha256": "564cc6b5850cff0fc0066bcdd50485292ff488bbdf8635f528aec6edaf874cb2",
+      "size_bytes": 643
+    },
+    "frontend_pdk_snapshot.spice": {
+      "sha256": "564f4776c4c61872de63648816ef5aaf51555769edeca326042f287880ae1a3c",
+      "size_bytes": 7726
+    },
+    "linearity.console.txt": {
+      "sha256": "5e20185c51ff6dbe726f5b0cc91e17f0d26caebbb59962a724ffcbbe4dc1f69e",
+      "size_bytes": 642
+    },
+    "linearity.dat": {
+      "sha256": "27fc655bfd2d4c7b592ef2d8094dbab46bfecbed758c4ec331fc03e2ba2a43dd",
+      "size_bytes": 5330
+    },
+    "linearity.log": {
+      "sha256": "d94080c0bb699bb6d7dbb90195f32c7a1e9e8a9efed8d108686c6d6d3397d76d",
+      "size_bytes": 6763
+    },
+    "linearity.spice": {
+      "sha256": "24a07c0e707371a85c6b49fa641945785f0b06596b05fb169845cfc48f1cf0e9",
+      "size_bytes": 859
+    },
+    "op_nodes.dat": {
+      "sha256": "6f8f118b863d9feadb4394b939864f842041fb656f388231bd551b7570d5e215",
+      "size_bytes": 25762
+    },
+    "summary.json": {
+      "sha256": "2212ed7b9cd323f5136bb34551a38f29af9ca1e8f162bb74cc1d9f824b454d70",
+      "size_bytes": 1537
+    }
+  },
+  "producer_code": {
+    "/repo/v2/analog/frontend/qualify_advanced.py": "ac6cad1d876ea1fc1ddb5bef6ae28e30cab0f6bd456908e657cf4f03d81f311e",
+    "/repo/v2/analog/frontend/measurements.py": "f4356981f5404856edcbffbb90d1b0e7ee1034feaace4d1cf4c5c382e1568b94",
+    "/repo/v2/analog/frontend/measurement_evidence.py": "67f05a3ff95a4a567b1efb5b09f79fef3cea265011aee0374ff08a6095019c31",
+    "/repo/v2/analog/frontend/run_frontend.py": "b5712d756a526094da5768588a54cddf1f0ab29645c6dc030887f712e85f6cde"
+  }
+}

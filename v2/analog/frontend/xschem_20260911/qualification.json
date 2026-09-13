@@ -1,0 +1,55 @@
+{
+  "generated_utc": "2026-09-11T09:05:21Z",
+  "status": "XSCHEM_REVIEW_VISUAL_PASS__SOURCE_FORMAL_STABILITY_OPEN",
+  "candidate_path": "../dynamic_20260911/candidate_06.spice",
+  "candidate_sha256": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+  "source_qualification_path": "../dynamic_20260911/qualification.json",
+  "source_qualification_status": "NOMINAL_DYNAMIC_PASS__FORMAL_MULTILOOP_STABILITY_NOT_CLOSED",
+  "visual_no_overlap_audit": {
+    "method": "Manual visual inspection of each final 2400x1600 PNG at original resolution",
+    "algorithmic_proof": false,
+    "scope": "Human visual review of the final raster pages; this is not a computational geometry proof.",
+    "all_pages_pass": true,
+    "pages": {
+      "frontend_top.png": {
+        "text_vs_text_overlap": false,
+        "text_vs_wire_overlap": false,
+        "text_vs_device_overlap": false,
+        "text_vs_border_overlap": false,
+        "module_spacing_clear": true,
+        "missing_symbol_or_garbled_glyph": false,
+        "review_note": "Top-level sensor, PGA, RC-isolation, sampler and evidence panels have clear gutters."
+      },
+      "switchable_pga.png": {
+        "text_vs_text_overlap": false,
+        "text_vs_wire_overlap": false,
+        "text_vs_device_overlap": false,
+        "text_vs_border_overlap": false,
+        "module_spacing_clear": true,
+        "missing_symbol_or_garbled_glyph": false,
+        "review_note": "All six feedback branches remain inside their banks; labels, lines, boxes and the main signal panel are separated."
+      },
+      "rd_fdota.png": {
+        "text_vs_text_overlap": false,
+        "text_vs_wire_overlap": false,
+        "text_vs_device_overlap": false,
+        "text_vs_border_overlap": false,
+        "module_spacing_clear": true,
+        "missing_symbol_or_garbled_glyph": false,
+        "review_note": "Stage headings, device labels, sizes, gate names, rails and both CM-loop notes are visually separated."
+      }
+    }
+  },
+  "electrical_scope": {
+    "nominal_static_pass": true,
+    "nominal_real_load_dynamic_pass": true,
+    "nominal_power_pass": true,
+    "nominal_device_region_pass": true,
+    "formal_multiloop_stability_closed": false,
+    "pvt_45_run": false,
+    "noise_qualified": false,
+    "cadence_native": false,
+    "frontend_layout_drc_lvs_pex_complete": false
+  },
+  "qualification_boundary": "The visual audit qualifies only readability of these Xschem review pages. Electrical claims are inherited from the pinned source qualification; they do not constitute full front-end qualification."
+}

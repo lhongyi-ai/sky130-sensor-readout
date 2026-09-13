@@ -1,0 +1,17 @@
+{
+  "test": "linearity",
+  "gain": 16,
+  "corner": "tt",
+  "vdd": 1.8,
+  "temp": 27,
+  "ramp_us": 1,
+  "out": "repair_20260910/qualification_cas65_deg1000_cap1",
+  "analyze_only": false,
+  "switchable": true,
+  "isolation_r": 150,
+  "calibration_from": null,
+  "core": "repair_20260910/results/20260910T062811944809Z_cascoded_tail_g16/candidate.spice",
+  "acquisition_us": 2.476847754,
+  "transient_method": "trap",
+  "max_step_ns": 5
+}

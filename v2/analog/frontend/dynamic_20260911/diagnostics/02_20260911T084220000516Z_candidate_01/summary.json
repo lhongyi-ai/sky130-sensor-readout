@@ -1,0 +1,355 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE",
+  "ordinal": 2,
+  "diagnostic_budget": 8,
+  "candidate": "candidate_01.spice",
+  "candidate_sha256": "6c8fdc7f3a770c4ef01b11a085bbdfe7080370877ba4a6fdab56dff96aa0eeef",
+  "worker_count": 1,
+  "full_frontend_qualified": false,
+  "full_chip_qualified": false,
+  "noise_included": false,
+  "elapsed_s": 21.18932091500028,
+  "returncode": 0,
+  "corner": "tt",
+  "vdd_v": 1.8,
+  "temp_c": 27,
+  "gains": {
+    "1": {
+      "calibration_points_target_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "calibration_coefficients": [
+        0.9544998686283268,
+        2.5471316428894513e-13
+      ],
+      "max_independent_holdout_error_lsb": 0.11726358423828742,
+      "max_static_output_cm_error_v": 0.00040886461080003045,
+      "output_endpoints_v": [
+        -0.4190436375137999,
+        0.4190436375137
+      ],
+      "static_gate_pass": true,
+      "acquisition_window_s": 2.476847754e-06,
+      "acquisition_errors_v": [
+        0.3001553728864628,
+        -0.32158739374294865,
+        0.13483146419715733
+      ],
+      "max_acquisition_error_v": 0.32158739374294865,
+      "post_aperture_errors_v": [
+        0.300048737937232,
+        -0.31242133009068257,
+        0.14172834870058826
+      ],
+      "max_post_aperture_error_v": 0.31242133009068257,
+      "settled_references_v": [
+        0.06510114416286801,
+        -0.08386063225231737,
+        0.014960734465611688
+      ],
+      "reference_peak_to_peak_v": [
+        1.55751729001455,
+        1.4248319771902098,
+        0.2883032331990001
+      ],
+      "max_transient_output_cm_error_v": 0.8948397967699998,
+      "sampling_gate_pass": false,
+      "mean_frontend_vdd_vcm_power_w": 0.002347034905284814,
+      "power_peak_to_peak_w": 0.013792545199801802,
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": false,
+      "device_regions": {
+        "xdut.xota.xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.37271161005766995,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.37271161005766995
+        },
+        "xdut.xota.xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.42113049110611,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.42113049110611
+        },
+        "xdut.xota.xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.0998032978591,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.0998032978591
+        },
+        "xdut.xota.xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9516056745446999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9516056745446999
+        },
+        "xdut.xota.xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9036489308566,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9036489308566
+        },
+        "xdut.xota.xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5667117116221,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.5667117116221
+        },
+        "xdut.xota.xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.01389683837557,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.01389683837557
+        },
+        "xdut.xota.xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.0149090644530598,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.0149090644530598
+        },
+        "xdut.xota.xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.59586856377845,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.59586856377845
+        },
+        "xdut.xota.xcms": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.3873770329012,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.3873770329012
+        },
+        "xdut.xota.xcmr": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.33935053168720997,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.33935053168720997
+        },
+        "xdut.xota.xcmt": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.1095815313514,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.1095815313514
+        }
+      },
+      "device_region_gate_pass": true
+    },
+    "4": {
+      "calibration_points_target_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "calibration_coefficients": [
+        0.9912459214507491,
+        -7.599582564722082e-13
+      ],
+      "max_independent_holdout_error_lsb": 0.01586951627984945,
+      "max_static_output_cm_error_v": 0.00040894498410004587,
+      "output_endpoints_v": [
+        -0.40352942880099996,
+        0.4035294288047999
+      ],
+      "static_gate_pass": true,
+      "acquisition_window_s": 2.476847754e-06,
+      "acquisition_errors_v": [
+        0.20473516449302445,
+        -0.34322665856835166,
+        -0.04597703879335251
+      ],
+      "max_acquisition_error_v": 0.34322665856835166,
+      "post_aperture_errors_v": [
+        0.2038540136716602,
+        -0.34894635064505464,
+        -0.057430252593549
+      ],
+      "max_post_aperture_error_v": 0.34894635064505464,
+      "settled_references_v": [
+        0.15063946856593993,
+        -0.14710118225911537,
+        0.17036124560424903
+      ],
+      "reference_peak_to_peak_v": [
+        0.7193395404967989,
+        0.692379086371075,
+        0.69326801585429
+      ],
+      "max_transient_output_cm_error_v": 0.9030438150440825,
+      "sampling_gate_pass": false,
+      "mean_frontend_vdd_vcm_power_w": 0.0012080032416869634,
+      "power_peak_to_peak_w": 0.00507312896569744,
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xdut.xota.xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.3877492227238,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.3877492227238
+        },
+        "xdut.xota.xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.40560301274713,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.40560301274713
+        },
+        "xdut.xota.xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.1000445128975,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.1000445128975
+        },
+        "xdut.xota.xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9364640877261999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9364640877261999
+        },
+        "xdut.xota.xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9187806909540001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9187806909540001
+        },
+        "xdut.xota.xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5840041397424001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.5840041397424001
+        },
+        "xdut.xota.xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9979181727945999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9979181727945999
+        },
+        "xdut.xota.xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.00835186226198,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.00835186226198
+        },
+        "xdut.xota.xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.60482539213398,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.60482539213398
+        },
+        "xdut.xota.xcms": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.38739326016500003,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.38739326016500003
+        },
+        "xdut.xota.xcmr": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.33725929960544004,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.33725929960544004
+        },
+        "xdut.xota.xcmt": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.1095685179209,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.1095685179209
+        }
+      },
+      "device_region_gate_pass": true
+    },
+    "16": {
+      "calibration_points_target_v": [
+        -0.32,
+        0,
+        0.32
+      ],
+      "calibration_coefficients": [
+        1.005093785376995,
+        4.52298830041754e-12
+      ],
+      "max_independent_holdout_error_lsb": 0.01977603182808707,
+      "max_static_output_cm_error_v": 0.00040898369844999394,
+      "output_endpoints_v": [
+        -0.3979689689871,
+        0.3979689689746
+      ],
+      "static_gate_pass": true,
+      "acquisition_window_s": 2.476847754e-06,
+      "acquisition_errors_v": [
+        0.22667156124291052,
+        -0.2102525130909094,
+        0.26146202257186824
+      ],
+      "max_acquisition_error_v": 0.26146202257186824,
+      "post_aperture_errors_v": [
+        0.2263891678747416,
+        -0.21660095322674386,
+        0.25857405448754145
+      ],
+      "max_post_aperture_error_v": 0.25857405448754145,
+      "settled_references_v": [
+        0.13256018431215846,
+        -0.11049981243525611,
+        0.11594070710875859
+      ],
+      "reference_peak_to_peak_v": [
+        0.47795736465322003,
+        0.4606975827006,
+        0.46150070900226997
+      ],
+      "max_transient_output_cm_error_v": 0.9202825697056101,
+      "sampling_gate_pass": false,
+      "mean_frontend_vdd_vcm_power_w": 0.0009690024998275069,
+      "power_peak_to_peak_w": 0.004212608211699587,
+      "provisional_frontend_power_limit_w": 0.00185,
+      "power_gate_pass": true,
+      "device_regions": {
+        "xdut.xota.xmip": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.39155224467254995,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.39155224467254995
+        },
+        "xdut.xota.xmin": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.40169884255788,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.40169884255788
+        },
+        "xdut.xota.xmtail": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.10009424158960001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.10009424158960001
+        },
+        "xdut.xota.xmlp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9326462241817999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9326462241817999
+        },
+        "xdut.xota.xmln": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9225964636626,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9225964636626
+        },
+        "xdut.xota.xmsp": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.5891005421497999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.5891005421497999
+        },
+        "xdut.xota.xmsn": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.9929617106230999,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.9929617106230999
+        },
+        "xdut.xota.xmop": {
+          "min_abs_vds_minus_abs_vdsat_v": 1.00569600412358,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 1.00569600412358
+        },
+        "xdut.xota.xmon": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.60772994644458,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.60772994644458
+        },
+        "xdut.xota.xcms": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.38739495379777,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.38739495379777
+        },
+        "xdut.xota.xcmr": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.33704124421196,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.33704124421196
+        },
+        "xdut.xota.xcmt": {
+          "min_abs_vds_minus_abs_vdsat_v": 0.10956715926800001,
+          "worst_target_v": -0.4,
+          "zero_margin_v": 0.10956715926800001
+        }
+      },
+      "device_region_gate_pass": true
+    }
+  },
+  "all_gain_static_gate_pass": true,
+  "all_gain_real_sampling_gate_pass": false,
+  "all_gain_power_gate_pass": false,
+  "all_gain_device_region_gate_pass": true,
+  "loop_stability_measured": false,
+  "nominal_frontend_prerequisites_pass": false,
+  "scope": "Schematic-level real SKY130 devices and real 4096-unit CDAC acquisition load; no noise, mismatch, PVT, PEX, ADC conversion, or silicon claim."
+}

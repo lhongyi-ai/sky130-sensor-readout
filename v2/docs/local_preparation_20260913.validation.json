@@ -1,0 +1,34 @@
+{
+  "status": "LOCAL_DELIVERY_VERIFIED_NOT_CHIP_QUALIFICATION",
+  "adc_verified_files": 76,
+  "chip_qualified": false,
+  "school_new_package_released": false,
+  "artifact_entrypoints": {
+    "v2/docs/local_preparation_20260913.md": {
+      "sha256": "a265d29a1f75765aa6493dd2a1f267ed36b977c1e2fde670c3a2e18536b24276",
+      "local_links": "PASS"
+    },
+    "v2/verification/legacy_extra_20260913/README.md": {
+      "sha256": "8ec1324687bd1713913c468354018a9cbf8c286c2e1adb57294728deccbeead2",
+      "local_links": "PASS"
+    },
+    "v2/analog/frontend/qualification_20260913/README.md": {
+      "sha256": "14c746890918ecb39cde55c65693cb05723e68a200e94517299d54c9926513ca",
+      "local_links": "PASS"
+    },
+    "v2/analog/adc/qualification_20260913/README.md": {
+      "sha256": "ade78301f4db79d6cdef8ff33e5a00867b9b1b0b1f2106ea8a3664cb35e87c05",
+      "local_links": "PASS"
+    },
+    "v2/physical/core_integration_20260913/README.md": {
+      "sha256": "afab4805c22d655ae1119801fa49b81a154ac29630c0ae0a8c5de30d86dbcece",
+      "local_links": "PASS"
+    },
+    "cadence/project1/reliability_20260913/PACKAGE_GATE_README.md": {
+      "sha256": "ceca61bddf052656339565976d69da80919f45ae4f655ec155a97224757943f8",
+      "local_links": "PASS"
+    }
+  },
+  "validation_scope": "ADC 76 files independently hashed; frontend 415 and physical 18 files previously independently verified; local OTA raw coverage and school OP adapter checked; document links checked. No complete-chip or new-school-runtime pass claimed.",
+  "release_gate_regression_cases": 13
+}

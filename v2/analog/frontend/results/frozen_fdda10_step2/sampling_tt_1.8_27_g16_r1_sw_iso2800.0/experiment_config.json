@@ -1,0 +1,17 @@
+{
+  "test": "sampling",
+  "gain": 16,
+  "corner": "tt",
+  "vdd": 1.8,
+  "temp": 27,
+  "ramp_us": 1,
+  "out": "results/frozen_fdda10_step2",
+  "analyze_only": false,
+  "switchable": true,
+  "isolation_r": 2800.0,
+  "calibration_from": null,
+  "core": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+  "acquisition_us": 2.476847754,
+  "transient_method": "gear",
+  "max_step_ns": 2.0
+}

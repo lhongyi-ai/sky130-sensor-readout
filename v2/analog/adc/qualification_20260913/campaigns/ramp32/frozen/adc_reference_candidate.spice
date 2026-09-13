@@ -1,0 +1,18 @@
+* Separate reference-switch candidate, not a replacement of frozen adc_blocks.
+* No charge-injection dummy: reference banks are not the input-sampling TG.
+.subckt adc_tgate_ref_lvt A B EN ENB VDD VSS params: WN=.84 WP=1.68
+XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L=.15
+XP B ENB A VDD sky130_fd_pr__pfet_01v8_lvt W={WP} L=.35
+.ends adc_tgate_ref_lvt
+
+.subckt adc_ref_switch_lvt BOTTOM BIT ACQ CONV RP RN VCM VDD VSS params: WN=.84 WP=1.68
+XBI BIT BITB VDD VSS adc_inv
+XAI ACQ ACQB VDD VSS adc_inv
+XPH CONV BIT PHB VDD VSS adc_nand2
+XPI PHB PH VDD VSS adc_inv
+XNL CONV BITB NLB VDD VSS adc_nand2
+XNI NLB NL VDD VSS adc_inv
+XCM BOTTOM VCM ACQ ACQB VDD VSS adc_tgate_ref_lvt WN={WN} WP={WP}
+XRP BOTTOM RP PH PHB VDD VSS adc_tgate_ref_lvt WN={WN} WP={WP}
+XRN BOTTOM RN NL NLB VDD VSS adc_tgate_ref_lvt WN={WN} WP={WP}
+.ends adc_ref_switch_lvt

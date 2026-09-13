@@ -1,0 +1,30 @@
+{
+  "status": "SINGLE_BIN_PROBE_NOT_QUALIFIED",
+  "original_model_implementation": "BSIM4v5 models (Berkeley Short Channel IGFET Model-4)",
+  "selected_model": "xm:nshort_model.29",
+  "original_version": "4.5",
+  "ngspice_op": {
+    "out": 1.718068324769174,
+    "vdd#branch": -4.0965837615413055e-06
+  },
+  "explicit_model_parameter_count": 349,
+  "instance_parameter_count": 14,
+  "constant_fallbacks": [
+    {
+      "parameter": "lintnoi",
+      "reason": "query unavailable; original literal preserved"
+    }
+  ],
+  "numeric_model_runtime_path": "/tmp/sensor_numeric_bin_tgthtw9p/device.sim",
+  "numeric_parameters_sha256": "9da82c1585519f892d1909440c6101b3069227b33ed86e3d109d5d8e52fd04d5",
+  "native_deck_sha256": "ebe21f20367226cd4b9c2013a9fe929e61d1453cf1b13c08a511242e2522ce3c",
+  "ngspice_model_file_sha256": "e90265f1a1b6057fbb4324a2e5d2b4ff8d6e5028314daec563eda1defb3a91de",
+  "vacask_model_source_sha256": "57c171ca7148b72ab6008493045d8eb14dc3e0e50d36fb900523c61b7ab936bf",
+  "run": {
+    "returncode": 1,
+    "elapsed_s": 0.0054265869985101745
+  },
+  "unknown_version_fallback": false,
+  "adc_noise_qualified": false,
+  "sky130_model_equivalence_qualified": false
+}

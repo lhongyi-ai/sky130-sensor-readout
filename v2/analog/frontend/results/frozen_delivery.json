@@ -1,0 +1,574 @@
+{
+  "status": "UNQUALIFIED_FROZEN_PHASE_DELIVERY",
+  "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+  "frozen_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+  "live_source_matches_freeze": true,
+  "all_expected_simulations_complete": true,
+  "all_expected_tests_attempted": true,
+  "gates": {
+    "nominal_g16_dc_1LSB": false,
+    "fixed_cal_hot_low_vdd_4LSB": false,
+    "fixed_cal_cold_high_vdd_4LSB": true,
+    "g16_sampling_settling_and_common_mode": false,
+    "static_noise_budget_screen_113uV": true,
+    "frontend_vdd_dc_budget_1p85mW": true,
+    "gain1_small_signal_polarity": true,
+    "gain4_small_signal_polarity": true
+  },
+  "calibration_normalized_static_noise_rms_v": 0.00010890123125223152,
+  "tests": {
+    "nominal_dc": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10/linearity_tt_1.8_27_g16_r1_sw/summary.json",
+      "result": {
+        "test": "linearity",
+        "gain": 16,
+        "corner": "tt",
+        "vdd_v": 1.8,
+        "temp_c": 27,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "calibration_points_output_equivalent_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_source": "this nominal/static experiment",
+        "calibration_coefficients": [
+          1.0031044389647217,
+          2.2890321183727777e-11
+        ],
+        "max_holdout_error_lsb": 1.3588731198319692,
+        "holdout_1LSB_gate": false,
+        "fixed_calibration_4LSB_gate": null,
+        "max_output_cm_error_v": 0.02991249099999993,
+        "caution": "Frontend DC transfer after three-point linear calibration; not ADC INL/DNL or noise-bearing conversion accuracy."
+      }
+    },
+    "fixed_cal_hot_low_vdd": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10/linearity_tt_1.62_85_g16_r1_sw/summary.json",
+      "result": {
+        "test": "linearity",
+        "gain": 16,
+        "corner": "tt",
+        "vdd_v": 1.62,
+        "temp_c": 85.0,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "calibration_points_output_equivalent_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_source": "results/frozen_fdda10/linearity_tt_1.8_27_g16_r1_sw/summary.json",
+        "calibration_coefficients": [
+          1.0031044389647217,
+          2.2890321183727777e-11
+        ],
+        "max_holdout_error_lsb": 4.003987301862253,
+        "holdout_1LSB_gate": false,
+        "fixed_calibration_4LSB_gate": false,
+        "max_output_cm_error_v": 0.07485890599999989,
+        "caution": "Frontend DC transfer after three-point linear calibration; not ADC INL/DNL or noise-bearing conversion accuracy."
+      }
+    },
+    "fixed_cal_cold_high_vdd": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10/linearity_tt_1.98_-20_g16_r1_sw/summary.json",
+      "result": {
+        "test": "linearity",
+        "gain": 16,
+        "corner": "tt",
+        "vdd_v": 1.98,
+        "temp_c": -20.0,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "calibration_points_output_equivalent_v": [
+          -0.32,
+          0,
+          0.32
+        ],
+        "calibration_source": "results/frozen_fdda10/linearity_tt_1.8_27_g16_r1_sw/summary.json",
+        "calibration_coefficients": [
+          1.0031044389647217,
+          2.2890321183727777e-11
+        ],
+        "max_holdout_error_lsb": 2.3696017945195536,
+        "holdout_1LSB_gate": false,
+        "fixed_calibration_4LSB_gate": true,
+        "max_output_cm_error_v": 0.016746029999999967,
+        "caution": "Frontend DC transfer after three-point linear calibration; not ADC INL/DNL or noise-bearing conversion accuracy."
+      }
+    },
+    "sampling": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10_step2/sampling_tt_1.8_27_g16_r1_sw_iso2800.0/summary.json",
+      "result": {
+        "test": "sampling",
+        "gain": 16,
+        "corner": "tt",
+        "vdd_v": 1.8,
+        "temp_c": 27,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "samples": [
+          {
+            "time_s": 1.2466847754e-05,
+            "sampled_diff_v": 0.35950248612755903,
+            "settled_pga_diff_v": 0.35175550293044294,
+            "dynamic_error_v": 0.007746983197116086,
+            "within_0p25LSB": false,
+            "reference_peak_to_peak_v": 0.16014333600000002,
+            "reference_stable_within_0p025LSB": false,
+            "after_switch_opens_time_s": 1.2496847753999999e-05,
+            "held_after_switch_opens_v": 0.359415328499157,
+            "post_aperture_error_v": 0.007659825568714085,
+            "post_aperture_within_0p25LSB": false
+          },
+          {
+            "time_s": 2.2466847754e-05,
+            "sampled_diff_v": -0.354651057345307,
+            "settled_pga_diff_v": -0.3377892202307806,
+            "dynamic_error_v": -0.01686183711452638,
+            "within_0p25LSB": false,
+            "reference_peak_to_peak_v": 0.20673331,
+            "reference_stable_within_0p025LSB": false,
+            "after_switch_opens_time_s": 2.2496847754e-05,
+            "held_after_switch_opens_v": -0.3548839512664626,
+            "post_aperture_error_v": -0.017094731035681987,
+            "post_aperture_within_0p25LSB": false
+          },
+          {
+            "time_s": 3.246684775399999e-05,
+            "sampled_diff_v": 0.3602140244987403,
+            "settled_pga_diff_v": 0.3435406888224686,
+            "dynamic_error_v": 0.016673335676271717,
+            "within_0p25LSB": false,
+            "reference_peak_to_peak_v": 0.202767714,
+            "reference_stable_within_0p025LSB": false,
+            "after_switch_opens_time_s": 3.249684775399999e-05,
+            "held_after_switch_opens_v": 0.359806601380957,
+            "post_aperture_error_v": 0.016265912558488416,
+            "post_aperture_within_0p25LSB": false
+          }
+        ],
+        "all_dynamic_samples_pass": false,
+        "all_post_aperture_samples_pass": false,
+        "load_pf_per_side": 81.28512,
+        "source_r_ohm_per_side": 350,
+        "isolation_r_ohm_per_side": 2800.0,
+        "reservoir_cap_nominal_pf_per_side": 4,
+        "acquisition_window_s": 2.476847754e-06,
+        "transient_method": "gear",
+        "max_step_s": 2e-09,
+        "adc_sampler_source_sha256": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+        "max_common_mode_error_v": 0.12578082999999995,
+        "common_mode_within_50mV": false,
+        "mean_frontend_power_w": 0.0018155105470961065,
+        "power_basis": "VDD rail only; VCM delivered/absorbed power reported separately when saved",
+        "mean_common_mode_port_power_w": -1.7588285953462835e-05,
+        "caution": "Real PDK TG and MIM bank with testbench CM reset. NOT full SAR bit switching/comparator kickback or a system SNDR test."
+      }
+    },
+    "noise": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10/noise_tt_1.8_27_g16_r1_sw_iso2800.0/summary.json",
+      "result": {
+        "test": "noise",
+        "gain": 16,
+        "corner": "tt",
+        "vdd_v": 1.8,
+        "temp_c": 27,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "dc_power_w": 0.00181623563,
+        "dc_power_basis": "VDD rail only; external common-mode port reported separately when available",
+        "common_mode_port_dc_power_w": -1.68257762e-05,
+        "total_vdd_and_common_mode_dc_power_w": 0.0017994098538,
+        "output_noise_1_to_5000Hz_rms_v": 2.8889014009521185e-05,
+        "output_noise_1_to_50000Hz_rms_v": 4.273416514606698e-05,
+        "output_noise_1_to_1e+09Hz_rms_v": 0.00010856420031858865,
+        "noise_at_1khz_v_per_rtHz": 3.64527048e-07,
+        "isolation_r_ohm_per_side": 2800.0,
+        "caution": "Continuous-time noise after2800ohm/4pF isolation, static81.285pF/side load. NOT sampled/aliased system noise or SNDR. Consult retained deck for older revisions.",
+        "selected_mos_noise_contributors": [
+          {
+            "device": "xlp",
+            "total_1_to_5000Hz_rms_v": 5.399509208208457e-06,
+            "flicker_1_to_5000Hz_rms_v": 5.239841325303379e-06,
+            "channel_1_to_5000Hz_rms_v": 1.3016366277404575e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.7424033610175357e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 6.536347199223959e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.6130080068878167e-05
+          },
+          {
+            "device": "xlp2",
+            "total_1_to_5000Hz_rms_v": 5.399509208208457e-06,
+            "flicker_1_to_5000Hz_rms_v": 5.239841325303379e-06,
+            "channel_1_to_5000Hz_rms_v": 1.3016366277404575e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.7424033610175357e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 6.536347199223959e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.6130080068878167e-05
+          },
+          {
+            "device": "xlp3",
+            "total_1_to_5000Hz_rms_v": 5.399509208208457e-06,
+            "flicker_1_to_5000Hz_rms_v": 5.239841325303379e-06,
+            "channel_1_to_5000Hz_rms_v": 1.3016366277404575e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.7424033610175357e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 6.536347199223959e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.6130080068878167e-05
+          },
+          {
+            "device": "xln",
+            "total_1_to_5000Hz_rms_v": 5.3995092082536255e-06,
+            "flicker_1_to_5000Hz_rms_v": 5.2398413253274825e-06,
+            "channel_1_to_5000Hz_rms_v": 1.3016366277404575e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.7424033610116448e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 6.536347199243282e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.613008006888731e-05
+          },
+          {
+            "device": "xln2",
+            "total_1_to_5000Hz_rms_v": 5.3995092082536255e-06,
+            "flicker_1_to_5000Hz_rms_v": 5.2398413253274825e-06,
+            "channel_1_to_5000Hz_rms_v": 1.3016366277404575e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.7424033610116448e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 6.536347199243282e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.613008006888731e-05
+          },
+          {
+            "device": "xln3",
+            "total_1_to_5000Hz_rms_v": 5.3995092082536255e-06,
+            "flicker_1_to_5000Hz_rms_v": 5.2398413253274825e-06,
+            "channel_1_to_5000Hz_rms_v": 1.3016366277404575e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.7424033610116448e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 6.536347199243282e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.613008006888731e-05
+          },
+          {
+            "device": "xerrp.xp1",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5884619248715503e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.96642314962845e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3738691902957127e-05
+          },
+          {
+            "device": "xerrp.xp2",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5884619248715503e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.96642314962845e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3738691902957127e-05
+          },
+          {
+            "device": "xerrp.xp3",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5884619248715503e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.96642314962845e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3738691902957127e-05
+          },
+          {
+            "device": "xerrp.xp4",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5884619248715503e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.96642314962845e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3738691902957127e-05
+          },
+          {
+            "device": "xerrp.xp5",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5884619248715503e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.96642314962845e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3738691902957127e-05
+          },
+          {
+            "device": "xerrp.xp6",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5884619248715503e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.96642314962845e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3738691902957127e-05
+          },
+          {
+            "device": "xerrn.xp1",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.588461924868618e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.966423149414957e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.373869190294993e-05
+          },
+          {
+            "device": "xerrn.xp2",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.588461924868618e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.966423149414957e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.373869190294993e-05
+          },
+          {
+            "device": "xerrn.xp3",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.588461924868618e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.966423149414957e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.373869190294993e-05
+          },
+          {
+            "device": "xerrn.xp4",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.588461924868618e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.966423149414957e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.373869190294993e-05
+          },
+          {
+            "device": "xerrn.xp5",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.588461924868618e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.966423149414957e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.373869190294993e-05
+          },
+          {
+            "device": "xerrn.xp6",
+            "total_1_to_5000Hz_rms_v": 5.114231061154477e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.992658790391932e-06,
+            "channel_1_to_5000Hz_rms_v": 1.108182483670799e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.588461924868618e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.966423149414957e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.373869190294993e-05
+          },
+          {
+            "device": "xerrp.xn1",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040181649e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.561876760522174e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393158438e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.34367698193796e-05
+          },
+          {
+            "device": "xerrp.xn2",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040181649e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.561876760522174e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393158438e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.34367698193796e-05
+          },
+          {
+            "device": "xerrp.xn3",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040181649e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.561876760522174e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393158438e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.34367698193796e-05
+          },
+          {
+            "device": "xerrp.xn4",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040181649e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.561876760522174e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393158438e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.34367698193796e-05
+          },
+          {
+            "device": "xerrp.xn5",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040181649e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.561876760522174e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393158438e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.34367698193796e-05
+          },
+          {
+            "device": "xerrp.xn6",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040181649e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.561876760522174e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393158438e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.34367698193796e-05
+          },
+          {
+            "device": "xerrn.xn1",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040118955e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5618767605136645e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393119137e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3436769819294334e-05
+          },
+          {
+            "device": "xerrn.xn2",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040118955e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5618767605136645e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393119137e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3436769819294334e-05
+          },
+          {
+            "device": "xerrn.xn3",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040118955e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5618767605136645e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393119137e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3436769819294334e-05
+          },
+          {
+            "device": "xerrn.xn4",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040118955e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5618767605136645e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393119137e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3436769819294334e-05
+          },
+          {
+            "device": "xerrn.xn5",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040118955e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5618767605136645e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393119137e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3436769819294334e-05
+          },
+          {
+            "device": "xerrn.xn6",
+            "total_1_to_5000Hz_rms_v": 5.1042402598758065e-06,
+            "flicker_1_to_5000Hz_rms_v": 4.987122040118955e-06,
+            "channel_1_to_5000Hz_rms_v": 1.0868457795458745e-06,
+            "total_1_to_1e+09Hz_rms_v": 1.5618767605136645e-05,
+            "flicker_1_to_1e+09Hz_rms_v": 7.955858393119137e-06,
+            "channel_1_to_1e+09Hz_rms_v": 1.3436769819294334e-05
+          },
+          {
+            "device": "xop",
+            "total_1_to_5000Hz_rms_v": 4.6049490627755786e-08,
+            "flicker_1_to_5000Hz_rms_v": 4.592559923623002e-08,
+            "channel_1_to_5000Hz_rms_v": 3.3740450448770372e-09,
+            "total_1_to_1e+09Hz_rms_v": 2.3133174117589437e-06,
+            "flicker_1_to_1e+09Hz_rms_v": 1.0478401688633159e-06,
+            "channel_1_to_1e+09Hz_rms_v": 2.061276540207979e-06
+          },
+          {
+            "device": "xon",
+            "total_1_to_5000Hz_rms_v": 4.604949066781053e-08,
+            "flicker_1_to_5000Hz_rms_v": 4.5925599274282277e-08,
+            "channel_1_to_5000Hz_rms_v": 3.3740450470633827e-09,
+            "total_1_to_1e+09Hz_rms_v": 2.3133174115925263e-06,
+            "flicker_1_to_1e+09Hz_rms_v": 1.0478401688932877e-06,
+            "channel_1_to_1e+09Hz_rms_v": 2.061276540272992e-06
+          }
+        ]
+      }
+    },
+    "gain1_smoke": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10/gain_tt_1.8_27_g1_r1_sw/summary.json",
+      "result": {
+        "test": "gain",
+        "gain": 1,
+        "corner": "tt",
+        "vdd_v": 1.8,
+        "temp_c": 27,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "gain_magnitude_at_1khz": 0.9901671951447515,
+        "phase_deg_at_1khz": -0.0037711329812104904,
+        "correct_closed_loop_polarity": true,
+        "caution": "DC operating point and small-signal closed-loop polarity/gain only, no finite-load, full-swing, settling or SNDR signoff."
+      }
+    },
+    "gain4_smoke": {
+      "status": "SIMULATION_COMPLETED_NOT_AUTOMATIC_SPEC_PASS",
+      "path": "results/frozen_fdda10/gain_tt_1.8_27_g4_r1_sw/summary.json",
+      "result": {
+        "test": "gain",
+        "gain": 4,
+        "corner": "tt",
+        "vdd_v": 1.8,
+        "temp_c": 27,
+        "gain_implementation": "real transistor gain-select network, fixed select during this test",
+        "circuit_source": "results/fdda10_dual_cascode/loops_tt_1.8_27_g16/frontend_snapshot.spice",
+        "circuit_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+        "evidence_level": "SKY130 PDK transistor + passive, pre-layout block experiment",
+        "gain_magnitude_at_1khz": 3.992105077889482,
+        "phase_deg_at_1khz": -0.00542419790274028,
+        "correct_closed_loop_polarity": true,
+        "caution": "DC operating point and small-signal closed-loop polarity/gain only, no finite-load, full-swing, settling or SNDR signoff."
+      }
+    }
+  },
+  "fully_qualified_frontend": false,
+  "chip_complete": false,
+  "interface": {
+    "subckt": "sky130_v2_switchable_pga",
+    "pins": [
+      "VINP",
+      "VINN",
+      "OUTP",
+      "OUTN",
+      "VDD",
+      "VSS",
+      "VCM",
+      "SEL0",
+      "SEL1"
+    ],
+    "gain_codes": {
+      "00": 1,
+      "01": 4,
+      "10": 16,
+      "11": "reserved/disconnected"
+    },
+    "sample_driver_subckt": "sky130_v2_switchable_sample_driver",
+    "required_RISO_override_ohm": 2800,
+    "reservoir_cap_pf_per_side": 4,
+    "source_ohm_per_leg": 350
+  },
+  "caveats": [
+    "Noise is continuous-time small-signal noise at the DC equilibrium, not proven stable sampled-system noise.",
+    "The113uV frontend screen reserves an estimated63uVADCpreamp,56uVquantization and10uVsampling; it is not measured systemSNDR.",
+    "Common-mode scalar return ratio includes coupled/possiblyRHPplant effects; no formal60degree dual-loop signoff.",
+    "ThreeTT voltage/temperature DC conditions, not45corners; G1/G4 onlyOP/small-signal gain.",
+    "NoCadence, noXschemdrawing, nofrontendDRC/LVS/PEX, no200-samplefrontendmismatch, nofullSARco-simulation in this owned suite."
+  ],
+  "next_design_work": [
+    "Close common-mode loop including positive feedback through input-pair tail-current modulation.",
+    "Fix full-range static residual while preserving noise and power budgets; do not change frozen acceptance limits.",
+    "Requalify allgains, trueADCload, numerics, startup, interference, mismatch andPVT beforelayout."
+  ]
+}

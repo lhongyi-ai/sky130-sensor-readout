@@ -1,0 +1,26 @@
+scale 1000 1 500000
+rnode "TOP.t0" 0 1200.88 2254 1600 0
+rnode "TOP.t4" 0 1161.23 -146 1600 0
+rnode "TOP.t6" 0 1200.88 2254 0 0
+rnode "TOP.t2" 0 1161.23 -146 0 0
+rnode "TOP.n0" 0 181.894 -380 860 0
+rnode "TOP" 0 54.0145 -1000 740 0
+resist "TOP.n0" "TOP.t4" 0.17284
+resist "TOP.n0" "TOP.t2" 0.17284
+resist "TOP" "TOP.n0" 0.242833
+resist "TOP.t4" "TOP.t0" 0.626482
+resist "TOP.t2" "TOP.t6" 0.626482
+rnode "B1.t1" 0 1539.56 -146 1600 0
+rnode "B1.t0" 0 948.19 2254 0 0
+rnode "B1" 0 1729.75 4000 3000 0
+resist "B1" "B1.t0" 1.91611
+resist "B1" "B1.t1" 4.37216
+rnode "B0.t0" 0 2054.84 -146 0 0
+rnode "B0.t1" 0 945.298 2254 1600 0
+rnode "B0" 0 1342.81 4640 2600 0
+resist "B0" "B0.t1" 2.11086
+resist "B0" "B0.t0" 5.60891
+device csubckt sky130_fd_pr__cap_mim_m3_1 -446 1300 -445 1301  "None" "B1.t1" 4480 0 "TOP.t4" -1680 3164160,21168
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 1300 1955 1301  "None" "B0.t1" 4480 0 "TOP.t0" -1680 3164160,21168
+device csubckt sky130_fd_pr__cap_mim_m3_1 -446 -300 -445 -299  "None" "B0.t0" 4480 0 "TOP.t2" -1680 3164160,21168
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 -300 1955 -299  "None" "B1.t0" 4480 0 "TOP.t6" -1680 3164160,21168

@@ -1,0 +1,73 @@
+{
+  "evidence_level": "single-trial full analog-wrapper transistor checks, ideal external phases/codes; NOT full SAR conversion",
+  "cases": [
+    {
+      "name": "wrapper_trial_1024_-1",
+      "code": 1024,
+      "sign": -1,
+      "input_diff_v": -0.20004882812500002,
+      "residual_before_evaluate_v": -0.00011482181937461089,
+      "residual_error_lsb": -0.3378877151980077,
+      "output_diff_v": -1.7999993369977223,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_trial_1024_1",
+      "code": 1024,
+      "sign": 1,
+      "input_diff_v": -0.199951171875,
+      "residual_before_evaluate_v": -1.7152636639261587e-05,
+      "residual_error_lsb": -0.3378214995930193,
+      "output_diff_v": -1.7999993369977234,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_trial_2048_-1",
+      "code": 2048,
+      "sign": -1,
+      "input_diff_v": -4.8828125e-05,
+      "residual_before_evaluate_v": -4.873082193324052e-05,
+      "residual_error_lsb": 0.0004981917018085508,
+      "output_diff_v": -1.799999336997723,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_trial_2048_1",
+      "code": 2048,
+      "sign": 1,
+      "input_diff_v": 4.8828125e-05,
+      "residual_before_evaluate_v": 4.893804796846091e-05,
+      "residual_error_lsb": 0.0005628055985198305,
+      "output_diff_v": -1.7999993369977232,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_trial_3072_-1",
+      "code": 3072,
+      "sign": -1,
+      "input_diff_v": 0.19995117187500006,
+      "residual_before_evaluate_v": 1.724240673728339e-05,
+      "residual_error_lsb": 0.33828112249489095,
+      "output_diff_v": 1.7999990013681506,
+      "expected_comparison_pass": false,
+      "reset_retained": true
+    },
+    {
+      "name": "wrapper_trial_3072_1",
+      "code": 3072,
+      "sign": 1,
+      "input_diff_v": 0.20004882812500008,
+      "residual_before_evaluate_v": 0.00011491158837817483,
+      "residual_error_lsb": 0.3383473324962551,
+      "output_diff_v": 1.7999990016918894,
+      "expected_comparison_pass": true,
+      "reset_retained": true
+    }
+  ],
+  "pass_count": 3,
+  "fail_count": 3
+}

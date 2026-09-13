@@ -1,0 +1,80 @@
+{
+  "status": "BATCH_COMPLETE_NOT_ADC_QUALIFIED",
+  "returncode": 0,
+  "plan_sha256": "75eb391e8d05b37fed171903ef2b84cad3b1d9e141006efba94af8dbc8a1f569",
+  "sequence": [
+    {
+      "point_id": null,
+      "input_v": 0.123,
+      "kind": "warmup"
+    },
+    {
+      "point_id": 0,
+      "input_v": 0.123,
+      "kind": "retained"
+    },
+    {
+      "point_id": null,
+      "input_v": -4.8828125e-05,
+      "kind": "warmup"
+    },
+    {
+      "point_id": 1,
+      "input_v": -4.8828125e-05,
+      "kind": "retained"
+    },
+    {
+      "point_id": null,
+      "input_v": 4.8828125e-05,
+      "kind": "warmup"
+    },
+    {
+      "point_id": 2,
+      "input_v": 4.8828125e-05,
+      "kind": "retained"
+    }
+  ],
+  "raw_codes": [
+    2677,
+    2677,
+    2047,
+    2047,
+    2048,
+    2048
+  ],
+  "rows": [
+    {
+      "point_id": 0,
+      "input_v": 0.123,
+      "raw_code": 2677,
+      "valid_time_s": 2.100349999999587e-05,
+      "bus_code": 2677
+    },
+    {
+      "point_id": 1,
+      "input_v": -4.8828125e-05,
+      "raw_code": 2047,
+      "valid_time_s": 4.100350000000245e-05,
+      "bus_code": 2047
+    },
+    {
+      "point_id": 2,
+      "input_v": 4.8828125e-05,
+      "raw_code": 2048,
+      "valid_time_s": 6.1003500000000684e-05,
+      "bus_code": 2048
+    }
+  ],
+  "complete_adc_qualified": false,
+  "wall_seconds": 210.51505466700473,
+  "deck_sha256": "ae1c137fd9d48f5ddc03f3e7b032f44a83e5b1a84db5528341a044fd4c5f5038",
+  "runtime_sha256": "d836e3a5c3d761d3dcf14d036edbe40829655770e05719ccd6a01f3c7ff16464",
+  "binary_sha256": "623bc217d88c868f8be9e7f6a03e90dfcf5c28b5a5dd4e6b2ea68dcde783f4ac",
+  "artifact_sha256": {
+    "waveform.dat": "2535e727e3ddd5858f775f12af4af93dbf2697d2b9f2d2d1f54fa030e3317171",
+    "native.log": "0cc4fcb6ca8dd4cb98f09745f3bf823c5997ce37f2ab698f33d49049248c84f8",
+    ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1",
+    "adc.spice": "ae1c137fd9d48f5ddc03f3e7b032f44a83e5b1a84db5528341a044fd4c5f5038",
+    "simulation.log": "b3015959ba901cc06adde37a7068b1fd4605315ac34062d844846f0fecf8c5c4"
+  }
+}

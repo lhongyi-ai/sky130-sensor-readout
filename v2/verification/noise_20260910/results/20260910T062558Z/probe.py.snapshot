@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+"""Bounded intrinsic-noise capability probes, never an ADC qualification.
+
+Run inside the pinned project container. No synthetic noise sources are added.
+Converted PDK contents remain in a temporary directory outside the repository.
+"""
+from __future__ import annotations
+
+import hashlib
+import argparse
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import tempfile
+import time
+
+import numpy as np
+from rawfile import rawread
+
+HERE = Path(__file__).resolve().parent
+PDK = Path('/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice')
+
+
+def run(cmd, cwd, log, timeout=120):
+    start = time.monotonic()
+    try:
+        p = subprocess.run(cmd, cwd=cwd, text=True, stdout=subprocess.PIPE,
+                           stderr=subprocess.STDOUT, timeout=timeout)
+        log.write_text(p.stdout)
+        return {'returncode': p.returncode, 'elapsed_s': time.monotonic()-start}
+    except subprocess.TimeoutExpired as exc:
+        output = exc.stdout or b''
+        log.write_text(output.decode(errors='replace') if isinstance(output, bytes) else output)
+        return {'returncode': None, 'elapsed_s': time.monotonic()-start, 'timeout': True}
+
+
+def rc_deck(seed=11, enable=True, oversample=6, mode='zoh'):
+    return f'''Intrinsic resistor thermal noise control, not a sensor ADC
+load "resistor.osdi"
+load "capacitor.osdi"
+model r resistor
+model c capacitor
+model i isource
+r1 (out 0) r r=10000
+c1 (out 0) c c=1n
+i1 (0 out) i dc=0
+control
+  abort always
+  options temp=27 rawfile="binary" strictsave=1
+  options reltol=1e-5 vntol=1e-10 abstol=1e-15 tran_noisedebug=1
+  save v(out)
+  analysis transient tran stop=20m step=10n maxstep=100n noisefmax={1000000 if enable else 0} noisefmin=10 oversample={oversample} noiseseed={seed} noisemode="{mode}"
+  analysis stationary noise out="out" in="i1" from=10 to=1meg mode="dec" points=80
+endc
+'''
+
+
+def rc_probe(out):
+    results = []
+    for name, seed, enable, osample, mode in [
+        ('off', 11, False, 6, 'zoh'), ('on_seed11',11,True,6,'zoh'),
+        ('replay_seed11',11,True,6,'zoh'), ('on_seed29',29,True,6,'zoh'),
+        ('on_os12',11,True,12,'zoh'), ('on_sde',11,True,6,'sde')]:
+        folder=out/name; folder.mkdir()
+        deck=folder/'control.sim'; deck.write_text(rc_deck(seed,enable,osample,mode))
+        item={'name':name,'seed':seed,'noise_enabled':enable,'oversample':osample,'mode':mode,
+              'run':run(['vacask','-sp','-qp',str(deck)], folder, folder/'simulator.log')}
+        if item['run']['returncode']==0 and (folder/'transient.raw').exists():
+            p=rawread(str(folder/'transient.raw')).get(); t=p['time'].real; v=p['out'].real
+            # Uniform interpolation avoids weighting dense adaptive steps as extra time.
+            ts=np.arange(1e-3,20e-3,1e-7); vs=np.interp(ts,t,v)
+            n=rawread(str(folder/'stationary.raw')).get()
+            frequency=n['frequency'].real; psd=n['onoise'].real
+            thermal=1.380649e-23*(273.15+27)/1e-9
+            item.update(points=len(t),end_s=float(t[-1]),variance_v2=float(np.var(vs)),
+                        rms_v=float(np.sqrt(np.mean(vs**2))),kt_over_c_v2=thermal,
+                        variance_over_ktc=float(np.var(vs)/thermal),
+                        small_signal_integral_v2=float(np.trapezoid(psd,frequency)),
+                        waveform_sha256=hashlib.sha256(np.column_stack((t,v)).tobytes()).hexdigest())
+        results.append(item)
+    return results
+
+
+def mos_probe(out):
+    folder=out/'sky130_nfet'; folder.mkdir()
+    src=folder/'device.spice'
+    src.write_text(f'''SKY130 nominal transistor compatibility control
+.lib {PDK} tt
+.param mc_mm_switch=0 mc_pr_switch=0
+VDD vdd 0 1.8
+VG gate 0 DC .7 AC 1
+RLOAD vdd out 20k
+CLOAD out 0 1p
+XM out gate 0 0 sky130_fd_pr__nfet_01v8 W=2 L=1
+.temp 27
+.control
+set wr_vecnames
+set wr_singlescale
+set numdgt=15
+op
+wrdata {folder/'ngspice_op.tsv'} v(out) i(vdd)
+noise v(out) VG dec 40 10 100meg
+setplot noise1
+wrdata {folder/'ngspice_noise.tsv'} onoise_spectrum
+tran 1n 20u
+wrdata {folder/'ngspice_tran.tsv'} v(out)
+quit
+.endc
+.end
+''')
+    ng=run(['ngspice','-b',str(src)],folder,folder/'ngspice.log')
+    # Derived compact-model deck is local temporary runtime material, never a deliverable.
+    temp=Path(tempfile.mkdtemp(prefix='sensor_noise_pdk_'))
+    dest=temp/'converted.sim'
+    hardware=folder/'device_only.spice'
+    hardware.write_text(src.read_text().split('.control')[0]+'.end\n')
+    conversion=run(['python3',str(HERE/'convert_relative.py'),str(hardware),str(dest),str(folder/'input_hashes.json')],folder,folder/'conversion.log')
+    result={'ngspice':ng,'conversion':conversion,'converted_pdk_location':str(temp),
+            'pdk_deck_sha256':hashlib.sha256(PDK.read_bytes()).hexdigest(),
+            'pdk_resolved_path':str(PDK.resolve()),'status':'PENDING_CONVERSION_INSPECTION'}
+    if dest.exists():
+        result['converted_root_sha256']=hashlib.sha256(dest.read_bytes()).hexdigest()
+    return result
+
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--mos-only',action='store_true');args=parser.parse_args()
+    tag=time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())
+    out=HERE/'results'/tag; out.mkdir(parents=True)
+    shutil.copyfile(__file__,out/'probe.py.snapshot')
+    result={'status':'CAPABILITY_PROBE_ONLY_NOT_ADC_NOISE_QUALIFICATION','created_utc':tag,
+            'source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            'simulators':{name:shutil.which(name) for name in ['ngspice','Xyce','vacask']},
+            'rc_controls':[] if args.mos_only else rc_probe(out),'sky130_mos':mos_probe(out)}
+    (out/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
+    print(json.dumps(result,indent=2))
+
+
+if __name__=='__main__': main()

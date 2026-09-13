@@ -1,0 +1,80 @@
+Frozen composite SKY130 ADC / live unchanged SAR RTL / static campaign
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/adc/qualification_20260913/snapshot/frozen/adc_blocks.spice
+.include /repo/v2/analog/adc/qualification_20260913/snapshot/frozen/sensor_adc_candidate.spice
+.include /repo/v2/analog/adc/qualification_20260913/snapshot/frozen/adc_preamp.spice
+.include /repo/v2/analog/adc/qualification_20260913/snapshot/frozen/adc_reference_candidate.spice
+.include /repo/v2/analog/adc/qualification_20260913/snapshot/frozen/adc_tgate_dual_lvt_dummy.spice
+.include /repo/v2/analog/adc/qualification_20260913/snapshot/frozen/sensor_phases.spice
+.temp 27
+.options klu method=gear reltol=1e-5 abstol=1e-13 vntol=1e-8
+VDD vdd 0 1.8
+VVCM cv 0 0.9
+VRP pr 0 1.1
+VRN nr 0 0.7
+RRP pr rp 1
+RRN nr rn 1
+RCM cv vcm 1
+CRP rp 0 10n
+CRN rn 0 10n
+CCM vcm 0 10n
+VIP sp 0 PWL(0 0.7005 11.014000000u 0.7005 11.015000000u 1.0995 21.014000000u 1.0995 21.015000000u 0.8999755859375 31.014000000u 0.8999755859375 31.015000000u 0.9000244140625 41.014000000u 0.9000244140625 41.015000000u 0.709814453125 51.014000000u 0.709814453125 51.015000000u 1.090185546875 61.014000000u 1.090185546875 61.015000000u 0.856396484375 71.014000000u 0.856396484375 71.015000000u 0.993017578125 81.014000000u 0.993017578125 81.015000000u 0.886279296875 91.014000000u 0.886279296875 91.015000000u 0.9151855468750001 101.014000000u 0.9151855468750001 101.015000000u 0.949755859375 111.014000000u 0.949755859375 111.015000000u 1.023388671875)
+VIN sn 0 PWL(0 1.0995 11.014000000u 1.0995 11.015000000u 0.7005 21.014000000u 0.7005 21.015000000u 0.9000244140625 31.014000000u 0.9000244140625 31.015000000u 0.8999755859375 41.014000000u 0.8999755859375 41.015000000u 1.090185546875 51.014000000u 1.090185546875 51.015000000u 0.709814453125 61.014000000u 0.709814453125 61.015000000u 0.943603515625 71.014000000u 0.943603515625 71.015000000u 0.806982421875 81.014000000u 0.806982421875 81.015000000u 0.9137207031250001 91.014000000u 0.9137207031250001 91.015000000u 0.884814453125 101.014000000u 0.884814453125 101.015000000u 0.8502441406250001 111.014000000u 0.8502441406250001 111.015000000u 0.776611328125)
+RSP sp inp 350
+RSN sn inn 350
+Vclk clk 0 PULSE(0 1.8 1u 1n 1n 311.5n 625n)
+Vrst rst 0 PWL(0 0 200n 0 201n 1.8)
+Vstart start 0 PWL(0 0 800n 0 801n 1.8)
+VG1 gain_sel1 0 0
+VG0 gain_sel0 0 0
+Ainputs [clk rst start gain_sel1 gain_sel0 decision] [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] logic_in
+.model logic_in adc_bridge(in_low=0.45 in_high=1.35)
+Asar [d_clk d_rst d_start d_gain_sel1 d_gain_sel0 d_decision] [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] null sar_model
+.model sar_model d_cosim simulation="/repo/v2/analog/adc/qualification_20260913/snapshot/cosim_controller_fixed.so"
+Aoutputs [d_ready d_busy d_valid d_data11 d_data10 d_data9 d_data8 d_data7 d_data6 d_data5 d_data4 d_data3 d_data2 d_data1 d_data0 d_dgain1 d_dgain0 d_gain1 d_gain0 d_sample d_trial11 d_trial10 d_trial9 d_trial8 d_trial7 d_trial6 d_trial5 d_trial4 d_trial3 d_trial2 d_trial1 d_trial0 d_evaluate] [ready busy valid data11 data10 data9 data8 data7 data6 data5 data4 data3 data2 data1 data0 dgain1 dgain0 gain1 gain0 sample trial11 trial10 trial9 trial8 trial7 trial6 trial5 trial4 trial3 trial2 trial1 trial0 evaluate] logic_out
+.model logic_out dac_bridge(out_low=0 out_high=1.8 out_undef=0.9 t_rise=1n t_fall=1n)
+Rbridge_ready ready 0 1g
+Rbridge_busy busy 0 1g
+Rbridge_valid valid 0 1g
+Rbridge_data11 data11 0 1g
+Rbridge_data10 data10 0 1g
+Rbridge_data9 data9 0 1g
+Rbridge_data8 data8 0 1g
+Rbridge_data7 data7 0 1g
+Rbridge_data6 data6 0 1g
+Rbridge_data5 data5 0 1g
+Rbridge_data4 data4 0 1g
+Rbridge_data3 data3 0 1g
+Rbridge_data2 data2 0 1g
+Rbridge_data1 data1 0 1g
+Rbridge_data0 data0 0 1g
+Rbridge_dgain1 dgain1 0 1g
+Rbridge_dgain0 dgain0 0 1g
+Rbridge_gain1 gain1 0 1g
+Rbridge_gain0 gain0 0 1g
+Rbridge_sample sample 0 1g
+Rbridge_trial11 trial11 0 1g
+Rbridge_trial10 trial10 0 1g
+Rbridge_trial9 trial9 0 1g
+Rbridge_trial8 trial8 0 1g
+Rbridge_trial7 trial7 0 1g
+Rbridge_trial6 trial6 0 1g
+Rbridge_trial5 trial5 0 1g
+Rbridge_trial4 trial4 0 1g
+Rbridge_trial3 trial3 0 1g
+Rbridge_trial2 trial2 0 1g
+Rbridge_trial1 trial1 0 1g
+Rbridge_trial0 trial0 0 1g
+Rbridge_evaluate evaluate 0 1g
+XPHASE sample top_sample top_sample_b acq conv vdd 0 sensor_phases
+XADC inp inn decision decision_b top_sample top_sample_b acq conv evaluate trial11 trial10 trial9 trial8 trial7 trial6 trial5 trial4 trial3 trial2 trial1 trial0 rp rn vcm vdd 0 sensor_adc_candidate
+CQ decision 0 5f
+CQB decision_b 0 5f
+.save v(valid) v(inp) v(inn) v(data11) v(data10) v(data9) v(data8) v(data7) v(data6) v(data5) v(data4) v(data3) v(data2) v(data1) v(data0) v(clk) v(evaluate) v(top_sample) v(acq) v(conv) v(xadc.tp) v(xadc.tn) v(rp) v(rn) v(vcm) v(xadc.prep) v(xadc.pren) v(decision) v(decision_b) v(ready) v(busy) v(dgain1) v(dgain0) v(gain1) v(gain0) v(sample) v(trial11) v(trial10) v(trial9) v(trial8) v(trial7) v(trial6) v(trial5) v(trial4) v(trial3) v(trial2) v(trial1) v(trial0)
+.control
+op
+option
+rusage all
+quit
+.endc
+.end

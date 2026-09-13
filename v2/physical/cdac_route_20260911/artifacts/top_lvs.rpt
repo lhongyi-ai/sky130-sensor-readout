@@ -1,0 +1,135 @@
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+Flattening unmatched subcell mim_unit in circuit cdac_side_n_routed (0)(4356 instances)
+
+Class cdac_side_n_routed (0):  Merged 4342 parallel devices.
+Class cdac_side_n_routed (1):  Merged 4342 parallel devices.
+Subcircuit summary:
+Circuit 1: cdac_side_n_routed              |Circuit 2: cdac_side_n_routed              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (4356->14)      |sky130_fd_pr__cap_mim_m3_1 (4356->14)      
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 15                         |Number of nets: 15                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: cdac_side_n_routed              |Circuit 2: cdac_side_n_routed              
+-------------------------------------------|-------------------------------------------
+EDGE_BIAS                                  |EDGE_BIAS                                  
+B6                                         |B6                                         
+B11                                        |B11                                        
+B7                                         |B7                                         
+B8                                         |B8                                         
+B9                                         |B9                                         
+B10                                        |B10                                        
+B1                                         |B1                                         
+B2                                         |B2                                         
+B3                                         |B3                                         
+B4                                         |B4                                         
+B5                                         |B5                                         
+B0                                         |B0                                         
+DUMMY                                      |DUMMY                                      
+TOP                                        |TOP                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cdac_side_n_routed and cdac_side_n_routed are equivalent.
+Flattening unmatched subcell mim_unit in circuit cdac_side_p_routed (0)(4356 instances)
+
+Class cdac_side_p_routed (0):  Merged 4342 parallel devices.
+Class cdac_side_p_routed (1):  Merged 4342 parallel devices.
+Subcircuit summary:
+Circuit 1: cdac_side_p_routed              |Circuit 2: cdac_side_p_routed              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (4356->14)      |sky130_fd_pr__cap_mim_m3_1 (4356->14)      
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 15                         |Number of nets: 15                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: cdac_side_p_routed              |Circuit 2: cdac_side_p_routed              
+-------------------------------------------|-------------------------------------------
+EDGE_BIAS                                  |EDGE_BIAS                                  
+B11                                        |B11                                        
+B6                                         |B6                                         
+B7                                         |B7                                         
+B8                                         |B8                                         
+B9                                         |B9                                         
+B10                                        |B10                                        
+B5                                         |B5                                         
+B4                                         |B4                                         
+B3                                         |B3                                         
+B2                                         |B2                                         
+B1                                         |B1                                         
+B0                                         |B0                                         
+DUMMY                                      |DUMMY                                      
+TOP                                        |TOP                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cdac_side_p_routed and cdac_side_p_routed are equivalent.
+
+Subcircuit summary:
+Circuit 1: cdac_diff_routed                |Circuit 2: cdac_diff_routed                
+-------------------------------------------|-------------------------------------------
+cdac_side_n_routed (1)                     |cdac_side_n_routed (1)                     
+cdac_side_p_routed (1)                     |cdac_side_p_routed (1)                     
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 30                         |Number of nets: 30                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: cdac_diff_routed                |Circuit 2: cdac_diff_routed                
+-------------------------------------------|-------------------------------------------
+P_TOP                                      |P_TOP                                      
+P_B11                                      |P_B11                                      
+P_B10                                      |P_B10                                      
+P_B9                                       |P_B9                                       
+P_B8                                       |P_B8                                       
+P_B7                                       |P_B7                                       
+P_B6                                       |P_B6                                       
+P_B5                                       |P_B5                                       
+P_B4                                       |P_B4                                       
+P_B3                                       |P_B3                                       
+P_B2                                       |P_B2                                       
+P_B1                                       |P_B1                                       
+P_B0                                       |P_B0                                       
+P_DUMMY                                    |P_DUMMY                                    
+P_EDGE_BIAS                                |P_EDGE_BIAS                                
+N_TOP                                      |N_TOP                                      
+N_B11                                      |N_B11                                      
+N_B10                                      |N_B10                                      
+N_B9                                       |N_B9                                       
+N_B8                                       |N_B8                                       
+N_B7                                       |N_B7                                       
+N_B6                                       |N_B6                                       
+N_B5                                       |N_B5                                       
+N_B4                                       |N_B4                                       
+N_B3                                       |N_B3                                       
+N_B2                                       |N_B2                                       
+N_B1                                       |N_B1                                       
+N_B0                                       |N_B0                                       
+N_DUMMY                                    |N_DUMMY                                    
+N_EDGE_BIAS                                |N_EDGE_BIAS                                
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cdac_diff_routed and cdac_diff_routed are equivalent.
+
+Final result: Circuits match uniquely.
+.

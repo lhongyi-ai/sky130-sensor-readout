@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-09-13T06:20:18.419683+00:00",
+  "status": "PASS_LOCAL_REGRESSION",
+  "results": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "cadence/project1/runtime_fixes",
+        "-p",
+        "test_school_launcher_v1.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "regression_00.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "cadence/project1/runtime_fixes/v1_0_4p3/tests",
+        "-p",
+        "test_op_export.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "regression_01.log"
+    },
+    {
+      "command": [
+        "python3",
+        "cadence/project1/runtime_fixes/v1_0_4p3/tests/check_continue_flow.py"
+      ],
+      "exit_code": 0,
+      "log": "regression_02.log"
+    }
+  ],
+  "bound_sources": [
+    {
+      "path": "cadence/project1/releases/p1_school_run_v1.sh",
+      "sha256": "d6decb70892e5c1161199a8ff4477f3b21fe529a90ce24863e9b10e42d67c079"
+    },
+    {
+      "path": "cadence/project1/releases/p1_fix_pulses_v2.il",
+      "sha256": "d06183a1d3ffbde2b3bf1dbe6a6e077e909c9137646e3fa019e1ae53ce1493d4"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/payload/run.py",
+      "sha256": "007e62d502ba26107f99e043d177eb96077e2aa575f5d9c4f98984ad8f85433f"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/payload/analyze.py",
+      "sha256": "6e2d42d1d0e28694561e654f4580bbc21fac1564c85351db9f737fc78a3c3a97"
+    },
+    {
+      "path": "cadence/project1/runtime_fixes/v1_0_4p3/payload/passive_review.py",
+      "sha256": "63a8cae9a7771c52fbcbdf85d99cd52ea64b6c07d95994c7b936f552fcd43b10"
+    }
+  ],
+  "python36_status": "SYNTAX_CHECK_ONLY; Python 3.6.8 runtime unavailable locally",
+  "school_runtime": "NOT_RUN_THIS_TASK",
+  "frontend_package": "NOT_RELEASED; requires frozen frontend and actual school canary",
+  "limitation": "Regression tests include fake OCEAN/Virtuoso and actual retained exported PSF metadata; fake-tool tests are not Cadence execution."
+}

@@ -1,0 +1,1307 @@
+[
+  {
+    "id": "res_dc",
+    "cell": "p1b_tb_res",
+    "analysis": "res_dc",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "passives"
+  },
+  {
+    "id": "mim_ac",
+    "cell": "p1b_tb_mim",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "passives"
+  },
+  {
+    "id": "rc_step",
+    "cell": "p1b_tb_rc",
+    "analysis": "rc_step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "passives"
+  },
+  {
+    "id": "P01_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "nominal"
+  },
+  {
+    "id": "P01_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "nominal"
+  },
+  {
+    "id": "P01_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "nominal"
+  },
+  {
+    "id": "P01_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "nominal"
+  },
+  {
+    "id": "P02_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "ff",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P02",
+    "group": "pvt"
+  },
+  {
+    "id": "P02_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "ff",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P02",
+    "group": "pvt"
+  },
+  {
+    "id": "P02_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "ff",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P02",
+    "group": "pvt"
+  },
+  {
+    "id": "P02_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "ff",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P02",
+    "group": "pvt"
+  },
+  {
+    "id": "P03_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "ss",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P03",
+    "group": "pvt"
+  },
+  {
+    "id": "P03_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "ss",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P03",
+    "group": "pvt"
+  },
+  {
+    "id": "P03_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "ss",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P03",
+    "group": "pvt"
+  },
+  {
+    "id": "P03_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "ss",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P03",
+    "group": "pvt"
+  },
+  {
+    "id": "P04_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "fs",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P04",
+    "group": "pvt"
+  },
+  {
+    "id": "P04_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "fs",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P04",
+    "group": "pvt"
+  },
+  {
+    "id": "P04_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "fs",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P04",
+    "group": "pvt"
+  },
+  {
+    "id": "P04_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "fs",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P04",
+    "group": "pvt"
+  },
+  {
+    "id": "P05_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "sf",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P05",
+    "group": "pvt"
+  },
+  {
+    "id": "P05_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "sf",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P05",
+    "group": "pvt"
+  },
+  {
+    "id": "P05_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "sf",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P05",
+    "group": "pvt"
+  },
+  {
+    "id": "P05_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "sf",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P05",
+    "group": "pvt"
+  },
+  {
+    "id": "P06_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P06",
+    "group": "pvt"
+  },
+  {
+    "id": "P06_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P06",
+    "group": "pvt"
+  },
+  {
+    "id": "P06_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P06",
+    "group": "pvt"
+  },
+  {
+    "id": "P06_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P06",
+    "group": "pvt"
+  },
+  {
+    "id": "P07_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P07",
+    "group": "pvt"
+  },
+  {
+    "id": "P07_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P07",
+    "group": "pvt"
+  },
+  {
+    "id": "P07_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P07",
+    "group": "pvt"
+  },
+  {
+    "id": "P07_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P07",
+    "group": "pvt"
+  },
+  {
+    "id": "P08_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P08",
+    "group": "pvt"
+  },
+  {
+    "id": "P08_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P08",
+    "group": "pvt"
+  },
+  {
+    "id": "P08_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P08",
+    "group": "pvt"
+  },
+  {
+    "id": "P08_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.62,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P08",
+    "group": "pvt"
+  },
+  {
+    "id": "P09_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P09",
+    "group": "pvt"
+  },
+  {
+    "id": "P09_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P09",
+    "group": "pvt"
+  },
+  {
+    "id": "P09_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P09",
+    "group": "pvt"
+  },
+  {
+    "id": "P09_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P09",
+    "group": "pvt"
+  },
+  {
+    "id": "P10_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P10",
+    "group": "pvt"
+  },
+  {
+    "id": "P10_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P10",
+    "group": "pvt"
+  },
+  {
+    "id": "P10_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P10",
+    "group": "pvt"
+  },
+  {
+    "id": "P10_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P10",
+    "group": "pvt"
+  },
+  {
+    "id": "P11_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P11",
+    "group": "pvt"
+  },
+  {
+    "id": "P11_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P11",
+    "group": "pvt"
+  },
+  {
+    "id": "P11_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P11",
+    "group": "pvt"
+  },
+  {
+    "id": "P11_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": -20,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P11",
+    "group": "pvt"
+  },
+  {
+    "id": "P12_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P12",
+    "group": "pvt"
+  },
+  {
+    "id": "P12_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P12",
+    "group": "pvt"
+  },
+  {
+    "id": "P12_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P12",
+    "group": "pvt"
+  },
+  {
+    "id": "P12_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P12",
+    "group": "pvt"
+  },
+  {
+    "id": "P13_op",
+    "cell": "p1b_tb_op",
+    "analysis": "op",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P13",
+    "group": "pvt"
+  },
+  {
+    "id": "P13_ac",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P13",
+    "group": "pvt"
+  },
+  {
+    "id": "P13_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P13",
+    "group": "pvt"
+  },
+  {
+    "id": "P13_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 85,
+    "params": {
+      "VDD": 1.98,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P13",
+    "group": "pvt"
+  },
+  {
+    "id": "nom_cm",
+    "cell": "p1b_tb_cm",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "nom_psrrp",
+    "cell": "p1b_tb_psrrp",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "nom_psrrm",
+    "cell": "p1b_tb_psrrm",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "nom_noise",
+    "cell": "p1b_tb_noise",
+    "analysis": "noise",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "nom_swing",
+    "cell": "p1b_tb_swing",
+    "analysis": "swing",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_1p_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 1e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_1p_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 1e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_2p_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 2e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_2p_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 2e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_10p_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 1e-11,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_10p_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 1e-11,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_20p_loop",
+    "cell": "p1b_tb_loop",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 2e-11,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "load_20p_step",
+    "cell": "p1b_tb_step",
+    "analysis": "step",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 2e-11,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_00",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.0,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_01",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.1,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_02",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.2,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_03",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.30000000000000004,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_04",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.4,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_05",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.5,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_06",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.6000000000000001,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_07",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.7000000000000001,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_08",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.8,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_09",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 0.9,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_10",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.0,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_11",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.1,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_12",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.2000000000000002,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_13",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.3,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_14",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.4000000000000001,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_15",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.5,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_16",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.6,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_17",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.7000000000000002,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  },
+  {
+    "id": "icmr_18",
+    "cell": "p1b_tb_ac",
+    "analysis": "ac",
+    "corner": "tt",
+    "temp": 27,
+    "params": {
+      "VDD": 1.8,
+      "VCM": 1.8,
+      "CL": 5e-12,
+      "VTEST": 0
+    },
+    "point": "P01",
+    "group": "extra"
+  }
+]

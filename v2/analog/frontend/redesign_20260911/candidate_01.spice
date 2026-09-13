@@ -1,0 +1,157 @@
+* 2026-09-11 bounded redesign candidate 01.
+* True two-input, fully-differential two-stage OTA with continuous resistive
+* output-CM sensing.  The PGA is a cross-coupled fully-differential inverting
+* loop, so the OTA inputs only see the closed-loop error rather than the full
+* sensor differential swing.  Every internal active/passive element is a
+* layout-capable SKY130 primitive; VCM is an explicit top-level reference.
+
+* Measured/model-derived approximation for the fixed-width 0.35 um high-po
+* primitive at nominal conditions: R ~= 961 + 993*L ohm.  Values used here
+* stay above the 0.5 um PCell minimum.  Exact closed-loop gain is calibrated,
+* but the same physical ratios are used for all tests and corners.
+.subckt rd_hr A B SUB params: R=10000
+XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}
+.ends rd_hr
+
+.subckt rd_c1p A B
+XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215
+.ends rd_c1p
+
+.subckt rd_c4p A B
+XC0 A B rd_c1p
+XC1 A B rd_c1p
+XC2 A B rd_c1p
+XC3 A B rd_c1p
+.ends rd_c4p
+
+.subckt rd_c16p A B
+XC0 A B rd_c4p
+XC1 A B rd_c4p
+XC2 A B rd_c4p
+XC3 A B rd_c4p
+.ends rd_c16p
+
+.subckt rd_inv A Y VDD VSS
+XN Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2
+XP Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4
+.ends rd_inv
+
+.subckt rd_nand A B Y VDD VSS
+XN0 Y A N VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2
+XN1 N B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2
+XP0 Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4
+XP1 Y B VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4
+.ends rd_nand
+
+.subckt rd_tgate A B EN ENB VDD VSS
+XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12
+XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24
+.ends rd_tgate
+
+* Physical resistor/diode bias generator.  The resistors provide startup, so
+* this circuit has no zero-current equilibrium and needs no ideal bias source.
+.subckt rd_bias BN BP VDD VSS
+XRBN VDD BN VSS rd_hr R=24000
+XDBN BN BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+* BP is driven by the first-stage common-mode loop below.  Keeping it as a
+* named port makes the bias/control partition explicit for later layout.
+.ends rd_bias
+
+* Fully differential two-stage OTA.
+* Stage 1: NMOS differential pair with independent PMOS current-source loads.
+* Stage 2: PMOS common-source outputs and CMFB-controlled NMOS sinks.
+* The continuous CMFB senses the physical resistor average of OUTP/OUTN and
+* raises the sink-gate voltage when output CM rises.
+.subckt rd_fdota INP INN OUTP OUTN VDD VSS VCM
+XBIAS BN BP VDD VSS rd_bias
+
+* First differential stage, approximately 100 uA total at TT nominal.
+XMIP N1 INP TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=80
+XMIN N2 INN TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=80
+XMTAIL TAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40
+XMLP N1 BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=40
+XMLN N2 BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=40
+
+* First-stage common-mode loop.  A physical resistor average of N1/N2 is
+* compared with BN (about 0.7 V at TT nominal).  NCM high raises BP, weakens
+* both PMOS loads, and pulls NCM back down.  This removes the undefined
+* current-source-versus-current-source operating point of candidate 01.
+XRN1 N1 NCM VSS rd_hr R=100000
+XRN2 N2 NCM VSS rd_hr R=100000
+XCN1 N1 NCM rd_c1p
+XCN2 N2 NCM rd_c1p
+XFCS FDS NCM FTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=10
+XFCR BP BN FTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=10
+XFT FTAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4
+XFPLD FDS FDS VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XFPLM BP FDS VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10
+XCBP BP VSS rd_c4p
+
+* Second stage.  Each branch has enough class-A current to settle the real
+* 4096-unit sampled CDAC while remaining inside the front-end power budget.
+XMSP OUTP N1 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=180
+XMSN OUTN N2 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=180
+XMOP OUTP CMCTL VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=70
+XMON OUTN CMCTL VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=70
+
+* Physical Miller capacitors and nulling resistors, one matched branch each.
+XRZP N1 CZP VSS rd_hr R=1200
+XRZN N2 CZN VSS rd_hr R=1200
+XCCP CZP OUTP rd_c16p
+XCCN CZN OUTN rd_c16p
+
+* Exact DC average sensing; 1 pF feed-forward capacitors keep the sensing node
+* from becoming an unintended slow third output pole.
+XRCMP OUTP CMS VSS rd_hr R=100000
+XRCMN OUTN CMS VSS rd_hr R=100000
+XCSMP OUTP CMS rd_c1p
+XCSMN OUTN CMS rd_c1p
+
+* Continuous CM error amplifier.  PMOS diode is on the sensed branch, giving
+* the required sign: CMS high -> CMCTL high -> output sinks strengthen.
+XCMS DS CMS CTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+XCMR CMCTL VCM CTAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=20
+XCMT CTAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8
+XCMLD DS DS VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=20
+XCMLM CMCTL DS VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=20
+XCCM CMCTL VSS rd_c4p
+.ends rd_fdota
+
+* One selectable cross-feedback resistor.  Its unselected end floats behind a
+* real transmission gate; no ideal switch or controlled source is hidden.
+.subckt rd_fbbranch OUT SUM EN ENB VDD VSS params: RFB=10000
+XR OUT N VSS rd_hr R={RFB}
+XSW N SUM EN ENB VDD VSS rd_tgate
+.ends rd_fbbranch
+
+.subckt sky130_v2_switchable_pga VINP VINN OUTP OUTN VDD VSS VCM SEL0 SEL1
+* Decode 00/01/10 as gain 1/4/16.  11 intentionally selects no branch.
+XI0 SEL0 S0B VDD VSS rd_inv
+XI1 SEL1 S1B VDD VSS rd_inv
+XN1 S0B S1B E1B VDD VSS rd_nand
+XN4 SEL0 S1B E4B VDD VSS rd_nand
+XN16 S0B SEL1 E16B VDD VSS rd_nand
+XIE1 E1B E1 VDD VSS rd_inv
+XIE4 E4B E4 VDD VSS rd_inv
+XIE16 E16B E16 VDD VSS rd_inv
+
+* Rin is on the sensor side.  Rfb values include the known 350 ohm source
+* resistance so nominal source-to-output gains are near 1/4/16 before fitting.
+XRINP VINP SUMPOS VSS rd_hr R=10000
+XRINN VINN SUMNEG VSS rd_hr R=10000
+XFP1 OUTN SUMPOS E1 E1B VDD VSS rd_fbbranch RFB=10350
+XFN1 OUTP SUMNEG E1 E1B VDD VSS rd_fbbranch RFB=10350
+XFP4 OUTN SUMPOS E4 E4B VDD VSS rd_fbbranch RFB=41400
+XFN4 OUTP SUMNEG E4 E4B VDD VSS rd_fbbranch RFB=41400
+XFP16 OUTN SUMPOS E16 E16B VDD VSS rd_fbbranch RFB=165600
+XFN16 OUTP SUMNEG E16 E16B VDD VSS rd_fbbranch RFB=165600
+XOTA SUMPOS SUMNEG OUTP OUTN VDD VSS VCM rd_fdota
+.ends sky130_v2_switchable_pga
+
+.subckt sky130_v2_switchable_sample_driver VINP VINN OUTP OUTN VDD VSS VCM SEL0 SEL1 params: RISO=1800
+XPGA VINP VINN COREP COREN VDD VSS VCM SEL0 SEL1 sky130_v2_switchable_pga
+XRIP COREP OUTP VSS rd_hr R={RISO}
+XRIN COREN OUTN VSS rd_hr R={RISO}
+XCFP OUTP VSS rd_c4p
+XCFN OUTN VSS rd_c4p
+.ends sky130_v2_switchable_sample_driver

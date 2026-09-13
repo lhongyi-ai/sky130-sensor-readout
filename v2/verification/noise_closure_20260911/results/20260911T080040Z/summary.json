@@ -1,0 +1,51 @@
+{
+  "created_utc": "20260911T080040Z",
+  "compile": {
+    "returncode": 0,
+    "timeout": false,
+    "elapsed_s": 0.05214458500267938
+  },
+  "runs": [
+    {
+      "case": "off_seed11",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 6.455737585987663
+      }
+    },
+    {
+      "case": "on_seed11",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 6.748083482001675
+      }
+    },
+    {
+      "case": "replay_seed11",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 6.014333953993628
+      }
+    },
+    {
+      "case": "on_seed29",
+      "run": {
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_s": 5.324048572976608
+      }
+    }
+  ],
+  "script_sha256": "497e2393fe1660a091b94997f6d84133eb2fc5371a64b0bfa69b6dee0747b8c9",
+  "va_source_sha256": "cf302a675c9683922ec6ae2d3e694da58744bc967a1516467938d7354a6d3dfc",
+  "run_count_limit": 4,
+  "per_run_timeout_s": 180,
+  "worker_limit": 1,
+  "adc_noise_qualified": false,
+  "full_chain_sndr_qualified": false,
+  "compiled_module_runtime_path": "/tmp/sky130_noise_closure_osdi_4gc58pk0/thermal.osdi",
+  "compiled_module_sha256": "d6438fbd04c615fa097c1a992acdcf6a5203bec605055e5a5694798a0a166dcd"
+}

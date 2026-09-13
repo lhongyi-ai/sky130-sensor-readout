@@ -1,0 +1,33 @@
+* Actual SKY130 transistor frontend; ideal R/C passives, schematic only.
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /repo/v2/analog/frontend/frontend_core.spice
+.temp 27
+VDD VDD 0 1.8
+VCM VCM 0 0.9
+
+VIP SP 0 dc 0.9 ac 0.5 PULSE(0.72 1.08 5u 10n 10n 10u 20u)
+VIN SN 0 dc 0.9 ac -0.5 PULSE(1.08 0.72 5u 10n 10n 10u 20u)
+RSP SP IP 350
+RSN SN IN 350
+XPGA IP IN OP ON VDD 0 VCM sky130_v2_pga RF=10000
+CLP OP 0 40.0p
+CLN ON 0 40.0p
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+let power=-v(vdd)*i(vdd)
+wrdata tt_1.80_27_g1_c40_op.dat v(op) v(on) v(xpga.xamp.bn) v(xpga.xamp.bp) v(xpga.xamp.xp) v(xpga.xamp.cmctl) power
+ac dec 80 1 1g
+let ad=v(op)-v(on)
+let av=db(ad)
+let ph=180/pi*cph(ad)
+wrdata tt_1.80_27_g1_c40_ac.dat av ph
+tran 5n 35u
+let od=v(op)-v(on)
+let oc=(v(op)+v(on))/2
+wrdata tt_1.80_27_g1_c40_tran.dat od oc v(sp) v(sn) v(xpga.xamp.bn)
+quit
+.endc
+.end

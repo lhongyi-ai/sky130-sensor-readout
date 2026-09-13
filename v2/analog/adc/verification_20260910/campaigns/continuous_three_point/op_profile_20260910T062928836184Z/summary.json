@@ -1,0 +1,26 @@
+{
+  "status": "OP_PROFILE_FAILED",
+  "plan_sha256": "75eb391e8d05b37fed171903ef2b84cad3b1d9e141006efba94af8dbc8a1f569",
+  "source_deck_sha256": "ae1c137fd9d48f5ddc03f3e7b032f44a83e5b1a84db5528341a044fd4c5f5038",
+  "op_deck_sha256": "163cd216cba21918d74a50e4536edc91cfb7ee45097dc9b97922f654afa72b3d",
+  "returncode": 0,
+  "build_wall_seconds": 0.5923867259989493,
+  "model_load_and_op_process_wall_seconds": 2.8337402529868996,
+  "complete_adc_qualified": false,
+  "batches": [
+    {
+      "report": "batches/000000/attempt_001/summary.json",
+      "conversion_count": 6,
+      "retained_points": 3,
+      "total_process_wall_seconds": 210.51505466700473,
+      "estimated_transient_and_output_wall_seconds": null,
+      "observed_seconds_per_conversion_including_load_op": 35.08584244450079,
+      "estimated_seconds_per_conversion_excluding_separate_op": null
+    }
+  ],
+  "limitations": [
+    "OP/model-load timing measured in separate process, not inside the transient process.",
+    "Subtracting this workload is an estimate; operating-system caching, contention and numerical startup differ.",
+    "Runtime extrapolation is not evidence of completed code coverage or performance."
+  ]
+}

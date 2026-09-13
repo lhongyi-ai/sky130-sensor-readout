@@ -1,0 +1,12 @@
+{
+  "report_sha256": "ea062089122035e5a26115292a783b8b25ebe175979c8e207668259c9a41352a",
+  "status": "ENV_BLOCKED",
+  "root_cause": "Both new OCEAN launches fail with exec: virtuoso: not found; executable search PATH is missing the matching IC launcher directory.",
+  "affected_attempts": [
+    "mim_ac/20260913T001531Z_485099a6",
+    "rc_step/20260913T001547Z_29eacc8c"
+  ],
+  "simulation_status": "NOT_RUN",
+  "previous_resistor_review": "Unchanged; see basic_20260912T093350Z_ad8b13b5/review.json",
+  "action": "Provide a standalone versioned school-environment launcher; keep package, source cells and failed attempts unchanged."
+}

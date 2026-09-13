@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:16}
+      .pass{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:16}
+      .fail{fill:#fff1f2;stroke:#e11d48;stroke-width:2;rx:16}
+      .wire{fill:none;stroke:#334155;stroke-width:3;marker-end:url(#arrow)}
+      .dash{fill:none;stroke:#64748b;stroke-width:2;stroke-dasharray:8 7;marker-end:url(#arrow)}
+      text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#0f172a}
+      .title{font-size:28px;font-weight:700}.head{font-size:19px;font-weight:650}.body{font-size:16px}.small{font-size:14px;fill:#475569}
+    </style>
+  </defs>
+  <rect width="1280" height="620" fill="#ffffff"/>
+  <text x="54" y="50" class="title">2026-09-11 全差分反相前端重构：静态通过，动态未闭合</text>
+
+  <rect x="50" y="135" width="185" height="150" class="box"/>
+  <text x="75" y="174" class="head">差分传感器</text>
+  <text x="75" y="207" class="body">VINP / VINN</text>
+  <text x="75" y="236" class="body">每端源阻抗 350 Ω</text>
+  <text x="75" y="264" class="small">DC–5 kHz</text>
+
+  <rect x="300" y="120" width="220" height="180" class="box"/>
+  <text x="330" y="158" class="head">可切换电阻求和</text>
+  <text x="330" y="191" class="body">Rin = 10 kΩ</text>
+  <text x="330" y="220" class="body">Rf = 10.35 / 41.4</text>
+  <text x="330" y="246" class="body">/ 165.6 kΩ</text>
+  <text x="330" y="276" class="small">真实高阻多晶硅 + 传输门</text>
+
+  <rect x="590" y="105" width="250" height="210" class="pass"/>
+  <text x="622" y="146" class="head">两级全差分 OTA</text>
+  <text x="622" y="181" class="body">NMOS 差分输入级</text>
+  <text x="622" y="210" class="body">PMOS 共源输出级</text>
+  <text x="622" y="239" class="body">一级节点 CM 环</text>
+  <text x="622" y="268" class="body">输出连续 CMFB</text>
+  <text x="622" y="298" class="small">TT 静态三档同源通过</text>
+
+  <rect x="915" y="135" width="285" height="150" class="fail"/>
+  <text x="946" y="174" class="head">滤波 + 真实 SAR 采样负载</text>
+  <text x="946" y="207" class="body">4 pF + 隔离电阻</text>
+  <text x="946" y="236" class="body">四 MOS 开关</text>
+  <text x="946" y="264" class="small">每侧 4096 个 MIM 单元：动态失败</text>
+
+  <path d="M235 210 H300" class="wire"/>
+  <path d="M520 210 H590" class="wire"/>
+  <path d="M840 210 H915" class="wire"/>
+  <path d="M715 315 V382 H410 V302" class="dash"/>
+  <text x="476" y="370" class="small">OUTN→SUMPOS、OUTP→SUMNEG 交叉负反馈</text>
+
+  <rect x="70" y="430" width="340" height="125" class="pass"/>
+  <text x="98" y="469" class="head">已证实</text>
+  <text x="98" y="500" class="body">81 点 × 3 档，残差 ≤ 0.1173 LSB</text>
+  <text x="98" y="529" class="body">最大 DC 前端功耗约 0.535 mW</text>
+
+  <rect x="470" y="430" width="355" height="125" class="fail"/>
+  <text x="498" y="469" class="head">未通过</text>
+  <text x="498" y="500" class="body">参考窗口仍有 4.80–14.47 mV 振铃</text>
+  <text x="498" y="529" class="body">正式差模／共模相位裕度未测</text>
+
+  <rect x="885" y="430" width="325" height="125" class="fail"/>
+  <text x="913" y="469" class="head">停止条件</text>
+  <text x="913" y="500" class="body">动态前置门失败，不运行 45-PVT</text>
+  <text x="913" y="529" class="body">1.2 kΩ 调零电阻低于最小长度</text>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "status": "INCOMPLETE",
+  "mode": "predicted",
+  "returncode": 0,
+  "wall_seconds": 7.658931833982933,
+  "expected_codes": [
+    127,
+    911,
+    1733,
+    2361,
+    3187,
+    4011
+  ],
+  "complete_adc_qualified": false,
+  "rusage": {
+    "Total elapsed time (seconds)": 7.627,
+    "Total iterations": 9091.0,
+    "Transient timepoints": 3479.0,
+    "Accepted timepoints": 3054.0,
+    "Rejected timepoints": 425.0,
+    "Total analysis time (seconds)": 5.07437,
+    "Matrix load time": 3.12667,
+    "Matrix factor time": 0.853905,
+    "Matrix solve time": 0.430994,
+    "Transient trunc time": 0.186349
+  },
+  "artifact_sha256": {
+    "provenance.json": "541265dfc642f65cd36e2096ac47f58bd3e2101025496e6e998fc5a095e8fa57",
+    "waveform.dat": "39a0fb829163295ec7a7c4606be4fca08efe437f62954593c9d8f3eefdd082b8",
+    "native.log": "b03237ae60e0cda9dd2393d9a9dff943fd6d02c459b0d647cf7a535e40831006",
+    ".spiceinit": "ceb0f22c2f12fc545406534ab6801716f61caed2cf3fed03d7f5c7fb193a4bb1",
+    "adc.spice": "23cc24c5e3a4132f5895d17a658f85ba7b299cbc20c8d089bc22cc53cc3cb978",
+    "simulation.log": "1d7a660e238caccf448fce60daab61e0c06d63c7b0c78802b3baf02c875f4db9"
+  }
+}

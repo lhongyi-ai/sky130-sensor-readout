@@ -1,0 +1,161 @@
+{
+  "status": "BEHAVIORAL_EXPERIMENTS_COMPLETE",
+  "evidence_level": "BEHAVIORAL_AND_ANALYTICAL_ONLY",
+  "cadence_status": "DEFERRED_BY_USER",
+  "m2_gate": "PARTIAL_PDK_FEASIBILITY_NOT_VERIFIED",
+  "physical_chip_qualified": false,
+  "pvt_verified": false,
+  "mismatch_verified": false,
+  "assumptions": {
+    "provenance": "ASSUMED_SYSTEM_BUDGET_NOT_PDK_FITTED",
+    "frontend": {
+      "dc_gain_db": 86.0,
+      "gain_error": 0.004,
+      "offset_input_v": 0.00015,
+      "noise_input_rms_v": 5e-06,
+      "cubic_per_v2": 0.0015,
+      "settling_tau_s": 1.8e-07
+    },
+    "adc": {
+      "comparator_offset_v": 5e-05,
+      "comparator_noise_rms_v": 5.5e-05,
+      "sampling_noise_rms_v": 3.5e-05
+    }
+  },
+  "static_calibration": [
+    {
+      "gain": 1,
+      "holdout_points": 64,
+      "raw_max_abs_mean_error_lsb": 8.637402343750182,
+      "corrected_max_abs_mean_error_lsb": 0.1665840834730261,
+      "mean_residual_target_met": true,
+      "rail_hits": 0
+    },
+    {
+      "gain": 4,
+      "holdout_points": 64,
+      "raw_max_abs_mean_error_lsb": 10.721386718750182,
+      "corrected_max_abs_mean_error_lsb": 0.15512975937190276,
+      "mean_residual_target_met": true,
+      "rail_hits": 0
+    },
+    {
+      "gain": 16,
+      "holdout_points": 64,
+      "raw_max_abs_mean_error_lsb": 18.835644531250182,
+      "corrected_max_abs_mean_error_lsb": 0.11636246136458794,
+      "mean_residual_target_met": true,
+      "rail_hits": 0
+    }
+  ],
+  "standalone_adc_spectrum": [
+    {
+      "evidence_level": "BEHAVIORAL_NOT_TRANSISTOR",
+      "scenario": "standalone_assumed_adc",
+      "actual_hz": 45001.220703125,
+      "sndr_db": 69.32751641264656,
+      "enob": 11.223839935655574,
+      "sfdr_db": 97.91662615559338,
+      "snr_db": 69.32913489936892,
+      "thd_db": -103.61507733470638,
+      "metric_unavailable_reasons": {},
+      "sample_count": 16384,
+      "sample_rate_hz": 100000.0,
+      "fundamental_bin": 7373,
+      "fundamental_hz": 45001.220703125,
+      "harmonic_orders_max": 5,
+      "harmonic_alias_bins": {
+        "2": 1638,
+        "3": 5735,
+        "4": 3276,
+        "5": 4097
+      },
+      "counted_harmonic_bins": [
+        1638,
+        3276,
+        4097,
+        5735
+      ],
+      "unresolvable_harmonic_orders": [],
+      "window": "rectangular_coherent",
+      "dc_removed": true,
+      "enob_definition": "(SNDR_dB - 1.76) / 6.02; no amplitude correction"
+    }
+  ],
+  "synthetic_offset_drift": [
+    {
+      "gain": 1,
+      "assumed_input_offset_drift_v": 0.0001,
+      "fixed_calibration_max_abs_mean_residual_lsb": 0.6622640372690967,
+      "corner_residual_target_met": true,
+      "evidence_level": "SYNTHETIC_DRIFT_NOT_PVT"
+    },
+    {
+      "gain": 4,
+      "assumed_input_offset_drift_v": 0.0001,
+      "fixed_calibration_max_abs_mean_residual_lsb": 2.1627287977069045,
+      "corner_residual_target_met": true,
+      "evidence_level": "SYNTHETIC_DRIFT_NOT_PVT"
+    },
+    {
+      "gain": 16,
+      "assumed_input_offset_drift_v": 0.0001,
+      "fixed_calibration_max_abs_mean_residual_lsb": 8.308062789637006,
+      "corner_residual_target_met": false,
+      "evidence_level": "SYNTHETIC_DRIFT_NOT_PVT"
+    }
+  ],
+  "settling": [
+    {
+      "scenario": "allocated",
+      "tau_s": 1.8e-07,
+      "acquisition_time_s": 2.5e-06,
+      "residual_v": 7.433993598482402e-07,
+      "residual_lsb": 0.00380620472242299,
+      "target_met": true,
+      "evidence_level": "ONE_POLE_MODEL_NOT_LOOP_STABILITY"
+    },
+    {
+      "scenario": "slow_negative_control",
+      "tau_s": 2e-06,
+      "acquisition_time_s": 2.5e-06,
+      "residual_v": 0.2292038374881521,
+      "residual_lsb": 1173.5236479393386,
+      "target_met": false,
+      "evidence_level": "ONE_POLE_MODEL_NOT_LOOP_STABILITY"
+    }
+  ],
+  "regression_assertions": {
+    "assumed_nominal_sndr_targets_met": true,
+    "assumed_nominal_calibration_targets_met": true,
+    "allocated_settling_target_met": true,
+    "rss_budget_allocations_fit": true,
+    "ideal_linearity_passes": true,
+    "cdac_negative_control_fails": true,
+    "all_high_noise_controls_fail_sndr": true,
+    "slow_settling_control_fails": true,
+    "fixed_calibration_exposes_high_gain_drift": true,
+    "pvt_matrix_not_fabricated": true,
+    "no_calibration_or_holdout_clipping": true
+  },
+  "spectrum_metadata": {
+    "window": "rectangular_coherent",
+    "noise_in_sndr": true,
+    "harmonics_in_sndr": "all",
+    "thd_harmonics": "2 through 5 with aliases",
+    "enob": "(SNDR-1.76)/6.02, no -1dBFS amplitude correction",
+    "noise_source": "assumed sampled RMS, NOT a physical noise integration"
+  },
+  "unverified": [
+    "PDK capacitor realization/matching",
+    "source loading and resistor noise",
+    "noise folding",
+    "reference impedance/droop",
+    "common-mode feedback/stability",
+    "kickback/metastability",
+    "actual PVT/mismatch",
+    "physical digital timing",
+    "power/area",
+    "layout/DRC/LVS/PEX"
+  ]
+}

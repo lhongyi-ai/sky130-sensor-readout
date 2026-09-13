@@ -1,0 +1,19 @@
+{
+  "test": "linearity",
+  "gain": 16,
+  "corner": "ff",
+  "vdd": 1.62,
+  "temp": 27.0,
+  "ramp_us": 1,
+  "out": "repair_20260910/qualification_g16_pvt/20260910T065530849637Z",
+  "analyze_only": false,
+  "switchable": true,
+  "isolation_r": 2600.0,
+  "calibration_from": "repair_20260910/qualification_g16_pvt/20260910T065233498654Z/linearity_ff_1.8_27_g16_r1_sw_iso2600.0/summary.json",
+  "core": "repair_20260910/qualification_g16_pvt/20260910T065530849637Z/frontend_snapshot.spice",
+  "acquisition_us": 2.476847754,
+  "transient_method": "trap",
+  "max_step_ns": 5,
+  "sampling_switch_file": null,
+  "sampling_switch_subckt": "adc_tgate"
+}

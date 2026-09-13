@@ -1,0 +1,97 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1788837014
+<< nwell >>
+rect -231 -719 231 719
+<< pmoslvt >>
+rect -35 -500 35 500
+<< pdiff >>
+rect -93 488 -35 500
+rect -93 -488 -81 488
+rect -47 -488 -35 488
+rect -93 -500 -35 -488
+rect 35 488 93 500
+rect 35 -488 47 488
+rect 81 -488 93 488
+rect 35 -500 93 -488
+<< pdiffc >>
+rect -81 -488 -47 488
+rect 47 -488 81 488
+<< nsubdiff >>
+rect -195 649 -99 683
+rect 99 649 195 683
+rect -195 587 -161 649
+rect 161 587 195 649
+rect -195 -649 -161 -587
+rect 161 -649 195 -587
+rect -195 -683 -99 -649
+rect 99 -683 195 -649
+<< nsubdiffcont >>
+rect -99 649 99 683
+rect -195 -587 -161 587
+rect 161 -587 195 587
+rect -99 -683 99 -649
+<< poly >>
+rect -35 581 35 597
+rect -35 547 -19 581
+rect 19 547 35 581
+rect -35 500 35 547
+rect -35 -547 35 -500
+rect -35 -581 -19 -547
+rect 19 -581 35 -547
+rect -35 -597 35 -581
+<< polycont >>
+rect -19 547 19 581
+rect -19 -581 19 -547
+<< locali >>
+rect -195 649 -99 683
+rect 99 649 195 683
+rect -195 587 -161 649
+rect 161 587 195 649
+rect -35 547 -19 581
+rect 19 547 35 581
+rect -81 488 -47 504
+rect -81 -504 -47 -488
+rect 47 488 81 504
+rect 47 -504 81 -488
+rect -35 -581 -19 -547
+rect 19 -581 35 -547
+rect -195 -649 -161 -587
+rect 161 -649 195 -587
+rect -195 -683 -99 -649
+rect 99 -683 195 -649
+<< viali >>
+rect -19 547 19 581
+rect -81 -488 -47 488
+rect 47 -488 81 488
+rect -19 -581 19 -547
+<< metal1 >>
+rect -31 581 31 587
+rect -31 547 -19 581
+rect 19 547 31 581
+rect -31 541 31 547
+rect -87 488 -41 500
+rect -87 -488 -81 488
+rect -47 -488 -41 488
+rect -87 -500 -41 -488
+rect 41 488 87 500
+rect 41 -488 47 488
+rect 81 -488 87 488
+rect 41 -500 87 -488
+rect -31 -547 31 -541
+rect -31 -581 -19 -547
+rect 19 -581 31 -547
+rect -31 -587 31 -581
+<< labels >>
+rlabel nsubdiffcont 0 -666 0 -666 0 B
+port 1 nsew
+rlabel pdiffc -64 0 -64 0 0 D
+port 2 nsew
+rlabel pdiffc 64 0 64 0 0 S
+port 3 nsew
+rlabel polycont 0 564 0 564 0 G
+port 4 nsew
+<< properties >>
+string FIXED_BBOX -178 -666 178 666
+<< end >>

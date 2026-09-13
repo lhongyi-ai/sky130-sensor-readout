@@ -1,0 +1,41 @@
+{
+  "status": "DIAGNOSTIC_COMPLETED",
+  "arguments": {
+    "kind": "cascoded_tail",
+    "gain": 16,
+    "corner": "tt",
+    "vdd": 1.8,
+    "temp": 27,
+    "method": "gear",
+    "step_ns": 2
+  },
+  "source_sha256": "a5cabbc4bad03ace6be3b65fc6181404b040b4c7748101619fe9ad9d0e99e9b3",
+  "base_sha256": "c231e378a499ddee7b950dcdc40714fa16a21b81b29de6fb8798ead36bc125e6",
+  "script_sha256": "dd7089bdb88a2df22d01f61bdb6984276e7b527c0b5dfa3bcf0960c9cb6a077c",
+  "scope": "Static-capacitive-load common-mode/differential step diagnostic only",
+  "full_frontend_qualified": false,
+  "elapsed_s": 8.725037684998824,
+  "returncode": 0,
+  "common_mode_max_error_v": 0.6799146467272,
+  "late_common_mode_peak_to_peak_v": 0.9374361812293499,
+  "late_differential_peak_to_peak_v": 5.977402999235437e-07,
+  "mean_vdd_and_vcm_power_w": 0.001812830046273015,
+  "windows": {
+    "positive": {
+      "output_mean_v": 0.14912029249969283,
+      "output_peak_to_peak_v": 0.08879554001739987,
+      "common_mode_peak_to_peak_v": 0.89039767663415
+    },
+    "negative": {
+      "output_mean_v": -0.15506771330900637,
+      "output_peak_to_peak_v": 0.08879386562589997,
+      "common_mode_peak_to_peak_v": 0.89039321245685
+    },
+    "zero": {
+      "output_mean_v": -1.1037731080801641e-07,
+      "output_peak_to_peak_v": 5.977402999235437e-07,
+      "common_mode_peak_to_peak_v": 0.9374361812293499
+    }
+  },
+  "diagnostic_stability_gate": false
+}
