@@ -1,0 +1,49 @@
+`timescale 1ns/1ps
+`include "disciplines.vams"
+
+// Explicit boundary adapters for simulator/interface qualification only.
+// These are not synthesized physical drivers and add no comparator decisions.
+module p1_e2l(e, vdd, vss, d, valid);
+  input e, vdd, vss;
+  electrical e, vdd, vss;
+  output d, valid;
+  reg d, valid;
+  parameter real VDD_MIN = 0.5;
+  parameter real LO = 0.3;
+  parameter real HI = 0.7;
+  parameter real TTOL = 1p;
+  parameter real VTOL = 1u;
+  // Mixed-signal events belong to the event kernel: digital regs must never
+  // be assigned from an analog block (Xcelium ILLAREG in preserved attempt_002).
+  always @(above(V(e,vss)-HI*V(vdd,vss),TTOL,VTOL)) begin
+    if(V(vdd,vss)>=VDD_MIN) begin d=1'b1; valid=1'b1; end
+    else begin d=1'bx; valid=1'b0; end
+  end
+  always @(above(LO*V(vdd,vss)-V(e,vss),TTOL,VTOL)) begin
+    if(V(vdd,vss)>=VDD_MIN) begin d=1'b0; valid=1'b1; end
+    else begin d=1'bx; valid=1'b0; end
+  end
+  always @(cross(V(e,vss)-LO*V(vdd,vss),+1,TTOL,VTOL)
+        or cross(V(e,vss)-HI*V(vdd,vss),-1,TTOL,VTOL)
+        or above(VDD_MIN-V(vdd,vss),TTOL,VTOL)) begin
+    d=1'bx; valid=1'b0;
+  end
+  always @(cross(V(vdd,vss)-VDD_MIN,+1,TTOL,VTOL)) begin
+    if(V(e,vss)<=LO*V(vdd,vss)) begin d=1'b0; valid=1'b1; end
+    else if(V(e,vss)>=HI*V(vdd,vss)) begin d=1'b1; valid=1'b1; end
+    else begin d=1'bx; valid=1'b0; end
+  end
+
+endmodule
+
+module p1_l2e(d, e, vdd, vss);
+  input d;
+  input vdd, vss;
+  output e;
+  electrical e, vdd, vss;
+  parameter real TR = 1n;
+  parameter real TF = 1n;
+  // X/Z is a mid-rail voltage, which the readback E2L declares invalid.
+  analog V(e,vss) <+ V(vdd,vss)*transition(
+      (d === 1'b1) ? 1.0 : ((d === 1'b0) ? 0.0 : 0.5),0,TR,TF);
+endmodule

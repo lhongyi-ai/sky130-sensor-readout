@@ -1,0 +1,63 @@
+{
+  "scope": "Offline fixed-input topology and interpretation review; no remote execution",
+  "status": "TOPOLOGY_CONTRACTION_PASS_STB_RUN_FAILED",
+  "original_objects": 133,
+  "probe_objects": 3,
+  "gate_nodes_changed": {
+    "XPGA_XOTA_XMIP": [
+      "XPGA_SUMPOS",
+      "DM_INP"
+    ],
+    "XPGA_XOTA_XMIN": [
+      "XPGA_SUMNEG",
+      "DM_INN"
+    ],
+    "XPGA_XOTA_XMLP": [
+      "XPGA_XOTA_NCM",
+      "CM1_GATE"
+    ],
+    "XPGA_XOTA_XMLN": [
+      "XPGA_XOTA_NCM",
+      "CM1_GATE"
+    ],
+    "XPGA_XOTA_XMOP": [
+      "XPGA_XOTA_CMG",
+      "CM2_GATE"
+    ],
+    "XPGA_XOTA_XMON": [
+      "XPGA_XOTA_CMG",
+      "CM2_GATE"
+    ]
+  },
+  "unchanged_core_device_parameters": true,
+  "contracted_native_audit": {
+    "status": "NATIVE_NETLIST_AUDIT_PASS",
+    "errors": [],
+    "expected_count": 133,
+    "actual_count": 133
+  },
+  "probe_behavior_equivalence": "NOT_VERIFIED: missing diffstbprobe definition in this fixed attempt",
+  "stb_numeric_results": "NOT_RUN",
+  "pz_inspected": {
+    "scope": "NOMINAL_GAIN4_FROZEN_ACQUISITION_LINEARIZED_DIAGNOSTIC",
+    "pole_count": 104,
+    "rhp_count": 0,
+    "max_real_Hz": -218.544,
+    "limitation": "Spectre warned BSIM4 frequency-dependent elements approximated at 1Hz; no loop-margin or switched-load qualification yet."
+  },
+  "pz_other_frequency_and_gmin_runs": "Parent reported 1MHz and gmin=10f checks; not in the fixed files audited here",
+  "formal_multiloop_stability": "UNQUALIFIED",
+  "missing_independent_probe_readout": "input common mode at the paired input cut",
+  "source_hashes": {
+    "v2/cadence/linuxlab_20260923/build_stb_cell.py": "4416466d979ae03a2b22f5e75875d09a0c581e9888c66a14933f7286b46cf863",
+    "v2/cadence/linuxlab_20260923/native_canary_school_r1_design.json": "279aaddc09cae441e57840d10f1a110bd4e6abb094d5b7f666dd3ebcfa2c65ac",
+    "v2/cadence/linuxlab_20260923/native_stb_school_r1_design.json": "d37b801fa1278872e31d923c33ead62e4b6679c5106e71459b001903f93fa8f7",
+    "v2/cadence/linuxlab_20260923/runs/p2fe_c06_stb_school_r1_20260923T101912237473Z/netlist": "598ec67ff7e66b9e8f54ab26b1bf2626690df3093286b4ada25597f080a163f8",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102213876307Z/input.scs": "f799d1f5663001d1264c5f3f50cc405c18a3a442ede189c2be4c8173e7d1d094",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102213876307Z/spectre.out": "74543985bc417cf118775f7e2ace4700b58539dd85a85664d80958a05cbe2ac9",
+    "v2/cadence/linuxlab_20260923/runs/spectre_poles_20260923T101120120043Z/input.scs": "af18e0ba56e14725f9379d9fd0ca5a6d1dff6eaf5f2e50353749700a4feaeb0f",
+    "v2/cadence/linuxlab_20260923/runs/spectre_poles_20260923T101120120043Z/spectre.out": "febd459663aa4f91f35d2a702e9347d787ada7b062332da66f84c5c62f5644fb",
+    "v2/cadence/linuxlab_20260923/runs/spectre_poles_20260923T101120120043Z/input.raw/allPoles.pz": "b07f7cc54b77a1056715d323a40630f657e1bd3d7aa8c81a1c3bd934df5139ff",
+    "v2/analog/frontend/cadence_20260923/native_canary_school_r1_objects.json": "5bf908f262423d76f9efa415d28562b669649989f198d4a7eb6575f190e7902c"
+  }
+}

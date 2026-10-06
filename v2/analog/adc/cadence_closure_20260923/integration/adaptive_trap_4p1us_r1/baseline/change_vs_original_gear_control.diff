@@ -1,0 +1,11 @@
+--- original_gear_control
++++ adaptive_trap_control
+@@ -72,7 +72,7 @@
+ save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:sbnode sigtype=node
+ save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:vds p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:reversed sigtype=dev
+ save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:currents sigtype=dev
+-adc_closure_tran tran stop=4.1u maxstep=2n errpreset=conservative relref=sigglobal
++adc_closure_tran tran stop=4.1u maxstep=2n errpreset=conservative method=trap relref=sigglobal
+ amsd {
+  portmap subckt=sensor_adc_reset1
+  config cell=sensor_adc_reset1 use=spice

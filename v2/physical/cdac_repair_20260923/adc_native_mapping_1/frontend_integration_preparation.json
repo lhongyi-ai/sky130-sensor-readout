@@ -1,0 +1,128 @@
+{
+  "status": "PREPARED_NOT_CREATED",
+  "source_manifest": "v2/cadence/linuxlab_20260923/native_school_r3_objects.json",
+  "source_sha256": "b59708c23922ad6bc6b541df226576a6f8fb6e41416a339cc862ea281f9ef405",
+  "native_target": "p2adc_frontend_school_r3",
+  "source_objects": 133,
+  "retained_objects": 111,
+  "counts": {
+    "mos": 47,
+    "resistor": 36,
+    "mim": 28
+  },
+  "removed": [
+    {
+      "name": "XTGP_XN",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGP_XP",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGP_XND",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGP_XPD",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGN_XN",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGN_XP",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGN_XND",
+      "kind": "mos"
+    },
+    {
+      "name": "XTGN_XPD",
+      "kind": "mos"
+    },
+    {
+      "name": "XCP_XC",
+      "kind": "mim"
+    },
+    {
+      "name": "XCN_XC",
+      "kind": "mim"
+    },
+    {
+      "name": "RSP",
+      "kind": "testbench_resistor"
+    },
+    {
+      "name": "RSN",
+      "kind": "testbench_resistor"
+    },
+    {
+      "name": "RLEAKP",
+      "kind": "testbench_resistor"
+    },
+    {
+      "name": "RLEAKN",
+      "kind": "testbench_resistor"
+    },
+    {
+      "name": "VDD_SRC",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VCM",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VACQ",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VACQB",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VSEL0",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VSEL1",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VINP",
+      "kind": "testbench_source"
+    },
+    {
+      "name": "VINN",
+      "kind": "testbench_source"
+    }
+  ],
+  "ports": [
+    "IP",
+    "IN",
+    "FP",
+    "FN",
+    "SEL0",
+    "SEL1",
+    "VCM",
+    "VDD",
+    "VSS"
+  ],
+  "changes": [
+    "Remove only eight testbench sources, four testbench resistors, eight proxy sample-TG/dummy MOS, two proxy CDAC banks",
+    "Rename all ground net 0 to explicit VSS port",
+    "Retain isolation resistors and all filter MIM, preserve all existing school_r3 parameters and mapped width metadata"
+  ],
+  "external_connections": {
+    "FP": "ADC.INP",
+    "FN": "ADC.INN",
+    "IP": "sensor positive input via350ohm",
+    "IN": "sensor negative input via350ohm",
+    "SEL0": "gain_latched[0] through qualified boundary drive",
+    "SEL1": "gain_latched[1] through qualified boundary drive"
+  },
+  "joint_simulation_status": "NOT_RUN"
+}

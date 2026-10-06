@@ -1,0 +1,36 @@
+{
+  "status": "LOCAL_OPEN3UM_FULL_STATIC_LAYOUT_CANDIDATE_COMPLETED",
+  "files": {
+    "README.md": "5b1bacd41593137e5d09e752cc10e154b012a2afaf35fbf6b297175ddc257cba",
+    "analyze_static.py": "36caff94b7d490d895466ac9e410f9d3ef092077fcb5128f5611ebc54e93c3c8",
+    "bit_error_decomposition.csv": "acb6af38150745bc3a9b0c9b6fcca1e43ad8e72ec56a4e3e621c4ad1a8383207",
+    "collapsed_capacitance_edges.csv": "a06e0c696f37be7c9b66ad90084bd811e97d11d3ee28b28e0b97d5a38b50d6a6",
+    "excess_sensitivity.csv": "3921a64178eeefd5a6d7033f8a9be32361ee9434387bd0d3d073c72e0473663c",
+    "generate_controls.py": "4859f88b948449d889fd51dbc126f4f60ca8c63ee0cd770f2a06a9530c365144",
+    "generate_full_candidate.py": "f6afc9c8f22fed2b6813416462c1a185ec244cf84340f39165b64c0c18fd49a9",
+    "prepare_full_top.py": "27087c025747c5e7973bd1558fd4b454cc0b0e6c2e64a62b3c5c2952607cf4a4",
+    "qualify_controls.py": "84c3803f13096a2390b6f1944d3ecde307be448561d72553133872478158b0f7",
+    "qualify_full_candidate.py": "de02801188957af9b4198a46790613ca10bf5f9e74e65091320094449fc604f8",
+    "readback_controls.py": "9c7fa69c35d1492aa65f1e34fec9e5b0c5e0f5af42514401b92d43f514712103",
+    "readback_full_candidate.py": "6c536b188e8a0d0bd76fafa51ee52331bd0677df3469b15b5d3c1de119706e4b",
+    "run_controls.py": "4e8c5c9070857fb1b4cc20a33be3945c90ecce84a4cfa91b6f9245eca84e6c3d",
+    "run_full_candidate.py": "5ba4a6521fbbfaed1021d1d42e253b9c2b0fc766a2f34fad1fd3dd2bb9832e90",
+    "static_decomposition.json": "2e08b78322606fb592e9767119a9a98f89d0a580dbb48f7ae079a9ed6f2035ea"
+  },
+  "full_candidate_report_sha256": "6b1073d7a1295d72ecbcf72ebcb29061d6098a96c518e0673ee9fb5f93d5d287",
+  "actual_control_run": "controls/run_20260924T020754Z_51b9338d",
+  "actual_full_candidate": "full_candidate/run_20260924T022452Z_44370b78",
+  "full_candidate_static": {
+    "max_abs_inl_lsb": 0.327236855151259,
+    "min_dnl_lsb": -0.17783163777955974,
+    "max_dnl_lsb": 0.17153303455950203,
+    "nonpositive_transition_count": 0,
+    "pass_static_limits": true
+  },
+  "open_3um_static_reroute_pass": true,
+  "formal_ADC_PEX_allowed": false,
+  "full_CDAC_repair_pass": false,
+  "school4x4_layout": false,
+  "all_top_level_python_syntax_valid": true,
+  "full_candidate_artifact_hashes_match": true
+}

@@ -1,0 +1,49 @@
+{
+  "status": "OBSERVABILITY_ONLY_OK_NOT_QUALIFIED",
+  "issues": [],
+  "requested_trace_names": {
+    "int_b": [
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.int_b"
+    ],
+    "dbnode": [
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.dbnode"
+    ],
+    "sbnode": [
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.sbnode"
+    ],
+    "vds": [
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.vds"
+    ],
+    "reversed": [
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.reversed"
+    ]
+  },
+  "actual_terminal_current_traces": {
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.d_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.g_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.s_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.b_$flow": "I"
+  },
+  "all_primitive_prefixed_traces": {
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.vds": "V",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.reversed": "-enum",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.d_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.g_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.s_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.b_$flow": "I",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.int_b": "V",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.dbnode": "V",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.sbnode": "V"
+  },
+  "waveform_stop_s": 4.1e-06,
+  "warnings": {
+    "AHDLLINT-8007": 1,
+    "SPECTRE-16780": 1
+  },
+  "full_ADC_accuracy_pass": false,
+  "limitations": [
+    "This is a short observation probe; protocol qualification exit2 is expected.",
+    "No absence of warnings, complete node inventory or terminal-current conservation grants an ADC numerical PASS.",
+    "If a documented field was not saved, preserve this attempt and resolve its actual supported name; never synthesize a replacement trace."
+  ]
+}

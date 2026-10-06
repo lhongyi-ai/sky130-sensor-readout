@@ -1,0 +1,75 @@
+{
+  "status": "OPEN_3UM_CDAC_STATIC_CANDIDATE_PASS",
+  "actual_DRC_LVS": [
+    {
+      "object": "P",
+      "DRC_full_count": 0,
+      "LVS_unique_match": true
+    },
+    {
+      "object": "N",
+      "DRC_full_count": 0,
+      "LVS_unique_match": true
+    },
+    {
+      "object": "TOP",
+      "DRC_full_count": 0,
+      "LVS_unique_match": true
+    }
+  ],
+  "spatial_assignment_checks": [
+    {
+      "side": "P",
+      "checked_unit_locations": 4356,
+      "actual_extracted_terminal_pairs_match_original_csv_at_each_position": true
+    },
+    {
+      "side": "N",
+      "checked_unit_locations": 4356,
+      "actual_extracted_terminal_pairs_match_original_csv_at_each_position": true
+    }
+  ],
+  "raw_elements": {
+    "X": 8712,
+    "X_self_loop": 520,
+    "C": 212
+  },
+  "ports": 30,
+  "electrical_components_including_substrate": 31,
+  "source_sha256": {
+    "v2/physical/cdac/cdac_p_assignment.csv": "5c604dd024ba0c9fb5970ed5424c02e7a75f0b4b5695f208856f28f176272d88",
+    "v2/physical/cdac/cdac_n_assignment.csv": "498bf0359188651409dfbba9b273e8c02c522107d5768723f479f50fc965df34"
+  },
+  "unit_anchor_source_sha256": "4163855188695dc25370f057aac1edd4d2950f00f7d952bee2a82edaa555c326",
+  "raw_cap_netlist_sha256": "98d73c8b483f3ebf19eb204432b8be65f074348611794090a8b81c2d46d9c021",
+  "old_static": {
+    "max_abs_inl_lsb": 3.5620710270991087,
+    "min_dnl_lsb": -3.854471719252156,
+    "max_dnl_lsb": 0.3243001319824828,
+    "nonpositive_transition_count": 255,
+    "pass_static_limits": false
+  },
+  "new_static": {
+    "max_abs_inl_lsb": 0.327236855151259,
+    "min_dnl_lsb": -0.17783163777955974,
+    "max_dnl_lsb": 0.17153303455950203,
+    "nonpositive_transition_count": 0,
+    "pass_static_limits": true
+  },
+  "full_GDS_area_um2": 431540.19999999995,
+  "area_growth_fraction_vs_old": 0.14352544007716417,
+  "functional_unit_ff": "19.845",
+  "functional_unit_basis": "Frozen prior open3x3 TT characterization; constant-C approximation, not new silicon or Cadence result",
+  "analysis_scope": "Complete actual top-level capacitance extraction plus binary functional MIM weights; ideal settled reference/bit voltages, endpoint INL/DNL, 4096 codes. No extracted parasitics deleted or scaled.",
+  "formal_ADC_PEX_allowed": false,
+  "school4x4_layout": false,
+  "full_RC_transient_and_noise_validation": false,
+  "full_ADC_linearity_validation": false,
+  "geometry_moments": "All unit counts and first-moment offsets maintained; y second moments change with center channel and are explicitly reported.",
+  "tool_limitations": [
+    "Magic public coefficient accuracy not independently silicon-qualified",
+    "Netgen MIM placeholders compare topology/properties; GDS and extracted spatial terminals separately checked",
+    "This run is capacitance-only, not RC dynamic signoff",
+    "No mismatch/statistical/noise/sample-switch/reference-droop evidence from this experiment"
+  ]
+}

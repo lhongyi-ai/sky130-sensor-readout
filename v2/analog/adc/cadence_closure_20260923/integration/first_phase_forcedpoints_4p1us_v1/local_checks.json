@@ -1,0 +1,18 @@
+{
+  "status": "LOCAL_DIAGNOSTIC_CHECKS_PASS_NOT_CADENCE_RESULTS",
+  "checks": [
+    "exact point list accepted",
+    "one missing point rejected",
+    "1 fs phase shift rejected",
+    "old natural grid cannot pass forced-point presence",
+    "both prepared manifest file hashes verified",
+    "numpy booleans/integers/floats preserve their native scalar values in JSON; arrays rejected"
+  ],
+  "old_actual_unforced_probe_matching_points": 0,
+  "prepared_manifest_sha256": {
+    "baseline": "1953e5aec7305102f39634ec3a8df697c15f39df7fc40902ce297c4e1318c432",
+    "strict": "c07222bfe7b2cb8a42b6e3af1036a6a6a81dcf659669538d5743f1c90b6a5b12"
+  },
+  "complete_ADC_qualified": false,
+  "long_campaign_allowed": false
+}

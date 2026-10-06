@@ -1,0 +1,19 @@
+{
+  "purpose": "Actual matrix and traponly analysis revision; preserves frozen original EDA inputs and old analysis addendum",
+  "files": {
+    "review.py": "0647385991c316a2ac61c7d4193b71ce2ff424dff38a849e36870f086f3c44ad",
+    "psf_stream.py": "5f32f36c44c806db556bd0efd5e8de9239884440ae21c65a71b4554dc6375938",
+    "summarize_matrix.py": "05627dae947b0eaa2c8705d7bc3eaa5b85b43571f436adf072b6da339f590166",
+    "summarize_traponly.py": "4eced0563021a536cca6ca39b3946f5bed3af401f527571d743ac92e5d0cedf6",
+    "interpretation_contract.json": "41eba39c6d4f45d7871bb2711218cf573d50edd8aaef18866952826a5d6f79aa"
+  },
+  "closed_analysis_files": {
+    "analyze.py": "61e060b2b2e08b9cd568c0ed9cd4db848996581adb206cac81231512b54aadd2",
+    "psf_stream.py": "5f32f36c44c806db556bd0efd5e8de9239884440ae21c65a71b4554dc6375938",
+    "test_analysis.py": "ab355c87bf4f4adf7a46d06c655d60cb0dddb3c7b4556e61fbae20daea069e8a"
+  },
+  "local_tests": "Four closed analyzer tests passed: narrow edge, incomplete domain, enum step, physical/method change protection.",
+  "figures": "Matrix and traponlyPNG visually reviewed without clipped/overlapping labels.",
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false
+}

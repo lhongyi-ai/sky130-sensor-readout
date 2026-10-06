@@ -1,0 +1,38 @@
+{
+  "status": "CDF_READBACK_FAIL",
+  "scope": "Requested dimensions/parameters versus actual CDF. Native export required.",
+  "cells": [
+    {
+      "cell": "p2adc_core_school_r1",
+      "schCheck": [
+        0,
+        0
+      ],
+      "instances": 679
+    },
+    {
+      "cell": "p2adc_phase_school_r1",
+      "schCheck": [
+        0,
+        0
+      ],
+      "instances": 48
+    }
+  ],
+  "differences": [
+    {
+      "cell": "p2adc_core_school_r1",
+      "instance": "XADC_XPRE_XSTPU",
+      "property": "w",
+      "requested": "0.42u",
+      "actual": "550n"
+    },
+    {
+      "cell": "p2adc_core_school_r1",
+      "instance": "XADC_XPRE_XSTPU",
+      "property": "fw",
+      "requested": "0.42u",
+      "actual": "550n"
+    }
+  ]
+}

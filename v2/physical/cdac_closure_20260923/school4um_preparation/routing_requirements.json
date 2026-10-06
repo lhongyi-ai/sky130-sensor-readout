@@ -1,0 +1,32 @@
+{
+  "status": "PARAMETERIZED_UNPLACED_ONLY",
+  "actual_native_body_width_height_um": [
+    4.8,
+    4.8
+  ],
+  "pitch_x_um": null,
+  "pitch_y_um": null,
+  "center_channel_height_um": null,
+  "side_separation_um": null,
+  "full_area_um2": null,
+  "coordinate_rule": "center=(col*pitch_x, row*pitch_y + gap_coefficient*center_channel_height); native CAPM lower-left=center-(2,2)",
+  "placement_records": 8712,
+  "active_records": 8192,
+  "edge_records": 520,
+  "edge_bias_connection": null,
+  "route_policy": {
+    "common": "M4 top-plate mesh; must avoid local M3-to-M5 lift landings",
+    "switched": "M3 bottom-plate row escapes; explicit isolated via3 outside CAPM and via4 to external M5 trunks",
+    "low_bits": "Retain short internal aggregation to center corridor then external M5; regenerate geometry from net groups and verified rules",
+    "original_3um_geometry_reused": false
+  },
+  "needed_before_numeric_generation": [
+    "Verified ordinary M3/M4/M5 and via3/via4 geometry/rules for selected school mapping, including actual via macros and cut/landing bbox",
+    "Native routed 4um tile with separate common-M4 and switched-M3 exits; two adjacent different-bit units and a row end must pass DRC/LVS",
+    "Model identity/port and multiplicity bridge from cap_mim_m3_1 to project p1_mim_public_r1: explicit instances or verified array multiplicity; current wrapper has no outer m",
+    "Define device vs outside interconnect reference planes and CAPM coupling/ESR double-count policy from qualified evidence",
+    "Actual substrate/edge bias top-level connectivity and target port mapping"
+  ],
+  "stop_on_unknown": true,
+  "formal_ADC_PEX_allowed": false
+}

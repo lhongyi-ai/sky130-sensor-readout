@@ -1,0 +1,102 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "purpose": "Bounded diagnostic inputs; no previous numerical or functional failure is waived",
+  "inputs": {
+    "strict_traponly.scs.in": {
+      "sha256": "f87fc3de34c0f6c450c85f70667eadc81911056378ac824bb60847be255990e6",
+      "compares_to": "strict",
+      "change": "integration method only"
+    },
+    "baseline_common_times.scs.in": {
+      "sha256": "0598f555ea4fbdd7fd4658bdbdedd5205bd7fead6531df5694d1b08e57216031",
+      "compares_to": "baseline",
+      "change": "401 common solved times, 10ps intervals in 6.649\u20136.653us input reversal window, retain all accepted points"
+    },
+    "strict_common_times.scs.in": {
+      "sha256": "64ca9564d7340b4cddacde78bd1bca012b425196c8ea1fdc2c2fde683064c3f6",
+      "compares_to": "strict",
+      "change": "same common solved times as baseline, retain all accepted points"
+    },
+    "strict_diagnose.scs.in": {
+      "sha256": "d24b7698629bfa42c781252bd7f4e96ced8e332c757b56b3b5a912a22c53fc42",
+      "compares_to": "strict",
+      "change": "only printing limits; invoke with +diagnose as instrumented baseline",
+      "invoke": "spectre -64 input.scs +diagnose +log spectre.out -format psfascii"
+    },
+    "strict_no_lte_relax.scs.in": {
+      "sha256": "bc38a1fa9a3930d639fbafa67282cd17b682781e7284c59dc42ab016302244d3",
+      "compares_to": "strict_diagnose.scs.in",
+      "change": "Only ltethstep=0; bounded failure test of reliance on automatic LTE relaxation, not a waveform fix.",
+      "status": "PREPARED_NOT_RUN",
+      "timeout_seconds": 120
+    },
+    "strict_no_lte_relax_robust.scs.in": {
+      "sha256": "562de3712599023d7b08bb8c4e4caaa161575a62e3074f7801dcba6f6654626d",
+      "compares_to": "strict_no_lte_relax.scs.in",
+      "change": "Only discontinuity=robust relative to no-relax input; exact internal algorithm not specified in installed help.",
+      "status": "PREPARED_NOT_RUN",
+      "timeout_seconds": 120
+    },
+    "strict_sigglobal.scs.in": {
+      "sha256": "afb6d08b88110fe6d80ac9832c60008e582e95e4f2f130616d8dfad5f239aade",
+      "compares_to": "strict_diagnose.scs.in",
+      "change": "Single-factor relref=sigglobal; no robust/ltethstep changes.",
+      "status": "EXECUTED_BY_ROOT_FUNCTIONAL_PASS_ONE_LTE_WARNING_NOT_QUALIFIED",
+      "timeout_seconds": 120,
+      "actual_run": "../runs/task_20260924T021925324213Z"
+    },
+    "tighter_sigglobal.scs.in": {
+      "sha256": "e0a09f42ea4770a80dbbb35aa344ba28e9120e32b4de258abc5e514ab1021386",
+      "compares_to": "strict_sigglobal.scs.in",
+      "change": "Same relref method with 10x tighter requested global tolerances and maxstep halved; verify actual log.",
+      "status": "PREPARED_NOT_RUN",
+      "timeout_seconds": 120
+    },
+    "sigglobal_traponly.scs.in": {
+      "sha256": "be19f08eccdfb8c0ef5181eb28e98eb3ebb2645f533ab8182d7dddf215254887",
+      "compares_to": "strict_sigglobal.scs.in",
+      "change": "Single-factor integration method=traponly, only if same-method tightening evidence warrants a method diagnostic.",
+      "status": "PREPARED_NOT_RUN",
+      "timeout_seconds": 120
+    }
+  },
+  "constraints": [
+    "No topology/model/stimulus change. No cmin/gmin/IC/nodeset added.",
+    "No time shifts or excluded edges. Existing absolute-time union check still applies.",
+    "Traponly results cannot be accepted merely because they show fewer warnings.",
+    "Common-times diagnostic controls interpolation; it does not alone certify every point between solved times.",
+    "Run sequentially under root scheduling; +diagnose and enlarged warning output may be added consistently as instrumentation after verifying installed help."
+  ],
+  "tool_help": {
+    "path": "v2/analog/noise_controls_20260923/doc_cache/tran_help.txt",
+    "sha256": "9d5752608d6d259855ff3a613b9b36133634da81e03fb18fc30e9b467d5dc145",
+    "method_lines": "102\u2013105, 555\u2013606",
+    "strobe_lines": "195\u2013209, 640\u2013644"
+  },
+  "options_help": {
+    "path": "v2/analog/adc/cadence_closure_20260923/runs/probe_20260924T020824848497Z/options_help.txt",
+    "sha256": "05c8bf9ecda18098e401684b85a5753c80500d59cace4124acc0348735f2cdb8",
+    "lines": "616\u2013625, 780\u2013813"
+  },
+  "recommended_sequence": [
+    "strict_diagnose.scs.in",
+    "strict_no_lte_relax.scs.in",
+    "strict_no_lte_relax_robust.scs.in only if preceding evidence warrants",
+    "integration-method/common-solved-points comparisons only if needed to resolve remaining evidence"
+  ],
+  "sigglobal_validation": {
+    "strict_expected_actual": {
+      "reltol": 1e-07,
+      "abstol_V": 1e-09,
+      "abstol_I": 1e-14,
+      "maxstep_s": 1e-09
+    },
+    "tighter_expected_actual": {
+      "reltol": 1e-08,
+      "abstol_V": 1e-10,
+      "abstol_I": 1e-15,
+      "maxstep_s": 5e-10
+    },
+    "required": "Do not grant qualification based on option choices, speed, no errors, or equal bits; compare whole accepted-time union and fullADC physical CDAC/reference0.05LSB after integration. This comparator fixture cannot qualify those absent nodes."
+  }
+}

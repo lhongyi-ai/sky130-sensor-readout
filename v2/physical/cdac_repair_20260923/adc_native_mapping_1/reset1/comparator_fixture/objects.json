@@ -1,0 +1,3414 @@
+[
+  {
+    "name": "XADC_XPRE_XBP1",
+    "originalpath": "XADC/XPRE/XBP1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "1",
+      "W": "10"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 20,
+      "text": "XBP1 BP BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "10u",
+      "fw": "10u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "10",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_BP",
+      "G": "XADC_XPRE_BP",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XBP2",
+    "originalpath": "XADC/XPRE/XBP2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "1",
+      "W": "10"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 21,
+      "text": "XBP2 BN BP VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=10"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "10u",
+      "fw": "10u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "10",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_BN",
+      "G": "XADC_XPRE_BP",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XBN1",
+    "originalpath": "XADC/XPRE/XBN1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "1",
+      "W": "8"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 22,
+      "text": "XBN1 BN BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "8u",
+      "fw": "8u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "8",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_BN",
+      "G": "XADC_XPRE_BN",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XBN2",
+    "originalpath": "XADC/XPRE/XBN2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "1",
+      "W": "32"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 23,
+      "text": "XBN2 BP BN BRS VSS sky130_fd_pr__nfet_01v8 L=1 W=32"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "32u",
+      "fw": "32u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "32",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_BP",
+      "G": "XADC_XPRE_BN",
+      "S": "XADC_XPRE_BRS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XRBIAS_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRBIAS/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_BRS",
+      "MINUS": "XADC_XPRE_XRBIAS_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRBIAS_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRBIAS/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRBIAS_XR_SERIES_1",
+      "MINUS": "VSS",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XSTPU",
+    "originalpath": "XADC/XPRE/XSTPU",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "10",
+      "W": "0.42"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 25,
+      "text": "XSTPU START VSS VDD VDD sky130_fd_pr__pfet_01v8 L=10 W=0.42"
+    },
+    "mapping_notes": [
+      "Explicit school_r1_fix1 revision: live CDF demonstrated pfet_01v8 minimum finger width550nm, so startup PMOS deliberately resized from420nm to550nm. Earlier clamped cell/audit preserved as FAIL. Startup/power requalification required."
+    ],
+    "props": {
+      "w": "0.55u",
+      "fw": "0.55u",
+      "l": "10u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "0.55",
+      "L": "10",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_START",
+      "G": "VSS",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XSTOFF",
+    "originalpath": "XADC/XPRE/XSTOFF",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "1",
+      "W": "20"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 26,
+      "text": "XSTOFF START BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=20"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "20u",
+      "fw": "20u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "20",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_START",
+      "G": "XADC_XPRE_BN",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XSTINJ",
+    "originalpath": "XADC/XPRE/XSTINJ",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "2",
+      "W": "0.5"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 27,
+      "text": "XSTINJ BP START VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=0.5"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "0.5u",
+      "fw": "0.5u",
+      "l": "2u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "0.5",
+      "L": "2",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_BP",
+      "G": "XADC_XPRE_START",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XIP",
+    "originalpath": "XADC/XPRE/XIP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "30",
+      "L": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 28,
+      "text": "XIP OUTN INP TAIL VSS sky130_fd_pr__nfet_01v8 W=30 L=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "30u",
+      "fw": "30u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "30",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_PREN",
+      "G": "XADC_TN",
+      "S": "XADC_XPRE_TAIL",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XIN",
+    "originalpath": "XADC/XPRE/XIN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "30",
+      "L": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 29,
+      "text": "XIN OUTP INN TAIL VSS sky130_fd_pr__nfet_01v8 W=30 L=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "30u",
+      "fw": "30u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "30",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_PREP",
+      "G": "XADC_TP",
+      "S": "XADC_XPRE_TAIL",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XTAIL",
+    "originalpath": "XADC/XPRE/XTAIL",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "32",
+      "L": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 30,
+      "text": "XTAIL TAIL BN VSS VSS sky130_fd_pr__nfet_01v8 W=32 L=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "32u",
+      "fw": "32u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "32",
+      "L": "1",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XPRE_TAIL",
+      "G": "XADC_XPRE_BN",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR0_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR0/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "VDD",
+      "MINUS": "XADC_XPRE_XRP_XR0_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR0_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR0/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR0_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR1_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR1/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N1",
+      "MINUS": "XADC_XPRE_XRP_XR1_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR1_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR1/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR1_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N2",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR2_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR2/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N2",
+      "MINUS": "XADC_XPRE_XRP_XR2_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR2_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR2/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR2_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N3",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR3_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR3/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N3",
+      "MINUS": "XADC_XPRE_XRP_XR3_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR3_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR3/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR3_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N4",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR4_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR4/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N4",
+      "MINUS": "XADC_XPRE_XRP_XR4_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR4_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR4/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR4_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N5",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR5_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR5/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N5",
+      "MINUS": "XADC_XPRE_XRP_XR5_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR5_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR5/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR5_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N6",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR6_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRP/XR6/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N6",
+      "MINUS": "XADC_XPRE_XRP_XR6_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR6_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRP/XR6/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_XR6_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRP_N7",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRP_XR7_XR",
+    "originalpath": "XADC/XPRE/XRP/XR7/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "86.9890977937969448135363933975024013875715"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRP_N7",
+      "MINUS": "XADC_PREP",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR0_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR0/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "VDD",
+      "MINUS": "XADC_XPRE_XRN_XR0_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR0_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR0/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR0_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR1_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR1/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N1",
+      "MINUS": "XADC_XPRE_XRN_XR1_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR1_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR1/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR1_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N2",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR2_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR2/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N2",
+      "MINUS": "XADC_XPRE_XRN_XR2_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR2_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR2/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR2_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N3",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR3_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR3/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N3",
+      "MINUS": "XADC_XPRE_XRN_XR3_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR3_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR3/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR3_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N4",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR4_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR4/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N4",
+      "MINUS": "XADC_XPRE_XRN_XR4_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR4_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR4/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR4_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N5",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR5_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR5/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N5",
+      "MINUS": "XADC_XPRE_XRN_XR5_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR5_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR5/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR5_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N6",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR6_XR_SEG_1",
+    "originalpath": "XADC/XPRE/XRN/XR6/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N6",
+      "MINUS": "XADC_XPRE_XRN_XR6_XR_SERIES_1",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR6_XR_SEG_2",
+    "originalpath": "XADC/XPRE/XRN/XR6/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "175.262708123502088140720588506495313265152"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_XR6_XR_SERIES_1",
+      "MINUS": "XADC_XPRE_XRN_N7",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XADC_XPRE_XRN_XR7_XR",
+    "originalpath": "XADC/XPRE/XRN/XR7/XR",
+    "kind": "resistor",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_5p73",
+    "view": "symbol",
+    "source_parameters": {
+      "L": "86.9890977937969448135363933975024013875715"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_5p73",
+    "source_location": {
+      "file": "adc_preamp.spice",
+      "line": 6,
+      "text": "XR A B SUB sky130_fd_pr__res_high_po_5p73 L={(R-72.75744875)/56.642069825}"
+    },
+    "mapping_notes": [
+      "Source 5p73 end-resistance model used for allocation; never equate CDF r with actual resistance. All lengths explicitly rounded to nearest 5nm; additional end parasitics unqualified."
+    ],
+    "props": {
+      "segL": "86.99u",
+      "segW": "5.73u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "mapped_parameters": {
+      "L": "86.99",
+      "W": "5.73",
+      "SEGMENTS": 1
+    },
+    "nets": {
+      "PLUS": "XADC_XPRE_XRN_N7",
+      "MINUS": "XADC_PREN",
+      "B": "VSS"
+    },
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XADC_XPRE_XCP_XC",
+    "originalpath": "XADC/XPRE/XCP/XC",
+    "kind": "mim",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "3",
+      "L": "3",
+      "M": "4",
+      "MULT": "4"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 87,
+      "text": "XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}"
+    },
+    "mapping_notes": [
+      "Source m and mult represent one nominal COUNT; school m=COUNT only. Statistical averaging and spatial mismatch are not qualified.",
+      "New school_r1: 3x3um unit becomes 4x4um. Applies to CDAC, comparator ballast and preamp loads. Old timing/noise/PEX results do not transfer."
+    ],
+    "props": {
+      "w": "4u",
+      "l": "4u",
+      "m": "4"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "4",
+      "M": "4"
+    },
+    "nets": {
+      "PLUS": "XADC_PREP",
+      "MINUS": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XPRE_XCN_XC",
+    "originalpath": "XADC/XPRE/XCN/XC",
+    "kind": "mim",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "3",
+      "L": "3",
+      "M": "4",
+      "MULT": "4"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 87,
+      "text": "XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}"
+    },
+    "mapping_notes": [
+      "Source m and mult represent one nominal COUNT; school m=COUNT only. Statistical averaging and spatial mismatch are not qualified.",
+      "New school_r1: 3x3um unit becomes 4x4um. Applies to CDAC, comparator ballast and preamp loads. Old timing/noise/PEX results do not transfer."
+    ],
+    "props": {
+      "w": "4u",
+      "l": "4u",
+      "m": "4"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "4",
+      "M": "4"
+    },
+    "nets": {
+      "PLUS": "XADC_PREN",
+      "MINUS": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XIP",
+    "originalpath": "XADC/XCMP/XCORE/XIP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "8.4",
+      "L": "0.5",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 20,
+      "text": "XIP DP INP TAIL VSS sky130_fd_pr__nfet_01v8 W={8.4*(1+ADC_PAIR_WIDTH_SKEW)} L=0.5 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "8.4u",
+      "fw": "8.4u",
+      "l": "0.5u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "8.4",
+      "L": "0.5",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XCORE_DP",
+      "G": "XADC_PREP",
+      "S": "XADC_XCMP_XCORE_TAIL",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XIN",
+    "originalpath": "XADC/XCMP/XCORE/XIN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "8.4",
+      "L": "0.5",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 21,
+      "text": "XIN DN INN TAIL VSS sky130_fd_pr__nfet_01v8 W={8.4*(1-ADC_PAIR_WIDTH_SKEW)} L=0.5 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "8.4u",
+      "fw": "8.4u",
+      "l": "0.5u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "8.4",
+      "L": "0.5",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XCORE_DN",
+      "G": "XADC_PREN",
+      "S": "XADC_XCMP_XCORE_TAIL",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XT",
+    "originalpath": "XADC/XCMP/XCORE/XT",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "16",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 22,
+      "text": "XT TAIL CLK VSS VSS sky130_fd_pr__nfet_01v8 W=16 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "16u",
+      "fw": "16u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "16",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XCORE_TAIL",
+      "G": "EVAL",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XLN",
+    "originalpath": "XADC/XCMP/XCORE/XLN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 23,
+      "text": "XLN OUTN OUTP DP VSS sky130_fd_pr__nfet_01v8 W=4 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_DNEG",
+      "G": "XADC_XCMP_DPOS",
+      "S": "XADC_XCMP_XCORE_DP",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XLP",
+    "originalpath": "XADC/XCMP/XCORE/XLP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 24,
+      "text": "XLP OUTP OUTN DN VSS sky130_fd_pr__nfet_01v8 W=4 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_DPOS",
+      "G": "XADC_XCMP_DNEG",
+      "S": "XADC_XCMP_XCORE_DN",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XPN",
+    "originalpath": "XADC/XCMP/XCORE/XPN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "8",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 25,
+      "text": "XPN OUTN OUTP VDD VDD sky130_fd_pr__pfet_01v8 W=8 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "8u",
+      "fw": "8u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "8",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_DNEG",
+      "G": "XADC_XCMP_DPOS",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XPP",
+    "originalpath": "XADC/XCMP/XCORE/XPP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "8",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 26,
+      "text": "XPP OUTP OUTN VDD VDD sky130_fd_pr__pfet_01v8 W=8 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "8u",
+      "fw": "8u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "8",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_DPOS",
+      "G": "XADC_XCMP_DNEG",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XRN",
+    "originalpath": "XADC/XCMP/XCORE/XRN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 27,
+      "text": "XRN OUTN CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_DNEG",
+      "G": "EVAL",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XRP",
+    "originalpath": "XADC/XCMP/XCORE/XRP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 28,
+      "text": "XRP OUTP CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_DPOS",
+      "G": "EVAL",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XRDN",
+    "originalpath": "XADC/XCMP/XCORE/XRDN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 29,
+      "text": "XRDN DP CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XCORE_DP",
+      "G": "EVAL",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XCORE_XRDP",
+    "originalpath": "XADC/XCMP/XCORE/XRDP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 30,
+      "text": "XRDP DN CLK VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XCORE_DN",
+      "G": "EVAL",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XLOADP_XC",
+    "originalpath": "XADC/XCMP/XLOADP/XC",
+    "kind": "mim",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "3",
+      "L": "3",
+      "M": "16",
+      "MULT": "16"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 87,
+      "text": "XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}"
+    },
+    "mapping_notes": [
+      "Source m and mult represent one nominal COUNT; school m=COUNT only. Statistical averaging and spatial mismatch are not qualified.",
+      "New school_r1: 3x3um unit becomes 4x4um. Applies to CDAC, comparator ballast and preamp loads. Old timing/noise/PEX results do not transfer."
+    ],
+    "props": {
+      "w": "4u",
+      "l": "4u",
+      "m": "16"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "4",
+      "M": "16"
+    },
+    "nets": {
+      "PLUS": "XADC_XCMP_DPOS",
+      "MINUS": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XLOADN_XC",
+    "originalpath": "XADC/XCMP/XLOADN/XC",
+    "kind": "mim",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "3",
+      "L": "3",
+      "M": "16",
+      "MULT": "16"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 87,
+      "text": "XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}"
+    },
+    "mapping_notes": [
+      "Source m and mult represent one nominal COUNT; school m=COUNT only. Statistical averaging and spatial mismatch are not qualified.",
+      "New school_r1: 3x3um unit becomes 4x4um. Applies to CDAC, comparator ballast and preamp loads. Old timing/noise/PEX results do not transfer."
+    ],
+    "props": {
+      "w": "4u",
+      "l": "4u",
+      "m": "16"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "4",
+      "M": "16"
+    },
+    "nets": {
+      "PLUS": "XADC_XCMP_DNEG",
+      "MINUS": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBP1_XP",
+    "originalpath": "XADC/XCMP/XBP1/XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 44,
+      "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BPB",
+      "G": "XADC_XCMP_DPOS",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBP1_XN",
+    "originalpath": "XADC/XCMP/XBP1/XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 45,
+      "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W=1 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BPB",
+      "G": "XADC_XCMP_DPOS",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBP2_XP",
+    "originalpath": "XADC/XCMP/XBP2/XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 44,
+      "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BP",
+      "G": "XADC_XCMP_BPB",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBP2_XN",
+    "originalpath": "XADC/XCMP/XBP2/XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 45,
+      "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W=1 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BP",
+      "G": "XADC_XCMP_BPB",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBN1_XP",
+    "originalpath": "XADC/XCMP/XBN1/XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 44,
+      "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BNB",
+      "G": "XADC_XCMP_DNEG",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBN1_XN",
+    "originalpath": "XADC/XCMP/XBN1/XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 45,
+      "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W=1 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BNB",
+      "G": "XADC_XCMP_DNEG",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBN2_XP",
+    "originalpath": "XADC/XCMP/XBN2/XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 44,
+      "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BN",
+      "G": "XADC_XCMP_BNB",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XBN2_XN",
+    "originalpath": "XADC/XCMP/XBN2/XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 45,
+      "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W=1 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_BN",
+      "G": "XADC_XCMP_BNB",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSET_XP1",
+    "originalpath": "XADC/XCMP/XSET/XP1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 37,
+      "text": "XP1 Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [
+      "reset1: retention latch input receives physical global-reset gating; normal Boolean function preserved."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "Q",
+      "G": "XADC_XCMP_S_BAR",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSET_XP2",
+    "originalpath": "XADC/XCMP/XSET/XP2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 38,
+      "text": "XP2 Y B VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "Q",
+      "G": "QB",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSET_XN1",
+    "originalpath": "XADC/XCMP/XSET/XN1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 39,
+      "text": "XN1 Y A MID VSS sky130_fd_pr__nfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [
+      "reset1: retention latch input receives physical global-reset gating; normal Boolean function preserved."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "Q",
+      "G": "XADC_XCMP_S_BAR",
+      "S": "XADC_XCMP_XSET_MID",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSET_XN2",
+    "originalpath": "XADC/XCMP/XSET/XN2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 40,
+      "text": "XN2 MID B VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XSET_MID",
+      "G": "QB",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRESET_XP1",
+    "originalpath": "XADC/XCMP/XRESET/XP1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 37,
+      "text": "XP1 Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [
+      "reset1: retention latch input receives physical global-reset gating; normal Boolean function preserved."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "QB",
+      "G": "XADC_XCMP_R_BAR",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRESET_XP2",
+    "originalpath": "XADC/XCMP/XRESET/XP2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 38,
+      "text": "XP2 Y B VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "QB",
+      "G": "Q",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRESET_XN1",
+    "originalpath": "XADC/XCMP/XRESET/XN1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 39,
+      "text": "XN1 Y A MID VSS sky130_fd_pr__nfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [
+      "reset1: retention latch input receives physical global-reset gating; normal Boolean function preserved."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "QB",
+      "G": "XADC_XCMP_R_BAR",
+      "S": "XADC_XCMP_XRESET_MID",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRESET_XN2",
+    "originalpath": "XADC/XCMP/XRESET/XN2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "adc_blocks.spice",
+      "line": 40,
+      "text": "XN2 MID B VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=0.15 nf=1 mult=1"
+    },
+    "mapping_notes": [],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XRESET_MID",
+      "G": "Q",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRSTB_XP",
+    "originalpath": "reset1/XRSTB_XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_RST_B",
+      "G": "RST_N",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRSTB_XN",
+    "originalpath": "reset1/XRSTB_XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_RST_B",
+      "G": "RST_N",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSOR_XNOR_XN1",
+    "originalpath": "reset1/XSOR_XNOR_XN1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_S_NOR",
+      "G": "XADC_XCMP_BN",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSOR_XNOR_XN2",
+    "originalpath": "reset1/XSOR_XNOR_XN2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_S_NOR",
+      "G": "XADC_XCMP_RST_B",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSOR_XNOR_XP1",
+    "originalpath": "reset1/XSOR_XNOR_XP1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XSOR_XNOR_MID",
+      "G": "XADC_XCMP_BN",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSOR_XNOR_XP2",
+    "originalpath": "reset1/XSOR_XNOR_XP2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "4",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_S_NOR",
+      "G": "XADC_XCMP_RST_B",
+      "S": "XADC_XCMP_XSOR_XNOR_MID",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSOR_XINV_XP",
+    "originalpath": "reset1/XSOR_XINV_XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_S_BAR",
+      "G": "XADC_XCMP_S_NOR",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XSOR_XINV_XN",
+    "originalpath": "reset1/XSOR_XINV_XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_S_BAR",
+      "G": "XADC_XCMP_S_NOR",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRAND_XNAND_XP1",
+    "originalpath": "reset1/XRAND_XNAND_XP1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_R_NAND",
+      "G": "XADC_XCMP_BP",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRAND_XNAND_XP2",
+    "originalpath": "reset1/XRAND_XNAND_XP2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_R_NAND",
+      "G": "RST_N",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRAND_XNAND_XN1",
+    "originalpath": "reset1/XRAND_XNAND_XN1",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_R_NAND",
+      "G": "XADC_XCMP_BP",
+      "S": "XADC_XCMP_XRAND_XNAND_MID",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRAND_XNAND_XN2",
+    "originalpath": "reset1/XRAND_XNAND_XN2",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_XRAND_XNAND_MID",
+      "G": "RST_N",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRAND_XINV_XP",
+    "originalpath": "reset1/XRAND_XINV_XP",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "2",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_R_BAR",
+      "G": "XADC_XCMP_R_NAND",
+      "S": "VDD",
+      "B": "VDD"
+    }
+  },
+  {
+    "name": "XADC_XCMP_XRAND_XINV_XN",
+    "originalpath": "reset1/XRAND_XINV_XN",
+    "kind": "mos",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "source_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": "1",
+      "MULT": "1"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_location": {
+      "file": "reset1/build_reset1.py",
+      "role": "NEW_REAL_GLOBAL_RESET_LOGIC"
+    },
+    "mapping_notes": [
+      "Added actual PDK static CMOS gate; not part of frozen original ADC."
+    ],
+    "props": {
+      "w": "1u",
+      "fw": "1u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "mapped_parameters": {
+      "W": "1",
+      "L": "0.15",
+      "NF": 1,
+      "M": 1
+    },
+    "nets": {
+      "D": "XADC_XCMP_R_BAR",
+      "G": "XADC_XCMP_R_NAND",
+      "S": "VSS",
+      "B": "VSS"
+    }
+  }
+]

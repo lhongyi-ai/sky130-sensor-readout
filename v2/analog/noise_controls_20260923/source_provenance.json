@@ -1,0 +1,25 @@
+{
+  "school_native_netlist": {
+    "file": "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/input.scs",
+    "sha256": "71f832cc4003569f321f28f58ce9ffd0aa1e5861f5e1e78c9f288a89f8f0e599"
+  },
+  "clock_reference_netlist": {
+    "file": "v2/cadence/linuxlab_20260923/runs/spectre_sampling_20260923T105456266544Z/input.scs",
+    "sha256": "eaac289295a6e3b012ad9c3edf504cccbaf1dfcb7fc5ab8e68bcf6c5586a0fc8"
+  },
+  "actual_adc_topology_contract": {
+    "file": "v2/physical/cdac_repair_20260923/adc_native_mapping_1/sampling_load_contract.json",
+    "sha256": "4e22187145cee112fd2fa40b655cf043af703c659b7c04220ee00ce4aad11607"
+  },
+  "installed_tran_help": {
+    "file": "v2/analog/noise_controls_20260923/doc_cache/tran_help.txt",
+    "sha256": "9d5752608d6d259855ff3a613b9b36133634da81e03fb18fc30e9b467d5dc145"
+  },
+  "installed_noise_help": {
+    "file": "v2/cadence/linuxlab_20260923/doc_cache/noise_help.txt",
+    "sha256": "85a80f845797150d91a866744f8785c3a811b4446f44d1524f73d2aad71ea4d0"
+  },
+  "spectre_version": "21.1.0.132.isr1",
+  "current_execution_scope": "Allocated single-slot serial 64-sample pilot only; production NOT_RUN",
+  "public_source": "https://community.cadence.com/cadence_technology_forums/f/custom-ic-design/23936/transient-noise-spectre"
+}

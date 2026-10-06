@@ -9,7 +9,7 @@ import sys
 import uuid
 
 HERE=Path(__file__).resolve().parent
-BASE_MANIFEST='825f6005b0738acda1358c6c8455e3be821f7da650c26aefcd38fc132d79c340'
+BASE_MANIFEST='674cea3b4174a9c3dad07f62173881910f9b551749d6ed998da09a7e861ab252'
 FILES=('run.py','p1_run.sh','runtime_patch.json','package_manifest.json')
 
 def sha(path):

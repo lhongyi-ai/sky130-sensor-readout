@@ -1,0 +1,12 @@
+simulator lang=spectre
+global 0
+include "__SCHOOL_MODEL_ENTRY__" section=tt
+include "comparator_native_bound.scs"
+VVDD (VDD 0) vsource dc=1.8
+VTN (TN 0) vsource type=pulse val0=.9005 val1=.8995 delay=6.55u rise=1n fall=1n width=20u period=40u
+VTP (TP 0) vsource type=pulse val0=.8995 val1=.9005 delay=6.55u rise=1n fall=1n width=20u period=40u
+VEVAL (EVAL 0) vsource type=pulse val0=0 val1=1.8 delay=5u rise=1n fall=1n width=200n period=625n
+XCMP (TN TP Q QB EVAL VDD 0) p1_actual_cmp_chain
+simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-8 iabstol=1e-13
+saveOptions options save=allpub
+reset_decide tran stop=9u maxstep=2n errpreset=conservative

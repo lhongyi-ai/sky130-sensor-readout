@@ -1,0 +1,443 @@
+{
+  "status": "SHORT_DIAGNOSTIC_INCOMPLETE_OR_METHOD_MISMATCH",
+  "checks": {
+    "identical_physical_RTL_stimulus": true,
+    "only_requested_profile_differences": true,
+    "same_actual_tool_method_environment": true,
+    "expected_Spectre21_sigglobal_environment": true,
+    "expected_actual_tolerances": true,
+    "both_inputs_integrity_verified": true,
+    "both_complete_short_domains": false,
+    "both_processes_exit0": true,
+    "both_zero_completed_frames_and_decisions": true,
+    "no_P2_FAIL": true,
+    "all_forced_points_present_directly": false,
+    "no_solver_breakpoint_stepover_reported": false,
+    "natural_points_outside_strobe_also_saved": false
+  },
+  "stats": {
+    "partial_direct_common_saved_points": {
+      "cdac_differential": {
+        "max_abs_delta_V": 1.16047659215468e-05,
+        "time_s": 4.0633195000000006e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": false
+      },
+      "rp": {
+        "max_abs_delta_V": 1.926988124623108e-09,
+        "time_s": 4.0633217e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": true
+      },
+      "rn": {
+        "max_abs_delta_V": 1.0394913818601026e-09,
+        "time_s": 4.0633064e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": true
+      },
+      "vcm": {
+        "max_abs_delta_V": 0.0,
+        "time_s": 4.06315e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": true
+      },
+      "CONV": {
+        "max_abs_delta_V": 0.00016232619135070347,
+        "time_s": 4.063290200000001e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      },
+      "local_gate": {
+        "max_abs_delta_V": 0.00011208122776551477,
+        "time_s": 4.06315e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      },
+      "internal_body": {
+        "max_abs_delta_V": 4.1490758112994186e-05,
+        "time_s": 4.0632007e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      },
+      "external_VDS": {
+        "max_abs_delta_V": 0.0001623261913508145,
+        "time_s": 4.063290200000001e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      }
+    },
+    "partial_shared_actual_union": {
+      "cdac_differential": {
+        "max_abs_delta_V": 0.0008549889867762658,
+        "time_s": 4.075079408288156e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": false
+      },
+      "rp": {
+        "max_abs_delta_V": 1.926988124623108e-09,
+        "time_s": 4.0633217e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": true
+      },
+      "rn": {
+        "max_abs_delta_V": 1.0394913818601026e-09,
+        "time_s": 4.0633064e-06,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": true
+      },
+      "vcm": {
+        "max_abs_delta_V": 0.0,
+        "time_s": 2e-09,
+        "four_channel_reference_limit_only": true,
+        "below_original_limit_in_this_short_diagnostic": true
+      },
+      "CONV": {
+        "max_abs_delta_V": 0.00016232619135070347,
+        "time_s": 4.063290200000001e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      },
+      "local_gate": {
+        "max_abs_delta_V": 0.0002794205924470314,
+        "time_s": 4.063112875118488e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      },
+      "internal_body": {
+        "max_abs_delta_V": 4.1490758112994186e-05,
+        "time_s": 4.0632007e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      },
+      "external_VDS": {
+        "max_abs_delta_V": 0.0001623261913508145,
+        "time_s": 4.063290200000001e-06,
+        "four_channel_reference_limit_only": false,
+        "below_original_limit_in_this_short_diagnostic": null
+      }
+    }
+  },
+  "runs": {
+    "baseline": {
+      "raw_sha256": "5c6fe95dc1be0528ed7d616157fd170eeab4f94679f8d2a3dc25032f66ad7668",
+      "actual_header": {
+        "PSFversion": "1.00",
+        "simulator": "spectre",
+        "version": "21.1.0.132.isr1",
+        "date": "1:01:37 AM, Thur Sep 24, 2026",
+        "design": "//",
+        "analysis type": "tran",
+        "analysis name": "adc_closure_tran",
+        "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 4.1 us)",
+        "xVecSorted": "ascending",
+        "tolerance.relative": 1e-05,
+        "start": 0.0,
+        "outputstart": 0.0,
+        "stop": 4.1e-06,
+        "step": 4.1e-09,
+        "istep": 0.001,
+        "maxstep": 2e-09,
+        "ic": "all",
+        "useprevic": "no",
+        "skipdc": "no",
+        "reltol": 1e-06,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "temp": 27.0,
+        "tnom": 27.0,
+        "tempeffects": "all",
+        "errpreset": "conservative",
+        "method": "gear2only",
+        "lteratio": 10.0,
+        "relref": "sigglobal",
+        "cmin": 0.0,
+        "gmin": 1e-12,
+        "key": "node",
+        "units": "s",
+        "tolerance": 1e-14,
+        "sweep_direction": 0.0,
+        "plot": 0.0,
+        "grid": 1.0
+      },
+      "voltage_trace_count": 76,
+      "all_76_required_traces_validated_every_row": true,
+      "actual_interval_s": [
+        2e-09,
+        4.1e-06
+      ],
+      "accepted_unique_points": 6685,
+      "identical_duplicate_rows_recorded": 0,
+      "points_not_matching_forced_list": null,
+      "input_integrity_checks": {
+        "amsdControl.scs": true,
+        "audits/adc_native_audit.json": true,
+        "audits/changes_vs_frozen_v4.diff": true,
+        "audits/fresh_native_audit.json": true,
+        "audits/native_views_review.json": true,
+        "audits/phase_native_audit.json": true,
+        "forced_time_contract.json": true,
+        "p1_interfaces.vams": true,
+        "p2_ams_reset1.vams": true,
+        "p2_sequence.sv": true,
+        "profile.vh": true,
+        "reset1_native_bound.scs": true,
+        "run.sh": true,
+        "sar_controller.v": true
+      },
+      "simulator_exit_code": 0,
+      "complete_short_interval": false,
+      "forced_point_presence": {
+        "expected_count": 2001,
+        "present_count": 1997,
+        "missing_times_s": [
+          4.0632e-06,
+          4.0633284e-06,
+          4.063333400000001e-06,
+          4.063334e-06
+        ],
+        "max_nearest_time_error_s": 5.680058948686305e-16,
+        "match_tolerance_s": 1e-20,
+        "no_postprocessing_interpolation_used": true,
+        "timestamp_presence_alone_does_not_prove_solver_step_origin": true
+      },
+      "frames_completed": 0,
+      "decisions_completed": 0,
+      "no_protocol_failure_marker": true,
+      "warning_code_mentions": {},
+      "breakpoint_stepover_reported": false,
+      "accepted_tran_steps_log": 6685,
+      "all_warning_lines": [
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "amsspice: *Warning: (/opt/cadence/CDK/sky130_release_0.0.3/models/r+c/../../cells/res_generic_nd/sky130_fd_pr__res_generic_nd.model.spice,19): In instance `r0', `sky130_fd_pr__res_generic_nd' is identified position parameter of r because no master defined with this name. ",
+        "amsspice: *Warning: (/opt/cadence/CDK/sky130_release_0.0.3/models/r+c/../../cells/res_generic_pd/sky130_fd_pr__res_generic_pd.model.spice,18): In instance `r0', `sky130_fd_pr__res_generic_pd' is identified position parameter of r because no master defined with this name. ",
+        "    lteratio = 10",
+        "spectre completes with 0 errors, 0 warnings, and 7 notices."
+      ],
+      "actual_local_crossings": {
+        "CONV_halfrail": [
+          {
+            "time_s": 4.063269698349324e-06,
+            "actual_bracket_s": [
+              4.0632696e-06,
+              4.0632697e-06
+            ]
+          }
+        ],
+        "external_VDS_zero": [
+          {
+            "time_s": 4.063200665607566e-06,
+            "actual_bracket_s": [
+              4.06320065e-06,
+              4.0632007e-06
+            ]
+          }
+        ]
+      },
+      "model_identity": "Requires root check of on-school PDK/model hashes; matching include pathname alone is not identity."
+    },
+    "strict": {
+      "raw_sha256": "14774c232d92c836f8b2cbd9bfe7a1d8f092a12bd22ba69eabff669e9be6ed7e",
+      "actual_header": {
+        "PSFversion": "1.00",
+        "simulator": "spectre",
+        "version": "21.1.0.132.isr1",
+        "date": "1:02:48 AM, Thur Sep 24, 2026",
+        "design": "//",
+        "analysis type": "tran",
+        "analysis name": "adc_closure_tran",
+        "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 4.1 us)",
+        "xVecSorted": "ascending",
+        "tolerance.relative": 1e-06,
+        "start": 0.0,
+        "outputstart": 0.0,
+        "stop": 4.1e-06,
+        "step": 4.1e-09,
+        "istep": 0.001,
+        "maxstep": 1e-09,
+        "ic": "all",
+        "useprevic": "no",
+        "skipdc": "no",
+        "reltol": 1e-07,
+        "abstol(V)": 1e-09,
+        "abstol(I)": 1e-14,
+        "temp": 27.0,
+        "tnom": 27.0,
+        "tempeffects": "all",
+        "errpreset": "conservative",
+        "method": "gear2only",
+        "lteratio": 10.0,
+        "relref": "sigglobal",
+        "cmin": 0.0,
+        "gmin": 1e-12,
+        "key": "node",
+        "units": "s",
+        "tolerance": 1e-14,
+        "sweep_direction": 0.0,
+        "plot": 0.0,
+        "grid": 1.0
+      },
+      "voltage_trace_count": 76,
+      "all_76_required_traces_validated_every_row": true,
+      "actual_interval_s": [
+        1e-09,
+        4.1e-06
+      ],
+      "accepted_unique_points": 12891,
+      "identical_duplicate_rows_recorded": 0,
+      "points_not_matching_forced_list": null,
+      "input_integrity_checks": {
+        "amsdControl.scs": true,
+        "audits/adc_native_audit.json": true,
+        "audits/changes_vs_frozen_v4.diff": true,
+        "audits/fresh_native_audit.json": true,
+        "audits/native_views_review.json": true,
+        "audits/phase_native_audit.json": true,
+        "forced_time_contract.json": true,
+        "p1_interfaces.vams": true,
+        "p2_ams_reset1.vams": true,
+        "p2_sequence.sv": true,
+        "profile.vh": true,
+        "reset1_native_bound.scs": true,
+        "run.sh": true,
+        "sar_controller.v": true
+      },
+      "simulator_exit_code": 0,
+      "complete_short_interval": false,
+      "forced_point_presence": {
+        "expected_count": 2001,
+        "present_count": 1976,
+        "missing_times_s": [
+          4.0632e-06,
+          4.0632010000000006e-06,
+          4.063267e-06,
+          4.063272000000001e-06,
+          4.063274700000001e-06,
+          4.063279000000001e-06,
+          4.0632813e-06,
+          4.0632824e-06,
+          4.0632861000000005e-06,
+          4.0632863e-06,
+          4.0633284e-06,
+          4.063333e-06,
+          4.0633331e-06,
+          4.063333300000001e-06,
+          4.0633339e-06,
+          4.0633349000000005e-06,
+          4.0633371e-06,
+          4.0633407e-06,
+          4.0633422e-06,
+          4.0633460000000006e-06,
+          4.0633466e-06,
+          4.0633469e-06,
+          4.063347100000001e-06,
+          4.0633475000000005e-06,
+          4.063349900000001e-06
+        ],
+        "max_nearest_time_error_s": 9.047938179934656e-16,
+        "match_tolerance_s": 1e-20,
+        "no_postprocessing_interpolation_used": true,
+        "timestamp_presence_alone_does_not_prove_solver_step_origin": true
+      },
+      "frames_completed": 0,
+      "decisions_completed": 0,
+      "no_protocol_failure_marker": true,
+      "warning_code_mentions": {
+        "SPECTRE-16780": 1,
+        "SPECTRE-17087": 1
+      },
+      "breakpoint_stepover_reported": true,
+      "accepted_tran_steps_log": 12891,
+      "all_warning_lines": [
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "\t\terrors: 0, warnings: 0",
+        "amsspice: *Warning: (/opt/cadence/CDK/sky130_release_0.0.3/models/r+c/../../cells/res_generic_nd/sky130_fd_pr__res_generic_nd.model.spice,19): In instance `r0', `sky130_fd_pr__res_generic_nd' is identified position parameter of r because no master defined with this name. ",
+        "amsspice: *Warning: (/opt/cadence/CDK/sky130_release_0.0.3/models/r+c/../../cells/res_generic_pd/sky130_fd_pr__res_generic_pd.model.spice,18): In instance `r0', `sky130_fd_pr__res_generic_pd' is identified position parameter of r because no master defined with this name. ",
+        "    lteratio = 10",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "Warning from spectre at time = 4.06328 us during transient analysis `adc_closure_tran'.",
+        "    WARNING (SPECTRE-17087): A breakpoint at time = 4.06328 us is stepped over in disaster recovery algorithm.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "Warning from spectre at time = 4.07479 us during transient analysis `adc_closure_tran'.",
+        "    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: p2_ams_reset1.phases.XPHASE_XNACQ_XN1.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "        Disaster recovery algorithm is enabled to search for a converged solution.",
+        "spectre completes with 0 errors, 2 warnings, and 36 notices."
+      ],
+      "actual_local_crossings": {
+        "CONV_halfrail": [
+          {
+            "time_s": 4.063269707515351e-06,
+            "actual_bracket_s": [
+              4.0632697e-06,
+              4.0632698e-06
+            ]
+          }
+        ],
+        "external_VDS_zero": [
+          {
+            "time_s": 4.063200675302511e-06,
+            "actual_bracket_s": [
+              4.063200662031563e-06,
+              4.0632007e-06
+            ]
+          }
+        ]
+      },
+      "model_identity": "Requires root check of on-school PDK/model hashes; matching include pathname alone is not identity."
+    }
+  },
+  "reference_limit_V": 9.765625000000002e-06,
+  "partial_diagnostic_domains": {
+    "common_directly_saved_point_count": 1974,
+    "shared_actual_interval_s": [
+      2e-09,
+      4.1e-06
+    ],
+    "shared_union_point_count": 17582,
+    "does_not_replace_planned_zero_to_stop_domain": true
+  },
+  "original_two_frame_gate_status": "FAIL_RETAINED",
+  "complete_ADC_qualified": false,
+  "long_campaign_allowed": false,
+  "analyzer_sha256": "1359858d7976a38078fb70ba61f8eec4736e84a7183bbf6310dd5361289e85a0",
+  "PSF_reader_sha256": "56c578c6c9f72910361c2d189acb91b10e9dbc180b181888f0deb35df1889ace",
+  "limitations": [
+    "This 4.1 us window contains no completed SAR conversion; it cannot prove ADC decision accuracy.",
+    "Direct forced values avoid postprocessing interpolation but forcing points also changes adaptive integration.",
+    "All accepted union comparison still uses linear interpolation; no dynamic phase alignment or cropping.",
+    "Internal body differences are not missing-charge proof; terminal charge and branch current balance are not saved.",
+    "All actual warning lines are retained; none are waived by this diagnostic."
+  ]
+}

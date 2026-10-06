@@ -1,0 +1,1396 @@
+{
+  "top": "sensor_phases",
+  "port_order": [
+    "SAMPLE_CMD",
+    "TOP",
+    "TOPB",
+    "ACQ",
+    "CONV",
+    "VDD",
+    "VSS"
+  ],
+  "primitives": [
+    {
+      "path": "XPHASE/XCMDB/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/CMD_B",
+        "G": "SAMPLE_CMD",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XCMDB/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/CMD_B",
+        "G": "SAMPLE_CMD",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_1p41",
+      "nets": {
+        "A": "XPHASE/CMD_B",
+        "B": "XPHASE/XDCMD/RC",
+        "SUB": "VSS"
+      },
+      "parameters": {
+        "L": "63.924"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 29,
+        "text": "XR A RC VSS sky130_fd_pr__res_high_po_1p41 L=63.924"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPHASE/XDCMD/RC",
+        "BOTTOM": "VSS"
+      },
+      "parameters": {
+        "W": "22.215",
+        "L": "22.215"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 30,
+        "text": "XC RC VSS sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XDCMD/B",
+        "G": "XPHASE/XDCMD/RC",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "1",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "1"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XDCMD/B",
+        "G": "XPHASE/XDCMD/RC",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "1"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XI2/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/CMD_B_DELAY",
+        "G": "XPHASE/XDCMD/B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XI2/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/CMD_B_DELAY",
+        "G": "XPHASE/XDCMD/B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_1p41",
+      "nets": {
+        "A": "ACQ",
+        "B": "XPHASE/XDACQ/RC",
+        "SUB": "VSS"
+      },
+      "parameters": {
+        "L": "63.924"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 29,
+        "text": "XR A RC VSS sky130_fd_pr__res_high_po_1p41 L=63.924"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPHASE/XDACQ/RC",
+        "BOTTOM": "VSS"
+      },
+      "parameters": {
+        "W": "22.215",
+        "L": "22.215"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 30,
+        "text": "XC RC VSS sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XDACQ/B",
+        "G": "XPHASE/XDACQ/RC",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "1",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "1"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XDACQ/B",
+        "G": "XPHASE/XDACQ/RC",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "1"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XI2/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/ACQ_DELAY",
+        "G": "XPHASE/XDACQ/B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XI2/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/ACQ_DELAY",
+        "G": "XPHASE/XDACQ/B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_1p41",
+      "nets": {
+        "A": "CONV",
+        "B": "XPHASE/XDCONV/RC",
+        "SUB": "VSS"
+      },
+      "parameters": {
+        "L": "63.924"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 29,
+        "text": "XR A RC VSS sky130_fd_pr__res_high_po_1p41 L=63.924"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPHASE/XDCONV/RC",
+        "BOTTOM": "VSS"
+      },
+      "parameters": {
+        "W": "22.215",
+        "L": "22.215"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 30,
+        "text": "XC RC VSS sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XDCONV/B",
+        "G": "XPHASE/XDCONV/RC",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "1",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "1"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XDCONV/B",
+        "G": "XPHASE/XDCONV/RC",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "1"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XI2/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/CONV_DELAY",
+        "G": "XPHASE/XDCONV/B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XI2/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/CONV_DELAY",
+        "G": "XPHASE/XDCONV/B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNACQ/XN1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/ACQ_RAW",
+        "G": "XPHASE/CMD_B_DELAY",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 12,
+        "text": "XN1 Y A VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNACQ/XN2",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/ACQ_RAW",
+        "G": "XPHASE/CONV_DELAY",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 13,
+        "text": "XN2 Y B VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNACQ/XP1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XNACQ/MID",
+        "G": "XPHASE/CMD_B_DELAY",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 14,
+        "text": "XP1 MID A VDD VDD sky130_fd_pr__pfet_01v8 W=4 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNACQ/XP2",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/ACQ_RAW",
+        "G": "XPHASE/CONV_DELAY",
+        "S": "XPHASE/XNACQ/MID",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 15,
+        "text": "XP2 Y B MID VDD sky130_fd_pr__pfet_01v8 W=4 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNCONV/XN1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/CONV_RAW",
+        "G": "SAMPLE_CMD",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 12,
+        "text": "XN1 Y A VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNCONV/XN2",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/CONV_RAW",
+        "G": "XPHASE/ACQ_DELAY",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 13,
+        "text": "XN2 Y B VSS VSS sky130_fd_pr__nfet_01v8 W=2 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNCONV/XP1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XNCONV/MID",
+        "G": "SAMPLE_CMD",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 14,
+        "text": "XP1 MID A VDD VDD sky130_fd_pr__pfet_01v8 W=4 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNCONV/XP2",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/CONV_RAW",
+        "G": "XPHASE/ACQ_DELAY",
+        "S": "XPHASE/XNCONV/MID",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 15,
+        "text": "XP2 Y B MID VDD sky130_fd_pr__pfet_01v8 W=4 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBACQ/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XBACQ/B",
+        "G": "XPHASE/ACQ_RAW",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBACQ/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XBACQ/B",
+        "G": "XPHASE/ACQ_RAW",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBACQ/XI2/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "ACQ",
+        "G": "XPHASE/XBACQ/B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "16",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBACQ/XI2/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "ACQ",
+        "G": "XPHASE/XBACQ/B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "32",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBCONV/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XBCONV/B",
+        "G": "XPHASE/CONV_RAW",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBCONV/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XBCONV/B",
+        "G": "XPHASE/CONV_RAW",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBCONV/XI2/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "CONV",
+        "G": "XPHASE/XBCONV/B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "16",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBCONV/XI2/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "CONV",
+        "G": "XPHASE/XBCONV/B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "32",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNTOP/XP1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/TOP_RAW_B",
+        "G": "SAMPLE_CMD",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 18,
+        "text": "XP1 Y A VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNTOP/XP2",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/TOP_RAW_B",
+        "G": "XPHASE/ACQ_DELAY",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 19,
+        "text": "XP2 Y B VDD VDD sky130_fd_pr__pfet_01v8 W=2 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNTOP/XN1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/TOP_RAW_B",
+        "G": "SAMPLE_CMD",
+        "S": "XPHASE/XNTOP/MID",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 20,
+        "text": "XN1 Y A MID VSS sky130_fd_pr__nfet_01v8 W=4 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XNTOP/XN2",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XNTOP/MID",
+        "G": "XPHASE/ACQ_DELAY",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {},
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 21,
+        "text": "XN2 MID B VSS VSS sky130_fd_pr__nfet_01v8 W=4 L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XTOPI/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/TOP_RAW",
+        "G": "XPHASE/TOP_RAW_B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XTOPI/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/TOP_RAW",
+        "G": "XPHASE/TOP_RAW_B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBTOP/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPHASE/XBTOP/B",
+        "G": "XPHASE/TOP_RAW",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "2",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBTOP/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPHASE/XBTOP/B",
+        "G": "XPHASE/TOP_RAW",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "4",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "2"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBTOP/XI2/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "TOP",
+        "G": "XPHASE/XBTOP/B",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "16",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XBTOP/XI2/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "TOP",
+        "G": "XPHASE/XBTOP/B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "32",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XTOPB/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "TOPB",
+        "G": "TOP",
+        "S": "VSS",
+        "B": "VSS"
+      },
+      "parameters": {
+        "W": "16",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 8,
+        "text": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 W={SIZE} L=.15"
+      }
+    },
+    {
+      "path": "XPHASE/XTOPB/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "TOPB",
+        "G": "TOP",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": "32",
+        "L": "0.15"
+      },
+      "context_parameters": {
+        "SIZE": "16"
+      },
+      "source": {
+        "file": "sensor_phases.spice",
+        "line": 9,
+        "text": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 W={2*SIZE} L=.15"
+      }
+    }
+  ],
+  "hierarchy": [
+    {
+      "path": "XPHASE",
+      "subcircuit": "sensor_phases",
+      "ports": {
+        "SAMPLE_CMD": "SAMPLE_CMD",
+        "TOP": "TOP",
+        "TOPB": "TOPB",
+        "ACQ": "ACQ",
+        "CONV": "CONV",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XCMDB",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "SAMPLE_CMD",
+        "Y": "XPHASE/CMD_B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD",
+      "subcircuit": "phase_delay",
+      "ports": {
+        "A": "XPHASE/CMD_B",
+        "Y": "XPHASE/CMD_B_DELAY",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XDCMD/XI1",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XDCMD/RC",
+        "Y": "XPHASE/XDCMD/B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "1"
+      }
+    },
+    {
+      "path": "XPHASE/XDCMD/XI2",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XDCMD/B",
+        "Y": "XPHASE/CMD_B_DELAY",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ",
+      "subcircuit": "phase_delay",
+      "ports": {
+        "A": "ACQ",
+        "Y": "XPHASE/ACQ_DELAY",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XDACQ/XI1",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XDACQ/RC",
+        "Y": "XPHASE/XDACQ/B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "1"
+      }
+    },
+    {
+      "path": "XPHASE/XDACQ/XI2",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XDACQ/B",
+        "Y": "XPHASE/ACQ_DELAY",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV",
+      "subcircuit": "phase_delay",
+      "ports": {
+        "A": "CONV",
+        "Y": "XPHASE/CONV_DELAY",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XDCONV/XI1",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XDCONV/RC",
+        "Y": "XPHASE/XDCONV/B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "1"
+      }
+    },
+    {
+      "path": "XPHASE/XDCONV/XI2",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XDCONV/B",
+        "Y": "XPHASE/CONV_DELAY",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XNACQ",
+      "subcircuit": "phase_nor",
+      "ports": {
+        "A": "XPHASE/CMD_B_DELAY",
+        "B": "XPHASE/CONV_DELAY",
+        "Y": "XPHASE/ACQ_RAW",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XNCONV",
+      "subcircuit": "phase_nor",
+      "ports": {
+        "A": "SAMPLE_CMD",
+        "B": "XPHASE/ACQ_DELAY",
+        "Y": "XPHASE/CONV_RAW",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XBACQ",
+      "subcircuit": "phase_buffer",
+      "ports": {
+        "A": "XPHASE/ACQ_RAW",
+        "Y": "ACQ",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XBACQ/XI1",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/ACQ_RAW",
+        "Y": "XPHASE/XBACQ/B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XBACQ/XI2",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XBACQ/B",
+        "Y": "ACQ",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "16"
+      }
+    },
+    {
+      "path": "XPHASE/XBCONV",
+      "subcircuit": "phase_buffer",
+      "ports": {
+        "A": "XPHASE/CONV_RAW",
+        "Y": "CONV",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XBCONV/XI1",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/CONV_RAW",
+        "Y": "XPHASE/XBCONV/B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XBCONV/XI2",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XBCONV/B",
+        "Y": "CONV",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "16"
+      }
+    },
+    {
+      "path": "XPHASE/XNTOP",
+      "subcircuit": "phase_nand",
+      "ports": {
+        "A": "SAMPLE_CMD",
+        "B": "XPHASE/ACQ_DELAY",
+        "Y": "XPHASE/TOP_RAW_B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XTOPI",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/TOP_RAW_B",
+        "Y": "XPHASE/TOP_RAW",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XBTOP",
+      "subcircuit": "phase_buffer",
+      "ports": {
+        "A": "XPHASE/TOP_RAW",
+        "Y": "TOP",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {}
+    },
+    {
+      "path": "XPHASE/XBTOP/XI1",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/TOP_RAW",
+        "Y": "XPHASE/XBTOP/B",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "2"
+      }
+    },
+    {
+      "path": "XPHASE/XBTOP/XI2",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "XPHASE/XBTOP/B",
+        "Y": "TOP",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "16"
+      }
+    },
+    {
+      "path": "XPHASE/XTOPB",
+      "subcircuit": "phase_inv",
+      "ports": {
+        "A": "TOP",
+        "Y": "TOPB",
+        "VDD": "VDD",
+        "VSS": "VSS"
+      },
+      "parameters": {
+        "SIZE": "16"
+      }
+    }
+  ],
+  "primitive_count": 48,
+  "counts_by_kind": {
+    "mos": 42,
+    "resistor": 3,
+    "mim": 3
+  },
+  "counts_by_model": {
+    "sky130_fd_pr__nfet_01v8": 21,
+    "sky130_fd_pr__pfet_01v8": 21,
+    "sky130_fd_pr__res_high_po_1p41": 3,
+    "sky130_fd_pr__cap_mim_m3_1": 3
+  },
+  "internal_single_terminal_nets": {}
+}

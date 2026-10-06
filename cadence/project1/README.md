@@ -35,8 +35,8 @@ Cadence work resumed on 2026-09-11, targeting the user-created `project1` librar
 
 - Virtuoso 6.1.8 and Library Manager have been observed on the school remote desktop.
 - The CIW log confirms successful association of `project1` with `sky130_fd_pr_main`.
-- The school PDK currently references `/project/engineering/cadence21/CDK/sky130_release_0.0.3/cds.lib`.
-- In the terminal `cds.lib`, project1 is at `/home/compute/l.hongyi/cadence_skywater/project1`.
+- The school PDK currently references `/opt/cadence/CDK/sky130_release_0.0.3/cds.lib`.
+- In the terminal `cds.lib`, project1 is at `/home/cadence-user/cadence_skywater/project1`.
 - Spectre models, licensing, simulation execution, and results have not yet been verified. No cell has yet been created in project1.
 - The remote connection once showed a blank screen; after reloading, noVNC reported `New connection has been rejected with reason: Authentication failed`. This is historical connection evidence. The user has chosen to operate, upload, and return results personally; remote control is no longer attempted.
 

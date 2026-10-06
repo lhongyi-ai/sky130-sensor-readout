@@ -1,0 +1,129 @@
+{
+  "files": [
+    {
+      "relative_path": "models/sky130.lib.spice",
+      "sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice",
+      "sha256": "0c03b2e5727c414942f1d2b27e19a68724fb84be90b2c73b361ad41779311130",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.pm3.spice",
+      "sha256": "bd77fc6d1e814473fc16b7afc6ee653f30a68a0f578e4c85789e5e82fff410b3",
+      "version_value_counts": {
+        "4.5": 180
+      },
+      "primitive_mos_calls": [
+        {
+          "subckt": "nfet_01v8",
+          "line": 31,
+          "primitive_instance": "msky130_fd_pr__nfet_01v8",
+          "primitive_model": "sky130_fd_pr__nfet_01v8__model",
+          "dynamic_flag_overrides": {}
+        }
+      ]
+    },
+    {
+      "relative_path": "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice",
+      "sha256": "716b48c11275bb1edbb228807f1b8849453884adf498ac7c57a31b9295335f2b",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice",
+      "sha256": "5580c09bffce11a3cda01f68ee0876655d4b5fc7886c014655284c6b38637730",
+      "version_value_counts": {
+        "4.5": 88
+      },
+      "primitive_mos_calls": [
+        {
+          "subckt": "nfet_01v8_lvt",
+          "line": 33,
+          "primitive_instance": "msky130_fd_pr__nfet_01v8_lvt",
+          "primitive_model": "sky130_fd_pr__nfet_01v8_lvt__model",
+          "dynamic_flag_overrides": {}
+        }
+      ]
+    },
+    {
+      "relative_path": "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice",
+      "sha256": "641d251a08bf9ddcfc67ba4bd4698ae1978d09447eb6ebf90055fdf3d21917ab",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.pm3.spice",
+      "sha256": "a5b543f8df7206f43d872d39fe19d17bf639ef088f0817ea33e935ad2d7ed75f",
+      "version_value_counts": {
+        "4.5": 108
+      },
+      "primitive_mos_calls": [
+        {
+          "subckt": "pfet_01v8",
+          "line": 33,
+          "primitive_instance": "msky130_fd_pr__pfet_01v8",
+          "primitive_model": "sky130_fd_pr__pfet_01v8__model",
+          "dynamic_flag_overrides": {}
+        }
+      ]
+    },
+    {
+      "relative_path": "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice",
+      "sha256": "ddb3ddcd4ccb85c1f68c51e41fd1d999d04de5d2836b43217841efd79912888a",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.pm3.spice",
+      "sha256": "98582c0da4bf077532e32dd61d79f07a3ae9f69985cd71449d93fb9ac1205832",
+      "version_value_counts": {
+        "4.5": 48
+      },
+      "primitive_mos_calls": [
+        {
+          "subckt": "pfet_01v8_lvt",
+          "line": 33,
+          "primitive_instance": "msky130_fd_pr__pfet_01v8_lvt",
+          "primitive_model": "sky130_fd_pr__pfet_01v8_lvt__model",
+          "dynamic_flag_overrides": {}
+        }
+      ]
+    },
+    {
+      "relative_path": "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice",
+      "sha256": "24a3b29d7d7f26f99098811c31eb5497950a3aed520ab83768a96f35467fe818",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice",
+      "sha256": "f4d560668712678ea60641de923fce7691e64acda951949f840986837c31741a",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice",
+      "sha256": "1855038a2ad2fe3989b64a17128d47daaa3dbc15d0f4db2c4526988923daa311",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice",
+      "sha256": "6fa9be51a32f2f66d8d0858159e1db7b72e37adca31020af8b1a0c2df6e72cb9",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    },
+    {
+      "relative_path": "models/all.spice",
+      "sha256": "7bc1575d8f06a1e74e16671883e46af6883a708231e0929723c2d845b6ea2ff2",
+      "version_value_counts": {},
+      "primitive_mos_calls": []
+    }
+  ],
+  "model_bodies_returned": false
+}

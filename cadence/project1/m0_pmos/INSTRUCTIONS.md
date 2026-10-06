@@ -14,7 +14,7 @@ unzip -n project1_pmos_dc_v0.1.0.zip
 Run in Cadence CIW:
 
 ```lisp
-load("/home/compute/l.hongyi/cadence_skywater/project1_handoff/m0_pmos_v0_1/create_tb_pmos.il")
+load("/home/cadence-user/cadence_skywater/project1_handoff/m0_pmos_v0_1/create_tb_pmos.il")
 ```
 
 Expect P1_PMOS_TOPOLOGY_CREATED; inspect CIW diagnostics. Completed generation does not establish circuit-check or simulation success. Preserve errors verbatim; do not repeatedly delete and rebuild a same-name cell.

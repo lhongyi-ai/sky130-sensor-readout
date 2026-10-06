@@ -1,0 +1,2149 @@
+{
+  "status": "NATIVE_NETLIST_AUDIT_PASS",
+  "scope": "Flat native connectivity and requested school_r1 parameters only; no simulator/performance/physical acceptance.",
+  "errors": [],
+  "instances": [
+    {
+      "name": "XADC_XPRE_XBP1",
+      "originalpath": "XADC/XPRE/XBP1",
+      "kind": "mos",
+      "line": 17,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_BP",
+        "XADC_XPRE_BP",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(10u)",
+        "l": "1u",
+        "as": "2.65p",
+        "ad": "2.65p",
+        "ps": "20.53u",
+        "pd": "20.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 10.0,
+        "target_w_um": 10.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XBP2",
+      "originalpath": "XADC/XPRE/XBP2",
+      "kind": "mos",
+      "line": 16,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_BN",
+        "XADC_XPRE_BP",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(10u)",
+        "l": "1u",
+        "as": "2.65p",
+        "ad": "2.65p",
+        "ps": "20.53u",
+        "pd": "20.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 10.0,
+        "target_w_um": 10.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XBN1",
+      "originalpath": "XADC/XPRE/XBN1",
+      "kind": "mos",
+      "line": 37,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_BN",
+        "XADC_XPRE_BN",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(8u)",
+        "l": "1u",
+        "as": "2.12p",
+        "ad": "2.12p",
+        "ps": "16.53u",
+        "pd": "16.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 8.0,
+        "target_w_um": 8.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XBN2",
+      "originalpath": "XADC/XPRE/XBN2",
+      "kind": "mos",
+      "line": 36,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_BP",
+        "XADC_XPRE_BN",
+        "XADC_XPRE_BRS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "1u",
+        "as": "8.48p",
+        "ad": "8.48p",
+        "ps": "64.53u",
+        "pd": "64.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 32.0,
+        "target_w_um": 32.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRBIAS_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRBIAS/XR",
+      "kind": "resistor",
+      "line": 69,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_BRS",
+        "XADC_XPRE_XRBIAS_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRBIAS_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRBIAS/XR",
+      "kind": "resistor",
+      "line": 68,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRBIAS_XR_SERIES_1",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XSTPU",
+      "originalpath": "XADC/XPRE/XSTPU",
+      "kind": "mos",
+      "line": 15,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_START",
+        "VSS",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(550n)",
+        "l": "10u",
+        "as": "145.75f",
+        "ad": "145.75f",
+        "ps": "1.63u",
+        "pd": "1.63u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 0.42,
+        "target_w_um": 0.55,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": true,
+        "target_over_original": 1.3095238095238095,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XSTOFF",
+      "originalpath": "XADC/XPRE/XSTOFF",
+      "kind": "mos",
+      "line": 35,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_START",
+        "XADC_XPRE_BN",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(20u)",
+        "l": "1u",
+        "as": "5.3p",
+        "ad": "5.3p",
+        "ps": "40.53u",
+        "pd": "40.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 20.0,
+        "target_w_um": 20.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XSTINJ",
+      "originalpath": "XADC/XPRE/XSTINJ",
+      "kind": "mos",
+      "line": 34,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_BP",
+        "XADC_XPRE_START",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(500n)",
+        "l": "2u",
+        "as": "132.5f",
+        "ad": "132.5f",
+        "ps": "1.53u",
+        "pd": "1.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 0.5,
+        "target_w_um": 0.5,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XIP",
+      "originalpath": "XADC/XPRE/XIP",
+      "kind": "mos",
+      "line": 33,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_PREN",
+        "XADC_TN",
+        "XADC_XPRE_TAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(30u)",
+        "l": "1u",
+        "as": "7.95p",
+        "ad": "7.95p",
+        "ps": "60.53u",
+        "pd": "60.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 30.0,
+        "target_w_um": 30.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XIN",
+      "originalpath": "XADC/XPRE/XIN",
+      "kind": "mos",
+      "line": 32,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_PREP",
+        "XADC_TP",
+        "XADC_XPRE_TAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(30u)",
+        "l": "1u",
+        "as": "7.95p",
+        "ad": "7.95p",
+        "ps": "60.53u",
+        "pd": "60.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 30.0,
+        "target_w_um": 30.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XTAIL",
+      "originalpath": "XADC/XPRE/XTAIL",
+      "kind": "mos",
+      "line": 31,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_TAIL",
+        "XADC_XPRE_BN",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "1u",
+        "as": "8.48p",
+        "ad": "8.48p",
+        "ps": "64.53u",
+        "pd": "64.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 32.0,
+        "target_w_um": 32.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR0_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR0/XR",
+      "kind": "resistor",
+      "line": 67,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "VDD",
+        "XADC_XPRE_XRP_XR0_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR0_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR0/XR",
+      "kind": "resistor",
+      "line": 66,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR0_XR_SERIES_1",
+        "XADC_XPRE_XRP_N1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR1_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR1/XR",
+      "kind": "resistor",
+      "line": 65,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N1",
+        "XADC_XPRE_XRP_XR1_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR1_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR1/XR",
+      "kind": "resistor",
+      "line": 64,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR1_XR_SERIES_1",
+        "XADC_XPRE_XRP_N2",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR2_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR2/XR",
+      "kind": "resistor",
+      "line": 63,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N2",
+        "XADC_XPRE_XRP_XR2_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR2_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR2/XR",
+      "kind": "resistor",
+      "line": 62,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR2_XR_SERIES_1",
+        "XADC_XPRE_XRP_N3",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR3_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR3/XR",
+      "kind": "resistor",
+      "line": 61,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N3",
+        "XADC_XPRE_XRP_XR3_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR3_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR3/XR",
+      "kind": "resistor",
+      "line": 60,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR3_XR_SERIES_1",
+        "XADC_XPRE_XRP_N4",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR4_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR4/XR",
+      "kind": "resistor",
+      "line": 59,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N4",
+        "XADC_XPRE_XRP_XR4_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR4_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR4/XR",
+      "kind": "resistor",
+      "line": 58,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR4_XR_SERIES_1",
+        "XADC_XPRE_XRP_N5",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR5_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR5/XR",
+      "kind": "resistor",
+      "line": 57,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N5",
+        "XADC_XPRE_XRP_XR5_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR5_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR5/XR",
+      "kind": "resistor",
+      "line": 56,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR5_XR_SERIES_1",
+        "XADC_XPRE_XRP_N6",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR6_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRP/XR6/XR",
+      "kind": "resistor",
+      "line": 55,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N6",
+        "XADC_XPRE_XRP_XR6_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR6_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRP/XR6/XR",
+      "kind": "resistor",
+      "line": 54,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_XR6_XR_SERIES_1",
+        "XADC_XPRE_XRP_N7",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRP_XR7_XR",
+      "originalpath": "XADC/XPRE/XRP/XR7/XR",
+      "kind": "resistor",
+      "line": 53,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRP_N7",
+        "XADC_PREP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR0_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR0/XR",
+      "kind": "resistor",
+      "line": 52,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "VDD",
+        "XADC_XPRE_XRN_XR0_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR0_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR0/XR",
+      "kind": "resistor",
+      "line": 51,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR0_XR_SERIES_1",
+        "XADC_XPRE_XRN_N1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR1_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR1/XR",
+      "kind": "resistor",
+      "line": 50,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N1",
+        "XADC_XPRE_XRN_XR1_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR1_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR1/XR",
+      "kind": "resistor",
+      "line": 49,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR1_XR_SERIES_1",
+        "XADC_XPRE_XRN_N2",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR2_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR2/XR",
+      "kind": "resistor",
+      "line": 48,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N2",
+        "XADC_XPRE_XRN_XR2_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR2_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR2/XR",
+      "kind": "resistor",
+      "line": 47,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR2_XR_SERIES_1",
+        "XADC_XPRE_XRN_N3",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR3_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR3/XR",
+      "kind": "resistor",
+      "line": 46,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N3",
+        "XADC_XPRE_XRN_XR3_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR3_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR3/XR",
+      "kind": "resistor",
+      "line": 45,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR3_XR_SERIES_1",
+        "XADC_XPRE_XRN_N4",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR4_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR4/XR",
+      "kind": "resistor",
+      "line": 44,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N4",
+        "XADC_XPRE_XRN_XR4_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR4_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR4/XR",
+      "kind": "resistor",
+      "line": 43,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR4_XR_SERIES_1",
+        "XADC_XPRE_XRN_N5",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR5_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR5/XR",
+      "kind": "resistor",
+      "line": 42,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N5",
+        "XADC_XPRE_XRN_XR5_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR5_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR5/XR",
+      "kind": "resistor",
+      "line": 41,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR5_XR_SERIES_1",
+        "XADC_XPRE_XRN_N6",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR6_XR_SEG_1",
+      "originalpath": "XADC/XPRE/XRN/XR6/XR",
+      "kind": "resistor",
+      "line": 40,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N6",
+        "XADC_XPRE_XRN_XR6_XR_SERIES_1",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR6_XR_SEG_2",
+      "originalpath": "XADC/XPRE/XRN/XR6/XR",
+      "kind": "resistor",
+      "line": 39,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_XR6_XR_SERIES_1",
+        "XADC_XPRE_XRN_N7",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XRN_XR7_XR",
+      "originalpath": "XADC/XPRE/XRN/XR7/XR",
+      "kind": "resistor",
+      "line": 38,
+      "model": "res_high_po_5p73",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XPRE_XRN_N7",
+        "XADC_PREN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "4.97951K",
+        "l": "86.99u",
+        "w": "5.73u"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XCP_XC",
+      "originalpath": "XADC/XPRE/XCP/XC",
+      "kind": "mim",
+      "line": 73,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XADC_PREP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "4u",
+        "w": "4u",
+        "m": "4"
+      }
+    },
+    {
+      "name": "XADC_XPRE_XCN_XC",
+      "originalpath": "XADC/XPRE/XCN/XC",
+      "kind": "mim",
+      "line": 72,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XADC_PREN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "4u",
+        "w": "4u",
+        "m": "4"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XIP",
+      "originalpath": "XADC/XCMP/XCORE/XIP",
+      "kind": "mos",
+      "line": 30,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XCORE_DP",
+        "XADC_PREP",
+        "XADC_XCMP_XCORE_TAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(8.4u)",
+        "l": "500n",
+        "as": "2.226p",
+        "ad": "2.226p",
+        "ps": "17.33u",
+        "pd": "17.33u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 8.4,
+        "target_w_um": 8.4,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XIN",
+      "originalpath": "XADC/XCMP/XCORE/XIN",
+      "kind": "mos",
+      "line": 29,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XCORE_DN",
+        "XADC_PREN",
+        "XADC_XCMP_XCORE_TAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(8.4u)",
+        "l": "500n",
+        "as": "2.226p",
+        "ad": "2.226p",
+        "ps": "17.33u",
+        "pd": "17.33u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 8.4,
+        "target_w_um": 8.4,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XT",
+      "originalpath": "XADC/XCMP/XCORE/XT",
+      "kind": "mos",
+      "line": 28,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XCORE_TAIL",
+        "EVAL",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(16u)",
+        "l": "150n",
+        "as": "4.24p",
+        "ad": "4.24p",
+        "ps": "32.53u",
+        "pd": "32.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 16.0,
+        "target_w_um": 16.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XLN",
+      "originalpath": "XADC/XCMP/XCORE/XLN",
+      "kind": "mos",
+      "line": 27,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_DNEG",
+        "XADC_XCMP_DPOS",
+        "XADC_XCMP_XCORE_DP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XLP",
+      "originalpath": "XADC/XCMP/XCORE/XLP",
+      "kind": "mos",
+      "line": 26,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_DPOS",
+        "XADC_XCMP_DNEG",
+        "XADC_XCMP_XCORE_DN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XPN",
+      "originalpath": "XADC/XCMP/XCORE/XPN",
+      "kind": "mos",
+      "line": 14,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_DNEG",
+        "XADC_XCMP_DPOS",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(8u)",
+        "l": "150n",
+        "as": "2.12p",
+        "ad": "2.12p",
+        "ps": "16.53u",
+        "pd": "16.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 8.0,
+        "target_w_um": 8.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XPP",
+      "originalpath": "XADC/XCMP/XCORE/XPP",
+      "kind": "mos",
+      "line": 13,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_DPOS",
+        "XADC_XCMP_DNEG",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(8u)",
+        "l": "150n",
+        "as": "2.12p",
+        "ad": "2.12p",
+        "ps": "16.53u",
+        "pd": "16.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 8.0,
+        "target_w_um": 8.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XRN",
+      "originalpath": "XADC/XCMP/XCORE/XRN",
+      "kind": "mos",
+      "line": 12,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_DNEG",
+        "EVAL",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XRP",
+      "originalpath": "XADC/XCMP/XCORE/XRP",
+      "kind": "mos",
+      "line": 11,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_DPOS",
+        "EVAL",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XRDN",
+      "originalpath": "XADC/XCMP/XCORE/XRDN",
+      "kind": "mos",
+      "line": 10,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XCORE_DP",
+        "EVAL",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XCORE_XRDP",
+      "originalpath": "XADC/XCMP/XCORE/XRDP",
+      "kind": "mos",
+      "line": 9,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XCORE_DN",
+        "EVAL",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XLOADP_XC",
+      "originalpath": "XADC/XCMP/XLOADP/XC",
+      "kind": "mim",
+      "line": 71,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XADC_XCMP_DPOS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "4u",
+        "w": "4u",
+        "m": "16"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XLOADN_XC",
+      "originalpath": "XADC/XCMP/XLOADN/XC",
+      "kind": "mim",
+      "line": 70,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XADC_XCMP_DNEG",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "4u",
+        "w": "4u",
+        "m": "16"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBP1_XP",
+      "originalpath": "XADC/XCMP/XBP1/XP",
+      "kind": "mos",
+      "line": 8,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BPB",
+        "XADC_XCMP_DPOS",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBP1_XN",
+      "originalpath": "XADC/XCMP/XBP1/XN",
+      "kind": "mos",
+      "line": 25,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BPB",
+        "XADC_XCMP_DPOS",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBP2_XP",
+      "originalpath": "XADC/XCMP/XBP2/XP",
+      "kind": "mos",
+      "line": 7,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BP",
+        "XADC_XCMP_BPB",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBP2_XN",
+      "originalpath": "XADC/XCMP/XBP2/XN",
+      "kind": "mos",
+      "line": 24,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BP",
+        "XADC_XCMP_BPB",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBN1_XP",
+      "originalpath": "XADC/XCMP/XBN1/XP",
+      "kind": "mos",
+      "line": 6,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BNB",
+        "XADC_XCMP_DNEG",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBN1_XN",
+      "originalpath": "XADC/XCMP/XBN1/XN",
+      "kind": "mos",
+      "line": 23,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BNB",
+        "XADC_XCMP_DNEG",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBN2_XP",
+      "originalpath": "XADC/XCMP/XBN2/XP",
+      "kind": "mos",
+      "line": 5,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BN",
+        "XADC_XCMP_BNB",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XBN2_XN",
+      "originalpath": "XADC/XCMP/XBN2/XN",
+      "kind": "mos",
+      "line": 22,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_BN",
+        "XADC_XCMP_BNB",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XSET_XP1",
+      "originalpath": "XADC/XCMP/XSET/XP1",
+      "kind": "mos",
+      "line": 4,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "Q",
+        "XADC_XCMP_BN",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XSET_XP2",
+      "originalpath": "XADC/XCMP/XSET/XP2",
+      "kind": "mos",
+      "line": 3,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "Q",
+        "QB",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XSET_XN1",
+      "originalpath": "XADC/XCMP/XSET/XN1",
+      "kind": "mos",
+      "line": 21,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "Q",
+        "XADC_XCMP_BN",
+        "XADC_XCMP_XSET_MID",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XSET_XN2",
+      "originalpath": "XADC/XCMP/XSET/XN2",
+      "kind": "mos",
+      "line": 20,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XSET_MID",
+        "QB",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XRESET_XP1",
+      "originalpath": "XADC/XCMP/XRESET/XP1",
+      "kind": "mos",
+      "line": 2,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "QB",
+        "XADC_XCMP_BP",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XRESET_XP2",
+      "originalpath": "XADC/XCMP/XRESET/XP2",
+      "kind": "mos",
+      "line": 1,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "QB",
+        "Q",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XRESET_XN1",
+      "originalpath": "XADC/XCMP/XRESET/XN1",
+      "kind": "mos",
+      "line": 19,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "QB",
+        "XADC_XCMP_BP",
+        "XADC_XCMP_XRESET_MID",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XADC_XCMP_XRESET_XN2",
+      "originalpath": "XADC/XCMP/XRESET/XN2",
+      "kind": "mos",
+      "line": 18,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XADC_XCMP_XRESET_MID",
+        "Q",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    }
+  ],
+  "cdf_r_usage": "Recorded for traceability only; never used as actual model resistance or acceptance threshold.",
+  "headers": [],
+  "expected_count": 73,
+  "actual_count": 73,
+  "expected_counts_by_kind": {
+    "mos": 37,
+    "resistor": 32,
+    "mim": 4
+  },
+  "native_net_count": 54,
+  "error_count": 0,
+  "limitations": [
+    "Source/drain geometry is recorded and required to be nonnegative when exported; physical equivalence is not established.",
+    "MIM multiplier matches requested netlist only; actual capacitance/statistical averaging requires simulation/model evidence.",
+    "No model loading, Spectre success, waveform, stability, noise, PVT, DRC/LVS or parasitic qualification is inferred."
+  ],
+  "inputs": {
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/comparator_reset_prepared/native_body.scs": {
+      "sha256": "e2121ee205f63469ccd6303338a6289ad29053b6b5ac4862edc38a0473a0a0e7",
+      "size_bytes": 8870
+    },
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/comparator_reset_prepared/objects.json": {
+      "sha256": "debc1729fac677b07c54286ee460b3cb745928c8ef5728eb2e5436731518725b",
+      "size_bytes": 72069
+    }
+  }
+}

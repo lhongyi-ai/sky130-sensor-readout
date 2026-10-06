@@ -1,0 +1,900 @@
+{
+  "status": "DC_OUTPUT_OBSERVABILITY_REVIEW_ONLY",
+  "profile": "baseline",
+  "run": "sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163",
+  "input_sha256": "37bc520eb54f4315057fcf0ba302864825cb07c6d43b7163bbe0d084fd0e54b0",
+  "exit_code": 0,
+  "sweeps": {
+    "dc_wide_up": {
+      "raw_path": "sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163/input.raw/dc_wide_up.dc",
+      "sha256": "79c8052872ce2b2624ce4668d5e843a4bb8e1a5998c1e049b8ee9a602998ddf4",
+      "actual_header": {
+        "PSFversion": "1.00",
+        "simulator": "spectre",
+        "version": "21.1.0.132.isr1",
+        "date": "3:07:29 AM, Thur Sep 24, 2026",
+        "design": "// Static DC mode-boundary / charge diagnostic. No transient or ADC acceptance.",
+        "analysis type": "dc",
+        "analysis name": "dc_wide_up",
+        "analysis description": "DC Analysis `dc_wide_up': VDELTA = (-20e-03 -> 20e-03)",
+        "xVecSorted": "unsorted",
+        "tolerance.relative": 1e-05,
+        "reltol": 1e-05,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "temp": 27.0,
+        "tnom": 27.0,
+        "tempeffects": "all",
+        "gmindc": 1e-12
+      },
+      "actual_axis": "VDELTA",
+      "actual_schema": {
+        "XTEST.msky130_fd_pr__pfet_01v8:qbi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qsi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qdi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgsovl": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgdovl": "Coul",
+        "VD:p": "I",
+        "VG:p": "I",
+        "VS:p": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:d": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:g": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:s": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:b": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:region": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:reversed": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:ids": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vds": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vbs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgd": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vdb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:gm": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gds": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gmbs": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cds": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:css": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cggbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cddbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:id": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:qg": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qb": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:sbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:dbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:int_b": "V",
+        "SB": "V",
+        "G": "V",
+        "D": "V"
+      },
+      "OP_aliases": {
+        "region": "XTEST.msky130_fd_pr__pfet_01v8:region",
+        "reversed": "XTEST.msky130_fd_pr__pfet_01v8:reversed",
+        "vgs": "XTEST.msky130_fd_pr__pfet_01v8:vgs",
+        "vds": "XTEST.msky130_fd_pr__pfet_01v8:vds",
+        "vbs": "XTEST.msky130_fd_pr__pfet_01v8:vbs",
+        "vgd": "XTEST.msky130_fd_pr__pfet_01v8:vgd",
+        "vdb": "XTEST.msky130_fd_pr__pfet_01v8:vdb",
+        "vgb": "XTEST.msky130_fd_pr__pfet_01v8:vgb",
+        "ids": "XTEST.msky130_fd_pr__pfet_01v8:ids",
+        "id": "XTEST.msky130_fd_pr__pfet_01v8:id",
+        "gm": "XTEST.msky130_fd_pr__pfet_01v8:gm",
+        "gds": "XTEST.msky130_fd_pr__pfet_01v8:gds",
+        "gmbs": "XTEST.msky130_fd_pr__pfet_01v8:gmbs",
+        "qg": "XTEST.msky130_fd_pr__pfet_01v8:qg",
+        "qd": "XTEST.msky130_fd_pr__pfet_01v8:qd",
+        "qs": "XTEST.msky130_fd_pr__pfet_01v8:qs",
+        "qb": "XTEST.msky130_fd_pr__pfet_01v8:qb",
+        "qjd": "XTEST.msky130_fd_pr__pfet_01v8:qjd",
+        "qjs": "XTEST.msky130_fd_pr__pfet_01v8:qjs",
+        "qgdovl": "XTEST.msky130_fd_pr__pfet_01v8:qgdovl",
+        "qgsovl": "XTEST.msky130_fd_pr__pfet_01v8:qgsovl",
+        "qgi": "XTEST.msky130_fd_pr__pfet_01v8:qgi",
+        "qdi": "XTEST.msky130_fd_pr__pfet_01v8:qdi",
+        "qsi": "XTEST.msky130_fd_pr__pfet_01v8:qsi",
+        "qbi": "XTEST.msky130_fd_pr__pfet_01v8:qbi",
+        "cgg": "XTEST.msky130_fd_pr__pfet_01v8:cgg",
+        "cgd": "XTEST.msky130_fd_pr__pfet_01v8:cgd",
+        "cgs": "XTEST.msky130_fd_pr__pfet_01v8:cgs",
+        "cgb": "XTEST.msky130_fd_pr__pfet_01v8:cgb",
+        "cdg": "XTEST.msky130_fd_pr__pfet_01v8:cdg",
+        "cdd": "XTEST.msky130_fd_pr__pfet_01v8:cdd",
+        "cds": "XTEST.msky130_fd_pr__pfet_01v8:cds",
+        "cdb": "XTEST.msky130_fd_pr__pfet_01v8:cdb",
+        "csg": "XTEST.msky130_fd_pr__pfet_01v8:csg",
+        "csd": "XTEST.msky130_fd_pr__pfet_01v8:csd",
+        "css": "XTEST.msky130_fd_pr__pfet_01v8:css",
+        "csb": "XTEST.msky130_fd_pr__pfet_01v8:csb",
+        "cbg": "XTEST.msky130_fd_pr__pfet_01v8:cbg",
+        "cbd": "XTEST.msky130_fd_pr__pfet_01v8:cbd",
+        "cbs": "XTEST.msky130_fd_pr__pfet_01v8:cbs",
+        "cbb": "XTEST.msky130_fd_pr__pfet_01v8:cbb",
+        "cjd": "XTEST.msky130_fd_pr__pfet_01v8:cjd",
+        "cjs": "XTEST.msky130_fd_pr__pfet_01v8:cjs",
+        "cggbo": "XTEST.msky130_fd_pr__pfet_01v8:cggbo",
+        "cgdbo": "XTEST.msky130_fd_pr__pfet_01v8:cgdbo",
+        "cgsbo": "XTEST.msky130_fd_pr__pfet_01v8:cgsbo",
+        "cbgbo": "XTEST.msky130_fd_pr__pfet_01v8:cbgbo",
+        "cbdbo": "XTEST.msky130_fd_pr__pfet_01v8:cbdbo",
+        "cbsbo": "XTEST.msky130_fd_pr__pfet_01v8:cbsbo",
+        "cdgbo": "XTEST.msky130_fd_pr__pfet_01v8:cdgbo",
+        "cddbo": "XTEST.msky130_fd_pr__pfet_01v8:cddbo",
+        "cdsbo": "XTEST.msky130_fd_pr__pfet_01v8:cdsbo"
+      },
+      "missing_requested_OP_fields": [
+        "ig",
+        "is",
+        "ib"
+      ],
+      "missing_OP_handling": "Notfilledorsynthesized; actuald/g/s/bterminalcurrents are separate saved observables, not replacementclaimedfor missingOPaliases.",
+      "actual_points": 401,
+      "expected_points": 401,
+      "point_count_matches": true,
+      "actual_axis_range": [
+        -0.02,
+        0.02
+      ],
+      "measured_D_minus_SB_range_V": [
+        -0.020000000000000018,
+        0.020000000000000018
+      ],
+      "requested_range_V": [
+        -0.02,
+        0.02
+      ],
+      "reversed_values": [
+        0.0,
+        1.0
+      ],
+      "q_ranges_C": {
+        "qg": [
+          -4.408870526542433e-14,
+          -4.361108530221635e-14
+        ],
+        "qd": [
+          3.80055943630746e-15,
+          4.396960467256534e-15
+        ],
+        "qs": [
+          4.021415545668955e-15,
+          4.188839667856254e-15
+        ],
+        "qb": [
+          3.54992305894823e-14,
+          3.578911032023994e-14
+        ],
+        "qjd": [
+          -3.439227348522926e-16,
+          3.401505338051752e-16
+        ],
+        "qjs": [
+          -2.980846423254893e-27,
+          3.607508059673856e-27
+        ],
+        "qgi": [
+          -4.408870526542433e-14,
+          -4.361108530221635e-14
+        ],
+        "qdi": [
+          3.80055943630746e-15,
+          4.396960467256534e-15
+        ],
+        "qsi": [
+          4.021415545668955e-15,
+          4.188839667856254e-15
+        ],
+        "qbi": [
+          3.54992305894823e-14,
+          3.578911032023994e-14
+        ]
+      },
+      "mode_edges": [
+        {
+          "before_axis": -0.0001000000000000662,
+          "after_axis": 0.0,
+          "before_reversed": 0.0,
+          "after_reversed": 1.0
+        }
+      ],
+      "analysis_limit": "Schema/finitevaluescheckedonly; no charge-conservation,partialderivative equivalence or physicalcontinuity conclusion."
+    },
+    "dc_wide_down": {
+      "raw_path": "sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163/input.raw/dc_wide_down.dc",
+      "sha256": "7b4d383389b459c4d7c3795ab65150c892c410f90c80b8490a18e1d91f46e170",
+      "actual_header": {
+        "PSFversion": "1.00",
+        "simulator": "spectre",
+        "version": "21.1.0.132.isr1",
+        "date": "3:07:29 AM, Thur Sep 24, 2026",
+        "design": "// Static DC mode-boundary / charge diagnostic. No transient or ADC acceptance.",
+        "analysis type": "dc",
+        "analysis name": "dc_wide_down",
+        "analysis description": "DC Analysis `dc_wide_down': VDELTA = (20e-03 -> -20e-03)",
+        "xVecSorted": "unsorted",
+        "tolerance.relative": 1e-05,
+        "reltol": 1e-05,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "temp": 27.0,
+        "tnom": 27.0,
+        "tempeffects": "all",
+        "gmindc": 1e-12
+      },
+      "actual_axis": "VDELTA",
+      "actual_schema": {
+        "XTEST.msky130_fd_pr__pfet_01v8:qbi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qsi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qdi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgsovl": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgdovl": "Coul",
+        "VD:p": "I",
+        "VG:p": "I",
+        "VS:p": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:d": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:g": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:s": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:b": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:region": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:reversed": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:ids": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vds": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vbs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgd": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vdb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:gm": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gds": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gmbs": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cds": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:css": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cggbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cddbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:id": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:qg": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qb": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:sbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:dbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:int_b": "V",
+        "SB": "V",
+        "G": "V",
+        "D": "V"
+      },
+      "OP_aliases": {
+        "region": "XTEST.msky130_fd_pr__pfet_01v8:region",
+        "reversed": "XTEST.msky130_fd_pr__pfet_01v8:reversed",
+        "vgs": "XTEST.msky130_fd_pr__pfet_01v8:vgs",
+        "vds": "XTEST.msky130_fd_pr__pfet_01v8:vds",
+        "vbs": "XTEST.msky130_fd_pr__pfet_01v8:vbs",
+        "vgd": "XTEST.msky130_fd_pr__pfet_01v8:vgd",
+        "vdb": "XTEST.msky130_fd_pr__pfet_01v8:vdb",
+        "vgb": "XTEST.msky130_fd_pr__pfet_01v8:vgb",
+        "ids": "XTEST.msky130_fd_pr__pfet_01v8:ids",
+        "id": "XTEST.msky130_fd_pr__pfet_01v8:id",
+        "gm": "XTEST.msky130_fd_pr__pfet_01v8:gm",
+        "gds": "XTEST.msky130_fd_pr__pfet_01v8:gds",
+        "gmbs": "XTEST.msky130_fd_pr__pfet_01v8:gmbs",
+        "qg": "XTEST.msky130_fd_pr__pfet_01v8:qg",
+        "qd": "XTEST.msky130_fd_pr__pfet_01v8:qd",
+        "qs": "XTEST.msky130_fd_pr__pfet_01v8:qs",
+        "qb": "XTEST.msky130_fd_pr__pfet_01v8:qb",
+        "qjd": "XTEST.msky130_fd_pr__pfet_01v8:qjd",
+        "qjs": "XTEST.msky130_fd_pr__pfet_01v8:qjs",
+        "qgdovl": "XTEST.msky130_fd_pr__pfet_01v8:qgdovl",
+        "qgsovl": "XTEST.msky130_fd_pr__pfet_01v8:qgsovl",
+        "qgi": "XTEST.msky130_fd_pr__pfet_01v8:qgi",
+        "qdi": "XTEST.msky130_fd_pr__pfet_01v8:qdi",
+        "qsi": "XTEST.msky130_fd_pr__pfet_01v8:qsi",
+        "qbi": "XTEST.msky130_fd_pr__pfet_01v8:qbi",
+        "cgg": "XTEST.msky130_fd_pr__pfet_01v8:cgg",
+        "cgd": "XTEST.msky130_fd_pr__pfet_01v8:cgd",
+        "cgs": "XTEST.msky130_fd_pr__pfet_01v8:cgs",
+        "cgb": "XTEST.msky130_fd_pr__pfet_01v8:cgb",
+        "cdg": "XTEST.msky130_fd_pr__pfet_01v8:cdg",
+        "cdd": "XTEST.msky130_fd_pr__pfet_01v8:cdd",
+        "cds": "XTEST.msky130_fd_pr__pfet_01v8:cds",
+        "cdb": "XTEST.msky130_fd_pr__pfet_01v8:cdb",
+        "csg": "XTEST.msky130_fd_pr__pfet_01v8:csg",
+        "csd": "XTEST.msky130_fd_pr__pfet_01v8:csd",
+        "css": "XTEST.msky130_fd_pr__pfet_01v8:css",
+        "csb": "XTEST.msky130_fd_pr__pfet_01v8:csb",
+        "cbg": "XTEST.msky130_fd_pr__pfet_01v8:cbg",
+        "cbd": "XTEST.msky130_fd_pr__pfet_01v8:cbd",
+        "cbs": "XTEST.msky130_fd_pr__pfet_01v8:cbs",
+        "cbb": "XTEST.msky130_fd_pr__pfet_01v8:cbb",
+        "cjd": "XTEST.msky130_fd_pr__pfet_01v8:cjd",
+        "cjs": "XTEST.msky130_fd_pr__pfet_01v8:cjs",
+        "cggbo": "XTEST.msky130_fd_pr__pfet_01v8:cggbo",
+        "cgdbo": "XTEST.msky130_fd_pr__pfet_01v8:cgdbo",
+        "cgsbo": "XTEST.msky130_fd_pr__pfet_01v8:cgsbo",
+        "cbgbo": "XTEST.msky130_fd_pr__pfet_01v8:cbgbo",
+        "cbdbo": "XTEST.msky130_fd_pr__pfet_01v8:cbdbo",
+        "cbsbo": "XTEST.msky130_fd_pr__pfet_01v8:cbsbo",
+        "cdgbo": "XTEST.msky130_fd_pr__pfet_01v8:cdgbo",
+        "cddbo": "XTEST.msky130_fd_pr__pfet_01v8:cddbo",
+        "cdsbo": "XTEST.msky130_fd_pr__pfet_01v8:cdsbo"
+      },
+      "missing_requested_OP_fields": [
+        "ig",
+        "is",
+        "ib"
+      ],
+      "missing_OP_handling": "Notfilledorsynthesized; actuald/g/s/bterminalcurrents are separate saved observables, not replacementclaimedfor missingOPaliases.",
+      "actual_points": 401,
+      "expected_points": 401,
+      "point_count_matches": true,
+      "actual_axis_range": [
+        0.02,
+        -0.02
+      ],
+      "measured_D_minus_SB_range_V": [
+        0.020000000000000018,
+        -0.020000000000000018
+      ],
+      "requested_range_V": [
+        0.02,
+        -0.02
+      ],
+      "reversed_values": [
+        0.0,
+        1.0
+      ],
+      "q_ranges_C": {
+        "qg": [
+          -4.408870526542433e-14,
+          -4.361108530221635e-14
+        ],
+        "qd": [
+          3.80055943630746e-15,
+          4.396960467256534e-15
+        ],
+        "qs": [
+          4.021415545668955e-15,
+          4.188839667856254e-15
+        ],
+        "qb": [
+          3.54992305894823e-14,
+          3.578911032023994e-14
+        ],
+        "qjd": [
+          -3.439227348522926e-16,
+          3.401505338051752e-16
+        ],
+        "qjs": [
+          -2.980846423254893e-27,
+          3.607508059673856e-27
+        ],
+        "qgi": [
+          -4.408870526542433e-14,
+          -4.361108530221635e-14
+        ],
+        "qdi": [
+          3.80055943630746e-15,
+          4.396960467256534e-15
+        ],
+        "qsi": [
+          4.021415545668955e-15,
+          4.188839667856254e-15
+        ],
+        "qbi": [
+          3.54992305894823e-14,
+          3.578911032023994e-14
+        ]
+      },
+      "mode_edges": [
+        {
+          "before_axis": 0.0,
+          "after_axis": -0.0001,
+          "before_reversed": 1.0,
+          "after_reversed": 0.0
+        }
+      ],
+      "analysis_limit": "Schema/finitevaluescheckedonly; no charge-conservation,partialderivative equivalence or physicalcontinuity conclusion."
+    },
+    "dc_fine_up": {
+      "raw_path": "sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163/input.raw/dc_fine_up.dc",
+      "sha256": "051c82c9a9f852e7b72096986be386bf0ba2eb36fc9577128616639959197f59",
+      "actual_header": {
+        "PSFversion": "1.00",
+        "simulator": "spectre",
+        "version": "21.1.0.132.isr1",
+        "date": "3:07:29 AM, Thur Sep 24, 2026",
+        "design": "// Static DC mode-boundary / charge diagnostic. No transient or ADC acceptance.",
+        "analysis type": "dc",
+        "analysis name": "dc_fine_up",
+        "analysis description": "DC Analysis `dc_fine_up': VDELTA = (-1e-03 -> 1e-03)",
+        "xVecSorted": "unsorted",
+        "tolerance.relative": 1e-05,
+        "reltol": 1e-05,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "temp": 27.0,
+        "tnom": 27.0,
+        "tempeffects": "all",
+        "gmindc": 1e-12
+      },
+      "actual_axis": "VDELTA",
+      "actual_schema": {
+        "XTEST.msky130_fd_pr__pfet_01v8:qbi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qsi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qdi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgsovl": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgdovl": "Coul",
+        "VD:p": "I",
+        "VG:p": "I",
+        "VS:p": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:d": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:g": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:s": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:b": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:region": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:reversed": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:ids": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vds": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vbs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgd": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vdb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:gm": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gds": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gmbs": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cds": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:css": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cggbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cddbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:id": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:qg": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qb": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:sbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:dbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:int_b": "V",
+        "SB": "V",
+        "G": "V",
+        "D": "V"
+      },
+      "OP_aliases": {
+        "region": "XTEST.msky130_fd_pr__pfet_01v8:region",
+        "reversed": "XTEST.msky130_fd_pr__pfet_01v8:reversed",
+        "vgs": "XTEST.msky130_fd_pr__pfet_01v8:vgs",
+        "vds": "XTEST.msky130_fd_pr__pfet_01v8:vds",
+        "vbs": "XTEST.msky130_fd_pr__pfet_01v8:vbs",
+        "vgd": "XTEST.msky130_fd_pr__pfet_01v8:vgd",
+        "vdb": "XTEST.msky130_fd_pr__pfet_01v8:vdb",
+        "vgb": "XTEST.msky130_fd_pr__pfet_01v8:vgb",
+        "ids": "XTEST.msky130_fd_pr__pfet_01v8:ids",
+        "id": "XTEST.msky130_fd_pr__pfet_01v8:id",
+        "gm": "XTEST.msky130_fd_pr__pfet_01v8:gm",
+        "gds": "XTEST.msky130_fd_pr__pfet_01v8:gds",
+        "gmbs": "XTEST.msky130_fd_pr__pfet_01v8:gmbs",
+        "qg": "XTEST.msky130_fd_pr__pfet_01v8:qg",
+        "qd": "XTEST.msky130_fd_pr__pfet_01v8:qd",
+        "qs": "XTEST.msky130_fd_pr__pfet_01v8:qs",
+        "qb": "XTEST.msky130_fd_pr__pfet_01v8:qb",
+        "qjd": "XTEST.msky130_fd_pr__pfet_01v8:qjd",
+        "qjs": "XTEST.msky130_fd_pr__pfet_01v8:qjs",
+        "qgdovl": "XTEST.msky130_fd_pr__pfet_01v8:qgdovl",
+        "qgsovl": "XTEST.msky130_fd_pr__pfet_01v8:qgsovl",
+        "qgi": "XTEST.msky130_fd_pr__pfet_01v8:qgi",
+        "qdi": "XTEST.msky130_fd_pr__pfet_01v8:qdi",
+        "qsi": "XTEST.msky130_fd_pr__pfet_01v8:qsi",
+        "qbi": "XTEST.msky130_fd_pr__pfet_01v8:qbi",
+        "cgg": "XTEST.msky130_fd_pr__pfet_01v8:cgg",
+        "cgd": "XTEST.msky130_fd_pr__pfet_01v8:cgd",
+        "cgs": "XTEST.msky130_fd_pr__pfet_01v8:cgs",
+        "cgb": "XTEST.msky130_fd_pr__pfet_01v8:cgb",
+        "cdg": "XTEST.msky130_fd_pr__pfet_01v8:cdg",
+        "cdd": "XTEST.msky130_fd_pr__pfet_01v8:cdd",
+        "cds": "XTEST.msky130_fd_pr__pfet_01v8:cds",
+        "cdb": "XTEST.msky130_fd_pr__pfet_01v8:cdb",
+        "csg": "XTEST.msky130_fd_pr__pfet_01v8:csg",
+        "csd": "XTEST.msky130_fd_pr__pfet_01v8:csd",
+        "css": "XTEST.msky130_fd_pr__pfet_01v8:css",
+        "csb": "XTEST.msky130_fd_pr__pfet_01v8:csb",
+        "cbg": "XTEST.msky130_fd_pr__pfet_01v8:cbg",
+        "cbd": "XTEST.msky130_fd_pr__pfet_01v8:cbd",
+        "cbs": "XTEST.msky130_fd_pr__pfet_01v8:cbs",
+        "cbb": "XTEST.msky130_fd_pr__pfet_01v8:cbb",
+        "cjd": "XTEST.msky130_fd_pr__pfet_01v8:cjd",
+        "cjs": "XTEST.msky130_fd_pr__pfet_01v8:cjs",
+        "cggbo": "XTEST.msky130_fd_pr__pfet_01v8:cggbo",
+        "cgdbo": "XTEST.msky130_fd_pr__pfet_01v8:cgdbo",
+        "cgsbo": "XTEST.msky130_fd_pr__pfet_01v8:cgsbo",
+        "cbgbo": "XTEST.msky130_fd_pr__pfet_01v8:cbgbo",
+        "cbdbo": "XTEST.msky130_fd_pr__pfet_01v8:cbdbo",
+        "cbsbo": "XTEST.msky130_fd_pr__pfet_01v8:cbsbo",
+        "cdgbo": "XTEST.msky130_fd_pr__pfet_01v8:cdgbo",
+        "cddbo": "XTEST.msky130_fd_pr__pfet_01v8:cddbo",
+        "cdsbo": "XTEST.msky130_fd_pr__pfet_01v8:cdsbo"
+      },
+      "missing_requested_OP_fields": [
+        "ig",
+        "is",
+        "ib"
+      ],
+      "missing_OP_handling": "Notfilledorsynthesized; actuald/g/s/bterminalcurrents are separate saved observables, not replacementclaimedfor missingOPaliases.",
+      "actual_points": 2001,
+      "expected_points": 2001,
+      "point_count_matches": true,
+      "actual_axis_range": [
+        -0.001,
+        0.001
+      ],
+      "measured_D_minus_SB_range_V": [
+        -0.001000000000000112,
+        0.0009999999999998899
+      ],
+      "requested_range_V": [
+        -0.001,
+        0.001
+      ],
+      "reversed_values": [
+        0.0,
+        1.0
+      ],
+      "q_ranges_C": {
+        "qg": [
+          -4.388636269456216e-14,
+          -4.386269622411298e-14
+        ],
+        "qd": [
+          4.168320474057459e-15,
+          4.198294884845232e-15
+        ],
+        "qs": [
+          4.179699694046901e-15,
+          4.188839667856254e-15
+        ],
+        "qb": [
+          3.54992305894823e-14,
+          3.551467605600862e-14
+        ],
+        "qjd": [
+          -1.710606403250264e-17,
+          1.709658527033895e-17
+        ],
+        "qjs": [
+          -1.632820333757383e-28,
+          1.54391373080227e-28
+        ],
+        "qgi": [
+          -4.388636269456216e-14,
+          -4.386269622411298e-14
+        ],
+        "qdi": [
+          4.168320474057459e-15,
+          4.198294884845232e-15
+        ],
+        "qsi": [
+          4.179699694046901e-15,
+          4.188839667856254e-15
+        ],
+        "qbi": [
+          3.54992305894823e-14,
+          3.551467605600862e-14
+        ]
+      },
+      "mode_edges": [
+        {
+          "before_axis": -9.999999999847496e-07,
+          "after_axis": 0.0,
+          "before_reversed": 0.0,
+          "after_reversed": 1.0
+        }
+      ],
+      "analysis_limit": "Schema/finitevaluescheckedonly; no charge-conservation,partialderivative equivalence or physicalcontinuity conclusion."
+    },
+    "dc_fine_down": {
+      "raw_path": "sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163/input.raw/dc_fine_down.dc",
+      "sha256": "303a878237305713c350288e6441dcf22323a7ba903f5bfe8c034eddfd041c51",
+      "actual_header": {
+        "PSFversion": "1.00",
+        "simulator": "spectre",
+        "version": "21.1.0.132.isr1",
+        "date": "3:07:29 AM, Thur Sep 24, 2026",
+        "design": "// Static DC mode-boundary / charge diagnostic. No transient or ADC acceptance.",
+        "analysis type": "dc",
+        "analysis name": "dc_fine_down",
+        "analysis description": "DC Analysis `dc_fine_down': VDELTA = (1e-03 -> -1e-03)",
+        "xVecSorted": "unsorted",
+        "tolerance.relative": 1e-05,
+        "reltol": 1e-05,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "temp": 27.0,
+        "tnom": 27.0,
+        "tempeffects": "all",
+        "gmindc": 1e-12
+      },
+      "actual_axis": "VDELTA",
+      "actual_schema": {
+        "XTEST.msky130_fd_pr__pfet_01v8:qbi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qsi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qdi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgi": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgsovl": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qgdovl": "Coul",
+        "VD:p": "I",
+        "VG:p": "I",
+        "VS:p": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:d": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:g": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:s": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:b": "I",
+        "XTEST.msky130_fd_pr__pfet_01v8:region": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:reversed": "-enum",
+        "XTEST.msky130_fd_pr__pfet_01v8:ids": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vds": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vbs": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgd": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vdb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:vgb": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:gm": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gds": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:gmbs": "S",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cjs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cds": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:css": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:csb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbg": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbd": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbs": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbb": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cggbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cgsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbdbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cbsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdgbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cddbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:cdsbo": "F",
+        "XTEST.msky130_fd_pr__pfet_01v8:id": "A",
+        "XTEST.msky130_fd_pr__pfet_01v8:qg": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qb": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjd": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:qjs": "Coul",
+        "XTEST.msky130_fd_pr__pfet_01v8:sbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:dbnode": "V",
+        "XTEST.msky130_fd_pr__pfet_01v8:int_b": "V",
+        "SB": "V",
+        "G": "V",
+        "D": "V"
+      },
+      "OP_aliases": {
+        "region": "XTEST.msky130_fd_pr__pfet_01v8:region",
+        "reversed": "XTEST.msky130_fd_pr__pfet_01v8:reversed",
+        "vgs": "XTEST.msky130_fd_pr__pfet_01v8:vgs",
+        "vds": "XTEST.msky130_fd_pr__pfet_01v8:vds",
+        "vbs": "XTEST.msky130_fd_pr__pfet_01v8:vbs",
+        "vgd": "XTEST.msky130_fd_pr__pfet_01v8:vgd",
+        "vdb": "XTEST.msky130_fd_pr__pfet_01v8:vdb",
+        "vgb": "XTEST.msky130_fd_pr__pfet_01v8:vgb",
+        "ids": "XTEST.msky130_fd_pr__pfet_01v8:ids",
+        "id": "XTEST.msky130_fd_pr__pfet_01v8:id",
+        "gm": "XTEST.msky130_fd_pr__pfet_01v8:gm",
+        "gds": "XTEST.msky130_fd_pr__pfet_01v8:gds",
+        "gmbs": "XTEST.msky130_fd_pr__pfet_01v8:gmbs",
+        "qg": "XTEST.msky130_fd_pr__pfet_01v8:qg",
+        "qd": "XTEST.msky130_fd_pr__pfet_01v8:qd",
+        "qs": "XTEST.msky130_fd_pr__pfet_01v8:qs",
+        "qb": "XTEST.msky130_fd_pr__pfet_01v8:qb",
+        "qjd": "XTEST.msky130_fd_pr__pfet_01v8:qjd",
+        "qjs": "XTEST.msky130_fd_pr__pfet_01v8:qjs",
+        "qgdovl": "XTEST.msky130_fd_pr__pfet_01v8:qgdovl",
+        "qgsovl": "XTEST.msky130_fd_pr__pfet_01v8:qgsovl",
+        "qgi": "XTEST.msky130_fd_pr__pfet_01v8:qgi",
+        "qdi": "XTEST.msky130_fd_pr__pfet_01v8:qdi",
+        "qsi": "XTEST.msky130_fd_pr__pfet_01v8:qsi",
+        "qbi": "XTEST.msky130_fd_pr__pfet_01v8:qbi",
+        "cgg": "XTEST.msky130_fd_pr__pfet_01v8:cgg",
+        "cgd": "XTEST.msky130_fd_pr__pfet_01v8:cgd",
+        "cgs": "XTEST.msky130_fd_pr__pfet_01v8:cgs",
+        "cgb": "XTEST.msky130_fd_pr__pfet_01v8:cgb",
+        "cdg": "XTEST.msky130_fd_pr__pfet_01v8:cdg",
+        "cdd": "XTEST.msky130_fd_pr__pfet_01v8:cdd",
+        "cds": "XTEST.msky130_fd_pr__pfet_01v8:cds",
+        "cdb": "XTEST.msky130_fd_pr__pfet_01v8:cdb",
+        "csg": "XTEST.msky130_fd_pr__pfet_01v8:csg",
+        "csd": "XTEST.msky130_fd_pr__pfet_01v8:csd",
+        "css": "XTEST.msky130_fd_pr__pfet_01v8:css",
+        "csb": "XTEST.msky130_fd_pr__pfet_01v8:csb",
+        "cbg": "XTEST.msky130_fd_pr__pfet_01v8:cbg",
+        "cbd": "XTEST.msky130_fd_pr__pfet_01v8:cbd",
+        "cbs": "XTEST.msky130_fd_pr__pfet_01v8:cbs",
+        "cbb": "XTEST.msky130_fd_pr__pfet_01v8:cbb",
+        "cjd": "XTEST.msky130_fd_pr__pfet_01v8:cjd",
+        "cjs": "XTEST.msky130_fd_pr__pfet_01v8:cjs",
+        "cggbo": "XTEST.msky130_fd_pr__pfet_01v8:cggbo",
+        "cgdbo": "XTEST.msky130_fd_pr__pfet_01v8:cgdbo",
+        "cgsbo": "XTEST.msky130_fd_pr__pfet_01v8:cgsbo",
+        "cbgbo": "XTEST.msky130_fd_pr__pfet_01v8:cbgbo",
+        "cbdbo": "XTEST.msky130_fd_pr__pfet_01v8:cbdbo",
+        "cbsbo": "XTEST.msky130_fd_pr__pfet_01v8:cbsbo",
+        "cdgbo": "XTEST.msky130_fd_pr__pfet_01v8:cdgbo",
+        "cddbo": "XTEST.msky130_fd_pr__pfet_01v8:cddbo",
+        "cdsbo": "XTEST.msky130_fd_pr__pfet_01v8:cdsbo"
+      },
+      "missing_requested_OP_fields": [
+        "ig",
+        "is",
+        "ib"
+      ],
+      "missing_OP_handling": "Notfilledorsynthesized; actuald/g/s/bterminalcurrents are separate saved observables, not replacementclaimedfor missingOPaliases.",
+      "actual_points": 2001,
+      "expected_points": 2001,
+      "point_count_matches": true,
+      "actual_axis_range": [
+        0.001,
+        -0.001
+      ],
+      "measured_D_minus_SB_range_V": [
+        0.0009999999999998899,
+        -0.001000000000000112
+      ],
+      "requested_range_V": [
+        0.001,
+        -0.001
+      ],
+      "reversed_values": [
+        0.0,
+        1.0
+      ],
+      "q_ranges_C": {
+        "qg": [
+          -4.388636269456216e-14,
+          -4.386269622411298e-14
+        ],
+        "qd": [
+          4.168320474057459e-15,
+          4.198294884845232e-15
+        ],
+        "qs": [
+          4.179699694046901e-15,
+          4.188839667856254e-15
+        ],
+        "qb": [
+          3.54992305894823e-14,
+          3.551467605600862e-14
+        ],
+        "qjd": [
+          -1.710606403250264e-17,
+          1.709658527033895e-17
+        ],
+        "qjs": [
+          -1.632820333757383e-28,
+          1.54391373080227e-28
+        ],
+        "qgi": [
+          -4.388636269456216e-14,
+          -4.386269622411298e-14
+        ],
+        "qdi": [
+          4.168320474057459e-15,
+          4.198294884845232e-15
+        ],
+        "qsi": [
+          4.179699694046901e-15,
+          4.188839667856254e-15
+        ],
+        "qbi": [
+          3.54992305894823e-14,
+          3.551467605600862e-14
+        ]
+      },
+      "mode_edges": [
+        {
+          "before_axis": 0.0,
+          "after_axis": -1e-06,
+          "before_reversed": 1.0,
+          "after_reversed": 0.0
+        }
+      ],
+      "analysis_limit": "Schema/finitevaluescheckedonly; no charge-conservation,partialderivative equivalence or physicalcontinuity conclusion."
+    }
+  },
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false,
+  "model_hashes_before_after_equal": true,
+  "model_hash_comparison_exit": 0,
+  "log_completion": [
+    "spectre completes with 0 errors, 0 warnings, and 5 notices."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "status": "STATIC_COMPONENT_ANALYSIS_COMPLETED",
+  "source_sha256": {
+    "v2/physical/cdac_route_20260911/artifacts/cdac_diff_routed_flat_rc.spice": "7281fb098ddbcad91ee5079031114830a7f1d51e8b719b6b7ca6d3f3dbbbce11",
+    "v2/physical/cdac_repair_20260923/audit.py": "c855ea3c7a15dfadc85b8a979eea28be030cd125e8edda9eca8ca01d91ff1572"
+  },
+  "unit_model_scope": "Frozen open-PDK 3x3 19.845 fF only; school4x4 excluded",
+  "reference_assumptions": [
+    "ideal settled bit/reference voltages",
+    "fixed DUMMY, EDGE_BIAS and substrate",
+    "linear capacitor values from historical extractor",
+    "all R connected nodes equilibrated; not a transient/settling result"
+  ],
+  "full_network": {
+    "max_abs_inl_lsb": 3.5620710270991087,
+    "min_dnl_lsb": -3.854471719252156,
+    "max_dnl_lsb": 0.3243001319824828,
+    "nonpositive_transition_count": 255,
+    "pass_static_limits": false
+  },
+  "functional_only_with_same_TOP_denominators": {
+    "max_abs_inl_lsb": 2e-38,
+    "min_dnl_lsb": -2.3088e-38,
+    "max_dnl_lsb": 2.63e-38,
+    "nonpositive_transition_count": 0,
+    "pass_static_limits": true
+  },
+  "P_side": {
+    "max_abs_inl_lsb": 3.559538529869045,
+    "min_dnl_lsb": -3.8590562085989935,
+    "max_dnl_lsb": 0.3275764164670699,
+    "nonpositive_transition_count": 255,
+    "pass_static_limits": false
+  },
+  "N_side": {
+    "max_abs_inl_lsb": 3.564603504564043,
+    "min_dnl_lsb": -3.8498872656854277,
+    "max_dnl_lsb": 0.32579293794632447,
+    "nonpositive_transition_count": 255,
+    "pass_static_limits": false
+  },
+  "maximum_half_P_minus_N_INL_LSB": 0.005284176497171018,
+  "sensitivity_boundary": {
+    "maximum_retained_low_bit_excess_fraction_pass_boundary": "0.18258775211870670318603515625",
+    "minimum_removed_fraction_near_boundary": "0.81741224788129329681396484375",
+    "pass_side": {
+      "max_abs_inl_lsb": 0.6564805053273358,
+      "min_dnl_lsb": -0.8999999978502469,
+      "max_dnl_lsb": 0.05929939864599676,
+      "nonpositive_transition_count": 0,
+      "pass_static_limits": true
+    },
+    "fail_side": {
+      "max_abs_inl_lsb": 0.6564805085908655,
+      "min_dnl_lsb": -0.9000000012188688,
+      "max_dnl_lsb": 0.05929939894814461,
+      "nonpositive_transition_count": 0,
+      "pass_static_limits": false
+    },
+    "meaning": "Diagnostic interpolation only; not a routing performance guarantee, measured tolerance or new circuit."
+  },
+  "causal_scope": "All endpoint-normalized static error is from non-binary TOP-bit parasitic weights in this frozen linear network. This does not validate extractor physical coefficients. Geometry isolation requires the control extraction.",
+  "between_driven_non_TOP_capacitances": "Do not alter this ideal-source static transfer; they still affect finite impedance reference current, settling and noise.",
+  "TOP_fixed_capacitances": "Change total gain/loading; binary intrinsic weights remain linear under endpoint normalization.",
+  "formal_ADC_PEX_allowed": false,
+  "layout_repair_pass": false
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "baseline": "pure_spectre_acquire_001",
+  "circuit_sha256": "e3414003ed2ee85a2ab4200e9e9080c6a81a9160f9e0ae7d24dc77b3f986be54",
+  "changes": [
+    {
+      "field": "SAMPLE_CMD rise/fall",
+      "before_s": 1e-09,
+      "after_s": 1e-08
+    },
+    {
+      "field": "delay",
+      "before_s": 4.0625e-06,
+      "after_s": 4.058e-06,
+      "purpose": "Keep first rising half-supply time at 4.063us."
+    },
+    {
+      "field": "tran reltol",
+      "requested_explicit": 1e-06,
+      "baseline_actual": 1e-06,
+      "purpose": "Prevent preset from obscuring effective tolerance; no precision relaxation."
+    }
+  ],
+  "unchanged": [
+    "native ADC/phase graph and all sizes",
+    "all resistances/capacitances/source impedances",
+    "initial voltages",
+    "8us stop/maxstep2ns",
+    "abs V10nV/I100fA",
+    "actual reltol1e-6",
+    "digital decisions absent"
+  ],
+  "pass_scope": "Diagnostic only: check Newton/LTE warnings and overshoot sensitivity. No ADC accuracy, conversion, M2 or M3 acceptance."
+}

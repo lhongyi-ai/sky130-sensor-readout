@@ -1,0 +1,378 @@
+{
+  "status": "BOUNDED_INTERNAL_NODE_DIAGNOSTIC_NOT_ADC_QUALIFICATION",
+  "run": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T053814697817Z",
+  "waveform_sha256": "3ef33020b514827023eefd71ab332b2016b4f3079a46056301de11b8e7c42946",
+  "model_metadata_sha256": "3d7da1448bbd655dc8e2e86631e86cbf327c6f66329a90b0ddacc2c1cf6e30f3",
+  "raw_trace_count": 76,
+  "raw_points": 4951,
+  "saved_interval_s": [
+    0.0,
+    4.1e-06
+  ],
+  "actual_method": {
+    "version": "21.1.0.132.isr1",
+    "method": "gear2only",
+    "relref": "sigglobal",
+    "reltol": 1e-06,
+    "abstol(V)": 1e-08,
+    "abstol(I)": 1e-13,
+    "maxstep": 2e-09,
+    "temp": 27.0,
+    "tnom": 27.0,
+    "gmin": 1e-12,
+    "cmin": 0.0
+  },
+  "observed_device": {
+    "type": "Native phase CONV buffer PFET",
+    "instance": "XPHASE_XBCONV_XI2_XP",
+    "external_terminals_D_G_S_B": [
+      "CONV",
+      "XPHASE_XBCONV_B",
+      "VDD",
+      "VDD"
+    ],
+    "w_m": 3.2e-05,
+    "l_m": 1.5e-07,
+    "m": 1,
+    "body_save_request": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b sigtype=node",
+    "actual_PSF_voltage_name": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.int_b"
+  },
+  "body_range_V": [
+    1.798121867042297,
+    1.80078132566357
+  ],
+  "body_minus_external_bulk_range_V": [
+    -0.0018781329577031158,
+    0.0007813256635700316
+  ],
+  "body_extrema": [
+    {
+      "accepted_row_index_including_initial_DC": 2627,
+      "time_s": 4.063204499466695e-06,
+      "local_gate_V": 0.9507140603511315,
+      "CONV_drain_V": 1.781864657655904,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.798121867042297,
+      "internal_body_minus_external_bulk_V": -0.0018781329577031158,
+      "external_VDS_V": -0.018135342344095973
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2936,
+      "time_s": 4.063344677488183e-06,
+      "local_gate_V": 1.687778544710704,
+      "CONV_drain_V": 0.0346889686841104,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.80078132566357,
+      "internal_body_minus_external_bulk_V": 0.0007813256635700316,
+      "external_VDS_V": -1.7653110313158897
+    }
+  ],
+  "largest_local_body_change": {
+    "before": {
+      "accepted_row_index_including_initial_DC": 2612,
+      "time_s": 4.063200570147047e-06,
+      "local_gate_V": 0.9158791157155736,
+      "CONV_drain_V": 1.800267269545344,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.800026937087833,
+      "internal_body_minus_external_bulk_V": 2.6937087832967777e-05,
+      "external_VDS_V": 0.0002672695453440621
+    },
+    "after": {
+      "accepted_row_index_including_initial_DC": 2613,
+      "time_s": 4.063200771449065e-06,
+      "local_gate_V": 0.9176386768923617,
+      "CONV_drain_V": 1.799406645059815,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799577844778028,
+      "internal_body_minus_external_bulk_V": -0.000422155221972087,
+      "external_VDS_V": -0.0005933549401850868
+    },
+    "delta_body_V": -0.00044909230980505477,
+    "elapsed_s": 2.0130201826740364e-13
+  },
+  "raw_adjacent_points": [
+    {
+      "accepted_row_index_including_initial_DC": 2604,
+      "time_s": 4.063192583895691e-06,
+      "local_gate_V": 0.8403141515054164,
+      "CONV_drain_V": 1.825577970417246,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.800028026962836,
+      "internal_body_minus_external_bulk_V": 2.802696283588091e-05,
+      "external_VDS_V": 0.025577970417245854
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2605,
+      "time_s": 4.063194186779691e-06,
+      "local_gate_V": 0.8557648402145385,
+      "CONV_drain_V": 1.821854209772298,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799990606441018,
+      "internal_body_minus_external_bulk_V": -9.393558981996009e-06,
+      "external_VDS_V": 0.021854209772298017
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2606,
+      "time_s": 4.063195875694248e-06,
+      "local_gate_V": 0.8718527070626915,
+      "CONV_drain_V": 1.817219665569586,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799962943520564,
+      "internal_body_minus_external_bulk_V": -3.70564794360817e-05,
+      "external_VDS_V": 0.017219665569585985
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2607,
+      "time_s": 4.063197652332974e-06,
+      "local_gate_V": 0.8886017470048209,
+      "CONV_drain_V": 1.81152479184597,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799954512944637,
+      "internal_body_minus_external_bulk_V": -4.548705536300268e-05,
+      "external_VDS_V": 0.011524791845969995
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2608,
+      "time_s": 4.063199394951527e-06,
+      "local_gate_V": 0.9049099263601441,
+      "CONV_drain_V": 1.805091477312156,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799977371034511,
+      "internal_body_minus_external_bulk_V": -2.262896548899107e-05,
+      "external_VDS_V": 0.005091477312155979
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2609,
+      "time_s": 4.063200000277778e-06,
+      "local_gate_V": 0.9105609451724401,
+      "CONV_drain_V": 1.802656349265696,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799999823269196,
+      "internal_body_minus_external_bulk_V": -1.7673080399127628e-07,
+      "external_VDS_V": 0.002656349265695912
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2610,
+      "time_s": 4.063200304045677e-06,
+      "local_gate_V": 0.9133958542622757,
+      "CONV_drain_V": 1.801394638357376,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.800013764089551,
+      "internal_body_minus_external_bulk_V": 1.3764089551004943e-05,
+      "external_VDS_V": 0.0013946383573759658
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2611,
+      "time_s": 4.063200469496038e-06,
+      "local_gate_V": 0.9149398358046783,
+      "CONV_drain_V": 1.800696131697809,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.800021871890295,
+      "internal_body_minus_external_bulk_V": 2.1871890294899998e-05,
+      "external_VDS_V": 0.0006961316978089105
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2612,
+      "time_s": 4.063200570147047e-06,
+      "local_gate_V": 0.9158791157155736,
+      "CONV_drain_V": 1.800267269545344,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.800026937087833,
+      "internal_body_minus_external_bulk_V": 2.6937087832967777e-05,
+      "external_VDS_V": 0.0002672695453440621
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2613,
+      "time_s": 4.063200771449065e-06,
+      "local_gate_V": 0.9176386768923617,
+      "CONV_drain_V": 1.799406645059815,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799577844778028,
+      "internal_body_minus_external_bulk_V": -0.000422155221972087,
+      "external_VDS_V": -0.0005933549401850868
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2614,
+      "time_s": 4.063200829771597e-06,
+      "local_gate_V": 0.9181379848052716,
+      "CONV_drain_V": 1.79915654509734,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799417558719713,
+      "internal_body_minus_external_bulk_V": -0.0005824412802870604,
+      "external_VDS_V": -0.0008434549026601346
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2615,
+      "time_s": 4.063200886678712e-06,
+      "local_gate_V": 0.9186290967187989,
+      "CONV_drain_V": 1.798912126941274,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.799284954850603,
+      "internal_body_minus_external_bulk_V": -0.000715045149397131,
+      "external_VDS_V": -0.001087873058726041
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2616,
+      "time_s": 4.063200957302264e-06,
+      "local_gate_V": 0.919242844929778,
+      "CONV_drain_V": 1.798608232335245,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.79914794577128,
+      "internal_body_minus_external_bulk_V": -0.0008520542287200339,
+      "external_VDS_V": -0.001391767664755017
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2617,
+      "time_s": 4.063201089151227e-06,
+      "local_gate_V": 0.9203973133858241,
+      "CONV_drain_V": 1.798038937447186,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.798950579394031,
+      "internal_body_minus_external_bulk_V": -0.0010494206059690203,
+      "external_VDS_V": -0.001961062552814141
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2618,
+      "time_s": 4.063201224062928e-06,
+      "local_gate_V": 0.9215864880394948,
+      "CONV_drain_V": 1.797453464642494,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.798803571263304,
+      "internal_body_minus_external_bulk_V": -0.0011964287366961202,
+      "external_VDS_V": -0.002546535357506041
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2619,
+      "time_s": 4.063201372432746e-06,
+      "local_gate_V": 0.9228999571973883,
+      "CONV_drain_V": 1.796805730658172,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.798683312271942,
+      "internal_body_minus_external_bulk_V": -0.0013166877280581524,
+      "external_VDS_V": -0.003194269341828093
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2620,
+      "time_s": 4.063201544420808e-06,
+      "local_gate_V": 0.9244267827265173,
+      "CONV_drain_V": 1.79604932802652,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.798577932338369,
+      "internal_body_minus_external_bulk_V": -0.001422067661630999,
+      "external_VDS_V": -0.003950671973480091
+    },
+    {
+      "accepted_row_index_including_initial_DC": 2621,
+      "time_s": 4.063201747829889e-06,
+      "local_gate_V": 0.9262357359480347,
+      "CONV_drain_V": 1.795146395138832,
+      "source_external_bulk_V": 1.8,
+      "internal_body_V": 1.79848304053959,
+      "internal_body_minus_external_bulk_V": -0.0015169594604100833,
+      "external_VDS_V": -0.004853604861168037
+    }
+  ],
+  "external_VDS_zero_crossings_interpolated_s": [
+    4.0632006326619995e-06
+  ],
+  "logged_LTE_time_literal": "4.0632 us",
+  "logged_time_caution": "The warning time is rounded. Exact accepted-point brackets are retained; the rounded time alone cannot locate an internal rejected iteration.",
+  "warnings": {
+    "AHDLLINT-8007": 1,
+    "SPECTRE-16780": 1,
+    "SPECTRE-16266": 0,
+    "SPECTRE-16578": 0
+  },
+  "diagnosis_statistics": {
+    "accepted_steps": 4950,
+    "LTE_rejected_steps": 116,
+    "Newton_rejected_steps": 4,
+    "device_rejected_steps": 3,
+    "minimum_step_s": 6.708234e-15,
+    "drastic_step_changes": 2,
+    "recovery_steps": 1403
+  },
+  "local_model_facts": {
+    "sha256": "a5b543f8df7206f43d872d39fe19d17bf639ef088f0817ea33e935ad2d7ed75f",
+    "bytes": 787469,
+    "mtime_ns": 1709841929000000000,
+    "selected_parameter_literals_only": {
+      "rbodymod": {
+        "values": [
+          "1.0"
+        ],
+        "occurrences": 108
+      },
+      "rbpb": {
+        "values": [
+          "50.0"
+        ],
+        "occurrences": 108
+      },
+      "rbpd": {
+        "values": [
+          "50.0"
+        ],
+        "occurrences": 108
+      },
+      "rbps": {
+        "values": [
+          "50.0"
+        ],
+        "occurrences": 108
+      },
+      "rbdb": {
+        "values": [
+          "50.0"
+        ],
+        "occurrences": 108
+      },
+      "rbsb": {
+        "values": [
+          "50.0"
+        ],
+        "occurrences": 108
+      },
+      "gbmin": {
+        "values": [
+          "1.0e-12"
+        ],
+        "occurrences": 108
+      },
+      "level": {
+        "values": [
+          "54.0"
+        ],
+        "occurrences": 108
+      },
+      "version": {
+        "values": [
+          "4.5"
+        ],
+        "occurrences": 108
+      }
+    }
+  },
+  "evidence_based_hypothesis": "Abrupt saved internal-body change coincides with drain crossing the fixed source voltage (external VDS=0), while the local gate remains smooth. Investigate source/drain orientation and junction/body-network evaluation around VDS=0. This is a hypothesis, not proof of a model defect.",
+  "known_limits": [
+    "The saved signal is an actual internal node, not the external body rail. Correct external body wiring does not exclude internal-body transients or numerical problems.",
+    "Finite model body resistances permit internal body voltage motion; their presence alone does not prove a jump is physically correct or incorrect.",
+    "Accepted waveforms omit rejected Newton/LTE iterates; a mathematical discontinuity cannot be proven from finite accepted points alone.",
+    "The simultaneous read_sample AHDL-8007 event imposes a 605.326 fs step; it does not prove the monitor caused the body event.",
+    "The short 4.1us experiment is intentional; protocol qualification exit2 is not a completed ADC PASS.",
+    "No PDK/model parameters, capacitances, leakage, IC or body network are modified."
+  ],
+  "next_minimal_diagnostic": {
+    "same_fixture_and_stop": true,
+    "add_actual_internal_voltages": [
+      "same primitive :dbnode sigtype=node",
+      "same primitive :sbnode sigtype=node"
+    ],
+    "retain_current_saves": true,
+    "derive_VDS_from_already_saved_external_nodes": true,
+    "optional_device_outputs": "Only use mode/region/reversed or intrinsic-vds output after installed bsim4 help proves availability and exact semantics. No guessed output names.",
+    "question": "Do drain-body and source-body nodes exchange behavior or remain continuous at external VDS=0, and does the int_b step persist under independently tighter same-method solution?",
+    "if_repro_needed": "Freeze native inverter/phase generator and actual fanout or preserve the full first-acquisition circuit; controlled finite input edge and same PDK/tool build. A reduced diagnostic is not full ADC validation."
+  }
+}

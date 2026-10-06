@@ -1,0 +1,43 @@
+{
+  "status": "PREREGISTERED_INTERPRETATION_FOR_PENDING_ACTUAL_RESULTS",
+  "full_ADC_accuracy_pass": false,
+  "scope": "Identical native PFET and unmodified PDK under continuous analytic controlled voltage sources. This is a model-isolation diagnostic, not an ADC phase generator or native fanout simulation.",
+  "common_requirements": [
+    "Validate real tool/PDK/geometry provenance and original source hashes; distinguish run completion, observed warning and convergence.",
+    "Compare baseline and strict only for identical case/source/electronics and same actual method; require actual 10x voltage/current/reltol tightening and at least 2x smaller maxstep.",
+    "Retain every accepted time, initial state, switching edge, all four cycles and both mode directions. No phase alignment or excluded edge when evaluating baseline/strict error.",
+    "Evaluate forced source nodes against the exact analytic waveform separately from internal-body and device-current differences. Forced voltage agreement does not validate native phase timing or load interactions.",
+    "Report all mode transitions and external signed D-S independently of folded PFET OP vds. Missing internal traces or enums block the corresponding claim.",
+    "A warning-free model-isolation run or conserved total terminal current cannot establish model physical accuracy, prove absence of bug, or grant any ADC qualification."
+  ],
+  "cases": {
+    "matched": {
+      "can_establish": "Whether the actual native-device/body-network event can occur under local finite slopes and crossing bias without the full ADC/phase feedback or AMS interfaces.",
+      "cannot_establish": "Whether the isolated waveform reproduces original charge history, original native fanout, physical accuracy of the model or full ADC numerical error.",
+      "if_not_reproduced": "The local slope/bias reduction is insufficient; no conclusion that the original issue is absent or harmless. Preserve exact full probe as primary reproduction."
+    },
+    "static_gate": {
+      "can_establish": "Whether drain crossing alone is sufficient under this controlled fixed gate bias, and how removing dynamic gate drive changes observed body currents.",
+      "cannot_establish": "A unique gate-charge root cause from disappearance alone, because fixed gate also changes initial and preceding stored-charge history."
+    },
+    "slow_10x": {
+      "can_establish": "Rate sensitivity when waveform amplitude/bias/relative phase are fixed and all input time scales are enlarged by10.",
+      "cannot_establish": "A numerical cure for the actual ADC or permission to slow its specified acquisition/conversion timing.",
+      "comparison_domain": "Baseline/strict remains an absolute-time comparison within each case. Cross-case rate trends may be evaluated at analytically predefined stimulus phase t/T only, explicitly as physical-rate sensitivity, never as waveform-accuracy PASS or fitted time alignment."
+    },
+    "finite_1ohm": {
+      "can_establish": "Sensitivity to releasing ideal external D/G voltage clamps through finite controlled source impedance; read actual terminal D/G as well as source DSRC/GSRC.",
+      "cannot_establish": "That1ohm equals native inverter impedance, that the original device error is fixed, or that adding this resistor in ADC is justified. Actual crossing and bias shift from the ideal case."
+    },
+    "strict_traponly": {
+      "can_establish": "Method sensitivity at otherwise identical strict settings, including retained body/current overshoot and step-to-step ringing.",
+      "cannot_establish": "Same-method numerical convergence by comparing strict gear2only and strict traponly, or superiority based solely on fewer warnings."
+    }
+  },
+  "repair_decision_boundary": [
+    "A model-source/drain boundary suspicion requires a reproducible same-device effect plus independently tighter behavior or a supported model/simulator explanation; simultaneous reversed change alone is not proof of a defect.",
+    "A numerical-method repair requires a same-method complete ADC baseline/strict pair through reset-abort and the original full-domain0.05LSB requirement; isolated current/body convergence cannot substitute.",
+    "A physical phase-buffer change must be a separate native version with real PDK devices and preserved ADC timing/handshake intent. Its effective impedance, kickback and actual sampling waveform must be measured, not assumed from the diagnostic's imposed sources.",
+    "No PDK patch, arbitrary body-network disable, added leakage/initial condition/cmin, edge deletion, threshold weakening or ideal ADC replacement."
+  ]
+}

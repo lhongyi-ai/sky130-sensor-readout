@@ -1,0 +1,568 @@
+{
+  "files": [
+    {
+      "include_path": "$PEGASUS_DRC/Include/m3.drc.pvl",
+      "resolved_path_relative_to_PDK": "Sky130_DRC/Include/m3.drc.pvl",
+      "exists": true,
+      "sha256": "ce9feedb71fca33b8a8c1dea9631acd46fe38a248584b9f208a5bbfacd5ec713",
+      "bytes": 3707,
+      "numeric_check_metadata": [
+        {
+          "stripped_line": 18,
+          "operators_and_layers": [
+            "caption",
+            "Width",
+            "of",
+            "metal3",
+            "um"
+          ],
+          "numeric_values": [
+            "0.300"
+          ]
+        },
+        {
+          "stripped_line": 52,
+          "operators_and_layers": [
+            "caption",
+            "AL",
+            "Flow",
+            "via2",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met3",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.065"
+          ]
+        },
+        {
+          "stripped_line": 69,
+          "operators_and_layers": [
+            "caption",
+            "Min",
+            "metal",
+            "area",
+            "sq",
+            "um"
+          ],
+          "numeric_values": [
+            "3",
+            "0.240"
+          ]
+        },
+        {
+          "stripped_line": 70,
+          "operators_and_layers": [
+            "area",
+            "met3",
+            "lt"
+          ],
+          "numeric_values": [
+            "0.240"
+          ]
+        },
+        {
+          "stripped_line": 75,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Min",
+            "area",
+            "of",
+            "metal3",
+            "holes",
+            "sq",
+            "um"
+          ],
+          "numeric_values": [
+            "0.200"
+          ]
+        },
+        {
+          "stripped_line": 77,
+          "operators_and_layers": [
+            "area",
+            "m3.7_a",
+            "lt"
+          ],
+          "numeric_values": [
+            "0.200"
+          ]
+        },
+        {
+          "stripped_line": 87,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Max",
+            "width",
+            "of",
+            "metal3",
+            "um"
+          ],
+          "numeric_values": [
+            "4.000"
+          ]
+        },
+        {
+          "stripped_line": 88,
+          "operators_and_layers": [
+            "with_width",
+            "met3",
+            "gt"
+          ],
+          "numeric_values": [
+            "4.000"
+          ]
+        },
+        {
+          "stripped_line": 112,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "via",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met3",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.060"
+          ]
+        }
+      ]
+    },
+    {
+      "include_path": "$PEGASUS_DRC/Include/via3.drc.pvl",
+      "resolved_path_relative_to_PDK": "Sky130_DRC/Include/via3.drc.pvl",
+      "exists": true,
+      "sha256": "babe7bc75a2806efda590b045bac76f2d3e0e5139f9dbc78b514162d9ea9bec3",
+      "bytes": 2339,
+      "numeric_check_metadata": [
+        {
+          "stripped_line": 7,
+          "operators_and_layers": [
+            "select",
+            "inside",
+            "via3",
+            "areaid.mt",
+            "outputlayer",
+            "via3.1_a"
+          ],
+          "numeric_values": []
+        },
+        {
+          "stripped_line": 13,
+          "operators_and_layers": [
+            "caption",
+            "Al",
+            "FLow",
+            "Two",
+            "sized",
+            "of",
+            "square",
+            "via3",
+            "allowed",
+            "inside",
+            "areaid.mt",
+            "um",
+            "and",
+            "um"
+          ],
+          "numeric_values": []
+        },
+        {
+          "stripped_line": 14,
+          "operators_and_layers": [
+            "select",
+            "inside",
+            "via3",
+            "areaid.mt",
+            "outputlayer",
+            "via3.1a_a"
+          ],
+          "numeric_values": []
+        },
+        {
+          "stripped_line": 31,
+          "operators_and_layers": [
+            "caption",
+            "AL",
+            "Flow",
+            "Via3",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met3",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.060"
+          ]
+        },
+        {
+          "stripped_line": 36,
+          "operators_and_layers": [
+            "caption",
+            "AL",
+            "Flow",
+            "Via3",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met3",
+            "on",
+            "one",
+            "of",
+            "two",
+            "adjacent",
+            "sides",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.090"
+          ]
+        },
+        {
+          "stripped_line": 43,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "FLow",
+            "Min",
+            "and",
+            "max",
+            "L",
+            "and",
+            "W",
+            "of",
+            "via",
+            "outside",
+            "areaid.mt",
+            "um"
+          ],
+          "numeric_values": [
+            "0.210"
+          ]
+        },
+        {
+          "stripped_line": 44,
+          "operators_and_layers": [
+            "not",
+            "via3",
+            "areaid.mt",
+            "outputlayer",
+            "via3.1a_a"
+          ],
+          "numeric_values": []
+        },
+        {
+          "stripped_line": 54,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Via3",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met3",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.055"
+          ]
+        }
+      ]
+    },
+    {
+      "include_path": "$PEGASUS_DRC/Include/m4.drc.pvl",
+      "resolved_path_relative_to_PDK": "Sky130_DRC/Include/m4.drc.pvl",
+      "exists": true,
+      "sha256": "4abdd8c379177542188258fa427dcc50abc43b282429379284769d01bbb141c1",
+      "bytes": 3314,
+      "numeric_check_metadata": [
+        {
+          "stripped_line": 18,
+          "operators_and_layers": [
+            "caption",
+            "Width",
+            "of",
+            "metal4",
+            "um"
+          ],
+          "numeric_values": [
+            "0.300"
+          ]
+        },
+        {
+          "stripped_line": 29,
+          "operators_and_layers": [
+            "caption",
+            "AL",
+            "Flow",
+            "via3",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met4",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.065"
+          ]
+        },
+        {
+          "stripped_line": 40,
+          "operators_and_layers": [
+            "caption",
+            "Min",
+            "metal",
+            "area",
+            "sq",
+            "um"
+          ],
+          "numeric_values": [
+            "4",
+            "0.240"
+          ]
+        },
+        {
+          "stripped_line": 41,
+          "operators_and_layers": [
+            "area",
+            "met4",
+            "lt"
+          ],
+          "numeric_values": [
+            "0.240"
+          ]
+        },
+        {
+          "stripped_line": 59,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Min",
+            "area",
+            "of",
+            "metal4",
+            "holes",
+            "sq",
+            "um"
+          ],
+          "numeric_values": [
+            "0.200"
+          ]
+        },
+        {
+          "stripped_line": 61,
+          "operators_and_layers": [
+            "area",
+            "m4.7_a",
+            "lt"
+          ],
+          "numeric_values": [
+            "0.200"
+          ]
+        },
+        {
+          "stripped_line": 69,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Max",
+            "width",
+            "of",
+            "metal4",
+            "um"
+          ],
+          "numeric_values": [
+            "10.000"
+          ]
+        },
+        {
+          "stripped_line": 70,
+          "operators_and_layers": [
+            "with_width",
+            "met4",
+            "gt"
+          ],
+          "numeric_values": [
+            "10.000"
+          ]
+        },
+        {
+          "stripped_line": 94,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "via3",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met4",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.060"
+          ]
+        },
+        {
+          "stripped_line": 99,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Min",
+            "enclosure",
+            "of",
+            "pad",
+            "by",
+            "met4",
+            "um"
+          ],
+          "numeric_values": [
+            "0.850"
+          ]
+        }
+      ]
+    },
+    {
+      "include_path": "$PEGASUS_DRC/Include/via4.drc.pvl",
+      "resolved_path_relative_to_PDK": "Sky130_DRC/Include/via4.drc.pvl",
+      "exists": true,
+      "sha256": "17a6a986f3eff9396be52852a640b9bd97755a3b932c79df2ca4bdd50ea074fc",
+      "bytes": 1018,
+      "numeric_check_metadata": [
+        {
+          "stripped_line": 22,
+          "operators_and_layers": [
+            "caption",
+            "Cu",
+            "Flow",
+            "Via4",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met4",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.190"
+          ]
+        }
+      ]
+    },
+    {
+      "include_path": "$PEGASUS_DRC/Include/m5.drc.pvl",
+      "resolved_path_relative_to_PDK": "Sky130_DRC/Include/m5.drc.pvl",
+      "exists": true,
+      "sha256": "9c4b323f9f525c43ba0b49ac20a5ac3bd84d485a11453bf3fb1b2a4c6fd28d33",
+      "bytes": 787,
+      "numeric_check_metadata": [
+        {
+          "stripped_line": 6,
+          "operators_and_layers": [
+            "caption",
+            "Width",
+            "of",
+            "metal5",
+            "um"
+          ],
+          "numeric_values": [
+            "1.600"
+          ]
+        },
+        {
+          "stripped_line": 17,
+          "operators_and_layers": [
+            "caption",
+            "AL",
+            "Flow",
+            "via4",
+            "must",
+            "be",
+            "enclosed",
+            "by",
+            "Met5",
+            "by",
+            "at",
+            "least",
+            "um"
+          ],
+          "numeric_values": [
+            "0.310"
+          ]
+        },
+        {
+          "stripped_line": 23,
+          "operators_and_layers": [
+            "caption",
+            "Min",
+            "area",
+            "of",
+            "met5",
+            "sq",
+            "um"
+          ],
+          "numeric_values": [
+            "4.000"
+          ]
+        },
+        {
+          "stripped_line": 26,
+          "operators_and_layers": [
+            "area",
+            "met5",
+            "lt"
+          ],
+          "numeric_values": [
+            "4.000"
+          ]
+        }
+      ]
+    }
+  ]
+}

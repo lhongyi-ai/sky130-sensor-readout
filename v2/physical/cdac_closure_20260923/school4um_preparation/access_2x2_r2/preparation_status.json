@@ -1,0 +1,25 @@
+{
+  "status": "SCOPED_2X2_SHARED_ACCESS_GEOMETRY_AND_LVS_VERIFIED",
+  "native_creation": "NOT_RUN",
+  "DRC": "ZERO_RESULTS_FOR_EXECUTED_SCHOOL_279_AND_MIM_9_CHECKS_EACH_CASE",
+  "LVS": "GOOD_MATCH_OPEN_AND_SHORT_MISMATCH_VERIFIED",
+  "PEX": "NOT_RUN",
+  "formal_ADC_PEX_allowed": false,
+  "nominal_device_count": 4,
+  "bottom_port_count": 4,
+  "common_port": "TOP on M4",
+  "source_multiplicity": "four explicit instances, no m parameter",
+  "unit_origin_separation_xy_um": [
+    12,
+    12
+  ],
+  "final_array_pitch_um": null,
+  "edge_dummy_present": false,
+  "school_model_modified": false,
+  "rule_change_from_passed_r1": "NONE; project rules, map and serial runner copied byte-for-byte",
+  "scope": "Shared M4 top across two rows with M3 separate bottoms and CAPM-external via3/via4 M5 row ends. No absolute CAPM coupling/RC boundary qualification.",
+  "initial_preparation_status": "PREPARED_NOT_RUN",
+  "native_cell_creation": "ACTUALLY_EXECUTED_BY_ROOT",
+  "actual_review": "actual_execution_review.json",
+  "geometry_repair_required_for_this_tile": false
+}

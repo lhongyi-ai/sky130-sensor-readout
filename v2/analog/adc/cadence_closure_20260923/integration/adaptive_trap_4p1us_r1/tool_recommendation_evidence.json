@@ -1,0 +1,120 @@
+{
+  "help_path": "/path/to/sky130-two-stage-ota/v2/analog/noise_controls_20260923/doc_cache/tran_help.txt",
+  "help_sha256": "9d5752608d6d259855ff3a613b9b36133634da81e03fb18fc30e9b467d5dc145",
+  "help_excerpt": [
+    {
+      "line": 556,
+      "text": "and their meanings are as follows:"
+    },
+    {
+      "line": 557,
+      "text": "`method=euler': Backward-Euler is used exclusively."
+    },
+    {
+      "line": 558,
+      "text": "`method=traponly': Trapezoidal rule is used almost exclusively."
+    },
+    {
+      "line": 559,
+      "text": "`method=trapeuler': Backward-Euler and the trapezoidal rule are used."
+    },
+    {
+      "line": 560,
+      "text": "`method=gear2only': Gear's second-order backward-difference method is used"
+    },
+    {
+      "line": 561,
+      "text": "                     almost exclusively."
+    },
+    {
+      "line": 562,
+      "text": "`method=gear2': Backward-Euler and second-order Gear are used."
+    },
+    {
+      "line": 563,
+      "text": "`method=trapgear2': Allows all three integration methods to be used."
+    },
+    {
+      "line": 564,
+      "text": "`method=trap': An advanced version of trap that uses all three integration"
+    },
+    {
+      "line": 565,
+      "text": "                     methods."
+    },
+    {
+      "line": 566,
+      "text": "The trapezoidal rule is usually the most efficient when you want high accuracy."
+    },
+    {
+      "line": 567,
+      "text": "This method can exhibit point-to-point ringing, but you can control this by"
+    },
+    {
+      "line": 568,
+      "text": "tightening the error tolerances. For this reason, though, if you choose very"
+    },
+    {
+      "line": 569,
+      "text": "loose tolerances to get a quick answer, the backward-Euler or second-order Gear"
+    },
+    {
+      "line": 570,
+      "text": "will probably give better results than the trapezoidal rule. Second-order Gear"
+    },
+    {
+      "line": 571,
+      "text": "and backward-Euler can make systems appear more stable than they really are."
+    },
+    {
+      "line": 572,
+      "text": "This effect is less pronounced with second-order Gear or when you request high"
+    },
+    {
+      "line": 573,
+      "text": "accuracy."
+    },
+    {
+      "line": 574,
+      "text": ""
+    }
+  ],
+  "actual_notices": {
+    "baseline": {
+      "path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T071725254673Z/design/baseline/xrun.log",
+      "sha256": "aefcf3d07a7b7d7e90293b0c47b4c79661b92f2e2c1f290acfbebb6656bf9b30",
+      "lines": [
+        {
+          "line": 1818,
+          "text": "Notice from spectre during transient analysis `adc_closure_tran'."
+        },
+        {
+          "line": 1819,
+          "text": "    Trapezoidal ringing is detected during tran analysis."
+        },
+        {
+          "line": 1820,
+          "text": "        Please use method=trap for better results and performance."
+        }
+      ]
+    },
+    "strict": {
+      "path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T071725254673Z/design/strict/xrun.log",
+      "sha256": "924dcf362bd0fdb2a4534623789610c0b313ea38b2075cb0716911f356ff8592",
+      "lines": [
+        {
+          "line": 8525,
+          "text": "Notice from spectre during transient analysis `adc_closure_tran'."
+        },
+        {
+          "line": 8526,
+          "text": "    Trapezoidal ringing is detected during tran analysis."
+        },
+        {
+          "line": 8527,
+          "text": "        Please use method=trap for better results and performance."
+        }
+      ]
+    }
+  }
+}

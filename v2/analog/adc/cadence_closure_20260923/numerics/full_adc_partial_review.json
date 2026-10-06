@@ -1,0 +1,320 @@
+{
+  "status": "FULL_ADC_WAVEFORM_DIAGNOSIS_NOT_NUMERICALLY_QUALIFIED",
+  "integration_functional_pass": false,
+  "raw_sha256": "8abfa0b07f8d99696ed81f6c03c9826528656b815a11d6b272a96a2f90ba01ff",
+  "saved_interval_s": [
+    0.0,
+    2.306884072522245e-05
+  ],
+  "points": 61171,
+  "voltage_trace_count": 74,
+  "current_trace_count": 0,
+  "warnings": [
+    {
+      "name": "frame1_sample_start",
+      "window_s": [
+        4.0624e-06,
+        4.1e-06
+      ],
+      "logged_warning_time_s": 4.0632e-06,
+      "warning_time_precision_note": "Logger rounds event time; interpolated snapshot is contextual, not the exact internal failing step.",
+      "values_near_logged_time_V": {
+        "sample_cmd_e": 1.2600000000003402,
+        "conv_e": 1.8026574667196555,
+        "acq_e": -3.0363868931460063e-05,
+        "top_e": -2.0119961694153486e-05,
+        "topb_e": 1.7999880324510376,
+        "inp": 0.7004950624742757,
+        "inn": 1.0994945214944292,
+        "rp": 1.0999999844407855,
+        "rn": 0.6999999773214691,
+        "vcm": 0.9,
+        "adc.XADC_BP2": 0.6997081880528133,
+        "adc.XADC_TP": 0.8989673724580982,
+        "adc.XADC_TN": 0.8988075622103846
+      },
+      "ranges_V": {
+        "sample_cmd_e": {
+          "min_V": 0.0,
+          "max_V": 1.8
+        },
+        "conv_e": {
+          "min_V": 0.0004295117084718467,
+          "max_V": 1.836345725006745
+        },
+        "acq_e": {
+          "min_V": -0.01451632795267186,
+          "max_V": 1.79785797799525
+        },
+        "top_e": {
+          "min_V": -0.01995591073723651,
+          "max_V": 1.800000485324096
+        },
+        "topb_e": {
+          "min_V": 1.267760588085861e-07,
+          "max_V": 1.914545679936171
+        },
+        "inp": {
+          "min_V": 0.6991203827928401,
+          "max_V": 0.821735422552958
+        },
+        "inn": {
+          "min_V": 1.006286422838262,
+          "max_V": 1.197521945160754
+        },
+        "rp": {
+          "min_V": 1.099999240235199,
+          "max_V": 1.100016673914314
+        },
+        "rn": {
+          "min_V": 0.6999962834976631,
+          "max_V": 0.7000039405221197
+        },
+        "vcm": {
+          "min_V": 0.9,
+          "max_V": 0.9
+        },
+        "adc.XADC_BP2": {
+          "min_V": 0.6137092441959495,
+          "max_V": 0.7311973885036714
+        },
+        "adc.XADC_TP": {
+          "min_V": 0.8164173369506238,
+          "max_V": 0.935565139635146
+        },
+        "adc.XADC_TN": {
+          "min_V": 0.8006442872910056,
+          "max_V": 0.9725518864084556
+        }
+      },
+      "half_supply_crossings": {
+        "sample_cmd_e_rising": [
+          4.063e-06
+        ],
+        "sample_cmd_e_falling": [],
+        "conv_e_rising": [],
+        "conv_e_falling": [
+          4.063269705024839e-06
+        ],
+        "acq_e_rising": [
+          4.075034277406451e-06
+        ],
+        "acq_e_falling": [],
+        "top_e_rising": [
+          4.08578453725131e-06
+        ],
+        "top_e_falling": [],
+        "topb_e_rising": [],
+        "topb_e_falling": [
+          4.085801867008896e-06
+        ]
+      },
+      "minimum_saved_dt_s": 6.708233279842726e-15,
+      "points": 2527
+    },
+    {
+      "name": "frame2_sample_start",
+      "window_s": [
+        1.40624e-05,
+        1.41e-05
+      ],
+      "logged_warning_time_s": 1.40751e-05,
+      "warning_time_precision_note": "Logger rounds event time; interpolated snapshot is contextual, not the exact internal failing step.",
+      "values_near_logged_time_V": {
+        "sample_cmd_e": 1.8,
+        "conv_e": 0.002129266636286228,
+        "acq_e": 1.5651720267230045,
+        "top_e": 0.0007284778660034511,
+        "topb_e": 1.8003748397498345,
+        "inp": 0.9642290370038892,
+        "inn": 0.8311381750570075,
+        "rp": 1.1000040408055762,
+        "rn": 0.6999990358771402,
+        "vcm": 0.9,
+        "adc.XADC_BP2": 0.9362554766247055,
+        "adc.XADC_TP": 0.9576913140239672,
+        "adc.XADC_TN": 0.9444669909008689
+      },
+      "ranges_V": {
+        "sample_cmd_e": {
+          "min_V": 0.0,
+          "max_V": 1.8
+        },
+        "conv_e": {
+          "min_V": 0.0004219619483712164,
+          "max_V": 1.824658622151708
+        },
+        "acq_e": {
+          "min_V": -0.01462032934900818,
+          "max_V": 1.798708906415505
+        },
+        "top_e": {
+          "min_V": -0.0200614264046001,
+          "max_V": 1.800081482503277
+        },
+        "topb_e": {
+          "min_V": -0.0001770160861973913,
+          "max_V": 1.911164075684772
+        },
+        "inp": {
+          "min_V": 0.8405049300928752,
+          "max_V": 1.213388581927585
+        },
+        "inn": {
+          "min_V": 0.699104603621862,
+          "max_V": 0.9287431151808011
+        },
+        "rp": {
+          "min_V": 1.099998274842044,
+          "max_V": 1.100015979336504
+        },
+        "rn": {
+          "min_V": 0.6999968945782502,
+          "max_V": 0.7000047963058884
+        },
+        "vcm": {
+          "min_V": 0.9,
+          "max_V": 0.9
+        },
+        "adc.XADC_BP2": {
+          "min_V": 0.8038701666182678,
+          "max_V": 1.112811598634882
+        },
+        "adc.XADC_TP": {
+          "min_V": 0.8170622565012499,
+          "max_V": 1.307512097306478
+        },
+        "adc.XADC_TN": {
+          "min_V": 0.50139596827084,
+          "max_V": 0.9769184986902192
+        }
+      },
+      "half_supply_crossings": {
+        "sample_cmd_e_rising": [
+          1.4063000000000004e-05
+        ],
+        "sample_cmd_e_falling": [],
+        "conv_e_rising": [],
+        "conv_e_falling": [
+          1.4063269493558951e-05
+        ],
+        "acq_e_rising": [
+          1.4075041687153656e-05
+        ],
+        "acq_e_falling": [],
+        "top_e_rising": [
+          1.4085792584715042e-05
+        ],
+        "top_e_falling": [],
+        "topb_e_rising": [],
+        "topb_e_falling": [
+          1.408580994920988e-05
+        ]
+      },
+      "minimum_saved_dt_s": 4.8483708503044634e-15,
+      "points": 3242
+    }
+  ],
+  "tracking_endpoints": [
+    {
+      "frame": 1,
+      "time_s": 6.5615e-06,
+      "all_24_bottom_plate_tracking_errors_V": {
+        "BP0": 3.6148734006147265e-09,
+        "BP1": 2.418413802551811e-09,
+        "BP2": 1.678954197892324e-09,
+        "BP3": 1.1540054467573668e-09,
+        "BP4": 7.859037864932361e-10,
+        "BP5": 5.333455899148021e-10,
+        "BP6": 3.774315304738707e-10,
+        "BP7": 2.7034929850344724e-10,
+        "BP8": 1.9016177521535838e-10,
+        "BP9": 1.9017321051251201e-10,
+        "BP10": 1.9019641417372668e-10,
+        "BP11": 1.9024448683069295e-10,
+        "BN0": -9.966862002386279e-09,
+        "BN1": -6.953754683181046e-09,
+        "BN2": -4.8625490300935326e-09,
+        "BN3": -3.2854297060680437e-09,
+        "BN4": -2.2472053107236434e-09,
+        "BN5": -1.5834491495780867e-09,
+        "BN6": -1.1118810316901317e-09,
+        "BN7": -7.658855771808248e-10,
+        "BN8": -5.433788974329445e-10,
+        "BN9": -5.4294813089939e-10,
+        "BN10": -5.420404125544565e-10,
+        "BN11": -5.400109248654417e-10
+      },
+      "max_abs_V": 9.966862002386279e-09,
+      "scope": "Tracking before release, not charge injection or final sampling-error acceptance."
+    },
+    {
+      "frame": 2,
+      "time_s": 1.65615e-05,
+      "all_24_bottom_plate_tracking_errors_V": {
+        "BP0": -9.977824122486822e-09,
+        "BP1": -6.968700727583155e-09,
+        "BP2": -4.883099924413159e-09,
+        "BP3": -3.312902618901603e-09,
+        "BP4": -2.2842183700078067e-09,
+        "BP5": -1.6345564901598664e-09,
+        "BP6": -1.1834180302372488e-09,
+        "BP7": -8.669807094463522e-10,
+        "BP8": -6.867340029970137e-10,
+        "BP9": -8.340292900754775e-10,
+        "BP10": -1.1447545134046777e-09,
+        "BP11": -1.839640662026909e-09,
+        "BN0": 3.615941435164416e-09,
+        "BN1": 2.419819233878684e-09,
+        "BN2": 1.68088365448682e-09,
+        "BN3": 1.156635343058099e-09,
+        "BN4": 7.894854769929793e-10,
+        "BN5": 5.382451151447754e-10,
+        "BN6": 3.8436587246337695e-10,
+        "BN7": 2.8012536734678406e-10,
+        "BN8": 2.0397783462300367e-10,
+        "BN9": 2.1793455928786898e-10,
+        "BN10": 2.464080051112205e-10,
+        "BN11": 3.0570224129888857e-10
+      },
+      "max_abs_V": 9.977824122486822e-09,
+      "scope": "Tracking before release, not charge injection or final sampling-error acceptance."
+    }
+  ],
+  "reference_source_supply_diagnostic": {
+    "formula": "I_RP=(RP_source-RP)/1ohm, I_RN=(RN_source-RN)/1ohm; P_sources=RP_source*I_RP+RN_source*I_RN, signed external ideal-source delivered power.",
+    "first_frame_window_s": [
+      4.0625e-06,
+      1.40625e-05
+    ],
+    "first_frame_source_energy_J": 3.7871758277483256e-11,
+    "first_frame_source_average_W": 3.787175827748326e-06,
+    "first_frame_external_1ohm_loss_J": 1.4574174679185524e-13,
+    "first_frame_external_10nF_storage_change_J": -1.7989945644281134e-18,
+    "first_frame_reconstructed_reference_pin_energy_J": 3.772601832968596e-11,
+    "reconstruction_limit": "Energy balance diagnostic only; trapezoidal accepted-time reconstruction, no saved native terminal currents or strict-pair accuracy yet. Source energy alone is NOT chip pin energy.",
+    "whole_trace_peak_abs_RP_source_current_A": 0.0015637931815031259,
+    "whole_trace_peak_abs_RN_source_current_A": 0.0015661529773867144,
+    "not_total_chip_power": true,
+    "not_chip_power_pass": true,
+    "missing": [
+      "native ADC RP/RN terminal currents for direct boundary validation",
+      "VDD source current",
+      "VCM source current",
+      "realized SAR RTL/control power",
+      "supply draw of ideal trial/sample/eval/reset voltage drivers"
+    ],
+    "external_fixture": "1ohm reference source resistance and10nF external decoupling each. Source energy includes external resistor loss and external capacitor endpoint storage change."
+  },
+  "missing_waveform_nodes_for_mechanism": [
+    "phases.XPHASE_XBCONV_B (first PFET local gate)",
+    "adc.XADC_XP2_ACQB (second PFET local gate)",
+    "both flagged primitive :int_b/:dbnode/:sbnode voltages"
+  ],
+  "notes": [
+    "No strict full-ADC waveform is analyzed here, so transient extrema are circuit behavior, not estimates of numerical error.",
+    "Two printed LTE warnings and matching output codes cannot qualify numerical accuracy or linearity.",
+    "Prior timeout evidence remains failed/incomplete; a subsequent complete run does not overwrite it.",
+    "Both flagged outer bulk terminals are already tied to VDD; internal int_b does not imply a missing schematic bulk connection."
+  ]
+}

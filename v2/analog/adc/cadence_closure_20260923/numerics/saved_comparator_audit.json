@@ -1,0 +1,317 @@
+{
+  "status": "DIAGNOSTIC_ONLY_EXISTING_FAILURE_UNCHANGED",
+  "physical_ADC_gate": "NOT_RUN_IN_THIS_FIXTURE",
+  "absolute_diagnostic_limit_v": 9.765625000000002e-06,
+  "source_hashes": {
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/reset1/compare_numerics.py": "b48c5852d6eb7f1d413c938987fd8a13e791f56dc5bb8f35f7b61d9fe11af622",
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/private_runtime/reset1_comparator_002/reset_decide.tran.tran": "5c9fa120f679776f37ef65fce738a0f281cede90f93f4539647d081748f42f55",
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/private_runtime/reset1_comparator_strict_001/reset_decide.tran.tran": "99d0603d9bf08c572b4f019be09cd1cff700e92bf3071941471aeb4dd5184a2b",
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/private_runtime/reset1_comparator_002/input.scs": "351a4af82b44b6a122728fd4b2fdc21c8107e4d9d89738af166a92c448de0e77",
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/private_runtime/reset1_comparator_strict_001/input.scs": "4cf03c9a80c41d56aa97b7321438d5a2551438ec7de59e9e97c02df2a0b3274e"
+  },
+  "solver_profiles": {
+    "baseline": {
+      "tolerance.relative": 1e-05,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 9.2e-06,
+      "step": 9.2e-09,
+      "istep": 0.001,
+      "maxstep": 2e-09,
+      "reltol": 1e-06,
+      "abstol(V)": 1e-08,
+      "abstol(I)": 1e-13,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "lteratio": 10.0,
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "strict": {
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 9.2e-06,
+      "step": 9.2e-09,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "lteratio": 10.0,
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    }
+  },
+  "channels": {
+    "preamp_differential": {
+      "linear_union_max_abs_v": 4.00055974667593e-05,
+      "linear_union_signed_delta_v": 4.00055974667593e-05,
+      "linear_union_worst_time_s": 6.650648216996685e-06,
+      "linear_union_gate_0_05lsb": false,
+      "union_points": 69631,
+      "union_points_over_diagnostic_limit": 133,
+      "baseline_bracket_at_linear_worst": {
+        "time_s": [
+          6.650428795465058e-06,
+          6.650583150851191e-06,
+          6.650822727607686e-06,
+          6.651e-06
+        ],
+        "voltage_v": [
+          0.02060726367500254,
+          0.020462412989248557,
+          0.020125283473965583,
+          0.01979273111026092
+        ]
+      },
+      "strict_bracket_at_linear_worst": {
+        "time_s": [
+          6.650431329710212e-06,
+          6.650531641966576e-06,
+          6.650648216996685e-06,
+          6.650777369676631e-06
+        ],
+        "voltage_v": [
+          0.02063496722158331,
+          0.020545718282602432,
+          0.020410858293418377,
+          0.020224166655710807
+        ]
+      },
+      "pchip_diagnostic_only": {
+        "max_abs_v": 3.075717208366607e-05,
+        "worst_time_s": 6.650262771818861e-06,
+        "difference_from_linear_at_linear_worst_v": -1.2995343702752044e-05,
+        "not_a_gate": true,
+        "not_an_error_bound": true
+      },
+      "nodes": [
+        "XCMP.XADC_PREP",
+        "XCMP.XADC_PREN"
+      ]
+    },
+    "R_BAR": {
+      "linear_union_max_abs_v": 0.11253516870282765,
+      "linear_union_signed_delta_v": 0.11253516870282765,
+      "linear_union_worst_time_s": 8.915446090804289e-06,
+      "linear_union_gate_0_05lsb": false,
+      "union_points": 69631,
+      "union_points_over_diagnostic_limit": 14051,
+      "baseline_bracket_at_linear_worst": {
+        "time_s": [
+          8.91544459280504e-06,
+          8.915445423354195e-06,
+          8.915446090804289e-06,
+          8.91544671412598e-06
+        ],
+        "voltage_v": [
+          0.4447716986949379,
+          0.42179009981078,
+          0.4033624077617032,
+          0.3862130970082883
+        ]
+      },
+      "strict_bracket_at_linear_worst": {
+        "time_s": [
+          8.915445213715683e-06,
+          8.91544579907868e-06,
+          8.915446336922859e-06,
+          8.915446808518425e-06
+        ],
+        "voltage_v": [
+          0.5400734317665178,
+          0.5239490957959267,
+          0.5091047946032883,
+          0.4960697871401737
+        ]
+      },
+      "pchip_diagnostic_only": {
+        "max_abs_v": 0.1125390355353279,
+        "worst_time_s": 8.91544579907868e-06,
+        "difference_from_linear_at_linear_worst_v": 3.121049704346568e-06,
+        "not_a_gate": true,
+        "not_an_error_bound": true
+      },
+      "nodes": [
+        "XCMP.XADC_XCMP_R_BAR"
+      ]
+    },
+    "Q": {
+      "linear_union_max_abs_v": 0.05179891308294304,
+      "linear_union_signed_delta_v": 0.05179891308294304,
+      "linear_union_worst_time_s": 7.040542644822891e-06,
+      "linear_union_gate_0_05lsb": false,
+      "union_points": 69631,
+      "union_points_over_diagnostic_limit": 11964,
+      "baseline_bracket_at_linear_worst": {
+        "time_s": [
+          7.040541801771998e-06,
+          7.040542236997071e-06,
+          7.040542665284075e-06,
+          7.040543069140634e-06
+        ],
+        "voltage_v": [
+          1.081949226460778,
+          1.055923869342431,
+          1.030313366849067,
+          1.006166083979556
+        ]
+      },
+      "strict_bracket_at_linear_worst": {
+        "time_s": [
+          7.040542266680932e-06,
+          7.040542454237153e-06,
+          7.040542644822891e-06,
+          7.040542869725279e-06
+        ],
+        "voltage_v": [
+          1.105946052943647,
+          1.094732108110798,
+          1.083335808109583,
+          1.069886616135595
+        ]
+      },
+      "pchip_diagnostic_only": {
+        "max_abs_v": 0.051798967321895706,
+        "worst_time_s": 7.040542644822891e-06,
+        "difference_from_linear_at_linear_worst_v": 5.423895266254419e-08,
+        "not_a_gate": true,
+        "not_an_error_bound": true
+      },
+      "nodes": [
+        "Q"
+      ]
+    },
+    "SET_MID": {
+      "linear_union_max_abs_v": 0.07369214168036042,
+      "linear_union_signed_delta_v": 0.07369214168036042,
+      "linear_union_worst_time_s": 7.040519583647593e-06,
+      "linear_union_gate_0_05lsb": false,
+      "union_points": 69631,
+      "union_points_over_diagnostic_limit": 14272,
+      "baseline_bracket_at_linear_worst": {
+        "time_s": [
+          7.040519382657661e-06,
+          7.040519538389185e-06,
+          7.040519691727434e-06,
+          7.040519845030848e-06
+        ],
+        "voltage_v": [
+          0.9558090136044461,
+          0.9425886892517018,
+          0.929597729107463,
+          0.916649962695181
+        ]
+      },
+      "strict_bracket_at_linear_worst": {
+        "time_s": [
+          7.040519398049002e-06,
+          7.040519493653989e-06,
+          7.040519583647593e-06,
+          7.040519670039833e-06
+        ],
+        "voltage_v": [
+          1.028139185973139,
+          1.020062021053629,
+          1.012446496144245,
+          1.005125845772096
+        ]
+      },
+      "pchip_diagnostic_only": {
+        "max_abs_v": 0.07369529308616796,
+        "worst_time_s": 7.040519583647593e-06,
+        "difference_from_linear_at_linear_worst_v": 3.1514058075332585e-06,
+        "not_a_gate": true,
+        "not_an_error_bound": true
+      },
+      "nodes": [
+        "XCMP.XADC_XCMP_XSET_MID"
+      ]
+    }
+  },
+  "logs": {
+    "baseline": {
+      "log_sha256": "8433562042bfe2a6c6413bdbb2728e525aee913ecaf765f4bd8c88d49177f8f0",
+      "printed_warning_records": [
+        {
+          "time_text": "1.00064 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XSET_MID. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.16678 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XSET_MID. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.16687 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XSET_XN2.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.31414 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XRSTB_XN.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.79011 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XSOR_XNOR_XN1.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        }
+      ],
+      "warning_suppression_present": true,
+      "LTE_printed_count_is_lower_bound": true,
+      "newton_disaster_recovery_present": true
+    },
+    "strict": {
+      "log_sha256": "b26cc5d3bcfe21852921eac4dddf02d19c9298f03f799a1c83f4743deb2a1ca6",
+      "printed_warning_records": [
+        {
+          "time_text": "1.00045 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XRAND_XINV_XN.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.31426 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XSOR_XNOR_XN1.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.93905 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XBN2_XN.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "5.93919 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XRESET_XN1.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        },
+        {
+          "time_text": "6.56419 us",
+          "code": "SPECTRE-16780",
+          "text": "LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: XCMP.XADC_XCMP_XRESET_XN1.msky130_fd_pr__nfet_01v8:int_b. Check the design or use '+diagnose' to get more information."
+        }
+      ],
+      "warning_suppression_present": true,
+      "LTE_printed_count_is_lower_bound": true,
+      "newton_disaster_recovery_present": true
+    }
+  },
+  "limitations": [
+    "No waveform shifts, excluded edges, threshold changes, or changed original verdicts.",
+    "PCHIP reconstruction is an interpolation-sensitivity diagnostic, not ground truth or an error bound.",
+    "Five printed warnings do not prove five events when the simulator suppresses repeats.",
+    "Internal body nodes are not saved in the retained allpub data, so their mechanism cannot be proven from this data alone."
+  ]
+}

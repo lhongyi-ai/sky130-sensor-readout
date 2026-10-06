@@ -1,0 +1,14 @@
+{
+  "status": "PREPARED_NOT_RUN_DIAGNOSTIC_ONLY",
+  "case": "matched",
+  "profile": "strict_traponly",
+  "parent_input": "cases/matched/strict/input.scs",
+  "parent_input_sha256": "5cee40159747e2ea63fd06d6e4412120cb093743dfe3c9cf38cc111e606980d1",
+  "input_path": "cases/matched/strict_traponly/input.scs",
+  "input_sha256": "fd6bd0be7578654046df10f4aac90ea4f56931abd4ba896b40afc7180ac9b690",
+  "sole_change": "method=gear2only -> method=traponly",
+  "same_model_circuit_stimulus_tolerances_maxstep": true,
+  "scope": "Integration-method diagnostic at the same strict settings, not a same-method tighter-accuracy pair. Check trapezoidal ringing and all retained edges; no warning count establishes ADC acceptance.",
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false
+}

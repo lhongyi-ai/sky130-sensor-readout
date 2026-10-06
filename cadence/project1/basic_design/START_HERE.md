@@ -38,9 +38,9 @@ Compatible with **Python 3.6.8** in the environment report, using only the stand
 `prepare` creates `site.json` and prints one CIW command containing the absolute path of your current directory. Default paths come from the existing environment report:
 
 ```text
-OCEAN:   /project/engineering/cadence21/ic/tools/bin/ocean
-Spectre: /project/engineering/cadence21/spectre/tools/bin/spectre
-Model:   /project/engineering/cadence21/CDK/sky130_release_0.0.3/models/sky130.lib.spice
+OCEAN:   /opt/cadence/ic/tools/bin/ocean
+Spectre: /opt/cadence/spectre/tools/bin/spectre
+Model:   /opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice
 Working directory: ~/cadence_skywater
 ```
 
@@ -52,13 +52,13 @@ If Virtuoso is not already open, run in another terminal:
 
 ```bash
 cd ~/cadence_skywater
-/project/engineering/cadence21/ic/bin/virtuoso &
+/opt/cadence/ic/bin/virtuoso &
 ```
 
 Paste the entire line printed by `prepare` into the bottom input field of the **main Virtuoso CIW window** displayed at startup. Do not paste into the schematic status bar or Linux terminal. Its form is shown below; use the actual path printed by the terminal:
 
 ```lisp
-p1bRoot="/home/compute/l.hongyi/cadence_skywater/project1_handoff/basic_design_v1_0_4" load(strcat(p1bRoot "/create.il"))
+p1bRoot="/home/cadence-user/cadence_skywater/project1_handoff/basic_design_v1_0_4" load(strcat(p1bRoot "/create.il"))
 ```
 
 Success markers: `P1B_ALL_CREATED` in CIW and `created.txt` in the package directory. The package's `p1b_` cells appear under Library Manager → `project1`. Open `p1b_ota_legacy_r4/schematic` and `symbol` to inspect them.

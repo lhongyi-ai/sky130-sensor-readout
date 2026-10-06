@@ -16,10 +16,10 @@ import zipfile
 from audit import check
 
 ROOT=Path(__file__).resolve().parent
-DEFAULT=dict(ocean='/project/engineering/cadence21/ic/tools/dfII/bin/ocean',
-             spectre='/project/engineering/cadence21/spectre/tools/bin/spectre',
+DEFAULT=dict(ocean='/opt/cadence/ic/tools/dfII/bin/ocean',
+             spectre='/opt/cadence/spectre/tools/bin/spectre',
              workdir=str(Path.home()/'cadence_skywater'),
-             model='/project/engineering/cadence21/CDK/sky130_release_0.0.3/models/sky130.lib.spice')
+             model='/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice')
 def read(name): return json.loads((ROOT/name).read_text())
 def write(path,data): path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 def stamp(): return datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'_'+uuid.uuid4().hex[:8]

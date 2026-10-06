@@ -1,0 +1,191 @@
+{
+  "source_path": "../runs/task_20260924T051121445887Z/design/xrun.log",
+  "sha256": "513be0f1ccedaa676be996ada98f36f667203f1b63efc000988617022bc0e7de",
+  "simulator_summary": {
+    "errors": 1,
+    "warnings": 20,
+    "notices": 159
+  },
+  "warning_counts": {
+    "SPECTRE-16780": 20
+  },
+  "warning_time_counts": {
+    "SPECTRE-16780": {
+      "4.07505 us": 1,
+      "6.58625 us": 1,
+      "9.06319 us": 1,
+      "9.06321 us": 1,
+      "9.68821 us": 1,
+      "10.3132 us": 1,
+      "10.3133 us": 1,
+      "13.9955 us": 1,
+      "14.0748 us": 1,
+      "14.0751 us": 1,
+      "16.5744 us": 1,
+      "19.0632 us": 1,
+      "22.1891 us": 1,
+      "23.3361 us": 2,
+      "25.3132 us": 2,
+      "25.3133 us": 1,
+      "25.3134 us": 1,
+      "27.8244 us": 1
+    }
+  },
+  "warning_device_counts": {
+    "SPECTRE-16780": {
+      "p2_ams_reset1.adc.XADC_XN7_XAI_XP.msky130_fd_pr__pfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN2_XRN_XP.msky130_fd_pr__pfet_01v8_lvt:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XP7_XNI_XP.msky130_fd_pr__pfet_01v8:int_b": 2,
+      "p2_ams_reset1.adc.XADC_XP8_XNI_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN6_XNI_XP.msky130_fd_pr__pfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN6_XNI_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN10_XRN_XP.msky130_fd_pr__pfet_01v8_lvt:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b": 2,
+      "p2_ams_reset1.phases.XPHASE_XNACQ_XN1.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN11_XAI_XP.msky130_fd_pr__pfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN0_XAI_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XCMP_XSOR_XINV_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XCMP_XSET_XN1.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN5_XNI_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XP6_XNI_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN1_XNI_XP.msky130_fd_pr__pfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XP6_XRN_XN.msky130_fd_pr__nfet_01v8_lvt:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XN5_XAI_XN.msky130_fd_pr__nfet_01v8:int_b": 1
+    }
+  },
+  "warning_records": [
+    {
+      "line": 540,
+      "code": "SPECTRE-16780",
+      "time_text": "4.07505 us",
+      "device": "p2_ams_reset1.adc.XADC_XN7_XAI_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 593,
+      "code": "SPECTRE-16780",
+      "time_text": "6.58625 us",
+      "device": "p2_ams_reset1.adc.XADC_XN2_XRN_XP.msky130_fd_pr__pfet_01v8_lvt:int_b"
+    },
+    {
+      "line": 664,
+      "code": "SPECTRE-16780",
+      "time_text": "9.06319 us",
+      "device": "p2_ams_reset1.adc.XADC_XP7_XNI_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 666,
+      "code": "SPECTRE-16780",
+      "time_text": "9.06321 us",
+      "device": "p2_ams_reset1.adc.XADC_XP8_XNI_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 677,
+      "code": "SPECTRE-16780",
+      "time_text": "9.68821 us",
+      "device": "p2_ams_reset1.adc.XADC_XN6_XNI_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 688,
+      "code": "SPECTRE-16780",
+      "time_text": "10.3132 us",
+      "device": "p2_ams_reset1.adc.XADC_XN6_XNI_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 693,
+      "code": "SPECTRE-16780",
+      "time_text": "10.3133 us",
+      "device": "p2_ams_reset1.adc.XADC_XN10_XRN_XP.msky130_fd_pr__pfet_01v8_lvt:int_b"
+    },
+    {
+      "line": 743,
+      "code": "SPECTRE-16780",
+      "time_text": "13.9955 us",
+      "device": "p2_ams_reset1.adc.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 803,
+      "code": "SPECTRE-16780",
+      "time_text": "14.0748 us",
+      "device": "p2_ams_reset1.phases.XPHASE_XNACQ_XN1.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 805,
+      "code": "SPECTRE-16780",
+      "time_text": "14.0751 us",
+      "device": "p2_ams_reset1.adc.XADC_XN11_XAI_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 813,
+      "code": "SPECTRE-16780",
+      "time_text": "16.5744 us",
+      "device": "p2_ams_reset1.adc.XADC_XN0_XAI_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 884,
+      "code": "SPECTRE-16780",
+      "time_text": "19.0632 us",
+      "device": "p2_ams_reset1.adc.XADC_XP7_XNI_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 925,
+      "code": "SPECTRE-16780",
+      "time_text": "22.1891 us",
+      "device": "p2_ams_reset1.adc.XADC_XCMP_XSOR_XINV_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 963,
+      "code": "SPECTRE-16780",
+      "time_text": "23.3361 us",
+      "device": "p2_ams_reset1.adc.XADC_XCMP_XSET_XN1.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 965,
+      "code": "SPECTRE-16780",
+      "time_text": "23.3361 us",
+      "device": "p2_ams_reset1.adc.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 1019,
+      "code": "SPECTRE-16780",
+      "time_text": "25.3132 us",
+      "device": "p2_ams_reset1.adc.XADC_XN5_XNI_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 1021,
+      "code": "SPECTRE-16780",
+      "time_text": "25.3132 us",
+      "device": "p2_ams_reset1.adc.XADC_XP6_XNI_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 1038,
+      "code": "SPECTRE-16780",
+      "time_text": "25.3133 us",
+      "device": "p2_ams_reset1.adc.XADC_XN1_XNI_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 1043,
+      "code": "SPECTRE-16780",
+      "time_text": "25.3134 us",
+      "device": "p2_ams_reset1.adc.XADC_XP6_XRN_XN.msky130_fd_pr__nfet_01v8_lvt:int_b"
+    },
+    {
+      "line": 1086,
+      "code": "SPECTRE-16780",
+      "time_text": "27.8244 us",
+      "device": "p2_ams_reset1.adc.XADC_XN5_XAI_XN.msky130_fd_pr__nfet_01v8:int_b"
+    }
+  ],
+  "statistics": {
+    "accepted_steps": null,
+    "LTE_rejected_steps": null,
+    "Newton_rejected_steps": null,
+    "minimum_accepted_step_s": null,
+    "drastic_step_size_changes": null,
+    "recovery_steps": null
+  },
+  "further_warning_suppression": false,
+  "suppressed_warning_total": 0,
+  "LTE_control_failure_observed": true,
+  "accuracy_pass": false,
+  "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+}

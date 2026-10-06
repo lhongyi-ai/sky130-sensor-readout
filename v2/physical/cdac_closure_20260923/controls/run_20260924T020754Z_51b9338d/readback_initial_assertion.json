@@ -1,0 +1,20 @@
+{
+  "status": "CHECKER_EXPECTATION_CORRECTED",
+  "issue": "Initial checker expected only M5 drawing polygons to move; actual GDS also contains intended AGG pin-purpose72/16 rectangle. No layout edits made.",
+  "observed_changed_layers": [
+    {
+      "layer": [
+        72,
+        16
+      ],
+      "xor_area_um2": 0.08
+    },
+    {
+      "layer": [
+        72,
+        20
+      ],
+      "xor_area_um2": 614.4
+    }
+  ]
+}

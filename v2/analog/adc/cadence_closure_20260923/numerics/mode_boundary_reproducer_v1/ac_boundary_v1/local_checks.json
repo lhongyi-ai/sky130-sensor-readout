@@ -1,0 +1,24 @@
+{
+  "status": "LOCAL_PREPARATION_CHECKED_NOT_EDA",
+  "checks": {
+    "input_hash_and_scope": "PASS",
+    "bash_syntax": "PASS",
+    "analytic_sign_and_parser_tests": {
+      "count": 4,
+      "status": "PASS"
+    },
+    "prior_actual_school_AC_schema_read": {
+      "file": "/path/to/sky130-two-stage-ota/v2/physical/mim_qualification_r3_20260923/evidence_final/spectre_controls_20260923T201601627237Z/rect_full/psf/ac.ac",
+      "sha256": "6d2483511aced7d6ffd6e207f4edaf2bdd520a2a0fd2150c9aec812e5392396a",
+      "points": 7,
+      "status": "PASS_FORMAT_ONLY"
+    },
+    "independent_read_only_review": {
+      "reviewer": "adc_numerics",
+      "status": "NO_RUN_BLOCKER_FOUND",
+      "scope": "same device and D-only excitation; runner evidence preservation; actual new AC schema still unverified"
+    }
+  },
+  "new_AC_cases_run": 0,
+  "formal_ADC_PEX_allowed": false
+}

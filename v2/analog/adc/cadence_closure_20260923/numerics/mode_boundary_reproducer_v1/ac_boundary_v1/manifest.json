@@ -1,0 +1,129 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "scope": "SAME_PFET_EXTERNAL_THREE_PORT_D_EXCITATION_AC_COLUMN_ONLY",
+  "source_input": "numerics/mode_boundary_reproducer_v1/static_charge_v1/input_strict.scs",
+  "source_sha256": "372b62a136f0bbbcb14bd48a147b1a180dda908260073ff3ff82005035c026a8",
+  "device_line": "XTEST (D G SB SB) pfet_01v8 w=(32u) l=150n as=8.48p ad=8.48p ps=64.53u pd=64.53u m=(1)*(1)",
+  "model_include": "include \"/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice\" section=tt",
+  "gate_dc_V": 0.9164255527780005,
+  "source_body_dc_V": 1.8,
+  "source_and_body_remain_tied": true,
+  "AC_sources": {
+    "VD": {
+      "mag_V": 1,
+      "phase_deg": 0
+    },
+    "VG": {
+      "mag_V": 0,
+      "phase_deg": 0
+    },
+    "VS": {
+      "mag_V": 0,
+      "phase_deg": 0
+    }
+  },
+  "frequency_Hz": {
+    "start": 1000,
+    "stop": 10000000,
+    "points_per_decade": 10,
+    "expected_points": 41
+  },
+  "precision": "same_as_static_charge_v1_strict",
+  "signed_measurement": "For each external port k, I_device_k=-I_source_positive_terminal_k; Y_kD=I_device_k/V_D with V_G=V_SB=0; G=Re(Y), C_effective=Im(Y)/(2*pi*f). Do not negate PFET signs again or exchange D/S on reversed.",
+  "not_claimed": [
+    "complete Y matrix",
+    "individual source/body separation",
+    "Q field interpretation resolved",
+    "physical model correctness",
+    "transient LTE repair",
+    "ADC accuracy",
+    "MIM/PEX qualification"
+  ],
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false,
+  "formal_ADC_PEX_allowed": false,
+  "help_evidence": {
+    "ac": {
+      "path": "runs/task_20260924T081638283126Z/ac_help.txt",
+      "sha256": "1a25ca1cbbdfcfc05f62369d3ddc12f2dfa13e92e329d9d0a9e0929ed1395b31",
+      "selected_syntax_evidence": [
+        {
+          "line_1based": 31,
+          "text": "2       start=0           Start sweep limit.\n3       stop              Stop sweep limit.\n4       center            Center of sweep."
+        },
+        {
+          "line_1based": 32,
+          "text": "3       stop              Stop sweep limit.\n4       center            Center of sweep.\n5       span=0            Sweep limit span."
+        },
+        {
+          "line_1based": 37,
+          "text": "8       dec               Points per decade.\n9       log=50            Number of steps, log sweep.\n10      values=[...]      Array of sweep values."
+        },
+        {
+          "line_1based": 71,
+          "text": "25      oppoint=no        Determines whether operating point information should\n                          be computed:if yes, where should it be printed\n                          (screen or file). Operating point information is not"
+        },
+        {
+          "line_1based": 27,
+          "text": "1       prevoppoint=no    Use the operating point computed in the previous\n                          analysis. Possible values are no and yes.\n"
+        },
+        {
+          "line_1based": 62,
+          "text": "21      skipdc=no         Skip DC analysis. Possible values are no and yes.\n22      useprevic=no      If set to yes or ns, use the converged initial\n                          condition from previous analysis as ic or ns. "
+        }
+      ]
+    },
+    "vsource": {
+      "path": "runs/task_20260924T070407785387Z/vsource_help.txt",
+      "sha256": "ff9d3633d432d0cc630a544034ea5aa4f599016b2c53576f1eece1458eac0420",
+      "selected_syntax_evidence": [
+        {
+          "line_1based": 302,
+          "text": "85      mag=0 V           Small signal voltage.\n86      phase=0 Deg       Small signal phase.\n87      xfmag=1 V/V       Transfer function analysis magnitude."
+        },
+        {
+          "line_1based": 303,
+          "text": "86      phase=0 Deg       Small signal phase.\n87      xfmag=1 V/V       Transfer function analysis magnitude.\n88      pacmag=0 V        Periodic AC analysis magnitude."
+        }
+      ]
+    }
+  },
+  "cases": {
+    "dn20u": {
+      "delta_D_minus_SB_V": -2e-05,
+      "input_path": "cases/dn20u/input.scs",
+      "sha256": "f44c07dbd41f894383d6f87e388b448a4f040fda53e51d7bc9230e0deb6ad4fc"
+    },
+    "dn5u": {
+      "delta_D_minus_SB_V": -5e-06,
+      "input_path": "cases/dn5u/input.scs",
+      "sha256": "8352e11e29efefb0fdafd424186d86824405858f3ae4da961923bea3a6798a76"
+    },
+    "dn1u": {
+      "delta_D_minus_SB_V": -1e-06,
+      "input_path": "cases/dn1u/input.scs",
+      "sha256": "61541b8be5acd6330e0ffd451415f91def3ebf0c20919c4a1201b25bf800f1eb"
+    },
+    "d0": {
+      "delta_D_minus_SB_V": 0.0,
+      "input_path": "cases/d0/input.scs",
+      "sha256": "871dbdec3a27a9a98213c52ed8054d1e0cc3cfa3e737aefd3ed924ae3233a473"
+    },
+    "dp1u": {
+      "delta_D_minus_SB_V": 1e-06,
+      "input_path": "cases/dp1u/input.scs",
+      "sha256": "a5f7cad74e81dd5f77fa268756e3325f8e75a7f6362e7d70fba3004aa2d37912"
+    },
+    "dp5u": {
+      "delta_D_minus_SB_V": 5e-06,
+      "input_path": "cases/dp5u/input.scs",
+      "sha256": "0271d7c2695b5c4b26bae188c07bb9fadc2dc87933f812bc098b0424016c73cb"
+    },
+    "dp20u": {
+      "delta_D_minus_SB_V": 2e-05,
+      "input_path": "cases/dp20u/input.scs",
+      "sha256": "a39834455fdeda7bedc3897edd90759478e784ad62a1a5985747c209d7585687"
+    }
+  },
+  "metadata_script_sha256": "2ff747f4f171b292a16a0ad0906b007e76f8787debe16f2c2c1e92b5d5021ec1"
+}

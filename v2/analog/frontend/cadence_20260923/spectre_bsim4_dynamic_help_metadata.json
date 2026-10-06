@@ -1,0 +1,351 @@
+{
+  "command": "installed Spectre -h bsim4 (via existing wrapper)",
+  "returncode": 0,
+  "full_help_sha256": "7610c94bc88056ac5c9f73b790f40d54b85431c535f533b4afddbea1bf34c64c",
+  "selected_lines": [
+    {
+      "line": 117,
+      "text": "                          triode, sat, subth and breakdown."
+    },
+    {
+      "line": 118,
+      "text": "47      trnqsmod          Transient NQS model selector."
+    },
+    {
+      "line": 119,
+      "text": "48      acnqsmod          AC small-signal NQS model selector."
+    },
+    {
+      "line": 120,
+      "text": "49      trise (C)         Temperature rise from ambient."
+    },
+    {
+      "line": 121,
+      "text": "50      dtemp (C)         Alias for trise."
+    },
+    {
+      "line": 122,
+      "text": "51      deltox=0 m        Shift in gate electrical/physical equivalent oxide"
+    },
+    {
+      "line": 123,
+      "text": "                          thinkness (for both TOXE and TOXP."
+    },
+    {
+      "line": 124,
+      "text": "52      rgatemod          Gate resistance model selector."
+    },
+    {
+      "line": 125,
+      "text": "53      rbodymod          Substrate resistance network model selector."
+    },
+    {
+      "line": 126,
+      "text": "54      geomod            Geometry dependent parasitics model selector."
+    },
+    {
+      "line": 127,
+      "text": "55      stimod            LOD stress effect model selector."
+    },
+    {
+      "line": 128,
+      "text": "56      rgeomod           Diffusion resistance and contact model selector."
+    },
+    {
+      "line": 129,
+      "text": "57      rbpb (Ohm)        Resistance connected between bNode' and bNode."
+    },
+    {
+      "line": 130,
+      "text": "58      rbpd (Ohm)        Resistance connected between bNode' and dbNode."
+    },
+    {
+      "line": 131,
+      "text": "59      rbps (Ohm)        Resistance connected between bNode' and sbNode."
+    },
+    {
+      "line": 189,
+      "text": "13      capmod=2          Capacitance model selector."
+    },
+    {
+      "line": 190,
+      "text": "14      rgatemod=0        Gate resistance model selector."
+    },
+    {
+      "line": 191,
+      "text": "15      rbodymod=0        Substrate resistance network model selector."
+    },
+    {
+      "line": 192,
+      "text": "16      trnqsmod=0        Transient Non-quasi static model selector. Set to 1"
+    },
+    {
+      "line": 193,
+      "text": "                          to turn on nqs."
+    },
+    {
+      "line": 194,
+      "text": "17      acnqsmod=0        Ac Non-quasi static model selector. Set to 1 to turn"
+    },
+    {
+      "line": 195,
+      "text": "                          on nqs."
+    },
+    {
+      "line": 196,
+      "text": "18      fnoimod=1         Flicker noise model selector."
+    },
+    {
+      "line": 197,
+      "text": "19      tnoimod=0         Thermal noise model selector."
+    },
+    {
+      "line": 198,
+      "text": "20      diomod=1          Source/Drain junction diode IV model selector."
+    },
+    {
+      "line": 199,
+      "text": "21      tempmod=0         Temperature model selector. 0 for original model and"
+    },
+    {
+      "line": 200,
+      "text": "                          1 for new format."
+    },
+    {
+      "line": 217,
+      "text": "32      epsrox=3.9        Gate dielectric constant."
+    },
+    {
+      "line": 218,
+      "text": "33      epsrgate=11.7     Dielectric constant of gate relative to vacuum."
+    },
+    {
+      "line": 219,
+      "text": "34      epsrsub=11.7      Dielectric constant of substrate relative to vacuum."
+    },
+    {
+      "line": 220,
+      "text": "35      eot=1.5e-9 m      Equivalent gate oxide thickness in meters."
+    },
+    {
+      "line": 221,
+      "text": "36      toxe=3.0e-9 m     Electrical gate equivalent oxide thickness."
+    },
+    {
+      "line": 222,
+      "text": "37      toxp=`toxe' m     Physical gate equivalent oxide thickness."
+    },
+    {
+      "line": 223,
+      "text": "38      toxm=`toxe' m     Toxe at which parameters were extracted."
+    },
+    {
+      "line": 224,
+      "text": "39      dtox=0.0 m        Difference between electrical and physical gate oxide"
+    },
+    {
+      "line": 1720,
+      "text": "102     ft (Hz)           Unity current gain frequency at actual bias."
+    },
+    {
+      "line": 1721,
+      "text": "103     rgate (Ohm)       MOS gate resistance."
+    },
+    {
+      "line": 1722,
+      "text": "104     vearly (V)        Equivalent early voltage."
+    },
+    {
+      "line": 1723,
+      "text": ""
+    },
+    {
+      "line": 1724,
+      "text": ""
+    },
+    {
+      "line": 1725,
+      "text": "==============="
+    },
+    {
+      "line": 1726,
+      "text": "Parameter Index"
+    },
+    {
+      "line": 1727,
+      "text": "==============="
+    },
+    {
+      "line": 1728,
+      "text": ""
+    },
+    {
+      "line": 1729,
+      "text": "    a0 .............. M-91   lpdiblcb ....... M-564   rgatemod ........ I-52"
+    },
+    {
+      "line": 1730,
+      "text": "    a1 .............. M-96   lpdits ......... M-619   rgatemod ........ M-14"
+    },
+    {
+      "line": 1731,
+      "text": "    a2 .............. M-97   lpditsd ........ M-620   rgbd ........... OP-59"
+    },
+    {
+      "line": 1732,
+      "text": "    acde ........... M-244   lpe0 ............ M-76   rgbi ............. O-8"
+    },
+    {
+      "line": 1733,
+      "text": "    acm ............ M-113   lpeb ............ M-77   rgeomod ......... I-56"
+    },
+    {
+      "line": 1734,
+      "text": "    acnqsmod ........ I-48   lphin .......... M-607   rgeomod ......... M-26"
+    },
+    {
+      "line": 1735,
+      "text": "    acnqsmod ........ M-17   lpigcd ......... M-650   rgidl .......... M-184"
+    },
+    {
+      "line": 1736,
+      "text": "    ad ............... I-4   lpoxedge ....... M-649   rgisl .......... M-191"
+    },
+    {
+      "line": 1737,
+      "text": "    ad ............. M-489   lprt ........... M-603   rnoia .......... M-448"
+    },
+    {
+      "line": 1738,
+      "text": "    adeff ............ O-9   lprwb .......... M-549   rnoib .......... M-449"
+    },
+    {
+      "line": 1739,
+      "text": "    ados ........... M-103   lprwg .......... M-550   rnoic .......... M-450"
+    },
+    {
+      "line": 1740,
+      "text": "    af ............. M-439   lpscbe1 ........ M-565   ron ............ OP-48"
+    },
+    {
+      "line": 1741,
+      "text": "    agidl .......... M-178   lpscbe2 ........ M-566   rout ........... OP-99"
+    },
+    {
+      "line": 1839,
+      "text": "    csb ............ OP-31   nigbinv ........ M-200   trise ........... OP-2"
+    },
+    {
+      "line": 1840,
+      "text": "    csd ............ OP-29   nigc ........... M-215   trnqsmod ........ I-47"
+    },
+    {
+      "line": 1841,
+      "text": "    csg ............ OP-28   njd ............ M-373   trnqsmod ........ M-16"
+    },
+    {
+      "line": 1842,
+      "text": "    css ............ OP-30   njs ............ M-372   trs ............ M-120"
+    },
+    {
+      "line": 1843,
+      "text": "    cta ............ M-382   njts ........... M-288   tvfbsdoff ...... M-221"
+    },
+    {
+      "line": 1844,
+      "text": "    ctp ............ M-384   njtsd .......... M-291   tvoff .......... M-138"
+    },
+    {
+      "line": 1845,
+      "text": "    cvchargemod ...... M-7   njtssw ......... M-289   tvoffcv ........ M-389"
+    },
+    {
+      "line": 1846,
+      "text": "    deleta0 ......... I-72   njtsswd ........ M-292   type ............. M-1"
+    },
+    {
+      "line": 1847,
+      "text": "    delk1 ........... I-70   njtsswg ........ M-290   u0 ............. M-121"
+    },
+    {
+      "line": 1891,
+      "text": "    eot ............. M-35   pbswgs ......... M-351   vgsr_max ....... M-513"
+    },
+    {
+      "line": 1892,
+      "text": "    epsrgate ........ M-33   pbsws .......... M-342   vgt ............ OP-93"
+    },
+    {
+      "line": 1893,
+      "text": "    epsrox .......... M-32   pcdsc .......... M-869   voff ........... M-137"
+    },
+    {
+      "line": 1894,
+      "text": "    epsrsub ......... M-34   pcdscb ......... M-870   voffcv ......... M-241"
+    },
+    {
+      "line": 1895,
+      "text": "    eta0 ........... M-145   pcdscd ......... M-871   voffcvl ........ M-243"
+    },
+    {
+      "line": 1896,
+      "text": "    etab ........... M-146   pcf ............ M-887   voffl .......... M-142"
+    },
+    {
+      "line": 1897,
+      "text": "    eu ............. M-128   pcgdl .......... M-884   vsat ........... M-129"
+    },
+    {
+      "line": 1898,
+      "text": "    fc ............. M-334   pcgidl ......... M-925   vsat_marg ...... OP-96"
+    },
+    {
+      "line": 2072,
+      "text": "    lintnoi ........ M-442   rbdby0 ......... M-478   wute ........... M-754"
+    },
+    {
+      "line": 2073,
+      "text": "    lk ............. M-413   rbodymod ........ I-53   wvbm ........... M-678"
+    },
+    {
+      "line": 2074,
+      "text": "    lk1 ............ M-520   rbodymod ........ M-15   wvbx ........... M-677"
+    },
+    {
+      "line": 2075,
+      "text": "    lk2 ............ M-521   rbpb ............ I-57   wvfb ........... M-669"
+    },
+    {
+      "line": 2076,
+      "text": "    lk2we .......... M-661   rbpb ........... M-454   wvfbcv ......... M-738"
+    },
+    {
+      "line": 2077,
+      "text": "    lk3 ............ M-522   rbpbx0 ......... M-455   wvfbsdoff ...... M-806"
+    },
+    {
+      "line": 2078,
+      "text": "    lk3b ........... M-523   rbpbxl ......... M-456   wvoff .......... M-725"
+    },
+    {
+      "line": 2079,
+      "text": "    lketa .......... M-541   rbpbxnf ........ M-458   wvoffcv ........ M-742"
+    },
+    {
+      "line": 2080,
+      "text": "    lkgidl ......... M-628   rbpbxw ......... M-457   wvsat .......... M-703"
+    },
+    {
+      "line": 2118,
+      "text": "    lpdiblc1 ....... M-562   reversed ........ OP-4"
+    },
+    {
+      "line": 2119,
+      "text": "    lpdiblc2 ....... M-563   rgate ......... OP-103"
+    },
+    {
+      "line": 2120,
+      "text": ""
+    }
+  ]
+}

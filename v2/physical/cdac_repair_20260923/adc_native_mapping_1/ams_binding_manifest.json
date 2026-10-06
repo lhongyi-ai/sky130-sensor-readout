@@ -1,0 +1,111 @@
+{
+  "scope": "Electrical native ADC/phase boundary to unchanged real SAR RTL. Ideal boundary adapters only; no fabricated comparison.",
+  "rtl": {
+    "path": "../ams_qualification/sar_controller.v",
+    "sha256": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+  },
+  "native_targets": {
+    "ADC": "project1/p2adc_core_fix1_school_r1/schematic",
+    "phase": "project1/p2adc_phase_school_r1/schematic"
+  },
+  "subcircuit_aliases": {
+    "sensor_adc_candidate": "p2adc_core_fix1_school_r1",
+    "sensor_phases": "p2adc_phase_school_r1"
+  },
+  "port_order": {
+    "adc": [
+      "INP",
+      "INN",
+      "Q",
+      "QB",
+      "SAMPLE",
+      "SAMPLEB",
+      "ACQ",
+      "CONV",
+      "EVAL",
+      "B11",
+      "B10",
+      "B9",
+      "B8",
+      "B7",
+      "B6",
+      "B5",
+      "B4",
+      "B3",
+      "B2",
+      "B1",
+      "B0",
+      "RP",
+      "RN",
+      "VCM",
+      "VDD",
+      "VSS"
+    ],
+    "phase": [
+      "SAMPLE_CMD",
+      "TOP",
+      "TOPB",
+      "ACQ",
+      "CONV",
+      "VDD",
+      "VSS"
+    ]
+  },
+  "connections": [
+    {
+      "from": "ADC.Q electrical",
+      "via": "p1_e2l",
+      "to": "sar_controller.comparator_bit"
+    },
+    {
+      "from": "ADC.QB electrical",
+      "via": "p1_e2l",
+      "to": "decision validity/complement monitor only"
+    },
+    {
+      "from": "sar_controller.trial_code[11:0]",
+      "via": "p1_l2e per bit",
+      "to": "ADC.B11..B0"
+    },
+    {
+      "from": "sar_controller.sample_en",
+      "via": "p1_l2e",
+      "to": "phase.SAMPLE_CMD"
+    },
+    {
+      "from": "phase.TOP/TOPB",
+      "via": "direct electrical",
+      "to": "ADC.SAMPLE/SAMPLEB"
+    },
+    {
+      "from": "phase.ACQ/CONV",
+      "via": "direct electrical",
+      "to": "ADC.ACQ/CONV"
+    },
+    {
+      "from": "sar_controller.comparator_evaluate",
+      "via": "p1_l2e",
+      "to": "ADC.EVAL"
+    }
+  ],
+  "output_metadata": {
+    "data_gain": "Gain attached to the just-completed output word",
+    "gain_latched": "Current/new conversion gain; may change on the same edge old data/data_gain become valid",
+    "gain_11_reserved": true
+  },
+  "no_ideal_comparator": true,
+  "no_precomputed_decisions": true,
+  "first_smoke": {
+    "corner": "tt",
+    "VDD": 1.8,
+    "temperature_C": 27,
+    "clock_Hz": 1600000,
+    "input_source_ohm_each": 350,
+    "reference_ohm_each": 1,
+    "reference_decoupling_F_each": 1e-08,
+    "frames": 2,
+    "expected_decisions": 24,
+    "waveform_convergence_qualified": false,
+    "full_code_or_noise_qualified": false
+  }
+}

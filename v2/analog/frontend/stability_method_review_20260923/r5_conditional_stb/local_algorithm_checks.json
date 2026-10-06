@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_ALGORITHM_CHECK_PASS",
+  "synthetic_tests_only": true,
+  "spectre_run": false,
+  "checks": [
+    "All four unity crossings retained; native match can be fourth",
+    "Exact-grid tangent retained",
+    "Zero plateau reported as interval",
+    "Endpoint and interior crossings retained",
+    "Negative real-axis crossing recorded without sign flip",
+    "Positive real-axis native GM convention preserved",
+    "Magnitude zero handled without nonfinite JSON"
+  ]
+}

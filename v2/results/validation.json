@@ -70,19 +70,19 @@
     {
       "name": "behavioral_experiments",
       "returncode": 0,
-      "stdout": "{\n  \"status\": \"BEHAVIORAL_EXPERIMENTS_COMPLETE\",\n  \"m2_gate\": \"PARTIAL_PDK_FEASIBILITY_NOT_VERIFIED\",\n  \"physical_chip_qualified\": false,\n  \"results\": \"/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/results\"\n}\n",
+      "stdout": "{\n  \"status\": \"BEHAVIORAL_EXPERIMENTS_COMPLETE\",\n  \"m2_gate\": \"PARTIAL_PDK_FEASIBILITY_NOT_VERIFIED\",\n  \"physical_chip_qualified\": false,\n  \"results\": \"/path/to/sky130-two-stage-ota/v2/results\"\n}\n",
       "stderr": ""
     },
     {
       "name": "physical_analytical_budget",
       "returncode": 0,
-      "stdout": "{\"status\": \"ANALYTICAL_CONSTRAINTS_GENERATED\", \"chip_qualified\": false, \"report\": \"/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/results/physical_budget.json\"}\n",
+      "stdout": "{\"status\": \"ANALYTICAL_CONSTRAINTS_GENERATED\", \"chip_qualified\": false, \"report\": \"/path/to/sky130-two-stage-ota/v2/results/physical_budget.json\"}\n",
       "stderr": ""
     },
     {
       "name": "digital_rtl",
       "returncode": 0,
-      "stdout": "{\n  \"status\": \"passed\",\n  \"evidence_level\": \"digital_rtl_with_ideal_held_code_comparator\",\n  \"analog_adc_validated\": false,\n  \"physical_timing_validated\": false,\n  \"stages\": [\n    {\n      \"name\": \"verilog_2005_design_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"testbench_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"self_checking_simulation\",\n      \"returncode\": 0,\n      \"output\": \"PASS sar_controller: checks=687790 accepted=4400 completed=4384 aborted=16 ignored_busy=2293 reserved_rejected=74 back_to_back=124\\n/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/tests/rtl/tb_sar_controller.sv:222: $finish called at 46914064500 (1ps)\"\n    }\n  ],\n  \"simulator\": \"Icarus Verilog version 13.0 (stable) (v13_0)\",\n  \"counters\": {\n    \"checks\": 687790,\n    \"accepted\": 4400,\n    \"completed\": 4384,\n    \"aborted\": 16,\n    \"ignored_busy\": 2293,\n    \"reserved_rejected\": 74,\n    \"back_to_back\": 124\n  }\n}\n",
+      "stdout": "{\n  \"status\": \"passed\",\n  \"evidence_level\": \"digital_rtl_with_ideal_held_code_comparator\",\n  \"analog_adc_validated\": false,\n  \"physical_timing_validated\": false,\n  \"stages\": [\n    {\n      \"name\": \"verilog_2005_design_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"testbench_compile\",\n      \"returncode\": 0,\n      \"output\": \"\"\n    },\n    {\n      \"name\": \"self_checking_simulation\",\n      \"returncode\": 0,\n      \"output\": \"PASS sar_controller: checks=687790 accepted=4400 completed=4384 aborted=16 ignored_busy=2293 reserved_rejected=74 back_to_back=124\\n/path/to/sky130-two-stage-ota/v2/tests/rtl/tb_sar_controller.sv:222: $finish called at 46914064500 (1ps)\"\n    }\n  ],\n  \"simulator\": \"Icarus Verilog version 13.0 (stable) (v13_0)\",\n  \"counters\": {\n    \"checks\": 687790,\n    \"accepted\": 4400,\n    \"completed\": 4384,\n    \"aborted\": 16,\n    \"ignored_busy\": 2293,\n    \"reserved_rejected\": 74,\n    \"back_to_back\": 124\n  }\n}\n",
       "stderr": ""
     }
   ],

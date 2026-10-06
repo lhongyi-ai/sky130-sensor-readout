@@ -1,0 +1,2454 @@
+{
+  "status": "SOURCE_CONNECTIVITY_RESOLVED__NATIVE_CDF_MAPPING_UNVERIFIED",
+  "source_files": {
+    "qualification_20260913/candidate_06.spice": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+    "qualification_20260913/sampling_switch.spice": "f8595a6f9b00daf91298a3b8fe2c625bf30168e9834114163b0a23a34a396f45",
+    "qualification_20260913/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "qualification_20260913/runs/20260913T062412790986Z_noise_g4_acquire/bench.spice": "03ce5548d5bc1d22d32a1949837da761e413964f1ec77f0bc74477a04be473f6"
+  },
+  "units": {
+    "W": "um in the frozen ngspice subcircuit interface",
+    "L": "um in the frozen ngspice subcircuit interface"
+  },
+  "multiplicity_note": "PDK primitive entries count parameterized source instances, not physical unit capacitors. The two CDAC bank entries each specify m=4096,mult=4096 under the source model semantics. Do not multiply them together or infer Cadence CDF semantics.",
+  "primitive_entry_count": 107,
+  "primitive_counts_by_kind": {
+    "mos": 55,
+    "resistor": 22,
+    "mim": 30
+  },
+  "primitive_counts_by_model": {
+    "sky130_fd_pr__nfet_01v8": 26,
+    "sky130_fd_pr__pfet_01v8": 21,
+    "sky130_fd_pr__res_high_po_0p35": 20,
+    "sky130_fd_pr__cap_mim_m3_1": 30,
+    "sky130_fd_pr__res_high_po_0p69": 2,
+    "sky130_fd_pr__nfet_01v8_lvt": 4,
+    "sky130_fd_pr__pfet_01v8_lvt": 4
+  },
+  "ideal_testbench_resistors": [
+    {
+      "path": "RSP",
+      "source_line": "RSP VINP IP 350",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 17,
+      "nets": [
+        "VINP",
+        "IP"
+      ]
+    },
+    {
+      "path": "RSN",
+      "source_line": "RSN VINN IN 350",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 18,
+      "nets": [
+        "VINN",
+        "IN"
+      ]
+    },
+    {
+      "path": "RLEAKP",
+      "source_line": "RLEAKP HP VCM 1g",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 28,
+      "nets": [
+        "HP",
+        "VCM"
+      ]
+    },
+    {
+      "path": "RLEAKN",
+      "source_line": "RLEAKN HN VCM 1g",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 29,
+      "nets": [
+        "HN",
+        "VCM"
+      ]
+    }
+  ],
+  "testbench_stimuli": [
+    {
+      "path": "VDD",
+      "source_line": "VDD VDD 0 1.8",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 8,
+      "nets": [
+        "VDD",
+        "0"
+      ]
+    },
+    {
+      "path": "VCM",
+      "source_line": "VCM VCM 0 0.9",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 9,
+      "nets": [
+        "VCM",
+        "0"
+      ]
+    },
+    {
+      "path": "VACQ",
+      "source_line": "VACQ ACQ 0 1.8",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 10,
+      "nets": [
+        "ACQ",
+        "0"
+      ]
+    },
+    {
+      "path": "VACQB",
+      "source_line": "VACQB ACQB 0 0",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 11,
+      "nets": [
+        "ACQB",
+        "0"
+      ]
+    },
+    {
+      "path": "VSEL0",
+      "source_line": "VSEL0 SEL0 0 1.8",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 12,
+      "nets": [
+        "SEL0",
+        "0"
+      ]
+    },
+    {
+      "path": "VSEL1",
+      "source_line": "VSEL1 SEL1 0 0",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 13,
+      "nets": [
+        "SEL1",
+        "0"
+      ]
+    },
+    {
+      "path": "VSW",
+      "source_line": "VSW SW 0 dc 0 ac 1",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 14,
+      "nets": [
+        "SW",
+        "0"
+      ]
+    },
+    {
+      "path": "BSP",
+      "source_line": "BSP VINP 0 V={.9+v(SW)/8}",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 15,
+      "nets": [
+        "VINP",
+        "0"
+      ]
+    },
+    {
+      "path": "BSN",
+      "source_line": "BSN VINN 0 V={.9-v(SW)/8}",
+      "source_file": "runs/20260913T062412790986Z_noise_g4_acquire/bench.spice",
+      "line": 16,
+      "nets": [
+        "VINN",
+        "0"
+      ]
+    }
+  ],
+  "resistor_dimension_inventory": [
+    {
+      "path": "XPGA/XRINP/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 9.102719033232628,
+      "target_R_ohm": 10000,
+      "nets": {
+        "A": "IP",
+        "B": "XPGA/SUMPOS",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XRINN/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 9.102719033232628,
+      "target_R_ohm": 10000,
+      "nets": {
+        "A": "IN",
+        "B": "XPGA/SUMNEG",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XFP1/XR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 9.455186304128903,
+      "target_R_ohm": 10350,
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XFP1/N",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XFN1/XR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 9.455186304128903,
+      "target_R_ohm": 10350,
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XFN1/N",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XFP4/XR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 40.72406847935549,
+      "target_R_ohm": 41400,
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XFP4/N",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XFN4/XR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 40.72406847935549,
+      "target_R_ohm": 41400,
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XFN4/N",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XFP16/XR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 165.79959718026183,
+      "target_R_ohm": 165600,
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XFP16/N",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XFN16/XR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 165.79959718026183,
+      "target_R_ohm": 165600,
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XFN16/N",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XBIAS/XRBN/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 23.201409869083584,
+      "target_R_ohm": 24000,
+      "nets": {
+        "A": "VDD",
+        "B": "XPGA/XOTA/BN",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 1006.0815709969788,
+      "target_R_ohm": 1000000,
+      "nets": {
+        "A": "XPGA/XOTA/BP",
+        "B": "XPGA/XOTA/BN",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRN1/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 99.73716012084593,
+      "target_R_ohm": 100000,
+      "nets": {
+        "A": "XPGA/XOTA/N1",
+        "B": "XPGA/XOTA/NCM",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRN2/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 99.73716012084593,
+      "target_R_ohm": 100000,
+      "nets": {
+        "A": "XPGA/XOTA/N2",
+        "B": "XPGA/XOTA/NCM",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRZP/XR",
+      "model": "sky130_fd_pr__res_high_po_0p69",
+      "L_um": 0.8551774666232498,
+      "target_R_ohm": 1200,
+      "nets": {
+        "A": "XPGA/XOTA/N1",
+        "B": "XPGA/XOTA/CZP",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRZN/XR",
+      "model": "sky130_fd_pr__res_high_po_0p69",
+      "L_um": 0.8551774666232498,
+      "target_R_ohm": 1200,
+      "nets": {
+        "A": "XPGA/XOTA/N2",
+        "B": "XPGA/XOTA/CZN",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRCMP/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 99.73716012084593,
+      "target_R_ohm": 100000,
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XOTA/CMS",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRCMN/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 99.73716012084593,
+      "target_R_ohm": 100000,
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XOTA/CMS",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRSCS/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 9.102719033232628,
+      "target_R_ohm": 10000,
+      "nets": {
+        "A": "XPGA/XOTA/CS",
+        "B": "XPGA/XOTA/CTAIL",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRSCR/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 9.102719033232628,
+      "target_R_ohm": 10000,
+      "nets": {
+        "A": "XPGA/XOTA/CR",
+        "B": "XPGA/XOTA/CTAIL",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRDS/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 104.77240684793554,
+      "target_R_ohm": 105000,
+      "nets": {
+        "A": "VDD",
+        "B": "XPGA/XOTA/DS",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRCMG/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 104.77240684793554,
+      "target_R_ohm": 105000,
+      "nets": {
+        "A": "VDD",
+        "B": "XPGA/XOTA/CMG",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XRIP/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 0.5427995971802618,
+      "target_R_ohm": 1500,
+      "nets": {
+        "A": "OP",
+        "B": "FP",
+        "SUB": "0"
+      }
+    },
+    {
+      "path": "XRIN/XR",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "L_um": 0.5427995971802618,
+      "target_R_ohm": 1500,
+      "nets": {
+        "A": "ON",
+        "B": "FN",
+        "SUB": "0"
+      }
+    }
+  ],
+  "primitives": [
+    {
+      "path": "XPGA/XI0/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/S0B",
+        "G": "SEL0",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 47,
+      "local_expression": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XI0/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/S0B",
+        "G": "SEL0",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 48,
+      "local_expression": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XI1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/S1B",
+        "G": "SEL1",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 47,
+      "local_expression": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XI1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/S1B",
+        "G": "SEL1",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 48,
+      "local_expression": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN1/XN0",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/E1B",
+        "G": "XPGA/S0B",
+        "S": "XPGA/XN1/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 52,
+      "local_expression": "XN0 Y A N VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN1/XN1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XN1/N",
+        "G": "XPGA/S1B",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 53,
+      "local_expression": "XN1 N B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN1/XP0",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E1B",
+        "G": "XPGA/S0B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 54,
+      "local_expression": "XP0 Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN1/XP1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E1B",
+        "G": "XPGA/S1B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 55,
+      "local_expression": "XP1 Y B VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN4/XN0",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/E4B",
+        "G": "SEL0",
+        "S": "XPGA/XN4/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 52,
+      "local_expression": "XN0 Y A N VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN4/XN1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XN4/N",
+        "G": "XPGA/S1B",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 53,
+      "local_expression": "XN1 N B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN4/XP0",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E4B",
+        "G": "SEL0",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 54,
+      "local_expression": "XP0 Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN4/XP1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E4B",
+        "G": "XPGA/S1B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 55,
+      "local_expression": "XP1 Y B VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN16/XN0",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/E16B",
+        "G": "XPGA/S0B",
+        "S": "XPGA/XN16/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 52,
+      "local_expression": "XN0 Y A N VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN16/XN1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XN16/N",
+        "G": "SEL1",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 53,
+      "local_expression": "XN1 N B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN16/XP0",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E16B",
+        "G": "XPGA/S0B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 54,
+      "local_expression": "XP0 Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XN16/XP1",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E16B",
+        "G": "SEL1",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 55,
+      "local_expression": "XP1 Y B VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XIE1/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/E1",
+        "G": "XPGA/E1B",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 47,
+      "local_expression": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XIE1/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E1",
+        "G": "XPGA/E1B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 48,
+      "local_expression": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XIE4/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/E4",
+        "G": "XPGA/E4B",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 47,
+      "local_expression": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XIE4/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E4",
+        "G": "XPGA/E4B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 48,
+      "local_expression": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XIE16/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/E16",
+        "G": "XPGA/E16B",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 2
+      },
+      "source_file": "candidate_06.spice",
+      "line": 47,
+      "local_expression": "XN Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XIE16/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/E16",
+        "G": "XPGA/E16B",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 4
+      },
+      "source_file": "candidate_06.spice",
+      "line": 48,
+      "local_expression": "XP Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XRINP/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "IP",
+        "B": "XPGA/SUMPOS",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 9.102719033232628
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 10000
+      }
+    },
+    {
+      "path": "XPGA/XRINN/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "IN",
+        "B": "XPGA/SUMNEG",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 9.102719033232628
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 10000
+      }
+    },
+    {
+      "path": "XPGA/XFP1/XR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XFP1/N",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 9.455186304128903
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 10350
+      }
+    },
+    {
+      "path": "XPGA/XFP1/XSW/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMPOS",
+        "G": "XPGA/E1",
+        "S": "XPGA/XFP1/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 12
+      },
+      "source_file": "candidate_06.spice",
+      "line": 59,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFP1/XSW/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMPOS",
+        "G": "XPGA/E1B",
+        "S": "XPGA/XFP1/N",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 24
+      },
+      "source_file": "candidate_06.spice",
+      "line": 60,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFN1/XR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XFN1/N",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 9.455186304128903
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 10350
+      }
+    },
+    {
+      "path": "XPGA/XFN1/XSW/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMNEG",
+        "G": "XPGA/E1",
+        "S": "XPGA/XFN1/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 12
+      },
+      "source_file": "candidate_06.spice",
+      "line": 59,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFN1/XSW/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMNEG",
+        "G": "XPGA/E1B",
+        "S": "XPGA/XFN1/N",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 24
+      },
+      "source_file": "candidate_06.spice",
+      "line": 60,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFP4/XR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XFP4/N",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 40.72406847935549
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 41400
+      }
+    },
+    {
+      "path": "XPGA/XFP4/XSW/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMPOS",
+        "G": "XPGA/E4",
+        "S": "XPGA/XFP4/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 12
+      },
+      "source_file": "candidate_06.spice",
+      "line": 59,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFP4/XSW/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMPOS",
+        "G": "XPGA/E4B",
+        "S": "XPGA/XFP4/N",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 24
+      },
+      "source_file": "candidate_06.spice",
+      "line": 60,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFN4/XR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XFN4/N",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 40.72406847935549
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 41400
+      }
+    },
+    {
+      "path": "XPGA/XFN4/XSW/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMNEG",
+        "G": "XPGA/E4",
+        "S": "XPGA/XFN4/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 12
+      },
+      "source_file": "candidate_06.spice",
+      "line": 59,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFN4/XSW/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMNEG",
+        "G": "XPGA/E4B",
+        "S": "XPGA/XFN4/N",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 24
+      },
+      "source_file": "candidate_06.spice",
+      "line": 60,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFP16/XR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XFP16/N",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 165.79959718026183
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 165600
+      }
+    },
+    {
+      "path": "XPGA/XFP16/XSW/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMPOS",
+        "G": "XPGA/E16",
+        "S": "XPGA/XFP16/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 12
+      },
+      "source_file": "candidate_06.spice",
+      "line": 59,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFP16/XSW/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMPOS",
+        "G": "XPGA/E16B",
+        "S": "XPGA/XFP16/N",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 24
+      },
+      "source_file": "candidate_06.spice",
+      "line": 60,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFN16/XR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XFN16/N",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 165.79959718026183
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 165600
+      }
+    },
+    {
+      "path": "XPGA/XFN16/XSW/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMNEG",
+        "G": "XPGA/E16",
+        "S": "XPGA/XFN16/N",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 12
+      },
+      "source_file": "candidate_06.spice",
+      "line": 59,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8 L=0.15 W=12",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XFN16/XSW/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/SUMNEG",
+        "G": "XPGA/E16B",
+        "S": "XPGA/XFN16/N",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 0.15,
+        "W": 24
+      },
+      "source_file": "candidate_06.spice",
+      "line": 60,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=24",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XBIAS/XRBN/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "VDD",
+        "B": "XPGA/XOTA/BN",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 23.201409869083584
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 24000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XBIAS/XDBN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/BN",
+        "G": "XPGA/XOTA/BN",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 20
+      },
+      "source_file": "candidate_06.spice",
+      "line": 67,
+      "local_expression": "XDBN BN BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=20",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "XPGA/XOTA/BP",
+        "B": "XPGA/XOTA/BN",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 1006.0815709969788
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 1000000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XMIP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/N1",
+        "G": "XPGA/SUMPOS",
+        "S": "XPGA/XOTA/TAIL",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 80
+      },
+      "source_file": "candidate_06.spice",
+      "line": 81,
+      "local_expression": "XMIP N1 INP TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=80",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMIN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/N2",
+        "G": "XPGA/SUMNEG",
+        "S": "XPGA/XOTA/TAIL",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 80
+      },
+      "source_file": "candidate_06.spice",
+      "line": 82,
+      "local_expression": "XMIN N2 INN TAIL VSS sky130_fd_pr__nfet_01v8 L=1 W=80",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMTAIL",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/TAIL",
+        "G": "XPGA/XOTA/BN",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 40
+      },
+      "source_file": "candidate_06.spice",
+      "line": 83,
+      "local_expression": "XMTAIL TAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMLP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/N1",
+        "G": "XPGA/XOTA/NCM",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 64
+      },
+      "source_file": "candidate_06.spice",
+      "line": 84,
+      "local_expression": "XMLP N1 NCM VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=64",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMLN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/N2",
+        "G": "XPGA/XOTA/NCM",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 64
+      },
+      "source_file": "candidate_06.spice",
+      "line": 85,
+      "local_expression": "XMLN N2 NCM VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=64",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XRN1/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "XPGA/XOTA/N1",
+        "B": "XPGA/XOTA/NCM",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 99.73716012084593
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 100000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRN2/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "XPGA/XOTA/N2",
+        "B": "XPGA/XOTA/NCM",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 99.73716012084593
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 100000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XCN1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/N1",
+        "BOTTOM": "XPGA/XOTA/NCM"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCN2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/N2",
+        "BOTTOM": "XPGA/XOTA/NCM"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMSP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "OP",
+        "G": "XPGA/XOTA/N1",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 180
+      },
+      "source_file": "candidate_06.spice",
+      "line": 93,
+      "local_expression": "XMSP OUTP N1 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=180",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMSN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8",
+      "nets": {
+        "D": "ON",
+        "G": "XPGA/XOTA/N2",
+        "S": "VDD",
+        "B": "VDD"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 180
+      },
+      "source_file": "candidate_06.spice",
+      "line": 94,
+      "local_expression": "XMSN OUTN N2 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=180",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMOP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "OP",
+        "G": "XPGA/XOTA/CMG",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 9
+      },
+      "source_file": "candidate_06.spice",
+      "line": 95,
+      "local_expression": "XMOP OUTP CMG VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=9",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XMON",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "ON",
+        "G": "XPGA/XOTA/CMG",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 9
+      },
+      "source_file": "candidate_06.spice",
+      "line": 96,
+      "local_expression": "XMON OUTN CMG VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=9",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XRZP/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p69",
+      "nets": {
+        "A": "XPGA/XOTA/N1",
+        "B": "XPGA/XOTA/CZP",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 0.8551774666232498
+      },
+      "source_file": "candidate_06.spice",
+      "line": 20,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p69 L={(R-779.8)/491.36}",
+      "context_parameters": {
+        "R": 1200
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRZN/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p69",
+      "nets": {
+        "A": "XPGA/XOTA/N2",
+        "B": "XPGA/XOTA/CZN",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 0.8551774666232498
+      },
+      "source_file": "candidate_06.spice",
+      "line": 20,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p69 L={(R-779.8)/491.36}",
+      "context_parameters": {
+        "R": 1200
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC0/XC0/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC0/XC1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC0/XC2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC0/XC3/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC1/XC0/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC1/XC1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC1/XC2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCP/XC1/XC3/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZP",
+        "BOTTOM": "OP"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC0/XC0/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC0/XC1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC0/XC2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC0/XC3/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC1/XC0/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC1/XC1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC1/XC2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCCN/XC1/XC3/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "XPGA/XOTA/CZN",
+        "BOTTOM": "ON"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XRCMP/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "OP",
+        "B": "XPGA/XOTA/CMS",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 99.73716012084593
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 100000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRCMN/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "ON",
+        "B": "XPGA/XOTA/CMS",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 99.73716012084593
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 100000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XCSMP/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "OP",
+        "BOTTOM": "XPGA/XOTA/CMS"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCSMN/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "ON",
+        "BOTTOM": "XPGA/XOTA/CMS"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCMS",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/DS",
+        "G": "XPGA/XOTA/CMS",
+        "S": "XPGA/XOTA/CS",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 20
+      },
+      "source_file": "candidate_06.spice",
+      "line": 116,
+      "local_expression": "XCMS DS CMS CS VSS sky130_fd_pr__nfet_01v8 L=1 W=20",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XCMR",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/CMG",
+        "G": "VCM",
+        "S": "XPGA/XOTA/CR",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 20
+      },
+      "source_file": "candidate_06.spice",
+      "line": 117,
+      "local_expression": "XCMR CMG VCM CR VSS sky130_fd_pr__nfet_01v8 L=1 W=20",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XRSCS/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "XPGA/XOTA/CS",
+        "B": "XPGA/XOTA/CTAIL",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 9.102719033232628
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 10000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRSCR/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "XPGA/XOTA/CR",
+        "B": "XPGA/XOTA/CTAIL",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 9.102719033232628
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 10000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XCMT",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8",
+      "nets": {
+        "D": "XPGA/XOTA/CTAIL",
+        "G": "XPGA/XOTA/BN",
+        "S": "0",
+        "B": "0"
+      },
+      "parameters": {
+        "L": 1,
+        "W": 8
+      },
+      "source_file": "candidate_06.spice",
+      "line": 120,
+      "local_expression": "XCMT CTAIL BN VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=8",
+      "context_parameters": {}
+    },
+    {
+      "path": "XPGA/XOTA/XRDS/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "VDD",
+        "B": "XPGA/XOTA/DS",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 104.77240684793554
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 105000
+      }
+    },
+    {
+      "path": "XPGA/XOTA/XRCMG/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "VDD",
+        "B": "XPGA/XOTA/CMG",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 104.77240684793554
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 105000
+      }
+    },
+    {
+      "path": "XRIP/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "OP",
+        "B": "FP",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 0.5427995971802618
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 1500
+      }
+    },
+    {
+      "path": "XRIN/XR",
+      "kind": "resistor",
+      "model": "sky130_fd_pr__res_high_po_0p35",
+      "nets": {
+        "A": "ON",
+        "B": "FN",
+        "SUB": "0"
+      },
+      "parameters": {
+        "L": 0.5427995971802618
+      },
+      "source_file": "candidate_06.spice",
+      "line": 13,
+      "local_expression": "XR A B SUB sky130_fd_pr__res_high_po_0p35 L={(R-961)/993}",
+      "context_parameters": {
+        "R": 1500
+      }
+    },
+    {
+      "path": "XCFP/XC0/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FP",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFP/XC1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FP",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFP/XC2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FP",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFP/XC3/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FP",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFN/XC0/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FN",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFN/XC1/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FN",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFN/XC2/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FN",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XCFN/XC3/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "FN",
+        "BOTTOM": "0"
+      },
+      "parameters": {
+        "W": 22.215,
+        "L": 22.215
+      },
+      "source_file": "candidate_06.spice",
+      "line": 24,
+      "local_expression": "XC A B sky130_fd_pr__cap_mim_m3_1 W=22.215 L=22.215",
+      "context_parameters": {}
+    },
+    {
+      "path": "XTGP/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8_lvt",
+      "nets": {
+        "D": "HP",
+        "G": "ACQ",
+        "S": "FP",
+        "B": "0"
+      },
+      "parameters": {
+        "W": 4,
+        "L": 0.15,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 6,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L={LSW} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGP/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8_lvt",
+      "nets": {
+        "D": "HP",
+        "G": "ACQB",
+        "S": "FP",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": 8,
+        "L": 0.35,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 7,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8_lvt W={WP} L={LSWP} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGP/XND",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8_lvt",
+      "nets": {
+        "D": "HP",
+        "G": "ACQB",
+        "S": "HP",
+        "B": "0"
+      },
+      "parameters": {
+        "W": 2.0,
+        "L": 0.15,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 8,
+      "local_expression": "XND B ENB B VSS sky130_fd_pr__nfet_01v8_lvt W={WN*DUMMY} L={LSW} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGP/XPD",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8_lvt",
+      "nets": {
+        "D": "HP",
+        "G": "ACQ",
+        "S": "HP",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": 4.0,
+        "L": 0.35,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 9,
+      "local_expression": "XPD B EN B VDD sky130_fd_pr__pfet_01v8_lvt W={WP*DUMMY} L={LSWP} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGN/XN",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8_lvt",
+      "nets": {
+        "D": "HN",
+        "G": "ACQ",
+        "S": "FN",
+        "B": "0"
+      },
+      "parameters": {
+        "W": 4,
+        "L": 0.15,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 6,
+      "local_expression": "XN B EN A VSS sky130_fd_pr__nfet_01v8_lvt W={WN} L={LSW} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGN/XP",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8_lvt",
+      "nets": {
+        "D": "HN",
+        "G": "ACQB",
+        "S": "FN",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": 8,
+        "L": 0.35,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 7,
+      "local_expression": "XP B ENB A VDD sky130_fd_pr__pfet_01v8_lvt W={WP} L={LSWP} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGN/XND",
+      "kind": "mos",
+      "model": "sky130_fd_pr__nfet_01v8_lvt",
+      "nets": {
+        "D": "HN",
+        "G": "ACQB",
+        "S": "HN",
+        "B": "0"
+      },
+      "parameters": {
+        "W": 2.0,
+        "L": 0.15,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 8,
+      "local_expression": "XND B ENB B VSS sky130_fd_pr__nfet_01v8_lvt W={WN*DUMMY} L={LSW} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XTGN/XPD",
+      "kind": "mos",
+      "model": "sky130_fd_pr__pfet_01v8_lvt",
+      "nets": {
+        "D": "HN",
+        "G": "ACQ",
+        "S": "HN",
+        "B": "VDD"
+      },
+      "parameters": {
+        "W": 4.0,
+        "L": 0.35,
+        "NF": 1,
+        "MULT": 1
+      },
+      "source_file": "sampling_switch.spice",
+      "line": 9,
+      "local_expression": "XPD B EN B VDD sky130_fd_pr__pfet_01v8_lvt W={WP*DUMMY} L={LSWP} nf=1 mult=1",
+      "context_parameters": {
+        "WN": 4,
+        "WP": 8,
+        "LSW": 0.15,
+        "LSWP": 0.35,
+        "DUMMY": 0.5
+      }
+    },
+    {
+      "path": "XCP/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "HP",
+        "BOTTOM": "VCM"
+      },
+      "parameters": {
+        "W": 3,
+        "L": 3,
+        "M": 4096,
+        "MULT": 4096
+      },
+      "source_file": "adc_blocks.spice",
+      "line": 87,
+      "local_expression": "XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}",
+      "context_parameters": {
+        "COUNT": 4096
+      }
+    },
+    {
+      "path": "XCN/XC",
+      "kind": "mim",
+      "model": "sky130_fd_pr__cap_mim_m3_1",
+      "nets": {
+        "TOP": "HN",
+        "BOTTOM": "VCM"
+      },
+      "parameters": {
+        "W": 3,
+        "L": 3,
+        "M": 4096,
+        "MULT": 4096
+      },
+      "source_file": "adc_blocks.spice",
+      "line": 87,
+      "local_expression": "XC TOP BOTTOM sky130_fd_pr__cap_mim_m3_1 W=3 L=3 m={COUNT} mult={COUNT}",
+      "context_parameters": {
+        "COUNT": 4096
+      }
+    }
+  ]
+}

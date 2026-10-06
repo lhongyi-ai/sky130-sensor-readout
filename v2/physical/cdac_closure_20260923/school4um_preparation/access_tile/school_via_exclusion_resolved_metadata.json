@@ -1,0 +1,411 @@
+{
+  "scope": "Entry plus its 41 explicit includes; selected interfaces/conditionals only",
+  "files": [
+    {
+      "name": "sky130_rev_0.0_1.0.drc.pvl",
+      "sha256": "b5624d6bb0a54fd55f3d9da289098acb5fe23bde674672a23196a85ab779cfc0",
+      "bytes": 15563
+    },
+    {
+      "name": "Include/layer_def.drc.pvl",
+      "sha256": "695cfe7fcb0b44f85ae3dc5fe84544c612ff41a5370bbea9fe314700fc41186f",
+      "bytes": 20827
+    },
+    {
+      "name": "Include/derived_layers.drc.pvl",
+      "sha256": "54710f322ddb45a7f3bfc02042e113673542feca1e08fee0e1dbbb79d05a6fd4",
+      "bytes": 4216
+    },
+    {
+      "name": "Include/dnwell.drc.pvl",
+      "sha256": "94620bb9fa59cf051b6b9c515afcf46626c095c74a90baed9b52edab97e091d1",
+      "bytes": 1526
+    },
+    {
+      "name": "Include/nwell.drc.pvl",
+      "sha256": "5bf8b288c0099b5aa91f3997d23454c098908f2307e12a4aec3e69d98c11deff",
+      "bytes": 2599
+    },
+    {
+      "name": "Include/hvtp.drc.pvl",
+      "sha256": "a48df179dacb424593fe4c06314ebb7d144ef801ed3a358748f1f73522934d24",
+      "bytes": 850
+    },
+    {
+      "name": "Include/hvtr.drc.pvl",
+      "sha256": "3cbe40cda30212d5b520b904e13941890c03129640bc4b281d8c925b0b7ded56",
+      "bytes": 319
+    },
+    {
+      "name": "Include/lvtn.drc.pvl",
+      "sha256": "d4d18dc7f16e6767a8c2779a88b8f033dbf9754f6ee153516df63f289e08fac1",
+      "bytes": 1811
+    },
+    {
+      "name": "Include/ncm.drc.pvl",
+      "sha256": "a2e4c361e9042377d737b3bef035c17d1f378f1b763771e11af91ca4a519b4c0",
+      "bytes": 1133
+    },
+    {
+      "name": "Include/difftap.drc.pvl",
+      "sha256": "e4364e5c12e400058d9fb2d756fda7aed96a0d383099d3643fa7838b2547a952",
+      "bytes": 3645
+    },
+    {
+      "name": "Include/tunm.drc.pvl",
+      "sha256": "aa31174d44cb91da8a07d9ea6f36c739b259850232bb586d26df298dd4292f12",
+      "bytes": 1054
+    },
+    {
+      "name": "Include/poly.drc.pvl",
+      "sha256": "0105185bc321d355739b29430da35d7114c3ad99db13b7c25b419178597db177",
+      "bytes": 3338
+    },
+    {
+      "name": "Include/rpm.drc.pvl",
+      "sha256": "b102e25c989d43f4dfd434029cbc60109e50e91c21ab95992ab2ad37aa99fa62",
+      "bytes": 2536
+    },
+    {
+      "name": "Include/varac.drc.pvl",
+      "sha256": "ecce1c83613a4972cbf0ebcb4d2bf778a1d0bc20d80846b927201be31a4e211b",
+      "bytes": 1210
+    },
+    {
+      "name": "Include/npc.drc.pvl",
+      "sha256": "4b40255f8804d953c0379a1bf38faebc0f92fbf247823772131398360759e274",
+      "bytes": 999
+    },
+    {
+      "name": "Include/n_psd.drc.pvl",
+      "sha256": "aa8079bfe7b35e7120f5802b5839e9d823406cf4fafcfbf6ee96c2c2f3bc4f38",
+      "bytes": 2509
+    },
+    {
+      "name": "Include/licon.drc.pvl",
+      "sha256": "9612cfd21a2860483a95b64d59293365a1d2e1faaba387e74725f76e86d3de3b",
+      "bytes": 7293
+    },
+    {
+      "name": "Include/li.drc.pvl",
+      "sha256": "e1c47caec36a98074a9d871a35c5352cd08c0757979fcd994dc5c50a9a463adc",
+      "bytes": 1545
+    },
+    {
+      "name": "Include/mcon.drc.pvl",
+      "sha256": "bbeb4faa8a6bfb31319cfc828f46f6fd2c7e2ef06f9523af2aab352e5864d20e",
+      "bytes": 1180
+    },
+    {
+      "name": "Include/vpp.drc.pvl",
+      "sha256": "8d5c6cb1824c5ab89061d6b84d3167fc800c7accb3549e9b6500c63f7e01ebb3",
+      "bytes": 3643
+    },
+    {
+      "name": "Include/m1.drc.pvl",
+      "sha256": "964e327662b8e7e0388c4ca86b1078825631c8980a3a71e1f893f087ca690212",
+      "bytes": 3724
+    },
+    {
+      "name": "Include/via.drc.pvl",
+      "sha256": "be7499dd33a3caeb79ca3f2077db5c250d1b882f3f0dc85840d0e78c2430173c",
+      "bytes": 4028
+    },
+    {
+      "name": "Include/m2.drc.pvl",
+      "sha256": "40208bee26ff29ab72fce6e3784fdec360da5cf904246c96b84676e64ec133f6",
+      "bytes": 3395
+    },
+    {
+      "name": "Include/via2.drc.pvl",
+      "sha256": "9d3dbfd7c6ea08323eed771947ac4b4a12600a837300785cefc22e368357019d",
+      "bytes": 4245
+    },
+    {
+      "name": "Include/m3.drc.pvl",
+      "sha256": "ce9feedb71fca33b8a8c1dea9631acd46fe38a248584b9f208a5bbfacd5ec713",
+      "bytes": 3707
+    },
+    {
+      "name": "Include/via3.drc.pvl",
+      "sha256": "babe7bc75a2806efda590b045bac76f2d3e0e5139f9dbc78b514162d9ea9bec3",
+      "bytes": 2339
+    },
+    {
+      "name": "Include/nsm.drc.pvl",
+      "sha256": "d598e27f9fe0031567ee6cbaf94adc2b127e92f634fd6c6db6893a173162356e",
+      "bytes": 1246
+    },
+    {
+      "name": "Include/m4.drc.pvl",
+      "sha256": "4abdd8c379177542188258fa427dcc50abc43b282429379284769d01bbb141c1",
+      "bytes": 3314
+    },
+    {
+      "name": "Include/via4.drc.pvl",
+      "sha256": "17a6a986f3eff9396be52852a640b9bd97755a3b932c79df2ca4bdd50ea074fc",
+      "bytes": 1018
+    },
+    {
+      "name": "Include/m5.drc.pvl",
+      "sha256": "9c4b323f9f525c43ba0b49ac20a5ac3bd84d485a11453bf3fb1b2a4c6fd28d33",
+      "bytes": 787
+    },
+    {
+      "name": "Include/pad.drc.pvl",
+      "sha256": "ba3d15bf074a4b229e7543181b7188a4e6632be6eec4cb08129d89f988dd9488",
+      "bytes": 510
+    },
+    {
+      "name": "Include/mf.drc.pvl",
+      "sha256": "9efcdc874adc5f179c26fbeba5088471513d52b15da6274d1a6376f8fab58ae6",
+      "bytes": 4262
+    },
+    {
+      "name": "Include/hvi.drc.pvl",
+      "sha256": "f0aeefaca8b3b9099eccc08015f3c056cde2fa202df732e295d9440354564cb0",
+      "bytes": 521
+    },
+    {
+      "name": "Include/hvnwell.drc.pvl",
+      "sha256": "b23702783652a79701e11838091e597d743262b96c5083d39fad1485609116ed",
+      "bytes": 1354
+    },
+    {
+      "name": "Include/hvdifftap.drc.pvl",
+      "sha256": "fdb1e40e514b4e79c0be9ce8dbad443c7a6841a1915ad44b7508a55751cd7f0c",
+      "bytes": 3636
+    },
+    {
+      "name": "Include/hvpoly.drc.pvl",
+      "sha256": "a8e3d7ceba247983f3e6ca6c3f61405dd2671fe1ef76eea714a0affcffce05a4",
+      "bytes": 367
+    },
+    {
+      "name": "Include/hvntm.drc.pvl",
+      "sha256": "cae30f8d16656dac2124882ffaca3bc6a9d71a785d35b9f38128590b80a672f6",
+      "bytes": 1650
+    },
+    {
+      "name": "Include/denmos.drc.pvl",
+      "sha256": "c2c391d164734a88e8e765c1bdd780e62ac66459f3e7a284c88f8f90556bf678",
+      "bytes": 2111
+    },
+    {
+      "name": "Include/depmos.drc.pvl",
+      "sha256": "31304fd798747c57c4b0d1bc18b293eafe352dff22938871b3eefe03309aa100",
+      "bytes": 1834
+    },
+    {
+      "name": "Include/hv.drc.pvl",
+      "sha256": "d6b404d601b5b0b6320227eb7c3b2b276049d12a346336cb97eb99f252c53ea8",
+      "bytes": 1242
+    },
+    {
+      "name": "Include/vhvi.drc.pvl",
+      "sha256": "a0920d476c8a8e5258ebc1482208f71dc40a8ec4512ee9581c47b3c34ee7a817",
+      "bytes": 2220
+    },
+    {
+      "name": "Include/pwres.drc.pvl",
+      "sha256": "f9daf5e31dae4c6a012cfab1037cfdb55de2fa36b53684595d48034ab21b2ed3",
+      "bytes": 2212
+    }
+  ],
+  "via3_definitions_or_modifications": [
+    {
+      "file": "Include/layer_def.drc.pvl",
+      "stripped_line": 71,
+      "tokens": [
+        "layer_def",
+        "via3"
+      ],
+      "numeric_values": [
+        "1034"
+      ]
+    }
+  ],
+  "capm_via3_cooccurrences": [],
+  "preprocessor": [
+    {
+      "file": "Include/m1.drc.pvl",
+      "stripped_line": 54,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m1.drc.pvl",
+      "stripped_line": 101,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via.drc.pvl",
+      "stripped_line": 5,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via.drc.pvl",
+      "stripped_line": 67,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m2.drc.pvl",
+      "stripped_line": 45,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m2.drc.pvl",
+      "stripped_line": 72,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via2.drc.pvl",
+      "stripped_line": 5,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via2.drc.pvl",
+      "stripped_line": 78,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m3.drc.pvl",
+      "stripped_line": 50,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m3.drc.pvl",
+      "stripped_line": 73,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m3.drc.pvl",
+      "stripped_line": 85,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via3.drc.pvl",
+      "stripped_line": 11,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via3.drc.pvl",
+      "stripped_line": 41,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m4.drc.pvl",
+      "stripped_line": 27,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m4.drc.pvl",
+      "stripped_line": 57,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/via4.drc.pvl",
+      "stripped_line": 20,
+      "tokens": [
+        "IFDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    },
+    {
+      "file": "Include/m5.drc.pvl",
+      "stripped_line": 15,
+      "tokens": [
+        "IFNDEF",
+        "Copper"
+      ],
+      "numeric_values": []
+    }
+  ],
+  "via3_input_maps": [
+    {
+      "gds": [
+        70,
+        44
+      ],
+      "type": "datatype"
+    }
+  ],
+  "areaid.mt_input_maps": [
+    {
+      "gds": [
+        81,
+        10
+      ],
+      "type": "datatype"
+    }
+  ],
+  "capm_input_maps": [
+    {
+      "gds": [
+        89,
+        44
+      ],
+      "type": "datatype"
+    }
+  ]
+}

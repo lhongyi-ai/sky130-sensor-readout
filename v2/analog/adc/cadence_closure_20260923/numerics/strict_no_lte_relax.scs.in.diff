@@ -1,0 +1,8 @@
+--- strict_diagnose.scs.in
++++ strict_no_lte_relax.scs.in
+@@ -10,4 +10,4 @@
+ XCMP (TN TP Q QB EVAL VDD 0 RST_N) p1_actual_cmp_reset1
+ simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-9 iabstol=1e-14 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+ saveOptions options save=allpub
+-reset_decide tran stop=9.2u maxstep=1n errpreset=conservative
++reset_decide tran stop=9.2u maxstep=1n errpreset=conservative ltethstep=0

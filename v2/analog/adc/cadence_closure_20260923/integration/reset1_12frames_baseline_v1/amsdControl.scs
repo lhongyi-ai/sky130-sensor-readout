@@ -1,0 +1,12 @@
+simulator lang=spectre
+include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+include "reset1_native_bound.scs"
+simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-8 iabstol=1e-13
+saveOptions options save=allpub
+adc_closure_tran tran stop=150u maxstep=2n errpreset=conservative
+amsd {
+ portmap subckt=sensor_adc_reset1
+ config cell=sensor_adc_reset1 use=spice
+ portmap subckt=sensor_phases
+ config cell=sensor_phases use=spice
+}

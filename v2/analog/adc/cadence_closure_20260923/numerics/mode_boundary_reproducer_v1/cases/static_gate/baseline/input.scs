@@ -1,0 +1,15 @@
+// Isolated model-boundary diagnostic, never a substitute for native ADC qualification.
+simulator lang=spectre
+global 0
+include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+VD (D 0) vsource type=sine dc=1.8200000000000001 sinedc=1.8 ampl=0.02 freq=34021676036.0378 sinephase=90
+VG (G 0) vsource type=sine dc=0.91642555277800053 sinedc=0.91642555277800053 ampl=0 freq=34021676036.0378 sinephase=270
+VS (SB 0) vsource dc=1.8
+XTEST (D G SB SB) pfet_01v8 w=(32u) l=150n as=8.48p ad=8.48p ps=64.53u pd=64.53u m=(1)*(1)
+simulatorOptions options temp=27 tnom=27 reltol=1.0000000000000001e-05 vabstol=1e-08 iabstol=1e-13 gmin=1e-12 cmin=0 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+saveOptions options save=selected
+save D G SB
+save XTEST.msky130_fd_pr__pfet_01v8:int_b XTEST.msky130_fd_pr__pfet_01v8:dbnode XTEST.msky130_fd_pr__pfet_01v8:sbnode sigtype=node
+save XTEST.msky130_fd_pr__pfet_01v8:vds XTEST.msky130_fd_pr__pfet_01v8:reversed XTEST.msky130_fd_pr__pfet_01v8:currents sigtype=dev
+save VD:currents VG:currents VS:currents sigtype=dev
+mode_boundary tran stop=1.1757210302522898e-10 maxstep=2.9393025756307247e-14 errpreset=conservative method=gear2only relref=sigglobal lteratio=10

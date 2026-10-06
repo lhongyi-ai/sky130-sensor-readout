@@ -1,0 +1,51 @@
+{
+  "sensor_adc_candidate": {
+    "native_file": "private_runtime/si_core_fix1_001/netlist",
+    "native_sha256": "3d2eccc08319a596c91c4e9bb3f99343f40e0654b6e8ea6903641e964c38d921",
+    "native_audit_sha256": "4318106daf2cb5091070022d99af26dac6406841f49574547cd65d2f5643a652",
+    "port_order": [
+      "INP",
+      "INN",
+      "Q",
+      "QB",
+      "SAMPLE",
+      "SAMPLEB",
+      "ACQ",
+      "CONV",
+      "EVAL",
+      "B11",
+      "B10",
+      "B9",
+      "B8",
+      "B7",
+      "B6",
+      "B5",
+      "B4",
+      "B3",
+      "B2",
+      "B1",
+      "B0",
+      "RP",
+      "RN",
+      "VCM",
+      "VDD",
+      "VSS"
+    ],
+    "native_body_unchanged": true
+  },
+  "sensor_phases": {
+    "native_file": "private_runtime/si_phase_001/netlist",
+    "native_sha256": "51f00f498ed0e069e75bc81890c551cd8c2f8e84dab2d16f90a78e43e08386b1",
+    "native_audit_sha256": "4ec25e875b04e1010a153c821f9a1bb511722643c554ffc5d6910c674b82a9df",
+    "port_order": [
+      "SAMPLE_CMD",
+      "TOP",
+      "TOPB",
+      "ACQ",
+      "CONV",
+      "VDD",
+      "VSS"
+    ],
+    "native_body_unchanged": true
+  }
+}

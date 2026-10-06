@@ -1,0 +1,85 @@
+{
+  "status": "CANDIDATE_NOT_SIMULATED",
+  "parent_manifest_sha256": "7c41fc00cee27860b0a334b910797f29c4e818dcb4ec653ab1005cdba9c2684f",
+  "new_cell": "p2adc_core_reset1_school_r1",
+  "old_cell_untouched": "p2adc_core_fix1_school_r1",
+  "ports": [
+    "INP",
+    "INN",
+    "Q",
+    "QB",
+    "SAMPLE",
+    "SAMPLEB",
+    "ACQ",
+    "CONV",
+    "EVAL",
+    "B11",
+    "B10",
+    "B9",
+    "B8",
+    "B7",
+    "B6",
+    "B5",
+    "B4",
+    "B3",
+    "B2",
+    "B1",
+    "B0",
+    "RP",
+    "RN",
+    "VCM",
+    "VDD",
+    "VSS",
+    "RST_N"
+  ],
+  "changed_original_connections": [
+    {
+      "instance": "XADC_XCMP_XSET_XP1",
+      "terminal": "G",
+      "before": "XADC_XCMP_BN",
+      "after": "XADC_XCMP_S_BAR"
+    },
+    {
+      "instance": "XADC_XCMP_XSET_XN1",
+      "terminal": "G",
+      "before": "XADC_XCMP_BN",
+      "after": "XADC_XCMP_S_BAR"
+    },
+    {
+      "instance": "XADC_XCMP_XRESET_XP1",
+      "terminal": "G",
+      "before": "XADC_XCMP_BP",
+      "after": "XADC_XCMP_R_BAR"
+    },
+    {
+      "instance": "XADC_XCMP_XRESET_XN1",
+      "terminal": "G",
+      "before": "XADC_XCMP_BP",
+      "after": "XADC_XCMP_R_BAR"
+    }
+  ],
+  "added_devices": [
+    "XADC_XCMP_XRSTB_XP",
+    "XADC_XCMP_XRSTB_XN",
+    "XADC_XCMP_XSOR_XNOR_XN1",
+    "XADC_XCMP_XSOR_XNOR_XN2",
+    "XADC_XCMP_XSOR_XNOR_XP1",
+    "XADC_XCMP_XSOR_XNOR_XP2",
+    "XADC_XCMP_XSOR_XINV_XP",
+    "XADC_XCMP_XSOR_XINV_XN",
+    "XADC_XCMP_XRAND_XNAND_XP1",
+    "XADC_XCMP_XRAND_XNAND_XP2",
+    "XADC_XCMP_XRAND_XNAND_XN1",
+    "XADC_XCMP_XRAND_XNAND_XN2",
+    "XADC_XCMP_XRAND_XINV_XP",
+    "XADC_XCMP_XRAND_XINV_XN"
+  ],
+  "added_MOS_count": 14,
+  "count": 693,
+  "gates": {
+    "reset_inverter": "INV n1u/p2u L.15, from adc_inv",
+    "S_BAR": "NOR2 n2u/p4u fromphase_nor + INV n1u/p2u",
+    "R_BAR": "NAND2 n2u/p2u fromadc_nand2 + INV n1u/p2u"
+  },
+  "load_risk": "BN formerly drove NAND2 input totalW4um, now NOR2 input totalW6um; BP continues totalW4um. Physical loading, feedthrough, delay and history must be reverified."
+}

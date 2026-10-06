@@ -1,0 +1,766 @@
+{
+  "status": "SCHOOL_R1_REAL_CANARY_EXECUTED__M2_UNQUALIFIED",
+  "data_source_policy": "dcOp.dc, dc.dc, ac.ac and dcOpInfo.info parsed independently; merged result.json deliberately not used.",
+  "hashes": {
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/native_netlist": "ca24be0b4cb73bb1b047eb2b6c025d3b2dcafc3410d4625a64b45951a3c22d75",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.scs": "3e15e1242ff7ed31d2d0ef30ed84278f9d9e99dae4be6ef0a314b23e85243547",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/spectre.out": "6805c55c920f56c2192fce8f61873f92203c0d3ee9fdfa0663bf34d83e1c41dc",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/p2fe_c06_school_r1_20260923T100510581533Z/audit.json": "92c9c72aab7f5c6828de9caa2a494ee8b253a64f742a908a7e40647984cc6fd3",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/cadence_20260923/native_canary_school_r1_objects.json": "5bf908f262423d76f9efa415d28562b669649989f198d4a7eb6575f190e7902c",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/dynamic_20260911/diagnostics/07_20260911T085157880653Z_candidate_06/columns.json": "5a366805f676dfb9d02aab3531473e68e1c2cc90e001278346dae3069924f158",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/dynamic_20260911/diagnostics/07_20260911T085157880653Z_candidate_06/dc.dat": "2890775ae91370d272f759284ee374cce0eade505c0cf0f7e9b0900ca94907ae",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/dynamic_20260911/diagnostics/07_20260911T085157880653Z_candidate_06/bench.spice": "b90e3b9421f332b03e8e16585ef7e1625c63dcad36235564b55e913bfdda880e",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/qualification_20260913/runs/20260913T062412790986Z_noise_g4_acquire/op.dat": "bb71393ca37ae882787e10b5afb1438b39d6cba175e52b79d0364889ae58fb97",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/qualification_20260913/runs/20260913T062412790986Z_noise_g4_acquire/ac.dat": "65b2d8f44a194d2ad1b23e716e073bae8a5822f42f039f3a45a645494710675c",
+    "/path/to/sky130-two-stage-ota/v2/analog/frontend/qualification_20260913/runs/20260913T062412790986Z_noise_g4_acquire/dc.dat": "ef9bb0532f4b0364216c158b5918e86a367be8c3f0d608b76b8e2b1b92298cf8",
+    "/path/to/virtuoso-bridge-lite/src/virtuoso_bridge/spectre/parsers.py": "38340f19d61a61af5df1f20ee175ee41752680e3f4fd021dfa26778ad025dc00",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.raw/dcOp.dc": "abceeb1deb38d5d6c612878ec4eb528f4e2b8cc39535213e264a22946d7b9f75",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.raw/ac.ac": "3dbaac60a328830d3c4bb91043624a3764d32b1ccf778b9382edd087367795b1",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.raw/dc.dc": "e76a3e68fd26fa216fe3f529be96c872c27cdbfc55090d9277a8282bc2c73f14",
+    "/path/to/sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.raw/dcOpInfo.info": "190706d7cdc3afcdde854362b0df8d58884808a6c58cf55320d59984143c8ed3"
+  },
+  "native_audit_status": "NATIVE_NETLIST_AUDIT_PASS",
+  "sample_counts": {
+    "OP": 1,
+    "DC": 3,
+    "AC": 161
+  },
+  "op_nodes_v": {
+    "VINP": 0.9,
+    "VINN": 0.9,
+    "IP": 0.8996791416672836,
+    "IN": 0.8996791416672836,
+    "OP": 0.8472789986945242,
+    "ON": 0.8472789986945242,
+    "FP": 0.8472790733490176,
+    "FN": 0.8472790733490176,
+    "HP": 0.8472790978332878,
+    "HN": 0.8472790978332878,
+    "XPGA_SUMPOS": 0.8898073136931767,
+    "XPGA_SUMNEG": 0.8898073136931767,
+    "XPGA_XFP4_N": 0.8893577062487604,
+    "XPGA_XFN4_N": 0.8893577062487605,
+    "XPGA_XOTA_BN": 0.6853142975079649,
+    "XPGA_XOTA_BP": 0.6853142975079649,
+    "XPGA_XOTA_TAIL": 0.2346106696887724,
+    "XPGA_XOTA_N1": 0.6641840176717989,
+    "XPGA_XOTA_N2": 0.6641840176717988,
+    "XPGA_XOTA_NCM": 0.6641840189879161,
+    "XPGA_XOTA_CMS": 0.8472790003734478,
+    "XPGA_XOTA_CMG": 0.8970377853762229,
+    "XPGA_XOTA_CS": 0.2263739642102347,
+    "XPGA_XOTA_CR": 0.2536091770781814,
+    "XPGA_XOTA_CTAIL": 0.1700560067476854,
+    "XPGA_XOTA_DS": 1.190904113260453,
+    "XPGA_E1": 1.450163705087505e-07,
+    "XPGA_E1B": 1.799999997025548,
+    "XPGA_E4": 1.799999997025543,
+    "XPGA_E4B": 5.800650112155633e-07,
+    "XPGA_E16": 1.450163650637897e-07,
+    "XPGA_E16B": 1.799999998846299,
+    "XPGA_XN16_N": 0.4256089764689092
+  },
+  "core_mos_op": {
+    "XMIP": {
+      "ids": 4.254328027015435e-05,
+      "vgs": 0.6551966440044042,
+      "vds": 0.4295733479830265,
+      "vth": 0.6144016069897333,
+      "vdsat": 0.07613586895874978,
+      "gm": 0.0008711333557628877,
+      "gds": 5.584570660566639e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.3534374790242767
+    },
+    "XMIN": {
+      "ids": 4.254328027015434e-05,
+      "vgs": 0.6551966440044042,
+      "vds": 0.4295733479830264,
+      "vth": 0.6144016069897333,
+      "vdsat": 0.07613586895874978,
+      "gm": 0.0008711333557628874,
+      "gds": 5.584570660566639e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.3534374790242766
+    },
+    "XMTAIL": {
+      "ids": 8.50865602752516e-05,
+      "vgs": 0.6853142975079649,
+      "vds": 0.2346106696887724,
+      "vth": 0.5578302394647681,
+      "vdsat": 0.1239971957147844,
+      "gm": 0.00119340273035909,
+      "gds": 2.625084531367762e-05,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.11061347397398799
+    },
+    "XMLP": {
+      "ids": -4.254327910114855e-05,
+      "vgs": -1.135815981012084,
+      "vds": -1.135815982328201,
+      "vth": -1.034173361710474,
+      "vdsat": -0.1361438625490101,
+      "gm": 0.0005170033139257053,
+      "gds": 1.147688515199605e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.9996721197791909
+    },
+    "XMLN": {
+      "ids": -4.254327910114855e-05,
+      "vgs": -1.135815981012084,
+      "vds": -1.135815982328201,
+      "vth": -1.034173361710474,
+      "vdsat": -0.1361438625490101,
+      "gm": 0.0005170033139257053,
+      "gds": 1.147688515199605e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.9996721197791909
+    },
+    "XMSP": {
+      "ids": -0.0001183099851786828,
+      "vgs": -1.135815982328201,
+      "vds": -0.9527210013054759,
+      "vth": -1.034688495794963,
+      "vdsat": -0.1357883501483748,
+      "gm": 0.001440758052029729,
+      "gds": 3.648677022006188e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.8169326511571011
+    },
+    "XMSN": {
+      "ids": -0.0001183099851786831,
+      "vgs": -1.135815982328201,
+      "vds": -0.9527210013054759,
+      "vth": -1.034688495794963,
+      "vdsat": -0.1357883501483749,
+      "gm": 0.001440758052029732,
+      "gds": 3.6486770220062e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.816932651157101
+    },
+    "XMOP": {
+      "ids": 0.0001192267771479879,
+      "vgs": 0.8970377853762229,
+      "vds": 0.8472789986945242,
+      "vth": 0.579419286934353,
+      "vdsat": 0.2677774274441353,
+      "gm": 0.0006935974501748622,
+      "gds": 6.33508211229479e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.5795015712503888
+    },
+    "XMON": {
+      "ids": 0.0001192267771479879,
+      "vgs": 0.8970377853762229,
+      "vds": 0.8472789986945242,
+      "vth": 0.579419286934353,
+      "vdsat": 0.2677774274441353,
+      "gm": 0.0006935974501748622,
+      "gds": 6.33508211229479e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.5795015712503888
+    },
+    "XCMS": {
+      "ids": 5.232506032360806e-06,
+      "vgs": 0.6209050361632131,
+      "vds": 0.9645301490502183,
+      "vth": 0.6188870700096598,
+      "vdsat": 0.06182041797357994,
+      "gm": 0.0001158776541896722,
+      "gds": 5.424315296496947e-07,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.9027097310766383
+    },
+    "XCMR": {
+      "ids": 7.765181028404494e-06,
+      "vgs": 0.6463908229218186,
+      "vds": 0.6434286082980415,
+      "vth": 0.6249990688776413,
+      "vdsat": 0.06946980561344526,
+      "gm": 0.0001653338159884035,
+      "gds": 8.640467697292643e-07,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.5739588026845962
+    },
+    "XCMT": {
+      "ids": 1.299768754288933e-05,
+      "vgs": 0.6853142975079649,
+      "vds": 0.1700560067476854,
+      "vth": 0.5829171789851539,
+      "vdsat": 0.1161847611708318,
+      "gm": 0.0001898549952367857,
+      "gds": 8.155966816660865e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.05387124557685359
+    },
+    "XBIAS_XDBN": {
+      "ids": 4.250332815739378e-05,
+      "vgs": 0.6853142975079649,
+      "vds": 0.6853142975079649,
+      "vth": 0.564081396513949,
+      "vdsat": 0.1221565623395989,
+      "gm": 0.0006065815508730038,
+      "gds": 3.345184200743861e-06,
+      "region": 2.0,
+      "abs_vds_minus_abs_vdsat_v": 0.563157735168366
+    }
+  },
+  "physical_resistor_op": {
+    "XPGA_XRINP_XR": {
+      "components": {
+        "XPGA_XRINP_XR.rend:res": 640.7786962024553,
+        "XPGA_XRINP_XR.rend:v": 0.0005874262403180452,
+        "XPGA_XRINP_XR.rend:i": 9.16738093509349e-07,
+        "XPGA_XRINP_XR.rhrpoly_0p35:res": 10127.64910698473,
+        "XPGA_XRINP_XR.rhrpoly_0p35:v": 0.00928440173378886,
+        "XPGA_XRINP_XR.rhrpoly_0p35:i": 9.167380934817042e-07
+      },
+      "sum_internal_model_res_ohm": 10768.427803187185
+    },
+    "XPGA_XRINN_XR": {
+      "components": {
+        "XPGA_XRINN_XR.rend:res": 640.7786962024553,
+        "XPGA_XRINN_XR.rend:v": 0.0005874262403180452,
+        "XPGA_XRINN_XR.rend:i": 9.16738093509349e-07,
+        "XPGA_XRINN_XR.rhrpoly_0p35:res": 10127.64910698473,
+        "XPGA_XRINN_XR.rhrpoly_0p35:v": 0.00928440173378886,
+        "XPGA_XRINN_XR.rhrpoly_0p35:i": 9.167380934817042e-07
+      },
+      "sum_internal_model_res_ohm": 10768.427803187185
+    },
+    "XPGA_XFP1_XR_XR": {
+      "components": {
+        "XPGA_XFP1_XR_XR.rend:res": 640.1166803160789,
+        "XPGA_XFP1_XR_XR.rend:v": -1.235465063587071e-10,
+        "XPGA_XFP1_XR_XR.rend:i": -1.930062286420999e-13,
+        "XPGA_XFP1_XR_XR.rhrpoly_0p35:res": 10517.83654980837,
+        "XPGA_XFP1_XR_XR.rhrpoly_0p35:v": -2.030008716680243e-09,
+        "XPGA_XFP1_XR_XR.rhrpoly_0p35:i": -1.930063000187265e-13
+      },
+      "sum_internal_model_res_ohm": 11157.953230124449
+    },
+    "XPGA_XFN1_XR_XR": {
+      "components": {
+        "XPGA_XFN1_XR_XR.rend:res": 640.1166803160789,
+        "XPGA_XFN1_XR_XR.rend:v": -1.235466173810096e-10,
+        "XPGA_XFN1_XR_XR.rend:i": -1.93006402082827e-13,
+        "XPGA_XFN1_XR_XR.rhrpoly_0p35:res": 10517.83654980837,
+        "XPGA_XFN1_XR_XR.rhrpoly_0p35:v": -2.030008716680243e-09,
+        "XPGA_XFN1_XR_XR.rhrpoly_0p35:i": -1.930063000187265e-13
+      },
+      "sum_internal_model_res_ohm": 11157.953230124449
+    },
+    "XPGA_XFP4_XR_XR": {
+      "components": {
+        "XPGA_XFP4_XR_XR.rend:res": 613.543740329175,
+        "XPGA_XFP4_XR_XR.rend:v": -0.0005624588710203549,
+        "XPGA_XFP4_XR_XR.rend:i": -9.167380156443086e-07,
+        "XPGA_XFP4_XR_XR.rhrpoly_0p35:res": 45286.9281920732,
+        "XPGA_XFP4_XR_XR.rhrpoly_0p35:v": -0.04151624868321591,
+        "XPGA_XFP4_XR_XR.rhrpoly_0p35:i": -9.16738015595474e-07
+      },
+      "sum_internal_model_res_ohm": 45900.471932402375
+    },
+    "XPGA_XFN4_XR_XR": {
+      "components": {
+        "XPGA_XFN4_XR_XR.rend:res": 613.543740329175,
+        "XPGA_XFN4_XR_XR.rend:v": -0.0005624588710204659,
+        "XPGA_XFN4_XR_XR.rend:i": -9.167380156444896e-07,
+        "XPGA_XFN4_XR_XR.rhrpoly_0p35:res": 45286.9281920732,
+        "XPGA_XFN4_XR_XR.rhrpoly_0p35:v": -0.04151624868321591,
+        "XPGA_XFN4_XR_XR.rhrpoly_0p35:i": -9.16738015595474e-07
+      },
+      "sum_internal_model_res_ohm": 45900.471932402375
+    },
+    "XPGA_XFP16_XR_XR_SEG_01": {
+      "components": {
+        "XPGA_XFP16_XR_XR_SEG_01.rend:res": 606.9683927345153,
+        "XPGA_XFP16_XR_XR_SEG_01.rend:v": -1.171486241346997e-10,
+        "XPGA_XFP16_XR_XR_SEG_01.rend:i": -1.930061359652049e-13,
+        "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35:res": 91679.27013618505,
+        "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35:v": -1.769466440038059e-08,
+        "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35:i": -1.930061656696878e-13
+      },
+      "sum_internal_model_res_ohm": 92286.23852891957
+    },
+    "XPGA_XFP16_XR_XR_SEG_02": {
+      "components": {
+        "XPGA_XFP16_XR_XR_SEG_02.rend:res": 606.9683927345153,
+        "XPGA_XFP16_XR_XR_SEG_02.rend:v": -1.171486241346997e-10,
+        "XPGA_XFP16_XR_XR_SEG_02.rend:i": -1.930061359652049e-13,
+        "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35:res": 91679.27013618505,
+        "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35:v": -1.769466440038059e-08,
+        "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35:i": -1.930061656696878e-13
+      },
+      "sum_internal_model_res_ohm": 92286.23852891957
+    },
+    "XPGA_XFN16_XR_XR_SEG_01": {
+      "components": {
+        "XPGA_XFN16_XR_XR_SEG_01.rend:res": 606.9683927345153,
+        "XPGA_XFN16_XR_XR_SEG_01.rend:v": -1.171486241346997e-10,
+        "XPGA_XFN16_XR_XR_SEG_01.rend:i": -1.930061359652049e-13,
+        "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35:res": 91679.27013618505,
+        "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35:v": -1.769466440038059e-08,
+        "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35:i": -1.930061656696878e-13
+      },
+      "sum_internal_model_res_ohm": 92286.23852891957
+    },
+    "XPGA_XFN16_XR_XR_SEG_02": {
+      "components": {
+        "XPGA_XFN16_XR_XR_SEG_02.rend:res": 606.9683927345153,
+        "XPGA_XFN16_XR_XR_SEG_02.rend:v": -1.171487351570022e-10,
+        "XPGA_XFN16_XR_XR_SEG_02.rend:i": -1.930063188780283e-13,
+        "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35:res": 91679.27013618505,
+        "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35:v": -1.769466440038059e-08,
+        "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35:i": -1.930061656696878e-13
+      },
+      "sum_internal_model_res_ohm": 92286.23852891957
+    },
+    "XPGA_XOTA_XBIAS_XRBN_XR": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBN_XR.rend:res": 596.9556471699731,
+        "XPGA_XOTA_XBIAS_XRBN_XR.rend:v": 0.02537260259650198,
+        "XPGA_XOTA_XBIAS_XRBN_XR.rend:i": 4.250332954682236e-05,
+        "XPGA_XOTA_XBIAS_XRBN_XR.rhrpoly_0p35:res": 25628.88864260681,
+        "XPGA_XOTA_XBIAS_XRBN_XR.rhrpoly_0p35:v": 1.089313099895533,
+        "XPGA_XOTA_XBIAS_XRBN_XR.rhrpoly_0p35:i": 4.250332954682248e-05
+      },
+      "sum_internal_model_res_ohm": 26225.84428977678
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11": {
+      "components": {
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11.rend:res": 606.1850969790264,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11.rend:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11.rend:i": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11.rhrpoly_0p35:res": 100762.0978,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11.rhrpoly_0p35:v": 0.0,
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11.rhrpoly_0p35:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 101368.28289697903
+    },
+    "XPGA_XOTA_XRN1_XR": {
+      "components": {
+        "XPGA_XOTA_XRN1_XR.rend:res": 605.4239082732574,
+        "XPGA_XOTA_XRN1_XR.rend:v": -7.142952895833332e-12,
+        "XPGA_XOTA_XRN1_XR.rend:i": -1.179826696340074e-14,
+        "XPGA_XOTA_XRN1_XR.rhrpoly_0p35:res": 110946.2113487647,
+        "XPGA_XOTA_XRN1_XR.rhrpoly_0p35:v": -1.308974262315132e-09,
+        "XPGA_XOTA_XRN1_XR.rhrpoly_0p35:i": -1.179827816021864e-14
+      },
+      "sum_internal_model_res_ohm": 111551.63525703795
+    },
+    "XPGA_XOTA_XRN2_XR": {
+      "components": {
+        "XPGA_XOTA_XRN2_XR.rend:res": 605.4239082732574,
+        "XPGA_XOTA_XRN2_XR.rend:v": -7.142952895833332e-12,
+        "XPGA_XOTA_XRN2_XR.rend:i": -1.179826696340074e-14,
+        "XPGA_XOTA_XRN2_XR.rhrpoly_0p35:res": 110946.2113487647,
+        "XPGA_XOTA_XRN2_XR.rhrpoly_0p35:v": -1.308974373337435e-09,
+        "XPGA_XOTA_XRN2_XR.rhrpoly_0p35:i": -1.179827916090448e-14
+      },
+      "sum_internal_model_res_ohm": 111551.63525703795
+    },
+    "XPGA_XOTA_XRZP_XR": {
+      "components": {
+        "XPGA_XOTA_XRZP_XR.rend:res": 470.5071828524241,
+        "XPGA_XOTA_XRZP_XR.rend:v": 0.0,
+        "XPGA_XOTA_XRZP_XR.rend:i": 0.0,
+        "XPGA_XOTA_XRZP_XR.rhrpoly_0p69:res": 420.1128,
+        "XPGA_XOTA_XRZP_XR.rhrpoly_0p69:v": 0.0,
+        "XPGA_XOTA_XRZP_XR.rhrpoly_0p69:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 890.6199828524241
+    },
+    "XPGA_XOTA_XRZN_XR": {
+      "components": {
+        "XPGA_XOTA_XRZN_XR.rend:res": 470.5071828524241,
+        "XPGA_XOTA_XRZN_XR.rend:v": 0.0,
+        "XPGA_XOTA_XRZN_XR.rend:i": 0.0,
+        "XPGA_XOTA_XRZN_XR.rhrpoly_0p69:res": 420.1128,
+        "XPGA_XOTA_XRZN_XR.rhrpoly_0p69:v": 0.0,
+        "XPGA_XOTA_XRZN_XR.rhrpoly_0p69:i": 0.0
+      },
+      "sum_internal_model_res_ohm": 890.6199828524241
+    },
+    "XPGA_XOTA_XRCMP_XR": {
+      "components": {
+        "XPGA_XOTA_XRCMP_XR.rend:res": 605.4239082700283,
+        "XPGA_XOTA_XRCMP_XR.rend:v": -9.11204445230851e-12,
+        "XPGA_XOTA_XRCMP_XR.rend:i": -1.505068486367803e-14,
+        "XPGA_XOTA_XRCMP_XR.rhrpoly_0p35:res": 110946.2113484242,
+        "XPGA_XOTA_XRCMP_XR.rhrpoly_0p35:v": -1.669811622306838e-09,
+        "XPGA_XOTA_XRCMP_XR.rhrpoly_0p35:i": -1.505064122525853e-14
+      },
+      "sum_internal_model_res_ohm": 111551.63525669422
+    },
+    "XPGA_XOTA_XRCMN_XR": {
+      "components": {
+        "XPGA_XOTA_XRCMN_XR.rend:res": 605.4239082700283,
+        "XPGA_XOTA_XRCMN_XR.rend:v": -9.11204445230851e-12,
+        "XPGA_XOTA_XRCMN_XR.rend:i": -1.505068486367803e-14,
+        "XPGA_XOTA_XRCMN_XR.rhrpoly_0p35:res": 110946.2113484242,
+        "XPGA_XOTA_XRCMN_XR.rhrpoly_0p35:v": -1.669811622306838e-09,
+        "XPGA_XOTA_XRCMN_XR.rhrpoly_0p35:i": -1.505064122525853e-14
+      },
+      "sum_internal_model_res_ohm": 111551.63525669422
+    },
+    "XPGA_XOTA_XRSCS_XR": {
+      "components": {
+        "XPGA_XOTA_XRSCS_XR.rend:res": 639.3629891192072,
+        "XPGA_XOTA_XRSCS_XR.rend:v": 0.003345470990594818,
+        "XPGA_XOTA_XRSCS_XR.rend:i": 5.232506490880198e-06,
+        "XPGA_XOTA_XRSCS_XR.rhrpoly_0p35:res": 10123.73067559136,
+        "XPGA_XOTA_XRSCS_XR.rhrpoly_0p35:v": 0.05297248647195452,
+        "XPGA_XOTA_XRSCS_XR.rhrpoly_0p35:i": 5.232506490880173e-06
+      },
+      "sum_internal_model_res_ohm": 10763.093664710566
+    },
+    "XPGA_XOTA_XRSCR_XR": {
+      "components": {
+        "XPGA_XOTA_XRSCR_XR.rend:res": 638.5035069864867,
+        "XPGA_XOTA_XRSCR_XR.rend:v": 0.004958095556058029,
+        "XPGA_XOTA_XRSCR_XR.rend:i": 7.765181399642589e-06,
+        "XPGA_XOTA_XRSCR_XR.rhrpoly_0p35:res": 10121.47311562555,
+        "XPGA_XOTA_XRSCR_XR.rhrpoly_0p35:v": 0.07859507477443803,
+        "XPGA_XOTA_XRSCR_XR.rhrpoly_0p35:i": 7.765181399642584e-06
+      },
+      "sum_internal_model_res_ohm": 10759.976622612035
+    },
+    "XPGA_XOTA_XRDS_XR_SEG_01": {
+      "components": {
+        "XPGA_XOTA_XRDS_XR_SEG_01.rend:res": 607.1151280169959,
+        "XPGA_XOTA_XRDS_XR_SEG_01.rend:v": 0.00317673515158412,
+        "XPGA_XOTA_XRDS_XR_SEG_01.rend:i": 5.23250863795835e-06,
+        "XPGA_XOTA_XRDS_XR_SEG_01.rhrpoly_0p35:res": 57595.9313343395,
+        "XPGA_XOTA_XRDS_XR_SEG_01.rhrpoly_0p35:v": 0.3013712082181894,
+        "XPGA_XOTA_XRDS_XR_SEG_01.rhrpoly_0p35:i": 5.232508637958384e-06
+      },
+      "sum_internal_model_res_ohm": 58203.04646235649
+    },
+    "XPGA_XOTA_XRDS_XR_SEG_02": {
+      "components": {
+        "XPGA_XOTA_XRDS_XR_SEG_02.rend:res": 607.1151280169959,
+        "XPGA_XOTA_XRDS_XR_SEG_02.rend:v": 0.00317673515158412,
+        "XPGA_XOTA_XRDS_XR_SEG_02.rend:i": 5.23250863795835e-06,
+        "XPGA_XOTA_XRDS_XR_SEG_02.rhrpoly_0p35:res": 57595.9313343395,
+        "XPGA_XOTA_XRDS_XR_SEG_02.rhrpoly_0p35:v": 0.3013712082181894,
+        "XPGA_XOTA_XRDS_XR_SEG_02.rhrpoly_0p35:i": 5.232508637958384e-06
+      },
+      "sum_internal_model_res_ohm": 58203.04646235649
+    },
+    "XPGA_XOTA_XRCMG_XR_SEG_01": {
+      "components": {
+        "XPGA_XOTA_XRCMG_XR_SEG_01.rend:res": 604.803875432026,
+        "XPGA_XOTA_XRCMG_XR_SEG_01.rend:v": 0.004696412522370075,
+        "XPGA_XOTA_XRCMG_XR_SEG_01.rend:i": 7.765182587521143e-06,
+        "XPGA_XOTA_XRCMG_XR_SEG_01.rhrpoly_0p35:res": 57536.92070390133,
+        "XPGA_XOTA_XRCMG_XR_SEG_01.rhrpoly_0p35:v": 0.4467846947895184,
+        "XPGA_XOTA_XRCMG_XR_SEG_01.rhrpoly_0p35:i": 7.765182587521126e-06
+      },
+      "sum_internal_model_res_ohm": 58141.72457933336
+    },
+    "XPGA_XOTA_XRCMG_XR_SEG_02": {
+      "components": {
+        "XPGA_XOTA_XRCMG_XR_SEG_02.rend:res": 604.803875432026,
+        "XPGA_XOTA_XRCMG_XR_SEG_02.rend:v": 0.004696412522370075,
+        "XPGA_XOTA_XRCMG_XR_SEG_02.rend:i": 7.765182587521143e-06,
+        "XPGA_XOTA_XRCMG_XR_SEG_02.rhrpoly_0p35:res": 57536.92070390133,
+        "XPGA_XOTA_XRCMG_XR_SEG_02.rhrpoly_0p35:v": 0.4467846947895185,
+        "XPGA_XOTA_XRCMG_XR_SEG_02.rhrpoly_0p35:i": 7.765182587521128e-06
+      },
+      "sum_internal_model_res_ohm": 58141.72457933336
+    },
+    "XRIP_XR": {
+      "components": {
+        "XRIP_XR.rend:res": 798.7760323688192,
+        "XRIP_XR.rend:v": -4.244166862399368e-08,
+        "XRIP_XR.rend:i": -5.313337769803923e-11,
+        "XRIP_XR.rhrpoly_0p35:res": 606.2634496170979,
+        "XRIP_XR.rhrpoly_0p35:v": -3.221282485199595e-08,
+        "XRIP_XR.rhrpoly_0p35:i": -5.313337769634774e-11
+      },
+      "sum_internal_model_res_ohm": 1405.039481985917
+    },
+    "XRIN_XR": {
+      "components": {
+        "XRIN_XR.rend:res": 798.7760323688192,
+        "XRIN_XR.rend:v": -4.244166862399368e-08,
+        "XRIN_XR.rend:i": -5.313337769803923e-11,
+        "XRIN_XR.rhrpoly_0p35:res": 606.2634496170979,
+        "XRIN_XR.rhrpoly_0p35:v": -3.221282485199595e-08,
+        "XRIN_XR.rhrpoly_0p35:i": -5.313337769634774e-11
+      },
+      "sum_internal_model_res_ohm": 1405.039481985917
+    }
+  },
+  "power_vdd_plus_vcm_w": 0.0006789778783300003,
+  "scope_of_power": "Static frontend assembly VDD+VCM only; no full ADC/digital switching or whole-core qualification.",
+  "dc_points": [
+    {
+      "SW_v": -0.32,
+      "sensor_diff_v": -0.08,
+      "output_diff_v": -0.3326534167820021,
+      "output_cm_v": 0.847374886859256
+    },
+    {
+      "SW_v": 0.0,
+      "sensor_diff_v": 0.0,
+      "output_diff_v": -1.5543122344752192e-15,
+      "output_cm_v": 0.8472790716790495
+    },
+    {
+      "SW_v": 0.32,
+      "sensor_diff_v": 0.08,
+      "output_diff_v": 0.33265341252599256,
+      "output_cm_v": 0.8473742926936747
+    }
+  ],
+  "ac_feedback_decomposition": [
+    {
+      "frequency_hz": 1.0,
+      "sensor_to_filter_diff_gain": {
+        "real": 4.160376,
+        "imag": -6.904615999745251e-06
+      },
+      "sensor_to_filter_diff_gain_abs": 4.16037600000573,
+      "Rin_ac_ohm": {
+        "real": 10767.329144385027,
+        "imag": -6.680965073826164e-07
+      },
+      "Rfb_ac_ohm": {
+        "real": 45884.186274509804,
+        "imag": 6.209055957593293e-08
+      },
+      "feedback_switch_ac_ohm": {
+        "real": 489.39367201425637,
+        "imag": 1.316994622633908e-05
+      },
+      "core_A_at_this_closed_OP": {
+        "real": 1973.114955555709,
+        "imag": -0.2808539271986805
+      },
+      "resistive_feedback_ratio": {
+        "real": 4.171287846590899,
+        "imag": 1.4408910107335009e-09
+      },
+      "finite_A_core_gain_prediction": {
+        "real": 4.160384000000001,
+        "imag": -1.546566427324115e-06
+      },
+      "scope": "At low frequency, neglects small leakage/displacement terms; output filter creates additional phase. Source AC PSF numerical precision limits algebraic agreement."
+    },
+    {
+      "frequency_hz": 999.9999999999955,
+      "sensor_to_filter_diff_gain": {
+        "real": 4.160368,
+        "imag": -0.006904599999999745
+      },
+      "sensor_to_filter_diff_gain_abs": 4.160373729477336,
+      "Rin_ac_ohm": {
+        "real": 10767.3291445854,
+        "imag": -0.0006680964472870352
+      },
+      "Rfb_ac_ohm": {
+        "real": 45884.18627449117,
+        "imag": 6.20905539825571e-05
+      },
+      "feedback_switch_ac_ohm": {
+        "real": 489.39366806191515,
+        "imag": 0.013169945040227778
+      },
+      "core_A_at_this_closed_OP": {
+        "real": 1934.0303489724683,
+        "imag": -275.3051459550005
+      },
+      "resistive_feedback_ratio": {
+        "real": 4.171287846158444,
+        "imag": 1.440890880939891e-06
+      },
+      "finite_A_core_gain_prediction": {
+        "real": 4.160384000286125,
+        "imag": -0.0015465664273240662
+      },
+      "scope": "At low frequency, neglects small leakage/displacement terms; output filter creates additional phase. Source AC PSF numerical precision limits algebraic agreement."
+    }
+  ],
+  "comparison": {
+    "old_output_cm_v": 0.8862885131945579,
+    "new_output_cm_v": 0.8472790733490176,
+    "output_cm_delta_v": -0.039009439845540284,
+    "new_output_cm_error_to_0p9_v": -0.05272092665098238,
+    "old_1khz_gain": 4.039493645321176,
+    "new_1khz_gain": 4.160373729477336,
+    "gain_relative_change": 0.02992456351458106,
+    "old_NCM_v": 0.6621888180621657,
+    "new_NCM_v": 0.6641840189879161,
+    "old_BN_v_from_real_zero_input_node": 0.7057244034237,
+    "new_BN_v": 0.6853142975079649,
+    "old_three_dc_diff_v": [
+      -0.32315183488601185,
+      -1.7924550732573152e-12,
+      0.32315183488172383
+    ]
+  },
+  "legacy_OP_vector_evidence_issue": {
+    "dc_rows": 81,
+    "device_parameter_columns": 210,
+    "constant_device_parameter_columns": 210,
+    "same_bias_device_compare_valid": false,
+    "example_field": "@m.xg4.xdut.xota.xmsp.msky130_fd_pr__pfet_01v8[vds]",
+    "zero_row_exported_vds_v": 0.7113094707185,
+    "zero_row_node_VDD_minus_OUTP_v": 0.9137115155287,
+    "reason": "run_diagnostic.py did not save MOS parameter sweep vectors; post-sweep @device scalar readings were repeated by wrdata. These cannot establish each-point MOS region or a same-OP comparison.",
+    "consequence": "Previously recorded device_regions sweep gate lacks the claimed pointwise evidence. Real DC node waveforms and sampling transient are not thereby invalidated. Preserve originals; do not transfer this gate to school_r1.",
+    "old_zero_input_node_values": {
+      "v(xg4.sp)": 0.9,
+      "v(xg4.sn)": 0.9,
+      "v(xg4.ip)": 0.8999083924017,
+      "v(xg4.in)": 0.8999083924017,
+      "v(xg4.corep)": 0.8862884844713,
+      "v(xg4.coren)": 0.8862884844694,
+      "v(xg4.filtp)": 0.8862884845125,
+      "v(xg4.filtn)": 0.8862884845107,
+      "v(xg4.hp)": 0.8999999378961,
+      "v(xg4.hn)": 0.8999999087547,
+      "v(xg4.xdut.xota.n1)": 0.662188818095,
+      "v(xg4.xdut.xota.n2)": 0.6621888180951,
+      "v(xg4.xdut.xota.tail)": 0.2269462228906,
+      "v(xg4.xdut.xota.ncm)": 0.662188818095,
+      "v(xg4.xdut.xota.cms)": 0.8862884844704,
+      "v(xg4.xdut.xota.bn)": 0.7057244034237,
+      "i(v.xg4.vddc)": -0.0003868406892622,
+      "i(v.xg4.vcmc)": -1.398181738005e-16
+    }
+  },
+  "retained_notices": [
+    "Notice from spectre during initial setup.",
+    "Notice from spectre during DC analysis `dcOp'.",
+    "GminDC = 1 pS is large enough to noticeably affect the DC solution.",
+    "dV(XPGA_XN16_N) = 23.3799 mV",
+    "Notice from spectre during AC analysis `ac'.",
+    "Notice from spectre at SW = -320e-03 during DC analysis `dc'.",
+    "GminDC = 1 pS is large enough to noticeably affect the DC solution.",
+    "dV(XPGA_XN16_N) = 23.3799 mV",
+    "Notice from spectre at SW = 0 during DC analysis `dc'.",
+    "GminDC = 1 pS is large enough to noticeably affect the DC solution.",
+    "dV(XPGA_XN16_N) = 23.3799 mV",
+    "Notice from spectre at SW = 320e-03 during DC analysis `dc'.",
+    "GminDC = 1 pS is large enough to noticeably affect the DC solution.",
+    "dV(XPGA_XN16_N) = 23.3799 mV",
+    "Notice from spectre at SW = 320e-03 during DC analysis `dc'.",
+    "spectre completes with 0 errors, 0 warnings, and 8 notices."
+  ],
+  "formal_stability_gate_pass": false,
+  "sampled_noise_qualified": false,
+  "pvt_45_run": false
+}

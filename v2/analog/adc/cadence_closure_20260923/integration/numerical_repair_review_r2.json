@@ -1,0 +1,94 @@
+{
+  "status": "REVIEWED_CANDIDATES_NOT_IMPLEMENTED_OR_RUN",
+  "evidence": {
+    "tran_help": {
+      "path": "v2/analog/noise_controls_20260923/doc_cache/tran_help.txt",
+      "sha256": "9d5752608d6d259855ff3a613b9b36133634da81e03fb18fc30e9b467d5dc145"
+    },
+    "options_help": {
+      "path": "v2/analog/adc/cadence_closure_20260923/runs/probe_20260924T020824848497Z/options_help.txt",
+      "sha256": "05c8bf9ecda18098e401684b85a5753c80500d59cace4124acc0348735f2cdb8"
+    },
+    "bsim4_help": {
+      "path": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T052808271046Z/bsim4_help.txt",
+      "sha256": "7610c94bc88056ac5c9f73b790f40d54b85431c535f533b4afddbea1bf34c64c"
+    },
+    "school_model_metadata": {
+      "path": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T053814697817Z/school_body_model_metadata.json",
+      "sha256": "3d7da1448bbd655dc8e2e86631e86cbf327c6f66329a90b0ddacc2c1cf6e30f3"
+    },
+    "body_probe_review": {
+      "path": "v2/analog/adc/cadence_closure_20260923/numerics/first_body_probe_review.json",
+      "sha256": "b883fc604cfa9991fdf662805a2c3736c04c01a508c107cf9624e4a6ede24558"
+    },
+    "forcedpoint_review": {
+      "path": "v2/analog/adc/cadence_closure_20260923/numerics/first_phase_commonpoints_pair_review_v2/review.json",
+      "sha256": "fb56aa0d0d6330ec18e69814a42af7dd27c4178cd103d80c3443eeed4a27442c"
+    },
+    "same_domain_comparison": {
+      "path": "v2/analog/adc/cadence_closure_20260923/numerics/first_phase_commonpoints_pair_review_v2/like_domain_old_vs_forced.json",
+      "sha256": "0847be2feec362bf2043b82b0bc326730718d5af05d5e8b853bcf474688c7d67"
+    },
+    "native_bound": {
+      "path": "v2/analog/adc/cadence_closure_20260923/integration/reset1_2frames_baseline_v4/reset1_native_bound.scs",
+      "sha256": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6"
+    },
+    "original_VAMS_fixture": {
+      "path": "v2/analog/adc/cadence_closure_20260923/integration/reset1_2frames_baseline_v4/p2_ams_reset1.vams",
+      "sha256": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125"
+    },
+    "review_markdown": {
+      "path": "v2/analog/adc/cadence_closure_20260923/integration/numerical_repair_review_r2.md",
+      "sha256": "0b101cc764b3f053ebf1f4755cb4f22a97cad3d0abcca7882a97410f6fc802b7"
+    }
+  },
+  "selected_short_experiments": [
+    {
+      "order": 1,
+      "only_change": "options cthresh=1p",
+      "reference": "Original non-strobed 741-device full ADC plus RTL, 4.1 us probe",
+      "hypothesis": "Equivalent capacitor representation mitigates large-capacitance / small-step matrix conditioning",
+      "tool": "Spectre21.1.0.132.isr1",
+      "cthresh_F": 1e-12,
+      "wall_clock_limit_s": 180,
+      "maximum_limit_s": 300,
+      "note": "Verify PDK scaled capacitors actually use eligible primitive; VAMS ddt eligibility unknown."
+    },
+    {
+      "order": 2,
+      "condition": "Step 1 confirms eligible PDK capacitor treatment; remaining evidence supports reference ddt branch conditioning",
+      "only_change": "Equivalent external 1 ohm / 10 nF branches moved from four VAMS current contributions into two Spectre RC subcircuit instances",
+      "fixed_cthresh_F": 1e-12,
+      "R_ohm_each": 1.0,
+      "C_F_each": 1e-08,
+      "unchanged_voltage_sources_V": [
+        1.1,
+        0.7
+      ],
+      "remove_original_VAMS_contributions": 4,
+      "expected_new_external_primitives": {
+        "resistor": 2,
+        "capacitor": 2
+      },
+      "unchanged_internal_primitive_count": 741,
+      "no_IC_or_added_leakage": true
+    }
+  ],
+  "other_evaluated_candidates": {
+    "traponly": "Supported integration-method single-factor alternative; possible ringing; not part of selected matrix pair",
+    "trapgear2": "Adaptive three-method integration gives a less controlled mechanism comparison",
+    "lteratio1": "Tighter LTE vs Newton ratio; conditional smooth timing-error experiment, not bundled",
+    "chargeabstol": "Default 1e-21 C not currently evidenced as dominant floor",
+    "reversed": "Operatingpoint observable, not a lockable solver option",
+    "driver_strength0p5": "Possible real design candidate: PMOS 32 to 16 um, NMOS 16 to 8 um, L=0.15 um, with native regenerated geometry parasitics; no implementation here"
+  },
+  "no_changes_to": [
+    "PDK models",
+    "frozen RTL",
+    "0.05LSB alltime gate",
+    "original failed evidence"
+  ],
+  "original_full_domain_gate_status": "FAIL_RETAINED",
+  "complete_ADC_qualified": false,
+  "long_campaign_allowed": false
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PREPARED_NOT_SIMULATED",
+  "native_cells": [
+    "p2adc_core_fix1_school_r1",
+    "p2adc_phase_school_r1",
+    "p2adc_frontend_school_r3"
+  ],
+  "native_body_total_devices": 838,
+  "frontend_native_sha256": "d60e36be06f2efc9b4f3374f2fe97710d520ad344ba677ab1da0512fce933b6a",
+  "frontend_audit_sha256": "86483218a5d70c9d23338ea122a71699da564cc5f4457080efe29538da755da4",
+  "preserved_ADC_and_phase_body_sha256": "e3414003ed2ee85a2ab4200e9e9080c6a81a9160f9e0ae7d24dc77b3f986be54",
+  "stimulus": {
+    "first_frame": {
+      "gain_code": 0,
+      "nominal_analog_gain": 1,
+      "sensor_differential_V": -0.399
+    },
+    "second_frame": {
+      "gain_code": 2,
+      "nominal_analog_gain": 16,
+      "sensor_differential_V": 0.0249375
+    },
+    "each_sensor_leg_source_ohm": 350,
+    "reference_impedance_ohm_each": 1,
+    "reference_decoupling_F_each": 1e-08,
+    "input_transition_between_frames": "Same original two-frame sequence, after first acquisition; positive sensor amplitude scaled1/16 before gain16 acquisition."
+  },
+  "not_acceptance": [
+    "No joint simulation executed",
+    "Frontend r3 loop/settling/noise/PVT gates do not become passed",
+    "ADC standalone AMS first-acquisition convergence remains blocked",
+    "No full dynamic or static accuracy inferred from assembled actual decision words"
+  ],
+  "files": {
+    "amsdControl.scs.in": "a72de881ff4588cd67cdd3e32a33c90891aea977aae766822c4634fd00913be8",
+    "joint_native_bound.scs": "0c071f9b14ea4c431395817276a57d03fba7b9cafccc2b8cc280476afc860186",
+    "p1_ams_joint_smoke.vams": "e6ec9bbbb3125d504effa41a788b9f7d59c7a799aa6931b1f653811ff06d52c1",
+    "p1_ams_sequence.sv": "7c6fe2b4d88ae13dfb9e58b2eb65381d0e48a31b69b886340a1662ce0608aa6e",
+    "p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+  }
+}

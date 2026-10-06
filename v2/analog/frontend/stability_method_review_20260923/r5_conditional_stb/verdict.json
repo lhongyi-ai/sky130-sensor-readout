@@ -1,0 +1,17 @@
+{
+  "status": "CONDITIONAL_STB_TARGET_FAILURE_RETAINED",
+  "worst_native_phase_margin_deg": 39.07844988040595,
+  "worst_channel": "g1_dm",
+  "below_60deg_channels": [
+    "g1_dm",
+    "g4_dm"
+  ],
+  "native_unstable_state_reported": false,
+  "total_unity_crossings": 9,
+  "total_positive_real_crossings": 19,
+  "total_negative_real_crossings": 10,
+  "input_cm_margin_absence_note": "All three exported input-CM curves remain below unity. Spectre explicitly omits PM/GM for this case. Recorded real-axis crossings are still retained but do not supply a native margin or justify a global stable claim.",
+  "gain16_op_mismatch_note": "Only XPGA_XN1_N exceeds fixed 1e-8 V audit threshold; 320.02784 nV difference at 1.4471426 V is about 2.21e-7 relative and below requested reltol=1e-5. This is compatible with a solver-tolerance-sized difference, but is not evidence proving its cause. Original strict FAIL unchanged.",
+  "no_new_simulation": true,
+  "global_multiloop_signoff_changed": false
+}

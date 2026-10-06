@@ -18,7 +18,7 @@ All three images are 2400×1600 and have individually been checked for spacing b
 
 Xschem is an open-source schematic tool. After installation, enter:
 
-`/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/frontend/xschem_20260911`
+`/path/to/sky130-two-stage-ota/v2/analog/frontend/xschem_20260911`
 
 Then open the pages separately:
 

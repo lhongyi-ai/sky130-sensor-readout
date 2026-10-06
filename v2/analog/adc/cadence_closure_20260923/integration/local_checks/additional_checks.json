@@ -1,0 +1,35 @@
+{
+  "scope": "SYNTHETIC LOCAL HARNESS/PARSER TESTS; NOT ADC SIMULATION",
+  "checks": [
+    {
+      "frames": 2,
+      "check": "detect data_gain replaced by current gain_latched on completion",
+      "pass": true,
+      "actual_exit": 1
+    },
+    {
+      "frames": 12,
+      "check": "detect data_gain replaced by current gain_latched on completion",
+      "pass": true,
+      "actual_exit": 1
+    },
+    {
+      "frames": 2,
+      "check": "missing simulator/raw output cannot PASS",
+      "pass": true
+    },
+    {
+      "frames": 12,
+      "check": "missing simulator/raw output cannot PASS",
+      "pass": true
+    },
+    {
+      "check": "PSF group aliases and linear interpolation",
+      "pass": true
+    },
+    {
+      "check": "missing waveform trace rejected",
+      "pass": true
+    }
+  ]
+}

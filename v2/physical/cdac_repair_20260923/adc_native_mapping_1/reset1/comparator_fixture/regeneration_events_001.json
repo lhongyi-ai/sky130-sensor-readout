@@ -1,0 +1,824 @@
+{
+  "status": "DIAGNOSIS_ONLY_NOT_NUMERICAL_PASS",
+  "notes": [
+    "Original150ns snapshots are retained, not changed to pass. Original ADC permits312.5ns EVAL high; this fixture used200ns.",
+    "Real S/R activation is evidence of analog regeneration, distinct from Q initially forced byglobalreset.",
+    "Negativepolarity did not requireQ1-to-Q0transition because midrunreset already clearedQ; another sequence must coverthat transition."
+  ],
+  "cycles": [
+    {
+      "eval_start_s": 4.9999999999999996e-06,
+      "input_sign": "positive",
+      "physical_set_or_reset_first_activation_s": 5.1668505072983815e-06,
+      "activation_delay_from_eval_start_s": 1.6685050729838194e-07,
+      "Q_actual_transition_s": 5.166890336543028e-06,
+      "interrupted_by_global_reset": false
+    },
+    {
+      "eval_start_s": 5.6249999999999995e-06,
+      "input_sign": "positive",
+      "physical_set_or_reset_first_activation_s": 5.790574859493229e-06,
+      "activation_delay_from_eval_start_s": 1.655748594932291e-07,
+      "Q_actual_transition_s": null,
+      "interrupted_by_global_reset": false
+    },
+    {
+      "eval_start_s": 6.2499999999999995e-06,
+      "input_sign": "positive",
+      "physical_set_or_reset_first_activation_s": null,
+      "activation_delay_from_eval_start_s": null,
+      "Q_actual_transition_s": null,
+      "interrupted_by_global_reset": true
+    },
+    {
+      "eval_start_s": 6.874999999999999e-06,
+      "input_sign": "negative",
+      "physical_set_or_reset_first_activation_s": 7.040530591163517e-06,
+      "activation_delay_from_eval_start_s": 1.6553059116351722e-07,
+      "Q_actual_transition_s": null,
+      "interrupted_by_global_reset": false
+    },
+    {
+      "eval_start_s": 7.499999999999999e-06,
+      "input_sign": "negative",
+      "physical_set_or_reset_first_activation_s": 7.665525811662767e-06,
+      "activation_delay_from_eval_start_s": 1.6552581166276778e-07,
+      "Q_actual_transition_s": null,
+      "interrupted_by_global_reset": false
+    },
+    {
+      "eval_start_s": 8.125e-06,
+      "input_sign": "negative",
+      "physical_set_or_reset_first_activation_s": 8.290525808655778e-06,
+      "activation_delay_from_eval_start_s": 1.655258086557788e-07,
+      "Q_actual_transition_s": null,
+      "interrupted_by_global_reset": false
+    },
+    {
+      "eval_start_s": 8.75e-06,
+      "input_sign": "negative",
+      "physical_set_or_reset_first_activation_s": 8.915525806712366e-06,
+      "activation_delay_from_eval_start_s": 1.6552580671236673e-07,
+      "Q_actual_transition_s": null,
+      "interrupted_by_global_reset": false
+    }
+  ],
+  "events": [
+    {
+      "signal": "RST_N",
+      "time_s": 1.0002999999999998e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 1.0004999999999998e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 1.0005896760287786e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 1.0006006493076815e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 1.000610144821096e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 1.0006999999999998e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.0003e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.000500000000001e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.0007e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.166820340170181e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.1668365282388275e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.1668505072983815e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "Q",
+      "time_s": 5.16686854142413e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "Q",
+      "time_s": 5.16687814876597e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "Q",
+      "time_s": 5.166890336543028e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "QB",
+      "time_s": 5.166906140596722e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "QB",
+      "time_s": 5.1669121673993475e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "QB",
+      "time_s": 5.166918394095512e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.2013000000000005e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.2015e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.2017000000000005e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.202224540185484e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.202231246519062e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.202238067231398e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.6253e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.625500000000001e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.625700000000001e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.790546805990959e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.790561185544244e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.790574859493229e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.8263000000000004e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.8265e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 5.8267000000000005e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.827231632543383e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.827237964405014e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_S_BAR",
+      "time_s": 5.827244817677315e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.250300000000001e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.2505000000000005e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.2507e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 6.3603e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 6.3604999999999995e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 6.3607e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 6.360712258873945e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 6.36072345205262e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 6.360732850096311e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "QB",
+      "time_s": 6.360750914190285e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "QB",
+      "time_s": 6.360759931050221e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "QB",
+      "time_s": 6.3607718456650085e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "Q",
+      "time_s": 6.360787716031842e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "Q",
+      "time_s": 6.360793734916073e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "Q",
+      "time_s": 6.360799957116761e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.4513e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.451500000000001e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.4516999999999996e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 6.500299999999999e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 6.500499999999999e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 6.500589212429822e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 6.500600536307407e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 6.500609647440249e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "RST_N",
+      "time_s": 6.5007e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.875300000000001e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.8755000000000005e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 6.875700000000001e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.040502056412095e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.040516968278663e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.040530591163517e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.0763e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.076500000000001e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.0767e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.077212140979871e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.077218791975545e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.077225804937749e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.5003e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.5005000000000004e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.500700000000001e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.665497273475486e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.665512187440166e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.665525811662767e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.7013e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.7015e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 7.701700000000001e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.702212167043366e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.702218817694579e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 7.702225830142801e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.1253e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.1255e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.1257e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.290497268987999e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.290512183895819e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.290525808655778e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.3263e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.3265e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.326700000000001e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.327212166556795e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.327218817080542e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.327225829211808e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.750300000000002e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.7505e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.7507e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.915497266137672e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.915512181626262e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.915525806712366e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.9513e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.9515e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "falling"
+    },
+    {
+      "signal": "EVAL",
+      "time_s": 8.951700000000001e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "falling"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.952212166370855e-06,
+      "threshold_V": 0.54,
+      "threshold": "logic_low",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.952218816778334e-06,
+      "threshold_V": 0.9,
+      "threshold": "half_supply",
+      "direction": "rising"
+    },
+    {
+      "signal": "XCMP.XADC_XCMP_R_BAR",
+      "time_s": 8.952225828731925e-06,
+      "threshold_V": 1.26,
+      "threshold": "logic_high",
+      "direction": "rising"
+    }
+  ]
+}

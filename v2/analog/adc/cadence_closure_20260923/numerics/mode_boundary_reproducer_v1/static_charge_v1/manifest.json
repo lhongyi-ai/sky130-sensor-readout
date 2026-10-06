@@ -1,0 +1,479 @@
+{
+  "id": "static_charge_v1",
+  "status": "PREPARED_NOT_RUN",
+  "scope": "DC_MODEL_BOUNDARY_DIAGNOSTIC_ONLY",
+  "full_ADC_accuracy_pass": false,
+  "complete_ADC": false,
+  "source_input_sha256": "2483c330d14a8cabed41eecbc263c882282869fb9af279d37f5b27753a939a34",
+  "device_record": "XTEST (D G SB SB) pfet_01v8 w=(32u) l=150n as=8.48p ad=8.48p ps=64.53u pd=64.53u m=(1)*(1)",
+  "gate_fixed_V": 0.9164255527780005,
+  "source_bulk_V": 1.8,
+  "profiles": {
+    "baseline": {
+      "file": "input_baseline.scs",
+      "sha256": "37bc520eb54f4315057fcf0ba302864825cb07c6d43b7163bbe0d084fd0e54b0",
+      "requested_reltol": 1e-05,
+      "vabstol": 1e-08,
+      "iabstol": 1e-13,
+      "sweeps": {
+        "dc_wide_up": {
+          "start_V": -0.02,
+          "stop_V": 0.02,
+          "step_V": 0.0001,
+          "expected_points": 401,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "up",
+          "lin_steps": 400
+        },
+        "dc_wide_down": {
+          "start_V": 0.02,
+          "stop_V": -0.02,
+          "step_V": -0.0001,
+          "expected_points": 401,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "down",
+          "lin_steps": 400
+        },
+        "dc_fine_up": {
+          "start_V": -0.001,
+          "stop_V": 0.001,
+          "step_V": 1e-06,
+          "expected_points": 2001,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "up",
+          "lin_steps": 2000
+        },
+        "dc_fine_down": {
+          "start_V": 0.001,
+          "stop_V": -0.001,
+          "step_V": -1e-06,
+          "expected_points": 2001,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "down",
+          "lin_steps": 2000
+        }
+      }
+    },
+    "strict": {
+      "file": "input_strict.scs",
+      "sha256": "372b62a136f0bbbcb14bd48a147b1a180dda908260073ff3ff82005035c026a8",
+      "requested_reltol": 1e-06,
+      "vabstol": 1e-09,
+      "iabstol": 1e-14,
+      "sweeps": {
+        "dc_wide_up": {
+          "start_V": -0.02,
+          "stop_V": 0.02,
+          "step_V": 5e-05,
+          "expected_points": 801,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "up",
+          "lin_steps": 800
+        },
+        "dc_wide_down": {
+          "start_V": 0.02,
+          "stop_V": -0.02,
+          "step_V": -5e-05,
+          "expected_points": 801,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "down",
+          "lin_steps": 800
+        },
+        "dc_fine_up": {
+          "start_V": -0.001,
+          "stop_V": 0.001,
+          "step_V": 5e-07,
+          "expected_points": 4001,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "up",
+          "lin_steps": 4000
+        },
+        "dc_fine_down": {
+          "start_V": 0.001,
+          "stop_V": -0.001,
+          "step_V": -5e-07,
+          "expected_points": 4001,
+          "external_D_voltage": "1.8+VDELTA",
+          "direction": "down",
+          "lin_steps": 4000
+        }
+      }
+    }
+  },
+  "documented_op_fields": {
+    "region": [
+      {
+        "line_1based": 1583,
+        "text_with_continuation": "1       region=triode     Estimated operating region. Spectre outputs the\n                          number (0-4) in a rawfile. Possible values are off,\n                          triode, sat, subth and breakdown."
+      }
+    ],
+    "reversed": [
+      {
+        "line_1based": 1588,
+        "text_with_continuation": "4       reversed          Reverse mode indicator. Possible values are no and\n                          yes.\n5       ids (A)           Resistive drain-to-source current."
+      }
+    ],
+    "vgs": [
+      {
+        "line_1based": 1591,
+        "text_with_continuation": "6       vgs (V)           Gate-source voltage.\n7       vds (V)           Drain-source voltage.\n8       vbs (V)           Bulk-source voltage."
+      }
+    ],
+    "vds": [
+      {
+        "line_1based": 1592,
+        "text_with_continuation": "7       vds (V)           Drain-source voltage.\n8       vbs (V)           Bulk-source voltage.\n9       vgd (V)           Gate-drain voltage."
+      }
+    ],
+    "vbs": [
+      {
+        "line_1based": 1593,
+        "text_with_continuation": "8       vbs (V)           Bulk-source voltage.\n9       vgd (V)           Gate-drain voltage.\n10      vdb (V)           Drain-bulk voltage."
+      }
+    ],
+    "vgd": [
+      {
+        "line_1based": 1594,
+        "text_with_continuation": "9       vgd (V)           Gate-drain voltage.\n10      vdb (V)           Drain-bulk voltage.\n11      vgb (V)           Gate-bulk voltage."
+      }
+    ],
+    "vdb": [
+      {
+        "line_1based": 1595,
+        "text_with_continuation": "10      vdb (V)           Drain-bulk voltage.\n11      vgb (V)           Gate-bulk voltage.\n12      vth (V)           Threshold voltage (alias=lv9)."
+      }
+    ],
+    "vgb": [
+      {
+        "line_1based": 1596,
+        "text_with_continuation": "11      vgb (V)           Gate-bulk voltage.\n12      vth (V)           Threshold voltage (alias=lv9).\n13      vdsat (V)         Drain-source saturation voltage (alias=lv10)."
+      }
+    ],
+    "ids": [
+      {
+        "line_1based": 1590,
+        "text_with_continuation": "5       ids (A)           Resistive drain-to-source current.\n6       vgs (V)           Gate-source voltage.\n7       vds (V)           Drain-source voltage."
+      }
+    ],
+    "id": [
+      {
+        "line_1based": 1656,
+        "text_with_continuation": "49      id (A)            Resistive drain current.\n50      ig (A)            Total DC gate current.\n51      is (A)            Total DC source current."
+      }
+    ],
+    "ig": [
+      {
+        "line_1based": 1657,
+        "text_with_continuation": "50      ig (A)            Total DC gate current.\n51      is (A)            Total DC source current.\n52      ib (A)            Total DC bulk current."
+      }
+    ],
+    "is": [
+      {
+        "line_1based": 1658,
+        "text_with_continuation": "51      is (A)            Total DC source current.\n52      ib (A)            Total DC bulk current.\n53      ibulk (A)         Resistive bulk current."
+      }
+    ],
+    "ib": [
+      {
+        "line_1based": 1659,
+        "text_with_continuation": "52      ib (A)            Total DC bulk current.\n53      ibulk (A)         Resistive bulk current.\n54      pwr (W)           Power at op point."
+      }
+    ],
+    "gm": [
+      {
+        "line_1based": 1599,
+        "text_with_continuation": "14      gm (S)            Common-source transconductance (alias=lx7).\n15      gds (S)           Common-source output conductance (alias=lx8).\n16      gmbs (S)          Body-transconductance (alias=lx9)."
+      }
+    ],
+    "gds": [
+      {
+        "line_1based": 1600,
+        "text_with_continuation": "15      gds (S)           Common-source output conductance (alias=lx8).\n16      gmbs (S)          Body-transconductance (alias=lx9).\n17      betaeff (A/V^2)   Effective beta (alias LV21)."
+      }
+    ],
+    "gmbs": [
+      {
+        "line_1based": 1601,
+        "text_with_continuation": "16      gmbs (S)          Body-transconductance (alias=lx9).\n17      betaeff (A/V^2)   Effective beta (alias LV21).\n18      cjd (F)           Drain-bulk junction capacitance (alias=lx29)."
+      }
+    ],
+    "qg": [
+      {
+        "line_1based": 1684,
+        "text_with_continuation": "73      qg (Coul)         Total gate charge, including intrinsic, overlap and\n                          fringing components.\n74      qd (Coul)         Total drain charge, including intrinsic, overlap and"
+      }
+    ],
+    "qd": [
+      {
+        "line_1based": 1686,
+        "text_with_continuation": "74      qd (Coul)         Total drain charge, including intrinsic, overlap and\n                          fringing components.\n75      qs (Coul)         Total source charge, including intrinsic, overlap and"
+      }
+    ],
+    "qs": [
+      {
+        "line_1based": 1688,
+        "text_with_continuation": "75      qs (Coul)         Total source charge, including intrinsic, overlap and\n                          fringing components.\n76      qb (Coul)         Total bulk charge, including intrinsic and overlap"
+      }
+    ],
+    "qb": [
+      {
+        "line_1based": 1690,
+        "text_with_continuation": "76      qb (Coul)         Total bulk charge, including intrinsic and overlap\n                          components.\n77      qjd (Coul)        Drain-bulk junction charge."
+      }
+    ],
+    "qjd": [
+      {
+        "line_1based": 1692,
+        "text_with_continuation": "77      qjd (Coul)        Drain-bulk junction charge.\n78      qjs (Coul)        Source-bulk junction charge.\n79      qgdovl (Coul)     Gate-drain overlap and fringing charge."
+      }
+    ],
+    "qjs": [
+      {
+        "line_1based": 1693,
+        "text_with_continuation": "78      qjs (Coul)        Source-bulk junction charge.\n79      qgdovl (Coul)     Gate-drain overlap and fringing charge.\n80      qgsovl (Coul)     Gate-source overlap and fringing charge."
+      }
+    ],
+    "qgdovl": [
+      {
+        "line_1based": 1694,
+        "text_with_continuation": "79      qgdovl (Coul)     Gate-drain overlap and fringing charge.\n80      qgsovl (Coul)     Gate-source overlap and fringing charge.\n81      qgi (Coul)        Intrinsic gate charge."
+      }
+    ],
+    "qgsovl": [
+      {
+        "line_1based": 1695,
+        "text_with_continuation": "80      qgsovl (Coul)     Gate-source overlap and fringing charge.\n81      qgi (Coul)        Intrinsic gate charge.\n82      qdi (Coul)        Intrinsic drain charge."
+      }
+    ],
+    "qgi": [
+      {
+        "line_1based": 1696,
+        "text_with_continuation": "81      qgi (Coul)        Intrinsic gate charge.\n82      qdi (Coul)        Intrinsic drain charge.\n83      qsi (Coul)        Intrinsic source charge."
+      }
+    ],
+    "qdi": [
+      {
+        "line_1based": 1697,
+        "text_with_continuation": "82      qdi (Coul)        Intrinsic drain charge.\n83      qsi (Coul)        Intrinsic source charge.\n84      qbi (Coul)        Intrinsic bulk charge."
+      }
+    ],
+    "qsi": [
+      {
+        "line_1based": 1698,
+        "text_with_continuation": "83      qsi (Coul)        Intrinsic source charge.\n84      qbi (Coul)        Intrinsic bulk charge.\n85      ide (A)           Total DC drain current."
+      }
+    ],
+    "qbi": [
+      {
+        "line_1based": 1699,
+        "text_with_continuation": "84      qbi (Coul)        Intrinsic bulk charge.\n85      ide (A)           Total DC drain current.\n86      ige (A)           Total DC gate current."
+      }
+    ],
+    "cgg": [
+      {
+        "line_1based": 1605,
+        "text_with_continuation": "20      cgg (F)           Total gate capacitance, including intrinsic, overlap\n                          and fringing components (alias=lx82).\n21      cgd (F)           Total gate-to-drain capacitance, including intrinsic,"
+      }
+    ],
+    "cgd": [
+      {
+        "line_1based": 1607,
+        "text_with_continuation": "21      cgd (F)           Total gate-to-drain capacitance, including intrinsic,\n                          overlap, and fringing components (alias=lx83).\n22      cgs (F)           Total gate-to-source capacitance, including"
+      }
+    ],
+    "cgs": [
+      {
+        "line_1based": 1609,
+        "text_with_continuation": "22      cgs (F)           Total gate-to-source capacitance, including\n                          intrinsic, overlap, and fringing components\n                          (alias=lx84)."
+      }
+    ],
+    "cgb": [
+      {
+        "line_1based": 1612,
+        "text_with_continuation": "23      cgb (F)           Total gate-to-bulk capacitance, including intrinsic\n                          and overlap components.\n24      cdg (F)           Total drain-to-gate capacitance, including intrinsic,"
+      }
+    ],
+    "cdg": [
+      {
+        "line_1based": 1614,
+        "text_with_continuation": "24      cdg (F)           Total drain-to-gate capacitance, including intrinsic,\n                          overlap, and fringing components (alias=lx87).\n25      cdd (F)           Drain capacitance, including intrinsic, overlap, and"
+      }
+    ],
+    "cdd": [
+      {
+        "line_1based": 1616,
+        "text_with_continuation": "25      cdd (F)           Drain capacitance, including intrinsic, overlap, and\n                          fringing components.\n26      cds (F)           Total drain-to-source capacitance (alias=lx86)."
+      }
+    ],
+    "cds": [
+      {
+        "line_1based": 1618,
+        "text_with_continuation": "26      cds (F)           Total drain-to-source capacitance (alias=lx86).\n27      cdb (F)           Intrinsic drain-to-bulk capacitance.\n28      csg (F)           Total source-to-gate capacitance, including"
+      }
+    ],
+    "cdb": [
+      {
+        "line_1based": 1619,
+        "text_with_continuation": "27      cdb (F)           Intrinsic drain-to-bulk capacitance.\n28      csg (F)           Total source-to-gate capacitance, including\n                          intrinsic, overlap, and fringing components."
+      }
+    ],
+    "csg": [
+      {
+        "line_1based": 1620,
+        "text_with_continuation": "28      csg (F)           Total source-to-gate capacitance, including\n                          intrinsic, overlap, and fringing components.\n29      csd (F)           Total source-to-drain capacitance."
+      }
+    ],
+    "csd": [
+      {
+        "line_1based": 1622,
+        "text_with_continuation": "29      csd (F)           Total source-to-drain capacitance.\n30      css (F)           Source capacitance, including intrinsic, overlap, and\n                          fringing components."
+      }
+    ],
+    "css": [
+      {
+        "line_1based": 1623,
+        "text_with_continuation": "30      css (F)           Source capacitance, including intrinsic, overlap, and\n                          fringing components.\n31      csb (F)           Intrinsic source-to-bulk capacitance."
+      }
+    ],
+    "csb": [
+      {
+        "line_1based": 1625,
+        "text_with_continuation": "31      csb (F)           Intrinsic source-to-bulk capacitance.\n32      cbg (F)           Total bulk-to-gate capacitance, including intrinsic\n                          and overlap components (alias=lx88)."
+      }
+    ],
+    "cbg": [
+      {
+        "line_1based": 1626,
+        "text_with_continuation": "32      cbg (F)           Total bulk-to-gate capacitance, including intrinsic\n                          and overlap components (alias=lx88).\n33      cbd (F)           Intrinsic bulk-to-drain capacitance."
+      }
+    ],
+    "cbd": [
+      {
+        "line_1based": 1628,
+        "text_with_continuation": "33      cbd (F)           Intrinsic bulk-to-drain capacitance.\n34      cbs (F)           Intrinsic bulk-to-source capacitance.\n35      cbb (F)           Bulk capacitance, including intrinsic and overlap"
+      }
+    ],
+    "cbs": [
+      {
+        "line_1based": 1629,
+        "text_with_continuation": "34      cbs (F)           Intrinsic bulk-to-source capacitance.\n35      cbb (F)           Bulk capacitance, including intrinsic and overlap\n                          components."
+      }
+    ],
+    "cbb": [
+      {
+        "line_1based": 1630,
+        "text_with_continuation": "35      cbb (F)           Bulk capacitance, including intrinsic and overlap\n                          components.\n36      covlgs (F/m)      Gate-source overlap and fringing capacitances"
+      }
+    ],
+    "cjd": [
+      {
+        "line_1based": 1603,
+        "text_with_continuation": "18      cjd (F)           Drain-bulk junction capacitance (alias=lx29).\n19      cjs (F)           Source-bulk junction capacitance (alias=lx28).\n20      cgg (F)           Total gate capacitance, including intrinsic, overlap"
+      }
+    ],
+    "cjs": [
+      {
+        "line_1based": 1604,
+        "text_with_continuation": "19      cjs (F)           Source-bulk junction capacitance (alias=lx28).\n20      cgg (F)           Total gate capacitance, including intrinsic, overlap\n                          and fringing components (alias=lx82)."
+      }
+    ],
+    "cggbo": [
+      {
+        "line_1based": 1637,
+        "text_with_continuation": "39      cggbo (F)         CGGBO = dQg/dVg intrinsic gate capacitance\n                          (alias=lx18).\n40      cgdbo (F)         CGDBO = -dQg/dVd intrinsic gate-to-drain capacitance"
+      }
+    ],
+    "cgdbo": [
+      {
+        "line_1based": 1639,
+        "text_with_continuation": "40      cgdbo (F)         CGDBO = -dQg/dVd intrinsic gate-to-drain capacitance\n                          (alias=lx19).\n41      cgsbo (F)         CGSBO = -dQg/dVs intrinsic gate-to-source capacitance"
+      }
+    ],
+    "cgsbo": [
+      {
+        "line_1based": 1641,
+        "text_with_continuation": "41      cgsbo (F)         CGSBO = -dQg/dVs intrinsic gate-to-source capacitance\n                          (alias=lx20).\n42      cbgbo (F)         CBGBO = -dQb/dVg intrinsic bulk-to-gate capacitance"
+      }
+    ],
+    "cbgbo": [
+      {
+        "line_1based": 1643,
+        "text_with_continuation": "42      cbgbo (F)         CBGBO = -dQb/dVg intrinsic bulk-to-gate capacitance\n                          (alias=lx21).\n43      cbdbo (F)         CBDBO = -dQb/dVd intrinsic bulk-to-drain capacitance"
+      }
+    ],
+    "cbdbo": [
+      {
+        "line_1based": 1645,
+        "text_with_continuation": "43      cbdbo (F)         CBDBO = -dQb/dVd intrinsic bulk-to-drain capacitance\n                          (alias=lx22).\n44      cbsbo (F)         CBSBO = -dQb/dVs intrinsic bulk-to-source capacitance"
+      }
+    ],
+    "cbsbo": [
+      {
+        "line_1based": 1647,
+        "text_with_continuation": "44      cbsbo (F)         CBSBO = -dQb/dVs intrinsic bulk-to-source capacitance\n                          (alias=lx23).\n45      cdgbo (F)         CDGBO = -dQd/dVg intrinsic drain-to-gate capacitance"
+      }
+    ],
+    "cdgbo": [
+      {
+        "line_1based": 1649,
+        "text_with_continuation": "45      cdgbo (F)         CDGBO = -dQd/dVg intrinsic drain-to-gate capacitance\n                          (alias=lx32).\n46      cddbo (F)         CDDBO = dQd/dVd intrinsic drain capacitance"
+      }
+    ],
+    "cddbo": [
+      {
+        "line_1based": 1651,
+        "text_with_continuation": "46      cddbo (F)         CDDBO = dQd/dVd intrinsic drain capacitance\n                          (alias=lx33).\n47      cdsbo (F)         CDSBO = -dQd/dVs intrinsic drain-to-source"
+      }
+    ],
+    "cdsbo": [
+      {
+        "line_1based": 1653,
+        "text_with_continuation": "47      cdsbo (F)         CDSBO = -dQd/dVs intrinsic drain-to-source\n                          capacitance (alias=lx34).\n48      ron (Ohm)         On-resistance, includes the parasitical rs and rd."
+      }
+    ]
+  },
+  "installed_bsim4_help": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T052808271046Z/bsim4_help.txt",
+  "installed_bsim4_help_sha256": "7610c94bc88056ac5c9f73b790f40d54b85431c535f533b4afddbea1bf34c64c",
+  "installed_dc_help": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T075637544368Z/dc_help.txt",
+  "installed_dc_help_sha256": "24095c571312c764edac3d67e04beabc48c40077f4f1f3c0e81bb7222cf9aaec",
+  "dc_sweep_syntax": "start/stop/lin from installedDChelp; positive lin stepcount avoids negative step interpretation. Explicitoppoint/rawfile, force=none,useprevic=no,swpuseprevic=yes; actual saved fields/pointcounts must be checked.",
+  "internal_body_save_evidence": "int_b/dbnode/sbnode validated in actual school Spectre21 task060914 bodyprobe; undocumented int_g/int_d/int_s not requested.",
+  "model_options_boundary": "Do not save selector names as OP when help only lists them as model/instance parameters. limited_model_metadata.py records actual filehash and selected literal selectors across bins; not proof of effective selected bin or override. instance/output info may add observed effective instance dimensions, but never dump what=models.",
+  "derivative_contract": {
+    "axis": "external VD varied; VG/VS/externalVB fixed. Internal BP/DB/SB and possibleinternalG/D/S states solve afresh.",
+    "saved_charge_sign": "Raw signed Spectre q-values retained. Never multiply byPFETtype or reversed. No automatic source/drain renaming.",
+    "installed_intrinsic_partial_definitions": {
+      "cgdbo": "-dQg/dVd intrinsic",
+      "cddbo": "dQd/dVd intrinsic",
+      "cbdbo": "-dQb/dVd intrinsic"
+    },
+    "diagnostic_comparisons": [
+      "one-sided d(qgi)/d(external VD) alongside -cgdbo",
+      "one-sided d(qdi)/d(external VD) alongside cddbo",
+      "one-sided d(qbi)/d(external VD) alongside -cbdbo"
+    ],
+    "not_equality_test": "DCtotal derivative contains internalnode chain response and field conventions. Intrinsic partialC is not guaranteed equal to external-sweep derivative; no pass threshold assigned.",
+    "one_sided_fit_windows_abs_delta_V": [
+      [
+        1e-06,
+        5e-06
+      ],
+      [
+        2e-06,
+        1e-05
+      ],
+      [
+        5e-06,
+        2e-05
+      ]
+    ],
+    "fit_reporting": "Use true measured D\u2212SB axis, centered/scaled fits, residuals and conditionnumber. Compareup/down and1/0.5uV grids. Anyintercept difference is numerical/finitewindow evidence, not an automatic physical discontinuity finding.",
+    "cross_zero_handling": "Never substitute central cross-zero derivative for branch-resolved values. Preserveexactzero, reversed enum and anynearzero modechanges."
+  },
+  "limits": [
+    "DC has no dQ/dt or transient integration; a smoothDCresult cannotprove transientLTE resolved.",
+    "Chargeoutputs may include differentintrinsic/overlap/junction scopes. Keepqjd/qjs separate, and do notassert totalQclosure or addjunctioncharge twice withoutactual schema/modelcontract.",
+    "Same ideal-source fixture removes native finite impedance, dynamichistory and ADC feedback. Thisis not ADC validation.",
+    "Tool rejection or missingcharge signals must be reported; nozero filling or fabricatedcharge derivatives."
+  ]
+}

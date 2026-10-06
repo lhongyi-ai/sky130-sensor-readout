@@ -1,0 +1,14 @@
+{
+  "source_helpers": "v2/cadence/linuxlab_20260923/native_helpers.il",
+  "source_sha256": "6aa72015568870ec4af3d416f28f9ef3beb1c03e4085ae844a556383a35e2375",
+  "changes": [
+    "Add external schematic iopins and net labels before schCheck/save",
+    "Create symbol pins with original explicit port names",
+    "Reject both targets before first mutation",
+    "Only new p2adc_core_school_r1 and p2adc_phase_school_r1 permitted"
+  ],
+  "instances": {
+    "adc": 679,
+    "phase": 48
+  }
+}

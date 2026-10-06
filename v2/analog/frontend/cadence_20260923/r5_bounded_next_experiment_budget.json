@@ -1,0 +1,46 @@
+{
+  "status": "SENSITIVITY_ONLY_NOT_SIMULATED_NOT_DESIGN_APPROVAL",
+  "source": "v2/analog/frontend/cadence_20260923/r5_noise_vs_r4_independent_review.json",
+  "source_sha256": "640a6abe518bace65019bfe806343c9787b3db5d7e68c532d2100ce9d946c703",
+  "g16_1Hz_100MHz_fixed_transfer_R_noise_scaling": [
+    {
+      "resistance_noise_power_scale": 1,
+      "conditional_rms_v": 0.00029401539854942345
+    },
+    {
+      "resistance_noise_power_scale": 0.5,
+      "conditional_rms_v": 0.00023822474881330085
+    },
+    {
+      "resistance_noise_power_scale": 0.25,
+      "conditional_rms_v": 0.00020470471203333908
+    },
+    {
+      "resistance_noise_power_scale": 0,
+      "conditional_rms_v": 0.0001644901435045403
+    }
+  ],
+  "r5_g1_after_CM_recheck_feedback_adjustment_seed": {
+    "target_small_signal_gain": 0.998,
+    "actual_current_gain": 1.0005360000010264,
+    "target_feedback_resistance_ohm": 11066.745545332193,
+    "estimated_delta_L_um": -0.02550031339937045,
+    "old_L_um": 9.4,
+    "grid_seed_L_um": 9.375,
+    "assumption": "Actual 1Hz effective impedances and A frozen, approximate body R slope1109.33 ohm/um from prior local response. Recompute after CM repair; CDF r is not used."
+  },
+  "next_first_single_parameter_diagnostic": {
+    "device": "XPGA_XOTA_XCMT",
+    "baseline_W_um": 9.2,
+    "perturbed_W_um": 9.1,
+    "purpose": "Measure local direction and d(outputCM)/dW after the four-device area change; retain all other parameters and all three gains. Use measured slope to target0.9V, not the old-r1 slope.",
+    "not_yet_executed": true
+  },
+  "remain_unqualified": [
+    "r5 nominal G1 two endpoints exceed ADC range",
+    "r5 common mode around0.916V",
+    "r5 temperature/PVT unknown",
+    "new coupled stability and actual ADC dynamic sampled-noise/settling absent",
+    "r4 original temperature failures remain"
+  ]
+}

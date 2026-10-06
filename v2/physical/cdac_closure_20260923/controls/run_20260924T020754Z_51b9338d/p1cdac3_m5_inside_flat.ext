@@ -1,0 +1,401 @@
+timestamp 1790215687
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
+port "AGG" 3 2234 39980 2274 40020 m5
+port "BIT" 2 -820 38980 -780 39020 m5
+port "TOP" 1 1614 1180 1654 1220 m3
+node "AGG" 3 11203.7 2234 39980 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12288000 77440 0 0
+node "BIT" 110 51856.5 -820 38980 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 53484544 697600 12006400 75680 0 0
+equiv "BIT" "X_r31_c04.C1"
+equiv "BIT" "X_r32_c04.C1"
+equiv "BIT" "X_r31_c02.C1"
+equiv "BIT" "X_r31_c03.C1"
+equiv "BIT" "X_r32_c02.C1"
+equiv "BIT" "X_r32_c03.C1"
+equiv "BIT" "X_r31_c01.C1"
+equiv "BIT" "X_r32_c01.C1"
+equiv "BIT" "X_r29_c04.C1"
+equiv "BIT" "X_r30_c04.C1"
+equiv "BIT" "X_r29_c02.C1"
+equiv "BIT" "X_r29_c03.C1"
+equiv "BIT" "X_r30_c02.C1"
+equiv "BIT" "X_r30_c03.C1"
+equiv "BIT" "X_r29_c01.C1"
+equiv "BIT" "X_r30_c01.C1"
+equiv "BIT" "X_r27_c04.C1"
+equiv "BIT" "X_r28_c04.C1"
+equiv "BIT" "X_r27_c02.C1"
+equiv "BIT" "X_r27_c03.C1"
+equiv "BIT" "X_r28_c02.C1"
+equiv "BIT" "X_r28_c03.C1"
+equiv "BIT" "X_r27_c01.C1"
+equiv "BIT" "X_r28_c01.C1"
+equiv "BIT" "X_r25_c04.C1"
+equiv "BIT" "X_r26_c04.C1"
+equiv "BIT" "X_r25_c02.C1"
+equiv "BIT" "X_r25_c03.C1"
+equiv "BIT" "X_r26_c02.C1"
+equiv "BIT" "X_r26_c03.C1"
+equiv "BIT" "X_r25_c01.C1"
+equiv "BIT" "X_r26_c01.C1"
+equiv "BIT" "X_r23_c04.C1"
+equiv "BIT" "X_r24_c04.C1"
+equiv "BIT" "X_r23_c02.C1"
+equiv "BIT" "X_r23_c03.C1"
+equiv "BIT" "X_r24_c02.C1"
+equiv "BIT" "X_r24_c03.C1"
+equiv "BIT" "X_r23_c01.C1"
+equiv "BIT" "X_r24_c01.C1"
+equiv "BIT" "X_r22_c04.C1"
+equiv "BIT" "X_r21_c04.C1"
+equiv "BIT" "X_r22_c02.C1"
+equiv "BIT" "X_r22_c03.C1"
+equiv "BIT" "X_r21_c02.C1"
+equiv "BIT" "X_r21_c03.C1"
+equiv "BIT" "X_r22_c01.C1"
+equiv "BIT" "X_r21_c01.C1"
+equiv "BIT" "X_r20_c04.C1"
+equiv "BIT" "X_r19_c04.C1"
+equiv "BIT" "X_r20_c02.C1"
+equiv "BIT" "X_r20_c03.C1"
+equiv "BIT" "X_r19_c02.C1"
+equiv "BIT" "X_r19_c03.C1"
+equiv "BIT" "X_r20_c01.C1"
+equiv "BIT" "X_r19_c01.C1"
+equiv "BIT" "X_r18_c04.C1"
+equiv "BIT" "X_r17_c04.C1"
+equiv "BIT" "X_r18_c02.C1"
+equiv "BIT" "X_r18_c03.C1"
+equiv "BIT" "X_r17_c02.C1"
+equiv "BIT" "X_r17_c03.C1"
+equiv "BIT" "X_r18_c01.C1"
+equiv "BIT" "X_r17_c01.C1"
+equiv "BIT" "X_r16_c04.C1"
+equiv "BIT" "X_r16_c02.C1"
+equiv "BIT" "X_r16_c03.C1"
+equiv "BIT" "X_r16_c01.C1"
+equiv "BIT" "X_r14_c04.C1"
+equiv "BIT" "X_r15_c04.C1"
+equiv "BIT" "X_r14_c02.C1"
+equiv "BIT" "X_r14_c03.C1"
+equiv "BIT" "X_r15_c02.C1"
+equiv "BIT" "X_r15_c03.C1"
+equiv "BIT" "X_r14_c01.C1"
+equiv "BIT" "X_r15_c01.C1"
+equiv "BIT" "X_r12_c04.C1"
+equiv "BIT" "X_r13_c04.C1"
+equiv "BIT" "X_r12_c02.C1"
+equiv "BIT" "X_r12_c03.C1"
+equiv "BIT" "X_r13_c02.C1"
+equiv "BIT" "X_r13_c03.C1"
+equiv "BIT" "X_r12_c01.C1"
+equiv "BIT" "X_r13_c01.C1"
+equiv "BIT" "X_r10_c04.C1"
+equiv "BIT" "X_r11_c04.C1"
+equiv "BIT" "X_r10_c02.C1"
+equiv "BIT" "X_r10_c03.C1"
+equiv "BIT" "X_r11_c02.C1"
+equiv "BIT" "X_r11_c03.C1"
+equiv "BIT" "X_r10_c01.C1"
+equiv "BIT" "X_r11_c01.C1"
+equiv "BIT" "X_r09_c04.C1"
+equiv "BIT" "X_r08_c04.C1"
+equiv "BIT" "X_r09_c02.C1"
+equiv "BIT" "X_r09_c03.C1"
+equiv "BIT" "X_r08_c02.C1"
+equiv "BIT" "X_r08_c03.C1"
+equiv "BIT" "X_r09_c01.C1"
+equiv "BIT" "X_r08_c01.C1"
+equiv "BIT" "X_r07_c04.C1"
+equiv "BIT" "X_r06_c04.C1"
+equiv "BIT" "X_r07_c02.C1"
+equiv "BIT" "X_r07_c03.C1"
+equiv "BIT" "X_r06_c02.C1"
+equiv "BIT" "X_r06_c03.C1"
+equiv "BIT" "X_r07_c01.C1"
+equiv "BIT" "X_r06_c01.C1"
+equiv "BIT" "X_r05_c04.C1"
+equiv "BIT" "X_r04_c04.C1"
+equiv "BIT" "X_r05_c02.C1"
+equiv "BIT" "X_r05_c03.C1"
+equiv "BIT" "X_r04_c02.C1"
+equiv "BIT" "X_r04_c03.C1"
+equiv "BIT" "X_r05_c01.C1"
+equiv "BIT" "X_r04_c01.C1"
+equiv "BIT" "X_r03_c04.C1"
+equiv "BIT" "X_r02_c04.C1"
+equiv "BIT" "X_r03_c03.C1"
+equiv "BIT" "X_r03_c02.C1"
+equiv "BIT" "X_r02_c03.C1"
+equiv "BIT" "X_r02_c02.C1"
+equiv "BIT" "X_r03_c01.C1"
+equiv "BIT" "X_r02_c01.C1"
+equiv "BIT" "X_r01_c04.C1"
+equiv "BIT" "X_r01_c03.C1"
+equiv "BIT" "X_r01_c02.C1"
+equiv "BIT" "X_r01_c01.C1"
+node "TOP" 69 73993.5 1614 1180 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 100453920 364648 8060928 192512 0 0 0 0
+equiv "TOP" "X_r31_c04.C2"
+equiv "TOP" "X_r32_c04.C2"
+equiv "TOP" "X_r31_c02.C2"
+equiv "TOP" "X_r31_c03.C2"
+equiv "TOP" "X_r32_c02.C2"
+equiv "TOP" "X_r32_c03.C2"
+equiv "TOP" "X_r31_c01.C2"
+equiv "TOP" "X_r32_c01.C2"
+equiv "TOP" "X_r29_c04.C2"
+equiv "TOP" "X_r30_c04.C2"
+equiv "TOP" "X_r29_c02.C2"
+equiv "TOP" "X_r29_c03.C2"
+equiv "TOP" "X_r30_c02.C2"
+equiv "TOP" "X_r30_c03.C2"
+equiv "TOP" "X_r29_c01.C2"
+equiv "TOP" "X_r30_c01.C2"
+equiv "TOP" "X_r27_c04.C2"
+equiv "TOP" "X_r28_c04.C2"
+equiv "TOP" "X_r27_c02.C2"
+equiv "TOP" "X_r27_c03.C2"
+equiv "TOP" "X_r28_c02.C2"
+equiv "TOP" "X_r28_c03.C2"
+equiv "TOP" "X_r27_c01.C2"
+equiv "TOP" "X_r28_c01.C2"
+equiv "TOP" "X_r25_c04.C2"
+equiv "TOP" "X_r26_c04.C2"
+equiv "TOP" "X_r25_c02.C2"
+equiv "TOP" "X_r25_c03.C2"
+equiv "TOP" "X_r26_c02.C2"
+equiv "TOP" "X_r26_c03.C2"
+equiv "TOP" "X_r25_c01.C2"
+equiv "TOP" "X_r26_c01.C2"
+equiv "TOP" "X_r23_c04.C2"
+equiv "TOP" "X_r24_c04.C2"
+equiv "TOP" "X_r23_c02.C2"
+equiv "TOP" "X_r23_c03.C2"
+equiv "TOP" "X_r24_c02.C2"
+equiv "TOP" "X_r24_c03.C2"
+equiv "TOP" "X_r23_c01.C2"
+equiv "TOP" "X_r24_c01.C2"
+equiv "TOP" "X_r22_c04.C2"
+equiv "TOP" "X_r21_c04.C2"
+equiv "TOP" "X_r22_c02.C2"
+equiv "TOP" "X_r22_c03.C2"
+equiv "TOP" "X_r21_c02.C2"
+equiv "TOP" "X_r21_c03.C2"
+equiv "TOP" "X_r22_c01.C2"
+equiv "TOP" "X_r21_c01.C2"
+equiv "TOP" "X_r20_c04.C2"
+equiv "TOP" "X_r19_c04.C2"
+equiv "TOP" "X_r20_c02.C2"
+equiv "TOP" "X_r20_c03.C2"
+equiv "TOP" "X_r19_c02.C2"
+equiv "TOP" "X_r19_c03.C2"
+equiv "TOP" "X_r20_c01.C2"
+equiv "TOP" "X_r19_c01.C2"
+equiv "TOP" "X_r18_c04.C2"
+equiv "TOP" "X_r17_c04.C2"
+equiv "TOP" "X_r18_c02.C2"
+equiv "TOP" "X_r18_c03.C2"
+equiv "TOP" "X_r17_c02.C2"
+equiv "TOP" "X_r17_c03.C2"
+equiv "TOP" "X_r18_c01.C2"
+equiv "TOP" "X_r17_c01.C2"
+equiv "TOP" "X_r16_c04.C2"
+equiv "TOP" "X_r16_c02.C2"
+equiv "TOP" "X_r16_c03.C2"
+equiv "TOP" "X_r16_c01.C2"
+equiv "TOP" "X_r14_c04.C2"
+equiv "TOP" "X_r15_c04.C2"
+equiv "TOP" "X_r14_c02.C2"
+equiv "TOP" "X_r14_c03.C2"
+equiv "TOP" "X_r15_c02.C2"
+equiv "TOP" "X_r15_c03.C2"
+equiv "TOP" "X_r14_c01.C2"
+equiv "TOP" "X_r15_c01.C2"
+equiv "TOP" "X_r12_c04.C2"
+equiv "TOP" "X_r13_c04.C2"
+equiv "TOP" "X_r12_c02.C2"
+equiv "TOP" "X_r12_c03.C2"
+equiv "TOP" "X_r13_c02.C2"
+equiv "TOP" "X_r13_c03.C2"
+equiv "TOP" "X_r12_c01.C2"
+equiv "TOP" "X_r13_c01.C2"
+equiv "TOP" "X_r10_c04.C2"
+equiv "TOP" "X_r11_c04.C2"
+equiv "TOP" "X_r10_c02.C2"
+equiv "TOP" "X_r10_c03.C2"
+equiv "TOP" "X_r11_c02.C2"
+equiv "TOP" "X_r11_c03.C2"
+equiv "TOP" "X_r10_c01.C2"
+equiv "TOP" "X_r11_c01.C2"
+equiv "TOP" "X_r09_c04.C2"
+equiv "TOP" "X_r08_c04.C2"
+equiv "TOP" "X_r09_c02.C2"
+equiv "TOP" "X_r09_c03.C2"
+equiv "TOP" "X_r08_c02.C2"
+equiv "TOP" "X_r08_c03.C2"
+equiv "TOP" "X_r09_c01.C2"
+equiv "TOP" "X_r08_c01.C2"
+equiv "TOP" "X_r07_c04.C2"
+equiv "TOP" "X_r06_c04.C2"
+equiv "TOP" "X_r07_c02.C2"
+equiv "TOP" "X_r07_c03.C2"
+equiv "TOP" "X_r06_c02.C2"
+equiv "TOP" "X_r06_c03.C2"
+equiv "TOP" "X_r07_c01.C2"
+equiv "TOP" "X_r06_c01.C2"
+equiv "TOP" "X_r05_c04.C2"
+equiv "TOP" "X_r04_c04.C2"
+equiv "TOP" "X_r05_c02.C2"
+equiv "TOP" "X_r05_c03.C2"
+equiv "TOP" "X_r04_c02.C2"
+equiv "TOP" "X_r04_c03.C2"
+equiv "TOP" "X_r05_c01.C2"
+equiv "TOP" "X_r04_c01.C2"
+equiv "TOP" "X_r03_c04.C2"
+equiv "TOP" "X_r02_c04.C2"
+equiv "TOP" "X_r03_c03.C2"
+equiv "TOP" "X_r03_c02.C2"
+equiv "TOP" "X_r02_c03.C2"
+equiv "TOP" "X_r02_c02.C2"
+equiv "TOP" "X_r03_c01.C2"
+equiv "TOP" "X_r02_c01.C2"
+equiv "TOP" "X_r01_c04.C2"
+equiv "TOP" "X_r01_c03.C2"
+equiv "TOP" "X_r01_c02.C2"
+equiv "TOP" "X_r01_c01.C2"
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "BIT" "AGG" 27150
+cap "TOP" "AGG" 8558.99
+cap "TOP" "BIT" 166094
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 900 4355 901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 900 3155 901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 900 1955 901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 900 755 901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 2100 4355 2101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 2100 3155 2101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 2100 1955 2101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 2100 755 2101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 3300 4355 3301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 3300 3155 3301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 3300 1955 3301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 3300 755 3301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 4500 4355 4501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 4500 3155 4501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 4500 1955 4501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 4500 755 4501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 5700 4355 5701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 5700 3155 5701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 5700 1955 5701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 5700 755 5701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 6900 4355 6901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 6900 3155 6901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 6900 1955 6901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 6900 755 6901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 8100 4355 8101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 8100 3155 8101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 8100 1955 8101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 8100 755 8101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 9300 4355 9301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 9300 3155 9301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 9300 1955 9301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 9300 755 9301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 10500 4355 10501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 10500 3155 10501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 10500 1955 10501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 10500 755 10501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 11700 4355 11701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 11700 3155 11701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 11700 1955 11701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 11700 755 11701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 12900 4355 12901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 12900 3155 12901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 12900 1955 12901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 12900 755 12901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 14100 4355 14101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 14100 3155 14101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 14100 1955 14101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 14100 755 14101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 15300 4355 15301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 15300 3155 15301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 15300 1955 15301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 15300 755 15301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 16500 4355 16501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 16500 3155 16501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 16500 1955 16501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 16500 755 16501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 17700 4355 17701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 17700 3155 17701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 17700 1955 17701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 17700 755 17701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 18900 4355 18901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 18900 3155 18901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 18900 1955 18901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 18900 755 18901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 20100 4355 20101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 20100 3155 20101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 20100 1955 20101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 20100 755 20101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 21300 4355 21301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 21300 3155 21301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 21300 1955 21301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 21300 755 21301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 22500 4355 22501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 22500 3155 22501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 22500 1955 22501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 22500 755 22501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 23700 4355 23701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 23700 3155 23701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 23700 1955 23701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 23700 755 23701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 24900 4355 24901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 24900 3155 24901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 24900 1955 24901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 24900 755 24901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 26100 4355 26101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 26100 3155 26101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 26100 1955 26101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 26100 755 26101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 27300 4355 27301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 27300 3155 27301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 27300 1955 27301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 27300 755 27301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 28500 4355 28501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 28500 3155 28501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 28500 1955 28501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 28500 755 28501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 29700 4355 29701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 29700 3155 29701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 29700 1955 29701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 29700 755 29701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 30900 4355 30901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 30900 3155 30901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 30900 1955 30901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 30900 755 30901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 32100 4355 32101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 32100 3155 32101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 32100 1955 32101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 32100 755 32101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 33300 4355 33301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 33300 3155 33301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 33300 1955 33301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 33300 755 33301 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 34500 4355 34501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 34500 3155 34501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 34500 1955 34501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 34500 755 34501 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 35700 4355 35701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 35700 3155 35701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 35700 1955 35701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 35700 755 35701 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 36900 4355 36901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 36900 3155 36901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 36900 1955 36901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 36900 755 36901 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 4354 38100 4355 38101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 3154 38100 3155 38101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 1954 38100 1955 38101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648
+device csubckt sky130_fd_pr__cap_mim_m3_1 754 38100 755 38101 w=600 l=600 "None" "BIT" 2080 0 "TOP" 0 100453920,364648

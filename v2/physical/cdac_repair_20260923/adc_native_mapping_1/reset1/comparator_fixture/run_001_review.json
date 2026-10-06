@@ -1,0 +1,679 @@
+{
+  "status": "NOT_PASSED",
+  "functional_checks_pass": false,
+  "numeric_log_clean": false,
+  "spectre_summary": {
+    "errors": 0,
+    "warnings": 5,
+    "notices": 6
+  },
+  "actual_solver": {
+    "reltol": 1e-06,
+    "abstol(V)": 1e-08,
+    "abstol(I)": 1e-13,
+    "maxstep": 2e-09,
+    "temp": 27.0
+  },
+  "raw_sha256": "982fd3598a28320591562cc69a50355b2960f19e7279f3f98f4d03528132fef0",
+  "sample_count": 20836,
+  "stop_s": 9e-06,
+  "checks": [
+    {
+      "time_s": 0.0,
+      "kind": "global_reset",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "voltages": {
+        "time": 0.0,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 0.0,
+        "Q": 4.114837356755145e-07,
+        "QB": 1.79999999761521,
+        "XCMP.XADC_XCMP_R_BAR": 2.160154014036819e-07,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238045,
+        "XCMP.XADC_XCMP_BN": 1.799999994238042,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291373,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291373,
+        "XCMP.XADC_PREN": 0.57705145383805,
+        "XCMP.XADC_PREP": 0.597844804043654
+      },
+      "pass": true
+    },
+    {
+      "time_s": 5e-07,
+      "kind": "global_reset",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "voltages": {
+        "time": 5e-07,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 0.0,
+        "Q": 4.114837356698513e-07,
+        "QB": 1.79999999761521,
+        "XCMP.XADC_XCMP_R_BAR": 2.160154013854238e-07,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238045,
+        "XCMP.XADC_XCMP_BN": 1.799999994238042,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291374,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291374,
+        "XCMP.XADC_PREN": 0.5770514538380539,
+        "XCMP.XADC_PREP": 0.5978448040436568
+      },
+      "pass": true
+    },
+    {
+      "time_s": 1.5e-06,
+      "kind": "reset_release_hold",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 1.5e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.297434806173017e-07,
+        "QB": 1.7999997601620636,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000436601695,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942374192,
+        "XCMP.XADC_XCMP_BN": 1.7999999672259526,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291373,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291373,
+        "XCMP.XADC_PREN": 0.5770514538380523,
+        "XCMP.XADC_PREP": 0.5978448040436553
+      },
+      "pass": true
+    },
+    {
+      "time_s": 5.15e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 5.15e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.134127628707539e-07,
+        "QB": 1.7999999666250908,
+        "XCMP.XADC_XCMP_R_BAR": 1.7999999991866096,
+        "XCMP.XADC_XCMP_BP": 1.7999999924324357,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942392617,
+        "XCMP.XADC_XCMP_BN": 1.8000219662649593,
+        "XCMP.XADC_XCMP_DNEG": 0.9652390272447674,
+        "XCMP.XADC_XCMP_DPOS": 1.6362270345002914,
+        "XCMP.XADC_PREN": 0.5761210044426636,
+        "XCMP.XADC_PREP": 0.5979675582049091
+      },
+      "pass": false
+    },
+    {
+      "time_s": 5.775e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 5.775e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 1.7999997907494727,
+        "QB": 4.27347179689525e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.799999994237943,
+        "XCMP.XADC_XCMP_BP": 1.799999992606555,
+        "XCMP.XADC_XCMP_S_BAR": 1.8000000369835305,
+        "XCMP.XADC_XCMP_BN": 1.800027551392564,
+        "XCMP.XADC_XCMP_DNEG": 0.9575140315904334,
+        "XCMP.XADC_XCMP_DPOS": 1.6609734792034592,
+        "XCMP.XADC_PREN": 0.5761636313565262,
+        "XCMP.XADC_PREP": 0.5980691361556837
+      },
+      "pass": true
+    },
+    {
+      "time_s": 6.349999999999999e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 6.349999999999999e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 1.7999998905551162,
+        "QB": 4.1948421620709266e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.799999994238015,
+        "XCMP.XADC_XCMP_BP": 1.7999999989929467,
+        "XCMP.XADC_XCMP_S_BAR": 1.8000000153765778,
+        "XCMP.XADC_XCMP_BN": 1.8000002941362485,
+        "XCMP.XADC_XCMP_DNEG": 1.247854468876707,
+        "XCMP.XADC_XCMP_DPOS": 1.4663173120839232,
+        "XCMP.XADC_PREN": 0.5757087673632285,
+        "XCMP.XADC_PREP": 0.596690577152252
+      },
+      "pass": true
+    },
+    {
+      "time_s": 5.299999999999999e-06,
+      "kind": "decision_retention",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 5.299999999999999e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 1.7999987425344863,
+        "QB": 5.079571028943961e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.7999999942346587,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.8000002733374065,
+        "XCMP.XADC_XCMP_BN": 1.7999997945557824,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974083196,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974794834,
+        "XCMP.XADC_PREN": 0.578060114460387,
+        "XCMP.XADC_PREP": 0.5987980157200156
+      },
+      "pass": true
+    },
+    {
+      "time_s": 5.924999999999999e-06,
+      "kind": "decision_retention",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 5.924999999999999e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 1.7999998248132205,
+        "QB": 4.246719737854013e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.799999994237973,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.8000000295576781,
+        "XCMP.XADC_XCMP_BN": 1.799999794545977,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974083065,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974794394,
+        "XCMP.XADC_PREN": 0.5780633986154021,
+        "XCMP.XADC_PREP": 0.5988006389474613
+      },
+      "pass": true
+    },
+    {
+      "time_s": 6.45e-06,
+      "kind": "reset_during_evaluation",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 0
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 0
+      },
+      "voltages": {
+        "time": 6.45e-06,
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 0.0,
+        "Q": 4.7320426124555827e-07,
+        "QB": 1.799999534393311,
+        "XCMP.XADC_XCMP_R_BAR": 2.8132924450661417e-07,
+        "XCMP.XADC_XCMP_BP": 1.8000003023592281,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942368003,
+        "XCMP.XADC_XCMP_BN": 1.0866378965471447e-06,
+        "XCMP.XADC_XCMP_DNEG": 0.6678466136594517,
+        "XCMP.XADC_XCMP_DPOS": 1.7982614566410815,
+        "XCMP.XADC_PREN": 0.5761297406554953,
+        "XCMP.XADC_PREP": 0.5972916063587208
+      },
+      "pass": true
+    },
+    {
+      "time_s": 6.5999999999999995e-06,
+      "kind": "reset_release_hold",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 6.5999999999999995e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 5.063219372699191e-07,
+        "QB": 1.7999987640505652,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000002683969565,
+        "XCMP.XADC_XCMP_BP": 1.7999999942380422,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942198064,
+        "XCMP.XADC_XCMP_BN": 1.7999997980622777,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999972992493,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999973960745,
+        "XCMP.XADC_PREN": 0.5934776209305357,
+        "XCMP.XADC_PREP": 0.5821649523519681
+      },
+      "pass": true
+    },
+    {
+      "time_s": 7.025e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 7.025e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.2885094151557355e-07,
+        "QB": 1.79999977156248,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000411752664,
+        "XCMP.XADC_XCMP_BP": 1.800027622288255,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994237481,
+        "XCMP.XADC_XCMP_BN": 1.799999967453478,
+        "XCMP.XADC_XCMP_DNEG": 1.6606657607748256,
+        "XCMP.XADC_XCMP_DPOS": 0.9575452766274909,
+        "XCMP.XADC_PREN": 0.5980692390276422,
+        "XCMP.XADC_PREP": 0.576163620720544
+      },
+      "pass": true
+    },
+    {
+      "time_s": 7.65e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 7.65e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.19471635933777e-07,
+        "QB": 1.7999998907139239,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000153497133,
+        "XCMP.XADC_XCMP_BP": 1.8000275645814492,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994237948,
+        "XCMP.XADC_XCMP_BN": 1.7999999864348988,
+        "XCMP.XADC_XCMP_DNEG": 1.660967713223699,
+        "XCMP.XADC_XCMP_DPOS": 0.9575139467192726,
+        "XCMP.XADC_PREN": 0.5980692064688174,
+        "XCMP.XADC_PREP": 0.5761636310331685
+      },
+      "pass": true
+    },
+    {
+      "time_s": 8.275e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 8.275e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.166016951896561e-07,
+        "QB": 1.7999999268378195,
+        "XCMP.XADC_XCMP_R_BAR": 1.80000000762179,
+        "XCMP.XADC_XCMP_BP": 1.800027564578467,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238013,
+        "XCMP.XADC_XCMP_BN": 1.799999990596478,
+        "XCMP.XADC_XCMP_DNEG": 1.6609677125902975,
+        "XCMP.XADC_XCMP_DPOS": 0.9575139466785331,
+        "XCMP.XADC_PREN": 0.5980692064782771,
+        "XCMP.XADC_PREP": 0.5761636310332154
+      },
+      "pass": true
+    },
+    {
+      "time_s": 8.9e-06,
+      "kind": "decision",
+      "counts_as_real_comparator_decision": true,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 8.9e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.152127355368883e-07,
+        "QB": 1.7999999442277956,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000039253943,
+        "XCMP.XADC_XCMP_BP": 1.8000275645787218,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238031,
+        "XCMP.XADC_XCMP_BN": 1.7999999919031509,
+        "XCMP.XADC_XCMP_DNEG": 1.6609677126449247,
+        "XCMP.XADC_XCMP_DPOS": 0.9575139466845721,
+        "XCMP.XADC_PREN": 0.5980692064773359,
+        "XCMP.XADC_PREP": 0.5761636310331917
+      },
+      "pass": true
+    },
+    {
+      "time_s": 7.175e-06,
+      "kind": "decision_retention",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 7.175e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.2570339398086784e-07,
+        "QB": 1.7999998116912928,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000324232512,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942377112,
+        "XCMP.XADC_XCMP_BN": 1.7999999772875193,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997479463,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974083205,
+        "XCMP.XADC_PREN": 0.5988007184356907,
+        "XCMP.XADC_PREP": 0.5780634792421853
+      },
+      "pass": true
+    },
+    {
+      "time_s": 7.8e-06,
+      "kind": "decision_retention",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 7.8e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.18711091495611e-07,
+        "QB": 1.7999999003077387,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000132847391,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942379723,
+        "XCMP.XADC_XCMP_BN": 1.7999999895762204,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974794447,
+        "XCMP.XADC_XCMP_DPOS": 1.79999999740831,
+        "XCMP.XADC_PREN": 0.5988006602489457,
+        "XCMP.XADC_PREP": 0.57806342477435
+      },
+      "pass": true
+    },
+    {
+      "time_s": 8.425e-06,
+      "kind": "decision_retention",
+      "counts_as_real_comparator_decision": false,
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "time": 8.425e-06,
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.1626913085555397e-07,
+        "QB": 1.799999931008152,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000067269868,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238019,
+        "XCMP.XADC_XCMP_BN": 1.7999999926761592,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974794347,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974083034,
+        "XCMP.XADC_PREN": 0.5988006300360841,
+        "XCMP.XADC_PREP": 0.5780633889383645
+      },
+      "pass": true
+    }
+  ],
+  "precharge_checks": [
+    {
+      "time_s": 1.5e-06,
+      "DPOS_V": 1.799999997291373,
+      "DNEG_V": 1.799999997291373,
+      "pass": true
+    },
+    {
+      "time_s": 5.299999999999999e-06,
+      "DPOS_V": 1.7999999974794834,
+      "DNEG_V": 1.7999999974083196,
+      "pass": true
+    },
+    {
+      "time_s": 5.924999999999999e-06,
+      "DPOS_V": 1.7999999974794394,
+      "DNEG_V": 1.7999999974083065,
+      "pass": true
+    },
+    {
+      "time_s": 6.5999999999999995e-06,
+      "DPOS_V": 1.7999999973960745,
+      "DNEG_V": 1.7999999972992493,
+      "pass": true
+    },
+    {
+      "time_s": 7.175e-06,
+      "DPOS_V": 1.7999999974083205,
+      "DNEG_V": 1.799999997479463,
+      "pass": true
+    },
+    {
+      "time_s": 7.8e-06,
+      "DPOS_V": 1.79999999740831,
+      "DNEG_V": 1.7999999974794447,
+      "pass": true
+    },
+    {
+      "time_s": 8.425e-06,
+      "DPOS_V": 1.7999999974083034,
+      "DNEG_V": 1.7999999974794347,
+      "pass": true
+    }
+  ],
+  "scope": "87 actual PDK devices.7 actual \u00b11mV decisions; reset preload not counted. TT1.8V27C only. No ADC conversions/noise/PVT/minimum reset pulse/offset precision signoff."
+}

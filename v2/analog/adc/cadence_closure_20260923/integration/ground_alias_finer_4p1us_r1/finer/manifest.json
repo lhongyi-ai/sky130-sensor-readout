@@ -1,0 +1,38 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "diagnostic_only": true,
+  "profile": "finer",
+  "stop_s": 4.1e-06,
+  "expected_completed_frames": 0,
+  "change": "Exactly two-line edit: declare existing electrical vss as global reference with ground vss; remove V(vss)<+0.0; all other inputs unchanged.",
+  "hypothesis": "Remove redundant ideal zero-volt branch unknown rather than move its stamp. Preceding native-source test moved solution failures from vss_flow to VGND:p without resolving them.",
+  "source_manifest_sha256": "7346f239c7fe1f6a69df78be7d12c957029262270d3dabddd0e48472fde99def",
+  "source_directory": "v2/analog/adc/cadence_closure_20260923/integration/native_ref_finer_4p1us_r1/finer",
+  "files_sha256": {
+    "amsdControl.scs": "abfa3c07d90c2a8f7343e65e51b2072d69972931bca78f2a49c26e80cd94b020",
+    "reset1_native_bound.scs": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+    "sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "p2_ams_reset1.vams": "08ea930f15847db5597c70e54c3150a9835b594eb209c630ba79fd00bdb9bd20",
+    "p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "profile.vh": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+    "run.sh": "1f2feb506aadd492da81a4522783b775b238df8f4818b63d1301a76084c5c34b",
+    "reference_fixture.scs": "379c13d8448fa37f48cf119bf57202020cd3b45dd953f04ce5b1d5c81aaee184"
+  },
+  "expected_actual_reltol": 1e-08,
+  "expected_actual_vabstol": 1e-10,
+  "expected_actual_iabstol": 1e-15,
+  "expected_actual_maxstep_s": 5e-10,
+  "expected_actual_lteratio": 1,
+  "expected_method": "gear2only",
+  "expected_cthresh_F": 1e-12,
+  "original_gate_V": 9.765625000000002e-06,
+  "standard_reference": {
+    "title": "Accellera Verilog-AMS LRM 2.4 \u00a73.6.4, Ground declaration",
+    "url": "https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2-4.pdf",
+    "printed_page": 43,
+    "pdf_page_1based": 58
+  },
+  "no_added_source_or_noise": true,
+  "scope": "Deterministic same-potential circuit, global node-reference representation diagnostic. Earlier reference-resistor noise caveat retained; no ADC qualification."
+}

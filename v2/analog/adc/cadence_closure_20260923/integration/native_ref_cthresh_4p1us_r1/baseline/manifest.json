@@ -1,0 +1,30 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "diagnostic_only": true,
+  "expected_completed_frames": 0,
+  "stop_s": 4.1e-06,
+  "profile": "baseline",
+  "change": "Only equivalent external reference R/C representation relative to cthresh1p gear2 pair: four VAMS current contributions removed, two native 1ohm/10nF subckts connected to same nodes",
+  "purpose": "Test whether expressing dominant reference 10nF as native capacitors lets the supported exact alternate stamp improve very-small-step conditioning; an unverified hypothesis. Deterministic transient equations unchanged, no qualification-threshold change.",
+  "no_strobe_cropping_or_time_alignment": true,
+  "source_manifest_sha256": "de67ee25f5e04ed7933fd70c07a3309990fad3f0fc9dce5f7991d8b71c02fd85",
+  "files_sha256": {
+    "amsdControl.scs": "71ee1122eedb41d3f2264c745a5ed5867ee7a4f2b37f9fc475ced4ffe0d1ffd4",
+    "reset1_native_bound.scs": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+    "sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "p2_ams_reset1.vams": "1e88381189d43c7f111146e4f07eec14db9dd4ec35d559e6bf0cfd8526002009",
+    "p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "profile.vh": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+    "run.sh": "1f2feb506aadd492da81a4522783b775b238df8f4818b63d1301a76084c5c34b",
+    "reference_fixture.scs": "379c13d8448fa37f48cf119bf57202020cd3b45dd953f04ce5b1d5c81aaee184"
+  },
+  "removed_exact_VAMS_lines": [
+    "    I(rp_source,rp) <+ V(rp_source,rp)/1.0;",
+    "    I(rn_source,rn) <+ V(rn_source,rn)/1.0;",
+    "    I(rp,vss) <+ 10n*ddt(V(rp,vss));",
+    "    I(rn,vss) <+ 10n*ddt(V(rn,vss));"
+  ],
+  "chip_native_741_unchanged": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+  "scope_limitation": "Primitive resistor noise semantics may differ from noiseless VAMS contribution; this is deterministic transient equivalence only, not noise equivalence."
+}

@@ -1,0 +1,52 @@
+{
+  "source_run": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T060914240241Z/design",
+  "source_netlist_sha256": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+  "source_review_sha256": "e5c3a6a28e26db4af36f87b58b517f2ddf81af0ac42b1e9c0dca722f6ac113c5",
+  "original_instance_exact_text": "XPHASE_XBCONV_XI2_XP (CONV XPHASE_XBCONV_B VDD VDD) pfet_01v8 w=(32u) \\\n        l=150n as=8.48p ad=8.48p ps=64.53u pd=64.53u m=(1)*(1)",
+  "event_before": {
+    "time_s": 4.063200570147047e-06,
+    "external_VDD_V": 1.8,
+    "CONV_V": 1.800267269545344,
+    "local_gate_V": 0.9158791157155736,
+    "int_b_V": 1.800026937087833,
+    "dbnode_V": 1.798225938547222,
+    "sbnode_V": 1.800004115923393,
+    "saved_OP_vds_V": -0.0002672695453438401,
+    "saved_reversed_enum": 1.0,
+    "d_current_A": -0.0002781666914040577,
+    "g_current_A": 0.0003933581822112564,
+    "s_current_A": -0.0001500516596411386,
+    "b_current_A": 3.486016883395723e-05,
+    "accepted_row": 2612,
+    "external_signed_VDS_V": 0.0002672695453440621,
+    "all_terminal_current_sum_A": 1.734723475976807e-17
+  },
+  "event_after": {
+    "time_s": 4.063200771449065e-06,
+    "external_VDD_V": 1.8,
+    "CONV_V": 1.799406645059815,
+    "local_gate_V": 0.9176386768923617,
+    "int_b_V": 1.799577844778028,
+    "dbnode_V": 1.798160196651727,
+    "sbnode_V": 1.799958057966765,
+    "saved_OP_vds_V": -0.0005933549401855309,
+    "saved_reversed_enum": 0.0,
+    "d_current_A": -0.0002956660692217355,
+    "g_current_A": 0.0004145169459623399,
+    "s_current_A": -0.0001649288915908326,
+    "b_current_A": 4.60780148502282e-05,
+    "accepted_row": 2613,
+    "external_signed_VDS_V": -0.0005933549401850868,
+    "all_terminal_current_sum_A": 1.3552527156068805e-20
+  },
+  "derived": {
+    "drain_slope_V_per_s": -4275289899.905131,
+    "gate_slope_V_per_s": 8740901814.758537,
+    "gate_at_external_vds0_V": 0.9164255527780005,
+    "drain_amplitude_V": 0.02,
+    "gate_amplitude_V": 0.04089033501542199,
+    "angular_frequency_rad_per_s": 213764494995.25653,
+    "period_s": 2.9393025756307244e-11
+  },
+  "qualification": "Two accepted rows estimate local slopes; this does not reproduce complete load/history or assert the finite difference is exact physical derivative."
+}

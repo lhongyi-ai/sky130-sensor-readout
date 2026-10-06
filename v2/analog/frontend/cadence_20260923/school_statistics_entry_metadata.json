@@ -1,0 +1,1419 @@
+{
+  "files": [
+    {
+      "path": "models/sky130.lib.spice",
+      "sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "section_names": [
+        {
+          "line": 18,
+          "section": "tt"
+        },
+        {
+          "line": 65,
+          "section": "sf"
+        },
+        {
+          "line": 108,
+          "section": "ff"
+        },
+        {
+          "line": 151,
+          "section": "ss"
+        },
+        {
+          "line": 194,
+          "section": "fs"
+        },
+        {
+          "line": 237,
+          "section": "ll"
+        },
+        {
+          "line": 281,
+          "section": "hh"
+        },
+        {
+          "line": 325,
+          "section": "hl"
+        },
+        {
+          "line": 369,
+          "section": "lh"
+        }
+      ],
+      "include_entry_paths": [
+        {
+          "line": 20,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 21,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 22,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 23,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice"
+        },
+        {
+          "line": 24,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice"
+        },
+        {
+          "line": 25,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 26,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 27,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice"
+        },
+        {
+          "line": 28,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 29,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 30,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__tt.corner.spice"
+        },
+        {
+          "line": 31,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 32,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 33,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 34,
+          "include": "corners/tt/nonfet.spice"
+        },
+        {
+          "line": 36,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 37,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 38,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 39,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 40,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 41,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 42,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 43,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 44,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 46,
+          "include": "r+c/res_typical__cap_typical.spice"
+        },
+        {
+          "line": 47,
+          "include": "r+c/res_typical__cap_typical__lin.spice"
+        },
+        {
+          "line": 48,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 50,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 51,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 53,
+          "include": "corners/tt/specialized_cells.spice"
+        },
+        {
+          "line": 55,
+          "include": "all.spice"
+        },
+        {
+          "line": 57,
+          "include": "corners/tt/rf.spice"
+        },
+        {
+          "line": 59,
+          "include": "../cells/pfet_20v0/sky130_fd_pr__pfet_20v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 60,
+          "include": "../cells/nfet_20v0/sky130_fd_pr__nfet_20v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 61,
+          "include": "../cells/nfet_20v0_nvt/sky130_fd_pr__nfet_20v0_nvt__tt_discrete.corner.spice"
+        },
+        {
+          "line": 67,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__sf.corner.spice"
+        },
+        {
+          "line": 68,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__sf.corner.spice"
+        },
+        {
+          "line": 69,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__sf.corner.spice"
+        },
+        {
+          "line": 70,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__sf.corner.spice"
+        },
+        {
+          "line": 71,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__sf.corner.spice"
+        },
+        {
+          "line": 72,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__sf.corner.spice"
+        },
+        {
+          "line": 73,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__sf.corner.spice"
+        },
+        {
+          "line": 74,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__sf.corner.spice"
+        },
+        {
+          "line": 75,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__sf.corner.spice"
+        },
+        {
+          "line": 76,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__sf.corner.spice"
+        },
+        {
+          "line": 77,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__sf.corner.spice"
+        },
+        {
+          "line": 78,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__sf.corner.spice"
+        },
+        {
+          "line": 79,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__sf_discrete.corner.spice"
+        },
+        {
+          "line": 80,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__sf.corner.spice"
+        },
+        {
+          "line": 81,
+          "include": "corners/sf/nonfet.spice"
+        },
+        {
+          "line": 83,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 84,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 85,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 86,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 87,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 88,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 89,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 90,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 91,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 93,
+          "include": "r+c/res_typical__cap_typical.spice"
+        },
+        {
+          "line": 94,
+          "include": "r+c/res_typical__cap_typical__lin.spice"
+        },
+        {
+          "line": 95,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 97,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 98,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 100,
+          "include": "corners/sf/specialized_cells.spice"
+        },
+        {
+          "line": 102,
+          "include": "all.spice"
+        },
+        {
+          "line": 104,
+          "include": "corners/sf/rf.spice"
+        },
+        {
+          "line": 110,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__ff.corner.spice"
+        },
+        {
+          "line": 111,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__ff.corner.spice"
+        },
+        {
+          "line": 112,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__ff.corner.spice"
+        },
+        {
+          "line": 113,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__ff.corner.spice"
+        },
+        {
+          "line": 114,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__ff.corner.spice"
+        },
+        {
+          "line": 115,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__ff.corner.spice"
+        },
+        {
+          "line": 116,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__ff.corner.spice"
+        },
+        {
+          "line": 117,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__ff.corner.spice"
+        },
+        {
+          "line": 118,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__ff.corner.spice"
+        },
+        {
+          "line": 119,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__ff.corner.spice"
+        },
+        {
+          "line": 120,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__ff.corner.spice"
+        },
+        {
+          "line": 121,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__ff.corner.spice"
+        },
+        {
+          "line": 122,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__ff_discrete.corner.spice"
+        },
+        {
+          "line": 123,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__ff.corner.spice"
+        },
+        {
+          "line": 124,
+          "include": "corners/ff/nonfet.spice"
+        },
+        {
+          "line": 126,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 127,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 128,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 129,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 130,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 131,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 132,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 133,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 134,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 136,
+          "include": "r+c/res_typical__cap_typical.spice"
+        },
+        {
+          "line": 137,
+          "include": "r+c/res_typical__cap_typical__lin.spice"
+        },
+        {
+          "line": 138,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 140,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__f.corner.spice"
+        },
+        {
+          "line": 141,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 143,
+          "include": "corners/ff/specialized_cells.spice"
+        },
+        {
+          "line": 145,
+          "include": "all.spice"
+        },
+        {
+          "line": 147,
+          "include": "corners/ff/rf.spice"
+        },
+        {
+          "line": 153,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__ss.corner.spice"
+        },
+        {
+          "line": 154,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__ss.corner.spice"
+        },
+        {
+          "line": 155,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__ss.corner.spice"
+        },
+        {
+          "line": 156,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__ss.corner.spice"
+        },
+        {
+          "line": 157,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__ss.corner.spice"
+        },
+        {
+          "line": 158,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__ss.corner.spice"
+        },
+        {
+          "line": 159,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__ss.corner.spice"
+        },
+        {
+          "line": 160,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__ss.corner.spice"
+        },
+        {
+          "line": 161,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__ss.corner.spice"
+        },
+        {
+          "line": 162,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__ss.corner.spice"
+        },
+        {
+          "line": 163,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__ss.corner.spice"
+        },
+        {
+          "line": 164,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__ss.corner.spice"
+        },
+        {
+          "line": 165,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__ss_discrete.corner.spice"
+        },
+        {
+          "line": 166,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__ss.corner.spice"
+        },
+        {
+          "line": 167,
+          "include": "corners/ss/nonfet.spice"
+        },
+        {
+          "line": 169,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 170,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 171,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 172,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 173,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 174,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 175,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 176,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 177,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 179,
+          "include": "r+c/res_typical__cap_typical.spice"
+        },
+        {
+          "line": 180,
+          "include": "r+c/res_typical__cap_typical__lin.spice"
+        },
+        {
+          "line": 181,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 183,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__s.corner.spice"
+        },
+        {
+          "line": 184,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 186,
+          "include": "corners/ss/specialized_cells.spice"
+        },
+        {
+          "line": 188,
+          "include": "all.spice"
+        },
+        {
+          "line": 190,
+          "include": "corners/ss/rf.spice"
+        },
+        {
+          "line": 196,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__fs.corner.spice"
+        },
+        {
+          "line": 197,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__fs.corner.spice"
+        },
+        {
+          "line": 198,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__fs.corner.spice"
+        },
+        {
+          "line": 199,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__fs.corner.spice"
+        },
+        {
+          "line": 200,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__fs.corner.spice"
+        },
+        {
+          "line": 201,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__fs.corner.spice"
+        },
+        {
+          "line": 202,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__fs.corner.spice"
+        },
+        {
+          "line": 203,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__fs.corner.spice"
+        },
+        {
+          "line": 204,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__fs.corner.spice"
+        },
+        {
+          "line": 205,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__fs.corner.spice"
+        },
+        {
+          "line": 206,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__fs.corner.spice"
+        },
+        {
+          "line": 207,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__fs.corner.spice"
+        },
+        {
+          "line": 208,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__fs_discrete.corner.spice"
+        },
+        {
+          "line": 209,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__fs.corner.spice"
+        },
+        {
+          "line": 210,
+          "include": "corners/fs/nonfet.spice"
+        },
+        {
+          "line": 212,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 213,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 214,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 215,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 216,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 217,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 218,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 219,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 220,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 222,
+          "include": "r+c/res_typical__cap_typical.spice"
+        },
+        {
+          "line": 223,
+          "include": "r+c/res_typical__cap_typical__lin.spice"
+        },
+        {
+          "line": 224,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 226,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 227,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 229,
+          "include": "corners/fs/specialized_cells.spice"
+        },
+        {
+          "line": 231,
+          "include": "all.spice"
+        },
+        {
+          "line": 233,
+          "include": "corners/fs/rf.spice"
+        },
+        {
+          "line": 239,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 240,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 241,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 242,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice"
+        },
+        {
+          "line": 243,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice"
+        },
+        {
+          "line": 244,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 245,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 246,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice"
+        },
+        {
+          "line": 247,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 248,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 249,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__tt.corner.spice"
+        },
+        {
+          "line": 250,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 251,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 252,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 253,
+          "include": "corners/tt/nonfet.spice"
+        },
+        {
+          "line": 255,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 256,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 257,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 258,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 259,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 260,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 261,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 262,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 263,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 265,
+          "include": "r+c/res_low__cap_low.spice"
+        },
+        {
+          "line": 266,
+          "include": "r+c/res_low__cap_low__lin.spice"
+        },
+        {
+          "line": 267,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 269,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 270,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 272,
+          "include": "corners/tt/specialized_cells.spice"
+        },
+        {
+          "line": 274,
+          "include": "all.spice"
+        },
+        {
+          "line": 276,
+          "include": "corners/tt/rf.spice"
+        },
+        {
+          "line": 283,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 284,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 285,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 286,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice"
+        },
+        {
+          "line": 287,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice"
+        },
+        {
+          "line": 288,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 289,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 290,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice"
+        },
+        {
+          "line": 291,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 292,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 293,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__tt.corner.spice"
+        },
+        {
+          "line": 294,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 295,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 296,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 297,
+          "include": "corners/tt/nonfet.spice"
+        },
+        {
+          "line": 299,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 300,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 301,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 302,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 303,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 304,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 305,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 306,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 307,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 309,
+          "include": "r+c/res_high__cap_high.spice"
+        },
+        {
+          "line": 310,
+          "include": "r+c/res_high__cap_high__lin.spice"
+        },
+        {
+          "line": 311,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 313,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 314,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 316,
+          "include": "corners/tt/specialized_cells.spice"
+        },
+        {
+          "line": 318,
+          "include": "all.spice"
+        },
+        {
+          "line": 320,
+          "include": "corners/tt/rf.spice"
+        },
+        {
+          "line": 327,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 328,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 329,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 330,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice"
+        },
+        {
+          "line": 331,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice"
+        },
+        {
+          "line": 332,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 333,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 334,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice"
+        },
+        {
+          "line": 335,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 336,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 337,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__tt.corner.spice"
+        },
+        {
+          "line": 338,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 339,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 340,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 341,
+          "include": "corners/tt/nonfet.spice"
+        },
+        {
+          "line": 343,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 344,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 345,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 346,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 347,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 348,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 349,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 350,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 351,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 353,
+          "include": "r+c/res_high__cap_low.spice"
+        },
+        {
+          "line": 354,
+          "include": "r+c/res_high__cap_low__lin.spice"
+        },
+        {
+          "line": 355,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 357,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 358,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 360,
+          "include": "corners/tt/specialized_cells.spice"
+        },
+        {
+          "line": 362,
+          "include": "all.spice"
+        },
+        {
+          "line": 364,
+          "include": "corners/tt/rf.spice"
+        },
+        {
+          "line": 371,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 372,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 373,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 374,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice"
+        },
+        {
+          "line": 375,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice"
+        },
+        {
+          "line": 376,
+          "include": "../cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice"
+        },
+        {
+          "line": 377,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+        },
+        {
+          "line": 378,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice"
+        },
+        {
+          "line": 379,
+          "include": "../cells/esd_pfet_g5v0d10v5/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 380,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 381,
+          "include": "../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__tt.corner.spice"
+        },
+        {
+          "line": 382,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 383,
+          "include": "../cells/nfet_g5v0d16v0/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice"
+        },
+        {
+          "line": 384,
+          "include": "../cells/esd_nfet_g5v0d10v5/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice"
+        },
+        {
+          "line": 385,
+          "include": "corners/tt/nonfet.spice"
+        },
+        {
+          "line": 387,
+          "include": "../cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 388,
+          "include": "../cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+        },
+        {
+          "line": 389,
+          "include": "../cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 390,
+          "include": "../cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+        },
+        {
+          "line": 391,
+          "include": "../cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+        },
+        {
+          "line": 392,
+          "include": "../cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 393,
+          "include": "../cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+        },
+        {
+          "line": 394,
+          "include": "../cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 395,
+          "include": "../cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+        },
+        {
+          "line": 397,
+          "include": "r+c/res_low__cap_high.spice"
+        },
+        {
+          "line": 398,
+          "include": "r+c/res_low__cap_high__lin.spice"
+        },
+        {
+          "line": 399,
+          "include": "capacitors/sky130_fd_pr__model__cap_vpp.model.spice"
+        },
+        {
+          "line": 401,
+          "include": "../cells/npn_05v5/sky130_fd_pr__npn_05v5__t.corner.spice"
+        },
+        {
+          "line": 402,
+          "include": "../cells/pnp_05v5/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+        },
+        {
+          "line": 404,
+          "include": "corners/tt/specialized_cells.spice"
+        },
+        {
+          "line": 406,
+          "include": "all.spice"
+        },
+        {
+          "line": 408,
+          "include": "corners/tt/rf.spice"
+        }
+      ],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {
+        "mismatch": 9
+      },
+      "active_param_statement_count": 0
+    },
+    {
+      "path": "models/all.spice",
+      "sha256": "7bc1575d8f06a1e74e16671883e46af6883a708231e0929723c2d845b6ea2ff2",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 6
+    },
+    {
+      "path": "models/r+c.mrp1monte.spice",
+      "sha256": "9d996286bf6438da4036003f904e8632504411b165cb957724cff2475b256f6b",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {
+        "statistics": 1,
+        "mismatch": 1,
+        "gauss": 3
+      },
+      "active_param_statement_count": 4
+    },
+    {
+      "path": "models/parameters/typical.spice",
+      "sha256": "315e71e2896bfbfad4f2ed0d86ff28cc1e44f56eb12eaf2371fb672de1507c6d",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 4
+    },
+    {
+      "path": "models/parameters/lod.spice",
+      "sha256": "6200b50c14eebb68d8009ca68e452d4c045e2d25d7438ee417c155883527fd7c",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 3
+    },
+    {
+      "path": "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice",
+      "sha256": "0c03b2e5727c414942f1d2b27e19a68724fb84be90b2c73b361ad41779311130",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 1
+    },
+    {
+      "path": "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.pm3.spice",
+      "sha256": "bd77fc6d1e814473fc16b7afc6ee653f30a68a0f578e4c85789e5e82fff410b3",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {
+        "statistics": 1,
+        "mismatch": 1,
+        "gauss": 3
+      },
+      "active_param_statement_count": 4
+    },
+    {
+      "path": "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice",
+      "sha256": "716b48c11275bb1edbb228807f1b8849453884adf498ac7c57a31b9295335f2b",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 1
+    },
+    {
+      "path": "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice",
+      "sha256": "5580c09bffce11a3cda01f68ee0876655d4b5fc7886c014655284c6b38637730",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {
+        "statistics": 1,
+        "mismatch": 1,
+        "gauss": 4
+      },
+      "active_param_statement_count": 5
+    },
+    {
+      "path": "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice",
+      "sha256": "641d251a08bf9ddcfc67ba4bd4698ae1978d09447eb6ebf90055fdf3d21917ab",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 1
+    },
+    {
+      "path": "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.pm3.spice",
+      "sha256": "a5b543f8df7206f43d872d39fe19d17bf639ef088f0817ea33e935ad2d7ed75f",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {
+        "statistics": 1,
+        "mismatch": 1,
+        "gauss": 4
+      },
+      "active_param_statement_count": 5
+    },
+    {
+      "path": "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice",
+      "sha256": "ddb3ddcd4ccb85c1f68c51e41fd1d999d04de5d2836b43217841efd79912888a",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 1
+    },
+    {
+      "path": "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.pm3.spice",
+      "sha256": "98582c0da4bf077532e32dd61d79f07a3ae9f69985cd71449d93fb9ac1205832",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {
+        "statistics": 1,
+        "mismatch": 1,
+        "gauss": 4
+      },
+      "active_param_statement_count": 5
+    },
+    {
+      "path": "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice",
+      "sha256": "24a3b29d7d7f26f99098811c31eb5497950a3aed520ab83768a96f35467fe818",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 7
+    },
+    {
+      "path": "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice",
+      "sha256": "f4d560668712678ea60641de923fce7691e64acda951949f840986837c31741a",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 14
+    },
+    {
+      "path": "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice",
+      "sha256": "1855038a2ad2fe3989b64a17128d47daaa3dbc15d0f4db2c4526988923daa311",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 9
+    },
+    {
+      "path": "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice",
+      "sha256": "6fa9be51a32f2f66d8d0858159e1db7b72e37adca31020af8b1a0c2df6e72cb9",
+      "section_names": [],
+      "include_entry_paths": [],
+      "active_statistics_syntax_hits": [],
+      "active_random_function_calls": [],
+      "mc_switch_parameters": [],
+      "comment_keyword_counts": {},
+      "active_param_statement_count": 11
+    }
+  ],
+  "raw_model_text_returned": false,
+  "scope": "Bounded selected current top library, currently loaded four MOS families and three parameter/R-C entry files. No recursive PDK scan, no simulation.",
+  "source_log_sha256": "febd459663aa4f91f35d2a702e9347d787ada7b062332da66f84c5c62f5644fb",
+  "query_sha256": "fcda1e48a5338c5eb1f11a681c9c85646c6c14ef13817d51787dee6934bf0a00"
+}

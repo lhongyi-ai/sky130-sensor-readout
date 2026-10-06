@@ -1,0 +1,130 @@
+{
+  "status": "NATIVE_MAPPING_PROPOSAL__CDF_READBACK_AND_SIMULATION_REQUIRED",
+  "source_manifest_sha256": "b4d1b2edaade1855310b966be8edc762c2575ab0ba48fa63ae01fbf1d38efe12",
+  "objects_sha256": "88fb974f092a1dfc1241aafd4fd843bf679e3dd136514e894789d92a330cda2b",
+  "object_count": 119,
+  "counts": {
+    "mos": 55,
+    "resistor": 22,
+    "mim": 30,
+    "testbench_resistor": 4,
+    "testbench_source": 8
+  },
+  "unique_instance_names": true,
+  "primitive_connectivity_preserved": true,
+  "mos_bodies_checked": 55,
+  "resistor_bodies_checked": 22,
+  "design_variables": {
+    "SW": 0
+  },
+  "ground_net": "0",
+  "net_name_map": {
+    "XPGA_S0B": "XPGA/S0B",
+    "SEL0": "SEL0",
+    "0": "0",
+    "VDD": "VDD",
+    "XPGA_S1B": "XPGA/S1B",
+    "SEL1": "SEL1",
+    "XPGA_E1B": "XPGA/E1B",
+    "XPGA_XN1_N": "XPGA/XN1/N",
+    "XPGA_E4B": "XPGA/E4B",
+    "XPGA_XN4_N": "XPGA/XN4/N",
+    "XPGA_E16B": "XPGA/E16B",
+    "XPGA_XN16_N": "XPGA/XN16/N",
+    "XPGA_E1": "XPGA/E1",
+    "XPGA_E4": "XPGA/E4",
+    "XPGA_E16": "XPGA/E16",
+    "IP": "IP",
+    "XPGA_SUMPOS": "XPGA/SUMPOS",
+    "IN": "IN",
+    "XPGA_SUMNEG": "XPGA/SUMNEG",
+    "ON": "ON",
+    "XPGA_XFP1_N": "XPGA/XFP1/N",
+    "OP": "OP",
+    "XPGA_XFN1_N": "XPGA/XFN1/N",
+    "XPGA_XFP4_N": "XPGA/XFP4/N",
+    "XPGA_XFN4_N": "XPGA/XFN4/N",
+    "XPGA_XFP16_N": "XPGA/XFP16/N",
+    "XPGA_XFN16_N": "XPGA/XFN16/N",
+    "XPGA_XOTA_BN": "XPGA/XOTA/BN",
+    "XPGA_XOTA_BP": "XPGA/XOTA/BP",
+    "XPGA_XOTA_N1": "XPGA/XOTA/N1",
+    "XPGA_XOTA_TAIL": "XPGA/XOTA/TAIL",
+    "XPGA_XOTA_N2": "XPGA/XOTA/N2",
+    "XPGA_XOTA_NCM": "XPGA/XOTA/NCM",
+    "XPGA_XOTA_CMG": "XPGA/XOTA/CMG",
+    "XPGA_XOTA_CZP": "XPGA/XOTA/CZP",
+    "XPGA_XOTA_CZN": "XPGA/XOTA/CZN",
+    "XPGA_XOTA_CMS": "XPGA/XOTA/CMS",
+    "XPGA_XOTA_DS": "XPGA/XOTA/DS",
+    "XPGA_XOTA_CS": "XPGA/XOTA/CS",
+    "VCM": "VCM",
+    "XPGA_XOTA_CR": "XPGA/XOTA/CR",
+    "XPGA_XOTA_CTAIL": "XPGA/XOTA/CTAIL",
+    "FP": "FP",
+    "FN": "FN",
+    "HP": "HP",
+    "ACQ": "ACQ",
+    "ACQB": "ACQB",
+    "HN": "HN",
+    "VINP": "VINP",
+    "VINN": "VINN"
+  },
+  "single_terminal_nets": {
+    "XPGA_XOTA_BP": [
+      "XPGA_XOTA_XBIAS_XRBP_XR.PLUS"
+    ]
+  },
+  "single_terminal_note": "BP is the pre-existing unused compatibility node at the far end of the 1 MOhm bias resistor. Preserve and report it; do not add an invented connection. All other nets have at least two terminals.",
+  "mos_width_mapping": [
+    {
+      "original_path": "XPGA/XOTA/XMIP",
+      "source_W_um": 80,
+      "native_fw_um": 40.0,
+      "fingers": 2,
+      "m": 1
+    },
+    {
+      "original_path": "XPGA/XOTA/XMIN",
+      "source_W_um": 80,
+      "native_fw_um": 40.0,
+      "fingers": 2,
+      "m": 1
+    },
+    {
+      "original_path": "XPGA/XOTA/XMLP",
+      "source_W_um": 64,
+      "native_fw_um": 32.0,
+      "fingers": 2,
+      "m": 1
+    },
+    {
+      "original_path": "XPGA/XOTA/XMLN",
+      "source_W_um": 64,
+      "native_fw_um": 32.0,
+      "fingers": 2,
+      "m": 1
+    },
+    {
+      "original_path": "XPGA/XOTA/XMSP",
+      "source_W_um": 180,
+      "native_fw_um": 45.0,
+      "fingers": 4,
+      "m": 1
+    },
+    {
+      "original_path": "XPGA/XOTA/XMSN",
+      "source_W_um": 180,
+      "native_fw_um": 45.0,
+      "fingers": 4,
+      "m": 1
+    }
+  ],
+  "unverified": [
+    "CDF callback acceptance and legal grids/ranges",
+    "Native exported netlist connectivity and instance parameters",
+    "MOS source/drain geometry and parasitics after finger mapping",
+    "MIM m=4096 nominal AC capacitance and statistical-model semantics",
+    "Any actual Cadence execution or frontend qualification"
+  ]
+}

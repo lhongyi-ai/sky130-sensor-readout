@@ -1,0 +1,75 @@
+simulator lang=spectre
+include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+include "reset1_native_bound.scs"
+simulatorOptions options temp=27 reltol=1e-5 vabstol=1e-8 iabstol=1e-13 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+saveOptions options save=selected
+save p2_ams_reset1.vdd
+save p2_ams_reset1.vss
+save p2_ams_reset1.inp
+save p2_ams_reset1.inn
+save p2_ams_reset1.rp
+save p2_ams_reset1.rn
+save p2_ams_reset1.vcm
+save p2_ams_reset1.q_e
+save p2_ams_reset1.qb_e
+save p2_ams_reset1.rst_n_e
+save p2_ams_reset1.eval_e
+save p2_ams_reset1.sample_cmd_e
+save p2_ams_reset1.top_e
+save p2_ams_reset1.topb_e
+save p2_ams_reset1.acq_e
+save p2_ams_reset1.conv_e
+save p2_ams_reset1.ip_source
+save p2_ams_reset1.in_source
+save p2_ams_reset1.rp_source
+save p2_ams_reset1.rn_source
+save p2_ams_reset1.adc.XADC_TP
+save p2_ams_reset1.adc.XADC_TN
+save p2_ams_reset1.adc.XADC_PREP
+save p2_ams_reset1.adc.XADC_PREN
+save p2_ams_reset1.adc.XADC_DP
+save p2_ams_reset1.adc.XADC_DN
+save p2_ams_reset1.adc.XADC_BP0
+save p2_ams_reset1.adc.XADC_BP1
+save p2_ams_reset1.adc.XADC_BP2
+save p2_ams_reset1.adc.XADC_BP3
+save p2_ams_reset1.adc.XADC_BP4
+save p2_ams_reset1.adc.XADC_BP5
+save p2_ams_reset1.adc.XADC_BP6
+save p2_ams_reset1.adc.XADC_BP7
+save p2_ams_reset1.adc.XADC_BP8
+save p2_ams_reset1.adc.XADC_BP9
+save p2_ams_reset1.adc.XADC_BP10
+save p2_ams_reset1.adc.XADC_BP11
+save p2_ams_reset1.adc.XADC_BN0
+save p2_ams_reset1.adc.XADC_BN1
+save p2_ams_reset1.adc.XADC_BN2
+save p2_ams_reset1.adc.XADC_BN3
+save p2_ams_reset1.adc.XADC_BN4
+save p2_ams_reset1.adc.XADC_BN5
+save p2_ams_reset1.adc.XADC_BN6
+save p2_ams_reset1.adc.XADC_BN7
+save p2_ams_reset1.adc.XADC_BN8
+save p2_ams_reset1.adc.XADC_BN9
+save p2_ams_reset1.adc.XADC_BN10
+save p2_ams_reset1.adc.XADC_BN11
+save p2_ams_reset1.adc.XADC_XCMP_S_BAR
+save p2_ams_reset1.adc.XADC_XCMP_R_BAR
+save p2_ams_reset1.adc.XADC_XCMP_DPOS
+save p2_ams_reset1.adc.XADC_XCMP_DNEG
+save p2_ams_reset1.adc.XADC_XCMP_BP
+save p2_ams_reset1.adc.XADC_XCMP_BN
+save p2_ams_reset1.phases.XPHASE_CMD_B_DELAY
+save p2_ams_reset1.phases.XPHASE_ACQ_DELAY
+save p2_ams_reset1.phases.XPHASE_CONV_DELAY
+save p2_ams_reset1.phases.XPHASE_ACQ_RAW
+save p2_ams_reset1.phases.XPHASE_CONV_RAW
+save p2_ams_reset1.phases.XPHASE_TOP_RAW_B
+save p2_ams_reset1.trial_e* sigtype=node
+adc_closure_tran tran stop=150u maxstep=2n errpreset=conservative relref=sigglobal
+amsd {
+ portmap subckt=sensor_adc_reset1
+ config cell=sensor_adc_reset1 use=spice
+ portmap subckt=sensor_phases
+ config cell=sensor_phases use=spice
+}

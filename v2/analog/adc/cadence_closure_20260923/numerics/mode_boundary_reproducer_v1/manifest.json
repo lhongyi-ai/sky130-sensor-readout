@@ -1,0 +1,226 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "experiment": "Isolated identical school PFET, continuous analytic sine drives around real source/drain mode crossing",
+  "source_run": "task_20260924T060914240241Z",
+  "model_entry_reference_only": "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice",
+  "corner": "tt",
+  "temperature_C": 27,
+  "frozen_device_parameters": {
+    "model": "pfet_01v8",
+    "w_m": 3.2e-05,
+    "l_m": 1.5e-07,
+    "as_m2": 8.48e-12,
+    "ad_m2": 8.48e-12,
+    "ps_m": 6.453e-05,
+    "pd_m": 6.453e-05,
+    "m": 1,
+    "source_and_bulk": "same SB node, ideal 1.8V"
+  },
+  "cases": {
+    "matched": {
+      "speed": 1.0,
+      "gate_dynamic": true,
+      "series_ohm": 0.0,
+      "freq_Hz": 34021676036.0378,
+      "period_s": 2.9393025756307244e-11,
+      "stop_s": 1.1757210302522898e-10,
+      "drain_source_mean_V": 1.8,
+      "drain_source_amplitude_V": 0.02,
+      "gate_source_mean_V": 0.9164255527780005,
+      "gate_source_amplitude_V": 0.04089033501542199,
+      "source_initial_values_V": {
+        "D": 1.82,
+        "G": 0.8755352177625786
+      },
+      "requested_crossing_slopes_V_per_s": {
+        "D": -4275289899.905131,
+        "G": 8740901814.758537
+      },
+      "files": {
+        "baseline": {
+          "relative_path": "cases/matched/baseline/input.scs",
+          "sha256": "2483c330d14a8cabed41eecbc263c882282869fb9af279d37f5b27753a939a34",
+          "requested_options_reltol": 1e-05,
+          "expected_actual_tran_reltol": 1.0000000000000002e-06,
+          "vabstol_V": 1e-08,
+          "iabstol_A": 1e-13,
+          "maxstep_s": 2.939302575630725e-14
+        },
+        "strict": {
+          "relative_path": "cases/matched/strict/input.scs",
+          "sha256": "5cee40159747e2ea63fd06d6e4412120cb093743dfe3c9cf38cc111e606980d1",
+          "requested_options_reltol": 1e-06,
+          "expected_actual_tran_reltol": 1e-07,
+          "vabstol_V": 1e-09,
+          "iabstol_A": 1e-14,
+          "maxstep_s": 1.4696512878153623e-14
+        }
+      }
+    },
+    "static_gate": {
+      "speed": 1.0,
+      "gate_dynamic": false,
+      "series_ohm": 0.0,
+      "freq_Hz": 34021676036.0378,
+      "period_s": 2.9393025756307244e-11,
+      "stop_s": 1.1757210302522898e-10,
+      "drain_source_mean_V": 1.8,
+      "drain_source_amplitude_V": 0.02,
+      "gate_source_mean_V": 0.9164255527780005,
+      "gate_source_amplitude_V": 0.0,
+      "source_initial_values_V": {
+        "D": 1.82,
+        "G": 0.9164255527780005
+      },
+      "requested_crossing_slopes_V_per_s": {
+        "D": -4275289899.905131,
+        "G": 0.0
+      },
+      "files": {
+        "baseline": {
+          "relative_path": "cases/static_gate/baseline/input.scs",
+          "sha256": "b4cb8a9187e18c80f92bf3e1fb9c890a029241cd318ed4fcc06f4f8f13634f2b",
+          "requested_options_reltol": 1e-05,
+          "expected_actual_tran_reltol": 1.0000000000000002e-06,
+          "vabstol_V": 1e-08,
+          "iabstol_A": 1e-13,
+          "maxstep_s": 2.939302575630725e-14
+        },
+        "strict": {
+          "relative_path": "cases/static_gate/strict/input.scs",
+          "sha256": "c4e5ab432b222c2d4526c5c5f5a5c1e2c7f604a1d9ccbd08e44c902d02582bf2",
+          "requested_options_reltol": 1e-06,
+          "expected_actual_tran_reltol": 1e-07,
+          "vabstol_V": 1e-09,
+          "iabstol_A": 1e-14,
+          "maxstep_s": 1.4696512878153623e-14
+        }
+      }
+    },
+    "slow_10x": {
+      "speed": 0.1,
+      "gate_dynamic": true,
+      "series_ohm": 0.0,
+      "freq_Hz": 3402167603.6037803,
+      "period_s": 2.939302575630724e-10,
+      "stop_s": 1.1757210302522897e-09,
+      "drain_source_mean_V": 1.8,
+      "drain_source_amplitude_V": 0.02,
+      "gate_source_mean_V": 0.9164255527780005,
+      "gate_source_amplitude_V": 0.04089033501542199,
+      "source_initial_values_V": {
+        "D": 1.82,
+        "G": 0.8755352177625786
+      },
+      "requested_crossing_slopes_V_per_s": {
+        "D": -427528989.9905131,
+        "G": 874090181.4758538
+      },
+      "files": {
+        "baseline": {
+          "relative_path": "cases/slow_10x/baseline/input.scs",
+          "sha256": "aa9759332f6f4c0a1e27190381f83ee875d475f40a5a07fc6f843f90277f3cbb",
+          "requested_options_reltol": 1e-05,
+          "expected_actual_tran_reltol": 1.0000000000000002e-06,
+          "vabstol_V": 1e-08,
+          "iabstol_A": 1e-13,
+          "maxstep_s": 2.939302575630724e-13
+        },
+        "strict": {
+          "relative_path": "cases/slow_10x/strict/input.scs",
+          "sha256": "3eca9e891a4ff6975a3c889bffd1e6b55307c35ff3d9ad0e54a7dfd33be4cd8f",
+          "requested_options_reltol": 1e-06,
+          "expected_actual_tran_reltol": 1e-07,
+          "vabstol_V": 1e-09,
+          "iabstol_A": 1e-14,
+          "maxstep_s": 1.469651287815362e-13
+        }
+      }
+    },
+    "finite_1ohm": {
+      "speed": 1.0,
+      "gate_dynamic": true,
+      "series_ohm": 1.0,
+      "freq_Hz": 34021676036.0378,
+      "period_s": 2.9393025756307244e-11,
+      "stop_s": 1.1757210302522898e-10,
+      "drain_source_mean_V": 1.8,
+      "drain_source_amplitude_V": 0.02,
+      "gate_source_mean_V": 0.9164255527780005,
+      "gate_source_amplitude_V": 0.04089033501542199,
+      "source_initial_values_V": {
+        "D": 1.82,
+        "G": 0.8755352177625786
+      },
+      "requested_crossing_slopes_V_per_s": {
+        "D": -4275289899.905131,
+        "G": 8740901814.758537
+      },
+      "files": {
+        "baseline": {
+          "relative_path": "cases/finite_1ohm/baseline/input.scs",
+          "sha256": "fa30e886640492eca2518a5a8a12ec3f12c4c5b7d96a1382b57ceaeab880439c",
+          "requested_options_reltol": 1e-05,
+          "expected_actual_tran_reltol": 1.0000000000000002e-06,
+          "vabstol_V": 1e-08,
+          "iabstol_A": 1e-13,
+          "maxstep_s": 2.939302575630725e-14
+        },
+        "strict": {
+          "relative_path": "cases/finite_1ohm/strict/input.scs",
+          "sha256": "721f4c44fb4db24a07900ab77f54f1c7070e296b472f89dda8c46c7c38616d3b",
+          "requested_options_reltol": 1e-06,
+          "expected_actual_tran_reltol": 1e-07,
+          "vabstol_V": 1e-09,
+          "iabstol_A": 1e-14,
+          "maxstep_s": 1.4696512878153623e-14
+        }
+      }
+    }
+  },
+  "run_order": "Run matched baseline then strict first. Static gate and slow controls only if those data pose a specific remaining question; finite_1ohm is an explicitly uncalibrated impedance sensitivity, not an ADC physical fix.",
+  "diagnostic_only": true,
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false,
+  "physics_not_modified": [
+    "School PDK/model including rbodymod",
+    "Native device/junction geometry",
+    "gmin/cmin and body ties"
+  ],
+  "known_limits": [
+    "Analytic ideal drives clamp external D/G and remove original buffer/load feedback. This isolates mode/body equations and cannot predict complete ADC error.",
+    "DC starts at the sine peaks with zero derivative, so no stimulus jump is introduced at t=0. Previous full ADC charge history is intentionally not reproduced.",
+    "Drive amplitude/rate match only the measured local event; repeated 34GHz small-signal sinusoid is not the ADC clock or real system stimulus.",
+    "The 1ohm source resistance is a sensitivity control, not measured original output impedance. It changes actual terminal crossing/bias; actual D/G must be read back.",
+    "No edge deletion, time alignment, forced arbitrary IC, leakage or PDK patch.",
+    "A warning-free isolated pair is not the original ADC 0.05LSB acceptance; full native ADC must be rerun after any supported fix."
+  ],
+  "help_provenance": {
+    "vsource": {
+      "path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T070407785387Z/vsource_help.txt",
+      "sha256": "ff9d3633d432d0cc630a544034ea5aa4f599016b2c53576f1eece1458eac0420",
+      "lines": "27-30 sinedc/ampl/freq/sinephase; DC value and t=0 relation at318-327"
+    },
+    "tran": {
+      "path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/probe_20260924T020824848497Z/tran_help.txt",
+      "sha256": "6d9e5a0f244d05574b0acb1e7883467bd7977ca6f90c215105e0ad115738f65b",
+      "lines": "592-614 conservative preset multiplies requested reltol by0.1; actual header must verify."
+    }
+  },
+  "file_hashes": {
+    "build.py": "bd2ccbdebd5cfcca0b46801610e2457f40734772d111d2281938ac3c89f0c0c2",
+    "shape_and_stimulus_evidence.json": "6a476d21c2190acc3249e6362d429f0962f367b79c60315111334afaedcfb74c",
+    "psf_stream.py": "5f32f36c44c806db556bd0efd5e8de9239884440ae21c65a71b4554dc6375938",
+    "verify_inputs.py": "013fb1f896c4ed8319d2b83b1a984ba7a9209a807c8976aacbbbc69fc7120ce2",
+    "README.md": "16123a60186d27d5bc8ccf478f8e24541cd67f7add2477160ba8a9c74e31dd5f",
+    "run_case.sh": "c3cb8339da4f48c89b758b4a7c993c05813047e27139bea7a112d2ceed4693bb",
+    "cases/static_gate/baseline/input.scs": "b4cb8a9187e18c80f92bf3e1fb9c890a029241cd318ed4fcc06f4f8f13634f2b",
+    "cases/static_gate/strict/input.scs": "c4e5ab432b222c2d4526c5c5f5a5c1e2c7f604a1d9ccbd08e44c902d02582bf2",
+    "cases/finite_1ohm/baseline/input.scs": "fa30e886640492eca2518a5a8a12ec3f12c4c5b7d96a1382b57ceaeab880439c",
+    "cases/finite_1ohm/strict/input.scs": "721f4c44fb4db24a07900ab77f54f1c7070e296b472f89dda8c46c7c38616d3b",
+    "cases/slow_10x/baseline/input.scs": "aa9759332f6f4c0a1e27190381f83ee875d475f40a5a07fc6f843f90277f3cbb",
+    "cases/slow_10x/strict/input.scs": "3eca9e891a4ff6975a3c889bffd1e6b55307c35ff3d9ad0e54a7dfd33be4cd8f",
+    "cases/matched/baseline/input.scs": "2483c330d14a8cabed41eecbc263c882282869fb9af279d37f5b27753a939a34",
+    "cases/matched/strict/input.scs": "5cee40159747e2ea63fd06d6e4412120cb093743dfe3c9cf38cc111e606980d1"
+  }
+}

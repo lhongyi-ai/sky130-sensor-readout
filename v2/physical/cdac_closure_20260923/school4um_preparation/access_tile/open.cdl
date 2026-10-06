@@ -1,0 +1,7 @@
+* Project-owned two-capacitor connectivity fixture; not ADC replacement.
+.SUBCKT p1_mim_public_r1 PLUS MINUS
+.ENDS p1_mim_public_r1
+.SUBCKT p2c4_access_open_r1 TOP BITA BITB
+XXA TOP BITA / p1_mim_public_r1 w=4u l=4u
+XXB TOP BITB / p1_mim_public_r1 w=4u l=4u
+.ENDS p2c4_access_open_r1

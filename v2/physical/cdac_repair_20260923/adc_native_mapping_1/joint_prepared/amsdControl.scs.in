@@ -1,0 +1,14 @@
+simulator lang=spectre
+include "__SCHOOL_MODEL_ENTRY__" section=tt
+include "joint_native_bound.scs"
+simulatorOptions options temp=27 reltol=1e-5 vabstol=1e-8 iabstol=1e-13
+saveOptions options save=allpub
+adc_smoke_tran tran stop=40u maxstep=2n errpreset=conservative
+amsd {
+ portmap subckt=p1_frontend_school_r3
+ config cell=p1_frontend_school_r3 use=spice
+ portmap subckt=sensor_adc_candidate
+ config cell=sensor_adc_candidate use=spice
+ portmap subckt=sensor_phases
+ config cell=sensor_phases use=spice
+}

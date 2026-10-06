@@ -1,0 +1,59 @@
+--- original_finer/p2_ams_reset1.vams
++++ native_ground_finer/p2_ams_reset1.vams
+@@ -24,7 +24,6 @@
+        (stimulus_sel==3)?-0.16:(stimulus_sel==4)?-0.08:(stimulus_sel==5)?-0.001:
+        (stimulus_sel==6)?0.001:(stimulus_sel==7)?0.08:(stimulus_sel==8)?0.16:
+        (stimulus_sel==9)?0.24:(stimulus_sel==10)?0.32:0.399);
+-    V(vss) <+ 0.0;
+     V(vdd,vss) <+ 1.8;
+     V(vcm,vss) <+ 0.9;
+     V(rp_source,vss) <+ 1.1;
+@@ -34,6 +33,9 @@
+     I(ip_source,inp) <+ V(ip_source,inp)/350.0;
+     I(in_source,inn) <+ V(in_source,inn)/350.0;
+   end
++
++  // Same ideal zero-volt branch to simulator global ground, native representation.
++  p2_ground_fixture ground_ref(.VSS(vss));
+ 
+   // Equation-equivalent external reference source impedance and decoupling.
+   p2_reference_fixture refp(.SRC(rp_source),.REF(rp),.VSS(vss));
+--- original_finer/amsdControl.scs
++++ native_ground_finer/amsdControl.scs
+@@ -2,6 +2,7 @@
+ include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+ include "reset1_native_bound.scs"
+ include "reference_fixture.scs"
++include "ground_fixture.scs"
+ simulatorOptions options cthresh=1p temp=27 reltol=1e-7 vabstol=1e-10 iabstol=1e-15 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+ saveOptions options save=selected
+ save p2_ams_reset1.vdd
+@@ -75,6 +76,8 @@
+ save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:currents sigtype=dev
+ adc_closure_tran tran stop=4.1u maxstep=0.5n errpreset=conservative lteratio=1 relref=sigglobal
+ amsd {
++ portmap subckt=p2_ground_fixture
++ config cell=p2_ground_fixture use=spice
+  portmap subckt=p2_reference_fixture
+  config cell=p2_reference_fixture use=spice
+  portmap subckt=sensor_adc_reset1
+--- original_finer/run.sh
++++ native_ground_finer/run.sh
+@@ -10,7 +10,7 @@
+ fi
+ command -v xrun > actual_xrun_path.txt || exit 3
+ xrun -version > tool_version.txt 2>&1
+-sha256sum sar_controller.v p1_interfaces.vams p2_ams_reset1.vams p2_sequence.sv profile.vh reset1_native_bound.scs reference_fixture.scs amsdControl.scs > run_input_sha256.txt
++sha256sum sar_controller.v p1_interfaces.vams p2_ams_reset1.vams p2_sequence.sv profile.vh reset1_native_bound.scs reference_fixture.scs ground_fixture.scs amsdControl.scs > run_input_sha256.txt
+ printf '%s\n' 'xrun -64bit -ams -top p2_ams_reset1 -spectre_args "-format psfascii +diagnose" -incdir /opt/cadence/XCELIUM2209/tools.lnx86/spectre/etc/ahdl sar_controller.v p1_interfaces.vams p2_ams_reset1.vams p2_sequence.sv amsdControl.scs -l xrun.log' > command.txt
+ timeout --signal=TERM --kill-after=10s "${P2_LIMIT}s" xrun -64bit -ams -top p2_ams_reset1 -spectre_args "-format psfascii +diagnose" \
+  -incdir /opt/cadence/XCELIUM2209/tools.lnx86/spectre/etc/ahdl \
+--- /dev/null
++++ native_ground_finer/ground_fixture.scs
+@@ -0,0 +1,6 @@
++simulator lang=spectre
++// External ideal testbench ground branch only; no circuit or source value change.
++global 0
++subckt p2_ground_fixture (VSS)
++VGND (VSS 0) vsource dc=0 type=dc
++ends p2_ground_fixture

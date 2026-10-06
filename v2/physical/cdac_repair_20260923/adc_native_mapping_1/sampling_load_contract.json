@@ -1,0 +1,1479 @@
+{
+  "scope": "Actual native ADC source topology; acquire-only load contract, not performance/settling proof.",
+  "ADC_native_cell": "p2adc_core_fix1_school_r1",
+  "objects_sha256": "7c41fc00cee27860b0a334b910797f29c4e818dcb4ec653ab1005cdba9c2684f",
+  "sampling_topology": "BOTTOM_PLATE",
+  "top_clamps": [
+    {
+      "name": "XADC_XSP_XN",
+      "cell": "nfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TP",
+        "G": "SAMPLE",
+        "S": "VCM",
+        "B": "VSS"
+      },
+      "props": {
+        "w": "4u",
+        "fw": "4u",
+        "l": "0.15u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSP_XP",
+      "cell": "pfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TP",
+        "G": "SAMPLEB",
+        "S": "VCM",
+        "B": "VDD"
+      },
+      "props": {
+        "w": "8u",
+        "fw": "8u",
+        "l": "0.35u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSP_XND",
+      "cell": "nfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TP",
+        "G": "SAMPLEB",
+        "S": "XADC_TP",
+        "B": "VSS"
+      },
+      "props": {
+        "w": "2u",
+        "fw": "2u",
+        "l": "0.15u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSP_XPD",
+      "cell": "pfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TP",
+        "G": "SAMPLE",
+        "S": "XADC_TP",
+        "B": "VDD"
+      },
+      "props": {
+        "w": "4u",
+        "fw": "4u",
+        "l": "0.35u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSN_XN",
+      "cell": "nfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TN",
+        "G": "SAMPLE",
+        "S": "VCM",
+        "B": "VSS"
+      },
+      "props": {
+        "w": "4u",
+        "fw": "4u",
+        "l": "0.15u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSN_XP",
+      "cell": "pfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TN",
+        "G": "SAMPLEB",
+        "S": "VCM",
+        "B": "VDD"
+      },
+      "props": {
+        "w": "8u",
+        "fw": "8u",
+        "l": "0.35u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSN_XND",
+      "cell": "nfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TN",
+        "G": "SAMPLEB",
+        "S": "XADC_TN",
+        "B": "VSS"
+      },
+      "props": {
+        "w": "2u",
+        "fw": "2u",
+        "l": "0.15u",
+        "fingers": "1",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XADC_XSN_XPD",
+      "cell": "pfet_01v8_lvt",
+      "nets": {
+        "D": "XADC_TN",
+        "G": "SAMPLE",
+        "S": "XADC_TN",
+        "B": "VDD"
+      },
+      "props": {
+        "w": "4u",
+        "fw": "4u",
+        "l": "0.35u",
+        "fingers": "1",
+        "m": "1"
+      }
+    }
+  ],
+  "input_branches": {
+    "INP": [
+      {
+        "bit": 0,
+        "capacitor": {
+          "name": "XADC_XCP_XC0_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP0"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "1"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP0_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP0",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "0.84u",
+              "fw": "0.84u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP0_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP0_ACQB",
+              "S": "XADC_BP0",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "1.68u",
+              "fw": "1.68u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 1,
+        "capacitor": {
+          "name": "XADC_XCP_XC1_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP1"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "2"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP1_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP1",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "1.19u",
+              "fw": "1.19u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP1_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP1_ACQB",
+              "S": "XADC_BP1",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "2.375u",
+              "fw": "2.375u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 2,
+        "capacitor": {
+          "name": "XADC_XCP_XC2_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP2"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "4"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP2_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP2",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "1.68u",
+              "fw": "1.68u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP2_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP2_ACQB",
+              "S": "XADC_BP2",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "3.36u",
+              "fw": "3.36u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 3,
+        "capacitor": {
+          "name": "XADC_XCP_XC3_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP3"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "8"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP3_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP3",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "2.375u",
+              "fw": "2.375u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP3_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP3_ACQB",
+              "S": "XADC_BP3",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "4.75u",
+              "fw": "4.75u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 4,
+        "capacitor": {
+          "name": "XADC_XCP_XC4_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP4"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "16"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP4_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP4",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "3.36u",
+              "fw": "3.36u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP4_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP4_ACQB",
+              "S": "XADC_BP4",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "6.72u",
+              "fw": "6.72u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 5,
+        "capacitor": {
+          "name": "XADC_XCP_XC5_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP5"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "32"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP5_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP5",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "4.75u",
+              "fw": "4.75u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP5_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP5_ACQB",
+              "S": "XADC_BP5",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "9.505u",
+              "fw": "9.505u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 6,
+        "capacitor": {
+          "name": "XADC_XCP_XC6_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP6"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "64"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP6_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP6",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "6.72u",
+              "fw": "6.72u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP6_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP6_ACQB",
+              "S": "XADC_BP6",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 7,
+        "capacitor": {
+          "name": "XADC_XCP_XC7_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP7"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "128"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP7_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP7",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "9.505u",
+              "fw": "9.505u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP7_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP7_ACQB",
+              "S": "XADC_BP7",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "19.005u",
+              "fw": "19.005u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 8,
+        "capacitor": {
+          "name": "XADC_XCP_XC8_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP8"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "256"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP8_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP8",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP8_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP8_ACQB",
+              "S": "XADC_BP8",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 9,
+        "capacitor": {
+          "name": "XADC_XCP_XC9_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP9"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "512"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP9_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP9",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP9_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP9_ACQB",
+              "S": "XADC_BP9",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 10,
+        "capacitor": {
+          "name": "XADC_XCP_XC10_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP10"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "1024"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP10_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP10",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP10_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP10_ACQB",
+              "S": "XADC_BP10",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 11,
+        "capacitor": {
+          "name": "XADC_XCP_XC11_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_BP11"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "2048"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XP11_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_BP11",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XP11_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XP11_ACQB",
+              "S": "XADC_BP11",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": "DUMMY",
+        "capacitor": {
+          "name": "XADC_XCP_XD_XC",
+          "nets": {
+            "PLUS": "XADC_TP",
+            "MINUS": "XADC_DP"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "1"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XDP_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "ACQ",
+              "S": "XADC_DP",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "0.84u",
+              "fw": "0.84u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XDP_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INP",
+              "G": "XADC_XDP_ACQB",
+              "S": "XADC_DP",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "1.68u",
+              "fw": "1.68u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "INN": [
+      {
+        "bit": 0,
+        "capacitor": {
+          "name": "XADC_XCN_XC0_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN0"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "1"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN0_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN0",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "0.84u",
+              "fw": "0.84u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN0_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN0_ACQB",
+              "S": "XADC_BN0",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "1.68u",
+              "fw": "1.68u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 1,
+        "capacitor": {
+          "name": "XADC_XCN_XC1_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN1"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "2"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN1_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN1",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "1.19u",
+              "fw": "1.19u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN1_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN1_ACQB",
+              "S": "XADC_BN1",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "2.375u",
+              "fw": "2.375u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 2,
+        "capacitor": {
+          "name": "XADC_XCN_XC2_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN2"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "4"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN2_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN2",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "1.68u",
+              "fw": "1.68u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN2_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN2_ACQB",
+              "S": "XADC_BN2",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "3.36u",
+              "fw": "3.36u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 3,
+        "capacitor": {
+          "name": "XADC_XCN_XC3_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN3"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "8"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN3_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN3",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "2.375u",
+              "fw": "2.375u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN3_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN3_ACQB",
+              "S": "XADC_BN3",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "4.75u",
+              "fw": "4.75u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 4,
+        "capacitor": {
+          "name": "XADC_XCN_XC4_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN4"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "16"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN4_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN4",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "3.36u",
+              "fw": "3.36u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN4_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN4_ACQB",
+              "S": "XADC_BN4",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "6.72u",
+              "fw": "6.72u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 5,
+        "capacitor": {
+          "name": "XADC_XCN_XC5_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN5"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "32"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN5_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN5",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "4.75u",
+              "fw": "4.75u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN5_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN5_ACQB",
+              "S": "XADC_BN5",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "9.505u",
+              "fw": "9.505u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 6,
+        "capacitor": {
+          "name": "XADC_XCN_XC6_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN6"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "64"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN6_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN6",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "6.72u",
+              "fw": "6.72u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN6_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN6_ACQB",
+              "S": "XADC_BN6",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 7,
+        "capacitor": {
+          "name": "XADC_XCN_XC7_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN7"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "128"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN7_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN7",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "9.505u",
+              "fw": "9.505u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN7_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN7_ACQB",
+              "S": "XADC_BN7",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "19.005u",
+              "fw": "19.005u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 8,
+        "capacitor": {
+          "name": "XADC_XCN_XC8_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN8"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "256"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN8_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN8",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN8_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN8_ACQB",
+              "S": "XADC_BN8",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 9,
+        "capacitor": {
+          "name": "XADC_XCN_XC9_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN9"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "512"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN9_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN9",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN9_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN9_ACQB",
+              "S": "XADC_BN9",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 10,
+        "capacitor": {
+          "name": "XADC_XCN_XC10_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN10"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "1024"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN10_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN10",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN10_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN10_ACQB",
+              "S": "XADC_BN10",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": 11,
+        "capacitor": {
+          "name": "XADC_XCN_XC11_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_BN11"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "2048"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XN11_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_BN11",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "13.44u",
+              "fw": "13.44u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XN11_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XN11_ACQB",
+              "S": "XADC_BN11",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "26.88u",
+              "fw": "26.88u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      },
+      {
+        "bit": "DUMMY",
+        "capacitor": {
+          "name": "XADC_XCN_XD_XC",
+          "nets": {
+            "PLUS": "XADC_TN",
+            "MINUS": "XADC_DN"
+          },
+          "props": {
+            "w": "4u",
+            "l": "4u",
+            "m": "1"
+          }
+        },
+        "input_sampling_MOS": [
+          {
+            "name": "XADC_XDN_XCM_XN",
+            "cell": "nfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "ACQ",
+              "S": "XADC_DN",
+              "B": "VSS"
+            },
+            "props": {
+              "w": "0.84u",
+              "fw": "0.84u",
+              "l": "0.15u",
+              "fingers": "1",
+              "m": "1"
+            }
+          },
+          {
+            "name": "XADC_XDN_XCM_XP",
+            "cell": "pfet_01v8_lvt",
+            "nets": {
+              "D": "INN",
+              "G": "XADC_XDN_ACQB",
+              "S": "XADC_DN",
+              "B": "VDD"
+            },
+            "props": {
+              "w": "1.68u",
+              "fw": "1.68u",
+              "l": "0.35u",
+              "fingers": "1",
+              "m": "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "source_impedance_testbench_ohm_per_leg": 350,
+  "front_end_proxy_equivalence": false,
+  "warning": "The W4/W8 transmission gate clamps TOP to VCM. It is not the INP/INN sampling path. A single TG feeding a lumped4096C capacitor is a proxy, not this actual ADC topology."
+}

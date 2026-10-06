@@ -1,0 +1,25 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "checks": {
+    "source_hashes_match": true,
+    "only_two_line_VAMS_change": true,
+    "already_declared_electrical_vss_before_ground": true,
+    "sole_original_zero_branch_removed": true,
+    "no_native_ground_source_added": true,
+    "all_other_inputs_identical": true
+  },
+  "unchanged_files": {
+    "amsdControl.scs": true,
+    "reset1_native_bound.scs": true,
+    "sar_controller.v": true,
+    "p1_interfaces.vams": true,
+    "p2_sequence.sv": true,
+    "profile.vh": true,
+    "run.sh": true,
+    "reference_fixture.scs": true
+  },
+  "manifest_sha256": "ab9b66675b92bad7bb8e1fe75e6c7c4b6e8cb8d66a1b6514607d7ff34741cddb",
+  "diff_sha256": "623e4df64747cb4c1e117397a6cd0868266382bc21621f6ccfde8ca37a0e962e",
+  "school_compilation": "NOT_RUN",
+  "EDA_started": false
+}

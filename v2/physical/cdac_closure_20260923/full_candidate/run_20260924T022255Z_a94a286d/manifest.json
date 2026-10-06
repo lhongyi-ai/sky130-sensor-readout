@@ -1,0 +1,40 @@
+{
+  "status": "GENERATED_UNVERIFIED",
+  "source_generator_sha256": "9b8a09f706716e069666ff266f368e6e38b6ac6d3320be083584b6dcd84eae74",
+  "source_MIM_sha256": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e",
+  "MIM_scope": "historical open3x3 only",
+  "MIM_body_and_binary_counts_unchanged": true,
+  "routing_change": "36um center channel; seven low-net M4 horizontal tracks and externalM5 aggregation; full-width M3 bridge fill to repair actual full-DRC notches",
+  "upper_half_translation_um": 36,
+  "B0_DUMMY_translation_um": 18,
+  "channel_y_um": {
+    "B0": 200.0,
+    "B1": 202.0,
+    "B2": 204.0,
+    "B3": 206.0,
+    "B4": 222.0,
+    "B5": 224.0,
+    "DUMMY": 226.0
+  },
+  "outside_trunk_x_um": {
+    "B0": -24.8,
+    "B1": -28.0,
+    "B2": -31.200000000000003,
+    "B3": -34.400000000000006,
+    "B4": -37.6,
+    "B5": -40.8,
+    "DUMMY": -44.0
+  },
+  "first_moments_preserved_up_to_common_18um_y_translation": true,
+  "second_moments_changed_and_retained_in_report": true,
+  "estimated_side_bbox_um": [
+    -44.8,
+    -1.7,
+    410.8,
+    456.8
+  ],
+  "estimated_differential_area_um2": 431540.2,
+  "formal_ADC_PEX_allowed": false,
+  "school4x4_layout": false,
+  "static_INL_DNL_pass": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "SYNTHETIC_ALGEBRA_CHECKS_PASS",
+  "actual_frontend_or_Cadence_run": false,
+  "global_stability_signoff": false,
+  "random_MNA_frequency_cases": 71,
+  "max_relative_determinant_identity_error": 2.1387755077582288e-14,
+  "max_inverse_identity_norm": 5.072947437590561e-14,
+  "max_modal_basis_relative_error": 5.029936669423476e-15,
+  "passive_sign_and_high_frequency_example": {
+    "source_admittance": "-(G+s*C)",
+    "reference_over_closed": "1+R*(G+s*C)",
+    "closed_over_reference": "1/(1+R*(G+s*C))",
+    "reference_pole_rad_per_s": -4.071428571428571,
+    "closed_has_no_finite_dynamic_mode_because_ideal_voltage_clamps_C": true,
+    "high_frequency_ratio_is_not_necessarily_one": true
+  },
+  "counterclockwise_RHP_winding_examples": {
+    "stable_closed_unstable_reference": -0.9999999999999999,
+    "unstable_closed_stable_reference": 0.9999999999999999
+  },
+  "hidden_unstable_mode_counterexample": {
+    "shared_characteristic_factor": "s-3",
+    "ratio": 1,
+    "winding": 0,
+    "closed_RHP_count": 1,
+    "reference_RHP_count": 1
+  }
+}

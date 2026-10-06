@@ -1,0 +1,68 @@
+{
+  "status": "GENERATED_NOT_YET_EXTRACTED",
+  "source_MIM": "v2/physical/cdac_route_20260911/artifacts/mim_unit.mag",
+  "source_MIM_sha256": "bf900d631ca235435508a3e1c7a4b4d0e701b945d69e213b82f1a4ad9fd8895e",
+  "scope": "Open-PDK3x3 historical layout control only. Not school4x4.",
+  "hypothesis": "Moving a long M5 conductor off the array reduces TOP coupling, with all other geometry, conductor area and circuit topology unchanged.",
+  "cases": [
+    {
+      "case": "inside",
+      "cell": "p1cdac3_m5_inside",
+      "MIM_count": 128,
+      "MIM_W_L_um": [
+        3,
+        3
+      ],
+      "aggressor_x_um": 11.27,
+      "aggressor_y_um": [
+        9,
+        201
+      ],
+      "aggressor_width_um": 1.6,
+      "aggressor_area_um2": 307.2,
+      "expected_ports": [
+        "TOP",
+        "BIT",
+        "AGG"
+      ],
+      "changed_parameter": "aggressor x coordinate only",
+      "TOP_row_fill_width_um": 3.4
+    },
+    {
+      "case": "outside",
+      "cell": "p1cdac3_m5_outside",
+      "MIM_count": 128,
+      "MIM_W_L_um": [
+        3,
+        3
+      ],
+      "aggressor_x_um": -10.0,
+      "aggressor_y_um": [
+        9,
+        201
+      ],
+      "aggressor_width_um": 1.6,
+      "aggressor_area_um2": 307.2,
+      "expected_ports": [
+        "TOP",
+        "BIT",
+        "AGG"
+      ],
+      "changed_parameter": "aggressor x coordinate only",
+      "TOP_row_fill_width_um": 3.4
+    }
+  ],
+  "required_readback": [
+    "actual DRC",
+    "all128 MIM dimensions/terminals",
+    "AGG conductor retained as distinct extracted port",
+    "TOP-BIT function and parasitic terms",
+    "TOP-AGG, BIT-AGG and AGG-substrate coupling"
+  ],
+  "limitations": [
+    "Open Magic physical coefficients are not independently silicon-qualified",
+    "No dynamic switches/noise/reference impedance",
+    "AGG is independently driven to isolate its coupling; not a complete array reroute"
+  ],
+  "formal_ADC_PEX_allowed": false
+}

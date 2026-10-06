@@ -1,0 +1,692 @@
+{
+  "scope": "READ_ONLY_SELECTED_LAYER_AND_RULE_METADATA",
+  "files": {
+    "stream": {
+      "path_relative_to_PDK": "libs/sky130_fd_pr_main/sky130_fd_pr_main.layermap",
+      "bytes": 22725,
+      "sha256": "ef08c28cc01668421a5e55e65ebd9bd05e0b80f80d7a3eb41e973fecaac871d8"
+    },
+    "drc": {
+      "path_relative_to_PDK": "Sky130_DRC/sky130_rev_0.0_1.0.drc.pvl",
+      "bytes": 15563,
+      "sha256": "b5624d6bb0a54fd55f3d9da289098acb5fe23bde674672a23196a85ab779cfc0"
+    },
+    "lvs": {
+      "path_relative_to_PDK": "Sky130_LVS/Sky130_rev_0.0_0.1.lvs.pvl",
+      "bytes": 36489,
+      "sha256": "1587ba4006dea8fd11921967f4006e843dc1099d9d702477d3cc8a788251d6f2"
+    }
+  },
+  "stream": [
+    {
+      "name": "met3",
+      "purpose": "blockage",
+      "gds": [
+        70,
+        10
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "boundary",
+      "gds": [
+        70,
+        4
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "cut",
+      "gds": [
+        70,
+        14
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "drawing",
+      "gds": [
+        70,
+        20
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "fuse",
+      "gds": [
+        70,
+        17
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "label",
+      "gds": [
+        70,
+        5
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "net",
+      "gds": [
+        70,
+        23
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "pin",
+      "gds": [
+        70,
+        16
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "probe",
+      "gds": [
+        70,
+        25
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "res",
+      "gds": [
+        70,
+        13
+      ]
+    },
+    {
+      "name": "met3",
+      "purpose": "short",
+      "gds": [
+        70,
+        15
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "blockage",
+      "gds": [
+        71,
+        10
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "boundary",
+      "gds": [
+        71,
+        4
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "cut",
+      "gds": [
+        71,
+        14
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "drawing",
+      "gds": [
+        71,
+        20
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "fuse",
+      "gds": [
+        71,
+        17
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "label",
+      "gds": [
+        71,
+        5
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "net",
+      "gds": [
+        71,
+        23
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "pin",
+      "gds": [
+        71,
+        16
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "probe",
+      "gds": [
+        71,
+        25
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "res",
+      "gds": [
+        71,
+        13
+      ]
+    },
+    {
+      "name": "met4",
+      "purpose": "short",
+      "gds": [
+        71,
+        15
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "blockage",
+      "gds": [
+        72,
+        10
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "boundary",
+      "gds": [
+        72,
+        4
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "cut",
+      "gds": [
+        72,
+        14
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "drawing",
+      "gds": [
+        72,
+        20
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "fuse",
+      "gds": [
+        72,
+        17
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "label",
+      "gds": [
+        72,
+        5
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "net",
+      "gds": [
+        72,
+        23
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "pin",
+      "gds": [
+        72,
+        16
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "probe",
+      "gds": [
+        72,
+        25
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "res",
+      "gds": [
+        72,
+        13
+      ]
+    },
+    {
+      "name": "met5",
+      "purpose": "short",
+      "gds": [
+        72,
+        15
+      ]
+    },
+    {
+      "name": "via3",
+      "purpose": "boundary",
+      "gds": [
+        70,
+        60
+      ]
+    },
+    {
+      "name": "via3",
+      "purpose": "drawing",
+      "gds": [
+        70,
+        44
+      ]
+    },
+    {
+      "name": "via3",
+      "purpose": "net",
+      "gds": [
+        70,
+        41
+      ]
+    },
+    {
+      "name": "via3",
+      "purpose": "pin",
+      "gds": [
+        70,
+        48
+      ]
+    },
+    {
+      "name": "via4",
+      "purpose": "boundary",
+      "gds": [
+        71,
+        60
+      ]
+    },
+    {
+      "name": "via4",
+      "purpose": "drawing",
+      "gds": [
+        71,
+        44
+      ]
+    },
+    {
+      "name": "via4",
+      "purpose": "net",
+      "gds": [
+        71,
+        41
+      ]
+    },
+    {
+      "name": "via4",
+      "purpose": "pin",
+      "gds": [
+        71,
+        48
+      ]
+    }
+  ],
+  "pvs_maps": {
+    "drc": [],
+    "lvs": [
+      {
+        "name": "met3_in",
+        "gds": [
+          70,
+          20
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_text",
+        "gds": [
+          70,
+          20
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "via3",
+        "gds": [
+          70,
+          44
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_in",
+        "gds": [
+          71,
+          20
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_text",
+        "gds": [
+          71,
+          20
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "via4",
+        "gds": [
+          71,
+          44
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_in",
+        "gds": [
+          72,
+          20
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_text",
+        "gds": [
+          72,
+          20
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "capm",
+        "gds": [
+          89,
+          44
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_fuse",
+        "gds": [
+          71,
+          17
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_block",
+        "gds": [
+          70,
+          10
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_block",
+        "gds": [
+          71,
+          10
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_block",
+        "gds": [
+          72,
+          10
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "via3_bnd",
+        "gds": [
+          70,
+          60
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "via4_bnd",
+        "gds": [
+          71,
+          60
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_label",
+        "gds": [
+          70,
+          5
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met4_label",
+        "gds": [
+          71,
+          5
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met5_label",
+        "gds": [
+          72,
+          5
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met3_net",
+        "gds": [
+          70,
+          23
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met4_net",
+        "gds": [
+          71,
+          23
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met5_net",
+        "gds": [
+          72,
+          23
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met3_pin",
+        "gds": [
+          70,
+          0
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met3_pin",
+        "gds": [
+          70,
+          16
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_pin",
+        "gds": [
+          70,
+          16
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met4_pin",
+        "gds": [
+          71,
+          0
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met4_pin",
+        "gds": [
+          71,
+          16
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_pin",
+        "gds": [
+          71,
+          16
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met5_pin",
+        "gds": [
+          72,
+          0
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met5_pin",
+        "gds": [
+          72,
+          16
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_pin",
+        "gds": [
+          72,
+          16
+        ],
+        "type": "texttype"
+      },
+      {
+        "name": "met3_cut",
+        "gds": [
+          70,
+          14
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_cut",
+        "gds": [
+          71,
+          14
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_cut",
+        "gds": [
+          72,
+          14
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_probe",
+        "gds": [
+          72,
+          25
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_probe",
+        "gds": [
+          71,
+          25
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_probe",
+        "gds": [
+          70,
+          25
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_short",
+        "gds": [
+          70,
+          15
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_short",
+        "gds": [
+          71,
+          15
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_short",
+        "gds": [
+          72,
+          15
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met3_res",
+        "gds": [
+          70,
+          13
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met4_res",
+        "gds": [
+          71,
+          13
+        ],
+        "type": "datatype"
+      },
+      {
+        "name": "met5_res",
+        "gds": [
+          72,
+          13
+        ],
+        "type": "datatype"
+      }
+    ]
+  },
+  "relevant_rule_names": []
+}

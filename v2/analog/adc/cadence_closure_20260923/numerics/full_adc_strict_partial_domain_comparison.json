@@ -1,0 +1,492 @@
+{
+  "shared_interval_s": [
+    0.0,
+    2.782437619740612e-05
+  ],
+  "actual_end_times_s": [
+    3.094769207949164e-05,
+    2.782437619740612e-05
+  ],
+  "full_intervals_equal": false,
+  "union_point_count": 232130,
+  "channels": {
+    "CDAC_TP_minus_TN": {
+      "max_abs_V": 0.014374193160669235,
+      "worst_time_s": 1.658624273745571e-05,
+      "signed_difference_V": 0.014374193160669235,
+      "baseline_interpolated_V": -0.13456843119065098,
+      "strict_interpolated_V": -0.12019423802998175,
+      "baseline_actual_bracket": [
+        {
+          "time": 1.658624186275599e-05,
+          "p2_ams_reset1.adc.XADC_TP": 0.8285318218678088,
+          "p2_ams_reset1.adc.XADC_TN": 0.9546775002024072
+        },
+        {
+          "time": 1.658624273745571e-05,
+          "p2_ams_reset1.adc.XADC_TP": 0.824474485049653,
+          "p2_ams_reset1.adc.XADC_TN": 0.959042916240304
+        }
+      ],
+      "strict_actual_bracket": [
+        {
+          "time": 1.658624267859596e-05,
+          "p2_ams_reset1.adc.XADC_TP": 0.8316778252671304,
+          "p2_ams_reset1.adc.XADC_TN": 0.9513053484647176
+        },
+        {
+          "time": 1.658624276225145e-05,
+          "p2_ams_reset1.adc.XADC_TP": 0.8312881041565008,
+          "p2_ams_reset1.adc.XADC_TN": 0.951721081122813
+        }
+      ],
+      "max_abs_LSB": 73.59586898262648,
+      "le_0_05_LSB": false
+    },
+    "RP": {
+      "max_abs_V": 9.35654880018788e-07,
+      "worst_time_s": 7.235776454358937e-06,
+      "signed_difference_V": -9.35654880018788e-07,
+      "baseline_interpolated_V": 1.099899967412836,
+      "strict_interpolated_V": 1.099899031757956,
+      "baseline_actual_bracket": [
+        {
+          "time": 7.233776454358937e-06,
+          "p2_ams_reset1.rp": 1.099881575670276
+        },
+        {
+          "time": 7.235776454358937e-06,
+          "p2_ams_reset1.rp": 1.099899967412836
+        }
+      ],
+      "strict_actual_bracket": [
+        {
+          "time": 7.235365405217992e-06,
+          "p2_ams_reset1.rp": 1.099895575440668
+        },
+        {
+          "time": 7.236362840297321e-06,
+          "p2_ams_reset1.rp": 1.099903962399221
+        }
+      ],
+      "max_abs_LSB": 0.004790552985696195,
+      "le_0_05_LSB": true
+    },
+    "RN": {
+      "max_abs_V": 9.36050292832391e-07,
+      "worst_time_s": 7.235776454358937e-06,
+      "signed_difference_V": 9.36050292832391e-07,
+      "baseline_interpolated_V": 0.7001000105017384,
+      "strict_interpolated_V": 0.7001009465520313,
+      "baseline_actual_bracket": [
+        {
+          "time": 7.233776454358937e-06,
+          "p2_ams_reset1.rn": 0.7001184001373222
+        },
+        {
+          "time": 7.235776454358937e-06,
+          "p2_ams_reset1.rn": 0.7001000105017384
+        }
+      ],
+      "strict_actual_bracket": [
+        {
+          "time": 7.235365405217992e-06,
+          "p2_ams_reset1.rn": 0.7001044024200769
+        },
+        {
+          "time": 7.236362840297321e-06,
+          "p2_ams_reset1.rn": 0.700096016551637
+        }
+      ],
+      "max_abs_LSB": 0.004792577499301842,
+      "le_0_05_LSB": true
+    },
+    "VCM": {
+      "max_abs_V": 0.0,
+      "worst_time_s": 0.0,
+      "signed_difference_V": 0.0,
+      "max_abs_LSB": 0.0,
+      "le_0_05_LSB": true
+    }
+  },
+  "planned_measurement_domain": {
+    "interval_s": [
+      0.0,
+      3.09475e-05
+    ],
+    "fully_covered": false,
+    "observed_until_s": 2.782437619740612e-05,
+    "union_points_including_endpoints": 232130,
+    "channels": {
+      "CDAC_TP_minus_TN": {
+        "max_abs_V": 0.014374193160669235,
+        "worst_time_s": 1.658624273745571e-05,
+        "signed_difference_V": 0.014374193160669235,
+        "baseline_interpolated_V": -0.13456843119065098,
+        "strict_interpolated_V": -0.12019423802998175,
+        "baseline_actual_bracket": [
+          {
+            "time": 1.658624186275599e-05,
+            "p2_ams_reset1.adc.XADC_TP": 0.8285318218678088,
+            "p2_ams_reset1.adc.XADC_TN": 0.9546775002024072
+          },
+          {
+            "time": 1.658624273745571e-05,
+            "p2_ams_reset1.adc.XADC_TP": 0.824474485049653,
+            "p2_ams_reset1.adc.XADC_TN": 0.959042916240304
+          }
+        ],
+        "strict_actual_bracket": [
+          {
+            "time": 1.658624267859596e-05,
+            "p2_ams_reset1.adc.XADC_TP": 0.8316778252671304,
+            "p2_ams_reset1.adc.XADC_TN": 0.9513053484647176
+          },
+          {
+            "time": 1.658624276225145e-05,
+            "p2_ams_reset1.adc.XADC_TP": 0.8312881041565008,
+            "p2_ams_reset1.adc.XADC_TN": 0.951721081122813
+          }
+        ],
+        "max_abs_LSB": 73.59586898262648,
+        "le_0_05_LSB": false
+      },
+      "RP": {
+        "max_abs_V": 9.35654880018788e-07,
+        "worst_time_s": 7.235776454358937e-06,
+        "signed_difference_V": -9.35654880018788e-07,
+        "baseline_interpolated_V": 1.099899967412836,
+        "strict_interpolated_V": 1.099899031757956,
+        "baseline_actual_bracket": [
+          {
+            "time": 7.233776454358937e-06,
+            "p2_ams_reset1.rp": 1.099881575670276
+          },
+          {
+            "time": 7.235776454358937e-06,
+            "p2_ams_reset1.rp": 1.099899967412836
+          }
+        ],
+        "strict_actual_bracket": [
+          {
+            "time": 7.235365405217992e-06,
+            "p2_ams_reset1.rp": 1.099895575440668
+          },
+          {
+            "time": 7.236362840297321e-06,
+            "p2_ams_reset1.rp": 1.099903962399221
+          }
+        ],
+        "max_abs_LSB": 0.004790552985696195,
+        "le_0_05_LSB": true
+      },
+      "RN": {
+        "max_abs_V": 9.36050292832391e-07,
+        "worst_time_s": 7.235776454358937e-06,
+        "signed_difference_V": 9.36050292832391e-07,
+        "baseline_interpolated_V": 0.7001000105017384,
+        "strict_interpolated_V": 0.7001009465520313,
+        "baseline_actual_bracket": [
+          {
+            "time": 7.233776454358937e-06,
+            "p2_ams_reset1.rn": 0.7001184001373222
+          },
+          {
+            "time": 7.235776454358937e-06,
+            "p2_ams_reset1.rn": 0.7001000105017384
+          }
+        ],
+        "strict_actual_bracket": [
+          {
+            "time": 7.235365405217992e-06,
+            "p2_ams_reset1.rn": 0.7001044024200769
+          },
+          {
+            "time": 7.236362840297321e-06,
+            "p2_ams_reset1.rn": 0.700096016551637
+          }
+        ],
+        "max_abs_LSB": 0.004792577499301842,
+        "le_0_05_LSB": true
+      },
+      "VCM": {
+        "max_abs_V": 0.0,
+        "worst_time_s": 0.0,
+        "signed_difference_V": 0.0,
+        "max_abs_LSB": 0.0,
+        "le_0_05_LSB": true
+      }
+    }
+  },
+  "outside_planned_domain_audit": {
+    "comparison_interval_s": null,
+    "each_saved_tail_interval_s": [
+      [
+        3.09475e-05,
+        3.094769207949164e-05
+      ],
+      null
+    ],
+    "common_tail_union_points": 0,
+    "common_tail_channels": {
+      "CDAC_TP_minus_TN": {
+        "max_abs_V": 0.0,
+        "worst_time_s": 0.0,
+        "signed_difference_V": 0.0,
+        "max_abs_LSB": 0.0,
+        "le_0_05_LSB": true
+      },
+      "RP": {
+        "max_abs_V": 0.0,
+        "worst_time_s": 0.0,
+        "signed_difference_V": 0.0,
+        "max_abs_LSB": 0.0,
+        "le_0_05_LSB": true
+      },
+      "RN": {
+        "max_abs_V": 0.0,
+        "worst_time_s": 0.0,
+        "signed_difference_V": 0.0,
+        "max_abs_LSB": 0.0,
+        "le_0_05_LSB": true
+      },
+      "VCM": {
+        "max_abs_V": 0.0,
+        "worst_time_s": 0.0,
+        "signed_difference_V": 0.0,
+        "max_abs_LSB": 0.0,
+        "le_0_05_LSB": true
+      }
+    },
+    "unpaired_tail_present": true,
+    "scope": "All raw samples retained and read; unmatched tail cannot be compared or silently treated as zero difference."
+  },
+  "scope_status": "PARTIAL_DIAGNOSTIC_NOT_QUALIFIED",
+  "analyzer_sha256": {
+    "compare_full_adc_stream.py": "0d4c85b65160b63b982d0ac19eada428e72eb0017c2e89dd68e0fd91a0b99cdf",
+    "psf_stream.py": "56c578c6c9f72910361c2d189acb91b10e9dbc180b181888f0deb35df1889ace",
+    "measurement_domain.py": "f1a42442306c9e1f58d358c50a59de1efe1e263f5ae31e1d754d63f2e4a4a18a"
+  },
+  "measurement_domain_contract": {
+    "basis": "Frozen deterministic stimulus clock and task delays; independent of solver output or errors",
+    "sequence_sha256": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "profile_sha256": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+    "frames": 2,
+    "start_ps": 0,
+    "finish_ps": 30947500,
+    "finish_s": 3.09475e-05,
+    "watchdog_ps": 39000000,
+    "events": [
+      {
+        "event": "initial_reset_release",
+        "time_ps": 1885000
+      },
+      {
+        "event": "first_accept_drive_returns",
+        "time_ps": 4072500
+      },
+      {
+        "event": "all_requested_frames_complete_drive_returns",
+        "time_ps": 24072500
+      },
+      {
+        "event": "valid_cleared_check",
+        "time_ps": 24697500
+      },
+      {
+        "event": "third_or_thirteenth_abort_frame_accept_drive_returns",
+        "time_ps": 25322500
+      },
+      {
+        "event": "abort_reset_assert",
+        "time_ps": 28225000
+      },
+      {
+        "event": "reset_Q0_QB1_check",
+        "time_ps": 28325000
+      },
+      {
+        "event": "abort_reset_release",
+        "time_ps": 29385000
+      },
+      {
+        "event": "normal_pass_and_finish",
+        "time_ps": 30947500
+      }
+    ],
+    "rules": [
+      "Both runs must complete normally at exactly this scheduled $finish time and pass independent integration checks.",
+      "Include initial reset, all requested frames, independent abort conversion and post-reset checks, and every switching edge in the entire closed interval.",
+      "All accepted points inside the interval plus its exact endpoints are compared without time alignment.",
+      "Saved waves must bracket both endpoints; no extrapolation or shortened successful prefix.",
+      "All stored data, including simulator lookahead after $finish, remain audited and separately reported.",
+      "A watchdog or failure-path $finish cannot redefine the measurement end."
+    ]
+  },
+  "raw_sha256": {
+    "baseline": "7652c30352e7da406eb07af1dcdfc3362352f971ccb7151a9a0d223d8eeccb4a",
+    "strict": "99257315dd67fcc847b62a9aee7cc1919ab61e407f76ac3e586fa24c53d69034"
+  },
+  "circuit_stimulus_hash_identity": {
+    "reset1_native_bound.scs": {
+      "baseline": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+      "strict": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6"
+    },
+    "sar_controller.v": {
+      "baseline": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+      "strict": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+    },
+    "p1_interfaces.vams": {
+      "baseline": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+      "strict": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084"
+    },
+    "p2_ams_reset1.vams": {
+      "baseline": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125",
+      "strict": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125"
+    },
+    "p2_sequence.sv": {
+      "baseline": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+      "strict": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505"
+    },
+    "profile.vh": {
+      "baseline": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+      "strict": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c"
+    }
+  },
+  "fixed_AMS_configuration_identity": true,
+  "same_actual_solver_method_and_environment": true,
+  "profiles": {
+    "baseline": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "21.1.0.132.isr1",
+      "date": "12:04:35 AM, Thur Sep 24, 2026",
+      "design": "//",
+      "analysis type": "tran",
+      "analysis name": "adc_closure_tran",
+      "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 40 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-05,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 4e-05,
+      "step": 4e-08,
+      "istep": 0.001,
+      "maxstep": 2e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-06,
+      "abstol(V)": 1e-08,
+      "abstol(I)": 1e-13,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "node",
+      "units": "s",
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "strict": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "21.1.0.132.isr1",
+      "date": "12:12:07 AM, Thur Sep 24, 2026",
+      "design": "//",
+      "analysis type": "tran",
+      "analysis name": "adc_closure_tran",
+      "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 40 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 4e-05,
+      "step": 4e-08,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "node",
+      "units": "s",
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    }
+  },
+  "actual_tightening_verified": true,
+  "runs": {
+    "baseline": {
+      "simulator_exit_code": 0,
+      "handshake_pass_markers": [
+        [
+          "2",
+          "3",
+          "1",
+          "670",
+          "30",
+          "1"
+        ]
+      ],
+      "LTE_failure_warning_counts": {
+        "SPECTRE-16266": 0,
+        "SPECTRE-16578": 0,
+        "SPECTRE-16780": 2
+      },
+      "no_known_LTE_loss": false,
+      "integration_review_functional_pass": true,
+      "logged_finish_ps": [
+        "30947500"
+      ],
+      "finish_matches_frozen_schedule": true,
+      "completed": true
+    },
+    "strict": {
+      "simulator_exit_code": 124,
+      "handshake_pass_markers": [],
+      "LTE_failure_warning_counts": {
+        "SPECTRE-16266": 0,
+        "SPECTRE-16578": 0,
+        "SPECTRE-16780": 20
+      },
+      "no_known_LTE_loss": false,
+      "integration_review_functional_pass": false,
+      "logged_finish_ps": [],
+      "finish_matches_frozen_schedule": false,
+      "completed": false
+    }
+  },
+  "absolute_limit_V": 9.765625000000002e-06,
+  "waveform_gate_pass": false,
+  "eligible_for_numeric_review": false,
+  "formal_numeric_acceptance": "REQUIRES_REVIEW_OF_ALL_WARNINGS_AND_EVIDENCE",
+  "limitations": [
+    "Top-level channels summarize the entire shared raw interval; planned_measurement_domain channels summarize the complete predeclared test interval. Neither discards any switching edge inside that interval.",
+    "Same code/handshake alone cannot override voltage differences or LTE warnings.",
+    "The union retains every accepted point and switching edge; no alignment, cropping to matching frames, or extrapolation.",
+    "Waveform accuracy comparison is separate from full-code, noise, mismatch, power, and PEX acceptance.",
+    "This helper checks physical CDAC differential and RP/RN/VCM only; detailed digital and reset checks remain the integration analyzer's responsibility.",
+    "Three known LTE warning codes are checked automatically; other warnings, include/model provenance, and suppressed messages still require log review."
+  ]
+}

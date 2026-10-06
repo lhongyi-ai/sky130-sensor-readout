@@ -1,0 +1,23 @@
+{
+  "status": "PREPARED_MINIMAL_OBSERVATION_REQUIRE_SITE_SAVE_VALIDATION",
+  "event_s": 4.0632e-06,
+  "source": "Actual baseline SPECTRE-16780 warning at phase CONV buffer PFET internal body",
+  "new_voltage_observations": [
+    "p2_ams_reset1.phases.XPHASE_XBCONV_B",
+    "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b"
+  ],
+  "already_saved_external_nodes": {
+    "drain": "p2_ams_reset1.conv_e",
+    "source_and_external_bulk": "p2_ams_reset1.vdd"
+  },
+  "questions": [
+    "Does internal-body excursion coincide with the local gate/drain transition?",
+    "Is the small internal-body signal causing harsh local-error or KCL-reference control?"
+  ],
+  "limits": [
+    "Two added voltage channels only; no model changes, leakage, IC, cmin, or bypass.",
+    "Logged primitive name is exact; accepted save syntax and actual PSF trace presence must be verified on the school tool.",
+    "This diagnostic does not assume a vendor model bug.",
+    "When comparing precision, use the same save set in both runs and preserve all original physical channels."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "status": "ALIGNED_FIXTURE_DIAGNOSIS_NOT_NUMERICAL_PASS",
+  "actual_solver_settings_equal": true,
+  "actual_solver": {
+    "reltol": 1e-06,
+    "abstol(V)": 1e-08,
+    "abstol(I)": 1e-13,
+    "maxstep": 2e-09,
+    "gmin": 1e-12,
+    "cmin": 0.0
+  },
+  "half_supply_crossing_time_difference_s_AMS_minus_pure": {
+    "SAMPLE_CMD": 0.0,
+    "CONV": 9.587057710203073e-17,
+    "ACQ": -5.2959887994127874e-17,
+    "TOP": 2.50152546246718e-16,
+    "TOPB": 3.172112976478937e-16,
+    "XPHASE.XPHASE_ACQ_DELAY": -1.5875430310618999e-16
+  },
+  "final_voltage_difference_V_AMS_minus_pure": {
+    "VDD": 0.0,
+    "RP": -8.881784197001252e-16,
+    "RN": -2.220446049250313e-16,
+    "INP": 2.220446049250313e-16,
+    "INN": -8.881784197001252e-16,
+    "SAMPLE_CMD": 0.0,
+    "Q": 3.070876886113183e-13,
+    "QB": -2.4810249199211533e-14,
+    "TOP": 0.0,
+    "TOPB": -6.576689380771489e-17,
+    "ACQ": 0.0,
+    "CONV": -7.053208941073077e-17,
+    "XADC.XADC_DN": -1.1102230246251565e-15,
+    "XADC.XADC_XDP_NL": 1.2253893299029955e-17,
+    "XADC.XADC_DP": 2.220446049250313e-16,
+    "XADC.XADC_XDP_PH": 3.583319943800114e-18,
+    "XADC.XADC_XN11_NL": -8.907001426632197e-18,
+    "XADC.XADC_BN11": -1.9984014443252818e-15,
+    "XADC.XADC_XN11_PH": 1.2481295175588132e-17,
+    "XADC.XADC_BP11": 3.3306690738754696e-16,
+    "XADC.XADC_XN4_NL": 1.3770585200427584e-17,
+    "XADC.XADC_XN4_PH": 7.709680651018841e-17,
+    "XADC.XADC_XP1_NL": 9.715282616549613e-18,
+    "XADC.XADC_XP1_PH": 8.105830019515797e-17,
+    "XADC.XADC_BN0": -1.1102230246251565e-15,
+    "XADC.XADC_BP0": 2.220446049250313e-16,
+    "XADC.XADC_TN": -1.3322676295501878e-15,
+    "XADC.XADC_TP": 0.0,
+    "XADC.XADC_XDP_NLB": 0.0,
+    "XADC.XADC_XDP_PHB": 0.0,
+    "XADC.XADC_XDP_ACQB": 2.286398681501493e-17,
+    "XADC.XADC_XN11_NLB": 0.0,
+    "XADC.XADC_XN11_PHB": 0.0,
+    "XADC.XADC_XN11_ACQB": -3.452080129556941e-17,
+    "XADC.XADC_XN4_NLB": 0.0,
+    "XADC.XADC_XN4_PHB": 0.0,
+    "XADC.XADC_XN4_ACQB": -3.2727606076452453e-17,
+    "XADC.XADC_XP1_NLB": 0.0,
+    "XADC.XADC_XP1_PHB": 0.0,
+    "XADC.XADC_XP1_ACQB": -4.1870691467352185e-17,
+    "XPHASE.XPHASE_TOP_RAW_B": -5.82265006321387e-17,
+    "XPHASE.XPHASE_ACQ_DELAY": 0.0,
+    "XPHASE.XPHASE_CONV_RAW": -1.2008201631947617e-19,
+    "XPHASE.XPHASE_ACQ_RAW": 0.0,
+    "XPHASE.XPHASE_CONV_DELAY": 3.417057964165936e-17,
+    "XPHASE.XPHASE_CMD_B_DELAY": -1.8573685527833094e-17,
+    "XPHASE.XPHASE_CMD_B": 2.3058592634646606e-17
+  },
+  "observed_logic_dead_time_s": 1.1765028325087244e-08,
+  "initial_latch": {
+    "Q_V": 0.8195369585706064,
+    "QB_V": 0.8195369585706064,
+    "eval_V": 0,
+    "assessment": "Symmetric retained-decision NAND latch DC point before first comparator evaluation. Its later state is not an ADC decision."
+  },
+  "limitations": [
+    "Both runs triggered automatic LTE relaxation; agreement does not validate numerical precision.",
+    "Half-supply dead time does not prove absence of analog TG overlap.",
+    "EVAL and DAC bits held zero; no conversion or digital events in these two runs."
+  ],
+  "raw": {
+    "pure": {
+      "sha256": "69f367fd4f5580e5e3a0faf9359584601ec1cc8d2b7a79060e8fc5ba8b78119c",
+      "bytes": 251515775,
+      "sample_points_including_t0": 12553
+    },
+    "ams": {
+      "sha256": "7e6eb18d153c44052a0447b8ce1436d28a1acb4a45137de7397e7acb16ad700e",
+      "bytes": 165760973,
+      "sample_points_including_t0": 12612
+    }
+  }
+}

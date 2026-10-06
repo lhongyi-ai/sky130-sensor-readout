@@ -8,11 +8,11 @@ On load, v2 releases read-only references left by the old script; it stops if it
 
 ## Instructions
 
-1. Upload `p1_fix_pulses_v2.il` from the same directory to `/home/compute/l.hongyi/cadence_skywater/` on Linux. It is a single file requiring no extraction.
+1. Upload `p1_fix_pulses_v2.il` from the same directory to `/home/cadence-user/cadence_skywater/` on Linux. It is a single file requiring no extraction.
 2. If `p1b_tb_rc` or `p1b_tb_step` schematic editing windows are open, save and close both; keep Cadence CIW open. Run in the bottom CIW command field:
 
 ```lisp
-load("/home/compute/l.hongyi/cadence_skywater/p1_fix_pulses_v2.il")
+load("/home/cadence-user/cadence_skywater/p1_fix_pulses_v2.il")
 ```
 
 `function ... redefined` in the same CIW indicates that new function versions were loaded. A completed repair should show two `P1_PULSE_SOURCE_SAVED` messages, ending with:

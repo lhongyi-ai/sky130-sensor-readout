@@ -1,0 +1,511 @@
+{
+  "status": "NATIVE_NETLIST_AUDIT_FAIL",
+  "scope": "Flat native connectivity and requested school_r1 parameters only; no simulator/performance/physical acceptance.",
+  "errors": [
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VRLONG",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VRISO",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VRZ",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VCUNIT",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VCBANK",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VCFILT",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VDD",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VDN",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VGN",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VDP",
+      "actual": null,
+      "message": "'dc'"
+    },
+    {
+      "kind": "INVALID_DC_STIMULUS",
+      "instance": "VGP",
+      "actual": null,
+      "message": "'dc'"
+    }
+  ],
+  "instances": [
+    {
+      "name": "N80",
+      "originalpath": "N80",
+      "kind": "mos",
+      "line": 5,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "DN",
+        "GN",
+        "0",
+        "0"
+      ],
+      "exported_parameters": {
+        "w": "(40u)",
+        "l": "1u",
+        "as": "10.6p",
+        "ad": "5.6p",
+        "ps": "80.53u",
+        "pd": "40.28u",
+        "m": "(1)*(2)"
+      }
+    },
+    {
+      "name": "P180",
+      "originalpath": "P180",
+      "kind": "mos",
+      "line": 9,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "DP",
+        "GP",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(45u)",
+        "l": "1u",
+        "as": "9.1125p",
+        "ad": "6.3p",
+        "ps": "67.905u",
+        "pd": "45.28u",
+        "m": "(1)*(4)"
+      }
+    },
+    {
+      "name": "P64",
+      "originalpath": "P64",
+      "kind": "mos",
+      "line": 7,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "DP",
+        "GP",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "1u",
+        "as": "8.48p",
+        "ad": "4.48p",
+        "ps": "64.53u",
+        "pd": "32.28u",
+        "m": "(1)*(2)"
+      }
+    },
+    {
+      "name": "RLONG",
+      "originalpath": "RLONG",
+      "kind": "resistor",
+      "line": 12,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "RLONGT",
+        "0",
+        "0"
+      ],
+      "exported_parameters": {
+        "r": "111.831K",
+        "l": "100u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "VRLONG",
+      "originalpath": "VRLONG",
+      "kind": "testbench_source",
+      "line": 23,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "RLONGT",
+        "0"
+      ],
+      "exported_parameters": {
+        "mag": "1",
+        "type": "dc"
+      }
+    },
+    {
+      "name": "RISO",
+      "originalpath": "RISO",
+      "kind": "resistor",
+      "line": 11,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "RISOT",
+        "0",
+        "0"
+      ],
+      "exported_parameters": {
+        "r": "1.19625K",
+        "l": "545n",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "VRISO",
+      "originalpath": "VRISO",
+      "kind": "testbench_source",
+      "line": 22,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "RISOT",
+        "0"
+      ],
+      "exported_parameters": {
+        "mag": "1",
+        "type": "dc"
+      }
+    },
+    {
+      "name": "RZ",
+      "originalpath": "RZ",
+      "kind": "resistor",
+      "line": 24,
+      "model": "res_high_po_0p69",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "RZT",
+        "0",
+        "0"
+      ],
+      "exported_parameters": {
+        "r": "810.013",
+        "l": "855n",
+        "w": "690n"
+      }
+    },
+    {
+      "name": "VRZ",
+      "originalpath": "VRZ",
+      "kind": "testbench_source",
+      "line": 21,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "RZT",
+        "0"
+      ],
+      "exported_parameters": {
+        "mag": "1",
+        "type": "dc"
+      }
+    },
+    {
+      "name": "CUNIT",
+      "originalpath": "CUNIT",
+      "kind": "mim",
+      "line": 27,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "CUNITT",
+        "0"
+      ],
+      "exported_parameters": {
+        "l": "4u",
+        "w": "4u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "VCUNIT",
+      "originalpath": "VCUNIT",
+      "kind": "testbench_source",
+      "line": 20,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "CUNITT",
+        "0"
+      ],
+      "exported_parameters": {
+        "mag": "1",
+        "type": "dc"
+      }
+    },
+    {
+      "name": "CBANK",
+      "originalpath": "CBANK",
+      "kind": "mim",
+      "line": 26,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "CBANKT",
+        "0"
+      ],
+      "exported_parameters": {
+        "l": "4u",
+        "w": "4u",
+        "m": "4096"
+      }
+    },
+    {
+      "name": "VCBANK",
+      "originalpath": "VCBANK",
+      "kind": "testbench_source",
+      "line": 19,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "CBANKT",
+        "0"
+      ],
+      "exported_parameters": {
+        "mag": "1",
+        "type": "dc"
+      }
+    },
+    {
+      "name": "CFILT",
+      "originalpath": "CFILT",
+      "kind": "mim",
+      "line": 25,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "CFILTT",
+        "0"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "VCFILT",
+      "originalpath": "VCFILT",
+      "kind": "testbench_source",
+      "line": 18,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "CFILTT",
+        "0"
+      ],
+      "exported_parameters": {
+        "mag": "1",
+        "type": "dc"
+      }
+    },
+    {
+      "name": "VDD",
+      "originalpath": "VDD",
+      "kind": "testbench_source",
+      "line": 17,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "VDD",
+        "0"
+      ],
+      "exported_parameters": {
+        "type": "dc"
+      }
+    },
+    {
+      "name": "VDN",
+      "originalpath": "VDN",
+      "kind": "testbench_source",
+      "line": 16,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "DN",
+        "0"
+      ],
+      "exported_parameters": {
+        "type": "dc"
+      }
+    },
+    {
+      "name": "VGN",
+      "originalpath": "VGN",
+      "kind": "testbench_source",
+      "line": 15,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "GN",
+        "0"
+      ],
+      "exported_parameters": {
+        "type": "dc"
+      }
+    },
+    {
+      "name": "VDP",
+      "originalpath": "VDP",
+      "kind": "testbench_source",
+      "line": 14,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "DP",
+        "0"
+      ],
+      "exported_parameters": {
+        "type": "dc"
+      }
+    },
+    {
+      "name": "VGP",
+      "originalpath": "VGP",
+      "kind": "testbench_source",
+      "line": 13,
+      "model": "vsource",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "GP",
+        "0"
+      ],
+      "exported_parameters": {
+        "type": "dc"
+      }
+    }
+  ],
+  "cdf_r_usage": "Recorded for traceability only; never used as actual model resistance or acceptance threshold.",
+  "headers": [],
+  "expected_count": 20,
+  "actual_count": 20,
+  "expected_counts_by_kind": {
+    "mos": 3,
+    "resistor": 3,
+    "testbench_source": 11,
+    "mim": 3
+  },
+  "native_net_count": 12,
+  "error_count": 11,
+  "limitations": [
+    "Source/drain geometry is recorded and required to be nonnegative when exported; physical equivalence is not established.",
+    "MIM multiplier matches requested netlist only; actual capacitance/statistical averaging requires simulation/model evidence.",
+    "No model loading, Spectre success, waveform, stability, noise, PVT, DRC/LVS or parasitic qualification is inferred."
+  ],
+  "inputs": {
+    "v2/cadence/linuxlab_20260923/mapping_probe_r2_design.json": "7d7272b8b91b929ae8138ef956e603606c8b43008716185e92d3c9ef25d1a012",
+    "v2/analog/frontend/cadence_20260923/mapping_probe_r2_audit_expectation.json": "11969475b7d0e334f0c9355bab9043664afdb7b2f8894caef106701c2626c64f",
+    "v2/cadence/linuxlab_20260923/runs/p2fe_mapping_r1_20260923T095556327616Z/netlist": "e86845f9811d2790c3998c19c61b14f9d6caee72cc2eb2701ad6047cb4e133f8"
+  },
+  "expectation_translation": "Mechanical translation from live probe design rows: vdc property renamed logical dc; resistor fixed-width identity supplied as segW; no values learned from output netlist."
+}

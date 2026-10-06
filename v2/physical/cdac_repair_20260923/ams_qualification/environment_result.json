@@ -1,0 +1,124 @@
+{
+  "status": "PASS_ENVIRONMENT_RC_INTERFACE_ONLY",
+  "full_adc_status": "NOT_RUN",
+  "scope": "School Xcelium/Spectre explicit L2E, native Spectre RC subcircuit binding, E2L, digital inversion, L2E and second native RC roundtrip. No ADC, comparator or PDK in this test.",
+  "versions": {
+    "xrun": "22.09-s013 64bit",
+    "Spectre_installation": "SPECTRE211"
+  },
+  "exit_code": 0,
+  "checked_points": [
+    {
+      "time_ns": 20.0,
+      "command": 0,
+      "sampled": 0,
+      "returned": 1,
+      "valid": "11"
+    },
+    {
+      "time_ns": 40.0,
+      "command": 1,
+      "sampled": 1,
+      "returned": 0,
+      "valid": "11"
+    },
+    {
+      "time_ns": 60.0,
+      "command": 0,
+      "sampled": 0,
+      "returned": 1,
+      "valid": "11"
+    },
+    {
+      "time_ns": 80.0,
+      "command": 1,
+      "sampled": 1,
+      "returned": 0,
+      "valid": "11"
+    },
+    {
+      "time_ns": 100.0,
+      "command": 0,
+      "sampled": 0,
+      "returned": 1,
+      "valid": "11"
+    },
+    {
+      "time_ns": 120.0,
+      "command": 1,
+      "sampled": 1,
+      "returned": 0,
+      "valid": "11"
+    },
+    {
+      "time_ns": 140.0,
+      "command": 0,
+      "sampled": 0,
+      "returned": 1,
+      "valid": "11"
+    },
+    {
+      "time_ns": 160.0,
+      "command": 1,
+      "sampled": 1,
+      "returned": 0,
+      "valid": "11"
+    }
+  ],
+  "pass_marker": "P1_AMS_ENV_PASS checks=8 scope=RC_INTERFACE_ONLY_NOT_ADC",
+  "actual_solver_summary": {
+    "errors": 0,
+    "warnings": 0,
+    "notices": 3,
+    "a_to_d_events": 30,
+    "d_to_a_events": 23,
+    "direct_digital_accesses": 32
+  },
+  "actually_checked_out_features": [
+    "Virtuoso_Multi_mode_Simulation",
+    "Spectre_AMS_MMSIM_Lk"
+  ],
+  "remaining_warnings": [
+    "Two Xcelium glibc-version support warnings; test still completed normally."
+  ],
+  "earlier_attempts": [
+    {
+      "attempt": "001",
+      "status": "FAILED",
+      "reason": "Mixed Cadence product PATH: xrun failed to resolve spectre_compatible_version.xml."
+    },
+    {
+      "attempt": "002",
+      "status": "FAILED",
+      "reason": "Initial E2L model assigned event regs inside analog block, Xcelium ILLAREG. Fixed with event-domain above/cross handlers."
+    }
+  ],
+  "repairs": [
+    "Child-process PATH selects xrun/xmvlog/xmelab/xmsim/cds_root from the same Xcelium installation.",
+    "Explicit E2L event-kernel register assignments; no fabricated comparator output."
+  ],
+  "private_evidence_archive_sha256": "93f2f742b26600bd14120bbf9c7d42a4452a90ff01311da12d901b9c40d38d98",
+  "input_files": {
+    "p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "p1_env_top.vams": "842ddbf79cc52157b2e941541501bb0f92f8dde8a157021b7ef3c4712f9b5862",
+    "amsdControl.scs": "7ecf08f1b77b6d975ccbb00366facba60857bc7d485deef6077c4a239c937fe5"
+  },
+  "raw_psf_files": {
+    "env_tran.tran.tran": {
+      "sha256": "3c35e6d9178efed9051f23abe64f3ccfb2557aef2e6888f3c4c2de7b6eae785e",
+      "bytes": 3908
+    },
+    "env_tran.tran.tran.psfxl": {
+      "sha256": "5ed11985f568a19c6919f6fe83bb76354e7c73b79ad9db33688ade58c46154ed",
+      "bytes": 38800
+    },
+    "env_tran.tran.tran.sig": {
+      "sha256": "2afa322b6b3bda8434231f5831a42febea104e66fdcd3628abca9a32580109dc",
+      "bytes": 3033
+    },
+    "logFile": {
+      "sha256": "f63903abde0258b6a8162bbc8926bb7138ecb5b4635885ce1c3d3daf9d9defc5",
+      "bytes": 663
+    }
+  }
+}

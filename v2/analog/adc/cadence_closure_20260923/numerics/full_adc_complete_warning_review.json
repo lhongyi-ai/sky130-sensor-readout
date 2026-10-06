@@ -1,0 +1,51 @@
+{
+  "source_path": "../runs/task_20260924T050345927509Z/design/xrun.log",
+  "sha256": "0b65c799f83079f26cbcf792c6999cebe1241e2cb9588ec50420a90f16a805b8",
+  "simulator_summary": {
+    "errors": 0,
+    "warnings": 2,
+    "notices": 7
+  },
+  "warning_counts": {
+    "SPECTRE-16780": 2
+  },
+  "warning_time_counts": {
+    "SPECTRE-16780": {
+      "4.0632 us": 1,
+      "14.0751 us": 1
+    }
+  },
+  "warning_device_counts": {
+    "SPECTRE-16780": {
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b": 1,
+      "p2_ams_reset1.adc.XADC_XP2_XCM_XP.msky130_fd_pr__pfet_01v8_lvt:int_b": 1
+    }
+  },
+  "warning_records": [
+    {
+      "line": 483,
+      "code": "SPECTRE-16780",
+      "time_text": "4.0632 us",
+      "device": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b"
+    },
+    {
+      "line": 489,
+      "code": "SPECTRE-16780",
+      "time_text": "14.0751 us",
+      "device": "p2_ams_reset1.adc.XADC_XP2_XCM_XP.msky130_fd_pr__pfet_01v8_lvt:int_b"
+    }
+  ],
+  "statistics": {
+    "accepted_steps": null,
+    "LTE_rejected_steps": null,
+    "Newton_rejected_steps": null,
+    "minimum_accepted_step_s": null,
+    "drastic_step_size_changes": null,
+    "recovery_steps": null
+  },
+  "further_warning_suppression": false,
+  "suppressed_warning_total": 0,
+  "LTE_control_failure_observed": true,
+  "accuracy_pass": false,
+  "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+}

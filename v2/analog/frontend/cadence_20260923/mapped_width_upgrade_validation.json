@@ -1,0 +1,14 @@
+{
+  "change": "Explicit mapped_parameters.W with retained source W and strict decimal micrometre target",
+  "previous_auditor_sha256": "4717eb5ce83054a0cef7bdeb41ac092810ceb241b3e4d7ff26d779994e2c2e17",
+  "current_auditor_sha256": "2b2f93025f3840b1d350a8f3abf13abc916f6326681d605c3b63e8465dfe327c",
+  "unit_tests": {
+    "command": "python3 -m unittest -v test_native_netlist_audit.py",
+    "tests_run": 15,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0
+  },
+  "real_r1_regression": "native_r1_mapped_width_compatibility_audit.json",
+  "historical_r1_result_files_rewritten": false
+}

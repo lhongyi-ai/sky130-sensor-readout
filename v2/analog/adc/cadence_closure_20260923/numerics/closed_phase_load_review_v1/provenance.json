@@ -1,0 +1,21 @@
+{
+  "frozen_local_manifest_sha256": "98e90fcab87d9d045fef2cf2cf8124adaa9c7f473e4617133c7f4cd87ec9dbae",
+  "actual_run_manifest_sha256": {
+    "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T073403971296Z/design/results/baseline_20260924T073407Z_2387831": "98e90fcab87d9d045fef2cf2cf8124adaa9c7f473e4617133c7f4cd87ec9dbae",
+    "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T073403971296Z/design/results/strict_20260924T073433Z_2388411": "98e90fcab87d9d045fef2cf2cf8124adaa9c7f473e4617133c7f4cd87ec9dbae"
+  },
+  "actual_native_sha256": {
+    "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T073403971296Z/design/results/baseline_20260924T073407Z_2387831": "81b79bc319555dfb828dfe62cd32223c0cf22033986033307bf73c2971cc4d79",
+    "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T073403971296Z/design/results/strict_20260924T073433Z_2388411": "81b79bc319555dfb828dfe62cd32223c0cf22033986033307bf73c2971cc4d79"
+  },
+  "frozen_native_sha256": "81b79bc319555dfb828dfe62cd32223c0cf22033986033307bf73c2971cc4d79",
+  "original_native_still_matches": true,
+  "every_retained_native_record_count": 654,
+  "direct_CONV_gate_load_count": 104,
+  "analysis_sha256": {
+    "analyze.py": "522383f0728a3bd5baea235beb46261d9bf347634668e393f40d8c42e1b07f5e",
+    "psf_stream.py": "5f32f36c44c806db556bd0efd5e8de9239884440ae21c65a71b4554dc6375938",
+    "summarize.py": "e9c45e67e356f845f4b5d632f350804edce7bc122a12a15f4d66b09e0754e3b7"
+  },
+  "tool_model_note": "Both logs useSpectre21.1.0.132 and samePDKinclude. Thisrunner does notcontain a separatebefore/afterPDKfilehash capture; frozen native and input hashes verified. NoPDKbody copied/edited."
+}

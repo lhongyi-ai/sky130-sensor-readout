@@ -4,7 +4,7 @@ Cadence was deferred at the user's request. Evidence in this directory belongs t
 
 Original qualification used the IIC-OSIC-TOOLS image `hpretl/iic-osic-tools@sha256:3c371645b19c6f6564dc8c7b21e39ad1c1833d274fe5b85639afe1ba9d7987e7`, with the PDK installed at container path `/foss/pdks/sky130A`, resolved revision `026824c7969ce6f4fc9678e6ca04b0a06a596c4b`. The historical container name was `sky130-v2-open-work`; historical records are retained.
 
-The actual 2026-09-10 runtime container was `sky130-v2-resume-20260910`, using the same image and PDK with networking disabled. The complete working copy is at `/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota`; its root is mounted read-only at `/repo`, with only the new-version directory mounted writable at `/repo/v2`. New runs neither write the old working copy nor start Cadence.
+The actual 2026-09-10 runtime container was `sky130-v2-resume-20260910`, using the same image and PDK with networking disabled. The complete working copy is at `/path/to/sky130-two-stage-ota`; its root is mounted read-only at `/repo`, with only the new-version directory mounted writable at `/repo/v2`. New runs neither write the old working copy nor start Cadence.
 
 Additional finding: available VACASK runs intrinsic RC random noise, but its BSIM4v8 noise is not equivalent to the SKY130 BSIM4v5 selected by current ngspice47, so qualification fails. See [Noise qualification from this round](../verification/noise_20260910/README.md); installed software does not imply usable process noise.
 

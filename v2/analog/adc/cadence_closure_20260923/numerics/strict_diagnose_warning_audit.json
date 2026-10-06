@@ -1,0 +1,1476 @@
+{
+  "status": "STRICT_DIAGNOSE_COMPLETED_NUMERICAL_FAILURE_PRESERVED",
+  "source": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T020941566170Z/spectre.out",
+  "sha256": "6ff7e0c15588226af82cfeae6efeefe1c25bc100f2bbaf4b025585607ca30191",
+  "printed_warning_counts": {
+    "AHDLLINT-8014": 64,
+    "SPECTRE-16266": 144,
+    "SPECTRE-16780": 9
+  },
+  "warning_time_counts": {
+    "AHDLLINT-8014": {
+      "1 us": 49,
+      "1.00046 us": 5,
+      "1.00056 us": 7,
+      "1.00062 us": 1,
+      "1.00067 us": 1,
+      "5.16685 us": 1
+    },
+    "SPECTRE-16266": {
+      "1 us": 3,
+      "1.00045 us": 1,
+      "1.00046 us": 1,
+      "1.00056 us": 19,
+      "1.0006 us": 1,
+      "1.00062 us": 2,
+      "1.00064 us": 1,
+      "1.00067 us": 4,
+      "1.001 us": 7,
+      "5.16685 us": 2,
+      "5.16689 us": 1,
+      "5.1669 us": 5,
+      "5.3125 us": 2,
+      "5.31419 us": 1,
+      "5.31421 us": 1,
+      "5.31422 us": 1,
+      "5.9375 us": 2,
+      "5.93785 us": 1,
+      "5.93915 us": 1,
+      "5.93916 us": 1,
+      "5.9392 us": 1,
+      "6.5625 us": 2,
+      "6.5635 us": 1,
+      "6.56416 us": 1,
+      "6.5642 us": 3,
+      "7.04048 us": 3,
+      "7.04052 us": 2,
+      "7.04053 us": 4,
+      "7.1875 us": 1,
+      "7.18904 us": 2,
+      "7.18913 us": 1,
+      "7.18914 us": 1,
+      "7.18918 us": 13,
+      "7.18919 us": 1,
+      "7.18921 us": 2,
+      "7.8125 us": 2,
+      "7.81413 us": 1,
+      "7.81414 us": 3,
+      "7.81418 us": 14,
+      "8.4375 us": 3,
+      "8.43913 us": 1,
+      "8.43915 us": 1,
+      "8.50055 us": 1,
+      "9.0625 us": 2,
+      "9.06404 us": 1,
+      "9.06414 us": 2,
+      "9.06418 us": 18
+    },
+    "SPECTRE-16780": {
+      "1.00045 us": 1,
+      "5.31426 us": 1,
+      "5.93905 us": 1,
+      "5.93919 us": 1,
+      "6.56419 us": 1,
+      "7.04051 us": 1,
+      "7.81421 us": 1,
+      "9.06256 us": 1,
+      "9.06417 us": 1
+    }
+  },
+  "warning_device_counts": {
+    "AHDLLINT-8014": {
+      "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR7_XR.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRBIAS_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR7_XR.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR7_XR.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRBIAS_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR7_XR.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRBIAS_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_1.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_2.rend": 1,
+      "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_1.rend": 1,
+      "XCMP.XADC_XPRE_XRBIAS_XR_SEG_2.rhrpoly_5p73": 1,
+      "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_1.rend": 1
+    },
+    "SPECTRE-16780": {
+      "XCMP.XADC_XCMP_XRAND_XINV_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "XCMP.XADC_XCMP_XSOR_XNOR_XN1.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "XCMP.XADC_XCMP_XBN2_XN.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "XCMP.XADC_XCMP_XRESET_XN1.msky130_fd_pr__nfet_01v8:int_b": 2,
+      "XCMP.XADC_XCMP_XSOR_XNOR_XN2.msky130_fd_pr__nfet_01v8:dbnode": 1,
+      "XCMP.XADC_XCMP_XSET_XN2.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "XCMP.XADC_XCMP_XCORE_XIP.msky130_fd_pr__nfet_01v8:int_b": 1,
+      "XCMP.XADC_XCMP_XSET_XN1.msky130_fd_pr__nfet_01v8:int_b": 1
+    }
+  },
+  "warning_records": [
+    {
+      "line": 509,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 510,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 542,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR7_XR.rend"
+    },
+    {
+      "line": 621,
+      "code": "SPECTRE-16266",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 672,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_1.rend"
+    },
+    {
+      "line": 673,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRBIAS_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 674,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 675,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 676,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 677,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 678,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 679,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 680,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 681,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 731,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 732,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 786,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_1.rend"
+    },
+    {
+      "line": 787,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_2.rend"
+    },
+    {
+      "line": 788,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_2.rend"
+    },
+    {
+      "line": 789,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 790,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 791,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR7_XR.rhrpoly_5p73"
+    },
+    {
+      "line": 792,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 793,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 824,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 855,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 856,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR7_XR.rhrpoly_5p73"
+    },
+    {
+      "line": 887,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRBIAS_XR_SEG_2.rend"
+    },
+    {
+      "line": 888,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 919,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_1.rend"
+    },
+    {
+      "line": 920,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 995,
+      "code": "SPECTRE-16266",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 1354,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_2.rend"
+    },
+    {
+      "line": 1355,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_2.rend"
+    },
+    {
+      "line": 1356,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 1707,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 1734,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 1811,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_1.rend"
+    },
+    {
+      "line": 1812,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 1813,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 1871,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_1.rend"
+    },
+    {
+      "line": 1872,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_1.rend"
+    },
+    {
+      "line": 1873,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_2.rend"
+    },
+    {
+      "line": 1974,
+      "code": "SPECTRE-16266",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 2303,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_2.rend"
+    },
+    {
+      "line": 2304,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_1.rend"
+    },
+    {
+      "line": 2305,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_2.rend"
+    },
+    {
+      "line": 2306,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR7_XR.rend"
+    },
+    {
+      "line": 2307,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 2357,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRBIAS_XR_SEG_1.rend"
+    },
+    {
+      "line": 2438,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_2.rend"
+    },
+    {
+      "line": 2439,
+      "code": "AHDLLINT-8014",
+      "time_text": "1 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 2756,
+      "code": "SPECTRE-16780",
+      "time_text": "1.00045 us",
+      "device": "XCMP.XADC_XCMP_XRAND_XINV_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 2982,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00045 us",
+      "device": null
+    },
+    {
+      "line": 3229,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 3305,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00046 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_1.rend"
+    },
+    {
+      "line": 3306,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00046 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_1.rend"
+    },
+    {
+      "line": 3414,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00046 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_1.rhrpoly_5p73"
+    },
+    {
+      "line": 3537,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00046 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_2.rend"
+    },
+    {
+      "line": 3587,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00046 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_2.rend"
+    },
+    {
+      "line": 3983,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_2.rend"
+    },
+    {
+      "line": 4080,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 4342,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 4697,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 5081,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 5407,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.rend"
+    },
+    {
+      "line": 5727,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_1.rend"
+    },
+    {
+      "line": 5954,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 6310,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 6640,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 6939,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 7296,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 7834,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_2.rend"
+    },
+    {
+      "line": 7973,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 8035,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_1.rend"
+    },
+    {
+      "line": 8553,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 8851,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 9155,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 9476,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 9836,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 10169,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 10501,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 10526,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_1.rend"
+    },
+    {
+      "line": 10838,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 10875,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00056 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_2.rend"
+    },
+    {
+      "line": 11130,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 12154,
+      "code": "SPECTRE-16266",
+      "time_text": "1.0006 us",
+      "device": null
+    },
+    {
+      "line": 12420,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 12741,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00062 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_1.rend"
+    },
+    {
+      "line": 13665,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 14015,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 14612,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 14873,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 15486,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 16103,
+      "code": "AHDLLINT-8014",
+      "time_text": "1.00067 us",
+      "device": "XCMP.XADC_XPRE_XRBIAS_XR_SEG_2.rhrpoly_5p73"
+    },
+    {
+      "line": 16352,
+      "code": "SPECTRE-16266",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 16826,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 17110,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 17444,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 17772,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 18110,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 19010,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 19391,
+      "code": "SPECTRE-16266",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 21137,
+      "code": "SPECTRE-16266",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 21537,
+      "code": "SPECTRE-16266",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 21666,
+      "code": "AHDLLINT-8014",
+      "time_text": "5.16685 us",
+      "device": "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_1.rend"
+    },
+    {
+      "line": 22666,
+      "code": "SPECTRE-16266",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 23491,
+      "code": "SPECTRE-16266",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 23721,
+      "code": "SPECTRE-16266",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 24383,
+      "code": "SPECTRE-16266",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 24582,
+      "code": "SPECTRE-16266",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 24882,
+      "code": "SPECTRE-16266",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 26267,
+      "code": "SPECTRE-16266",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 26760,
+      "code": "SPECTRE-16266",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 29595,
+      "code": "SPECTRE-16266",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 31027,
+      "code": "SPECTRE-16266",
+      "time_text": "5.31421 us",
+      "device": null
+    },
+    {
+      "line": 31404,
+      "code": "SPECTRE-16266",
+      "time_text": "5.31422 us",
+      "device": null
+    },
+    {
+      "line": 32730,
+      "code": "SPECTRE-16780",
+      "time_text": "5.31426 us",
+      "device": "XCMP.XADC_XCMP_XSOR_XNOR_XN1.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 34000,
+      "code": "SPECTRE-16266",
+      "time_text": "5.9375 us",
+      "device": null
+    },
+    {
+      "line": 34483,
+      "code": "SPECTRE-16266",
+      "time_text": "5.9375 us",
+      "device": null
+    },
+    {
+      "line": 34819,
+      "code": "SPECTRE-16266",
+      "time_text": "5.93785 us",
+      "device": null
+    },
+    {
+      "line": 35865,
+      "code": "SPECTRE-16780",
+      "time_text": "5.93905 us",
+      "device": "XCMP.XADC_XCMP_XBN2_XN.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 36260,
+      "code": "SPECTRE-16266",
+      "time_text": "5.93915 us",
+      "device": null
+    },
+    {
+      "line": 37025,
+      "code": "SPECTRE-16266",
+      "time_text": "5.93916 us",
+      "device": null
+    },
+    {
+      "line": 38419,
+      "code": "SPECTRE-16780",
+      "time_text": "5.93919 us",
+      "device": "XCMP.XADC_XCMP_XRESET_XN1.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 38714,
+      "code": "SPECTRE-16266",
+      "time_text": "5.9392 us",
+      "device": null
+    },
+    {
+      "line": 41263,
+      "code": "SPECTRE-16266",
+      "time_text": "6.5625 us",
+      "device": null
+    },
+    {
+      "line": 41511,
+      "code": "SPECTRE-16266",
+      "time_text": "6.5625 us",
+      "device": null
+    },
+    {
+      "line": 42409,
+      "code": "SPECTRE-16266",
+      "time_text": "6.5635 us",
+      "device": null
+    },
+    {
+      "line": 43717,
+      "code": "SPECTRE-16266",
+      "time_text": "6.56416 us",
+      "device": null
+    },
+    {
+      "line": 43996,
+      "code": "SPECTRE-16780",
+      "time_text": "6.56419 us",
+      "device": "XCMP.XADC_XCMP_XRESET_XN1.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 44317,
+      "code": "SPECTRE-16266",
+      "time_text": "6.5642 us",
+      "device": null
+    },
+    {
+      "line": 44764,
+      "code": "SPECTRE-16266",
+      "time_text": "6.5642 us",
+      "device": null
+    },
+    {
+      "line": 45359,
+      "code": "SPECTRE-16266",
+      "time_text": "6.5642 us",
+      "device": null
+    },
+    {
+      "line": 47058,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04048 us",
+      "device": null
+    },
+    {
+      "line": 47356,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04048 us",
+      "device": null
+    },
+    {
+      "line": 47871,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04048 us",
+      "device": null
+    },
+    {
+      "line": 48843,
+      "code": "SPECTRE-16780",
+      "time_text": "7.04051 us",
+      "device": "XCMP.XADC_XCMP_XSOR_XNOR_XN2.msky130_fd_pr__nfet_01v8:dbnode"
+    },
+    {
+      "line": 49133,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04052 us",
+      "device": null
+    },
+    {
+      "line": 49308,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04052 us",
+      "device": null
+    },
+    {
+      "line": 50052,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04053 us",
+      "device": null
+    },
+    {
+      "line": 50281,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04053 us",
+      "device": null
+    },
+    {
+      "line": 50738,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04053 us",
+      "device": null
+    },
+    {
+      "line": 50984,
+      "code": "SPECTRE-16266",
+      "time_text": "7.04053 us",
+      "device": null
+    },
+    {
+      "line": 52444,
+      "code": "SPECTRE-16266",
+      "time_text": "7.1875 us",
+      "device": null
+    },
+    {
+      "line": 53501,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18904 us",
+      "device": null
+    },
+    {
+      "line": 53749,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18904 us",
+      "device": null
+    },
+    {
+      "line": 54291,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18913 us",
+      "device": null
+    },
+    {
+      "line": 54819,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18914 us",
+      "device": null
+    },
+    {
+      "line": 56060,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 56238,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 56565,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 57066,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 57552,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 57854,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 58349,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 58648,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 59166,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 59716,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 60486,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 60732,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 60951,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18918 us",
+      "device": null
+    },
+    {
+      "line": 61405,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18919 us",
+      "device": null
+    },
+    {
+      "line": 62243,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18921 us",
+      "device": null
+    },
+    {
+      "line": 62692,
+      "code": "SPECTRE-16266",
+      "time_text": "7.18921 us",
+      "device": null
+    },
+    {
+      "line": 64115,
+      "code": "SPECTRE-16266",
+      "time_text": "7.8125 us",
+      "device": null
+    },
+    {
+      "line": 64880,
+      "code": "SPECTRE-16266",
+      "time_text": "7.8125 us",
+      "device": null
+    },
+    {
+      "line": 66315,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81413 us",
+      "device": null
+    },
+    {
+      "line": 66831,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81414 us",
+      "device": null
+    },
+    {
+      "line": 67052,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81414 us",
+      "device": null
+    },
+    {
+      "line": 67377,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81414 us",
+      "device": null
+    },
+    {
+      "line": 68237,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 68529,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 68848,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 69506,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 70437,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 71055,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 71413,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 71905,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 72152,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 72414,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 72616,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 73060,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 73279,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 73525,
+      "code": "SPECTRE-16266",
+      "time_text": "7.81418 us",
+      "device": null
+    },
+    {
+      "line": 73849,
+      "code": "SPECTRE-16780",
+      "time_text": "7.81421 us",
+      "device": "XCMP.XADC_XCMP_XSET_XN2.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 75598,
+      "code": "SPECTRE-16266",
+      "time_text": "8.4375 us",
+      "device": null
+    },
+    {
+      "line": 75845,
+      "code": "SPECTRE-16266",
+      "time_text": "8.4375 us",
+      "device": null
+    },
+    {
+      "line": 76374,
+      "code": "SPECTRE-16266",
+      "time_text": "8.4375 us",
+      "device": null
+    },
+    {
+      "line": 77811,
+      "code": "SPECTRE-16266",
+      "time_text": "8.43913 us",
+      "device": null
+    },
+    {
+      "line": 78152,
+      "code": "SPECTRE-16266",
+      "time_text": "8.43915 us",
+      "device": null
+    },
+    {
+      "line": 79529,
+      "code": "SPECTRE-16266",
+      "time_text": "8.50055 us",
+      "device": null
+    },
+    {
+      "line": 81948,
+      "code": "SPECTRE-16266",
+      "time_text": "9.0625 us",
+      "device": null
+    },
+    {
+      "line": 82875,
+      "code": "SPECTRE-16266",
+      "time_text": "9.0625 us",
+      "device": null
+    },
+    {
+      "line": 83425,
+      "code": "SPECTRE-16780",
+      "time_text": "9.06256 us",
+      "device": "XCMP.XADC_XCMP_XCORE_XIP.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 83893,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06404 us",
+      "device": null
+    },
+    {
+      "line": 84715,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06414 us",
+      "device": null
+    },
+    {
+      "line": 84962,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06414 us",
+      "device": null
+    },
+    {
+      "line": 85246,
+      "code": "SPECTRE-16780",
+      "time_text": "9.06417 us",
+      "device": "XCMP.XADC_XCMP_XSET_XN1.msky130_fd_pr__nfet_01v8:int_b"
+    },
+    {
+      "line": 85603,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 86172,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 86579,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 86973,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 87272,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 87518,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 87952,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 88216,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 88511,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 89037,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 89273,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 89521,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 89793,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 90090,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 90430,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 90679,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 91143,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    },
+    {
+      "line": 91388,
+      "code": "SPECTRE-16266",
+      "time_text": "9.06418 us",
+      "device": null
+    }
+  ],
+  "accepted_steps": 48095,
+  "accepted_steps_lt_1ps": 23232,
+  "minimum_accepted_step_s": 1.854155e-18,
+  "LTE_rejected_steps": 1990,
+  "Newton_rejected_steps": 2062,
+  "drastic_step_size_changes": 231,
+  "recovery_steps": 7629,
+  "interpretation": [
+    "AHDLLINT-8014 is a nonlinear high-poly bsource static-matrix warning during Newton iterations; causality is not established.",
+    "SPECTRE-16266 explicitly states LTE requirements were ignored because of convergence difficulty. ltethstep=0 must not be treated as a blanket prohibition of all recovery mechanisms.",
+    "SPECTRE-16780 is temporary LTE relaxation at device-internal body signals; all nine occur in comparator switching logic.",
+    "A clean error count does not certify numerical convergence.",
+    "Internal body nodes are solver equations, not user-authored floating bulk terminals. Do not infer missing bulk connection from node labels."
+  ]
+}

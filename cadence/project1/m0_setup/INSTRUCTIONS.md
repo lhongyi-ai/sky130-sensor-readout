@@ -14,7 +14,7 @@ unzip -n project1_m0_setup_v0.1.0.zip
 Enter in the already-running Cadence CIW:
 
 ```lisp
-load("/home/compute/l.hongyi/cadence_skywater/project1_handoff/m0_setup_v0_1/create_tb.il")
+load("/home/cadence-user/cadence_skywater/project1_handoff/m0_setup_v0_1/create_tb.il")
 ```
 
 Expected: P1_M0_TOPOLOGY_CREATED appears in CIW. Check schCheck diagnostics; this text alone does not establish that the circuit check passed. On error, do not rerun or delete existing cells; return the CIW error text. A partial circuit may already exist in memory or the library and must be diagnosed first.
@@ -40,7 +40,7 @@ Inspect VD and VG separately: DC voltage should be 0.9 and VGS. Run Check and Sa
 - Setup → Model Libraries: add the model candidate found in the report below, with lowercase tt as Section:
 
 ```text
-/project/engineering/cadence21/CDK/sky130_release_0.0.3/models/sky130.lib.spice
+/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice
 ```
 
 Note: the report only confirms the file exists and declares tt; it has not established that school `nfet_01v8` resolves through this entry. Preserve and record automatically configured school model entries; do not delete them or add the same file twice. If a default model configuration already exists, return that window's contents for review first.

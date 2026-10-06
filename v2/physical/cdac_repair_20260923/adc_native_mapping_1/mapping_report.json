@@ -1,0 +1,1368 @@
+{
+  "status": "LOCAL_SOURCE_AND_MAPPING_AUDIT_PASS__NATIVE_NOT_CREATED",
+  "source_hashes": {
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/adc_preamp.spice": "c0ed1e17434f4a85d7bf174f9ab01f80a414d2d411338db771a4d7969d909782",
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/adc_reference_candidate.spice": "5813ab5f1c959f5b0d6ac44473d929259c45d534dff785263e667be963283442",
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/adc_tgate_dual_lvt_dummy.spice": "389d182342b2d1e88ba31530c6cc98d0e75756d8009126746d7d73b40d98d734",
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/sensor_adc_candidate.spice": "94c047a1f664ffa001c1588c5cfefe85fc5d09f42dd2705a7dade21f332acf6d",
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/sensor_phases.spice": "be8e84861058a1aba7e4219efe3fdec5ef9d4f47b44e6c5207eda709cddaa462",
+    "v2/analog/adc/qualification_20260913/snapshot/frozen/sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+  },
+  "proposal_variant": "adc_school_r1",
+  "school_executed": false,
+  "geometry": {
+    "grid_um": "0.005",
+    "rounding": "ROUND_HALF_UP nearest 5nm",
+    "maximum_finger_width_um": 50,
+    "minimum_mim_side_um": 4,
+    "maximum_resistor_segment_length_um": 100
+  },
+  "topologies": {
+    "adc": {
+      "top": "sensor_adc_candidate",
+      "port_order": [
+        "INP",
+        "INN",
+        "Q",
+        "QB",
+        "SAMPLE",
+        "SAMPLEB",
+        "ACQ",
+        "CONV",
+        "EVAL",
+        "B11",
+        "B10",
+        "B9",
+        "B8",
+        "B7",
+        "B6",
+        "B5",
+        "B4",
+        "B3",
+        "B2",
+        "B1",
+        "B0",
+        "RP",
+        "RN",
+        "VCM",
+        "VDD",
+        "VSS"
+      ],
+      "primitive_count": 664,
+      "counts_by_kind": {
+        "mos": 617,
+        "resistor": 17,
+        "mim": 30
+      },
+      "counts_by_model": {
+        "sky130_fd_pr__nfet_01v8_lvt": 82,
+        "sky130_fd_pr__pfet_01v8_lvt": 82,
+        "sky130_fd_pr__pfet_01v8": 225,
+        "sky130_fd_pr__nfet_01v8": 228,
+        "sky130_fd_pr__res_high_po_5p73": 17,
+        "sky130_fd_pr__cap_mim_m3_1": 30
+      },
+      "internal_single_terminal_nets": {},
+      "native_proposal_count": 679,
+      "native_counts_by_kind": {
+        "mos": 617,
+        "resistor": 32,
+        "mim": 30
+      },
+      "maximum_source_MOS_W_um": "32"
+    },
+    "phase": {
+      "top": "sensor_phases",
+      "port_order": [
+        "SAMPLE_CMD",
+        "TOP",
+        "TOPB",
+        "ACQ",
+        "CONV",
+        "VDD",
+        "VSS"
+      ],
+      "primitive_count": 48,
+      "counts_by_kind": {
+        "mos": 42,
+        "resistor": 3,
+        "mim": 3
+      },
+      "counts_by_model": {
+        "sky130_fd_pr__nfet_01v8": 21,
+        "sky130_fd_pr__pfet_01v8": 21,
+        "sky130_fd_pr__res_high_po_1p41": 3,
+        "sky130_fd_pr__cap_mim_m3_1": 3
+      },
+      "internal_single_terminal_nets": {},
+      "native_proposal_count": 48,
+      "native_counts_by_kind": {
+        "mos": 42,
+        "resistor": 3,
+        "mim": 3
+      },
+      "maximum_source_MOS_W_um": "32"
+    }
+  },
+  "changes": {
+    "adc": [
+      {
+        "path": "XADC/XPRE/XRBIAS/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRBIAS_XR_SEG_1",
+          "XADC_XPRE_XRBIAS_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRBIAS_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR0/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR0_XR_SEG_1",
+          "XADC_XPRE_XRP_XR0_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR0_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR1/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR1_XR_SEG_1",
+          "XADC_XPRE_XRP_XR1_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR1_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR2/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR2_XR_SEG_1",
+          "XADC_XPRE_XRP_XR2_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR2_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR3/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR3_XR_SEG_1",
+          "XADC_XPRE_XRP_XR3_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR3_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR4/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR4_XR_SEG_1",
+          "XADC_XPRE_XRP_XR4_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR4_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR5/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR5_XR_SEG_1",
+          "XADC_XPRE_XRP_XR5_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR5_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR6/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR6_XR_SEG_1",
+          "XADC_XPRE_XRP_XR6_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRP_XR6_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRP/XR7/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "86.9890977937969448135363933975024013875715",
+        "target_R_ohm": "5000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 1,
+        "segment_names": [
+          "XADC_XPRE_XRP_XR7_XR"
+        ],
+        "internal_nodes": [],
+        "predicted_total_R_ohm": "5000.05110282675",
+        "predicted_delta_R_ohm": "0.05110282675",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR0/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR0_XR_SEG_1",
+          "XADC_XPRE_XRN_XR0_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR0_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR1/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR1_XR_SEG_1",
+          "XADC_XPRE_XRN_XR1_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR1_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR2/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR2_XR_SEG_1",
+          "XADC_XPRE_XRN_XR2_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR2_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR3/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR3_XR_SEG_1",
+          "XADC_XPRE_XRN_XR3_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR3_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR4/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR4_XR_SEG_1",
+          "XADC_XPRE_XRN_XR4_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR4_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR5/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR5_XR_SEG_1",
+          "XADC_XPRE_XRN_XR5_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR5_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR6/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "175.262708123502088140720588506495313265152",
+        "target_R_ohm": "10000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 2,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR6_XR_SEG_1",
+          "XADC_XPRE_XRN_XR6_XR_SEG_2"
+        ],
+        "internal_nodes": [
+          "XADC_XPRE_XRN_XR6_XR_SERIES_1"
+        ],
+        "predicted_total_R_ohm": "10000.1022056535",
+        "predicted_delta_R_ohm": "0.1022056535",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XRN/XR7/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_5p73",
+        "source_L_um": "86.9890977937969448135363933975024013875715",
+        "target_R_ohm": "5000",
+        "source_end_ohm": "72.75744875",
+        "source_ohm_per_um": "56.642069825",
+        "raw_segment_L_um": "86.9890977937969448135363933975024013875715",
+        "segment_L_um": "86.99",
+        "segment_count": 1,
+        "segment_names": [
+          "XADC_XPRE_XRN_XR7_XR"
+        ],
+        "internal_nodes": [],
+        "predicted_total_R_ohm": "5000.05110282675",
+        "predicted_delta_R_ohm": "0.05110282675",
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XADC/XPRE/XCP/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "4"
+      },
+      {
+        "path": "XADC/XPRE/XCN/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "4"
+      },
+      {
+        "path": "XADC/XCMP/XLOADP/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "16"
+      },
+      {
+        "path": "XADC/XCMP/XLOADN/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "16"
+      },
+      {
+        "path": "XADC/XP1/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "1.1879394",
+        "requested_W_um": "1.19",
+        "delta_um": "0.0020606",
+        "fraction": "0.0017346002666465983029100642675880604684"
+      },
+      {
+        "path": "XADC/XP1/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP1/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "1.1879394",
+        "requested_W_um": "1.19",
+        "delta_um": "0.0020606",
+        "fraction": "0.0017346002666465983029100642675880604684"
+      },
+      {
+        "path": "XADC/XP1/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP1/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "1.1879394",
+        "requested_W_um": "1.19",
+        "delta_um": "0.0020606",
+        "fraction": "0.0017346002666465983029100642675880604684"
+      },
+      {
+        "path": "XADC/XP1/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN1/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "1.1879394",
+        "requested_W_um": "1.19",
+        "delta_um": "0.0020606",
+        "fraction": "0.0017346002666465983029100642675880604684"
+      },
+      {
+        "path": "XADC/XN1/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN1/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "1.1879394",
+        "requested_W_um": "1.19",
+        "delta_um": "0.0020606",
+        "fraction": "0.0017346002666465983029100642675880604684"
+      },
+      {
+        "path": "XADC/XN1/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN1/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "1.1879394",
+        "requested_W_um": "1.19",
+        "delta_um": "0.0020606",
+        "fraction": "0.0017346002666465983029100642675880604684"
+      },
+      {
+        "path": "XADC/XN1/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP3/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP3/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP3/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP3/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP3/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP3/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN3/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN3/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN3/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN3/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN3/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "2.3758788",
+        "requested_W_um": "2.375",
+        "delta_um": "-0.0008788",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN3/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP5/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP5/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XP5/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP5/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XP5/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XP5/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XN5/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN5/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XN5/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN5/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XN5/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "4.7517576",
+        "requested_W_um": "4.75",
+        "delta_um": "-0.0017576",
+        "fraction": "-0.00036988418769509623133974679179762873426"
+      },
+      {
+        "path": "XADC/XN5/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XP7/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XP7/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "19.00703",
+        "requested_W_um": "19.005",
+        "delta_um": "-0.00203",
+        "fraction": "-0.000106802588305484865336667538273996516026"
+      },
+      {
+        "path": "XADC/XP7/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XP7/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "19.00703",
+        "requested_W_um": "19.005",
+        "delta_um": "-0.00203",
+        "fraction": "-0.000106802588305484865336667538273996516026"
+      },
+      {
+        "path": "XADC/XP7/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XP7/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "19.00703",
+        "requested_W_um": "19.005",
+        "delta_um": "-0.00203",
+        "fraction": "-0.000106802588305484865336667538273996516026"
+      },
+      {
+        "path": "XADC/XN7/XCM/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XN7/XCM/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "19.00703",
+        "requested_W_um": "19.005",
+        "delta_um": "-0.00203",
+        "fraction": "-0.000106802588305484865336667538273996516026"
+      },
+      {
+        "path": "XADC/XN7/XRP/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XN7/XRP/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "19.00703",
+        "requested_W_um": "19.005",
+        "delta_um": "-0.00203",
+        "fraction": "-0.000106802588305484865336667538273996516026"
+      },
+      {
+        "path": "XADC/XN7/XRN/XN",
+        "kind": "mos_width_grid",
+        "source_W_um": "9.5035151",
+        "requested_W_um": "9.505",
+        "delta_um": "0.0014849",
+        "fraction": "0.00015624744995670075801742031219585266929"
+      },
+      {
+        "path": "XADC/XN7/XRN/XP",
+        "kind": "mos_width_grid",
+        "source_W_um": "19.00703",
+        "requested_W_um": "19.005",
+        "delta_um": "-0.00203",
+        "fraction": "-0.000106802588305484865336667538273996516026"
+      },
+      {
+        "path": "XADC/XCP/XC11/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "2048"
+      },
+      {
+        "path": "XADC/XCP/XC10/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "1024"
+      },
+      {
+        "path": "XADC/XCP/XC9/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "512"
+      },
+      {
+        "path": "XADC/XCP/XC8/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "256"
+      },
+      {
+        "path": "XADC/XCP/XC7/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "128"
+      },
+      {
+        "path": "XADC/XCP/XC6/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "64"
+      },
+      {
+        "path": "XADC/XCP/XC5/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "32"
+      },
+      {
+        "path": "XADC/XCP/XC4/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "16"
+      },
+      {
+        "path": "XADC/XCP/XC3/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "8"
+      },
+      {
+        "path": "XADC/XCP/XC2/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "4"
+      },
+      {
+        "path": "XADC/XCP/XC1/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "2"
+      },
+      {
+        "path": "XADC/XCP/XC0/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "1"
+      },
+      {
+        "path": "XADC/XCP/XD/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "1"
+      },
+      {
+        "path": "XADC/XCN/XC11/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "2048"
+      },
+      {
+        "path": "XADC/XCN/XC10/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "1024"
+      },
+      {
+        "path": "XADC/XCN/XC9/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "512"
+      },
+      {
+        "path": "XADC/XCN/XC8/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "256"
+      },
+      {
+        "path": "XADC/XCN/XC7/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "128"
+      },
+      {
+        "path": "XADC/XCN/XC6/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "64"
+      },
+      {
+        "path": "XADC/XCN/XC5/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "32"
+      },
+      {
+        "path": "XADC/XCN/XC4/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "16"
+      },
+      {
+        "path": "XADC/XCN/XC3/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "8"
+      },
+      {
+        "path": "XADC/XCN/XC2/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "4"
+      },
+      {
+        "path": "XADC/XCN/XC1/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "2"
+      },
+      {
+        "path": "XADC/XCN/XC0/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "1"
+      },
+      {
+        "path": "XADC/XCN/XD/XC",
+        "kind": "mim_minimum_geometry",
+        "source_W_L_um": [
+          "3",
+          "3"
+        ],
+        "requested_W_L_um": [
+          "4",
+          "4"
+        ],
+        "physical_unit_count": "1"
+      }
+    ],
+    "phase": [
+      {
+        "path": "XPHASE/XDCMD/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_1p41",
+        "source_L_um": "63.924",
+        "target_R_ohm": null,
+        "source_end_ohm": null,
+        "source_ohm_per_um": null,
+        "raw_segment_L_um": "63.924",
+        "segment_L_um": "63.925",
+        "segment_count": 1,
+        "segment_names": [
+          "XPHASE_XDCMD_XR"
+        ],
+        "internal_nodes": [],
+        "predicted_total_R_ohm": null,
+        "predicted_delta_R_ohm": null,
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XPHASE/XDACQ/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_1p41",
+        "source_L_um": "63.924",
+        "target_R_ohm": null,
+        "source_end_ohm": null,
+        "source_ohm_per_um": null,
+        "raw_segment_L_um": "63.924",
+        "segment_L_um": "63.925",
+        "segment_count": 1,
+        "segment_names": [
+          "XPHASE_XDACQ_XR"
+        ],
+        "internal_nodes": [],
+        "predicted_total_R_ohm": null,
+        "predicted_delta_R_ohm": null,
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      },
+      {
+        "path": "XPHASE/XDCONV/XR",
+        "kind": "resistor_segments_and_grid",
+        "cell": "res_high_po_1p41",
+        "source_L_um": "63.924",
+        "target_R_ohm": null,
+        "source_end_ohm": null,
+        "source_ohm_per_um": null,
+        "raw_segment_L_um": "63.924",
+        "segment_L_um": "63.925",
+        "segment_count": 1,
+        "segment_names": [
+          "XPHASE_XDCONV_XR"
+        ],
+        "internal_nodes": [],
+        "predicted_total_R_ohm": null,
+        "predicted_delta_R_ohm": null,
+        "scope": "Nominal source-model arithmetic estimate only. School bias, end effects and extracted parasitics require simulation."
+      }
+    ]
+  },
+  "source_contains_B_E_A_devices": false,
+  "ADC_PAIR_WIDTH_SKEW": 0,
+  "scope": "Nominal source geometry resolved exactly; deliberate new school proposal. Not native export, model validation, performance or physical acceptance.",
+  "binary_array": {
+    "bits": 12,
+    "weights_LSB_to_MSB": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "dummy_units_per_side": 1,
+    "total_units_per_side": 4096,
+    "source_unit_W_L_um": [
+      3,
+      3
+    ],
+    "school_unit_W_L_um": [
+      4,
+      4
+    ],
+    "source_nominal_unit_fF": "19.845",
+    "school_CDF_unit_fF_not_measurement": "34.6223",
+    "source_nominal_per_side_pF": "81.28512",
+    "school_CDF_per_side_pF_not_measurement": "141.8129408",
+    "count_and_topology_preserved": true,
+    "school_nominal_and_mismatch_model_qualification": "PENDING"
+  },
+  "change_counts": {
+    "adc": {
+      "resistor_segments_and_grid": 17,
+      "mim_minimum_geometry": 30,
+      "mos_width_grid": 48
+    },
+    "phase": {
+      "resistor_segments_and_grid": 3
+    }
+  },
+  "pending": [
+    "Native CDF and termOrder readback for res_high_po_5p73 and res_high_po_1p41; exact model entry.",
+    "Confirm proposed rounded reference-switch widths with CDF readback; no silent callback change.",
+    "Export real native ADC and phase netlists and compare every instance, body, port and geometry.",
+    "Native two-frame actual-comparator AMS run, then 12-frame convergence qualification.",
+    "School 4um MIM nominal/multiplier/noise/statistical-model qualification; 3um PEX does not map.",
+    "School 5p73 segmented resistor DC/noise/RC comparison at actual bias; CDF r is not acceptance.",
+    "All full-code, 16384-record dynamics with device noise, 200 mismatch samples, 45 PVT and physical gates remain."
+  ]
+}

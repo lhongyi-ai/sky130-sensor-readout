@@ -1,0 +1,38 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "profiles": {
+    "baseline": {
+      "unchanged_files": {
+        "reset1_native_bound.scs": true,
+        "sar_controller.v": true,
+        "p1_interfaces.vams": true,
+        "p2_ams_reset1.vams": true,
+        "p2_sequence.sv": true,
+        "profile.vh": true,
+        "run.sh": true
+      },
+      "manifest_sha256": "85f67614fb9cdb02cac572775cc2defcb3b1158b6df61ac7975d1a41f6172e35",
+      "control_sha256": "410329de076a6d4fa449b549e9113cf9414f580c54089d220e4e4168dfb3f5eb",
+      "one_factor_diff_sha256": "fc35553cfef0052ac2ed6934ec5bfff11f14579324bb8b962e421f048c2a4243"
+    },
+    "strict": {
+      "unchanged_files": {
+        "reset1_native_bound.scs": true,
+        "sar_controller.v": true,
+        "p1_interfaces.vams": true,
+        "p2_ams_reset1.vams": true,
+        "p2_sequence.sv": true,
+        "profile.vh": true,
+        "run.sh": true
+      },
+      "manifest_sha256": "95f90eed858dda840c0b7e5ee4acb1c0e24fb22be60ec179f6357bc6fee4788b",
+      "control_sha256": "f9cc0aa4ba466d7ceb03549d44975f33eb7e92c0263f3fe81b8586b40c1ae6c7",
+      "one_factor_diff_sha256": "0f7ef87871711cbf858cc616711807d652520bf240ef072d8e63bfcadc5fe070"
+    }
+  },
+  "source_help_sha256": "9d5752608d6d259855ff3a613b9b36133634da81e03fb18fc30e9b467d5dc145",
+  "change": "Only explicit tran method=trap versus original no-cthresh gear control.",
+  "original_gate_V": 9.765625000000002e-06,
+  "EDA_started": false,
+  "scope": "0\u20134.1us diagnostic, zero completed conversions, no ADC qualification."
+}

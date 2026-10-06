@@ -1,0 +1,27 @@
+{
+  "status": "LOCAL_PREPARATION_AUDIT_PASS_NOT_CADENCE_EXECUTED",
+  "fresh_native_count": {
+    "ADC": 693,
+    "phase": 48
+  },
+  "native_auditor_sha256": "2b2f93025f3840b1d350a8f3abf13abc916f6326681d605c3b63e8465dfe327c",
+  "frozen_source_integrity": true,
+  "same_physical_circuit_RTL_stimuli": true,
+  "pair_differences_only_requested_accuracy": true,
+  "identical_common_point_count": 2001,
+  "all_accepted_output_requested": true,
+  "actual_strobe_acceptance": "MUST_VERIFY_SCHOOL_RAW",
+  "actual_tolerances": "MUST_VERIFY_SCHOOL_RAW",
+  "sources": {
+    "v2/analog/noise_controls_20260923/doc_cache/tran_help.txt": "9d5752608d6d259855ff3a613b9b36133634da81e03fb18fc30e9b467d5dc145",
+    "v2/analog/adc/cadence_closure_20260923/integration/reset1_2frames_baseline_v4/manifest.json": "51379dc73731a3c73ae8eed77140d69a61420c46a41888f4512a97de0cfa8696",
+    "v2/analog/adc/cadence_closure_20260923/integration/reset1_2frames_strict_v4/manifest.json": "1cf751d68b01eeaefdb7f2cbb23150e49261d4273e08ca7ac58d09570b91eb27"
+  },
+  "prepared_manifests_sha256": {
+    "baseline": "1953e5aec7305102f39634ec3a8df697c15f39df7fc40902ce297c4e1318c432",
+    "strict": "c07222bfe7b2cb8a42b6e3af1036a6a6a81dcf659669538d5743f1c90b6a5b12"
+  },
+  "prepare_script_sha256": "72e2447477a260d4ce34a240c0e7addd67e456a6299d786486d880b65ffb99a4",
+  "complete_ADC_qualified": false,
+  "long_campaign_allowed": false
+}

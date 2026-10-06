@@ -1,0 +1,551 @@
+{
+  "status": "SCHOOL_R1_NEW_VARIANT_UNQUALIFIED",
+  "scope": "Locally generated mapping proposal after live geometry inventory reported by root. This script does not run Cadence or independently recheck that inventory.",
+  "source_connectivity_sha256": "b4d1b2edaade1855310b966be8edc762c2575ab0ba48fa63ae01fbf1d38efe12",
+  "source_native_objects_sha256": "88fb974f092a1dfc1241aafd4fd843bf679e3dd136514e894789d92a330cda2b",
+  "school_r1_objects_sha256": "5bf908f262423d76f9efa415d28562b669649989f198d4a7eb6575f190e7902c",
+  "object_count": 133,
+  "counts": {
+    "mos": 55,
+    "resistor": 36,
+    "mim": 30,
+    "testbench_resistor": 4,
+    "testbench_source": 8
+  },
+  "geometry_rules": {
+    "resistor_max_single_length_um": 100,
+    "resistor_length_grid_um": 0.005,
+    "rounding": "Nearest 0.005um; exact half-grid ties ROUND_HALF_UP.",
+    "mim_minimum_W_L_um": 4,
+    "MOS_width_mapping": "Unchanged: 80=2x40,64=2x32,180=4x45um,all m=1. New parasitics unqualified."
+  },
+  "resistor_mapping": [
+    {
+      "originalpath": "XPGA/XRINP/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 10000.0,
+      "original_requested_length_um": 9.102719033232628,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XRINP_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 10000.0,
+      "each_unrounded_length_um": 9.102719033232628,
+      "each_rounded_length_um": 9.105,
+      "predicted_total_ohm": 10002.265,
+      "predicted_delta_ohm": 2.265,
+      "predicted_relative_delta": 0.0002265,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XRINN/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 10000.0,
+      "original_requested_length_um": 9.102719033232628,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XRINN_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 10000.0,
+      "each_unrounded_length_um": 9.102719033232628,
+      "each_rounded_length_um": 9.105,
+      "predicted_total_ohm": 10002.265,
+      "predicted_delta_ohm": 2.265,
+      "predicted_relative_delta": 0.0002265,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XFP1/XR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 10350.0,
+      "original_requested_length_um": 9.455186304128903,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XFP1_XR_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 10350.0,
+      "each_unrounded_length_um": 9.455186304128903,
+      "each_rounded_length_um": 9.455,
+      "predicted_total_ohm": 10349.815,
+      "predicted_delta_ohm": -0.185,
+      "predicted_relative_delta": -1.7874396135265702e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XFN1/XR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 10350.0,
+      "original_requested_length_um": 9.455186304128903,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XFN1_XR_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 10350.0,
+      "each_unrounded_length_um": 9.455186304128903,
+      "each_rounded_length_um": 9.455,
+      "predicted_total_ohm": 10349.815,
+      "predicted_delta_ohm": -0.185,
+      "predicted_relative_delta": -1.7874396135265702e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XFP4/XR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 41400.0,
+      "original_requested_length_um": 40.72406847935549,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XFP4_XR_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 41400.0,
+      "each_unrounded_length_um": 40.72406847935549,
+      "each_rounded_length_um": 40.725,
+      "predicted_total_ohm": 41400.925,
+      "predicted_delta_ohm": 0.925,
+      "predicted_relative_delta": 2.2342995169082124e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XFN4/XR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 41400.0,
+      "original_requested_length_um": 40.72406847935549,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XFN4_XR_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 41400.0,
+      "each_unrounded_length_um": 40.72406847935549,
+      "each_rounded_length_um": 40.725,
+      "predicted_total_ohm": 41400.925,
+      "predicted_delta_ohm": 0.925,
+      "predicted_relative_delta": 2.2342995169082124e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XFP16/XR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 165600.0,
+      "original_requested_length_um": 165.79959718026183,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 2,
+      "segment_names": [
+        "XPGA_XFP16_XR_XR_SEG_01",
+        "XPGA_XFP16_XR_XR_SEG_02"
+      ],
+      "internal_nodes": [
+        "XPGA_XFP16_XR_XR_SERIES_NODE_01"
+      ],
+      "each_segment_target_ohm": 82800.0,
+      "each_unrounded_length_um": 82.4159113796576,
+      "each_rounded_length_um": 82.415,
+      "predicted_total_ohm": 165598.19,
+      "predicted_delta_ohm": -1.81,
+      "predicted_relative_delta": -1.0929951690821255e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XFN16/XR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 165600.0,
+      "original_requested_length_um": 165.79959718026183,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 2,
+      "segment_names": [
+        "XPGA_XFN16_XR_XR_SEG_01",
+        "XPGA_XFN16_XR_XR_SEG_02"
+      ],
+      "internal_nodes": [
+        "XPGA_XFN16_XR_XR_SERIES_NODE_01"
+      ],
+      "each_segment_target_ohm": 82800.0,
+      "each_unrounded_length_um": 82.4159113796576,
+      "each_rounded_length_um": 82.415,
+      "predicted_total_ohm": 165598.19,
+      "predicted_delta_ohm": -1.81,
+      "predicted_relative_delta": -1.0929951690821255e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XBIAS/XRBN/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 24000.0,
+      "original_requested_length_um": 23.201409869083584,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XBIAS_XRBN_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 24000.0,
+      "each_unrounded_length_um": 23.201409869083584,
+      "each_rounded_length_um": 23.2,
+      "predicted_total_ohm": 23998.6,
+      "predicted_delta_ohm": -1.4,
+      "predicted_relative_delta": -5.833333333333333e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 1000000.0,
+      "original_requested_length_um": 1006.0815709969788,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 11,
+      "segment_names": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11"
+      ],
+      "internal_nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10"
+      ],
+      "each_segment_target_ohm": 90909.09090909091,
+      "each_unrounded_length_um": 90.58216607159206,
+      "each_rounded_length_um": 90.58,
+      "predicted_total_ohm": 999976.34,
+      "predicted_delta_ohm": -23.66,
+      "predicted_relative_delta": -2.366e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRN1/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 100000.0,
+      "original_requested_length_um": 99.73716012084593,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRN1_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 100000.0,
+      "each_unrounded_length_um": 99.73716012084593,
+      "each_rounded_length_um": 99.735,
+      "predicted_total_ohm": 99997.855,
+      "predicted_delta_ohm": -2.145,
+      "predicted_relative_delta": -2.145e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRN2/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 100000.0,
+      "original_requested_length_um": 99.73716012084593,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRN2_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 100000.0,
+      "each_unrounded_length_um": 99.73716012084593,
+      "each_rounded_length_um": 99.735,
+      "predicted_total_ohm": 99997.855,
+      "predicted_delta_ohm": -2.145,
+      "predicted_relative_delta": -2.145e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRZP/XR",
+      "cell": "res_high_po_0p69",
+      "source_target_ohm": 1200.0,
+      "original_requested_length_um": 0.8551774666232498,
+      "source_estimate_end_ohm": 779.8,
+      "source_estimate_ohm_per_um": 491.36,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRZP_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 1200.0,
+      "each_unrounded_length_um": 0.8551774666232498,
+      "each_rounded_length_um": 0.855,
+      "predicted_total_ohm": 1199.9128,
+      "predicted_delta_ohm": -0.0872,
+      "predicted_relative_delta": -7.266666666666667e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRZN/XR",
+      "cell": "res_high_po_0p69",
+      "source_target_ohm": 1200.0,
+      "original_requested_length_um": 0.8551774666232498,
+      "source_estimate_end_ohm": 779.8,
+      "source_estimate_ohm_per_um": 491.36,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRZN_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 1200.0,
+      "each_unrounded_length_um": 0.8551774666232498,
+      "each_rounded_length_um": 0.855,
+      "predicted_total_ohm": 1199.9128,
+      "predicted_delta_ohm": -0.0872,
+      "predicted_relative_delta": -7.266666666666667e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRCMP/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 100000.0,
+      "original_requested_length_um": 99.73716012084593,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRCMP_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 100000.0,
+      "each_unrounded_length_um": 99.73716012084593,
+      "each_rounded_length_um": 99.735,
+      "predicted_total_ohm": 99997.855,
+      "predicted_delta_ohm": -2.145,
+      "predicted_relative_delta": -2.145e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRCMN/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 100000.0,
+      "original_requested_length_um": 99.73716012084593,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRCMN_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 100000.0,
+      "each_unrounded_length_um": 99.73716012084593,
+      "each_rounded_length_um": 99.735,
+      "predicted_total_ohm": 99997.855,
+      "predicted_delta_ohm": -2.145,
+      "predicted_relative_delta": -2.145e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRSCS/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 10000.0,
+      "original_requested_length_um": 9.102719033232628,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRSCS_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 10000.0,
+      "each_unrounded_length_um": 9.102719033232628,
+      "each_rounded_length_um": 9.105,
+      "predicted_total_ohm": 10002.265,
+      "predicted_delta_ohm": 2.265,
+      "predicted_relative_delta": 0.0002265,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRSCR/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 10000.0,
+      "original_requested_length_um": 9.102719033232628,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XPGA_XOTA_XRSCR_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 10000.0,
+      "each_unrounded_length_um": 9.102719033232628,
+      "each_rounded_length_um": 9.105,
+      "predicted_total_ohm": 10002.265,
+      "predicted_delta_ohm": 2.265,
+      "predicted_relative_delta": 0.0002265,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRDS/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 105000.0,
+      "original_requested_length_um": 104.77240684793554,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 2,
+      "segment_names": [
+        "XPGA_XOTA_XRDS_XR_SEG_01",
+        "XPGA_XOTA_XRDS_XR_SEG_02"
+      ],
+      "internal_nodes": [
+        "XPGA_XOTA_XRDS_XR_SERIES_NODE_01"
+      ],
+      "each_segment_target_ohm": 52500.0,
+      "each_unrounded_length_um": 51.90231621349446,
+      "each_rounded_length_um": 51.9,
+      "predicted_total_ohm": 104995.4,
+      "predicted_delta_ohm": -4.6,
+      "predicted_relative_delta": -4.380952380952381e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XPGA/XOTA/XRCMG/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 105000.0,
+      "original_requested_length_um": 104.77240684793554,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 2,
+      "segment_names": [
+        "XPGA_XOTA_XRCMG_XR_SEG_01",
+        "XPGA_XOTA_XRCMG_XR_SEG_02"
+      ],
+      "internal_nodes": [
+        "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01"
+      ],
+      "each_segment_target_ohm": 52500.0,
+      "each_unrounded_length_um": 51.90231621349446,
+      "each_rounded_length_um": 51.9,
+      "predicted_total_ohm": 104995.4,
+      "predicted_delta_ohm": -4.6,
+      "predicted_relative_delta": -4.380952380952381e-05,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XRIP/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 1500.0,
+      "original_requested_length_um": 0.5427995971802618,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XRIP_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 1500.0,
+      "each_unrounded_length_um": 0.5427995971802618,
+      "each_rounded_length_um": 0.545,
+      "predicted_total_ohm": 1502.185,
+      "predicted_delta_ohm": 2.185,
+      "predicted_relative_delta": 0.0014566666666666667,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    },
+    {
+      "originalpath": "XRIN/XR",
+      "cell": "res_high_po_0p35",
+      "source_target_ohm": 1500.0,
+      "original_requested_length_um": 0.5427995971802618,
+      "source_estimate_end_ohm": 961.0,
+      "source_estimate_ohm_per_um": 993.0,
+      "segment_count": 1,
+      "segment_names": [
+        "XRIN_XR"
+      ],
+      "internal_nodes": [],
+      "each_segment_target_ohm": 1500.0,
+      "each_unrounded_length_um": 0.5427995971802618,
+      "each_rounded_length_um": 0.545,
+      "predicted_total_ohm": 1502.185,
+      "predicted_delta_ohm": 2.185,
+      "predicted_relative_delta": 0.0014566666666666667,
+      "prediction_scope": "Nominal source-model linear estimate only; not CDF r, measured resistance or parasitic equivalence."
+    }
+  ],
+  "mim_mapping": [
+    {
+      "originalpath": "XCP/XC",
+      "source_W_um": 3,
+      "source_L_um": 3,
+      "school_W_um": 4,
+      "school_L_um": 4,
+      "m_requested": 4096
+    },
+    {
+      "originalpath": "XCN/XC",
+      "source_W_um": 3,
+      "source_L_um": 3,
+      "school_W_um": 4,
+      "school_L_um": 4,
+      "m_requested": 4096
+    }
+  ],
+  "sampling_bank_prediction": {
+    "units_per_side": 4096,
+    "original_unit_fF": 19.845,
+    "school_4um_unit_fF_basis": 34.62225,
+    "original_per_side_pF": 81.28512,
+    "new_predicted_per_side_pF": 141.812736,
+    "delta_per_side_pF": 60.527616,
+    "load_ratio": 1.744633408919123,
+    "scope": "Arithmetic projection using prior school single-unit value; m4096 scaling, actual AC bank value, noise and dynamics must be measured."
+  },
+  "checks": {
+    "unique_instance_names": true,
+    "no_generated_net_collision": true,
+    "all_MOS_records_unchanged": true,
+    "all_series_endpoints_match_source": true,
+    "14_internal_series_nodes_each_degree_two": true,
+    "all_36_resistor_bodies_at_ground": true,
+    "all_resistor_lengths_on_grid_and_in_range": true,
+    "22_original_resistors_preserved_as_36_series_primitives": true,
+    "1Mohm_BP_branch_preserved_with_11_segments": true,
+    "testbench_VDD_source_renamed_only": true
+  },
+  "single_terminal_nets": {
+    "XPGA_XOTA_BP": [
+      "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01.PLUS"
+    ]
+  },
+  "inherited_passes_invalidated": [
+    "candidate06 dynamic sampling/settling qualification",
+    "candidate06 static noise characterization as this new circuit result",
+    "any claim of equal MOS diffusion geometry or resistor parasitics"
+  ],
+  "cadence_executed_by_this_script": false,
+  "formal_stability_gate_pass": false,
+  "sampled_noise_qualified": false,
+  "pvt_45_run": false
+}

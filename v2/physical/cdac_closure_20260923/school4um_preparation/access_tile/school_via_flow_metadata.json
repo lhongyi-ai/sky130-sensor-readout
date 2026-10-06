@@ -1,0 +1,849 @@
+{
+  "files": {
+    "via3.drc.pvl": {
+      "sha256": "babe7bc75a2806efda590b045bac76f2d3e0e5139f9dbc78b514162d9ea9bec3",
+      "bytes": 2339,
+      "selected_metadata": [
+        {
+          "stripped_line": 5,
+          "tokens": [
+            "rule",
+            "via3.1"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 7,
+          "tokens": [
+            "select",
+            "inside",
+            "via3",
+            "areaid.mt",
+            "outputlayer",
+            "via3.1_a"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 8,
+          "tokens": [
+            "rect_chk",
+            "not",
+            "via3.1_a",
+            "eq"
+          ],
+          "numeric_values": [
+            "0.200"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 9,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 11,
+          "tokens": [
+            "IFNDEF",
+            "Copper"
+          ],
+          "numeric_values": [],
+          "conditional": true
+        },
+        {
+          "stripped_line": 12,
+          "tokens": [
+            "rule",
+            "via3.1a"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 14,
+          "tokens": [
+            "select",
+            "inside",
+            "via3",
+            "areaid.mt",
+            "outputlayer",
+            "via3.1a_a"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 15,
+          "tokens": [
+            "rect_chk",
+            "not",
+            "via3.1a_a",
+            "eq",
+            "orthogonal_only",
+            "outputlayer",
+            "via3.1a_b"
+          ],
+          "numeric_values": [
+            "0.200"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 16,
+          "tokens": [
+            "rect_chk",
+            "not",
+            "via3.1a_b",
+            "eq",
+            "orthogonal_only"
+          ],
+          "numeric_values": [
+            "0.800"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 18,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 20,
+          "tokens": [
+            "rule",
+            "via3.2"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 22,
+          "tokens": [
+            "exte",
+            "via3",
+            "lt",
+            "single_point"
+          ],
+          "numeric_values": [
+            "0.200"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 23,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 30,
+          "tokens": [
+            "rule",
+            "via3.4"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 32,
+          "tokens": [
+            "enc",
+            "via3",
+            "met3",
+            "lt",
+            "outside_also"
+          ],
+          "numeric_values": [
+            "0.060"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 33,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 35,
+          "tokens": [
+            "rule",
+            "via3.5"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 37,
+          "tokens": [
+            "rect_enc",
+            "via3",
+            "met3",
+            "good"
+          ],
+          "numeric_values": [
+            "0.090",
+            "0.000",
+            "0.090",
+            "0.000"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 38,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 39,
+          "tokens": [
+            "ENDIF"
+          ],
+          "numeric_values": [],
+          "conditional": true
+        },
+        {
+          "stripped_line": 41,
+          "tokens": [
+            "IFDEF",
+            "Copper"
+          ],
+          "numeric_values": [],
+          "conditional": true
+        },
+        {
+          "stripped_line": 42,
+          "tokens": [
+            "rule",
+            "via3.11"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 44,
+          "tokens": [
+            "not",
+            "via3",
+            "areaid.mt",
+            "outputlayer",
+            "via3.1a_a"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 45,
+          "tokens": [
+            "rect_chk",
+            "not",
+            "via3.1a_a",
+            "eq",
+            "orthogonal_only"
+          ],
+          "numeric_values": [
+            "0.210"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 46,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 48,
+          "tokens": [
+            "rule",
+            "via3.12"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 50,
+          "tokens": [
+            "exte",
+            "via3",
+            "lt",
+            "single_point"
+          ],
+          "numeric_values": [
+            "0.180"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 51,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 53,
+          "tokens": [
+            "rule",
+            "via3.13"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 55,
+          "tokens": [
+            "enc",
+            "via3",
+            "met3",
+            "lt"
+          ],
+          "numeric_values": [
+            "0.055"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 56,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 78,
+          "tokens": [
+            "ENDIF"
+          ],
+          "numeric_values": [],
+          "conditional": true
+        }
+      ]
+    },
+    "via4.drc.pvl": {
+      "sha256": "17a6a986f3eff9396be52852a640b9bd97755a3b932c79df2ca4bdd50ea074fc",
+      "bytes": 1018,
+      "selected_metadata": [
+        {
+          "stripped_line": 5,
+          "tokens": [
+            "rule",
+            "via4.1"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 7,
+          "tokens": [
+            "rect_chk",
+            "not",
+            "via4",
+            "eq"
+          ],
+          "numeric_values": [
+            "0.800"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 8,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 10,
+          "tokens": [
+            "rule",
+            "via4.2"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 12,
+          "tokens": [
+            "exte",
+            "via4",
+            "lt",
+            "single_point"
+          ],
+          "numeric_values": [
+            "0.800"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 13,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 20,
+          "tokens": [
+            "IFDEF",
+            "Copper"
+          ],
+          "numeric_values": [],
+          "conditional": true
+        },
+        {
+          "stripped_line": 21,
+          "tokens": [
+            "rule",
+            "via4.4"
+          ],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 23,
+          "tokens": [
+            "enc",
+            "via4",
+            "met4",
+            "lt",
+            "outside_also"
+          ],
+          "numeric_values": [
+            "0.190"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 24,
+          "tokens": [],
+          "numeric_values": [],
+          "conditional": false
+        },
+        {
+          "stripped_line": 41,
+          "tokens": [
+            "ENDIF"
+          ],
+          "numeric_values": [],
+          "conditional": true
+        }
+      ]
+    },
+    "layer_def.drc.pvl": {
+      "sha256": "695cfe7fcb0b44f85ae3dc5fe84544c612ff41a5370bbea9fe314700fc41186f",
+      "bytes": 20827,
+      "selected_metadata": [
+        {
+          "stripped_line": 67,
+          "tokens": [
+            "layer_def",
+            "met3"
+          ],
+          "numeric_values": [
+            "1032"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 71,
+          "tokens": [
+            "layer_def",
+            "via3"
+          ],
+          "numeric_values": [
+            "1034"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 73,
+          "tokens": [
+            "layer_def",
+            "met4"
+          ],
+          "numeric_values": [
+            "1035"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 77,
+          "tokens": [
+            "layer_def",
+            "via4"
+          ],
+          "numeric_values": [
+            "1037"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 79,
+          "tokens": [
+            "layer_def",
+            "met5"
+          ],
+          "numeric_values": [
+            "1038"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 113,
+          "tokens": [
+            "layer_def",
+            "areaid.sl"
+          ],
+          "numeric_values": [
+            "1055"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 116,
+          "tokens": [
+            "layer_def",
+            "areaid.ce"
+          ],
+          "numeric_values": [
+            "1056"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 118,
+          "tokens": [
+            "layer_def",
+            "areaid.fe"
+          ],
+          "numeric_values": [
+            "1057"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 120,
+          "tokens": [
+            "layer_def",
+            "areaid.sc"
+          ],
+          "numeric_values": [
+            "1058"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 122,
+          "tokens": [
+            "layer_def",
+            "areaid.sf"
+          ],
+          "numeric_values": [
+            "1059"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 124,
+          "tokens": [
+            "layer_def",
+            "areaid.sr"
+          ],
+          "numeric_values": [
+            "1061"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 126,
+          "tokens": [
+            "layer_def",
+            "areaid.mt"
+          ],
+          "numeric_values": [
+            "1062"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 128,
+          "tokens": [
+            "layer_def",
+            "areaid.dt"
+          ],
+          "numeric_values": [
+            "1063"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 130,
+          "tokens": [
+            "layer_def",
+            "areaid.ft"
+          ],
+          "numeric_values": [
+            "1064"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 132,
+          "tokens": [
+            "layer_def",
+            "areaid.ww"
+          ],
+          "numeric_values": [
+            "1065"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 134,
+          "tokens": [
+            "layer_def",
+            "areaid.ld"
+          ],
+          "numeric_values": [
+            "1066"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 136,
+          "tokens": [
+            "layer_def",
+            "areaid.ns"
+          ],
+          "numeric_values": [
+            "1067"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 138,
+          "tokens": [
+            "layer_def",
+            "areaid.ij"
+          ],
+          "numeric_values": [
+            "1068"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 140,
+          "tokens": [
+            "layer_def",
+            "areaid.zr"
+          ],
+          "numeric_values": [
+            "1069"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 142,
+          "tokens": [
+            "layer_def",
+            "areaid.ed"
+          ],
+          "numeric_values": [
+            "1070"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 144,
+          "tokens": [
+            "layer_def",
+            "areaid.de"
+          ],
+          "numeric_values": [
+            "1071"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 146,
+          "tokens": [
+            "layer_def",
+            "areaid.rd"
+          ],
+          "numeric_values": [
+            "1072"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 148,
+          "tokens": [
+            "layer_def",
+            "areaid.dn"
+          ],
+          "numeric_values": [
+            "1073"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 150,
+          "tokens": [
+            "layer_def",
+            "areaid.cr"
+          ],
+          "numeric_values": [
+            "1074"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 152,
+          "tokens": [
+            "layer_def",
+            "areaid.cd"
+          ],
+          "numeric_values": [
+            "1075"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 154,
+          "tokens": [
+            "layer_def",
+            "areaid.st"
+          ],
+          "numeric_values": [
+            "1076"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 156,
+          "tokens": [
+            "layer_def",
+            "areaid.op"
+          ],
+          "numeric_values": [
+            "1077"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 158,
+          "tokens": [
+            "layer_def",
+            "areaid.en"
+          ],
+          "numeric_values": [
+            "1078"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 160,
+          "tokens": [
+            "layer_def",
+            "areaid.en20"
+          ],
+          "numeric_values": [
+            "1079"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 162,
+          "tokens": [
+            "layer_def",
+            "areaid.le"
+          ],
+          "numeric_values": [
+            "1080"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 164,
+          "tokens": [
+            "layer_def",
+            "areaid.hl"
+          ],
+          "numeric_values": [
+            "1081"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 166,
+          "tokens": [
+            "layer_def",
+            "areaid.sd"
+          ],
+          "numeric_values": [
+            "1082"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 168,
+          "tokens": [
+            "layer_def",
+            "areaid.po"
+          ],
+          "numeric_values": [
+            "1083"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 170,
+          "tokens": [
+            "layer_def",
+            "areaid.it"
+          ],
+          "numeric_values": [
+            "1084"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 172,
+          "tokens": [
+            "layer_def",
+            "areaid.et"
+          ],
+          "numeric_values": [
+            "1085"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 174,
+          "tokens": [
+            "layer_def",
+            "areaid.lvt"
+          ],
+          "numeric_values": [
+            "1086"
+          ],
+          "conditional": false
+        },
+        {
+          "stripped_line": 176,
+          "tokens": [
+            "layer_def",
+            "areaid.re"
+          ],
+          "numeric_values": [
+            "1087"
+          ],
+          "conditional": false
+        }
+      ]
+    }
+  }
+}

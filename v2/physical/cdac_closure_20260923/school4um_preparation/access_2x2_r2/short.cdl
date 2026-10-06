@@ -1,0 +1,9 @@
+* Project-owned shared-access topology fixture. Not an ADC model replacement.
+.SUBCKT p1_mim_public_r1 PLUS MINUS
+.ENDS p1_mim_public_r1
+.SUBCKT p2c4_quad_short_r2 TOP B00 B01 B10 B11
+XX0 TOP B00 / p1_mim_public_r1 w=4u l=4u
+XX1 TOP B01 / p1_mim_public_r1 w=4u l=4u
+XX2 TOP B10 / p1_mim_public_r1 w=4u l=4u
+XX3 TOP B11 / p1_mim_public_r1 w=4u l=4u
+.ENDS p2c4_quad_short_r2

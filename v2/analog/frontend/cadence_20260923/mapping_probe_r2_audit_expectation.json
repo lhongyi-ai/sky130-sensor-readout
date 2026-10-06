@@ -1,0 +1,327 @@
+[
+  {
+    "name": "N80",
+    "originalpath": "N80",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "nets": {
+      "D": "DN",
+      "G": "GN",
+      "S": "0",
+      "B": "0"
+    },
+    "props": {
+      "w": "80u",
+      "fw": "40u",
+      "l": "1u",
+      "fingers": "2",
+      "m": "1"
+    },
+    "kind": "mos",
+    "source_parameters": {
+      "W": 80.0
+    }
+  },
+  {
+    "name": "P180",
+    "originalpath": "P180",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "nets": {
+      "D": "DP",
+      "G": "GP",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "props": {
+      "w": "180u",
+      "fw": "45u",
+      "l": "1u",
+      "fingers": "4",
+      "m": "1"
+    },
+    "kind": "mos",
+    "source_parameters": {
+      "W": 180.0
+    }
+  },
+  {
+    "name": "P64",
+    "originalpath": "P64",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "nets": {
+      "D": "DP",
+      "G": "GP",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "props": {
+      "w": "64u",
+      "fw": "32u",
+      "l": "1u",
+      "fingers": "2",
+      "m": "1"
+    },
+    "kind": "mos",
+    "source_parameters": {
+      "W": 64.0
+    }
+  },
+  {
+    "name": "RLONG",
+    "originalpath": "RLONG",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "nets": {
+      "PLUS": "RLONGT",
+      "MINUS": "0",
+      "B": "0"
+    },
+    "props": {
+      "segL": "100u",
+      "segW": ".35u"
+    },
+    "kind": "resistor"
+  },
+  {
+    "name": "VRLONG",
+    "originalpath": "VRLONG",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "RLONGT",
+      "MINUS": "0"
+    },
+    "props": {
+      "acm": "1",
+      "dc": "0.1"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "RISO",
+    "originalpath": "RISO",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "nets": {
+      "PLUS": "RISOT",
+      "MINUS": "0",
+      "B": "0"
+    },
+    "props": {
+      "segL": "0.545u",
+      "segW": ".35u"
+    },
+    "kind": "resistor"
+  },
+  {
+    "name": "VRISO",
+    "originalpath": "VRISO",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "RISOT",
+      "MINUS": "0"
+    },
+    "props": {
+      "acm": "1",
+      "dc": "0.1"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "RZ",
+    "originalpath": "RZ",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p69",
+    "nets": {
+      "PLUS": "RZT",
+      "MINUS": "0",
+      "B": "0"
+    },
+    "props": {
+      "segL": "0.855u",
+      "segW": ".69u"
+    },
+    "kind": "resistor"
+  },
+  {
+    "name": "VRZ",
+    "originalpath": "VRZ",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "RZT",
+      "MINUS": "0"
+    },
+    "props": {
+      "acm": "1",
+      "dc": "0.1"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "CUNIT",
+    "originalpath": "CUNIT",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "nets": {
+      "PLUS": "CUNITT",
+      "MINUS": "0"
+    },
+    "props": {
+      "w": "4u",
+      "l": "4u",
+      "m": "1"
+    },
+    "kind": "mim"
+  },
+  {
+    "name": "VCUNIT",
+    "originalpath": "VCUNIT",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "CUNITT",
+      "MINUS": "0"
+    },
+    "props": {
+      "acm": "1",
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "CBANK",
+    "originalpath": "CBANK",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "nets": {
+      "PLUS": "CBANKT",
+      "MINUS": "0"
+    },
+    "props": {
+      "w": "4u",
+      "l": "4u",
+      "m": "4096"
+    },
+    "kind": "mim"
+  },
+  {
+    "name": "VCBANK",
+    "originalpath": "VCBANK",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "CBANKT",
+      "MINUS": "0"
+    },
+    "props": {
+      "acm": "1",
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "CFILT",
+    "originalpath": "CFILT",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "nets": {
+      "PLUS": "CFILTT",
+      "MINUS": "0"
+    },
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "kind": "mim"
+  },
+  {
+    "name": "VCFILT",
+    "originalpath": "VCFILT",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "CFILTT",
+      "MINUS": "0"
+    },
+    "props": {
+      "acm": "1",
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "VDD",
+    "originalpath": "VDD",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "VDD",
+      "MINUS": "0"
+    },
+    "props": {
+      "dc": "1.8"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "VDN",
+    "originalpath": "VDN",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "DN",
+      "MINUS": "0"
+    },
+    "props": {
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "VGN",
+    "originalpath": "VGN",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "GN",
+      "MINUS": "0"
+    },
+    "props": {
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "VDP",
+    "originalpath": "VDP",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "DP",
+      "MINUS": "0"
+    },
+    "props": {
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  },
+  {
+    "name": "VGP",
+    "originalpath": "VGP",
+    "library": "analogLib",
+    "cell": "vdc",
+    "nets": {
+      "PLUS": "GP",
+      "MINUS": "0"
+    },
+    "props": {
+      "dc": "0.9"
+    },
+    "kind": "testbench_source"
+  }
+]

@@ -1,0 +1,20 @@
+--- v2/analog/adc/cadence_closure_20260923/integration/reset1_2frames_strict_v3/amsdControl.scs
++++ v2/analog/adc/cadence_closure_20260923/integration/reset1_2frames_strict_v4/amsdControl.scs
+@@ -1,7 +1,7 @@
+ simulator lang=spectre
+ include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+ include "reset1_native_bound.scs"
+-simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-9 iabstol=1e-14
++simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-9 iabstol=1e-14 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+ saveOptions options save=selected
+ save p2_ams_reset1.vdd
+ save p2_ams_reset1.vss
+@@ -66,7 +66,7 @@
+ save p2_ams_reset1.phases.XPHASE_CONV_RAW
+ save p2_ams_reset1.phases.XPHASE_TOP_RAW_B
+ save p2_ams_reset1.trial_e* sigtype=node
+-adc_closure_tran tran stop=40u maxstep=1n errpreset=conservative
++adc_closure_tran tran stop=40u maxstep=1n errpreset=conservative relref=sigglobal
+ amsd {
+  portmap subckt=sensor_adc_reset1
+  config cell=sensor_adc_reset1 use=spice

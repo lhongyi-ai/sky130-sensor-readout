@@ -1,0 +1,70 @@
+{
+  "status": "OPEN_3UM_GEOMETRY_LOCATION_CONTROL_COMPLETE",
+  "cases": [
+    {
+      "case": "inside",
+      "full_DRC_count": 0,
+      "LVS_topology_match": true,
+      "MIM_count": 128,
+      "MIM_unit_um": [
+        3,
+        3
+      ],
+      "functional_MIM_total_ff": 2540.16,
+      "functional_C_basis": "Frozen prior open3x3 TT19.845fF unit characterization, not a new control simulation",
+      "reported_parasitic_capacitances": {
+        "TOP_BIT_ff": 166.09,
+        "TOP_AGG_ff": 8.55899,
+        "BIT_AGG_ff": 27.15,
+        "TOP_SUB_ff": 125.85,
+        "AGG_SUB_ff": 11.2037
+      },
+      "extracted_ports": [
+        "TOP",
+        "BIT",
+        "AGG"
+      ],
+      "AGG_in_physical_cap_network": true,
+      "LVS_note": "AGG intentionally disconnected in device-only LVS, because it is an isolated driven metal conductor. Its physical existence/connectivity is checked by GDS and nonzero extracted capacitance, not device LVS."
+    },
+    {
+      "case": "outside",
+      "full_DRC_count": 0,
+      "LVS_topology_match": true,
+      "MIM_count": 128,
+      "MIM_unit_um": [
+        3,
+        3
+      ],
+      "functional_MIM_total_ff": 2540.16,
+      "functional_C_basis": "Frozen prior open3x3 TT19.845fF unit characterization, not a new control simulation",
+      "reported_parasitic_capacitances": {
+        "TOP_BIT_ff": 166.09,
+        "TOP_AGG_ff": 0.0,
+        "BIT_AGG_ff": 2.99909,
+        "TOP_SUB_ff": 120.94,
+        "AGG_SUB_ff": 12.0719
+      },
+      "extracted_ports": [
+        "TOP",
+        "BIT",
+        "AGG"
+      ],
+      "AGG_in_physical_cap_network": true,
+      "LVS_note": "AGG intentionally disconnected in device-only LVS, because it is an isolated driven metal conductor. Its physical existence/connectivity is checked by GDS and nonzero extracted capacitance, not device LVS."
+    }
+  ],
+  "difference_inside_minus_outside_TOP_AGG_ff": 8.55899,
+  "geometry_isolation": "GDS_ONLY_M5_AGGRESSOR_POSITION_CHANGED",
+  "conclusion": "This actual same-geometry-pair extraction shows internal M5 placement adds TOP coupling in this public Magic model; moving it outside removes the reported TOP-AGG item. It strengthens the routing hypothesis without qualifying the physical coefficient or repairing the full array.",
+  "zero_item_limitation": "No outside TOP-AGG capacitor was reported with cthresh0; do not interpret as measured physical zero or a guaranteed universal extraction error bound.",
+  "retained_failure": "../run_20260924T020658Z_4ba77ed4: initial thin M3 bridge control had192 full-DRC met3.3c violations. A common full-row M3 fill fixes both final controls.",
+  "not_executed": [
+    "school4x4 layout",
+    "complete binary array reroute",
+    "RC dynamic settling or transient noise",
+    "independent silicon calibration"
+  ],
+  "formal_ADC_PEX_allowed": false,
+  "full_CDAC_repair_pass": false
+}

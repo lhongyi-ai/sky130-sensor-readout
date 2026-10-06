@@ -1,0 +1,1022 @@
+{
+  "status": "PILOT_ONLY",
+  "simulation_slot_released": true,
+  "n_samples_per_phase_per_leg": 64,
+  "seed": 11,
+  "bandwidth_hz": 60000000,
+  "production_status": "NOT_RUN",
+  "formal_M2_ADC_SNDR_mismatch_pass": false,
+  "runs": {
+    "rc_noise": {
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_seconds": 1.5791420419700444,
+      "input_sha256": "ff9c3984ea04e37b5b302bacd4ef56ca78152940ee08ecfee321fb484bb0200d",
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "model_section": "tt",
+      "cpu_elapsed_lines": [
+        "Total time required for noise analysis `rc_single': CPU = 6.972 ms, elapsed = 22.7921 ms.",
+        "Total time required for noise analysis `rc_diff': CPU = 6.652 ms, elapsed = 17.7898 ms.",
+        "Time used: CPU = 209 ms, elapsed = 548 ms, util. = 38.1%."
+      ],
+      "evidence_dir": "runs/rc_analytic_noise/20260923T112945Z_80759991",
+      "spectre_log_sha256": "93954efdf3905cedefa83fdc623de5a30e8522880ffcab64189cec68e4ff8c6a",
+      "actual_errors": 0,
+      "actual_warnings": 0
+    },
+    "mim_ac": {
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_seconds": 2.8414624999277294,
+      "input_sha256": "1f04ea5bc5d674b6c9a2973ce41ff42f29801424517db7273d3185f1897e2429",
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "model_section": "tt",
+      "cpu_elapsed_lines": [
+        "Total time required for ac analysis `mim_ac': CPU = 2.823 ms, elapsed = 4.8511 ms.",
+        "Time used: CPU = 813 ms, elapsed = 1.73 s, util. = 46.9%."
+      ],
+      "evidence_dir": "runs/mim_capacitance_ac/20260923T113125Z_701accc8",
+      "spectre_log_sha256": "e842acf4ce09efa00c073d3e9fe2f2638546867328ea598065370f5b75491044",
+      "actual_errors": 0,
+      "actual_warnings": 0
+    },
+    "rc_off": {
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_seconds": 5.812530040973797,
+      "input_sha256": "6a3604f1e377659b4ae456e50e604030774a71172a450ac9c18a93c4ae5f1851",
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "model_section": "tt",
+      "cpu_elapsed_lines": [
+        "Total time required for tran analysis `tran': CPU = 4.23556 s, elapsed = 4.24907 s.",
+        "Time used: CPU = 4.42 s, elapsed = 4.85 s, util. = 91.2%."
+      ],
+      "evidence_dir": "runs/rc_f60_base_white_off/20260923T113207Z_3513c7ac",
+      "spectre_log_sha256": "192b5869d9d52892d250ed97b5745257fca0c756182aad48ba8f66618409299b",
+      "actual_errors": 0,
+      "actual_warnings": 0
+    },
+    "rc_on": {
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_seconds": 6.978489291970618,
+      "input_sha256": "f43a2464501b0de121ddabb982f29aa0b222ce555b84cb1194d274e54c8f6f44",
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "model_section": "tt",
+      "cpu_elapsed_lines": [
+        "Total time required for tran analysis `tran': CPU = 5.55368 s, elapsed = 5.57189 s.",
+        "Time used: CPU = 5.76 s, elapsed = 6 s, util. = 96%."
+      ],
+      "evidence_dir": "runs/rc_f60_base_white_s11/20260923T113237Z_8067daad",
+      "spectre_log_sha256": "e3be32f602f12a6dfadf00b0ea4e3172695a672b38109ff79e21aecd4499c30d",
+      "actual_errors": 0,
+      "actual_warnings": 0
+    },
+    "tg_off": {
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_seconds": 27.417939000064507,
+      "input_sha256": "8454c361bfe8e64ca2b79683c1adc1c31f132c82716a980bac8c6dab20e1d675",
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "model_section": "tt",
+      "cpu_elapsed_lines": [
+        "Total time required for tran analysis `tran': CPU = 24.6102 s, elapsed = 24.7019 s.",
+        "Time used: CPU = 25.4 s, elapsed = 26.4 s, util. = 96.2%."
+      ],
+      "evidence_dir": "runs/tg_f60_base_white_off/20260923T113321Z_bfc809a5",
+      "spectre_log_sha256": "6590296cba7a21080e92df9e32a92391b5c5e7c2608901c52881b82d036b9124",
+      "actual_errors": 0,
+      "actual_warnings": 0
+    },
+    "tg_on": {
+      "status": "FAIL",
+      "exit_code": 0,
+      "wall_seconds": 75.86590029206127,
+      "input_sha256": "4eb38bcbc71604d96bfd2d96a7e846dd6151c0e5b2dd84383b793205d0b28312",
+      "model_entry_sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+      "model_section": "tt",
+      "cpu_elapsed_lines": [
+        "Total time required for tran analysis `tran': CPU = 72.7866 s (1m  12.8s), elapsed = 73.0474 s (1m  13.0s).",
+        "Time used: CPU = 73.6 s (1m  13.6s), elapsed = 74.8 s (1m  14.8s), util. = 98.4%."
+      ],
+      "evidence_dir": "runs/tg_f60_base_white_s11/20260923T113429Z_e297ba3c",
+      "spectre_log_sha256": "0d5338ad45c36366de49b2378ba3c8b4e92088a7350689e3b5f38824d32e3eb6",
+      "actual_errors": 0,
+      "actual_warnings": 1,
+      "execution_review": {
+        "review_status": "EXECUTION_CONFIRMED",
+        "original_status": "FAIL",
+        "reason": "The launcher required plural warnings; Spectre emitted singular 1 warning. Original status preserved; no simulation rerun.",
+        "execution_status": "PASS",
+        "qualification": "REVIEW_REQUIRED_LTE_RELAXATION",
+        "original_status_sha256": "d441739e741f8dae72c41c6ba979fe0ca651a7de3b2ce479fabff3395f978933",
+        "spectre_log_sha256": "0d5338ad45c36366de49b2378ba3c8b4e92088a7350689e3b5f38824d32e3eb6",
+        "errors": 0,
+        "warnings": 1,
+        "warning_id": "SPECTRE-16780",
+        "time_s": 0.0003135,
+        "warning_effect": "Local truncation tolerance temporarily relaxed over model discontinuity; numerical convergence not proven."
+      }
+    }
+  },
+  "theory": {
+    "temperature_k": 300.15,
+    "k_b_j_per_k": 1.380649e-23,
+    "R_ohm": 1000.0,
+    "C_f": 1.418127e-10,
+    "tau_s": 1.418127e-07,
+    "fc_hz": 1122289.7744129782,
+    "one_sided_white_psd_v2_per_hz": 1.6576071894000003e-17,
+    "white_asd_v_per_sqrt_hz": 4.0713722372192895e-09,
+    "single_ended_variance_v2": 2.922176909049754e-11,
+    "single_ended_rms_v": 5.405716334631104e-06,
+    "differential_independent_variance_v2": 5.844353818099507e-11,
+    "differential_independent_rms_v": 7.644837354777083e-06,
+    "ideal_hard_cutoff_variance_fraction": {
+      "30000000": 0.9761953718891568,
+      "60000000": 0.9880935241006686,
+      "120000000": 0.9940462414104229
+    }
+  },
+  "rc_analytic_noise_single": {
+    "status": "CONTROL_CHECK_PASS",
+    "scope": "LTI ideal RC noise units only",
+    "raw_sha256": "a133c56359d3a5330e8e569c478ea369e08e40e9e41ab3946d2f0c5185990b93",
+    "psd_max_relative_error": 2.3352280608346376e-05,
+    "integrated_variance_v2": 2.923706377431745e-11,
+    "analytic_in_band_variance_v2": 2.92215437331083e-11,
+    "psf_out_interpretation": "ASD V/sqrt(Hz); square before integrating over Hz",
+    "formal_adc_or_mismatch_pass": false
+  },
+  "rc_analytic_noise_diff": {
+    "status": "CONTROL_CHECK_PASS",
+    "scope": "LTI ideal RC noise units only",
+    "raw_sha256": "c253195589436aff240b096d8b7ea30e58a2d19524ab74219b27b1e48603a4da",
+    "psd_max_relative_error": 2.3352280608124332e-05,
+    "integrated_variance_v2": 5.84741275486349e-11,
+    "analytic_in_band_variance_v2": 5.84430874662166e-11,
+    "psf_out_interpretation": "ASD V/sqrt(Hz); square before integrating over Hz",
+    "formal_adc_or_mismatch_pass": false
+  },
+  "mim_C_low_frequency_f": 1.4181273983533313e-10,
+  "rc_paired": {
+    "status": "PILOT_ONLY",
+    "job": "rc_f60_base_white_s11",
+    "theory": {
+      "temperature_k": 300.15,
+      "k_b_j_per_k": 1.380649e-23,
+      "R_ohm": 1000.0,
+      "C_f": 1.418127e-10,
+      "tau_s": 1.418127e-07,
+      "fc_hz": 1122289.7744129782,
+      "one_sided_white_psd_v2_per_hz": 1.6576071894000003e-17,
+      "white_asd_v_per_sqrt_hz": 4.0713722372192895e-09,
+      "single_ended_variance_v2": 2.922176909049754e-11,
+      "single_ended_rms_v": 5.405716334631104e-06,
+      "differential_independent_variance_v2": 5.844353818099507e-11,
+      "differential_independent_rms_v": 7.644837354777083e-06,
+      "ideal_hard_cutoff_variance_fraction": {
+        "30000000": 0.9761953718891568,
+        "60000000": 0.9880935241006686,
+        "120000000": 0.9940462414104229
+      }
+    },
+    "method": "Actual noisy samples minus matched deterministic twin; no synthetic noise added",
+    "formal_adc_or_mismatch_pass": false,
+    "raw_hashes": {
+      "on": "d78fbb8efde04e9cf6b44de3c23d195e340dae605c73bdf42ced9cbf4e2d81db",
+      "off": "1f4f0eb1c865152db8642e10c3e844355b9de95dd5778b2d7e41530e662dd871"
+    },
+    "max_strobe_error_s": 1.6202317265623378e-15,
+    "phases": [
+      {
+        "phase": "pre_open",
+        "noise_off_deterministic_offset_p_v": -1.3617579286417936e-15,
+        "noise_off_deterministic_offset_n_v": -1.3617579286417936e-15,
+        "noise_off_span_p_v": 2.7755575615628914e-15,
+        "noise_off_span_n_v": 2.7755575615628914e-15,
+        "p": {
+          "n": 64,
+          "mean_v": 7.207664348349296e-08,
+          "rms_about_mean_v": 4.972344392159002e-06,
+          "sample_variance_v2": 2.472420875423508e-11,
+          "mean_ci95_approx_v": [
+            -1.16997803029488e-06,
+            1.314131317261866e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.7938874769998745e-11,
+            3.626577841543354e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.7097695590562608e-11,
+            3.891563957035904e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 47.40615826178509,
+          "autocorrelation_lags": [
+            0.010271230610164753,
+            -0.1438617750098318,
+            -0.023736876433291598,
+            0.05935710279727436,
+            -0.11930904015930058,
+            0.17546855749003865,
+            0.1296744043118356,
+            -0.14398592185345385,
+            -0.038481079063659544,
+            0.1922553694015134,
+            0.09791777921744596,
+            -0.21190146940691615
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.2311037180883173,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.8460887045430457,
+          "rc_10pct_center_target_met": false
+        },
+        "n": {
+          "n": 64,
+          "mean_v": -1.9333910536434296e-07,
+          "rms_about_mean_v": 5.222347210869161e-06,
+          "sample_variance_v2": 2.72729103908729e-11,
+          "mean_ci95_approx_v": [
+            -1.6027614655368804e-06,
+            1.2160832548081945e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.978810844781685e-11,
+            4.000424583091867e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.879349587405429e-11,
+            4.315845457235798e-11
+          ],
+          "effective_n_mean_approx": 55.17731047861333,
+          "effective_n_variance_approx": 46.436835144616836,
+          "autocorrelation_lags": [
+            0.08784157821493473,
+            -0.007893050053106837,
+            -0.13346153869066088,
+            -0.055304587786669246,
+            -0.006790318604089985,
+            -0.034062258564089204,
+            -0.17356456005694007,
+            -0.13793171738771323,
+            -0.18825555172568317,
+            0.2687012274727275,
+            0.1012048602568043,
+            0.14540982230343244
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.16409876748489743,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.9333079837298975,
+          "rc_10pct_center_target_met": true
+        },
+        "differential": {
+          "n": 64,
+          "mean_v": 2.654157488478359e-07,
+          "rms_about_mean_v": 7.287013219493011e-06,
+          "sample_variance_v2": 5.3100561661065895e-11,
+          "mean_ci95_approx_v": [
+            -1.5906632206550968e-06,
+            2.1214947183507687e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            3.8527595981864954e-11,
+            7.788856752009981e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            3.5220083920049665e-11,
+            8.917406883716791e-11
+          ],
+          "effective_n_mean_approx": 61.64604887831849,
+          "effective_n_variance_approx": 37.58216029465553,
+          "autocorrelation_lags": [
+            0.16969698061090777,
+            -0.15060450700949396,
+            -0.19601066286836505,
+            -0.08457437554590112,
+            0.10079596783722211,
+            0.11211577839559111,
+            -0.08581810765589581,
+            -0.2371449972723537,
+            -0.13821800944141932,
+            0.418432686776697,
+            0.13704462189340458,
+            0.04435227165251686
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.0029008694123419487,
+          "correlation_review_required": true,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.9085788320450005,
+          "rc_10pct_center_target_met": true
+        },
+        "pn_correlation": -0.02124676302755303
+      },
+      {
+        "phase": "post_open",
+        "noise_off_deterministic_offset_p_v": -1.1848161340921592e-15,
+        "noise_off_deterministic_offset_n_v": -1.1848161340921592e-15,
+        "noise_off_span_p_v": 2.4424906541753444e-15,
+        "noise_off_span_n_v": 2.4424906541753444e-15,
+        "p": {
+          "n": 64,
+          "mean_v": -3.635850541281599e-07,
+          "rms_about_mean_v": 4.690271371043287e-06,
+          "sample_variance_v2": 2.1998645534028273e-11,
+          "mean_ci95_approx_v": [
+            -1.5351799836506774e-06,
+            8.080098753943576e-07
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.59613175599372e-11,
+            3.226788821867066e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.5668543453171294e-11,
+            3.314085931104327e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 56.73902755783594,
+          "autocorrelation_lags": [
+            0.06141332898280646,
+            -0.08208384101866943,
+            -0.10088750758615221,
+            0.002594409290860889,
+            -0.05807098138462615,
+            -0.09004581014048388,
+            -0.011436223476676628,
+            -0.02089274723557345,
+            -0.013410678845559717,
+            -0.09332225849516229,
+            0.15394201726278783,
+            0.0856123022323432
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.9403777055429307,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.7528170339687575,
+          "rc_10pct_center_target_met": false
+        },
+        "n": {
+          "n": 64,
+          "mean_v": -6.055723734549323e-07,
+          "rms_about_mean_v": 4.817892838776732e-06,
+          "sample_variance_v2": 2.321209140593612e-11,
+          "mean_ci95_approx_v": [
+            -1.8090461971109183e-06,
+            5.979014502010536e-07
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.6841744260451857e-11,
+            3.404778578979898e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.6327582438436476e-11,
+            3.561671975571076e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 52.49227749740721,
+          "autocorrelation_lags": [
+            -0.17163308652507797,
+            -0.035081620816630306,
+            -0.13299972509311667,
+            -0.04399949903106798,
+            0.11153083724485663,
+            0.0040450735952162215,
+            -0.013928485246590534,
+            0.06975564644267429,
+            -0.2211286124257802,
+            0.020978852291409618,
+            0.015111571141220888,
+            -0.05267326176476269
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.7260869631837437,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.7943424415561593,
+          "rc_10pct_center_target_met": false
+        },
+        "differential": {
+          "n": 64,
+          "mean_v": 2.419873193267724e-07,
+          "rms_about_mean_v": 6.668351275266211e-06,
+          "sample_variance_v2": 4.446690873034451e-11,
+          "mean_ci95_approx_v": [
+            -1.4237172688150219e-06,
+            1.9076919074685667e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            3.226337049051069e-11,
+            6.522461749388644e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            3.113134261039627e-11,
+            6.870937989321661e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 51.00847859476574,
+          "autocorrelation_lags": [
+            0.08446411293966878,
+            -0.10825252344805211,
+            -0.17937952502915983,
+            -0.0980400097357648,
+            -0.05023029642769779,
+            0.16749564486630714,
+            0.018739851391625675,
+            -0.03195453018715363,
+            -0.10430078653154096,
+            -0.08575124033446843,
+            0.04824131051304554,
+            0.16771587399853577
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.5818390561795155,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.7608524417641171,
+          "rc_10pct_center_target_met": false
+        },
+        "pn_correlation": 0.016458397315200508
+      },
+      {
+        "phase": "late_hold",
+        "noise_off_deterministic_offset_p_v": -1.1813466871402056e-15,
+        "noise_off_deterministic_offset_n_v": -1.1813466871402056e-15,
+        "noise_off_span_p_v": 2.6645352591003757e-15,
+        "noise_off_span_n_v": 2.6645352591003757e-15,
+        "p": {
+          "n": 64,
+          "mean_v": -7.935498579428324e-08,
+          "rms_about_mean_v": 4.408241684576118e-06,
+          "sample_variance_v2": 1.943259474963449e-11,
+          "mean_ci95_approx_v": [
+            -1.1805009957340814e-06,
+            1.021791024145515e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.4099496050004666e-11,
+            2.8503972856419325e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.3036950793387055e-11,
+            3.205025068633736e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 39.95329586317818,
+          "autocorrelation_lags": [
+            -0.2592656017462484,
+            0.2184078737627758,
+            -0.1698002939926102,
+            0.08451148311266378,
+            0.02292780204424551,
+            -0.13804523936175123,
+            0.14393079096985673,
+            -0.3086458019476666,
+            0.07793380419038022,
+            -0.16462268479215914,
+            0.08822850805131752,
+            0.018818413192294648
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.022774979479081917,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.6650040485041567,
+          "rc_10pct_center_target_met": false
+        },
+        "n": {
+          "n": 64,
+          "mean_v": 8.70300276380187e-07,
+          "rms_about_mean_v": 4.6337023259834045e-06,
+          "sample_variance_v2": 2.147119724582401e-11,
+          "mean_ci95_approx_v": [
+            -4.805455945922623e-07,
+            2.2211461473526363e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.5578622652132485e-11,
+            3.149422047723732e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.510125232955177e-11,
+            3.295120485011282e-11
+          ],
+          "effective_n_mean_approx": 47.63935784461533,
+          "effective_n_variance_approx": 52.454620599383965,
+          "autocorrelation_lags": [
+            0.05509228478113153,
+            -0.007172028196215657,
+            -0.046191272882623896,
+            0.16998452058913815,
+            -0.16227039201839877,
+            -0.0745567736717164,
+            -0.16501613042330918,
+            -0.002023498461420696,
+            0.001351646041323492,
+            -0.06842788945231822,
+            -0.1013312942998723,
+            -0.1208579021962588
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.6970762134243993,
+          "correlation_review_required": true,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.7347671928872407,
+          "rc_10pct_center_target_met": false
+        },
+        "differential": {
+          "n": 64,
+          "mean_v": -9.496552621744703e-07,
+          "rms_about_mean_v": 6.390017076259104e-06,
+          "sample_variance_v2": 4.083231823488295e-11,
+          "mean_ci95_approx_v": [
+            -2.5458340360355225e-06,
+            6.465235116865817e-07
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            2.962626026439904e-11,
+            5.989335472833196e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            2.7585060921136023e-11,
+            6.661530979941277e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 41.50781665385135,
+          "autocorrelation_lags": [
+            -0.29249869609621576,
+            0.05234194957681261,
+            -0.2165063971109053,
+            0.09029985726984537,
+            -0.023507753749077945,
+            -0.1316887001662325,
+            0.05233170621996879,
+            -0.14973897515491846,
+            0.20727805404005956,
+            -0.23846839873903755,
+            0.10163715191048768,
+            -0.0015182748806068973
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.043379850030665704,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.6986626666651915,
+          "rc_10pct_center_target_met": false
+        },
+        "pn_correlation": 0.0017495369113940246
+      }
+    ],
+    "remaining": "Need complete bandwidth/numerical/seed convergence matrix and warning review; TG thermal kT/C is a benchmark, not an exact nonlinear signoff criterion."
+  },
+  "tg_paired": {
+    "status": "PILOT_ONLY",
+    "job": "tg_f60_base_white_s11",
+    "execution_warning_review": {
+      "review_status": "EXECUTION_CONFIRMED",
+      "original_status": "FAIL",
+      "reason": "The launcher required plural warnings; Spectre emitted singular 1 warning. Original status preserved; no simulation rerun.",
+      "execution_status": "PASS",
+      "qualification": "REVIEW_REQUIRED_LTE_RELAXATION",
+      "original_status_sha256": "d441739e741f8dae72c41c6ba979fe0ca651a7de3b2ce479fabff3395f978933",
+      "spectre_log_sha256": "0d5338ad45c36366de49b2378ba3c8b4e92088a7350689e3b5f38824d32e3eb6",
+      "errors": 0,
+      "warnings": 1,
+      "warning_id": "SPECTRE-16780",
+      "time_s": 0.0003135,
+      "warning_effect": "Local truncation tolerance temporarily relaxed over model discontinuity; numerical convergence not proven."
+    },
+    "theory": {
+      "temperature_k": 300.15,
+      "k_b_j_per_k": 1.380649e-23,
+      "R_ohm": 1000.0,
+      "C_f": 1.418127e-10,
+      "tau_s": 1.418127e-07,
+      "fc_hz": 1122289.7744129782,
+      "one_sided_white_psd_v2_per_hz": 1.6576071894000003e-17,
+      "white_asd_v_per_sqrt_hz": 4.0713722372192895e-09,
+      "single_ended_variance_v2": 2.922176909049754e-11,
+      "single_ended_rms_v": 5.405716334631104e-06,
+      "differential_independent_variance_v2": 5.844353818099507e-11,
+      "differential_independent_rms_v": 7.644837354777083e-06,
+      "ideal_hard_cutoff_variance_fraction": {
+        "30000000": 0.9761953718891568,
+        "60000000": 0.9880935241006686,
+        "120000000": 0.9940462414104229
+      }
+    },
+    "method": "Actual noisy samples minus matched deterministic twin; no synthetic noise added",
+    "formal_adc_or_mismatch_pass": false,
+    "raw_hashes": {
+      "on": "548904de2c3cc36d3a6ad2f7d1a69576412be3cd42ea7e5222088b31105eb57a",
+      "off": "0563cf6ef4784692a9f21217cbe0a11915f2a3c18450219b32a3b245515c36a8"
+    },
+    "max_strobe_error_s": 1.6202317265623378e-15,
+    "phases": [
+      {
+        "phase": "pre_open",
+        "noise_off_deterministic_offset_p_v": -6.65184747561387e-12,
+        "noise_off_deterministic_offset_n_v": -6.65184747561387e-12,
+        "noise_off_span_p_v": 1.1102230246251565e-16,
+        "noise_off_span_n_v": 1.1102230246251565e-16,
+        "p": {
+          "n": 64,
+          "mean_v": -2.822279228601593e-07,
+          "rms_about_mean_v": 4.912231246567118e-06,
+          "sample_variance_v2": 2.4130015819750337e-11,
+          "mean_ci95_approx_v": [
+            -1.5092667796416929e-06,
+            9.448109339213743e-07
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.7507752676390228e-11,
+            3.5394208792630195e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.718256600002331e-11,
+            3.63642458118693e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 56.65446981786643,
+          "autocorrelation_lags": [
+            -0.0981905145953107,
+            -0.06876026487659855,
+            0.15312493948778302,
+            -0.02845822936609934,
+            0.1149122827721843,
+            0.006040525144229931,
+            -0.06321578385715822,
+            0.047096313326099565,
+            -0.005301802121390189,
+            -0.005112635151064738,
+            0.015223157843528116,
+            -0.1092899564514037
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.9561652543472564,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.8257547907185757,
+          "rc_10pct_center_target_met": null
+        },
+        "n": {
+          "n": 64,
+          "mean_v": 2.443666455419907e-07,
+          "rms_about_mean_v": 5.350636265517345e-06,
+          "sample_variance_v2": 2.8629308445869398e-11,
+          "mean_ci95_approx_v": [
+            -1.0921825266661444e-06,
+            1.5809158177501259e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            2.0772255406318974e-11,
+            4.199382745088465e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            2.008823106535016e-11,
+            4.409073752206007e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 51.70402396179448,
+          "autocorrelation_lags": [
+            -0.07934498331333562,
+            -0.16506090528373973,
+            0.0903227940023505,
+            0.10882753003724463,
+            -0.06514476293553732,
+            -0.10080534993556944,
+            -0.007917288807110564,
+            -0.11297671734408074,
+            -0.16249200982902562,
+            0.015253247156816543,
+            -0.15076319171254005,
+            0.04124357113831062
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.6436657982607326,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.9797253669757866,
+          "rc_10pct_center_target_met": null
+        },
+        "differential": {
+          "n": 64,
+          "mean_v": -5.2659456840215e-07,
+          "rms_about_mean_v": 7.4633882060875385e-06,
+          "sample_variance_v2": 5.570216351476657e-11,
+          "mean_ci95_approx_v": [
+            -2.3908934730016337e-06,
+            1.3377043361973337e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            4.041521189381759e-11,
+            8.170462963514437e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            3.923796978564684e-11,
+            8.528729329932898e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 52.9591444931461,
+          "autocorrelation_lags": [
+            -0.17570124373894042,
+            -0.12564764066232625,
+            0.18315435575301292,
+            0.028232630203006908,
+            -0.0003853239989348583,
+            -0.09635656420187091,
+            -0.00334354245083774,
+            -0.09631788530515506,
+            -0.08073683347139003,
+            0.044296107737605755,
+            0.010606903287509245,
+            -0.04891730530967868
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.8036975792982314,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.9530936224679163,
+          "rc_10pct_center_target_met": null
+        },
+        "pn_correlation": -0.05598250298210796
+      },
+      {
+        "phase": "post_open",
+        "noise_off_deterministic_offset_p_v": 8.107920807260555e-07,
+        "noise_off_deterministic_offset_n_v": 8.107920807260555e-07,
+        "noise_off_span_p_v": 1.687538997430238e-14,
+        "noise_off_span_n_v": 1.687538997430238e-14,
+        "p": {
+          "n": 64,
+          "mean_v": -2.9944369725302955e-07,
+          "rms_about_mean_v": 4.985594344689769e-06,
+          "sample_variance_v2": 2.4856150969802608e-11,
+          "mean_ci95_approx_v": [
+            -1.544808110697491e-06,
+            9.459207161914319e-07
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.8034606645807984e-11,
+            3.64593129063035e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.7655105212332234e-11,
+            3.7596641582780457e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 55.76119500941887,
+          "autocorrelation_lags": [
+            -0.11917365339540355,
+            -0.07312843895567137,
+            0.12587884669140093,
+            -0.05499817966971903,
+            0.12139736413945672,
+            0.027048343432404087,
+            -0.05933929133488293,
+            0.0680329917770623,
+            0.0018473704663611616,
+            -0.025899301782925144,
+            -9.027142440989448e-05,
+            -0.1348383370574895
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.9222610590025428,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.8506039074097482,
+          "rc_10pct_center_target_met": null
+        },
+        "n": {
+          "n": 64,
+          "mean_v": 2.655625106259135e-07,
+          "rms_about_mean_v": 5.469946332752124e-06,
+          "sample_variance_v2": 2.99203128831884e-11,
+          "mean_ci95_approx_v": [
+            -1.1007894296429884e-06,
+            1.6319144508948155e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            2.1708955430121003e-11,
+            4.3887488895121274e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            2.1096992430595378e-11,
+            4.574651682864598e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 53.27526399110592,
+          "autocorrelation_lags": [
+            -0.06884856741805381,
+            -0.15144464293875087,
+            0.054847529707685624,
+            0.1120995947877807,
+            -0.06524724548579663,
+            -0.0715983170945217,
+            -0.0289006642119061,
+            -0.0854350696293093,
+            -0.18013951789868332,
+            0.01490719644245533,
+            -0.12212049067442396,
+            0.06071808413701366
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.7643713152289714,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 1.023904911113613,
+          "rc_10pct_center_target_met": null
+        },
+        "differential": {
+          "n": 64,
+          "mean_v": -5.650062078789431e-07,
+          "rms_about_mean_v": 7.544281275441987e-06,
+          "sample_variance_v2": 5.691617996298457e-11,
+          "mean_ci95_approx_v": [
+            -2.4495115999909187e-06,
+            1.3194991842330328e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            4.129605258116905e-11,
+            8.348536413473575e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            4.011444145623532e-11,
+            8.707778185743426e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 53.13234969172239,
+          "autocorrelation_lags": [
+            -0.17455713512778567,
+            -0.13927565822551602,
+            0.15800431416672323,
+            0.02713442017105241,
+            -0.019408476302389982,
+            -0.08197759282703623,
+            -0.03139159880281509,
+            -0.09158954498619441,
+            -0.09450837961794469,
+            0.030205556103751006,
+            0.040396307249340374,
+            -0.07480315104486814
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.8074253422908423,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.9738660891255353,
+          "rc_10pct_center_target_met": null
+        },
+        "pn_correlation": -0.039230708948982014
+      },
+      {
+        "phase": "late_hold",
+        "noise_off_deterministic_offset_p_v": 8.104704002660085e-07,
+        "noise_off_deterministic_offset_n_v": 8.104704002660085e-07,
+        "noise_off_span_p_v": 1.687538997430238e-14,
+        "noise_off_span_n_v": 1.687538997430238e-14,
+        "p": {
+          "n": 64,
+          "mean_v": -3.001453140645538e-07,
+          "rms_about_mean_v": 4.984906974669121e-06,
+          "sample_variance_v2": 2.4849297546104845e-11,
+          "mean_ci95_approx_v": [
+            -1.5453380275865183e-06,
+            9.450473994574107e-07
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            1.802963408184519e-11,
+            3.644926021876633e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            1.765064747081175e-11,
+            3.7584997313934737e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 55.76934315875465,
+          "autocorrelation_lags": [
+            -0.11915820623753627,
+            -0.0729883369316651,
+            0.12585267746849405,
+            -0.054625034393538524,
+            0.12159530055722513,
+            0.027179976748029615,
+            -0.05918359023396504,
+            0.06805598819981871,
+            0.001980206728015077,
+            -0.02556842374607695,
+            -0.00026245395946347227,
+            -0.13466026327421962
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.9226147140894418,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.8503693759658599,
+          "rc_10pct_center_target_met": null
+        },
+        "n": {
+          "n": 64,
+          "mean_v": 2.6526516417983703e-07,
+          "rms_about_mean_v": 5.468482523678323e-06,
+          "sample_variance_v2": 2.990430111177524e-11,
+          "mean_ci95_approx_v": [
+            -1.1007211274617293e-06,
+            1.6312514558214034e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            2.1697337943588604e-11,
+            4.3864002628689837e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            2.1084975426564255e-11,
+            4.572436323752723e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 53.26394555161777,
+          "autocorrelation_lags": [
+            -0.06900411588746592,
+            -0.15155766378026528,
+            0.054927592955342976,
+            0.11226326974230126,
+            -0.06551983136580516,
+            -0.07148825048993207,
+            -0.02868840503235582,
+            -0.08497152946653809,
+            -0.18044418600780326,
+            0.015153388079608735,
+            -0.12200838757827501,
+            0.06085955936653985
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.7635867039085937,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 1.023356971275899,
+          "rc_10pct_center_target_met": null
+        },
+        "differential": {
+          "n": 64,
+          "mean_v": -5.654104782443908e-07,
+          "rms_about_mean_v": 7.541680487693651e-06,
+          "sample_variance_v2": 5.6876944578459146e-11,
+          "mean_ci95_approx_v": [
+            -2.449266212906368e-06,
+            1.318445256417586e-06
+          ],
+          "variance_ci95_iid_gaussian_v2": [
+            4.1267584990697273e-11,
+            8.342781318233167e-11
+          ],
+          "variance_ci95_correlated_gaussian_approx_v2": [
+            4.0084764560646026e-11,
+            8.702424453556157e-11
+          ],
+          "effective_n_mean_approx": 64.0,
+          "effective_n_variance_approx": 53.11584116955292,
+          "autocorrelation_lags": [
+            -0.1748189524117286,
+            -0.1394047630731288,
+            0.15817187716926662,
+            0.027188413910111932,
+            -0.01947576390884088,
+            -0.08174196690645738,
+            -0.031196881976246912,
+            -0.09151528783925268,
+            -0.09474650406200055,
+            0.030656839975064104,
+            0.04034253947649792,
+            -0.07485277285448576
+          ],
+          "ljung_box_lags": 12,
+          "ljung_box_p_approx": 0.8063897320463641,
+          "correlation_review_required": false,
+          "assumptions": "IID Gaussian chi-square interval is exact only under independence/Gaussianity; effective-N intervals are descriptive approximations, not proof of independence.",
+          "variance_over_nominal_kTC": 0.9731947508433814,
+          "rc_10pct_center_target_met": null
+        },
+        "pn_correlation": -0.03894635962662364
+      }
+    ],
+    "remaining": "Need complete bandwidth/numerical/seed convergence matrix and warning review; TG thermal kT/C is a benchmark, not an exact nonlinear signoff criterion."
+  },
+  "qualification_limits": [
+    "Only one seed and 64 samples per phase; no bandwidth or numerical-convergence matrix executed.",
+    "RC phase variances are often below the theoretical central value; some autocorrelation diagnostics flag review; no convergence pass.",
+    "TG transient SPECTRE-16780 at 313.5 us relaxed LTE at XNN LVT sbnode. Numerical qualification not passed.",
+    "A similar internal LVT-body LTE location was reported by the ADC task; this is a shared diagnostic clue, not proof of a model defect.",
+    "The TG+concentrated MIM load is a tool control, not actual bottom-plate ADC topology."
+  ],
+  "rough_linear_runtime_projection_s": {
+    "rc_1024_white_one_seed": 74.66614222222222,
+    "tg_1024_white_one_seed": 978.5754000000001,
+    "assumption": "Linear scaling by simulated duration only; not a completed benchmark or permission to run."
+  }
+}

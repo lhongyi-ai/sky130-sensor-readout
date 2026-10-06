@@ -1,0 +1,43 @@
+// Project-owned minimal MIM coverage experiment, not full SKY130 signoff.
+// Supply layout_path/layout_primary/results_db/report_summary in a run wrapper.
+include "mim_layers.pvl";
+
+rule P1_CAPM_WIDTH {
+    caption "CAPM minimum width 1.0 um (public capm.1)";
+    inte P1_CAPM -lt 1.0;
+}
+rule P1_CAPM_SPACING {
+    caption "CAPM minimum spacing 0.84 um (public capm.2a)";
+    exte P1_CAPM -lt 0.84;
+}
+rule P1_CAPM_RECTANGLE {
+    caption "Only orthogonal rectangular CAPM supported by this extraction experiment";
+    rect_chk -not P1_CAPM -orthogonal_only P1_BAD_RECT;
+    copy P1_BAD_RECT;
+}
+rule P1_CAPM_M3_ENCLOSURE {
+    caption "M3 enclosure of CAPM 0.14 um (public capm.3)";
+    enc P1_CAPM P1_M3 -lt 0.14 -outside_also;
+}
+// Enclosure edge checks alone do not establish the existence of a plate.
+rule P1_CAPM_M3_COVERAGE {
+    caption "All CAPM area must have an M3 bottom plate";
+    not P1_CAPM P1_M3;
+}
+select -interact P1_VIA3 P1_CAPM P1_MIM_VIA3;
+rule P1_CAPM_VIA_ENCLOSURE {
+    caption "CAPM enclosure of its top-contact via3 0.14 um (public capm.4)";
+    enc P1_MIM_VIA3 P1_CAPM -lt 0.14 -outside_also;
+}
+rule P1_CAPM_VIA_COVERAGE {
+    caption "MIM via3 must not straddle CAPM edge";
+    not P1_MIM_VIA3 P1_CAPM;
+}
+rule P1_CAPM_TOP_METAL_COVERAGE {
+    caption "Every MIM via3 must have M4 top metal";
+    not P1_MIM_VIA3 P1_M4;
+}
+rule P1_CAPM_CONTACT_PRESENT {
+    caption "Each capacitor requires a top-electrode contact";
+    select -interact -not P1_CAPM P1_MIM_VIA3;
+}

@@ -1,0 +1,474 @@
+{
+  "status": "SCOPED_2X2_SHARED_ACCESS_GEOMETRY_AND_LVS_VERIFIED",
+  "source_run": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T071455411070Z/tile/runs/access_first",
+  "actual_execution_by": "root task on school LinuxLab",
+  "review_execution": "local artifact readback only",
+  "cases": {
+    "good": {
+      "cell": "p2c4_quad_good_r2",
+      "native_GDS": {
+        "status": "ALL_DRAWING_RECTANGLES_AND_LABELS_MATCH",
+        "drawing_rectangle_count": 368,
+        "via3_cut_count": 328,
+        "via4_cut_count": 4,
+        "CAPM_count": 4
+      },
+      "school_drc": {
+        "result": "ZERO_RESULTS_FOR_EXECUTED_CHECKS",
+        "checks": 279,
+        "results": 0,
+        "summary_log_ascii_agree": true,
+        "actual_top_and_GDS_confirmed": true,
+        "tool_original_geometry_count": 364,
+        "initial_XL_license_unavailable": true,
+        "Pegasus_DRC_license_checkout_succeeded": true,
+        "selected_executed_rules": {
+          "m3.1": 0,
+          "m3.2": 0,
+          "m3.3d": 0,
+          "m3.4": 0,
+          "m3.6": 0,
+          "via3.1": 0,
+          "via3.1a": 0,
+          "via3.2": 0,
+          "via3.4": 0,
+          "via3.5": 0,
+          "m4.1": 0,
+          "m4.2": 0,
+          "m4.3": 0,
+          "m4.4a": 0,
+          "m4.5b": 0,
+          "via4.1": 0,
+          "via4.2": 0,
+          "m5.1": 0,
+          "m5.2": 0,
+          "m5.3": 0,
+          "m5.4": 0
+        },
+        "observed_branch": "non-Copper, confirmed by executed rule IDs; areaid.mt marker not added",
+        "coverage_limits": [
+          "via4.4 M4 enclosure check belongs to unexecuted Copper branch; drawn enclosure is checked geometrically, not claimed as active rule coverage",
+          "via3.1 0.2 size check selects areaid.mt; no areaid.mt in this GDS. A zero result is not proof that outside-region cut size was checked",
+          "No new intentionally undersized metal/via DRC counterexample in this run; open/short are connectivity controls"
+        ]
+      },
+      "mim_drc": {
+        "result": "ZERO_RESULTS_FOR_EXECUTED_CHECKS",
+        "checks": 9,
+        "results": 0,
+        "summary_log_ascii_agree": true,
+        "actual_top_and_GDS_confirmed": true,
+        "tool_original_geometry_count": 356,
+        "initial_XL_license_unavailable": true,
+        "Pegasus_DRC_license_checkout_succeeded": true
+      },
+      "LVS": {
+        "result": "MATCH",
+        "matches_expected": true,
+        "blackboxes": 0,
+        "cells_not_run": 0,
+        "MIM_device_count": 4,
+        "dimensions_um": [
+          4,
+          4
+        ],
+        "layout_ports": [
+          "B00",
+          "B01",
+          "B10",
+          "B11",
+          "TOP"
+        ],
+        "source_ports": [
+          "TOP",
+          "B00",
+          "B01",
+          "B10",
+          "B11"
+        ],
+        "layout_net_count": 5,
+        "layout_external_port_count": 5,
+        "device_terminals_PLUS_MINUS": [
+          [
+            "TOP",
+            "B00"
+          ],
+          [
+            "TOP",
+            "B10"
+          ],
+          [
+            "TOP",
+            "B01"
+          ],
+          [
+            "TOP",
+            "B11"
+          ]
+        ],
+        "source_and_project_rules_match_frozen_input": true,
+        "Pegasus_LVS_checkout_succeeded": true,
+        "device_coordinates_PVS_dbu": [
+          {
+            "xy": [
+              0,
+              0
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B00"
+            ]
+          },
+          {
+            "xy": [
+              0,
+              12000
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B10"
+            ]
+          },
+          {
+            "xy": [
+              12000,
+              0
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B01"
+            ]
+          },
+          {
+            "xy": [
+              12000,
+              12000
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B11"
+            ]
+          }
+        ],
+        "failure_explanation": null,
+        "parallel_reduction_used_to_hide_error": false
+      }
+    },
+    "open": {
+      "cell": "p2c4_quad_open_r2",
+      "native_GDS": {
+        "status": "ALL_DRAWING_RECTANGLES_AND_LABELS_MATCH",
+        "drawing_rectangle_count": 367,
+        "via3_cut_count": 328,
+        "via4_cut_count": 4,
+        "CAPM_count": 4
+      },
+      "school_drc": {
+        "result": "ZERO_RESULTS_FOR_EXECUTED_CHECKS",
+        "checks": 279,
+        "results": 0,
+        "summary_log_ascii_agree": true,
+        "actual_top_and_GDS_confirmed": true,
+        "tool_original_geometry_count": 363,
+        "initial_XL_license_unavailable": true,
+        "Pegasus_DRC_license_checkout_succeeded": true,
+        "selected_executed_rules": {
+          "m3.1": 0,
+          "m3.2": 0,
+          "m3.3d": 0,
+          "m3.4": 0,
+          "m3.6": 0,
+          "via3.1": 0,
+          "via3.1a": 0,
+          "via3.2": 0,
+          "via3.4": 0,
+          "via3.5": 0,
+          "m4.1": 0,
+          "m4.2": 0,
+          "m4.3": 0,
+          "m4.4a": 0,
+          "m4.5b": 0,
+          "via4.1": 0,
+          "via4.2": 0,
+          "m5.1": 0,
+          "m5.2": 0,
+          "m5.3": 0,
+          "m5.4": 0
+        },
+        "observed_branch": "non-Copper, confirmed by executed rule IDs; areaid.mt marker not added",
+        "coverage_limits": [
+          "via4.4 M4 enclosure check belongs to unexecuted Copper branch; drawn enclosure is checked geometrically, not claimed as active rule coverage",
+          "via3.1 0.2 size check selects areaid.mt; no areaid.mt in this GDS. A zero result is not proof that outside-region cut size was checked",
+          "No new intentionally undersized metal/via DRC counterexample in this run; open/short are connectivity controls"
+        ]
+      },
+      "mim_drc": {
+        "result": "ZERO_RESULTS_FOR_EXECUTED_CHECKS",
+        "checks": 9,
+        "results": 0,
+        "summary_log_ascii_agree": true,
+        "actual_top_and_GDS_confirmed": true,
+        "tool_original_geometry_count": 355,
+        "initial_XL_license_unavailable": true,
+        "Pegasus_DRC_license_checkout_succeeded": true
+      },
+      "LVS": {
+        "result": "MISMATCH",
+        "matches_expected": true,
+        "blackboxes": 0,
+        "cells_not_run": 0,
+        "MIM_device_count": 4,
+        "dimensions_um": [
+          4,
+          4
+        ],
+        "layout_ports": [
+          "B00",
+          "B01",
+          "B10",
+          "B11",
+          "TOP"
+        ],
+        "source_ports": [
+          "TOP",
+          "B00",
+          "B01",
+          "B10",
+          "B11"
+        ],
+        "layout_net_count": 6,
+        "layout_external_port_count": 5,
+        "device_terminals_PLUS_MINUS": [
+          [
+            "1",
+            "B00"
+          ],
+          [
+            "TOP",
+            "B10"
+          ],
+          [
+            "1",
+            "B01"
+          ],
+          [
+            "TOP",
+            "B11"
+          ]
+        ],
+        "source_and_project_rules_match_frozen_input": true,
+        "Pegasus_LVS_checkout_succeeded": true,
+        "device_coordinates_PVS_dbu": [
+          {
+            "xy": [
+              0,
+              0
+            ],
+            "PLUS_MINUS": [
+              "1",
+              "B00"
+            ]
+          },
+          {
+            "xy": [
+              0,
+              12000
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B10"
+            ]
+          },
+          {
+            "xy": [
+              12000,
+              0
+            ],
+            "PLUS_MINUS": [
+              "1",
+              "B01"
+            ]
+          },
+          {
+            "xy": [
+              12000,
+              12000
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B11"
+            ]
+          }
+        ],
+        "failure_explanation": "Lower-row two PLUS terminals share floating internal node 1; upper row remains TOP",
+        "parallel_reduction_used_to_hide_error": false
+      }
+    },
+    "short": {
+      "cell": "p2c4_quad_short_r2",
+      "native_GDS": {
+        "status": "ALL_DRAWING_RECTANGLES_AND_LABELS_MATCH",
+        "drawing_rectangle_count": 369,
+        "via3_cut_count": 328,
+        "via4_cut_count": 4,
+        "CAPM_count": 4
+      },
+      "school_drc": {
+        "result": "ZERO_RESULTS_FOR_EXECUTED_CHECKS",
+        "checks": 279,
+        "results": 0,
+        "summary_log_ascii_agree": true,
+        "actual_top_and_GDS_confirmed": true,
+        "tool_original_geometry_count": 365,
+        "initial_XL_license_unavailable": true,
+        "Pegasus_DRC_license_checkout_succeeded": true,
+        "selected_executed_rules": {
+          "m3.1": 0,
+          "m3.2": 0,
+          "m3.3d": 0,
+          "m3.4": 0,
+          "m3.6": 0,
+          "via3.1": 0,
+          "via3.1a": 0,
+          "via3.2": 0,
+          "via3.4": 0,
+          "via3.5": 0,
+          "m4.1": 0,
+          "m4.2": 0,
+          "m4.3": 0,
+          "m4.4a": 0,
+          "m4.5b": 0,
+          "via4.1": 0,
+          "via4.2": 0,
+          "m5.1": 0,
+          "m5.2": 0,
+          "m5.3": 0,
+          "m5.4": 0
+        },
+        "observed_branch": "non-Copper, confirmed by executed rule IDs; areaid.mt marker not added",
+        "coverage_limits": [
+          "via4.4 M4 enclosure check belongs to unexecuted Copper branch; drawn enclosure is checked geometrically, not claimed as active rule coverage",
+          "via3.1 0.2 size check selects areaid.mt; no areaid.mt in this GDS. A zero result is not proof that outside-region cut size was checked",
+          "No new intentionally undersized metal/via DRC counterexample in this run; open/short are connectivity controls"
+        ]
+      },
+      "mim_drc": {
+        "result": "ZERO_RESULTS_FOR_EXECUTED_CHECKS",
+        "checks": 9,
+        "results": 0,
+        "summary_log_ascii_agree": true,
+        "actual_top_and_GDS_confirmed": true,
+        "tool_original_geometry_count": 357,
+        "initial_XL_license_unavailable": true,
+        "Pegasus_DRC_license_checkout_succeeded": true
+      },
+      "LVS": {
+        "result": "MISMATCH",
+        "matches_expected": true,
+        "blackboxes": 0,
+        "cells_not_run": 0,
+        "MIM_device_count": 4,
+        "dimensions_um": [
+          4,
+          4
+        ],
+        "layout_ports": [
+          "B00",
+          "B01",
+          "B11",
+          "TOP"
+        ],
+        "source_ports": [
+          "TOP",
+          "B00",
+          "B01",
+          "B10",
+          "B11"
+        ],
+        "layout_net_count": 4,
+        "layout_external_port_count": 4,
+        "device_terminals_PLUS_MINUS": [
+          [
+            "TOP",
+            "B00"
+          ],
+          [
+            "TOP",
+            "B00"
+          ],
+          [
+            "TOP",
+            "B01"
+          ],
+          [
+            "TOP",
+            "B11"
+          ]
+        ],
+        "source_and_project_rules_match_frozen_input": true,
+        "Pegasus_LVS_checkout_succeeded": true,
+        "device_coordinates_PVS_dbu": [
+          {
+            "xy": [
+              0,
+              0
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B00"
+            ]
+          },
+          {
+            "xy": [
+              0,
+              12000
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B00"
+            ]
+          },
+          {
+            "xy": [
+              12000,
+              0
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B01"
+            ]
+          },
+          {
+            "xy": [
+              12000,
+              12000
+            ],
+            "PLUS_MINUS": [
+              "TOP",
+              "B11"
+            ]
+          }
+        ],
+        "failure_explanation": "Left-column B00/B10 physically merge; layout has 4 ports vs source 5",
+        "parallel_reduction_used_to_hide_error": false
+      }
+    }
+  },
+  "formal_ADC_PEX_allowed": false,
+  "PEX": "NOT_RUN",
+  "electrical_performance": "NOT_RUN",
+  "full_array_pitch_qualified": false,
+  "scoped_acceptance": "Actual 2x2 four-device 4um shared-top access control and its cross-row open/short LVS controls accepted; no geometry repair needed for these inputs.",
+  "not_proven": [
+    "All geometric rule coverage",
+    "Complete CDAC layout or final pitch",
+    "Statistical/device-model equivalence",
+    "CAPM coupling/RC reference planes",
+    "PEX accuracy or ADC performance"
+  ],
+  "parser_revision": {
+    "version": 2,
+    "reason": "Anchor top-level Original Geometry summary; initial v1 matched first per-layer count. Actual GDS, completed-rule, ASCII and LVS checks unchanged; no CAD rerun.",
+    "initial_report_preserved_in": "review_parser_history_v1/"
+  }
+}

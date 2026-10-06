@@ -1,0 +1,3060 @@
+{
+  "status": "FUNCTIONAL_DIAGNOSTIC_NOT_NUMERICALLY_QUALIFIED",
+  "scope": "87-device comparator fixture; physical CDAC/reference ADC gate absent",
+  "model_and_stimulus_identity_checked": true,
+  "profiles": {
+    "old_strict_alllocal": {
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 9.2e-06,
+      "step": 9.2e-09,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "lteratio": 10.0,
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "sigglobal": {
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 9.2e-06,
+      "step": 9.2e-09,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "lteratio": 10.0,
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    }
+  },
+  "functional_checks_pass": true,
+  "real_decision_count": 5,
+  "checks": [
+    {
+      "time_s": 0.0,
+      "kind": "global_reset",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 0.0,
+        "Q": 4.114837356755145e-07,
+        "QB": 1.79999999761521,
+        "XCMP.XADC_XCMP_R_BAR": 2.160154014036819e-07,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238045,
+        "XCMP.XADC_XCMP_BN": 1.799999994238042,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291373,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291373,
+        "XCMP.XADC_PREN": 0.57705145383805,
+        "XCMP.XADC_PREP": 0.597844804043654
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 5e-07,
+      "kind": "global_reset",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 0
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 0.0,
+        "Q": 4.11483735637731e-07,
+        "QB": 1.79999999761521,
+        "XCMP.XADC_XCMP_R_BAR": 2.160154013721407e-07,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238045,
+        "XCMP.XADC_XCMP_BN": 1.799999994238042,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291373,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291373,
+        "XCMP.XADC_PREN": 0.5770514538380546,
+        "XCMP.XADC_PREP": 0.597844804043658
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 1.5e-06,
+      "kind": "reset_release_hold",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.297484601365129e-07,
+        "QB": 1.7999997600983981,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000436741082,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942374187,
+        "XCMP.XADC_XCMP_BN": 1.799999967214842,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291373,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291373,
+        "XCMP.XADC_PREN": 0.5770514538380569,
+        "XCMP.XADC_PREP": 0.5978448040436598
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 5.311499999999999e-06,
+      "kind": "decision",
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 1.7999996467428963,
+        "QB": 4.5801580162243574e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.7999999942373257,
+        "XCMP.XADC_XCMP_BP": 1.7999999942380576,
+        "XCMP.XADC_XCMP_S_BAR": 2.652352958127621e-07,
+        "XCMP.XADC_XCMP_BN": 2.1614599480681952e-07,
+        "XCMP.XADC_XCMP_DNEG": 0.09699605663907498,
+        "XCMP.XADC_XCMP_DPOS": 1.799978829519474,
+        "XCMP.XADC_PREN": 0.5767972093298145,
+        "XCMP.XADC_PREP": 0.5968929377551289
+      },
+      "actual_SR_asserted": true,
+      "pass": true
+    },
+    {
+      "time_s": 5.936499999999999e-06,
+      "kind": "decision",
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 1.799999998047101,
+        "QB": 4.1120103526363194e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.79999999423804,
+        "XCMP.XADC_XCMP_BP": 1.7999999942380618,
+        "XCMP.XADC_XCMP_S_BAR": 2.1571835443678057e-07,
+        "XCMP.XADC_XCMP_BN": 2.1615154275299942e-07,
+        "XCMP.XADC_XCMP_DNEG": 0.09084352562151495,
+        "XCMP.XADC_XCMP_DPOS": 1.7999791751401994,
+        "XCMP.XADC_PREN": 0.5768037789417096,
+        "XCMP.XADC_PREP": 0.5968653430209367
+      },
+      "actual_SR_asserted": true,
+      "pass": true
+    },
+    {
+      "time_s": 6.5615e-06,
+      "kind": "decision",
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 1.799999998061613,
+        "QB": 4.11190448366284e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.79999999423804,
+        "XCMP.XADC_XCMP_BP": 1.7999999942380618,
+        "XCMP.XADC_XCMP_S_BAR": 2.1570723217806248e-07,
+        "XCMP.XADC_XCMP_BN": 2.1615154414590955e-07,
+        "XCMP.XADC_XCMP_DNEG": 0.09084361281166778,
+        "XCMP.XADC_XCMP_DPOS": 1.7999791751642504,
+        "XCMP.XADC_PREN": 0.5768037786451414,
+        "XCMP.XADC_PREP": 0.5968653396455682
+      },
+      "actual_SR_asserted": true,
+      "pass": true
+    },
+    {
+      "time_s": 5.4e-06,
+      "kind": "decision_retention",
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 1.7999985599035866,
+        "QB": 5.218142055291886e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.7999999942336258,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.8000003155251119,
+        "XCMP.XADC_XCMP_BN": 1.7999997637577827,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974447984,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999975361527,
+        "XCMP.XADC_PREN": 0.5785822928128856,
+        "XCMP.XADC_PREP": 0.5992802398909234
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 6.025e-06,
+      "kind": "decision_retention",
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 1.7999997858852408,
+        "QB": 4.277286082739224e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.7999999942379394,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.8000000380219028,
+        "XCMP.XADC_XCMP_BN": 1.7999997637380918,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974447758,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999975361696,
+        "XCMP.XADC_PREN": 0.5785836818321765,
+        "XCMP.XADC_PREP": 0.5992838387018511
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 6.625e-06,
+      "kind": "decision_retention",
+      "expected": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 1,
+        "QB": 0,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.9005,
+        "TP": 0.8995,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 1.7999998796331946,
+        "QB": 4.203487900831241e-07,
+        "XCMP.XADC_XCMP_R_BAR": 1.799999994238009,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.800000017683146,
+        "XCMP.XADC_XCMP_BN": 1.7999996605285253,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999976153969,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997802538,
+        "XCMP.XADC_PREN": 0.5796830954679133,
+        "XCMP.XADC_PREP": 0.6002607091734676
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 7.1865e-06,
+      "kind": "decision",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.576456520952751e-07,
+        "QB": 1.7999996494912478,
+        "XCMP.XADC_XCMP_R_BAR": 2.6484346296505645e-07,
+        "XCMP.XADC_XCMP_BP": 2.1615154582368272e-07,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942370344,
+        "XCMP.XADC_XCMP_BN": 1.79999997492562,
+        "XCMP.XADC_XCMP_DNEG": 1.799979167901761,
+        "XCMP.XADC_XCMP_DPOS": 0.09097910920532673,
+        "XCMP.XADC_PREN": 0.5968659232174904,
+        "XCMP.XADC_PREP": 0.5768036681044549
+      },
+      "actual_SR_asserted": true,
+      "pass": true
+    },
+    {
+      "time_s": 7.8115e-06,
+      "kind": "decision",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 1.8,
+        "Q": 4.112010364871064e-07,
+        "QB": 1.7999999980471,
+        "XCMP.XADC_XCMP_R_BAR": 2.15718331838571e-07,
+        "XCMP.XADC_XCMP_BP": 2.1615155232819904e-07,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994237987,
+        "XCMP.XADC_XCMP_BN": 1.7999999891031202,
+        "XCMP.XADC_XCMP_DNEG": 1.7999791751598886,
+        "XCMP.XADC_XCMP_DPOS": 0.09084363002535924,
+        "XCMP.XADC_PREN": 0.5968653401641187,
+        "XCMP.XADC_PREP": 0.5768037786496932
+      },
+      "actual_SR_asserted": true,
+      "pass": true
+    },
+    {
+      "time_s": 7.275e-06,
+      "kind": "decision_retention",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 5.217901640963796e-07,
+        "QB": 1.7999985602205828,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000003154721107,
+        "XCMP.XADC_XCMP_BP": 1.799999994238043,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942334048,
+        "XCMP.XADC_XCMP_BN": 1.799999978706714,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999975361283,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974447507,
+        "XCMP.XADC_PREN": 0.5992837249407563,
+        "XCMP.XADC_PREP": 0.578583613095691
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 7.9e-06,
+      "kind": "decision_retention",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.277292104921704e-07,
+        "QB": 1.7999997858775592,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000380439267,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.7999999942378968,
+        "XCMP.XADC_XCMP_BN": 1.7999999898763872,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999975361174,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974447431,
+        "XCMP.XADC_PREN": 0.5992837929896315,
+        "XCMP.XADC_PREP": 0.5785836294467319
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 8.4e-06,
+      "kind": "reset_during_evaluation",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 0
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 1,
+        "RST_N": 0
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 1.8,
+        "RST_N": 0.0,
+        "Q": 4.1119043088099684e-07,
+        "QB": 1.7999999980616377,
+        "XCMP.XADC_XCMP_R_BAR": 2.157073000084487e-07,
+        "XCMP.XADC_XCMP_BP": 2.2020365744638496e-07,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238045,
+        "XCMP.XADC_XCMP_BN": 1.8000000090125807,
+        "XCMP.XADC_XCMP_DNEG": 1.7999708221694808,
+        "XCMP.XADC_XCMP_DPOS": 0.2670396804468063,
+        "XCMP.XADC_PREN": 0.5970597490306921,
+        "XCMP.XADC_PREP": 0.5765394887484648
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 8.599999999999999e-06,
+      "kind": "reset_release_hold",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.2002579202497876e-07,
+        "QB": 1.7999998837153852,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000168467358,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994237943,
+        "XCMP.XADC_XCMP_BN": 1.7999999879540338,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999973551803,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999973303418,
+        "XCMP.XADC_PREN": 0.5981805903728454,
+        "XCMP.XADC_PREP": 0.5773875704423571
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    },
+    {
+      "time_s": 9.15e-06,
+      "kind": "post_reset_hold_not_new_decision",
+      "expected": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "observed": {
+        "Q": 0,
+        "QB": 1,
+        "EVAL": 0,
+        "RST_N": 1
+      },
+      "voltages": {
+        "VDD": 1.8,
+        "TN": 0.8995,
+        "TP": 0.9005,
+        "EVAL": 0.0,
+        "RST_N": 1.8,
+        "Q": 4.175921157364605e-07,
+        "QB": 1.7999999143968934,
+        "XCMP.XADC_XCMP_R_BAR": 1.8000000102695264,
+        "XCMP.XADC_XCMP_BP": 1.799999994238042,
+        "XCMP.XADC_XCMP_S_BAR": 1.799999994238006,
+        "XCMP.XADC_XCMP_BN": 1.7999999919101368,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999975361218,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974447467,
+        "XCMP.XADC_PREN": 0.5992838068629113,
+        "XCMP.XADC_PREP": 0.5785836455250944
+      },
+      "actual_SR_asserted": null,
+      "pass": true
+    }
+  ],
+  "precharge_checks": [
+    {
+      "time_s": 1.5e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997291373,
+        "XCMP.XADC_XCMP_DNEG": 1.799999997291373
+      },
+      "pass": true
+    },
+    {
+      "time_s": 5.4e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999975361527,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974447984
+      },
+      "pass": true
+    },
+    {
+      "time_s": 6.025e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999975361696,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999974447758
+      },
+      "pass": true
+    },
+    {
+      "time_s": 6.625e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.799999997802538,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999976153969
+      },
+      "pass": true
+    },
+    {
+      "time_s": 7.275e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974447507,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999975361283
+      },
+      "pass": true
+    },
+    {
+      "time_s": 7.9e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974447431,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999975361174
+      },
+      "pass": true
+    },
+    {
+      "time_s": 8.599999999999999e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999973303418,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999973551803
+      },
+      "pass": true
+    },
+    {
+      "time_s": 9.15e-06,
+      "values": {
+        "VDD": 1.8,
+        "XCMP.XADC_XCMP_DPOS": 1.7999999974447467,
+        "XCMP.XADC_XCMP_DNEG": 1.7999999975361218
+      },
+      "pass": true
+    }
+  ],
+  "log_audit": {
+    "source_path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T021925324213Z/spectre.out",
+    "sha256": "3795bf1c3e8b21d3d9bef8282b89a0746f7c56968ed118037def01bc18ca1208",
+    "simulator_summary": {
+      "errors": 0,
+      "warnings": 1,
+      "notices": 5
+    },
+    "warning_counts": {
+      "SPECTRE-16780": 1
+    },
+    "warning_time_counts": {
+      "SPECTRE-16780": {
+        "7.18921 us": 1
+      }
+    },
+    "warning_device_counts": {
+      "SPECTRE-16780": {
+        "XCMP.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b": 1
+      }
+    },
+    "warning_records": [
+      {
+        "line": 1717,
+        "code": "SPECTRE-16780",
+        "time_text": "7.18921 us",
+        "device": "XCMP.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b"
+      }
+    ],
+    "statistics": {
+      "accepted_steps": 32499,
+      "LTE_rejected_steps": 512,
+      "Newton_rejected_steps": 51,
+      "minimum_accepted_step_s": 3.255978e-16,
+      "drastic_step_size_changes": 17,
+      "recovery_steps": 11646
+    },
+    "further_warning_suppression": false,
+    "suppressed_warning_total": 0,
+    "LTE_control_failure_observed": true,
+    "accuracy_pass": false,
+    "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+  },
+  "comparisons_to_old_alllocal": {
+    "VDD": {
+      "union_accepted": {
+        "max_abs_v": 0.0,
+        "time_s": 0.0,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0,
+        "time_s": 0.0,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 0.0,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "TN": {
+      "union_accepted": {
+        "max_abs_v": 1.6653345369377348e-15,
+        "time_s": 6.650189156469877e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0,
+        "time_s": 0.0,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 0.0,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "TP": {
+      "union_accepted": {
+        "max_abs_v": 1.6653345369377348e-15,
+        "time_s": 6.650189156469877e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0,
+        "time_s": 0.0,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 0.0,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "EVAL": {
+      "union_accepted": {
+        "max_abs_v": 3.0493663150110706e-12,
+        "time_s": 6.87512398452891e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.156408302449563e-12,
+        "time_s": 5.313000000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 0.0,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "RST_N": {
+      "union_accepted": {
+        "max_abs_v": 1.028621814088478e-11,
+        "time_s": 1.000000006920212e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.0899726077031291e-17,
+        "time_s": 1.0000000000000002e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 0.0,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "Q": {
+      "union_accepted": {
+        "max_abs_v": 0.05918050380538653,
+        "time_s": 7.04054262810777e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 1.445809166833456e-05,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 6.4999117199704415e-12,
+        "time_s": 5.624100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 9.821718887818116e-13,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "QB": {
+      "union_accepted": {
+        "max_abs_v": 0.05876957977631658,
+        "time_s": 5.166909770036581e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 2.0745862064859783e-05,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.329492071988625e-11,
+        "time_s": 7.499100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 7.293721182577428e-12,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_R_BAR": {
+      "union_accepted": {
+        "max_abs_v": 0.03015639098180295,
+        "time_s": 7.040486958088614e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 6.173419109889444e-05,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.9463098627502404e-12,
+        "time_s": 7.499100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.0396197986346583e-12,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_R_NAND": {
+      "union_accepted": {
+        "max_abs_v": 0.006501596975323265,
+        "time_s": 7.040510950111355e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 0.00010922782080519805,
+        "time_s": 7.04e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.461153126598949e-17,
+        "time_s": 6.249100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.730349362740526e-14,
+        "time_s": 8.4365e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_BP": {
+      "union_accepted": {
+        "max_abs_v": 0.0011825925622650502,
+        "time_s": 7.040629251905811e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0008600369456703838,
+        "time_s": 7.04e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.2578265034696088e-13,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_S_BAR": {
+      "union_accepted": {
+        "max_abs_v": 0.028689293351100875,
+        "time_s": 5.166853872098971e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 1.3801471657837053e-05,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.446176511876729e-12,
+        "time_s": 5.624100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.800112766418699e-14,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_S_NOR": {
+      "union_accepted": {
+        "max_abs_v": 0.006910888907912249,
+        "time_s": 5.16676905202893e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0007289325770141186,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.0923370997566224e-12,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.848262250200861e-13,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_RST_B": {
+      "union_accepted": {
+        "max_abs_v": 0.0001991510656133011,
+        "time_s": 5.166801114457214e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 5.353045679280365e-05,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 8.124270725106076e-13,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.7334026464154788e-13,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XSOR_XNOR_MID": {
+      "union_accepted": {
+        "max_abs_v": 0.004006841726426957,
+        "time_s": 5.166879982878444e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0005834116532772438,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 6.887781808795346e-07,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.627212851713523e-07,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_BN": {
+      "union_accepted": {
+        "max_abs_v": 0.0010583870506271076,
+        "time_s": 5.167054651897827e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 0.0009952819757581555,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.1539658117953877e-12,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.6645352591003757e-13,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_BNB": {
+      "union_accepted": {
+        "max_abs_v": 8.89426053065634e-05,
+        "time_s": 5.167596655374183e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 7.778808356873057e-05,
+        "time_s": 5.168e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 5.3861342808243264e-17,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.586406809892196e-10,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_DNEG": {
+      "union_accepted": {
+        "max_abs_v": 0.00010718864019998442,
+        "time_s": 7.015443226673022e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 0.00010247982873434758,
+        "time_s": 7.015000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.3322676295501878e-15,
+        "time_s": 7.499100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.6252388827391338e-06,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_BPB": {
+      "union_accepted": {
+        "max_abs_v": 8.901566306418474e-05,
+        "time_s": 7.041183405249175e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 7.869390814119193e-05,
+        "time_s": 7.041000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.216657066373995e-17,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.570972406663486e-10,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_DPOS": {
+      "union_accepted": {
+        "max_abs_v": 0.00010577695126734454,
+        "time_s": 5.141212005793036e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 9.805783630456588e-05,
+        "time_s": 5.144e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.5543122344752192e-15,
+        "time_s": 7.499100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.025352326408882e-06,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XCORE_DN": {
+      "union_accepted": {
+        "max_abs_v": 0.00035366496336486364,
+        "time_s": 5.313091008637835e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 8.380515534378574e-05,
+        "time_s": 7.015000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.4388867874970401e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.019280076900111e-06,
+        "time_s": 7.1865e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XCORE_DP": {
+      "union_accepted": {
+        "max_abs_v": 0.00034954597939740317,
+        "time_s": 7.81306017918522e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 7.955166352646703e-05,
+        "time_s": 5.144e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 8.532996531585013e-11,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.6072893549167198e-06,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_START": {
+      "union_accepted": {
+        "max_abs_v": 6.249850498241116e-10,
+        "time_s": 5.00144882199613e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.53218600601568e-10,
+        "time_s": 6.651e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.0174834025610267e-15,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.9296023112680416e-13,
+        "time_s": 8.4365e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_BN": {
+      "union_accepted": {
+        "max_abs_v": 1.1642937725042657e-09,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 6.105647099019507e-10,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.68594044175552e-14,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.3806291099836017e-12,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_BP": {
+      "union_accepted": {
+        "max_abs_v": 8.103152593363916e-10,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 5.792627488787616e-10,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.3647750424515834e-14,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.769140389740187e-12,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XRAND_XNAND_MID": {
+      "union_accepted": {
+        "max_abs_v": 0.00042664816513347586,
+        "time_s": 5.166887526377154e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 2.3936483160856385e-05,
+        "time_s": 7.04e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.581411472690832e-17,
+        "time_s": 7.499100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.044667767377774e-08,
+        "time_s": 8.4365e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XRESET_MID": {
+      "union_accepted": {
+        "max_abs_v": 0.08502932686561293,
+        "time_s": 5.166886903820597e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 1.2891993516758212e-05,
+        "time_s": 5.167000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.0062022570700435e-06,
+        "time_s": 7.499100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.267897993961213e-07,
+        "time_s": 7.8115e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XSET_MID": {
+      "union_accepted": {
+        "max_abs_v": 0.08403143746087682,
+        "time_s": 7.040519555269526e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 6.582870594629142e-06,
+        "time_s": 5.351e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.851412542805633e-07,
+        "time_s": 5.624100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.9661993106167017e-07,
+        "time_s": 5.936499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XCORE_TAIL": {
+      "union_accepted": {
+        "max_abs_v": 0.00013942868946570375,
+        "time_s": 5.000432709875132e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "common_1ns": {
+        "max_abs_v": 1.226671717124983e-05,
+        "time_s": 8.472000000000001e-06,
+        "diagnostic_0_05lsb_pass": false
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.3156077597331617e-06,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.770323058602709e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_PREN": {
+      "union_accepted": {
+        "max_abs_v": 4.379503412366148e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.6509280216524544e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.1541068645779546e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.550298713494442e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_PREP": {
+      "union_accepted": {
+        "max_abs_v": 4.470403854095473e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.7459125870876733e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.4754142614067405e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.1542195221814211e-07,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_TAIL": {
+      "union_accepted": {
+        "max_abs_v": 4.395244646016039e-08,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.590843920484808e-08,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.873295962795396e-11,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.3259364706772487e-10,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_BRS": {
+      "union_accepted": {
+        "max_abs_v": 5.589444740383698e-10,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 3.2878494371502143e-10,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.9789725413943415e-14,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.744604460895971e-12,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N7": {
+      "union_accepted": {
+        "max_abs_v": 3.2567114000014996e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.235309023990162e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.9931371825497877e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.830953391823158e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR6_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.2098371487144775e-06,
+        "time_s": 6.663909823144868e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7083839933818012e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.822614475483931e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.575567929572145e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N6": {
+      "union_accepted": {
+        "max_abs_v": 1.6215900774385617e-06,
+        "time_s": 6.665909823144867e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.1757237194931491e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.6429645139103286e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.596452840566201e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR5_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 1.393755850953582e-06,
+        "time_s": 6.259320031279286e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.3305480860426044e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.4546922272605798e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.8009284164530754e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N5": {
+      "union_accepted": {
+        "max_abs_v": 1.869063035786489e-06,
+        "time_s": 5.009996282543413e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8433790184291254e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.2583580561175154e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.139724757961204e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR4_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.19076410989949e-06,
+        "time_s": 5.011939935486677e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.057046156744846e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.0545674050964635e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.5835853012523557e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N4": {
+      "union_accepted": {
+        "max_abs_v": 2.541284908286201e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.002665746791976e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.8439634263955895e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.1127320337654965e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR3_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.680855383241365e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8336488043502186e-06,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.6272201364131433e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.7121492001948013e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N3": {
+      "union_accepted": {
+        "max_abs_v": 2.7079818998299032e-06,
+        "time_s": 5.015280604875795e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7187580345634501e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.405042526769762e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.3694694267485374e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR2_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.5761550528358157e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.6308699464229193e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.1781591258142043e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.0740013989263275e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N2": {
+      "union_accepted": {
+        "max_abs_v": 2.2844139035971267e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.437329140152599e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 9.473224427125615e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.162463149830046e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR1_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 1.8457398878179987e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.156103814015097e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 7.132980872626149e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.876137798566106e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N1": {
+      "union_accepted": {
+        "max_abs_v": 1.2940639997349734e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 8.080323825598867e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.768727634996139e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.802156367527232e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR0_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 6.661690969966827e-07,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 4.1520030635844307e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.3883894861853605e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.866845122933114e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N7": {
+      "union_accepted": {
+        "max_abs_v": 3.3111019658305096e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.327007894820099e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.356859761855958e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 9.377599197168962e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR6_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.347754451070827e-06,
+        "time_s": 6.663909823144868e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8034114387388556e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.205130355039444e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 7.70182806419939e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N6": {
+      "union_accepted": {
+        "max_abs_v": 1.763788129327537e-06,
+        "time_s": 6.665909823144867e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.2660471960801445e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.021240784801705e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.356707171750742e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR5_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 1.375176166273917e-06,
+        "time_s": 6.88373465591144e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.0365983881266416e-06,
+        "time_s": 8.135000000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.806455928234698e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.252433454838723e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N5": {
+      "union_accepted": {
+        "max_abs_v": 1.793345516309941e-06,
+        "time_s": 7.509938061018665e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.5577894274532156e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.5622995664397195e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.333758629737616e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR4_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.138371011151108e-06,
+        "time_s": 8.136272616256383e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8499181777542617e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.290547168077751e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.563302763964771e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N4": {
+      "union_accepted": {
+        "max_abs_v": 2.4564925380499147e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.9254788055089733e-06,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.9932158973622336e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.9134045176348877e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR3_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.6459112376642224e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8638444012619715e-06,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.6725475166244905e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.3621302247534004e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N3": {
+      "union_accepted": {
+        "max_abs_v": 2.7042927233100755e-06,
+        "time_s": 5.015280604875795e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7196248183193319e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.330985182652512e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.8912677646198972e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR2_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 2.583736594452546e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.6425386362151073e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.9711599019700543e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.4852512553176211e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N2": {
+      "union_accepted": {
+        "max_abs_v": 2.304726311130878e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.4562598058542875e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.5958632193502353e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.1305147040729935e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR1_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 1.8712641431939403e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.1772258718956152e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.2080216826859669e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.150420560681937e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N1": {
+      "union_accepted": {
+        "max_abs_v": 1.3167748518227995e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 8.259438999402846e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 8.106735283064381e-10,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.28007126909813e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR0_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 6.79405410153322e-07,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 4.2542083478203097e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.0694003722308025e-10,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.5945414705574876e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRBIAS_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_v": 3.140015053526568e-10,
+        "time_s": 7.501094032239451e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.756462128521541e-10,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 9.943434964299058e-15,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.440817489407948e-13,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR7_XR.ra": {
+      "union_accepted": {
+        "max_abs_v": 3.2720555115384187e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.2409888865704275e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.99533697845078e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.854450018689562e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.2172434521738893e-06,
+        "time_s": 6.663909823144868e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7155522167300319e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.8249449446349217e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.5927240727449146e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.6278926234791768e-06,
+        "time_s": 6.665909823144867e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.183003071836275e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.645419772129287e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.609833470503588e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.383948784461353e-06,
+        "time_s": 6.259320031279286e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.3198131739722285e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.4572651691201486e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.811800086683803e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.8618956160176836e-06,
+        "time_s": 5.009996282543413e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8363706550950099e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.2610412431234295e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.1487607854430166e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.184524563686452e-06,
+        "time_s": 5.011939935486677e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.054126175821125e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.0573522885314333e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.5911855106031112e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.5362402504836012e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.003408911654958e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.846841124475418e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.1191666421671584e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.678948007650561e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8335291260829223e-06,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.6301826555320531e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.7176235100890835e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.7074202599841612e-06,
+        "time_s": 5.015280604875795e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7183385268015883e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.408078320608297e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.3741523696708668e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.57774533007904e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.6320710281014783e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.1812608669004021e-09,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.0780392134535077e-08,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.2884008472612294e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.4399740750903334e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 9.504772524593363e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.197688083910748e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.8517348212565565e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.1599470479684015e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 7.1649663979656e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.907383693326551e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.3016032194279603e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 8.127891375497853e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.801030684120633e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.830499917256702e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 6.747499277093283e-07,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 4.205687609282194e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.420923461698976e-10,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.8932935219595493e-09,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 9.103887199657379e-09,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 5.674140046707521e-09,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.2640556923979602e-12,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.5512925105886097e-11,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR7_XR.ra": {
+      "union_accepted": {
+        "max_abs_v": 3.326945022585903e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.3327326595934395e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.358479910315793e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 9.407180634468659e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.3552397442339057e-06,
+        "time_s": 6.663909823144868e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8098817745615392e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.207203918582536e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 7.724729211844306e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.7701893044730355e-06,
+        "time_s": 6.665909823144867e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.273390832889909e-06,
+        "time_s": 6.664e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.023753774617944e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.375089645072052e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.3665676928953374e-06,
+        "time_s": 6.88373465591144e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.0299594047635807e-06,
+        "time_s": 8.135000000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.809391024844899e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.267524494367848e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.7867096866464038e-06,
+        "time_s": 7.509938061018665e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.55057021233862e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.5656361196956254e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.346313264846913e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.133196290943218e-06,
+        "time_s": 8.136272616256383e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8459259367720193e-06,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.2942604200059122e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.573831808267869e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.450958666688763e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.9237408059868955e-06,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.9972802018107814e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.9222859687649816e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.6433226349986683e-06,
+        "time_s": 5.01349141031216e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8646866977167775e-06,
+        "time_s": 7.512e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.676929344858081e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.3696639539494413e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.7033417326904896e-06,
+        "time_s": 5.015280604875795e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7190422560986462e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.335652338203431e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.897702506248322e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.5850815610350963e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.6435920995316877e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.976077745879934e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.4907999501545532e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 2.3085392741872823e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.4588054975117615e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.6009922276793986e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.1353625373189402e-08,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.8771878507184425e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.1810391582489643e-06,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.2133221094501323e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.19353407344181e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 1.3243525209816198e-06,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 8.30744531166161e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 8.161042952536945e-10,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.319297002870371e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 6.881157212923483e-07,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 4.3089439527577156e-07,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.124578456554673e-10,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 2.6312418910379165e-09,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 9.28477605910416e-09,
+        "time_s": 5.016265125748474e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 5.813814984989563e-09,
+        "time_s": 5.017e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 5.560663041137559e-12,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.54569706928487e-11,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRBIAS_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_v": 3.097103407068147e-10,
+        "time_s": 7.501094032239451e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.7324582046729375e-10,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 9.797718192317006e-15,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 8.32549307272501e-13,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRBIAS_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_v": 5.548273368516377e-10,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 3.266921316802396e-10,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.9623191960249642e-14,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.7323087408982474e-12,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADN_XC.a": {
+      "union_accepted": {
+        "max_abs_v": 2.133118323586948e-08,
+        "time_s": 5.000000001804853e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 3.455252082984176e-11,
+        "time_s": 5.942e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 6.965070727512107e-21,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 7.652827115785463e-13,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADN_XC.b1": {
+      "union_accepted": {
+        "max_abs_v": 1.2588845330572579e-08,
+        "time_s": 5.000000001804853e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.0391571142522472e-11,
+        "time_s": 5.942e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.1105173180316035e-21,
+        "time_s": 8.1241e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 4.51640473183085e-13,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADP_XC.a": {
+      "union_accepted": {
+        "max_abs_v": 2.1316729202292423e-08,
+        "time_s": 5.000000001804853e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 3.727889948087485e-11,
+        "time_s": 7.192000000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 4.325153412843742e-21,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 6.619859855248274e-13,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADP_XC.b1": {
+      "union_accepted": {
+        "max_abs_v": 1.2580315114921037e-08,
+        "time_s": 5.000000001804853e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.2000575142437093e-11,
+        "time_s": 7.192000000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.5525394790912986e-21,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 3.9067871156110817e-13,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCN_XC.a": {
+      "union_accepted": {
+        "max_abs_v": 1.8543295689957728e-07,
+        "time_s": 6.876000006351765e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 3.2149504859851104e-12,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.494209878890751e-16,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 9.95466802842713e-14,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCN_XC.b1": {
+      "union_accepted": {
+        "max_abs_v": 1.0943541142500326e-07,
+        "time_s": 6.876000006351765e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.8973403381325164e-12,
+        "time_s": 5.01e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 1.4719869048135893e-16,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.87486285881818e-14,
+        "time_s": 9.0615e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCP_XC.a": {
+      "union_accepted": {
+        "max_abs_v": 1.8503534479134468e-07,
+        "time_s": 6.251000006220879e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 3.329870730239044e-12,
+        "time_s": 6.652e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 3.9336929691611676e-16,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.0091813008917466e-13,
+        "time_s": 5.936499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCP_XC.b1": {
+      "union_accepted": {
+        "max_abs_v": 1.0920075602512435e-07,
+        "time_s": 6.251000006220879e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 1.9651618539041676e-12,
+        "time_s": 6.652e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 2.321514555437596e-16,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 5.955800560594625e-14,
+        "time_s": 5.936499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "preamp_differential": {
+      "union_accepted": {
+        "max_abs_v": 8.849907266392232e-06,
+        "time_s": 6.650648216996685e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 5.39684060864732e-06,
+        "time_s": 6.663e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 5.813822347155995e-09,
+        "time_s": 6.874100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 1.118017589410436e-07,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    },
+    "ideal_input_differential_not_CDAC": {
+      "union_accepted": {
+        "max_abs_v": 3.4287893704854078e-15,
+        "time_s": 6.650189156469877e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "common_1ns": {
+        "max_abs_v": 2.168404344971009e-19,
+        "time_s": 6.650000000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_EVAL": {
+        "max_abs_v": 0.0,
+        "time_s": 4.999100000000001e-06,
+        "diagnostic_0_05lsb_pass": true
+      },
+      "pre_capture": {
+        "max_abs_v": 0.0,
+        "time_s": 5.311499999999999e-06,
+        "diagnostic_0_05lsb_pass": true
+      }
+    }
+  },
+  "edges": {
+    "Q/rising": {
+      "old_alllocal_s": [
+        5.166891244365642e-06
+      ],
+      "sigglobal_s": [
+        5.166890262148987e-06
+      ],
+      "same_count": true,
+      "max_abs_delta_s": 9.82216654473074e-13
+    },
+    "Q/falling": {
+      "old_alllocal_s": [
+        7.0405519406935266e-06
+      ],
+      "sigglobal_s": [
+        7.040550951502001e-06
+      ],
+      "same_count": true,
+      "max_abs_delta_s": 9.891915252543829e-13
+    },
+    "XCMP.XADC_XCMP_S_BAR/falling": {
+      "old_alllocal_s": [
+        5.166851416758472e-06,
+        5.7904942474859045e-06,
+        6.415494245671455e-06
+      ],
+      "sigglobal_s": [
+        5.166850434142767e-06,
+        5.790494178964931e-06,
+        6.415494176457391e-06
+      ],
+      "same_count": true,
+      "max_abs_delta_s": 9.826157044000197e-13
+    },
+    "XCMP.XADC_XCMP_R_BAR/falling": {
+      "old_alllocal_s": [
+        7.040484353570768e-06,
+        7.665445225223732e-06,
+        8.290445219624789e-06,
+        8.915445216381482e-06
+      ],
+      "sigglobal_s": [
+        7.0404833631672455e-06,
+        7.66544516300614e-06,
+        8.290445159062971e-06,
+        8.915445154011624e-06
+      ],
+      "same_count": true,
+      "max_abs_delta_s": 9.904035226757524e-13
+    }
+  },
+  "raw_sha256": {
+    "sigglobal": "044c78c715915c85b94bef334eb9aaa547a14b51b60504aab762b013134da4a1",
+    "old_alllocal": "99d0603d9bf08c572b4f019be09cd1cff700e92bf3071941471aeb4dd5184a2b"
+  },
+  "limitations": [
+    "No shifted/aligned/excluded switching edges.",
+    "This compares different relative-error reference methods, not an identical-method tightening experiment.",
+    "One remaining LTE relaxation prevents calling the run clean.",
+    "The same sigglobal method still needs a tighter comparison before inference about convergence."
+  ]
+}

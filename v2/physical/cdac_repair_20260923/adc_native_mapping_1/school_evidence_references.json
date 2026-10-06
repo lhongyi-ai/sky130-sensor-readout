@@ -1,0 +1,33 @@
+{
+  "resistor_cdf": {
+    "path": "v2/cadence/linuxlab_20260923/evidence/adc_resistors_cdf.json",
+    "sha256": "f503e4fe4f38836f9384b2cf3686ac739e1e8b0f2dcef7e752545fd799d5bf72",
+    "cells": [
+      "res_high_po_5p73",
+      "res_high_po_1p41"
+    ],
+    "symbol_and_spectre_order": [
+      "PLUS",
+      "MINUS",
+      "B"
+    ],
+    "formInitProc": "PasCdfFormInit",
+    "fixed_width_um": {
+      "res_high_po_5p73": 5.73,
+      "res_high_po_1p41": 1.41
+    },
+    "source_default_resistance_not_used_for_mapping": true
+  },
+  "MIM_actual_AC_probe": {
+    "path": "v2/cadence/linuxlab_20260923/runs/spectre_mapping_20260923T100217323690Z/mapping_metrics.json",
+    "sha256": "45ce1116b3e05485c961a527ee9e3053209f3424a1df011d79ceb1e334f7affe",
+    "status": "PASS_PDK_MAPPING_ONLY",
+    "frequency_Hz": 999.9999999999955,
+    "measured_capacitance_F": {
+      "CUNIT": 3.4622248010324884e-14,
+      "CBANK": 1.418127838728307e-10,
+      "CFILT": 1.001655958293726e-12
+    },
+    "scope": "Same school4um primitive and bank multiplier only. ADC source3um dynamics/noise/statistics do not transfer."
+  }
+}

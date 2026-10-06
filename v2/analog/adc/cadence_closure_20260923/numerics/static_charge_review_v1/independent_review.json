@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root/mim_public_rule_audit",
+  "scope": "READ_ONLY_INDEPENDENT_STATIC_CHARGE_REVIEW",
+  "result": "NO_REPORT_BLOCKER_FOUND",
+  "checks": [
+    "Independent real DC field/count/finite/bias review",
+    "Independent signed branch fit calculation agrees",
+    "Actual measured D-S, preserved charge signs, no source/drain remapping",
+    "Multiple one-sided windows, direction, precision and strict decimation controls",
+    "Actual metadata STRUCT/VALUE alignment and sentinel/nan limits",
+    "Report distinguishes static slope sensitivity from finite charge discontinuity and transient ADC qualification"
+  ],
+  "remote_EDA_run_by_this_review": false,
+  "full_ADC_accuracy_pass": false
+}

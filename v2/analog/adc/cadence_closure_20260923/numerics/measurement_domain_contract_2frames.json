@@ -1,0 +1,56 @@
+{
+  "basis": "Frozen deterministic stimulus clock and task delays; independent of solver output or errors",
+  "sequence_sha256": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+  "profile_sha256": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+  "frames": 2,
+  "start_ps": 0,
+  "finish_ps": 30947500,
+  "finish_s": 3.09475e-05,
+  "watchdog_ps": 39000000,
+  "events": [
+    {
+      "event": "initial_reset_release",
+      "time_ps": 1885000
+    },
+    {
+      "event": "first_accept_drive_returns",
+      "time_ps": 4072500
+    },
+    {
+      "event": "all_requested_frames_complete_drive_returns",
+      "time_ps": 24072500
+    },
+    {
+      "event": "valid_cleared_check",
+      "time_ps": 24697500
+    },
+    {
+      "event": "third_or_thirteenth_abort_frame_accept_drive_returns",
+      "time_ps": 25322500
+    },
+    {
+      "event": "abort_reset_assert",
+      "time_ps": 28225000
+    },
+    {
+      "event": "reset_Q0_QB1_check",
+      "time_ps": 28325000
+    },
+    {
+      "event": "abort_reset_release",
+      "time_ps": 29385000
+    },
+    {
+      "event": "normal_pass_and_finish",
+      "time_ps": 30947500
+    }
+  ],
+  "rules": [
+    "Both runs must complete normally at exactly this scheduled $finish time and pass independent integration checks.",
+    "Include initial reset, all requested frames, independent abort conversion and post-reset checks, and every switching edge in the entire closed interval.",
+    "All accepted points inside the interval plus its exact endpoints are compared without time alignment.",
+    "Saved waves must bracket both endpoints; no extrapolation or shortened successful prefix.",
+    "All stored data, including simulator lookahead after $finish, remain audited and separately reported.",
+    "A watchdog or failure-path $finish cannot redefine the measurement end."
+  ]
+}

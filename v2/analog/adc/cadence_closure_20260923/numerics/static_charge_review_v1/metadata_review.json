@@ -1,0 +1,600 @@
+{
+  "status": "LAYERED_INSTANCE_METADATA_REVIEW",
+  "profiles": {
+    "baseline": {
+      "element": {
+        "file": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163/input.raw/element.info",
+        "sha256": "02ac00d6d55ef78c059010b23fa56e6abb4bcf5104296a8bab8587a844074492",
+        "type_field_count": 78,
+        "value_count": 78,
+        "model_attribute": "XTEST.sky130_fd_pr__pfet_01v8__model.8",
+        "model_line": 640,
+        "fields": {
+          "w": {
+            "raw": "3.200000000000000e-05",
+            "value": 3.2e-05,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 561
+          },
+          "l": {
+            "raw": "1.500000000000000e-07",
+            "value": 1.5e-07,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 562
+          },
+          "m": {
+            "raw": "1.000000000000000e+00",
+            "value": 1.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 604
+          },
+          "nf": {
+            "raw": "1",
+            "value": 1.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 634
+          },
+          "rbodymod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 630
+          },
+          "rgatemod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 629
+          },
+          "trnqsmod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 627
+          },
+          "acnqsmod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 628
+          },
+          "rbpb": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 608
+          },
+          "rbpd": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 609
+          },
+          "rbps": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 610
+          },
+          "rbdb": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 611
+          },
+          "rbsb": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 612
+          }
+        }
+      },
+      "outputParameter": {
+        "file": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/baseline_20260924T080725Z_2409163/input.raw/outputParameter.info",
+        "sha256": "bc308e8040f6d1bea657a938dd950cb40c929686e807782f8c36a9e2f57d5cf7",
+        "type_field_count": 12,
+        "value_count": 12,
+        "model_attribute": "XTEST.sky130_fd_pr__pfet_01v8__model.8",
+        "model_line": 89,
+        "fields": {
+          "tempeff": {
+            "raw": "2.700000000000000e+01",
+            "value": 27.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 76
+          },
+          "meff": {
+            "raw": "1.000000000000000e+00",
+            "value": 1.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 77
+          },
+          "weff": {
+            "raw": "3.198539220000000e-05",
+            "value": 3.19853922e-05,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 78
+          },
+          "leff": {
+            "raw": "1.779880000000000e-07",
+            "value": 1.77988e-07,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 79
+          },
+          "weffcv": {
+            "raw": "3.200000000000000e-05",
+            "value": 3.2e-05,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 80
+          },
+          "leffcv": {
+            "raw": "1.560000000000000e-07",
+            "value": 1.56e-07,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 81
+          }
+        }
+      },
+      "file_literal_metadata": {
+        "scope": "SELECTED_FILE_LITERALS_AND_HASHES_ONLY",
+        "effective_selected_bin_verified": false,
+        "note": "Counts span modelbins. Missingliteral isunknownhere; do not substitutehelpdefault or claim effectiveinstancevalue. NoPDKfilebody exported.",
+        "files": [
+          {
+            "path": "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice",
+            "sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+            "bytes": 22944
+          },
+          {
+            "path": "/opt/cadence/CDK/sky130_release_0.0.3/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice",
+            "sha256": "641d251a08bf9ddcfc67ba4bd4698ae1978d09447eb6ebf90055fdf3d21917ab",
+            "bytes": 796
+          },
+          {
+            "path": "/opt/cadence/CDK/sky130_release_0.0.3/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.pm3.spice",
+            "sha256": "a5b543f8df7206f43d872d39fe19d17bf639ef088f0817ea33e935ad2d7ed75f",
+            "bytes": 787469,
+            "selected_parameter_literals": {
+              "level": {
+                "literal_values": [
+                  "54.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "version": {
+                "literal_values": [
+                  "4.5"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "capmod": {
+                "literal_values": [
+                  "2.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "cvchargemod": {
+                "literal_values": [],
+                "occurrences": 0,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbodymod": {
+                "literal_values": [
+                  "1.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rdsmod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rgatemod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "trnqsmod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "acnqsmod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "xpart": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbpb": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbpd": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbps": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbdb": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbsb": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "gbmin": {
+                "literal_values": [
+                  "1.0e-12"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "tnom": {
+                "literal_values": [
+                  "30.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              }
+            }
+          }
+        ]
+      },
+      "model_files_unchanged": true,
+      "selected_bin_attribute_verified": true,
+      "effective_capmod_cvchargemod_body_options_verified": false
+    },
+    "strict": {
+      "element": {
+        "file": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/strict_20260924T080811Z_2412024/input.raw/element.info",
+        "sha256": "d71cc4c35fe09edc6753d416e8e1564a49b187691d27abff44140fcc51915e9f",
+        "type_field_count": 78,
+        "value_count": 78,
+        "model_attribute": "XTEST.sky130_fd_pr__pfet_01v8__model.8",
+        "model_line": 640,
+        "fields": {
+          "w": {
+            "raw": "3.200000000000000e-05",
+            "value": 3.2e-05,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 561
+          },
+          "l": {
+            "raw": "1.500000000000000e-07",
+            "value": 1.5e-07,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 562
+          },
+          "m": {
+            "raw": "1.000000000000000e+00",
+            "value": 1.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 604
+          },
+          "nf": {
+            "raw": "1",
+            "value": 1.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 634
+          },
+          "rbodymod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 630
+          },
+          "rgatemod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 629
+          },
+          "trnqsmod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 627
+          },
+          "acnqsmod": {
+            "raw": "2147483647",
+            "value": null,
+            "status": "INTEGER_SENTINEL_NOT_AN_EFFECTIVE_VALUE",
+            "line": 628
+          },
+          "rbpb": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 608
+          },
+          "rbpd": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 609
+          },
+          "rbps": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 610
+          },
+          "rbdb": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 611
+          },
+          "rbsb": {
+            "raw": "nan",
+            "value": null,
+            "status": "NONFINITE_EXPORT_NOT_AN_EFFECTIVE_VALUE",
+            "line": 612
+          }
+        }
+      },
+      "outputParameter": {
+        "file": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T080723598851Z/design/results/strict_20260924T080811Z_2412024/input.raw/outputParameter.info",
+        "sha256": "0eb99dc9ecc57a4f8fbc4a4fab05fa0b5206aea12074f47668c370fc246d8cc0",
+        "type_field_count": 12,
+        "value_count": 12,
+        "model_attribute": "XTEST.sky130_fd_pr__pfet_01v8__model.8",
+        "model_line": 89,
+        "fields": {
+          "tempeff": {
+            "raw": "2.700000000000000e+01",
+            "value": 27.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 76
+          },
+          "meff": {
+            "raw": "1.000000000000000e+00",
+            "value": 1.0,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 77
+          },
+          "weff": {
+            "raw": "3.198539220000000e-05",
+            "value": 3.19853922e-05,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 78
+          },
+          "leff": {
+            "raw": "1.779880000000000e-07",
+            "value": 1.77988e-07,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 79
+          },
+          "weffcv": {
+            "raw": "3.200000000000000e-05",
+            "value": 3.2e-05,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 80
+          },
+          "leffcv": {
+            "raw": "1.560000000000000e-07",
+            "value": 1.56e-07,
+            "status": "EXPORTED_FINITE_VALUE",
+            "line": 81
+          }
+        }
+      },
+      "file_literal_metadata": {
+        "scope": "SELECTED_FILE_LITERALS_AND_HASHES_ONLY",
+        "effective_selected_bin_verified": false,
+        "note": "Counts span modelbins. Missingliteral isunknownhere; do not substitutehelpdefault or claim effectiveinstancevalue. NoPDKfilebody exported.",
+        "files": [
+          {
+            "path": "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice",
+            "sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+            "bytes": 22944
+          },
+          {
+            "path": "/opt/cadence/CDK/sky130_release_0.0.3/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice",
+            "sha256": "641d251a08bf9ddcfc67ba4bd4698ae1978d09447eb6ebf90055fdf3d21917ab",
+            "bytes": 796
+          },
+          {
+            "path": "/opt/cadence/CDK/sky130_release_0.0.3/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.pm3.spice",
+            "sha256": "a5b543f8df7206f43d872d39fe19d17bf639ef088f0817ea33e935ad2d7ed75f",
+            "bytes": 787469,
+            "selected_parameter_literals": {
+              "level": {
+                "literal_values": [
+                  "54.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "version": {
+                "literal_values": [
+                  "4.5"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "capmod": {
+                "literal_values": [
+                  "2.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "cvchargemod": {
+                "literal_values": [],
+                "occurrences": 0,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbodymod": {
+                "literal_values": [
+                  "1.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rdsmod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rgatemod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "trnqsmod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "acnqsmod": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "xpart": {
+                "literal_values": [
+                  "0.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbpb": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbpd": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbps": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbdb": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "rbsb": {
+                "literal_values": [
+                  "50.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "gbmin": {
+                "literal_values": [
+                  "1.0e-12"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              },
+              "tnom": {
+                "literal_values": [
+                  "30.0"
+                ],
+                "occurrences": 108,
+                "nonliteral_assignments_not_evaluated": 0,
+                "effective_instance_value": "NOT_DETERMINED"
+              }
+            }
+          }
+        ]
+      },
+      "model_files_unchanged": true,
+      "selected_bin_attribute_verified": true,
+      "effective_capmod_cvchargemod_body_options_verified": false
+    }
+  },
+  "limit": "File literals, exported instance fields, and effective resolved model options are different evidence layers. Sentinels/nan are not model settings."
+}

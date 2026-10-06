@@ -1,0 +1,1337 @@
+{
+  "status": "VERSION_PROBE_DIAGNOSTIC_NOT_QUALIFIED",
+  "full_ADC_body_probe": {
+    "scope": "Same-input 4.1us first-acquisition tool-bundle probe, not ADC qualification",
+    "input_hash_identity": {
+      "amsdControl.scs": true,
+      "reset1_native_bound.scs": true,
+      "sar_controller.v": true,
+      "p1_interfaces.vams": true,
+      "p2_ams_reset1.vams": true,
+      "p2_sequence.sv": true,
+      "profile.vh": true
+    },
+    "old_header": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "21.1.0.132.isr1",
+      "date": "12:39:02 AM, Thur Sep 24, 2026",
+      "design": "//",
+      "analysis type": "tran",
+      "analysis name": "adc_closure_tran",
+      "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 4.1 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-05,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 4.1e-06,
+      "step": 4.1e-09,
+      "istep": 0.001,
+      "maxstep": 2e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-06,
+      "abstol(V)": 1e-08,
+      "abstol(I)": 1e-13,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "node",
+      "units": "s",
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "new_header": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "25.1.0.156.isr2",
+      "date": "12:50:57 AM, Thur Sep 24, 2026",
+      "design": "//",
+      "analysis type": "tran",
+      "analysis name": "adc_closure_tran",
+      "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 4.1 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-05,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 4.1e-06,
+      "step": 4.099999999999999e-09,
+      "istep": 0.001,
+      "maxstep": 2e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-06,
+      "abstol(V)": 1e-08,
+      "abstol(I)": 1e-13,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "node",
+      "units": "s",
+      "tolerance": 1e-06,
+      "sigtype": "optical",
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "old_voltage_count": 76,
+    "new_voltage_count": 75,
+    "missing_in_new_waveform": [
+      "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8.int_b"
+    ],
+    "old_points": 4951,
+    "new_points": 4951,
+    "max_same_index_time_difference_s": 1.1794509225949347e-09,
+    "common_channel_comparison": {
+      "p2_ams_reset1.acq_e": {
+        "max_abs_V": 4.8434337927658055e-05,
+        "time_s": 4.074958849282067e-06,
+        "new_minus_old_V": -4.8434337927658055e-05
+      },
+      "p2_ams_reset1.adc.XADC_BN0": {
+        "max_abs_V": 7.071871408692587e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.071871408692587e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN1": {
+        "max_abs_V": 7.370711310628053e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.370711310628053e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN10": {
+        "max_abs_V": 8.17270691189087e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.17270691189087e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN11": {
+        "max_abs_V": 8.166630543593456e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.166630543593456e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN2": {
+        "max_abs_V": 7.589747860414775e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.589747860414775e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN3": {
+        "max_abs_V": 7.758516163525186e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.758516163525186e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN4": {
+        "max_abs_V": 7.881951337829207e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.881951337829207e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN5": {
+        "max_abs_V": 7.994232178010208e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.994232178010208e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN6": {
+        "max_abs_V": 8.114654067137295e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.114654067137295e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN7": {
+        "max_abs_V": 8.198550710325492e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.198550710325492e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN8": {
+        "max_abs_V": 8.209636356282246e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.209636356282246e-06
+      },
+      "p2_ams_reset1.adc.XADC_BN9": {
+        "max_abs_V": 8.184929130905516e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.184929130905516e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP0": {
+        "max_abs_V": 3.3022930238102433e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.3022930238102433e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP1": {
+        "max_abs_V": 3.3980096157959494e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.3980096157959494e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP10": {
+        "max_abs_V": 3.6527903299887754e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.6527903299887754e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP11": {
+        "max_abs_V": 3.6493975278384383e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.6493975278384383e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP2": {
+        "max_abs_V": 3.467853570082724e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.467853570082724e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP3": {
+        "max_abs_V": 3.518336838981284e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.518336838981284e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP4": {
+        "max_abs_V": 3.554838100439106e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.554838100439106e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP5": {
+        "max_abs_V": 3.5814171972514686e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.5814171972514686e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP6": {
+        "max_abs_V": 3.59983940834141e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.59983940834141e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP7": {
+        "max_abs_V": 3.6134131103926492e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.6134131103926492e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP8": {
+        "max_abs_V": 3.6730499379800108e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.6730499379800108e-06
+      },
+      "p2_ams_reset1.adc.XADC_BP9": {
+        "max_abs_V": 3.6595620640511584e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.6595620640511584e-06
+      },
+      "p2_ams_reset1.adc.XADC_DN": {
+        "max_abs_V": 7.071869618568982e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 7.071869618568982e-06
+      },
+      "p2_ams_reset1.adc.XADC_DP": {
+        "max_abs_V": 3.3022930320258936e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.3022930320258936e-06
+      },
+      "p2_ams_reset1.adc.XADC_PREN": {
+        "max_abs_V": 1.3981015069886027e-05,
+        "time_s": 4.068467228183158e-06,
+        "new_minus_old_V": 1.3981015069886027e-05
+      },
+      "p2_ams_reset1.adc.XADC_PREP": {
+        "max_abs_V": 1.4969668321707097e-05,
+        "time_s": 4.068467228183158e-06,
+        "new_minus_old_V": -1.4969668321707097e-05
+      },
+      "p2_ams_reset1.adc.XADC_TN": {
+        "max_abs_V": 8.160578076177316e-06,
+        "time_s": 4.075218435620301e-06,
+        "new_minus_old_V": 8.160578076177316e-06
+      },
+      "p2_ams_reset1.adc.XADC_TP": {
+        "max_abs_V": 3.6460001133775677e-06,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -3.6460001133775677e-06
+      },
+      "p2_ams_reset1.adc.XADC_XCMP_BN": {
+        "max_abs_V": 2.4455992786442948e-11,
+        "time_s": 4.07507904511966e-06,
+        "new_minus_old_V": -2.4455992786442948e-11
+      },
+      "p2_ams_reset1.adc.XADC_XCMP_BP": {
+        "max_abs_V": 1.939004512507836e-11,
+        "time_s": 4.07507904511966e-06,
+        "new_minus_old_V": 1.939004512507836e-11
+      },
+      "p2_ams_reset1.adc.XADC_XCMP_DNEG": {
+        "max_abs_V": 4.409561604745704e-10,
+        "time_s": 4.075222185057372e-06,
+        "new_minus_old_V": -4.409561604745704e-10
+      },
+      "p2_ams_reset1.adc.XADC_XCMP_DPOS": {
+        "max_abs_V": 2.528923737088462e-10,
+        "time_s": 4.075078984022637e-06,
+        "new_minus_old_V": -2.528923737088462e-10
+      },
+      "p2_ams_reset1.adc.XADC_XCMP_R_BAR": {
+        "max_abs_V": 3.285705041378151e-11,
+        "time_s": 1.885607093862877e-06,
+        "new_minus_old_V": 3.285705041378151e-11
+      },
+      "p2_ams_reset1.adc.XADC_XCMP_S_BAR": {
+        "max_abs_V": 1.9184653865522705e-12,
+        "time_s": 4.07507904511966e-06,
+        "new_minus_old_V": -1.9184653865522705e-12
+      },
+      "p2_ams_reset1.conv_e": {
+        "max_abs_V": 5.136580687251091e-07,
+        "time_s": 4.063343007605795e-06,
+        "new_minus_old_V": 5.136580687251091e-07
+      },
+      "p2_ams_reset1.eval_e": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.in_source": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.inn": {
+        "max_abs_V": 7.339599413569431e-06,
+        "time_s": 4.075514914415276e-06,
+        "new_minus_old_V": 7.339599413569431e-06
+      },
+      "p2_ams_reset1.inp": {
+        "max_abs_V": 6.795493086908522e-06,
+        "time_s": 4.074958849282067e-06,
+        "new_minus_old_V": -6.795493086908522e-06
+      },
+      "p2_ams_reset1.ip_source": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.phases.XPHASE_ACQ_DELAY": {
+        "max_abs_V": 0.0003290887602311332,
+        "time_s": 4.085420811197095e-06,
+        "new_minus_old_V": -0.0003290887602311332
+      },
+      "p2_ams_reset1.phases.XPHASE_ACQ_RAW": {
+        "max_abs_V": 0.00012354670355846364,
+        "time_s": 4.07483434805329e-06,
+        "new_minus_old_V": -0.00012354670355846364
+      },
+      "p2_ams_reset1.phases.XPHASE_CMD_B_DELAY": {
+        "max_abs_V": 0.00017596066859959514,
+        "time_s": 4.074610206354166e-06,
+        "new_minus_old_V": -0.00017596066859959514
+      },
+      "p2_ams_reset1.phases.XPHASE_CONV_DELAY": {
+        "max_abs_V": 0.00016710183269696977,
+        "time_s": 4.074610206354166e-06,
+        "new_minus_old_V": -0.00016710183269696977
+      },
+      "p2_ams_reset1.phases.XPHASE_CONV_RAW": {
+        "max_abs_V": 2.6588434785271503e-06,
+        "time_s": 4.063502292118604e-06,
+        "new_minus_old_V": -2.6588434785271503e-06
+      },
+      "p2_ams_reset1.phases.XPHASE_TOP_RAW_B": {
+        "max_abs_V": 0.00017676621156570427,
+        "time_s": 4.085591315537778e-06,
+        "new_minus_old_V": -0.00017676621156570427
+      },
+      "p2_ams_reset1.phases.XPHASE_XBCONV_B": {
+        "max_abs_V": 1.1071324201861188e-06,
+        "time_s": 4.063407348200227e-06,
+        "new_minus_old_V": 1.1071324201861188e-06
+      },
+      "p2_ams_reset1.q_e": {
+        "max_abs_V": 4.2124153164859544e-13,
+        "time_s": 4.07507904511966e-06,
+        "new_minus_old_V": -4.2124153164859544e-13
+      },
+      "p2_ams_reset1.qb_e": {
+        "max_abs_V": 1.1262102361797588e-12,
+        "time_s": 1.885600282827657e-06,
+        "new_minus_old_V": 1.1262102361797588e-12
+      },
+      "p2_ams_reset1.rn": {
+        "max_abs_V": 1.7784806960463584e-10,
+        "time_s": 4.063473973466031e-06,
+        "new_minus_old_V": -1.7784806960463584e-10
+      },
+      "p2_ams_reset1.rn_source": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.rp": {
+        "max_abs_V": 6.436391419839538e-10,
+        "time_s": 4.068467228183158e-06,
+        "new_minus_old_V": 6.436391419839538e-10
+      },
+      "p2_ams_reset1.rp_source": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.rst_n_e": {
+        "max_abs_V": 1.525002346625115e-12,
+        "time_s": 1.885607093862877e-06,
+        "new_minus_old_V": 1.525002346625115e-12
+      },
+      "p2_ams_reset1.sample_cmd_e": {
+        "max_abs_V": 3.04911651483053e-12,
+        "time_s": 4.063328483252228e-06,
+        "new_minus_old_V": 3.04911651483053e-12
+      },
+      "p2_ams_reset1.top_e": {
+        "max_abs_V": 8.046500480235474e-05,
+        "time_s": 4.085767114383474e-06,
+        "new_minus_old_V": 8.046500480235474e-05
+      },
+      "p2_ams_reset1.topb_e": {
+        "max_abs_V": 0.00032097844345302384,
+        "time_s": 4.085796459551589e-06,
+        "new_minus_old_V": -0.00032097844345302384
+      },
+      "p2_ams_reset1.trial_e[0]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[10]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[11]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[1]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[2]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[3]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[4]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[5]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[6]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[7]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[8]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.trial_e[9]": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.vcm": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.vdd": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "p2_ams_reset1.vss": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "physical_CDAC_TP_minus_TN": {
+        "max_abs_V": 7.320616564832072e-06,
+        "time_s": 4.075514914415276e-06,
+        "new_minus_old_V": -7.320616564832072e-06
+      }
+    },
+    "old_log": {
+      "source_path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T053814697817Z/design/xrun.log",
+      "sha256": "9d90969007fdafabe5b92c40ad9e135c268baa3f9e0f974c5ca062d2bf1e27e4",
+      "simulator_summary": {
+        "errors": 0,
+        "warnings": 2,
+        "notices": 10
+      },
+      "warning_counts": {
+        "AHDLLINT-8007": 1,
+        "SPECTRE-16780": 1
+      },
+      "warning_time_counts": {
+        "AHDLLINT-8007": {
+          "4.0632 us": 1
+        },
+        "SPECTRE-16780": {
+          "4.0632 us": 1
+        }
+      },
+      "warning_device_counts": {
+        "SPECTRE-16780": {
+          "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b": 1
+        }
+      },
+      "warning_records": [
+        {
+          "line": 796,
+          "code": "AHDLLINT-8007",
+          "time_text": "4.0632 us",
+          "device": null
+        },
+        {
+          "line": 809,
+          "code": "SPECTRE-16780",
+          "time_text": "4.0632 us",
+          "device": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b"
+        }
+      ],
+      "statistics": {
+        "accepted_steps": 4950,
+        "LTE_rejected_steps": 116,
+        "Newton_rejected_steps": 4,
+        "minimum_accepted_step_s": 6.708234e-15,
+        "drastic_step_size_changes": 2,
+        "recovery_steps": 1403
+      },
+      "further_warning_suppression": false,
+      "suppressed_warning_total": 0,
+      "LTE_control_failure_observed": true,
+      "accuracy_pass": false,
+      "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+    },
+    "new_log": {
+      "source_path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T055010908278Z/design/xrun.log",
+      "sha256": "d51af4c25398f59da182410647acd3f02700c9fb39261323ea6744585e8714f3",
+      "simulator_summary": {
+        "errors": 0,
+        "warnings": 26,
+        "notices": 11
+      },
+      "warning_counts": {
+        "VACOMP-2506": 22,
+        "SFE-3453": 1,
+        "SPECTRE-8282": 1,
+        "AHDLLINT-8007": 1,
+        "SPECTRE-16780": 1
+      },
+      "warning_time_counts": {
+        "VACOMP-2506": {
+          "null": 22
+        },
+        "SFE-3453": {
+          "null": 1
+        },
+        "SPECTRE-8282": {
+          "null": 1
+        },
+        "AHDLLINT-8007": {
+          "4.0632 us": 1
+        },
+        "SPECTRE-16780": {
+          "4.0632 us": 1
+        }
+      },
+      "warning_device_counts": {
+        "SPECTRE-16780": {
+          "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b": 1
+        }
+      },
+      "warning_records": [
+        {
+          "line": 132,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 133,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 134,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 139,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 140,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 341,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 342,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 343,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 353,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 354,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 355,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 365,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 366,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 367,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 368,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 369,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 370,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 371,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 372,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 373,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 374,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 375,
+          "code": "VACOMP-2506",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 419,
+          "code": "SFE-3453",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 420,
+          "code": "SPECTRE-8282",
+          "time_text": null,
+          "device": null
+        },
+        {
+          "line": 839,
+          "code": "AHDLLINT-8007",
+          "time_text": "4.0632 us",
+          "device": null
+        },
+        {
+          "line": 853,
+          "code": "SPECTRE-16780",
+          "time_text": "4.0632 us",
+          "device": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b"
+        }
+      ],
+      "statistics": {
+        "accepted_steps": 4950,
+        "LTE_rejected_steps": 116,
+        "Newton_rejected_steps": 4,
+        "minimum_accepted_step_s": 6.715386e-15,
+        "drastic_step_size_changes": 2,
+        "recovery_steps": 1403
+      },
+      "further_warning_suppression": true,
+      "suppressed_warning_total": 12,
+      "LTE_control_failure_observed": true,
+      "accuracy_pass": false,
+      "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+    },
+    "raw_sha256": {
+      "old": "3ef33020b514827023eefd71ab332b2016b4f3079a46056301de11b8e7c42946",
+      "new": "cf125cef148f5de7eb8136647c0ec6181e66f28917f7b5e0d64680b2e3fe6f2f"
+    },
+    "interpretation": "25.1 still logs the same int_b LTE relaxation and skips the int_b save. Common external voltages can be compared; no new-tool internal-body waveform is available."
+  },
+  "isolated_comparator": {
+    "scope": "Identical 87-device comparator / stimulus / PDK entry, Spectre-only version change. No physical CDAC/reference ADC gate in fixture.",
+    "input_scs_sha256": "4802d0aea08660e378c9c9d98c5e32c3e6ee0b09ff89a55ae938388bcf841ef1",
+    "native_sha256": "b31685852281b695ae41293f43801e2e4da28a0ac7d230b508650c8770d8a706",
+    "old_header": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "21.1.0.132.isr1",
+      "date": "9:19:38 PM, Wed Sep 23, 2026",
+      "design": "(no title)",
+      "analysis type": "tran",
+      "analysis name": "reset_decide",
+      "analysis description": "Transient Analysis `reset_decide': time = (0 s -> 9.2 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 9.2e-06,
+      "step": 9.2e-09,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "node",
+      "units": "s",
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "new_header": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "25.1.0.156.isr2",
+      "date": "12:45:36 AM, Thur Sep 24, 2026",
+      "design": "(no title)",
+      "analysis type": "tran",
+      "analysis name": "reset_decide",
+      "analysis description": "Transient Analysis `reset_decide': time = (0 s -> 9.2 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 9.2e-06,
+      "step": 9.2e-09,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "node",
+      "units": "s",
+      "tolerance": 1e-06,
+      "sigtype": "optical",
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "old_log": {
+      "source_path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T021925324213Z/spectre.out",
+      "sha256": "3795bf1c3e8b21d3d9bef8282b89a0746f7c56968ed118037def01bc18ca1208",
+      "simulator_summary": {
+        "errors": 0,
+        "warnings": 1,
+        "notices": 5
+      },
+      "warning_counts": {
+        "SPECTRE-16780": 1
+      },
+      "warning_time_counts": {
+        "SPECTRE-16780": {
+          "7.18921 us": 1
+        }
+      },
+      "warning_device_counts": {
+        "SPECTRE-16780": {
+          "XCMP.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b": 1
+        }
+      },
+      "warning_records": [
+        {
+          "line": 1717,
+          "code": "SPECTRE-16780",
+          "time_text": "7.18921 us",
+          "device": "XCMP.XADC_XCMP_XRESET_XP2.msky130_fd_pr__pfet_01v8:int_b"
+        }
+      ],
+      "statistics": {
+        "accepted_steps": 32499,
+        "LTE_rejected_steps": 512,
+        "Newton_rejected_steps": 51,
+        "minimum_accepted_step_s": 3.255978e-16,
+        "drastic_step_size_changes": 17,
+        "recovery_steps": 11646
+      },
+      "further_warning_suppression": false,
+      "suppressed_warning_total": 0,
+      "LTE_control_failure_observed": true,
+      "accuracy_pass": false,
+      "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+    },
+    "new_log": {
+      "source_path": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T054522930288Z/spectre.out",
+      "sha256": "0cf88b63240a3488713f12f1cce99e4bf6d12074573f8f2ec7eb179e51958a60",
+      "simulator_summary": {
+        "errors": 0,
+        "warnings": 1,
+        "notices": 8
+      },
+      "warning_counts": {
+        "AHDLLINT-8014": 1
+      },
+      "warning_time_counts": {
+        "AHDLLINT-8014": {
+          "5.1669 us": 1
+        }
+      },
+      "warning_device_counts": {
+        "AHDLLINT-8014": {
+          "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.rend": 1
+        }
+      },
+      "warning_records": [
+        {
+          "line": 734,
+          "code": "AHDLLINT-8014",
+          "time_text": "5.1669 us",
+          "device": "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.rend"
+        }
+      ],
+      "statistics": {
+        "accepted_steps": 32498,
+        "LTE_rejected_steps": 506,
+        "Newton_rejected_steps": 70,
+        "minimum_accepted_step_s": 4.582448e-19,
+        "drastic_step_size_changes": 18,
+        "recovery_steps": 11612
+      },
+      "further_warning_suppression": true,
+      "suppressed_warning_total": 45,
+      "LTE_control_failure_observed": false,
+      "accuracy_pass": false,
+      "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+    },
+    "new_Newton_recovery_count": 2,
+    "new_Newton_recovery_time_text": [
+      [
+        "5.1669 us",
+        "199.9e-21 s."
+      ],
+      [
+        "5.1669 us",
+        "199.9e-21 s."
+      ]
+    ],
+    "functional_checks": [
+      {
+        "time_s": 0.0,
+        "kind": "global_reset",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 0
+        }
+      },
+      {
+        "time_s": 5e-07,
+        "kind": "global_reset",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 0
+        }
+      },
+      {
+        "time_s": 1.5e-06,
+        "kind": "reset_release_hold",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 5.311499999999999e-06,
+        "kind": "decision",
+        "pass": true,
+        "actual_SR_asserted": true,
+        "observed": {
+          "Q": 1,
+          "QB": 0,
+          "EVAL": 1,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 5.936499999999999e-06,
+        "kind": "decision",
+        "pass": true,
+        "actual_SR_asserted": true,
+        "observed": {
+          "Q": 1,
+          "QB": 0,
+          "EVAL": 1,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 6.5615e-06,
+        "kind": "decision",
+        "pass": true,
+        "actual_SR_asserted": true,
+        "observed": {
+          "Q": 1,
+          "QB": 0,
+          "EVAL": 1,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 5.4e-06,
+        "kind": "decision_retention",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 1,
+          "QB": 0,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 6.025e-06,
+        "kind": "decision_retention",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 1,
+          "QB": 0,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 6.625e-06,
+        "kind": "decision_retention",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 1,
+          "QB": 0,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 7.1865e-06,
+        "kind": "decision",
+        "pass": true,
+        "actual_SR_asserted": true,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 1,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 7.8115e-06,
+        "kind": "decision",
+        "pass": true,
+        "actual_SR_asserted": true,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 1,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 7.275e-06,
+        "kind": "decision_retention",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 7.9e-06,
+        "kind": "decision_retention",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 8.4e-06,
+        "kind": "reset_during_evaluation",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 1,
+          "RST_N": 0
+        }
+      },
+      {
+        "time_s": 8.599999999999999e-06,
+        "kind": "reset_release_hold",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      },
+      {
+        "time_s": 9.15e-06,
+        "kind": "post_reset_hold_not_new_decision",
+        "pass": true,
+        "actual_SR_asserted": null,
+        "observed": {
+          "Q": 0,
+          "QB": 1,
+          "EVAL": 0,
+          "RST_N": 1
+        }
+      }
+    ],
+    "precharge_checks": [
+      {
+        "time_s": 1.5e-06,
+        "pass": true
+      },
+      {
+        "time_s": 5.4e-06,
+        "pass": true
+      },
+      {
+        "time_s": 6.025e-06,
+        "pass": true
+      },
+      {
+        "time_s": 6.625e-06,
+        "pass": true
+      },
+      {
+        "time_s": 7.275e-06,
+        "pass": true
+      },
+      {
+        "time_s": 7.9e-06,
+        "pass": true
+      },
+      {
+        "time_s": 8.599999999999999e-06,
+        "pass": true
+      },
+      {
+        "time_s": 9.15e-06,
+        "pass": true
+      }
+    ],
+    "functional_checks_pass": true,
+    "real_decision_count": 5,
+    "selected_all_time_channel_comparison": {
+      "EVAL": {
+        "max_abs_V": 3.05000469325023e-12,
+        "time_s": 6.2506382721628e-06,
+        "new_minus_old_V": 3.05000469325023e-12
+      },
+      "TP": {
+        "max_abs_V": 9.992007221626409e-16,
+        "time_s": 6.650732080651122e-06,
+        "new_minus_old_V": -9.992007221626409e-16
+      },
+      "XCMP.XADC_XCMP_BP": {
+        "max_abs_V": 3.439931798696061e-05,
+        "time_s": 7.041066171112243e-06,
+        "new_minus_old_V": -3.439931798696061e-05
+      },
+      "RST_N": {
+        "max_abs_V": 1.525002346625115e-12,
+        "time_s": 1.000659419399103e-06,
+        "new_minus_old_V": 1.525002346625115e-12
+      },
+      "VDD": {
+        "max_abs_V": 0.0,
+        "time_s": 0.0,
+        "new_minus_old_V": 0.0
+      },
+      "XCMP.XADC_XCMP_R_BAR": {
+        "max_abs_V": 5.305854753467898e-05,
+        "time_s": 7.189209407876145e-06,
+        "new_minus_old_V": 5.305854753467898e-05
+      },
+      "XCMP.XADC_XCMP_DPOS": {
+        "max_abs_V": 6.175076514547406e-05,
+        "time_s": 9.06525268235588e-06,
+        "new_minus_old_V": -6.175076514547406e-05
+      },
+      "XCMP.XADC_XCMP_BN": {
+        "max_abs_V": 6.151366722623175e-05,
+        "time_s": 5.167465318600971e-06,
+        "new_minus_old_V": 6.151366722623175e-05
+      },
+      "QB": {
+        "max_abs_V": 2.1764104530481998e-05,
+        "time_s": 7.040483162508737e-06,
+        "new_minus_old_V": -2.1764104530481998e-05
+      },
+      "XCMP.XADC_XCMP_S_BAR": {
+        "max_abs_V": 3.912603000966186e-05,
+        "time_s": 5.314223780673393e-06,
+        "new_minus_old_V": -3.912603000966186e-05
+      },
+      "TN": {
+        "max_abs_V": 9.992007221626409e-16,
+        "time_s": 6.650732080651122e-06,
+        "new_minus_old_V": 9.992007221626409e-16
+      },
+      "Q": {
+        "max_abs_V": 2.68818188209341e-05,
+        "time_s": 7.040522927846515e-06,
+        "new_minus_old_V": -2.68818188209341e-05
+      },
+      "XCMP.XADC_PREP": {
+        "max_abs_V": 3.8976050853456456e-07,
+        "time_s": 9.074117690147099e-06,
+        "new_minus_old_V": -3.8976050853456456e-07
+      },
+      "XCMP.XADC_XCMP_DNEG": {
+        "max_abs_V": 2.7604709105455427e-05,
+        "time_s": 5.315459770810475e-06,
+        "new_minus_old_V": 2.7604709105455427e-05
+      },
+      "XCMP.XADC_PREN": {
+        "max_abs_V": 3.584379608678745e-07,
+        "time_s": 9.074117690147099e-06,
+        "new_minus_old_V": -3.584379608678745e-07
+      },
+      "preamp_differential": {
+        "max_abs_V": 3.3351729666897256e-07,
+        "time_s": 7.093340102724906e-06,
+        "new_minus_old_V": 3.3351729666897256e-07
+      }
+    },
+    "settled_checks": [
+      {
+        "time_s": 0.0,
+        "kind": "global_reset",
+        "preamp_differential_new_minus_old_V": 0.0
+      },
+      {
+        "time_s": 5e-07,
+        "kind": "global_reset",
+        "preamp_differential_new_minus_old_V": 3.3306690738754696e-16
+      },
+      {
+        "time_s": 1.5e-06,
+        "kind": "reset_release_hold",
+        "preamp_differential_new_minus_old_V": 1.4432899320127035e-15
+      },
+      {
+        "time_s": 5.311499999999999e-06,
+        "kind": "decision",
+        "preamp_differential_new_minus_old_V": 2.7625643106432562e-08
+      },
+      {
+        "time_s": 5.936499999999999e-06,
+        "kind": "decision",
+        "preamp_differential_new_minus_old_V": 2.1886936707460336e-12
+      },
+      {
+        "time_s": 6.5615e-06,
+        "kind": "decision",
+        "preamp_differential_new_minus_old_V": -7.968070647734748e-13
+      },
+      {
+        "time_s": 5.4e-06,
+        "kind": "decision_retention",
+        "preamp_differential_new_minus_old_V": -7.040402927316336e-09
+      },
+      {
+        "time_s": 6.025e-06,
+        "kind": "decision_retention",
+        "preamp_differential_new_minus_old_V": 5.6288307348495437e-14
+      },
+      {
+        "time_s": 6.625e-06,
+        "kind": "decision_retention",
+        "preamp_differential_new_minus_old_V": -4.291500488307065e-11
+      },
+      {
+        "time_s": 7.1865e-06,
+        "kind": "decision",
+        "preamp_differential_new_minus_old_V": -2.431870838037753e-08
+      },
+      {
+        "time_s": 7.8115e-06,
+        "kind": "decision",
+        "preamp_differential_new_minus_old_V": -1.3576736401788025e-09
+      },
+      {
+        "time_s": 7.275e-06,
+        "kind": "decision_retention",
+        "preamp_differential_new_minus_old_V": -7.643223387532316e-09
+      },
+      {
+        "time_s": 7.9e-06,
+        "kind": "decision_retention",
+        "preamp_differential_new_minus_old_V": 1.018181206013935e-09
+      },
+      {
+        "time_s": 8.4e-06,
+        "kind": "reset_during_evaluation",
+        "preamp_differential_new_minus_old_V": 6.0002034452111275e-09
+      },
+      {
+        "time_s": 8.599999999999999e-06,
+        "kind": "reset_release_hold",
+        "preamp_differential_new_minus_old_V": 2.5344781828806617e-10
+      },
+      {
+        "time_s": 9.15e-06,
+        "kind": "post_reset_hold_not_new_decision",
+        "preamp_differential_new_minus_old_V": -6.779066974438308e-09
+      }
+    ],
+    "raw_compressed_sha256": {
+      "old": "38bf3bef51ca1db5fe2797958702d51a49e470744339de346d6820fe2ee60309",
+      "new": "3fc01914a7fbbcbc06318b236398872b5eb1d8c7ceb9b86f96ebed73c1f1755a"
+    },
+    "interpretation": "No LTE warning in new comparator does not establish numerical convergence; two Newton recovery events and an AHDL static-matrix warning remain. Version comparison is not same-method precision tightening."
+  },
+  "recommended_next": "Restore valid same-primitive int_b/dbnode/sbnode observability under the chosen supported engine using installed help; keep model unchanged. Then a bounded VDS=0 native-buffer/control probe can test the body-network hypothesis. Do not dispatch another long full-ADC run solely because an isolated fixture has no LTE warning.",
+  "limits": [
+    "Full AMS comparison changes both Xcelium and Spectre bundle; effects cannot be assigned to Spectre alone.",
+    "VACOMP portability warnings, skipped save errors and LTE accuracy warnings are different categories.",
+    "No PDK/body model/tolerances/acceptance criteria changed."
+  ]
+}

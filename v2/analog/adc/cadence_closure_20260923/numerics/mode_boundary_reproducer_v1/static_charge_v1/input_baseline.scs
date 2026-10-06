@@ -1,0 +1,27 @@
+// Static DC mode-boundary / charge diagnostic. No transient or ADC acceptance.
+simulator lang=spectre
+global 0
+parameters VDELTA=0
+include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+VD (D 0) vsource dc=1.8+VDELTA
+VG (G 0) vsource dc=0.91642555277800053
+VS (SB 0) vsource dc=1.8
+XTEST (D G SB SB) pfet_01v8 w=(32u) l=150n as=8.48p ad=8.48p ps=64.53u pd=64.53u m=(1)*(1)
+saveOptions options save=selected
+save D G SB
+save XTEST.msky130_fd_pr__pfet_01v8:int_b XTEST.msky130_fd_pr__pfet_01v8:dbnode XTEST.msky130_fd_pr__pfet_01v8:sbnode sigtype=node
+save XTEST.msky130_fd_pr__pfet_01v8:region XTEST.msky130_fd_pr__pfet_01v8:reversed XTEST.msky130_fd_pr__pfet_01v8:vgs XTEST.msky130_fd_pr__pfet_01v8:vds XTEST.msky130_fd_pr__pfet_01v8:vbs XTEST.msky130_fd_pr__pfet_01v8:vgd XTEST.msky130_fd_pr__pfet_01v8:vdb XTEST.msky130_fd_pr__pfet_01v8:vgb sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:ids XTEST.msky130_fd_pr__pfet_01v8:id XTEST.msky130_fd_pr__pfet_01v8:ig XTEST.msky130_fd_pr__pfet_01v8:is XTEST.msky130_fd_pr__pfet_01v8:ib XTEST.msky130_fd_pr__pfet_01v8:gm XTEST.msky130_fd_pr__pfet_01v8:gds XTEST.msky130_fd_pr__pfet_01v8:gmbs sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:qg XTEST.msky130_fd_pr__pfet_01v8:qd XTEST.msky130_fd_pr__pfet_01v8:qs XTEST.msky130_fd_pr__pfet_01v8:qb XTEST.msky130_fd_pr__pfet_01v8:qjd XTEST.msky130_fd_pr__pfet_01v8:qjs XTEST.msky130_fd_pr__pfet_01v8:qgdovl XTEST.msky130_fd_pr__pfet_01v8:qgsovl sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:qgi XTEST.msky130_fd_pr__pfet_01v8:qdi XTEST.msky130_fd_pr__pfet_01v8:qsi XTEST.msky130_fd_pr__pfet_01v8:qbi XTEST.msky130_fd_pr__pfet_01v8:cgg XTEST.msky130_fd_pr__pfet_01v8:cgd XTEST.msky130_fd_pr__pfet_01v8:cgs XTEST.msky130_fd_pr__pfet_01v8:cgb sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:cdg XTEST.msky130_fd_pr__pfet_01v8:cdd XTEST.msky130_fd_pr__pfet_01v8:cds XTEST.msky130_fd_pr__pfet_01v8:cdb XTEST.msky130_fd_pr__pfet_01v8:csg XTEST.msky130_fd_pr__pfet_01v8:csd XTEST.msky130_fd_pr__pfet_01v8:css XTEST.msky130_fd_pr__pfet_01v8:csb sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:cbg XTEST.msky130_fd_pr__pfet_01v8:cbd XTEST.msky130_fd_pr__pfet_01v8:cbs XTEST.msky130_fd_pr__pfet_01v8:cbb XTEST.msky130_fd_pr__pfet_01v8:cjd XTEST.msky130_fd_pr__pfet_01v8:cjs XTEST.msky130_fd_pr__pfet_01v8:cggbo XTEST.msky130_fd_pr__pfet_01v8:cgdbo sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:cgsbo XTEST.msky130_fd_pr__pfet_01v8:cbgbo XTEST.msky130_fd_pr__pfet_01v8:cbdbo XTEST.msky130_fd_pr__pfet_01v8:cbsbo XTEST.msky130_fd_pr__pfet_01v8:cdgbo XTEST.msky130_fd_pr__pfet_01v8:cddbo XTEST.msky130_fd_pr__pfet_01v8:cdsbo sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:currents VD:currents VG:currents VS:currents sigtype=dev
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+simulatorOptions options temp=27 tnom=27 reltol=1e-5 vabstol=1e-8 iabstol=1e-13 gmin=1e-12 cmin=0 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+dc_wide_up dc param=VDELTA start=-0.02 stop=0.02 lin=400 oppoint=rawfile force=none useprevic=no swpuseprevic=yes
+dc_wide_down dc param=VDELTA start=0.02 stop=-0.02 lin=400 oppoint=rawfile force=none useprevic=no swpuseprevic=yes
+dc_fine_up dc param=VDELTA start=-0.001 stop=0.001 lin=2000 oppoint=rawfile force=none useprevic=no swpuseprevic=yes
+dc_fine_down dc param=VDELTA start=0.001 stop=-0.001 lin=2000 oppoint=rawfile force=none useprevic=no swpuseprevic=yes

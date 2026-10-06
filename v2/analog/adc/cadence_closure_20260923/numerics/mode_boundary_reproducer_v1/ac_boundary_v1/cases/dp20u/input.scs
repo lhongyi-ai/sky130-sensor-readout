@@ -1,0 +1,17 @@
+// Same-PFET external-port AC column. Diagnostic only; no ADC qualification.
+simulator lang=spectre
+global 0
+parameters VDELTA=2.0000000000000002e-05
+include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+VD (D 0) vsource dc=1.8+VDELTA type=dc mag=1 phase=0
+VG (G 0) vsource dc=0.91642555277800053 type=dc mag=0 phase=0
+VS (SB 0) vsource dc=1.8 type=dc mag=0 phase=0
+XTEST (D G SB SB) pfet_01v8 w=(32u) l=150n as=8.48p ad=8.48p ps=64.53u pd=64.53u m=(1)*(1)
+simulatorOptions options temp=27 tnom=27 reltol=1e-6 vabstol=1e-9 iabstol=1e-14 gmin=1e-12 cmin=0 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+saveOptions options save=selected
+save D G SB
+save VD:currents VG:currents VS:currents XTEST.msky130_fd_pr__pfet_01v8:currents sigtype=dev
+save XTEST.msky130_fd_pr__pfet_01v8:int_b XTEST.msky130_fd_pr__pfet_01v8:dbnode XTEST.msky130_fd_pr__pfet_01v8:sbnode sigtype=node
+acBoundary ac start=1000 stop=10000000 dec=10 prevoppoint=no skipdc=no force=none useprevic=no oppoint=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile

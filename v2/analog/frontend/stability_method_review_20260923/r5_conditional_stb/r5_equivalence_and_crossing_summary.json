@@ -1,0 +1,216 @@
+{
+  "status": "STRICT_GAIN16_OP_EQUIVALENCE_FAILURE_RETAINED",
+  "max_common_node_difference_v": 3.2002784089435465e-07,
+  "limit_v": 1e-08,
+  "largest_20_node_differences": [
+    {
+      "signal": "XPGA_XN1_N",
+      "without_probe_v": 1.447142643108248,
+      "with_probe_v": 1.447142323080407,
+      "absolute_delta_v": 3.2002784089435465e-07
+    },
+    {
+      "signal": "XPGA_E1B",
+      "without_probe_v": 1.799999995277599,
+      "with_probe_v": 1.7999999952776,
+      "absolute_delta_v": 1.1102230246251565e-15
+    },
+    {
+      "signal": "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+      "without_probe_v": 1.369768608799361,
+      "with_probe_v": 1.36976860879936,
+      "absolute_delta_v": 1.1102230246251565e-15
+    },
+    {
+      "signal": "XPGA_XOTA_DS",
+      "without_probe_v": 0.8433528007645638,
+      "with_probe_v": 0.8433528007645645,
+      "absolute_delta_v": 7.771561172376096e-16
+    },
+    {
+      "signal": "FP",
+      "without_probe_v": 0.9163298392068036,
+      "with_probe_v": 0.9163298392068033,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "HN",
+      "without_probe_v": 0.9163298297750976,
+      "with_probe_v": 0.9163298297750974,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XOTA_XRZP_XR.ra",
+      "without_probe_v": 0.6432657782366412,
+      "with_probe_v": 0.6432657782366414,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XOTA_N1",
+      "without_probe_v": 0.6432657782366412,
+      "with_probe_v": 0.6432657782366414,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XOTA_CMG",
+      "without_probe_v": 0.939537217598721,
+      "with_probe_v": 0.9395372175987208,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XOTA_XRN1_XR.ra",
+      "without_probe_v": 0.6432657782366412,
+      "with_probe_v": 0.6432657782366414,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFN1_XR_XR.ra",
+      "without_probe_v": 0.9163298622693894,
+      "with_probe_v": 0.9163298622693892,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFP4_XR_XR.ra",
+      "without_probe_v": 0.9163298623099946,
+      "with_probe_v": 0.9163298623099944,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFP1_N",
+      "without_probe_v": 0.9163298609942407,
+      "with_probe_v": 0.9163298609942405,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "HP",
+      "without_probe_v": 0.9163298297750976,
+      "with_probe_v": 0.9163298297750974,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFN4_XR_XR.ra",
+      "without_probe_v": 0.9163298623099946,
+      "with_probe_v": 0.9163298623099944,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFP1_XR_XR.ra",
+      "without_probe_v": 0.9163298622693894,
+      "with_probe_v": 0.9163298622693892,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "FN",
+      "without_probe_v": 0.9163298392068036,
+      "with_probe_v": 0.9163298392068033,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFN1_N",
+      "without_probe_v": 0.9163298609942407,
+      "with_probe_v": 0.9163298609942405,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XPGA_XFP16_XR_XR_SEG_01.ra",
+      "without_probe_v": 0.916277556923436,
+      "with_probe_v": 0.9162775569234358,
+      "absolute_delta_v": 2.220446049250313e-16
+    },
+    {
+      "signal": "XRIN_XR.ra",
+      "without_probe_v": 0.9163298491918171,
+      "with_probe_v": 0.9163298491918169,
+      "absolute_delta_v": 2.220446049250313e-16
+    }
+  ],
+  "crossing_counts": {
+    "g1_dm": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 1,
+      "native_pm": 39.07844988040595,
+      "max_gain_db": 58.89779507863948
+    },
+    "g1_input_cm": {
+      "unity": 0,
+      "positive_real": 2,
+      "negative_real": 1,
+      "native_pm": null,
+      "max_gain_db": -40.650269862873685
+    },
+    "g1_cm1": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 0,
+      "native_pm": 80.38944282842039,
+      "max_gain_db": 45.94790577294336
+    },
+    "g1_cm2": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 1,
+      "native_pm": 124.4244844056612,
+      "max_gain_db": 33.55734358685766
+    },
+    "g4_dm": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 1,
+      "native_pm": 50.10932406647976,
+      "max_gain_db": 55.4880242552834
+    },
+    "g4_input_cm": {
+      "unity": 0,
+      "positive_real": 4,
+      "negative_real": 1,
+      "native_pm": null,
+      "max_gain_db": -48.33632980219428
+    },
+    "g4_cm1": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 0,
+      "native_pm": 80.620615576675,
+      "max_gain_db": 56.48167131651472
+    },
+    "g4_cm2": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 1,
+      "native_pm": 124.4342500404786,
+      "max_gain_db": 38.54263417915468
+    },
+    "g16_dm": {
+      "unity": 1,
+      "positive_real": 2,
+      "negative_real": 2,
+      "native_pm": 66.49772475884187,
+      "max_gain_db": 48.23919516731167
+    },
+    "g16_input_cm": {
+      "unity": 0,
+      "positive_real": 3,
+      "negative_real": 1,
+      "native_pm": null,
+      "max_gain_db": -58.89636620641668
+    },
+    "g16_cm1": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 0,
+      "native_pm": 80.75184240657731,
+      "max_gain_db": 71.40049203637145
+    },
+    "g16_cm2": {
+      "unity": 1,
+      "positive_real": 1,
+      "negative_real": 1,
+      "native_pm": 124.3857904491135,
+      "max_gain_db": 42.410506857983805
+    }
+  },
+  "not_compared_per_gain_device_op_fields": 52,
+  "no_rerun": true,
+  "formal_multiloop_pass": false
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PREPARED_NOT_SIMULATED",
+  "native_source_cell": "p2adc_core_reset1_school_r1",
+  "native_source_sha256": "492ab683c55598cf999d325e6cfd38ec3c520d315db6cd271c253efce87e0e4c",
+  "primitives": 87,
+  "ports": [
+    "XADC_TN",
+    "XADC_TP",
+    "Q",
+    "QB",
+    "EVAL",
+    "VDD",
+    "VSS",
+    "RST_N"
+  ],
+  "rst_initial_low_until_s": 1e-06,
+  "midrun_reset_s": [
+    6.36e-06,
+    6.501e-06
+  ],
+  "midrun_reset_asserted_during_real_EVAL": true,
+  "positive_TN_minus_TP_V": 0.001,
+  "negative_TN_minus_TP_V": -0.001,
+  "positive_decision_expected_Q": 1,
+  "negative_decision_expected_Q": 0,
+  "reset_Q": 0,
+  "reset_QB": 1,
+  "qualification_excludes_reset_preload_as_decision": true,
+  "not_coverage": [
+    "power ramp",
+    "PVT",
+    "offset/noise",
+    "small input precision threshold",
+    "ADC conversions",
+    "physical reset driver skew"
+  ]
+}

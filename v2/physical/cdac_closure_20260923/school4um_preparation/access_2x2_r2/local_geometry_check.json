@@ -1,0 +1,176 @@
+{
+  "status": "STATIC_TOPOLOGY_INTENT_PASS_NOT_DRC_LVS",
+  "cases": {
+    "good": {
+      "status": "STATIC_RECTANGLE_TOPOLOGY_MATCHES_INTENT",
+      "scope": "Generated ideal conductor connectivity only, not DRC/LVS/PEX",
+      "component_count": 5,
+      "port_components": {
+        "TOP": 22,
+        "B00": 11,
+        "B01": 14,
+        "B10": 28,
+        "B11": 31
+      },
+      "MIM_devices": [
+        {
+          "origin_um": [
+            0,
+            0
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 11,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            12,
+            0
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 14,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            0,
+            12
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 28,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            12,
+            12
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 31,
+          "w_um": 4,
+          "l_um": 4
+        }
+      ],
+      "expected_actual_layout_external_ports": 5,
+      "expected_PVS_LVS": "MATCH",
+      "PVS_LVS": "NOT_RUN"
+    },
+    "open": {
+      "status": "STATIC_RECTANGLE_TOPOLOGY_MATCHES_INTENT",
+      "scope": "Generated ideal conductor connectivity only, not DRC/LVS/PEX",
+      "component_count": 6,
+      "port_components": {
+        "TOP": 22,
+        "B00": 11,
+        "B01": 14,
+        "B10": 28,
+        "B11": 31
+      },
+      "MIM_devices": [
+        {
+          "origin_um": [
+            0,
+            0
+          ],
+          "PLUS_component": 5,
+          "MINUS_component": 11,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            12,
+            0
+          ],
+          "PLUS_component": 5,
+          "MINUS_component": 14,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            0,
+            12
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 28,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            12,
+            12
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 31,
+          "w_um": 4,
+          "l_um": 4
+        }
+      ],
+      "expected_actual_layout_external_ports": 5,
+      "expected_PVS_LVS": "MISMATCH",
+      "PVS_LVS": "NOT_RUN"
+    },
+    "short": {
+      "status": "STATIC_RECTANGLE_TOPOLOGY_MATCHES_INTENT",
+      "scope": "Generated ideal conductor connectivity only, not DRC/LVS/PEX",
+      "component_count": 4,
+      "port_components": {
+        "TOP": 22,
+        "B00": 28,
+        "B01": 14,
+        "B10": 28,
+        "B11": 31
+      },
+      "MIM_devices": [
+        {
+          "origin_um": [
+            0,
+            0
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 28,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            12,
+            0
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 14,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            0,
+            12
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 28,
+          "w_um": 4,
+          "l_um": 4
+        },
+        {
+          "origin_um": [
+            12,
+            12
+          ],
+          "PLUS_component": 22,
+          "MINUS_component": 31,
+          "w_um": 4,
+          "l_um": 4
+        }
+      ],
+      "expected_actual_layout_external_ports": 4,
+      "expected_PVS_LVS": "MISMATCH",
+      "PVS_LVS": "NOT_RUN"
+    }
+  }
+}

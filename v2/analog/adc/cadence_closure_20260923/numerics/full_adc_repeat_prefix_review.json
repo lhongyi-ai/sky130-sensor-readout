@@ -1,0 +1,56 @@
+{
+  "scope": "SAME_INPUT_REPEAT_PREFIX_DIAGNOSTIC_NOT_NUMERICAL_QUALIFICATION",
+  "source_identity": {
+    "amsdControl.scs": {
+      "partial": "845b71e46d9278acdc7e355ffcd7a1ed41db1068c335a6326b3233a39c0a10f7",
+      "complete": "845b71e46d9278acdc7e355ffcd7a1ed41db1068c335a6326b3233a39c0a10f7"
+    },
+    "reset1_native_bound.scs": {
+      "partial": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+      "complete": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6"
+    },
+    "sar_controller.v": {
+      "partial": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+      "complete": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf"
+    },
+    "p1_interfaces.vams": {
+      "partial": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+      "complete": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084"
+    },
+    "p2_ams_reset1.vams": {
+      "partial": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125",
+      "complete": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125"
+    },
+    "p2_sequence.sv": {
+      "partial": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+      "complete": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505"
+    },
+    "profile.vh": {
+      "partial": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+      "complete": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c"
+    }
+  },
+  "raw_sha256": {
+    "partial": "8abfa0b07f8d99696ed81f6c03c9826528656b815a11d6b272a96a2f90ba01ff",
+    "complete": "7652c30352e7da406eb07af1dcdfc3362352f971ccb7151a9a0d223d8eeccb4a"
+  },
+  "row_counts": [
+    61171,
+    76658
+  ],
+  "end_times_s": [
+    2.306884072522245e-05,
+    3.094769207949164e-05
+  ],
+  "trace_count": 74,
+  "identical_prefix_rows": 61171,
+  "first_differing_shared_row": null,
+  "shared_row_time_mismatches": 0,
+  "same_time_row_value_mismatches": 0,
+  "entire_shorter_trace_exactly_reproduced": true,
+  "limitations": [
+    "The interrupted run remains incomplete; shared-prefix identity does not grant any convergence or waveform-accuracy PASS.",
+    "Both runs use the same tolerances; only a separately tightened physical full-ADC comparison can test numerical convergence.",
+    "Same printed warnings are retained and require independent investigation."
+  ]
+}

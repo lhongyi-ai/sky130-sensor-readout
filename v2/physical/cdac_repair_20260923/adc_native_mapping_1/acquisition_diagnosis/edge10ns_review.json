@@ -1,0 +1,67 @@
+{
+  "status": "NOT_NUMERICAL_PASS_EDGE_SLOWING_DID_NOT_REMOVE_LTE",
+  "simulator_exit": 0,
+  "stop_s": 8e-06,
+  "accepted_steps": 12531,
+  "elapsed_s": 77.8,
+  "reported_errors": 0,
+  "reported_warnings": 6,
+  "input_warning": "SFE-106: tran reltol parameter invalid and ignored. Preserved; actual tolerance remains1e-6 equal baseline. Future decks omit this invalid analysis parameter.",
+  "printed_lte_warnings": 5,
+  "suppressed_warnings": 5,
+  "actual_solver_equal_baseline": true,
+  "half_supply_crossing_delta_s": {
+    "SAMPLE_CMD": 0.0,
+    "CONV": -4.999171127873615e-11,
+    "ACQ": 1.175298461407703e-10,
+    "TOP": 1.1744394978997427e-10,
+    "TOPB": 1.174438205911918e-10,
+    "XPHASE.XPHASE_ACQ_DELAY": 1.1748192700852572e-10
+  },
+  "phase_logic_dead_time_s": 1.193254988250675e-08,
+  "selected_peaks": {
+    "TOPB": {
+      "baseline_1ns": {
+        "min": 1.260259000191398e-07,
+        "max": 1.914641027563602
+      },
+      "edge_10ns": {
+        "min": 1.260442170426057e-07,
+        "max": 1.914628348748463
+      }
+    },
+    "XADC.XADC_XDP_NL": {
+      "baseline_1ns": {
+        "min": -0.0001029849534386862,
+        "max": 1.924451014166633
+      },
+      "edge_10ns": {
+        "min": -0.0001025667478985129,
+        "max": 1.922613618498931
+      }
+    },
+    "XADC.XADC_BP11": {
+      "baseline_1ns": {
+        "min": 0.617186671284613,
+        "max": 0.7363776529124102
+      },
+      "edge_10ns": {
+        "min": 0.6171793365254024,
+        "max": 0.7363811407541244
+      }
+    },
+    "XADC.XADC_BN11": {
+      "baseline_1ns": {
+        "min": 1.001399726443334,
+        "max": 1.173344338855452
+      },
+      "edge_10ns": {
+        "min": 1.001320273178372,
+        "max": 1.173160427303734
+      }
+    }
+  },
+  "raw_archive_sha256": "18236da4e6dca6ee570b33cfcbc3c7d42e259abe0ef5ec38f3b5a4f785c5eb08",
+  "raw_waveform_sha256": "be129fe2dca3f922c889a7bcc0029c33e76765e583690164c7074a5a34ac6182",
+  "conclusion": "Tenfold input rise/fall slowing leaves internal reference-decode/phase switching LTE warnings and similar overshoot. Do not adopt it as a solved numerical or ADC version."
+}

@@ -1,0 +1,13 @@
+--- verified_first_body_probe_v1/amsdControl.scs
++++ body_network_probe_v1/amsdControl.scs
+@@ -68,6 +68,10 @@
+ save p2_ams_reset1.trial_e* sigtype=node
+ save p2_ams_reset1.phases.XPHASE_XBCONV_B
+ save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b sigtype=node
++save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:dbnode sigtype=node
++save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:sbnode sigtype=node
++save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:vds p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:reversed sigtype=dev
++save p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:currents sigtype=dev
+ adc_closure_tran tran stop=4.1u maxstep=2n errpreset=conservative relref=sigglobal
+ amsd {
+  portmap subckt=sensor_adc_reset1

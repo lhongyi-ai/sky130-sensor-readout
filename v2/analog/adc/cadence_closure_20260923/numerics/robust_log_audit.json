@@ -1,0 +1,6067 @@
+{
+  "source_path": "../runs/task_20260924T021509394837Z/spectre.out",
+  "sha256": "3e4dd448d2d163aec7589312f866e9308e8cb28e107d195cd8ba048583df7fda",
+  "simulator_summary": {
+    "errors": 0,
+    "warnings": 1000,
+    "notices": 6
+  },
+  "warning_counts": {
+    "SPECTRE-16578": 1000
+  },
+  "warning_time_counts": {
+    "SPECTRE-16578": {
+      "1 us": 21,
+      "1.00045 us": 3,
+      "1.00046 us": 6,
+      "1.00056 us": 23,
+      "1.0006 us": 1,
+      "1.00062 us": 22,
+      "1.00064 us": 6,
+      "1.00065 us": 1,
+      "1.00067 us": 11,
+      "1.00071 us": 3,
+      "1.001 us": 14,
+      "1.00101 us": 3,
+      "5 us": 47,
+      "5.001 us": 47,
+      "5.16647 us": 8,
+      "5.16676 us": 7,
+      "5.16678 us": 10,
+      "5.16684 us": 4,
+      "5.16685 us": 126,
+      "5.16687 us": 8,
+      "5.16688 us": 16,
+      "5.16689 us": 29,
+      "5.1669 us": 61,
+      "5.16691 us": 44,
+      "5.16692 us": 121,
+      "5.16693 us": 14,
+      "5.3125 us": 68,
+      "5.31256 us": 1,
+      "5.31285 us": 14,
+      "5.31286 us": 2,
+      "5.3135 us": 72,
+      "5.31404 us": 11,
+      "5.31414 us": 18,
+      "5.31416 us": 20,
+      "5.31419 us": 138
+    }
+  },
+  "warning_device_counts": {},
+  "warning_records": [
+    {
+      "line": 375,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 384,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 392,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 400,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 408,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 416,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 424,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 433,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 441,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 449,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 457,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 465,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 474,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 482,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 490,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 498,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 506,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 514,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 522,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 534,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 542,
+      "code": "SPECTRE-16578",
+      "time_text": "1 us",
+      "device": null
+    },
+    {
+      "line": 587,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00045 us",
+      "device": null
+    },
+    {
+      "line": 595,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00045 us",
+      "device": null
+    },
+    {
+      "line": 603,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00045 us",
+      "device": null
+    },
+    {
+      "line": 628,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 636,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 644,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 652,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 660,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 668,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00046 us",
+      "device": null
+    },
+    {
+      "line": 742,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 751,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 761,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 769,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 777,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 785,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 793,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 801,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 809,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 817,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 825,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 833,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 842,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 850,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 858,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 867,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 875,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 883,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 891,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 899,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 911,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 919,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 931,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00056 us",
+      "device": null
+    },
+    {
+      "line": 961,
+      "code": "SPECTRE-16578",
+      "time_text": "1.0006 us",
+      "device": null
+    },
+    {
+      "line": 993,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1001,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1009,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1017,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1025,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1033,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1041,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1049,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1057,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1065,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1073,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1100,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1113,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1122,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1130,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1140,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1148,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1157,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1166,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1179,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1195,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1211,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00062 us",
+      "device": null
+    },
+    {
+      "line": 1241,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 1249,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 1257,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 1265,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 1273,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 1281,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00064 us",
+      "device": null
+    },
+    {
+      "line": 1331,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00065 us",
+      "device": null
+    },
+    {
+      "line": 1389,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1397,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1405,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1413,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1421,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1429,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1437,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1445,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1461,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1477,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1485,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00067 us",
+      "device": null
+    },
+    {
+      "line": 1505,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00071 us",
+      "device": null
+    },
+    {
+      "line": 1513,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00071 us",
+      "device": null
+    },
+    {
+      "line": 1521,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00071 us",
+      "device": null
+    },
+    {
+      "line": 1548,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1556,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1564,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1572,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1580,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1588,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1596,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1604,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1612,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1620,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1628,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1636,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1644,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1652,
+      "code": "SPECTRE-16578",
+      "time_text": "1.001 us",
+      "device": null
+    },
+    {
+      "line": 1670,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00101 us",
+      "device": null
+    },
+    {
+      "line": 1678,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00101 us",
+      "device": null
+    },
+    {
+      "line": 1686,
+      "code": "SPECTRE-16578",
+      "time_text": "1.00101 us",
+      "device": null
+    },
+    {
+      "line": 1819,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1827,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1835,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1843,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1851,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1859,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1867,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1875,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1883,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1891,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1899,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1907,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1915,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1923,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1931,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1939,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1947,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1955,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1963,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1971,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1979,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1987,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 1995,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2003,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2011,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2019,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2027,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2035,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2043,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2051,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2059,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2067,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2075,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2083,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2091,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2099,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2107,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2115,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2123,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2131,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2139,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2147,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2155,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2163,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2171,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2179,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2187,
+      "code": "SPECTRE-16578",
+      "time_text": "5 us",
+      "device": null
+    },
+    {
+      "line": 2261,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2269,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2277,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2285,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2293,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2301,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2309,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2317,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2325,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2333,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2341,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2349,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2357,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2365,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2373,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2381,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2389,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2397,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2405,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2413,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2421,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2429,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2437,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2445,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2453,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2461,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2469,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2477,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2485,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2493,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2501,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2513,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2521,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2529,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2537,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2545,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2553,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2561,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2569,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2577,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2585,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2593,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2601,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2609,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2617,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2625,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2633,
+      "code": "SPECTRE-16578",
+      "time_text": "5.001 us",
+      "device": null
+    },
+    {
+      "line": 2662,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2670,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2678,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2686,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2694,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2702,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2710,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2718,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16647 us",
+      "device": null
+    },
+    {
+      "line": 2743,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2751,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2759,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2767,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2805,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2813,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2821,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16676 us",
+      "device": null
+    },
+    {
+      "line": 2861,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2869,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2877,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2885,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2893,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2901,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2909,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2917,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2925,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2937,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16678 us",
+      "device": null
+    },
+    {
+      "line": 2985,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16684 us",
+      "device": null
+    },
+    {
+      "line": 2993,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16684 us",
+      "device": null
+    },
+    {
+      "line": 3001,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16684 us",
+      "device": null
+    },
+    {
+      "line": 3009,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16684 us",
+      "device": null
+    },
+    {
+      "line": 3032,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3040,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3048,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3056,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3064,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3072,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3080,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3088,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3096,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3104,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3112,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3120,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3128,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3136,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3144,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3152,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3160,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3168,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3176,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3184,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3192,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3200,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3208,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3216,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3224,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3232,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3240,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3248,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3256,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3264,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3272,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3284,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3292,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3300,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3308,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3316,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3324,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3336,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3391,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3517,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3557,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3619,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3757,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3797,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3833,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3887,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3940,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 3976,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4033,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4127,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4163,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4199,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4235,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4271,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4307,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4343,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4379,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4415,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4451,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4487,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4523,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4559,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4595,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4631,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4667,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4703,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4739,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4775,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4811,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4847,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4883,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4919,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4955,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 4991,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5027,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5063,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5099,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5135,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5171,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5207,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5243,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5279,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5315,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5351,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5387,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5423,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5459,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5495,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5531,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5567,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5603,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5639,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5675,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5711,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5747,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5783,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5819,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5855,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5891,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5927,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5963,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 5999,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6035,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6071,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6107,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6143,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6179,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6215,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6251,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6287,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6378,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6453,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6545,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6585,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6689,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6752,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6792,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6880,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6920,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 6962,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7002,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7044,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7084,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7126,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7172,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7258,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16685 us",
+      "device": null
+    },
+    {
+      "line": 7837,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7845,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7853,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7861,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7869,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7877,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7885,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 7893,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16687 us",
+      "device": null
+    },
+    {
+      "line": 8376,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8384,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8392,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8400,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8408,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8445,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8453,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8461,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8469,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8481,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8535,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8543,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8551,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8559,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8567,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8575,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16688 us",
+      "device": null
+    },
+    {
+      "line": 8632,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8640,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8648,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8656,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8664,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8672,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8680,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8688,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8696,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8704,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8712,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8720,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8728,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8736,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8744,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8752,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8760,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8768,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8776,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8784,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8796,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8804,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8812,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8820,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8828,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8836,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8844,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8852,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8866,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16689 us",
+      "device": null
+    },
+    {
+      "line": 8925,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8933,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8941,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8949,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8957,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8965,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8973,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8981,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8989,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 8997,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9005,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9013,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9021,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9029,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9037,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9045,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9053,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9061,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9069,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9077,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9085,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9093,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9101,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9109,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9117,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9129,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9137,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9145,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9153,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9161,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9169,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9177,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9189,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9197,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9205,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9213,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9221,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9229,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9237,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9245,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9253,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9261,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9269,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9277,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9285,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9293,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9318,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9354,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9390,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9438,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9462,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9522,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9598,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9669,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9709,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9725,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9742,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9759,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9776,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9793,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9811,
+      "code": "SPECTRE-16578",
+      "time_text": "5.1669 us",
+      "device": null
+    },
+    {
+      "line": 9830,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 9838,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 9846,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 9854,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 9862,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10722,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10730,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10738,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10746,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10754,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10807,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10823,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10839,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10855,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10871,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10887,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10903,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10919,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10935,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10951,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10967,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10983,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 10999,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11015,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11031,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11047,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11063,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11079,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11095,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11111,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11127,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11143,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11159,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11175,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11191,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11207,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11223,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11239,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11255,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11271,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11287,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11303,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11319,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11335,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16691 us",
+      "device": null
+    },
+    {
+      "line": 11354,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11362,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11370,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11378,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11386,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11394,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11402,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11410,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11423,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11500,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11536,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11560,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11596,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11632,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11668,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11692,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11732,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11756,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11792,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11828,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11864,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11900,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11936,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 11972,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12008,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12044,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12080,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12116,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12152,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12188,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12224,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12260,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12284,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12324,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12348,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12384,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12408,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12448,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12472,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12504,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12528,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12552,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12592,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12616,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12652,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12660,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12668,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12676,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12684,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12692,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12700,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12708,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12737,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12777,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12813,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12837,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12873,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12897,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 12951,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13029,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13053,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13118,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13158,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13194,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13230,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13266,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13302,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13338,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13404,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13453,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13523,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13563,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13664,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13727,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13767,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13821,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13866,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13938,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 13978,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14037,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14077,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14159,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14199,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14239,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14281,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14298,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14315,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14332,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14349,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14366,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14383,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14400,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14417,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14434,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14451,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14468,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14485,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14502,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14519,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14536,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14553,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14570,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14587,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14604,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14621,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14638,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14655,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14672,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14689,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14706,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14723,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14740,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14758,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14775,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14793,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14810,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14828,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14846,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14864,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14882,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14900,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16692 us",
+      "device": null
+    },
+    {
+      "line": 14939,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 14947,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 14955,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 14963,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 14971,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 14979,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 14987,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15007,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15015,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15023,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15031,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15039,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15047,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15055,
+      "code": "SPECTRE-16578",
+      "time_text": "5.16693 us",
+      "device": null
+    },
+    {
+      "line": 15116,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15124,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15132,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15140,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15148,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15156,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15164,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15172,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15180,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15188,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15196,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15204,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15212,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15220,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15228,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15236,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15244,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15252,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15260,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15268,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15276,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15284,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15292,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15300,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15308,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15316,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15324,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15332,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15340,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15348,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15356,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15364,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15372,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15380,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15388,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15396,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15404,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15412,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15420,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15428,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15436,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15444,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15452,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15460,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15472,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15480,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15488,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15496,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15504,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15512,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15520,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15528,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15536,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15544,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15552,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15560,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15568,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15576,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15584,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15592,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15600,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15608,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15616,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15624,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15632,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15640,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15648,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15656,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3125 us",
+      "device": null
+    },
+    {
+      "line": 15679,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31256 us",
+      "device": null
+    },
+    {
+      "line": 15728,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15736,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15744,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15752,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15760,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15768,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15776,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15784,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15792,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15800,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15808,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15816,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15824,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15832,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31285 us",
+      "device": null
+    },
+    {
+      "line": 15864,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31286 us",
+      "device": null
+    },
+    {
+      "line": 15884,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31286 us",
+      "device": null
+    },
+    {
+      "line": 15918,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15926,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15934,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15942,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15950,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15958,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15966,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15974,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15982,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15990,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 15998,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16006,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16014,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16022,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16030,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16038,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16046,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16054,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16062,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16070,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16078,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16086,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16094,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16102,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16110,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16118,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16126,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16134,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16142,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16150,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16158,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16166,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16174,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16182,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16190,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16198,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16210,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16218,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16226,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16234,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16242,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16250,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16258,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16266,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16274,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16282,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16290,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16298,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16306,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16314,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16322,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16330,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16338,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16346,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16354,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16362,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16370,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16378,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16386,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16394,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16406,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16414,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16422,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16430,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16438,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16446,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16454,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16462,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16470,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16478,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16486,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16494,
+      "code": "SPECTRE-16578",
+      "time_text": "5.3135 us",
+      "device": null
+    },
+    {
+      "line": 16557,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16565,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16573,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16581,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16589,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16597,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16605,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16613,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16621,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16629,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16641,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31404 us",
+      "device": null
+    },
+    {
+      "line": 16682,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16690,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16698,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16706,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16714,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16780,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16788,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16796,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16804,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16812,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16820,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16828,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16836,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16844,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16852,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16860,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16868,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16880,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31414 us",
+      "device": null
+    },
+    {
+      "line": 16913,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16922,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16930,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16938,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16946,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16954,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16962,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16970,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16978,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16986,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 16994,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17002,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17010,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17022,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17030,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17038,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17046,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17054,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17062,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17074,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31416 us",
+      "device": null
+    },
+    {
+      "line": 17116,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17124,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17132,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17140,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17148,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17156,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17185,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17247,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17313,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17353,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17406,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17464,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17522,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17591,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17648,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17715,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17731,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17783,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 17905,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18013,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18103,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18171,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18224,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18348,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18388,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18416,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18424,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18432,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18440,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18448,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18489,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18537,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18586,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18626,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18679,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18715,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18747,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18818,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18866,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18915,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 18955,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19008,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19049,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19065,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19073,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19081,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19089,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19097,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19105,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19113,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19162,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19210,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19259,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19299,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19335,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19388,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19424,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19460,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19496,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19532,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19568,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19604,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19640,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19676,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19712,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19748,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19784,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19820,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19856,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19892,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19928,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 19964,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20000,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20036,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20072,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20108,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20144,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20180,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20216,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20252,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20288,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20312,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20380,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20404,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20428,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20464,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20472,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20492,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20524,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20548,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20572,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20596,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20628,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20652,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20676,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20700,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20732,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20740,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20757,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20789,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20801,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20865,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20901,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20925,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20949,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 20981,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21005,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21029,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21053,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21085,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21121,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21145,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21169,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21201,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21209,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21229,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21261,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21285,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21309,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21333,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21426,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21434,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21466,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21478,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21510,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21522,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21550,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21574,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21598,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21634,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21658,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21682,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21718,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21742,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21766,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21802,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21826,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    },
+    {
+      "line": 21862,
+      "code": "SPECTRE-16578",
+      "time_text": "5.31419 us",
+      "device": null
+    }
+  ],
+  "statistics": {
+    "accepted_steps": 61719,
+    "LTE_rejected_steps": 2463,
+    "Newton_rejected_steps": 50,
+    "minimum_accepted_step_s": 5.095725e-16,
+    "drastic_step_size_changes": 19,
+    "recovery_steps": 13567
+  },
+  "further_warning_suppression": true,
+  "suppressed_warning_total": 4084,
+  "LTE_control_failure_observed": true,
+  "accuracy_pass": false,
+  "accuracy_pass_note": "This log-only audit never grants waveform accuracy qualification."
+}

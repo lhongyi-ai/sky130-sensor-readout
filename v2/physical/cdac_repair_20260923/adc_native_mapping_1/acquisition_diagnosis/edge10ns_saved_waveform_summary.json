@@ -1,0 +1,348 @@
+{
+  "status": "DIAGNOSIS_ONLY_AUTOMATIC_LTE_RELAXATION_PRESENT",
+  "raw_sha256": "be129fe2dca3f922c889a7bcc0029c33e76765e583690164c7074a5a34ac6182",
+  "raw_bytes": 251078345,
+  "sample_count": 12532,
+  "end_time_s": 8e-06,
+  "actual_solver_header": {
+    "reltol": 1e-06,
+    "abstol(V)": 1e-08,
+    "abstol(I)": 1e-13,
+    "maxstep": 2e-09,
+    "gmin": 1e-12,
+    "cmin": 0.0
+  },
+  "half_supply_crossings": {
+    "SAMPLE_CMD": [
+      {
+        "time_s": 4.063e-06,
+        "direction": "rising"
+      }
+    ],
+    "CONV": [
+      {
+        "time_s": 4.0632197190050055e-06,
+        "direction": "falling"
+      }
+    ],
+    "ACQ": [
+      {
+        "time_s": 4.075152268887512e-06,
+        "direction": "rising"
+      }
+    ],
+    "TOP": [
+      {
+        "time_s": 4.085902456546828e-06,
+        "direction": "rising"
+      }
+    ],
+    "TOPB": [
+      {
+        "time_s": 4.0859197860068336e-06,
+        "direction": "falling"
+      }
+    ],
+    "XPHASE.XPHASE_ACQ_DELAY": [
+      {
+        "time_s": 4.0857159451733125e-06,
+        "direction": "rising"
+      }
+    ]
+  },
+  "transition_window_s": [
+    4.05e-06,
+    4.15e-06
+  ],
+  "transition_ranges": {
+    "ACQ": {
+      "min": -0.01451454278283246,
+      "max": 1.79991267054737
+    },
+    "CONV": {
+      "min": 1.730027255984824e-05,
+      "max": 1.82183551907888
+    },
+    "INN": {
+      "min": 1.006217428411436,
+      "max": 1.197559035809246
+    },
+    "INP": {
+      "min": 0.6991237107734383,
+      "max": 0.8217708802489391
+    },
+    "Q": {
+      "min": 5.212476120729292e-07,
+      "max": 0.8195371343494037
+    },
+    "QB": {
+      "min": 0.8195367827583012,
+      "max": 1.799998567390385
+    },
+    "RN": {
+      "min": 0.6999962823297459,
+      "max": 0.7000039404495744
+    },
+    "RP": {
+      "min": 1.099999281783279,
+      "max": 1.100016683077055
+    },
+    "SAMPLE_CMD": {
+      "min": 0.0,
+      "max": 1.8
+    },
+    "TOP": {
+      "min": -0.01998035850886096,
+      "max": 1.800000467159564
+    },
+    "TOPB": {
+      "min": 1.260442170426057e-07,
+      "max": 1.914628348748463
+    },
+    "VDD": {
+      "min": 1.8,
+      "max": 1.8
+    },
+    "XADC.XADC_BN0": {
+      "min": 1.004272875604407,
+      "max": 1.184693366246327
+    },
+    "XADC.XADC_BN11": {
+      "min": 1.001320273178372,
+      "max": 1.173160427303734
+    },
+    "XADC.XADC_BP0": {
+      "min": 0.6111588777669371,
+      "max": 0.7279409150731276
+    },
+    "XADC.XADC_BP11": {
+      "min": 0.6171793365254024,
+      "max": 0.7363811407541244
+    },
+    "XADC.XADC_DN": {
+      "min": 1.004272770714588,
+      "max": 1.18469311620867
+    },
+    "XADC.XADC_DP": {
+      "min": 0.6111588777669348,
+      "max": 0.7279409150731351
+    },
+    "XADC.XADC_TN": {
+      "min": 0.8005740023352691,
+      "max": 0.9723703558664315
+    },
+    "XADC.XADC_TP": {
+      "min": 0.8164083850558854,
+      "max": 0.9355682632915512
+    },
+    "XADC.XADC_XDP_ACQB": {
+      "min": -0.0006655138664586336,
+      "max": 1.878436045362274
+    },
+    "XADC.XADC_XDP_NL": {
+      "min": -0.0001025667478985129,
+      "max": 1.922613618498931
+    },
+    "XADC.XADC_XDP_NLB": {
+      "min": -0.03103714685226099,
+      "max": 1.800065785881453
+    },
+    "XADC.XADC_XDP_PH": {
+      "min": -0.0003626913034788431,
+      "max": 0.0004451898227186718
+    },
+    "XADC.XADC_XDP_PHB": {
+      "min": 1.767815534355231,
+      "max": 1.800207427737359
+    },
+    "XADC.XADC_XN11_ACQB": {
+      "min": -0.002386311815278217,
+      "max": 1.837944973011505
+    },
+    "XADC.XADC_XN11_NL": {
+      "min": -0.003943151519946586,
+      "max": 1.830968567846727
+    },
+    "XADC.XADC_XN11_NLB": {
+      "min": -0.01587029865702692,
+      "max": 1.800499948073024
+    },
+    "XADC.XADC_XN11_PH": {
+      "min": -0.003935583078402229,
+      "max": 0.002575408440493919
+    },
+    "XADC.XADC_XN11_PHB": {
+      "min": 1.77429618176526,
+      "max": 1.800300815010963
+    },
+    "XADC.XADC_XN4_ACQB": {
+      "min": -0.01102773661093012,
+      "max": 1.864646945113213
+    },
+    "XADC.XADC_XN4_NL": {
+      "min": -0.0009994638349495762,
+      "max": 1.883134765415745
+    },
+    "XADC.XADC_XN4_NLB": {
+      "min": -0.026365799411446,
+      "max": 1.800151317703536
+    },
+    "XADC.XADC_XN4_PH": {
+      "min": -0.0009976199780941384,
+      "max": 0.001090793211397353
+    },
+    "XADC.XADC_XN4_PHB": {
+      "min": 1.769185156685337,
+      "max": 1.800198246468778
+    },
+    "XADC.XADC_XP1_ACQB": {
+      "min": -0.0009558367249220148,
+      "max": 1.876322015484058
+    },
+    "XADC.XADC_XP1_NL": {
+      "min": -0.000151198286356866,
+      "max": 1.916439364292724
+    },
+    "XADC.XADC_XP1_NLB": {
+      "min": -0.03057716562717453,
+      "max": 1.800091569803004
+    },
+    "XADC.XADC_XP1_PH": {
+      "min": -0.0003556551417964344,
+      "max": 0.0004337171622123746
+    },
+    "XADC.XADC_XP1_PHB": {
+      "min": 1.76799399272974,
+      "max": 1.800206189852179
+    },
+    "XPHASE.XPHASE_ACQ_DELAY": {
+      "min": -0.00230763367804629,
+      "max": 1.800000001203317
+    },
+    "XPHASE.XPHASE_ACQ_RAW": {
+      "min": -0.003631719692222591,
+      "max": 1.800022305045575
+    },
+    "XPHASE.XPHASE_CMD_B": {
+      "min": 0.000153911470044976,
+      "max": 1.80060085095342
+    },
+    "XPHASE.XPHASE_CMD_B_DELAY": {
+      "min": -7.339816108647801e-07,
+      "max": 1.802387162521199
+    },
+    "XPHASE.XPHASE_CONV_DELAY": {
+      "min": -2.216395841602724e-06,
+      "max": 1.802431629969745
+    },
+    "XPHASE.XPHASE_CONV_RAW": {
+      "min": 5.715576091698226e-10,
+      "max": 1.800692503427246
+    },
+    "XPHASE.XPHASE_TOP_RAW_B": {
+      "min": 2.048267517891576e-07,
+      "max": 1.829102913542725
+    }
+  },
+  "initial_values": {
+    "time": 0.0,
+    "VDD": 1.8,
+    "RP": 1.099999999952622,
+    "RN": 0.7000000000463391,
+    "INP": 0.7005000017888711,
+    "INN": 1.099499998167071,
+    "SAMPLE_CMD": 0.0,
+    "Q": 0.8195369585706064,
+    "QB": 0.8195369585706064,
+    "TOP": 1.242987632396552e-07,
+    "TOPB": 1.799999999503694,
+    "ACQ": 1.24298763230602e-07,
+    "CONV": 1.799999999503694,
+    "XADC.XADC_DN": 1.099999989945682,
+    "XADC.XADC_XDP_NL": 1.79999999423804,
+    "XADC.XADC_DP": 0.7000000036652076,
+    "XADC.XADC_XDP_PH": 2.160154013577671e-07,
+    "XADC.XADC_XN11_NL": 1.79999999423804,
+    "XADC.XADC_BN11": 1.099999999407141,
+    "XADC.XADC_XN11_PH": 2.160154013577671e-07,
+    "XADC.XADC_BP11": 0.7000000002369015,
+    "XADC.XADC_XN4_NL": 1.79999999423804,
+    "XADC.XADC_XN4_PH": 2.160154013577671e-07,
+    "XADC.XADC_XP1_NL": 1.79999999423804,
+    "XADC.XADC_XP1_PH": 2.160154013577671e-07,
+    "XADC.XADC_BN0": 1.099999989945682,
+    "XADC.XADC_BP0": 0.7000000036652076,
+    "XADC.XADC_TN": 0.8992178283810607,
+    "XADC.XADC_TP": 0.8992178283810607,
+    "XADC.XADC_XDP_NLB": 4.114837281455239e-07,
+    "XADC.XADC_XDP_PHB": 1.799999990238435,
+    "XADC.XADC_XDP_ACQB": 1.799999994238044,
+    "XADC.XADC_XN11_NLB": 4.114837281614394e-07,
+    "XADC.XADC_XN11_PHB": 1.799999990238435,
+    "XADC.XADC_XN11_ACQB": 1.799999994238044,
+    "XADC.XADC_XN4_NLB": 4.114837281614394e-07,
+    "XADC.XADC_XN4_PHB": 1.799999990238435,
+    "XADC.XADC_XN4_ACQB": 1.799999994238044,
+    "XADC.XADC_XP1_NLB": 4.114837281577888e-07,
+    "XADC.XADC_XP1_PHB": 1.799999990238435,
+    "XADC.XADC_XP1_ACQB": 1.799999994238044,
+    "XPHASE.XPHASE_TOP_RAW_B": 1.799999997535763,
+    "XPHASE.XPHASE_ACQ_DELAY": 1.450163789543593e-07,
+    "XPHASE.XPHASE_CONV_RAW": 1.799999988102196,
+    "XPHASE.XPHASE_ACQ_RAW": 1.125380066431818e-09,
+    "XPHASE.XPHASE_CONV_DELAY": 1.799999997025547,
+    "XPHASE.XPHASE_CMD_B_DELAY": 1.799999997025547,
+    "XPHASE.XPHASE_CMD_B": 1.79999999702555
+  },
+  "final_values": {
+    "time": 8e-06,
+    "VDD": 1.8,
+    "RP": 1.099999999979073,
+    "RN": 0.7000000000206742,
+    "INP": 0.7005000107685224,
+    "INN": 1.09949998896258,
+    "SAMPLE_CMD": 1.8,
+    "Q": 4.135307440829258e-07,
+    "QB": 1.799999965163573,
+    "TOP": 1.799999999503694,
+    "TOPB": 1.242987566740488e-07,
+    "ACQ": 1.799999999503694,
+    "CONV": 1.237685269876922e-07,
+    "XADC.XADC_DN": 1.099499978995686,
+    "XADC.XADC_XDP_NL": 2.160153863327305e-07,
+    "XADC.XADC_DP": 0.7005000143833948,
+    "XADC.XADC_XDP_PH": 2.160153686050956e-07,
+    "XADC.XADC_XN11_NL": 2.16015386335517e-07,
+    "XADC.XADC_BN11": 1.099499988418784,
+    "XADC.XADC_XN11_PH": 2.160153686050401e-07,
+    "XADC.XADC_BP11": 0.700500010958673,
+    "XADC.XADC_XN4_NL": 2.160153863473476e-07,
+    "XADC.XADC_XN4_PH": 2.160153685272634e-07,
+    "XADC.XADC_XP1_NL": 2.160153863482788e-07,
+    "XADC.XADC_XP1_PH": 2.160153685708004e-07,
+    "XADC.XADC_BN0": 1.099499978995686,
+    "XADC.XADC_BP0": 0.7005000143833948,
+    "XADC.XADC_TN": 0.8999999999966022,
+    "XADC.XADC_TP": 0.8999999999966009,
+    "XADC.XADC_XDP_NLB": 1.799999993851579,
+    "XADC.XADC_XDP_PHB": 1.79999999811882,
+    "XADC.XADC_XDP_ACQB": 2.160153627635627e-07,
+    "XADC.XADC_XN11_NLB": 1.799999993851579,
+    "XADC.XADC_XN11_PHB": 1.79999999811882,
+    "XADC.XADC_XN11_ACQB": 2.160153628557945e-07,
+    "XADC.XADC_XN4_NLB": 1.799999993851579,
+    "XADC.XADC_XN4_PHB": 1.79999999811882,
+    "XADC.XADC_XN4_ACQB": 2.160153627604878e-07,
+    "XADC.XADC_XP1_NLB": 1.799999993851579,
+    "XADC.XADC_XP1_PHB": 1.79999999811882,
+    "XADC.XADC_XP1_ACQB": 2.160153627397393e-07,
+    "XPHASE.XPHASE_TOP_RAW_B": 2.04826749475489e-07,
+    "XPHASE.XPHASE_ACQ_DELAY": 1.800000000446082,
+    "XPHASE.XPHASE_CONV_RAW": 5.829566170646009e-10,
+    "XPHASE.XPHASE_ACQ_RAW": 1.799999988102193,
+    "XPHASE.XPHASE_CONV_DELAY": 1.450163789811859e-07,
+    "XPHASE.XPHASE_CMD_B_DELAY": 1.45016378934754e-07,
+    "XPHASE.XPHASE_CMD_B": 1.450163614740828e-07
+  },
+  "limitation": "Half-supply crossing is a logic timing measure, not proof of analog TG nonoverlap or device-off current. Waveforms were produced with LTE relaxations and cannot establish ADC precision."
+}

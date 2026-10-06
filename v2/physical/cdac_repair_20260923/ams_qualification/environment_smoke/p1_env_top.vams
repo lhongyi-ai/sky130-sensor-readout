@@ -1,0 +1,37 @@
+`timescale 1ns/1ps
+`include "disciplines.vams"
+// Non-ADC environment test: two real Spectre RC subcircuits, a digital
+// inverter and explicit electrical/logic adapters. No process model is used.
+module p1_env_top;
+  electrical vdd,vss,source_e,sample_e,inverter_e,return_e;
+  reg command=0;
+  wire sampled, sample_valid, inverted, returned, return_valid;
+  assign inverted=~sampled;
+  analog begin
+    V(vss) <+ 0;
+    V(vdd,vss) <+ 1.8;
+  end
+  p1_l2e source_drive(command,source_e,vdd,vss);
+  p1_env_rc rc_input(.A(source_e),.B(sample_e),.VSS(vss));
+  p1_e2l source_read(sample_e,vdd,vss,sampled,sample_valid);
+  p1_l2e inverter_drive(inverted,inverter_e,vdd,vss);
+  p1_env_rc rc_output(.A(inverter_e),.B(return_e),.VSS(vss));
+  p1_e2l return_read(return_e,vdd,vss,returned,return_valid);
+  integer k;
+  initial begin
+    for(k=0;k<8;k=k+1) begin
+      #20;
+      if(sample_valid!==1'b1 || return_valid!==1'b1 ||
+         sampled!==command || returned!==(~command)) begin
+        $display("P1_AMS_ENV_FAIL time_ns=%0.3f command=%b sampled=%b returned=%b valid=%b%b",
+                 $realtime,command,sampled,returned,sample_valid,return_valid);
+        $finish;
+      end
+      $display("P1_AMS_ENV_POINT time_ns=%0.3f command=%b sampled=%b returned=%b valid=%b%b",
+               $realtime,command,sampled,returned,sample_valid,return_valid);
+      command=~command;
+    end
+    $display("P1_AMS_ENV_PASS checks=8 scope=RC_INTERFACE_ONLY_NOT_ADC");
+    $finish;
+  end
+endmodule

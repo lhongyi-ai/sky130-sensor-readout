@@ -1,0 +1,45 @@
+// Project-owned geometric device recognition. NOT lvs_black_box.
+// Supply layout/schematic path+primary and report/result locations in wrapper.
+include "mim_layers.pvl";
+
+text_layer P1_M3_TEXT P1_M4_TEXT P1_M5_TEXT;
+attach P1_M3_TEXT P1_M3;
+attach P1_M4_TEXT P1_M4;
+attach P1_M5_TEXT P1_M5;
+// Net labels alone do not create GDS top-level terminals in PVS.
+// Exact form from port Example 4; primary is the documented default.
+// Combined -depth/-text_layer syntax failed on installed 21.10-p044.
+port -text_layer P1_M3_TEXT P1_M4_TEXT P1_M5_TEXT;
+
+// At CAPM, via3 joins the MIM top electrode to M4, not M3 to M4.
+// Ordinary via3 outside CAPM still joins M3 and M4 and can expose a short.
+and P1_VIA3 P1_CAPM P1_MIM_VIA3;
+not P1_VIA3 P1_CAPM P1_ROUTING_VIA3;
+connect P1_CAPM P1_M4 -by P1_MIM_VIA3;
+connect P1_M3 P1_M4 -by P1_ROUTING_VIA3;
+connect P1_M4 P1_M5 -by P1_VIA4;
+
+// The CAPM mask is the recognition geometry. P1_CAPM and P1_M3 are
+// distinct electrical pin layers; no swap list is declared.
+// Rectangular w/l are canonicalized to shorter/longer dimensions.
+// area/perimeter return SI units in PVS device-property expressions.
+device p1_mim_public_r1 P1_CAPM P1_CAPM(PLUS) P1_M3(MINUS) [
+    property w, l
+    half_perimeter = perimeter(P1_CAPM) / 2
+    delta = half_perimeter * half_perimeter - 4 * area(P1_CAPM)
+    if (delta < 0) delta = 0
+    w = (half_perimeter - sqrt(delta)) / 2
+    l = (half_perimeter + sqrt(delta)) / 2
+];
+lvs_check_property p1_mim_public_r1 w w -tolerance 0.000001;
+lvs_check_property p1_mim_public_r1 l l -tolerance 0.000001;
+lvs_spice no -cull_primitive_subcircuits;
+lvs_spice no -scale_x_parameters;
+lvs_spice yes -allow_inline_parameters;
+lvs_all_cap_pins_swappable no;
+lvs_auto_pin_swap no;
+lvs_swap_non_cpoint_pins no;
+lvs_builtin_device_pin_swap no;
+lvs_compare_port_names yes;
+lvs_filter no -capacitors;
+lvs_report_opt S;

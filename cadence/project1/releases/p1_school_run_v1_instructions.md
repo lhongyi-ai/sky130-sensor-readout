@@ -9,7 +9,7 @@ In the latest report, both MIM and RC reported `exec: virtuoso: not found` when 
 Upload `p1_school_run_v1.sh` to this path on school Linux:
 
 ```text
-/home/compute/l.hongyi/cadence_skywater/p1_school_run_v1.sh
+/home/cadence-user/cadence_skywater/p1_school_run_v1.sh
 ```
 
 This is a single file; no extraction, chmod, or CIW load is needed. Continue using the original `basic_design_v1_0_4` and installed 1.0.4p1 patch.

@@ -1,0 +1,41 @@
+// Model-isolation diagnostic. No SAR conversion or full ADC qualification.
+simulator lang=spectre
+global 0
+include "/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice" section=tt
+include "native_closed.scs"
+VVDD (VDD 0) vsource dc=1.8
+VVCM (VCM 0) vsource dc=0.9
+VRP (RPSRC 0) vsource dc=1.1
+VRN (RNSRC 0) vsource dc=0.7
+RRP (RPSRC RP) resistor r=1
+RRN (RNSRC RN) resistor r=1
+CRP (RP 0) capacitor c=10n
+CRN (RN 0) capacitor c=10n
+VIP (IPSRC 0) vsource dc=0.7005
+VIN (INSRC 0) vsource dc=1.0995
+RIP (IPSRC INP) resistor r=350
+RIN (INSRC INN) resistor r=350
+// Changed command shape only: same endpoints, requested smooth halfsine; must verify actual waveform.
+VCMD (SAMPLE_CMD 0) vsource type=pwl dc=0 edgetype=halfsine transitionreference=100 wave=[0 0 4.0625u 0 4.0635u 1.8 4.1u 1.8]
+VB11 (B11 0) vsource dc=0
+VB10 (B10 0) vsource dc=0
+VB9 (B9 0) vsource dc=0
+VB8 (B8 0) vsource dc=0
+VB7 (B7 0) vsource dc=0
+VB6 (B6 0) vsource dc=0
+VB5 (B5 0) vsource dc=0
+VB4 (B4 0) vsource dc=0
+VB3 (B3 0) vsource dc=0
+VB2 (B2 0) vsource dc=0
+VB1 (B1 0) vsource dc=0
+VB0 (B0 0) vsource dc=0
+XLOAD (INP INN TOP TOPB ACQ CONV B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0 RP RN VCM VDD 0) sensor_sampling_load
+XPHASE (SAMPLE_CMD TOP TOPB ACQ CONV VDD 0) sensor_phases
+saveOptions options save=selected
+save VDD VCM RPSRC RNSRC RP RN IPSRC INSRC INP INN SAMPLE_CMD TOP TOPB ACQ CONV B0 B1 B2 B3 B4 B5 B6 B7 B8 B9 B10 B11
+save XLOAD.XADC_TP XLOAD.XADC_TN XPHASE.XPHASE_XBCONV_B XPHASE.XPHASE_CMD_B_DELAY XPHASE.XPHASE_ACQ_DELAY XPHASE.XPHASE_CONV_DELAY XPHASE.XPHASE_ACQ_RAW XPHASE.XPHASE_CONV_RAW XPHASE.XPHASE_TOP_RAW_B
+save XPHASE.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b XPHASE.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:dbnode XPHASE.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:sbnode sigtype=node
+save XPHASE.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:vds XPHASE.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:reversed XPHASE.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:currents sigtype=dev
+save VVDD:currents VRP:currents VRN:currents VCMD:currents sigtype=dev
+simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-9 iabstol=1e-14 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+closed_phase tran stop=4.1u maxstep=1n errpreset=conservative relref=sigglobal method=gear2only lteratio=10

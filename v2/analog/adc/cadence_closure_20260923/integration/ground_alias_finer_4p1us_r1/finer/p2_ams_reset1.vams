@@ -1,0 +1,94 @@
+`timescale 1ns/1ps
+`include "disciplines.vams"
+`include "profile.vh"
+
+// Real reset1 ADC/native phase + unchanged SAR RTL; only boundary drivers are ideal.
+// Newly prepared harness; local syntax checks do not imply school AMS execution.
+module p2_ams_reset1;
+  electrical vdd,vss,ip_source,in_source,inp,inn,rp_source,rn_source,rp,rn,vcm;
+  ground vss;
+  electrical rst_n_e;
+  electrical q_e,qb_e,sample_cmd_e,top_e,topb_e,acq_e,conv_e,eval_e;
+  electrical [11:0] trial_e;
+  wire clk,rst_n,start,ready,busy,data_valid,sample_en,comparator_evaluate;
+  wire [1:0] gain_sel,data_gain,gain_latched;
+  wire [3:0] stimulus_sel;
+  wire reset_fb,reset_fb_valid;
+  wire [11:0] data,trial_code,trial_fb,trial_fb_valid;
+  wire cmp_q,cmp_qb,cmp_q_valid,cmp_qb_valid;
+  wire sample_fb,sample_fb_valid,eval_fb,eval_fb_valid;
+
+  real input_diff;
+  analog begin
+    input_diff=(`P2_FRAMES==2)?((stimulus_sel==0)?-0.399:0.399):
+      ((stimulus_sel==0)?-0.399:(stimulus_sel==1)?-0.32:(stimulus_sel==2)?-0.24:
+       (stimulus_sel==3)?-0.16:(stimulus_sel==4)?-0.08:(stimulus_sel==5)?-0.001:
+       (stimulus_sel==6)?0.001:(stimulus_sel==7)?0.08:(stimulus_sel==8)?0.16:
+       (stimulus_sel==9)?0.24:(stimulus_sel==10)?0.32:0.399);
+    V(vdd,vss) <+ 1.8;
+    V(vcm,vss) <+ 0.9;
+    V(rp_source,vss) <+ 1.1;
+    V(rn_source,vss) <+ 0.7;
+    V(ip_source,vss) <+ transition(0.9+input_diff/2.0,0,1n,1n);
+    V(in_source,vss) <+ transition(0.9-input_diff/2.0,0,1n,1n);
+    I(ip_source,inp) <+ V(ip_source,inp)/350.0;
+    I(in_source,inn) <+ V(in_source,inn)/350.0;
+  end
+
+  // Equation-equivalent external reference source impedance and decoupling.
+  p2_reference_fixture refp(.SRC(rp_source),.REF(rp),.VSS(vss));
+  p2_reference_fixture refn(.SRC(rn_source),.REF(rn),.VSS(vss));
+
+  sar_controller dut(.clk(clk),.rst_n(rst_n),.start(start),.gain_sel(gain_sel),
+    .comparator_bit(cmp_q),.ready(ready),.busy(busy),.data_valid(data_valid),
+    .data(data),.data_gain(data_gain),.gain_latched(gain_latched),
+    .sample_en(sample_en),.trial_code(trial_code),.comparator_evaluate(comparator_evaluate));
+  p1_e2l from_q(q_e,vdd,vss,cmp_q,cmp_q_valid);
+  p1_e2l from_qb(qb_e,vdd,vss,cmp_qb,cmp_qb_valid);
+  p1_l2e drive_reset(rst_n,rst_n_e,vdd,vss);
+  p1_e2l read_reset(rst_n_e,vdd,vss,reset_fb,reset_fb_valid);
+  p1_l2e drive_sample(sample_en,sample_cmd_e,vdd,vss);
+  p1_e2l read_sample(sample_cmd_e,vdd,vss,sample_fb,sample_fb_valid);
+  p1_l2e drive_eval(comparator_evaluate,eval_e,vdd,vss);
+  p1_e2l read_eval(eval_e,vdd,vss,eval_fb,eval_fb_valid);
+  p1_l2e drive_b0(trial_code[0],trial_e[0],vdd,vss);
+  p1_e2l read_b0(trial_e[0],vdd,vss,trial_fb[0],trial_fb_valid[0]);
+  p1_l2e drive_b1(trial_code[1],trial_e[1],vdd,vss);
+  p1_e2l read_b1(trial_e[1],vdd,vss,trial_fb[1],trial_fb_valid[1]);
+  p1_l2e drive_b2(trial_code[2],trial_e[2],vdd,vss);
+  p1_e2l read_b2(trial_e[2],vdd,vss,trial_fb[2],trial_fb_valid[2]);
+  p1_l2e drive_b3(trial_code[3],trial_e[3],vdd,vss);
+  p1_e2l read_b3(trial_e[3],vdd,vss,trial_fb[3],trial_fb_valid[3]);
+  p1_l2e drive_b4(trial_code[4],trial_e[4],vdd,vss);
+  p1_e2l read_b4(trial_e[4],vdd,vss,trial_fb[4],trial_fb_valid[4]);
+  p1_l2e drive_b5(trial_code[5],trial_e[5],vdd,vss);
+  p1_e2l read_b5(trial_e[5],vdd,vss,trial_fb[5],trial_fb_valid[5]);
+  p1_l2e drive_b6(trial_code[6],trial_e[6],vdd,vss);
+  p1_e2l read_b6(trial_e[6],vdd,vss,trial_fb[6],trial_fb_valid[6]);
+  p1_l2e drive_b7(trial_code[7],trial_e[7],vdd,vss);
+  p1_e2l read_b7(trial_e[7],vdd,vss,trial_fb[7],trial_fb_valid[7]);
+  p1_l2e drive_b8(trial_code[8],trial_e[8],vdd,vss);
+  p1_e2l read_b8(trial_e[8],vdd,vss,trial_fb[8],trial_fb_valid[8]);
+  p1_l2e drive_b9(trial_code[9],trial_e[9],vdd,vss);
+  p1_e2l read_b9(trial_e[9],vdd,vss,trial_fb[9],trial_fb_valid[9]);
+  p1_l2e drive_b10(trial_code[10],trial_e[10],vdd,vss);
+  p1_e2l read_b10(trial_e[10],vdd,vss,trial_fb[10],trial_fb_valid[10]);
+  p1_l2e drive_b11(trial_code[11],trial_e[11],vdd,vss);
+  p1_e2l read_b11(trial_e[11],vdd,vss,trial_fb[11],trial_fb_valid[11]);
+
+  sensor_phases phases(.SAMPLE_CMD(sample_cmd_e),.TOP(top_e),.TOPB(topb_e),
+    .ACQ(acq_e),.CONV(conv_e),.VDD(vdd),.VSS(vss));
+  sensor_adc_reset1 adc(.INP(inp),.INN(inn),.Q(q_e),.QB(qb_e),
+    .SAMPLE(top_e),.SAMPLEB(topb_e),.ACQ(acq_e),.CONV(conv_e),.EVAL(eval_e),
+    .B11(trial_e[11]),.B10(trial_e[10]),.B9(trial_e[9]),.B8(trial_e[8]),.B7(trial_e[7]),.B6(trial_e[6]),.B5(trial_e[5]),.B4(trial_e[4]),.B3(trial_e[3]),.B2(trial_e[2]),.B1(trial_e[1]),.B0(trial_e[0]),
+    .RP(rp),.RN(rn),.VCM(vcm),.VDD(vdd),.VSS(vss),.RST_N(rst_n_e));
+
+  p2_sequence seq(.clk(clk),.rst_n(rst_n),.start(start),.gain_sel(gain_sel),
+    .stimulus_sel(stimulus_sel),.ready(ready),.busy(busy),.data_valid(data_valid),
+    .sample_en(sample_en),.comparator_evaluate(comparator_evaluate),
+    .data(data),.trial_code(trial_code),.data_gain(data_gain),.gain_latched(gain_latched),
+    .cmp_q(cmp_q),.cmp_qb(cmp_qb),.cmp_q_valid(cmp_q_valid),.cmp_qb_valid(cmp_qb_valid),
+    .trial_fb(trial_fb),.trial_fb_valid(trial_fb_valid),.sample_fb(sample_fb),
+    .sample_fb_valid(sample_fb_valid),.eval_fb(eval_fb),.eval_fb_valid(eval_fb_valid),
+    .reset_fb(reset_fb),.reset_fb_valid(reset_fb_valid));
+endmodule

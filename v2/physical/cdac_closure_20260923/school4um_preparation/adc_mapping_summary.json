@@ -1,0 +1,35 @@
+{
+  "status": "NATIVE_SOURCE_AND_CDF_AUDIT_MATCH",
+  "ADC_primitive_count": 693,
+  "ADC_MIM_instances": 30,
+  "CDAC_MIM_instances": 26,
+  "CDAC_units_per_side": 4096,
+  "CDAC_units_total": 8192,
+  "other_ADC_MIM_instances": 4,
+  "other_ADC_MIM_units": 40,
+  "phase_block_excluded": {
+    "primitive_count": 48,
+    "MIM_count": 3,
+    "dimensions_um": [
+      22.215,
+      22.215
+    ],
+    "reason": "Separate phase generator, outside 693 ADC and CDAC scope"
+  },
+  "m_semantics": "Each CDAC bank is m parallel 4x4 model units; do not replace by one rectangle or interpret m as via count",
+  "actual_school_1kHz_AC_unit_F": 3.4622248010324884e-14,
+  "actual_school_1kHz_AC_bank_F": 1.418127838728307e-10,
+  "actual_bank_over_unit": 4096.001618108101,
+  "unit_bank_probe_limit": "One school model AC test; not layout RC/stats validation, not a guarantee at all frequencies/corners",
+  "critical_orientation": {
+    "native_ADC_COMMON": "PLUS=top M4",
+    "native_ADC_BIT": "MINUS=bottom M3",
+    "old_3um_route_COMMON": "C2=bottom M3",
+    "old_3um_route_BIT": "C1=top M4",
+    "direct_scaled_reuse_allowed": false
+  },
+  "school_ADC_model": "cap_mim_m3_1",
+  "project_unit_model": "p1_mim_public_r1",
+  "interchangeability_qualified": false,
+  "formal_ADC_PEX_allowed": false
+}

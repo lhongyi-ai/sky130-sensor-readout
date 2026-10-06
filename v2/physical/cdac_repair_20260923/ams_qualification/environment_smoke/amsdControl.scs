@@ -1,0 +1,13 @@
+simulator lang=spectre
+// Standalone environment qualification only; no PDK, ADC or ideal comparator.
+subckt p1_env_rc (A B VSS)
+R0 (A B) resistor r=1k
+C0 (B VSS) capacitor c=1p
+ends p1_env_rc
+simulatorOptions options temp=27 reltol=1e-5 vabstol=1e-8 iabstol=1e-14
+saveOptions options save=allpub
+env_tran tran stop=200n maxstep=100p errpreset=conservative
+amsd {
+  portmap subckt=p1_env_rc
+  config cell=p1_env_rc use=spice
+}

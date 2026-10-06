@@ -1,0 +1,47 @@
+{
+  "scope": "SYNTHETIC DIGITAL SCOREBOARD UNIT TEST, NOT ADC EVIDENCE",
+  "checks": [
+    {
+      "frames": 2,
+      "mutation": "none",
+      "test_expectation_pass": true,
+      "test_exit": 0,
+      "output": "P2_FRAME time_ns=14067.500 data=2730 data_gain=0 new_gain=2\nP2_FRAME time_ns=24067.500 data=2730 data_gain=2 new_gain=2\nP2_HANDSHAKE_PASS frames=2 accepted=3 aborted=1 checks=670 ignored_busy=30 reserved=1\n/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/integration/p2_sequence.sv:154: $finish called at 30947500 (1ps)"
+    },
+    {
+      "frames": 2,
+      "mutation": "BAD_GAIN",
+      "test_expectation_pass": true,
+      "test_exit": 1,
+      "output": "FATAL: /path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/integration/p2_sequence.sv:39: P2_FAIL cycle=0 time=318000                                                                                                                                                                                                                                      reset clears completed data\n       Time: 317500  Scope: scoreboard_fixture.seq.check"
+    },
+    {
+      "frames": 2,
+      "mutation": "BAD_RAIL",
+      "test_expectation_pass": true,
+      "test_exit": 1,
+      "output": "FATAL: /path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/integration/p2_sequence.sv:39: P2_FAIL cycle=9 time=7188000                                                                                                                                                                                                                              real comparator rails valid at read\n       Time: 7187500  Scope: scoreboard_fixture.seq.check"
+    },
+    {
+      "frames": 12,
+      "mutation": "none",
+      "test_expectation_pass": true,
+      "test_exit": 0,
+      "output": "30 data_gain=0 new_gain=1\nP2_FRAME time_ns=84067.500 data=2730 data_gain=1 new_gain=2\nP2_FRAME time_ns=94067.500 data=2730 data_gain=2 new_gain=0\nP2_FRAME time_ns=104067.500 data=2730 data_gain=0 new_gain=1\nP2_FRAME time_ns=114067.500 data=2730 data_gain=1 new_gain=2\nP2_FRAME time_ns=124067.500 data=2730 data_gain=2 new_gain=2\nP2_HANDSHAKE_PASS frames=12 accepted=13 aborted=1 checks=3090 ignored_busy=180 reserved=1\n/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/integration/p2_sequence.sv:154: $finish called at 130947500 (1ps)"
+    },
+    {
+      "frames": 12,
+      "mutation": "BAD_GAIN",
+      "test_expectation_pass": true,
+      "test_exit": 1,
+      "output": "FATAL: /path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/integration/p2_sequence.sv:39: P2_FAIL cycle=0 time=318000                                                                                                                                                                                                                                      reset clears completed data\n       Time: 317500  Scope: scoreboard_fixture.seq.check"
+    },
+    {
+      "frames": 12,
+      "mutation": "BAD_RAIL",
+      "test_expectation_pass": true,
+      "test_exit": 1,
+      "output": "FATAL: /path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/integration/p2_sequence.sv:39: P2_FAIL cycle=9 time=7188000                                                                                                                                                                                                                              real comparator rails valid at read\n       Time: 7187500  Scope: scoreboard_fixture.seq.check"
+    }
+  ]
+}

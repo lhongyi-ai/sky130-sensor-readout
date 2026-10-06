@@ -107,7 +107,7 @@ The next plot separates each bit's error relative to ideal binary weighting. The
 Run:
 
 ```bash
-cd /Users/stanley/Documents/ChatGPT/Analog\ Circuit\ Project/sky130-two-stage-ota
+cd /home/project-user/Documents/ChatGPT/Analog\ Circuit\ Project/sky130-two-stage-ota
 python3 v2/analog/adc/cdac_pex_linearity_20260911/analyze.py
 python3 -m unittest v2/analog/adc/cdac_pex_linearity_20260911/test_cdac_pex_linearity.py -v
 ```

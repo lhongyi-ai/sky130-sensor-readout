@@ -1,0 +1,1 @@
+Initial checker inspected all defaultdict keys; the reused parser inserts zero-valued entries for parasitic-only pairs during matrix assembly. Corrected to inspect nonzero intrinsic edges. No source/extraction changes.

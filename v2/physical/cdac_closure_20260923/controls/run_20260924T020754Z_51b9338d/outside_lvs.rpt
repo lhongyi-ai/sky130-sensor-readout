@@ -1,0 +1,41 @@
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+
+Cell p1cdac3_m5_outside_flat (0) disconnected node: AGG
+Cell p1cdac3_m5_outside_flat (1) disconnected node: AGG
+Class p1cdac3_m5_outside_flat (0):  Merged 127 parallel devices.
+Class p1cdac3_m5_outside_flat (1):  Merged 127 parallel devices.
+Cell p1cdac3_m5_outside_flat (0) disconnected node: AGG
+Cell p1cdac3_m5_outside_flat (1) disconnected node: AGG
+Subcircuit summary:
+Circuit 1: p1cdac3_m5_outside_flat         |Circuit 2: p1cdac3_m5_outside_flat         
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (128->1)        |sky130_fd_pr__cap_mim_m3_1 (128->1)        
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 2                          |Number of nets: 2                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: p1cdac3_m5_outside_flat         |Circuit 2: p1cdac3_m5_outside_flat         
+-------------------------------------------|-------------------------------------------
+BIT                                        |BIT                                        
+TOP                                        |TOP                                        
+AGG                                        |AGG                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes p1cdac3_m5_outside_flat and p1cdac3_m5_outside_flat are equivalent.
+
+Final result: Circuits match uniquely.
+.

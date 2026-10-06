@@ -1,0 +1,23 @@
+// Project-owned experiment. Public SKY130 M3/CAPM/via3/M4 geometry.
+// This is NOT an official or foundry-qualified signoff deck.
+// Explicit datatype mapping avoids silently treating label/pin layers as metal.
+layer_map 70 -datatype 20 107020;
+layer_map 70 -datatype 44 107044;
+layer_map 71 -datatype 20 107120;
+layer_map 89 -datatype 44 108944;
+layer_map 70 -texttype 5 107005;
+layer_map 71 -texttype 5 107105;
+layer_def P1_M3 107020;
+layer_def P1_VIA3 107044;
+layer_def P1_M4 107120;
+layer_def P1_CAPM 108944;
+layer_def P1_M3_TEXT 107005;
+layer_def P1_M4_TEXT 107105;
+
+// Local control extension, mapped against school metadata; not signoff.
+layer_map 71 -datatype 44 107144;
+layer_map 72 -datatype 20 107220;
+layer_map 72 -texttype 5 107205;
+layer_def P1_VIA4 107144;
+layer_def P1_M5 107220;
+layer_def P1_M5_TEXT 107205;

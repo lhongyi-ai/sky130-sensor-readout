@@ -1,0 +1,3409 @@
+{
+  "status": "REAL_R4_STATIC_NOISE_DIAGNOSTIC_NOT_DYNAMIC_SNDR_OR_M2_PASS",
+  "noise_analysis": {
+    "g1_front": {
+      "output": "FP-FN",
+      "state": "DC-fixed acquisition ON proxy",
+      "sample_count": 401,
+      "output_units": "V/sqrt(Hz)",
+      "struct_contribution_units": "V^2/Hz",
+      "max_device_member_sum_error": 1.0451805517669444e-15,
+      "max_total_contribution_vs_out_squared_relative_error": 1.278564752046161e-15,
+      "bands": {
+        "1Hz_50kHz": {
+          "low_hz": 1.0,
+          "high_hz": 50000.0,
+          "output_variance_v2": 8.327787496573238e-10,
+          "output_rms_v": 2.885790618976581e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.5490412259695513e-10,
+              "percent_total_variance": 42.616856246991524,
+              "individual_output_rms_v": 1.8838899187504432e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.549041225969532e-10,
+              "percent_total_variance": 42.6168562469913,
+              "individual_output_rms_v": 1.883889918750438e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 4.153179147170807e-11,
+              "percent_total_variance": 4.987133916277018,
+              "individual_output_rms_v": 6.444516387729034e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 4.153179147169295e-11,
+              "percent_total_variance": 4.987133916275202,
+              "individual_output_rms_v": 6.444516387727861e-06
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.638084829526259e-12,
+              "percent_total_variance": 1.0372604768170062,
+              "individual_output_rms_v": 2.9390618961713376e-06
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.638084829526044e-12,
+              "percent_total_variance": 1.0372604768169802,
+              "individual_output_rms_v": 2.939061896171301e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.363723094815773e-12,
+              "percent_total_variance": 1.0043151435188904,
+              "individual_output_rms_v": 2.8920102169279714e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.363723094815442e-12,
+              "percent_total_variance": 1.0043151435188507,
+              "individual_output_rms_v": 2.8920102169279142e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.604792246793337e-13,
+              "percent_total_variance": 0.0793102879907912,
+              "individual_output_rms_v": 8.126987293452191e-07
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.60479224679333e-13,
+              "percent_total_variance": 0.07931028799079114,
+              "individual_output_rms_v": 8.126987293452187e-07
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 5.293704324887167e-13,
+              "percent_total_variance": 0.06356675560063761,
+              "individual_output_rms_v": 7.275784717050916e-07
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 5.293704324886958e-13,
+              "percent_total_variance": 0.0635667556006351,
+              "individual_output_rms_v": 7.275784717050772e-07
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rend",
+              "output_variance_v2": 5.289101531989956e-13,
+              "percent_total_variance": 0.06351148530346558,
+              "individual_output_rms_v": 7.272620938829382e-07
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rend",
+              "output_variance_v2": 5.289101531989826e-13,
+              "percent_total_variance": 0.06351148530346401,
+              "individual_output_rms_v": 7.272620938829293e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.0129747599961e-13,
+              "percent_total_variance": 0.060195757421270236,
+              "individual_output_rms_v": 7.080236408479663e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012974759996095e-13,
+              "percent_total_variance": 0.060195757421270174,
+              "individual_output_rms_v": 7.080236408479659e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.6249394157114e-13,
+              "percent_total_variance": 0.043528241050855454,
+              "individual_output_rms_v": 6.020746976672745e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.6249394156569374e-13,
+              "percent_total_variance": 0.04352824105020147,
+              "individual_output_rms_v": 6.020746976627515e-07
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 2.8901732842938746e-13,
+              "percent_total_variance": 0.03470517572023948,
+              "individual_output_rms_v": 5.376033188414925e-07
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 2.8901732842937595e-13,
+              "percent_total_variance": 0.034705175720238096,
+              "individual_output_rms_v": 5.376033188414818e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 7.149181559165453e-16,
+            "rbps": 7.149181426190663e-16,
+            "rbpb": 2.859672710442582e-15,
+            "rbdb": 7.149185148885168e-16,
+            "rbsb": 7.149186161049724e-16,
+            "id": 1.827614837708719e-11,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 7.753974122972344e-10,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.852143159810567e-11,
+            "rn": 5.780380387567631e-13
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.584731013017846e-05,
+            "rbps": 8.584730853341833e-05,
+            "rbpb": 0.0003433892509408165,
+            "rbdb": 8.584735323550165e-05,
+            "rbsb": 8.584736538956486e-05,
+            "id": 2.1945983113290963,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 93.10965398868535,
+            "flicker_noise": 0.0,
+            "thermal_noise": 4.6256501638588485,
+            "rn": 0.06941075753849595
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 78.82560352411066,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 6.958903373288076e-10,
+            "pmos_load_pair_fn_variance_v2": 7.87580922266323e-11,
+            "other_variance_frozen_v2": 5.813032010188389e-11,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.624324239031541e-06,
+            "conditional_area16_input_area4_load_estimated_rms_v": 1.1014217595525906e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00014132861869711687,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "one_fft_bin_50kHz": {
+          "low_hz": 6.103515625,
+          "high_hz": 50000.0,
+          "output_variance_v2": 7.692529482100979e-10,
+          "output_rms_v": 2.7735409645615438e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.297571555870277e-10,
+              "percent_total_variance": 42.86719425051389,
+              "individual_output_rms_v": 1.8159216821962e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.2975715558702583e-10,
+              "percent_total_variance": 42.86719425051365,
+              "individual_output_rms_v": 1.815921682196195e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 3.494603839887163e-11,
+              "percent_total_variance": 4.542854009228599,
+              "individual_output_rms_v": 5.911517436231719e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 3.4946038398857754e-11,
+              "percent_total_variance": 4.5428540092267955,
+              "individual_output_rms_v": 5.911517436230545e-06
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.637201087334403e-12,
+              "percent_total_variance": 1.122803767919446,
+              "individual_output_rms_v": 2.938911548062378e-06
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.637201087334191e-12,
+              "percent_total_variance": 1.1228037679194185,
+              "individual_output_rms_v": 2.938911548062342e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.362867422582165e-12,
+              "percent_total_variance": 1.087141419742483,
+              "individual_output_rms_v": 2.8918622758669135e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.362867422581834e-12,
+              "percent_total_variance": 1.0871414197424398,
+              "individual_output_rms_v": 2.8918622758668563e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.604116527150345e-13,
+              "percent_total_variance": 0.08585103953799386,
+              "individual_output_rms_v": 8.126571557028428e-07
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.604116527150339e-13,
+              "percent_total_variance": 0.08585103953799378,
+              "individual_output_rms_v": 8.126571557028424e-07
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 5.293162738831247e-13,
+              "percent_total_variance": 0.06880913165360507,
+              "individual_output_rms_v": 7.275412523583282e-07
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 5.293162738831038e-13,
+              "percent_total_variance": 0.06880913165360236,
+              "individual_output_rms_v": 7.275412523583139e-07
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rend",
+              "output_variance_v2": 5.28856041642174e-13,
+              "percent_total_variance": 0.06874930318729609,
+              "individual_output_rms_v": 7.272248906921256e-07
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rend",
+              "output_variance_v2": 5.288560416421612e-13,
+              "percent_total_variance": 0.06874930318729443,
+              "individual_output_rms_v": 7.272248906921167e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012461895186945e-13,
+              "percent_total_variance": 0.06516012589681937,
+              "individual_output_rms_v": 7.079874218647493e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012461895186942e-13,
+              "percent_total_variance": 0.06516012589681934,
+              "individual_output_rms_v": 7.079874218647491e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.3644808956686914e-13,
+              "percent_total_variance": 0.043736990589339754,
+              "individual_output_rms_v": 5.800414550416798e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.3644808956158496e-13,
+              "percent_total_variance": 0.04373699058865283,
+              "individual_output_rms_v": 5.800414550371249e-07
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 2.8898775976718224e-13,
+              "percent_total_variance": 0.03756732560331431,
+              "individual_output_rms_v": 5.375758176919626e-07
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 2.889877597671708e-13,
+              "percent_total_variance": 0.037567325603312815,
+              "individual_output_rms_v": 5.37575817691952e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 7.148450148584443e-16,
+            "rbps": 7.148450015627484e-16,
+            "rbpb": 2.8593801462173208e-15,
+            "rbdb": 7.148453738339869e-16,
+            "rbsb": 7.148454750486597e-16,
+            "id": 1.8274278689086987e-11,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 7.118774812945617e-10,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.8517490564351545e-11,
+            "rn": 5.779789010863181e-13
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 9.292717259280574e-05,
+            "rbps": 9.292717086441512e-05,
+            "rbpb": 0.00037170870165275836,
+            "rbdb": 9.29272192582808e-05,
+            "rbsb": 9.292723241580889e-05,
+            "id": 2.375587735036659,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 92.5414043522306,
+            "flicker_noise": 0.0,
+            "thermal_noise": 5.007129404440277,
+            "rn": 0.07513509079570804
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 79.17020817608459,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 6.455978272135465e-10,
+            "pmos_load_pair_fn_variance_v2": 6.558702656440625e-11,
+            "other_variance_frozen_v2": 5.8068094432145116e-11,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.620242412951514e-06,
+            "conditional_area16_input_area4_load_estimated_rms_v": 1.0715162867361995e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.0001413516067712092,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "1Hz_100MHz": {
+          "low_hz": 1.0,
+          "high_hz": 100000000.0,
+          "output_variance_v2": 4.075200948774312e-09,
+          "output_rms_v": 6.383730060688901e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 8.143066905840973e-10,
+              "percent_total_variance": 19.982000907931038,
+              "individual_output_rms_v": 2.8536059478913645e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 8.143066905840412e-10,
+              "percent_total_variance": 19.98200090792966,
+              "individual_output_rms_v": 2.8536059478912663e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.5036249726115115e-10,
+              "percent_total_variance": 6.143562008554499,
+              "individual_output_rms_v": 1.5822847318392196e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.503624972611395e-10,
+              "percent_total_variance": 6.1435620085542135,
+              "individual_output_rms_v": 1.582284731839183e-05
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.4975401512791406e-10,
+              "percent_total_variance": 6.1286306679682125,
+              "individual_output_rms_v": 1.5803607661794002e-05
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.497540151278441e-10,
+              "percent_total_variance": 6.128630667966496,
+              "individual_output_rms_v": 1.580360766179179e-05
+            },
+            {
+              "source": "XTGN_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 2.2885445778312435e-10,
+              "percent_total_variance": 5.615783384913971,
+              "individual_output_rms_v": 1.5127936335902672e-05
+            },
+            {
+              "source": "XTGP_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 2.2885445778230916e-10,
+              "percent_total_variance": 5.615783384893968,
+              "individual_output_rms_v": 1.512793633587573e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 1.206709362419376e-10,
+              "percent_total_variance": 2.9611039494440505,
+              "individual_output_rms_v": 1.0985032373276722e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 1.2067093624112147e-10,
+              "percent_total_variance": 2.9611039494240243,
+              "individual_output_rms_v": 1.0985032373239574e-05
+            },
+            {
+              "source": "XTGN_XP.msky130_fd_pr__pfet_01v8_lvt",
+              "output_variance_v2": 8.335093267862596e-11,
+              "percent_total_variance": 2.0453208007741366,
+              "individual_output_rms_v": 9.129673196704577e-06
+            },
+            {
+              "source": "XTGP_XP.msky130_fd_pr__pfet_01v8_lvt",
+              "output_variance_v2": 8.335093267832904e-11,
+              "percent_total_variance": 2.0453208007668504,
+              "individual_output_rms_v": 9.129673196688316e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 7.528141768529627e-11,
+              "percent_total_variance": 1.8473056576004792,
+              "individual_output_rms_v": 8.67648648274728e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 7.528141768163501e-11,
+              "percent_total_variance": 1.8473056575106366,
+              "individual_output_rms_v": 8.676486482536294e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 5.0178746187307865e-11,
+              "percent_total_variance": 1.2313195549878344,
+              "individual_output_rms_v": 7.083695800026132e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 5.017874618639652e-11,
+              "percent_total_variance": 1.2313195549654712,
+              "individual_output_rms_v": 7.083695799961805e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 4.6369427956071795e-11,
+              "percent_total_variance": 1.1378439625171908,
+              "individual_output_rms_v": 6.8095101113128395e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 4.636942795364894e-11,
+              "percent_total_variance": 1.1378439624577372,
+              "individual_output_rms_v": 6.809510111134936e-06
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.8085193103136774e-11,
+              "percent_total_variance": 0.9345598801598131,
+              "individual_output_rms_v": 6.171320207470746e-06
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.8085193102445077e-11,
+              "percent_total_variance": 0.9345598801428397,
+              "individual_output_rms_v": 6.171320207414705e-06
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 3.825934773075367e-14,
+            "rbps": 3.8337302216166843e-14,
+            "rbpb": 1.5358737295875307e-13,
+            "rbdb": 3.916898847497683e-14,
+            "rbsb": 3.919595659928894e-14,
+            "id": 1.4227589135296372e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 1.3162740377004692e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 1.3185459157248045e-09,
+            "rn": 1.7313532851420646e-11
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 0.0009388334026144365,
+            "rbps": 0.0009407463017915093,
+            "rbpb": 0.003768829436618264,
+            "rbdb": 0.000961154774140833,
+            "rbsb": 0.0009618165359692951,
+            "id": 34.912607535526725,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 32.299610601935136,
+            "flicker_noise": 0.0,
+            "thermal_noise": 32.355359460774075,
+            "rn": 0.42485102131289976
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 71.9294095826144,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 1.1654686344266513e-09,
+            "pmos_load_pair_fn_variance_v2": 9.807009529895865e-11,
+            "other_variance_frozen_v2": 2.8116622190487023e-09,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 5.302510932613626e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 5.393534585524698e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.0001310956517949834,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        }
+      }
+    },
+    "g1_track": {
+      "output": "HP-HN",
+      "state": "DC-fixed acquisition ON proxy",
+      "sample_count": 401,
+      "output_units": "V/sqrt(Hz)",
+      "struct_contribution_units": "V^2/Hz",
+      "max_device_member_sum_error": 1.0148109582833198e-15,
+      "max_total_contribution_vs_out_squared_relative_error": 1.0210945823957727e-15,
+      "bands": {
+        "1Hz_50kHz": {
+          "low_hz": 1.0,
+          "high_hz": 50000.0,
+          "output_variance_v2": 8.333966622646569e-10,
+          "output_rms_v": 2.8868610327909047e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.5488408401914145e-10,
+              "percent_total_variance": 42.58285401033236,
+              "individual_output_rms_v": 1.8838367339531882e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.548840840191396e-10,
+              "percent_total_variance": 42.582854010332134,
+              "individual_output_rms_v": 1.883836733953183e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 4.1530263607824115e-11,
+              "percent_total_variance": 4.983252932039653,
+              "individual_output_rms_v": 6.4443978467987306e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 4.1530263607809006e-11,
+              "percent_total_variance": 4.98325293203784,
+              "individual_output_rms_v": 6.444397846797558e-06
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.63639076833534e-12,
+              "percent_total_variance": 1.0362881397757184,
+              "individual_output_rms_v": 2.938773684436306e-06
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.636390768335131e-12,
+              "percent_total_variance": 1.0362881397756933,
+              "individual_output_rms_v": 2.9387736844362702e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.362082839176608e-12,
+              "percent_total_variance": 1.0033736896010161,
+              "individual_output_rms_v": 2.891726619024801e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.36208283917627e-12,
+              "percent_total_variance": 1.0033736896009757,
+              "individual_output_rms_v": 2.891726619024743e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.603496943755535e-13,
+              "percent_total_variance": 0.07923594181204556,
+              "individual_output_rms_v": 8.126190339732102e-07
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.603496943755529e-13,
+              "percent_total_variance": 0.0792359418120455,
+              "individual_output_rms_v": 8.126190339732099e-07
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 5.292666147478314e-13,
+              "percent_total_variance": 0.06350716756047618,
+              "individual_output_rms_v": 7.275071235031526e-07
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 5.2926661474781e-13,
+              "percent_total_variance": 0.06350716756047362,
+              "individual_output_rms_v": 7.275071235031379e-07
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rend",
+              "output_variance_v2": 5.288064257893093e-13,
+              "percent_total_variance": 0.06345194908176623,
+              "individual_output_rms_v": 7.271907767493406e-07
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rend",
+              "output_variance_v2": 5.288064257892968e-13,
+              "percent_total_variance": 0.06345194908176473,
+              "individual_output_rms_v": 7.27190776749332e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.011991637258485e-13,
+              "percent_total_variance": 0.060139329375749964,
+              "individual_output_rms_v": 7.079542101900719e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.01199163725848e-13,
+              "percent_total_variance": 0.0601393293757499,
+              "individual_output_rms_v": 7.079542101900715e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.624740407917057e-13,
+              "percent_total_variance": 0.04349357961270512,
+              "individual_output_rms_v": 6.020581706045569e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.624740407862666e-13,
+              "percent_total_variance": 0.043493579612052476,
+              "individual_output_rms_v": 6.020581706000398e-07
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 2.889606476548809e-13,
+              "percent_total_variance": 0.03467264278088954,
+              "individual_output_rms_v": 5.375506000879181e-07
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 2.889606476548692e-13,
+              "percent_total_variance": 0.03467264278088813,
+              "individual_output_rms_v": 5.375506000879072e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 7.147779486514954e-16,
+            "rbps": 7.147779353549801e-16,
+            "rbpb": 2.8591118813593944e-15,
+            "rbdb": 7.147783075368158e-16,
+            "rbsb": 7.147784086924286e-16,
+            "id": 1.8941326271793452e-11,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 7.753578130855995e-10,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.851387694793099e-11,
+            "rn": 5.779277348513954e-13
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.576683601169828e-05,
+            "rbps": 8.576683441623772e-05,
+            "rbpb": 0.00034306735445641166,
+            "rbdb": 8.57668790746642e-05,
+            "rbsb": 8.576689121241531e-05,
+            "id": 2.2727864328521115,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 93.03586733580818,
+            "flicker_noise": 0.0,
+            "thermal_noise": 4.621314038296492,
+            "rn": 0.06934605824805502
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 78.82238230207071,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 6.958529896947994e-10,
+            "pmos_load_pair_fn_variance_v2": 7.87558808736156e-11,
+            "other_variance_frozen_v2": 5.878779169624186e-11,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.667319720491762e-06,
+            "conditional_area16_input_area4_load_estimated_rms_v": 1.1043893053202333e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00014132630285373658,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "one_fft_bin_50kHz": {
+          "low_hz": 6.103515625,
+          "high_hz": 50000.0,
+          "output_variance_v2": 7.698708617758144e-10,
+          "output_rms_v": 2.7746546844171696e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.29737144514849e-10,
+              "percent_total_variance": 42.83018891691321,
+              "individual_output_rms_v": 1.8158665824196695e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.297371445148472e-10,
+              "percent_total_variance": 42.83018891691297,
+              "individual_output_rms_v": 1.8158665824196645e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 3.494451773845247e-11,
+              "percent_total_variance": 4.539010303344651,
+              "individual_output_rms_v": 5.911388816382532e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 3.4944517738438616e-11,
+              "percent_total_variance": 4.5390103033428515,
+              "individual_output_rms_v": 5.91138881638136e-06
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.635507027110119e-12,
+              "percent_total_variance": 1.121682538704104,
+              "individual_output_rms_v": 2.9386233217461063e-06
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.635507027109914e-12,
+              "percent_total_variance": 1.1216825387040774,
+              "individual_output_rms_v": 2.938623321746071e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.361227167878932e-12,
+              "percent_total_variance": 1.0860558027345777,
+              "individual_output_rms_v": 2.8915786636159376e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.361227167878594e-12,
+              "percent_total_variance": 1.086055802734534,
+              "individual_output_rms_v": 2.891578663615879e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.602821224851641e-13,
+              "percent_total_variance": 0.08576530886779264,
+              "individual_output_rms_v": 8.125774562988836e-07
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.602821224851637e-13,
+              "percent_total_variance": 0.0857653088677926,
+              "individual_output_rms_v": 8.125774562988834e-07
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 5.292124562014779e-13,
+              "percent_total_variance": 0.06874041900751714,
+              "individual_output_rms_v": 7.274699005467359e-07
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 5.292124562014563e-13,
+              "percent_total_variance": 0.06874041900751433,
+              "individual_output_rms_v": 7.274699005467211e-07
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rend",
+              "output_variance_v2": 5.287523142916749e-13,
+              "percent_total_variance": 0.06868065029400308,
+              "individual_output_rms_v": 7.271535699504437e-07
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rend",
+              "output_variance_v2": 5.287523142916624e-13,
+              "percent_total_variance": 0.06868065029400146,
+              "individual_output_rms_v": 7.271535699504352e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.0114787730103e-13,
+              "percent_total_variance": 0.06509505713010914,
+              "individual_output_rms_v": 7.079179876942173e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.011478773010297e-13,
+              "percent_total_variance": 0.0650950571301091,
+              "individual_output_rms_v": 7.07917987694217e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.3642821727626605e-13,
+              "percent_total_variance": 0.04369930516661555,
+              "individual_output_rms_v": 5.800243247280807e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 3.364282172709892e-13,
+              "percent_total_variance": 0.043699305165930125,
+              "individual_output_rms_v": 5.800243247235319e-07
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 2.889310790250178e-13,
+              "percent_total_variance": 0.03752981095537998,
+              "individual_output_rms_v": 5.375230962712373e-07
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 2.8893107902500606e-13,
+              "percent_total_variance": 0.037529810955378454,
+              "individual_output_rms_v": 5.375230962712264e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 7.14704807673396e-16,
+            "rbps": 7.147047943786636e-16,
+            "rbpb": 2.8588193174541387e-15,
+            "rbdb": 7.147051665622872e-16,
+            "rbsb": 7.147052677161171e-16,
+            "id": 1.8939388060312198e-11,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 7.118379515607283e-10,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.850993591848758e-11,
+            "rn": 5.778685969327604e-13
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 9.283437562824886e-05,
+            "rbps": 9.28343739013706e-05,
+            "rbpb": 0.00037133751378249,
+            "rbdb": 9.283442224501395e-05,
+            "rbsb": 9.283443538407856e-05,
+            "id": 2.4600733708281752,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 92.46199419975123,
+            "flicker_noise": 0.0,
+            "thermal_noise": 5.002129296030123,
+            "rn": 0.07506045826956302
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 79.16672104315141,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 6.455605345892508e-10,
+            "pmos_load_pair_fn_variance_v2": 6.558482961783734e-11,
+            "other_variance_frozen_v2": 5.872549756872616e-11,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.66325632931107e-06,
+            "conditional_area16_input_area4_load_estimated_rms_v": 1.074566137494634e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00014134929152171804,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "1Hz_100MHz": {
+          "low_hz": 1.0,
+          "high_hz": 100000000.0,
+          "output_variance_v2": 2.2088389291695516e-09,
+          "output_rms_v": 4.699828644929038e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 6.756507379436443e-10,
+              "percent_total_variance": 30.588501905734976,
+              "individual_output_rms_v": 2.5993282554222434e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 6.756507379436402e-10,
+              "percent_total_variance": 30.58850190573479,
+              "individual_output_rms_v": 2.5993282554222353e-05
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.4647476367305926e-10,
+              "percent_total_variance": 6.631301256906442,
+              "individual_output_rms_v": 1.210267588895362e-05
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.4647476367305919e-10,
+              "percent_total_variance": 6.631301256906438,
+              "individual_output_rms_v": 1.2102675888953616e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.4223297583476012e-10,
+              "percent_total_variance": 6.439264264879418,
+              "individual_output_rms_v": 1.192614673038866e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.4223297583474391e-10,
+              "percent_total_variance": 6.439264264878684,
+              "individual_output_rms_v": 1.192614673038798e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 8.515982082795071e-11,
+              "percent_total_variance": 3.855411080606403,
+              "individual_output_rms_v": 9.228207888206177e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 8.515982082775009e-11,
+              "percent_total_variance": 3.855411080597321,
+              "individual_output_rms_v": 9.228207888195308e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 1.1413032338392633e-11,
+              "percent_total_variance": 0.5166982611395547,
+              "individual_output_rms_v": 3.378317974731306e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 1.1413032338388523e-11,
+              "percent_total_variance": 0.5166982611393686,
+              "individual_output_rms_v": 3.3783179747306977e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 9.002441984057899e-12,
+              "percent_total_variance": 0.4075644387272055,
+              "individual_output_rms_v": 3.0004069697389218e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 9.002441984056876e-12,
+              "percent_total_variance": 0.4075644387271592,
+              "individual_output_rms_v": 3.0004069697387515e-06
+            },
+            {
+              "source": "XPGA_XFN1_XR_XR.rend",
+              "output_variance_v2": 8.968653494729954e-12,
+              "percent_total_variance": 0.4060347441495819,
+              "individual_output_rms_v": 2.9947710254258093e-06
+            },
+            {
+              "source": "XPGA_XFP1_XR_XR.rend",
+              "output_variance_v2": 8.968653494729946e-12,
+              "percent_total_variance": 0.4060347441495815,
+              "individual_output_rms_v": 2.994771025425808e-06
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.662383449707883e-12,
+              "percent_total_variance": 0.39216908645143467,
+              "individual_output_rms_v": 2.9431927306426745e-06
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.662383449704761e-12,
+              "percent_total_variance": 0.39216908645129334,
+              "individual_output_rms_v": 2.9431927306421443e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 4.915011439731239e-12,
+              "percent_total_variance": 0.22251561102190082,
+              "individual_output_rms_v": 2.2169825077639287e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 4.9150114397306804e-12,
+              "percent_total_variance": 0.22251561102187553,
+              "individual_output_rms_v": 2.216982507763803e-06
+            },
+            {
+              "source": "XTGP_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 4.372888794857022e-12,
+              "percent_total_variance": 0.1979722802377935,
+              "individual_output_rms_v": 2.091145330878995e-06
+            },
+            {
+              "source": "XTGN_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 4.372888794854564e-12,
+              "percent_total_variance": 0.19797228023768224,
+              "individual_output_rms_v": 2.0911453308784076e-06
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 1.2513634818628955e-14,
+            "rbps": 1.251405183984627e-14,
+            "rbpb": 5.006556090291279e-14,
+            "rbdb": 1.2540280114486534e-14,
+            "rbsb": 1.2545551678336991e-14,
+            "id": 3.283651628601165e-10,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 1.2143514570065462e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 6.56191875088784e-10,
+            "rn": 9.830255134750607e-12
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 0.0005665254561288295,
+            "rbps": 0.0005665443357860017,
+            "rbpb": 0.0022666008028813466,
+            "rbdb": 0.0005677317593818963,
+            "rbsb": 0.0005679704170667479,
+            "id": 14.865962317296292,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 54.97691302747462,
+            "flicker_noise": 0.0,
+            "thermal_noise": 29.707547545600796,
+            "rn": 0.4450417368570396
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 74.5892593917089,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 1.112795349365853e-09,
+            "pmos_load_pair_fn_variance_v2": 9.65380744140575e-11,
+            "other_variance_frozen_v2": 9.99505505389641e-10,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 3.161495698857806e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 3.306341986740817e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00013784738560722914,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        }
+      }
+    },
+    "g4_front": {
+      "output": "FP-FN",
+      "state": "DC-fixed acquisition ON proxy",
+      "sample_count": 401,
+      "output_units": "V/sqrt(Hz)",
+      "struct_contribution_units": "V^2/Hz",
+      "max_device_member_sum_error": 1.03630406772122e-15,
+      "max_total_contribution_vs_out_squared_relative_error": 1.0765342133793505e-15,
+      "bands": {
+        "1Hz_50kHz": {
+          "low_hz": 1.0,
+          "high_hz": 50000.0,
+          "output_variance_v2": 5.312394289575362e-09,
+          "output_rms_v": 7.288617351442839e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2107772166835704e-09,
+              "percent_total_variance": 41.615458043500865,
+              "individual_output_rms_v": 4.701890275924748e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2107772166835233e-09,
+              "percent_total_variance": 41.61545804349998,
+              "individual_output_rms_v": 4.701890275924698e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.5870944575373446e-10,
+              "percent_total_variance": 4.8699217650581055,
+              "individual_output_rms_v": 1.608444732509434e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.587094457532251e-10,
+              "percent_total_variance": 4.869921765048518,
+              "individual_output_rms_v": 1.6084447325078506e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.33334186332694e-10,
+              "percent_total_variance": 2.5098699205053143,
+              "individual_output_rms_v": 1.1547042319689228e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.3333418633268997e-10,
+              "percent_total_variance": 2.5098699205052384,
+              "individual_output_rms_v": 1.1547042319689053e-05
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5744734605729276e-11,
+              "percent_total_variance": 0.6728554519357124,
+              "individual_output_rms_v": 5.9786900409478725e-06
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5744734605727964e-11,
+              "percent_total_variance": 0.6728554519356876,
+              "individual_output_rms_v": 5.978690040947763e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 8.43922018203162e-12,
+              "percent_total_variance": 0.15885907035537825,
+              "individual_output_rms_v": 2.90503359395922e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 8.439220182031368e-12,
+              "percent_total_variance": 0.1588590703553735,
+              "individual_output_rms_v": 2.9050335939591762e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 4.607497836525216e-12,
+              "percent_total_variance": 0.08673109685338341,
+              "individual_output_rms_v": 2.1465082894145125e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 4.607497836525077e-12,
+              "percent_total_variance": 0.08673109685338078,
+              "individual_output_rms_v": 2.14650828941448e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.258151987116462e-12,
+              "percent_total_variance": 0.04250723617310725,
+              "individual_output_rms_v": 1.502714872195142e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2581519869774266e-12,
+              "percent_total_variance": 0.042507236170490056,
+              "individual_output_rms_v": 1.5027148721488806e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.605509001808257e-13,
+              "percent_total_variance": 0.012434146717555217,
+              "individual_output_rms_v": 8.127428253641036e-07
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.605509001808233e-13,
+              "percent_total_variance": 0.012434146717555173,
+              "individual_output_rms_v": 8.127428253641021e-07
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rend",
+              "output_variance_v2": 5.070992818831449e-13,
+              "percent_total_variance": 0.00954558818945796,
+              "individual_output_rms_v": 7.121090379170488e-07
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rend",
+              "output_variance_v2": 5.070992818831264e-13,
+              "percent_total_variance": 0.009545588189457612,
+              "individual_output_rms_v": 7.121090379170359e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.013518770265516e-13,
+              "percent_total_variance": 0.009437399592315019,
+              "individual_output_rms_v": 7.080620573272879e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.013518770265499e-13,
+              "percent_total_variance": 0.00943739959231499,
+              "individual_output_rms_v": 7.080620573272868e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 4.4536662579032175e-15,
+            "rbps": 4.453664874085018e-15,
+            "rbpb": 1.7814659599324292e-14,
+            "rbdb": 4.4536685463725114e-15,
+            "rbsb": 4.4536652076767854e-15,
+            "id": 1.1416937486355109e-10,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 4.8301159534311615e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.58858332720077e-10,
+            "rn": 9.214999236086116e-12
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.383538598862576e-05,
+            "rbps": 8.383535993976484e-05,
+            "rbpb": 0.00033534144169762445,
+            "rbdb": 8.3835429066552e-05,
+            "rbsb": 8.383536621926424e-05,
+            "id": 2.1491133496545687,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 90.92163890977393,
+            "flicker_noise": 0.0,
+            "thermal_noise": 6.755114796811548,
+            "rn": 0.17346226077700838
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 70.77799685799151,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 4.334852487493348e-09,
+            "pmos_load_pair_fn_variance_v2": 4.905976983004681e-10,
+            "other_variance_frozen_v2": 4.869441037815455e-10,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 2.206681000465508e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 2.9673587730926588e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.0001386166283071827,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "one_fft_bin_50kHz": {
+          "low_hz": 6.103515625,
+          "high_hz": 50000.0,
+          "output_variance_v2": 4.916671636282037e-09,
+          "output_rms_v": 7.011898199690322e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.054133731945999e-09,
+              "percent_total_variance": 41.778948929347756,
+              "individual_output_rms_v": 4.5322552134075586e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0541337319459557e-09,
+              "percent_total_variance": 41.778948929346875,
+              "individual_output_rms_v": 4.5322552134075104e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.1768598696896247e-10,
+              "percent_total_variance": 4.427507124180771,
+              "individual_output_rms_v": 1.4754185405130386e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.176859869685411e-10,
+              "percent_total_variance": 4.427507124172201,
+              "individual_output_rms_v": 1.4754185405116105e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.333205460333925e-10,
+              "percent_total_variance": 2.7116015852994577,
+              "individual_output_rms_v": 1.1546451664186384e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.3332054603338848e-10,
+              "percent_total_variance": 2.7116015852993756,
+              "individual_output_rms_v": 1.154645166418621e-05
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5741077861119826e-11,
+              "percent_total_variance": 0.7269364420713491,
+              "individual_output_rms_v": 5.978384218258294e-06
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5741077861118514e-11,
+              "percent_total_variance": 0.7269364420713225,
+              "individual_output_rms_v": 5.978384218258184e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 8.438356836386216e-12,
+              "percent_total_variance": 0.171627423196544,
+              "individual_output_rms_v": 2.9048849953804053e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 8.438356836385961e-12,
+              "percent_total_variance": 0.17162742319653881,
+              "individual_output_rms_v": 2.9048849953803612e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 4.6070264821692955e-12,
+              "percent_total_variance": 0.09370213882440817,
+              "individual_output_rms_v": 2.1463984910005167e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 4.607026482169156e-12,
+              "percent_total_variance": 0.09370213882440534,
+              "individual_output_rms_v": 2.146398491000484e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0959093668894934e-12,
+              "percent_total_variance": 0.042628622001578485,
+              "individual_output_rms_v": 1.4477255841109852e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0959093667618992e-12,
+              "percent_total_variance": 0.04262862199898335,
+              "individual_output_rms_v": 1.4477255840669181e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.604833282216383e-13,
+              "percent_total_variance": 0.013433545639852664,
+              "individual_output_rms_v": 8.127012539805991e-07
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.60483328221636e-13,
+              "percent_total_variance": 0.013433545639852617,
+              "individual_output_rms_v": 8.127012539805977e-07
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rend",
+              "output_variance_v2": 5.070474048001021e-13,
+              "percent_total_variance": 0.010312818148326228,
+              "individual_output_rms_v": 7.120726120278059e-07
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rend",
+              "output_variance_v2": 5.070474048000837e-13,
+              "percent_total_variance": 0.010312818148325855,
+              "individual_output_rms_v": 7.120726120277929e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.01300590549516e-13,
+              "percent_total_variance": 0.010195933908830182,
+              "individual_output_rms_v": 7.080258403120016e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.013005905495142e-13,
+              "percent_total_variance": 0.010195933908830146,
+              "individual_output_rms_v": 7.080258403120004e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 4.45321064375176e-15,
+            "rbps": 4.453209259944665e-15,
+            "rbpb": 1.7812837142762947e-14,
+            "rbdb": 4.453212932243296e-15,
+            "rbsb": 4.4532095935364655e-15,
+            "id": 1.1415769529474505e-10,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 4.434442637818743e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.5882162096196896e-10,
+            "rn": 9.214056527009843e-12
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 9.057368425602763e-05,
+            "rbps": 9.057365611082703e-05,
+            "rbpb": 0.0003622946265379017,
+            "rbdb": 9.057373080157116e-05,
+            "rbsb": 9.057366289573815e-05,
+            "id": 2.321849082870023,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 90.19196248729041,
+            "flicker_noise": 0.0,
+            "thermal_noise": 7.298059490369141,
+            "rn": 0.18740435010985332
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 71.11418782426148,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 4.0215743877528105e-09,
+            "pmos_load_pair_fn_variance_v2": 4.085535245779132e-10,
+            "other_variance_frozen_v2": 4.865437239513137e-10,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 2.2057736147467937e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 2.8983279737295824e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00013876260644621194,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "1Hz_100MHz": {
+          "low_hz": 1.0,
+          "high_hz": 100000000.0,
+          "output_variance_v2": 1.8344734013495297e-08,
+          "output_rms_v": 0.00013544273333588369,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.403896504258281e-09,
+              "percent_total_variance": 24.006325199474446,
+              "individual_output_rms_v": 6.63618603134231e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.403896504258219e-09,
+              "percent_total_variance": 24.00632519947411,
+              "individual_output_rms_v": 6.636186031342264e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.6418813853532093e-09,
+              "percent_total_variance": 14.401306573372555,
+              "individual_output_rms_v": 5.1399235260392825e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.641881385353168e-09,
+              "percent_total_variance": 14.401306573372329,
+              "individual_output_rms_v": 5.1399235260392426e-05
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 7.04334456014036e-10,
+              "percent_total_variance": 3.839436731521387,
+              "individual_output_rms_v": 2.653930021711266e-05
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 7.043344560140143e-10,
+              "percent_total_variance": 3.839436731521269,
+              "individual_output_rms_v": 2.653930021711225e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.744354358064296e-10,
+              "percent_total_variance": 3.1313369568828113,
+              "individual_output_rms_v": 2.3967382748360942e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.744354358060037e-10,
+              "percent_total_variance": 3.1313369568804896,
+              "individual_output_rms_v": 2.3967382748352055e-05
+            },
+            {
+              "source": "XTGN_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 2.289196898589119e-10,
+              "percent_total_variance": 1.247876854962886,
+              "individual_output_rms_v": 1.5130092195981883e-05
+            },
+            {
+              "source": "XTGP_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 2.2891968985828686e-10,
+              "percent_total_variance": 1.2478768549594788,
+              "individual_output_rms_v": 1.5130092195961227e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.6721457053913525e-10,
+              "percent_total_variance": 0.9115126467144409,
+              "individual_output_rms_v": 1.293114730173372e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.6721457053913262e-10,
+              "percent_total_variance": 0.9115126467144264,
+              "individual_output_rms_v": 1.2931147301733618e-05
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 9.12928867041933e-11,
+              "percent_total_variance": 0.49765173284624203,
+              "individual_output_rms_v": 9.5547311162687e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 9.129288670419187e-11,
+              "percent_total_variance": 0.4976517328462342,
+              "individual_output_rms_v": 9.554731116268625e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 8.499939270256872e-11,
+              "percent_total_variance": 0.4633449176207131,
+              "individual_output_rms_v": 9.21951152190661e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 8.499939269985365e-11,
+              "percent_total_variance": 0.46334491760591284,
+              "individual_output_rms_v": 9.219511521759364e-06
+            },
+            {
+              "source": "XTGN_XP.msky130_fd_pr__pfet_01v8_lvt",
+              "output_variance_v2": 8.337606481758837e-11,
+              "percent_total_variance": 0.45449590468988427,
+              "individual_output_rms_v": 9.131049491574797e-06
+            },
+            {
+              "source": "XTGP_XP.msky130_fd_pr__pfet_01v8_lvt",
+              "output_variance_v2": 8.337606481736073e-11,
+              "percent_total_variance": 0.45449590468864337,
+              "individual_output_rms_v": 9.131049491562332e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 4.87508191572767e-11,
+              "percent_total_variance": 0.26574830205449246,
+              "individual_output_rms_v": 6.982178682709051e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 4.875081915659941e-11,
+              "percent_total_variance": 0.26574830205080047,
+              "individual_output_rms_v": 6.9821786826605495e-06
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 1.0536836427985732e-13,
+            "rbps": 1.05055654349146e-13,
+            "rbpb": 4.202523066911213e-13,
+            "rbdb": 1.0647958413591363e-13,
+            "rbsb": 1.0535226605192246e-13,
+            "id": 3.126358280718325e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 7.729296021112339e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 7.305641028037549e-09,
+            "rn": 1.825961754515806e-10
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 0.0005743793516021716,
+            "rbps": 0.000572674721104497,
+            "rbpb": 0.0022908607253828966,
+            "rbdb": 0.0005804367839707131,
+            "rbsb": 0.000574291597656418,
+            "id": 17.042265526545222,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 42.133595479914206,
+            "flicker_noise": 0.0,
+            "thermal_noise": 39.824186181512125,
+            "rn": 0.9953601688487487
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 65.39578567836946,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 7.050586767320616e-09,
+            "pmos_load_pair_fn_variance_v2": 6.052827756694789e-10,
+            "other_variance_frozen_v2": 1.0688864470505203e-08,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 0.00010338696470302822,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.00010621133102160104,
+            "conditional_remaining_total_noise_error_budget_rms_v": 9.388420854806484e-05,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        }
+      }
+    },
+    "g4_track": {
+      "output": "HP-HN",
+      "state": "DC-fixed acquisition ON proxy",
+      "sample_count": 401,
+      "output_units": "V/sqrt(Hz)",
+      "struct_contribution_units": "V^2/Hz",
+      "max_device_member_sum_error": 1.1131782500074133e-15,
+      "max_total_contribution_vs_out_squared_relative_error": 1.0765352705002573e-15,
+      "bands": {
+        "1Hz_50kHz": {
+          "low_hz": 1.0,
+          "high_hz": 50000.0,
+          "output_variance_v2": 5.312721797850872e-09,
+          "output_rms_v": 7.288842019039013e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2106523813793244e-09,
+              "percent_total_variance": 41.61054287227289,
+              "individual_output_rms_v": 4.7017575239258395e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2106523813792772e-09,
+              "percent_total_variance": 41.610542872272006,
+              "individual_output_rms_v": 4.7017575239257893e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.586999275302974e-10,
+              "percent_total_variance": 4.8694423945734915,
+              "individual_output_rms_v": 1.6084151439547484e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.58699927529788e-10,
+              "percent_total_variance": 4.869442394563904,
+              "individual_output_rms_v": 1.6084151439531648e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.3330803593797152e-10,
+              "percent_total_variance": 2.509222974782868,
+              "individual_output_rms_v": 1.1545909922477808e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.3330803593796759e-10,
+              "percent_total_variance": 2.509222974782794,
+              "individual_output_rms_v": 1.1545909922477639e-05
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5737724110854424e-11,
+              "percent_total_variance": 0.6726820163124525,
+              "individual_output_rms_v": 5.97810372198864e-06
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5737724110853087e-11,
+              "percent_total_variance": 0.6726820163124273,
+              "individual_output_rms_v": 5.978103721988528e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 8.437565025578653e-12,
+              "percent_total_variance": 0.15881812273685886,
+              "individual_output_rms_v": 2.904748702655473e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 8.437565025578399e-12,
+              "percent_total_variance": 0.15881812273685408,
+              "individual_output_rms_v": 2.904748702655429e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 4.606594183153025e-12,
+              "percent_total_variance": 0.08670874098878105,
+              "individual_output_rms_v": 2.1462977852928574e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 4.606594183152886e-12,
+              "percent_total_variance": 0.08670874098877844,
+              "individual_output_rms_v": 2.1462977852928252e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2580279801188786e-12,
+              "percent_total_variance": 0.0425022816182904,
+              "individual_output_rms_v": 1.5026736106416717e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.2580279799798525e-12,
+              "percent_total_variance": 0.04250228161567355,
+              "individual_output_rms_v": 1.5026736105954123e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.604213432215143e-13,
+              "percent_total_variance": 0.012430941584192702,
+              "individual_output_rms_v": 8.126631179163444e-07
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.60421343221512e-13,
+              "percent_total_variance": 0.012430941584192659,
+              "individual_output_rms_v": 8.12663117916343e-07
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rend",
+              "output_variance_v2": 5.069998262023044e-13,
+              "percent_total_variance": 0.009543127712943644,
+              "individual_output_rms_v": 7.120392027145025e-07
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rend",
+              "output_variance_v2": 5.069998262022854e-13,
+              "percent_total_variance": 0.009543127712943286,
+              "individual_output_rms_v": 7.120392027144892e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012535445214942e-13,
+              "percent_total_variance": 0.009434966926449333,
+              "individual_output_rms_v": 7.079926161489922e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012535445214926e-13,
+              "percent_total_variance": 0.009434966926449302,
+              "individual_output_rms_v": 7.07992616148991e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 4.452792770430541e-15,
+            "rbps": 4.452791387082759e-15,
+            "rbpb": 1.7811165651301988e-14,
+            "rbdb": 4.452795058104533e-15,
+            "rbsb": 4.452791720575869e-15,
+            "id": 1.1481576880262423e-10,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 4.829869260670042e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.5878795098677645e-10,
+            "rn": 9.213195054843037e-12
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.381377643813019e-05,
+            "rbps": 8.381375039972964e-05,
+            "rbpb": 0.0003352550035371144,
+            "rbdb": 8.381381949843109e-05,
+            "rbsb": 8.381375667698492e-05,
+            "id": 2.1611477726740755,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 90.9113905159469,
+            "flicker_noise": 0.0,
+            "thermal_noise": 6.753373593398305,
+            "rn": 0.1734176078741786
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 70.77772912437673,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 4.334619821470801e-09,
+            "pmos_load_pair_fn_variance_v2": 4.905839222117135e-10,
+            "other_variance_frozen_v2": 4.875180541683575e-10,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 2.2079811008438398e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 2.968295425935921e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00013861462288847245,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "one_fft_bin_50kHz": {
+          "low_hz": 6.103515625,
+          "high_hz": 50000.0,
+          "output_variance_v2": 4.916999508875579e-09,
+          "output_rms_v": 7.012131993107075e-05,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0540090679794933e-09,
+              "percent_total_variance": 41.77362768232622,
+              "individual_output_rms_v": 4.5321176815915684e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0540090679794503e-09,
+              "percent_total_variance": 41.773627682325355,
+              "individual_output_rms_v": 4.532117681591521e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.1767651361726483e-10,
+              "percent_total_variance": 4.4270192263460935,
+              "individual_output_rms_v": 1.475386436216847e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.176765136168435e-10,
+              "percent_total_variance": 4.427019226337524,
+              "individual_output_rms_v": 1.4753864362154191e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.3329439565358993e-10,
+              "percent_total_variance": 2.710888935680853,
+              "individual_output_rms_v": 1.1545319209687964e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 1.3329439565358598e-10,
+              "percent_total_variance": 2.7108889356807726,
+              "individual_output_rms_v": 1.1545319209687793e-05
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.5734067370244754e-11,
+              "percent_total_variance": 0.7267453923015834,
+              "individual_output_rms_v": 5.977797869637677e-06
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.57340673702434e-11,
+              "percent_total_variance": 0.726745392301556,
+              "individual_output_rms_v": 5.977797869637565e-06
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 8.43670168087758e-12,
+              "percent_total_variance": 0.1715823169322807,
+              "individual_output_rms_v": 2.904600089664252e-06
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 8.43670168087733e-12,
+              "percent_total_variance": 0.1715823169322756,
+              "individual_output_rms_v": 2.904600089664209e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 4.606122829312675e-12,
+              "percent_total_variance": 0.09367751249513558,
+              "individual_output_rms_v": 2.1461879762296394e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 4.606122829312536e-12,
+              "percent_total_variance": 0.09367751249513274,
+              "individual_output_rms_v": 2.146187976229607e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0957855373540238e-12,
+              "percent_total_variance": 0.042623261067465286,
+              "individual_output_rms_v": 1.447682816556867e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.0957855372264396e-12,
+              "percent_total_variance": 0.04262326106487053,
+              "individual_output_rms_v": 1.4476828165128023e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 6.603537713362375e-13,
+              "percent_total_variance": 0.0134300149948001,
+              "individual_output_rms_v": 8.126215425007126e-07
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 6.603537713362353e-13,
+              "percent_total_variance": 0.013430014994800055,
+              "individual_output_rms_v": 8.126215425007113e-07
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rend",
+              "output_variance_v2": 5.069479491760051e-13,
+              "percent_total_variance": 0.010310107785468016,
+              "individual_output_rms_v": 7.120027732923554e-07
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rend",
+              "output_variance_v2": 5.069479491759861e-13,
+              "percent_total_variance": 0.01031010778546763,
+              "individual_output_rms_v": 7.12002773292342e-07
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012022581005562e-13,
+              "percent_total_variance": 0.010193254182674737,
+              "individual_output_rms_v": 7.079563956209141e-07
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.012022581005546e-13,
+              "percent_total_variance": 0.010193254182674704,
+              "individual_output_rms_v": 7.07956395620913e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 4.452337156777438e-15,
+            "rbps": 4.452335773440764e-15,
+            "rbpb": 1.7809343196734066e-14,
+            "rbdb": 4.452339444473672e-15,
+            "rbsb": 4.452336106933903e-15,
+            "id": 1.1480402072074651e-10,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 4.434196377847853e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 3.58751239268824e-10,
+            "rn": 9.21225234647813e-12
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 9.054988003843833e-05,
+            "rbps": 9.054985190468172e-05,
+            "rbpb": 0.00036219940971291074,
+            "rbdb": 9.054992656470359e-05,
+            "rbsb": 9.054985868713387e-05,
+            "id": 2.334838970667295,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 90.18094001928968,
+            "flicker_noise": 0.0,
+            "thermal_noise": 7.296141450110973,
+            "rn": 0.18735516100518773
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 71.11389822080395,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 4.021342064396044e-09,
+            "pmos_load_pair_fn_variance_v2": 4.085398382296362e-10,
+            "other_variance_frozen_v2": 4.871176062498987e-10,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 2.207074095380349e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 2.899286886170564e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00013876060322456292,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "1Hz_100MHz": {
+          "low_hz": 1.0,
+          "high_hz": 100000000.0,
+          "output_variance_v2": 1.4844548875887545e-08,
+          "output_rms_v": 0.00012183820778346809,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.0952185870964885e-09,
+              "percent_total_variance": 27.587356283682542,
+              "individual_output_rms_v": 6.399389492050385e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.095218587096465e-09,
+              "percent_total_variance": 27.587356283682386,
+              "individual_output_rms_v": 6.399389492050366e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.0257042637901905e-09,
+              "percent_total_variance": 13.64611535673276,
+              "individual_output_rms_v": 4.50078244729757e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.025704263790135e-09,
+              "percent_total_variance": 13.646115356732386,
+              "individual_output_rms_v": 4.5007824472975085e-05
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.42733850664586e-10,
+              "percent_total_variance": 3.656115488603128,
+              "individual_output_rms_v": 2.3296648914910188e-05
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rhrpoly_0p35",
+              "output_variance_v2": 5.42733850664572e-10,
+              "percent_total_variance": 3.656115488603034,
+              "individual_output_rms_v": 2.3296648914909886e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.039495026224701e-10,
+              "percent_total_variance": 3.394845520978079,
+              "individual_output_rms_v": 2.2448819626485266e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.039495026224162e-10,
+              "percent_total_variance": 3.394845520977716,
+              "individual_output_rms_v": 2.2448819626484067e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.282144120424564e-10,
+              "percent_total_variance": 0.8637137653318586,
+              "individual_output_rms_v": 1.1323180297180487e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.2821441204245285e-10,
+              "percent_total_variance": 0.8637137653318347,
+              "individual_output_rms_v": 1.1323180297180331e-05
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 7.000026226967538e-11,
+              "percent_total_variance": 0.4715553355978298,
+              "individual_output_rms_v": 8.366615938937043e-06
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 7.000026226967346e-11,
+              "percent_total_variance": 0.4715553355978168,
+              "individual_output_rms_v": 8.366615938936928e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 1.1916188854678572e-11,
+              "percent_total_variance": 0.08027316258855399,
+              "individual_output_rms_v": 3.4519833219004076e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 1.1916188854500198e-11,
+              "percent_total_variance": 0.08027316258735238,
+              "individual_output_rms_v": 3.451983321874571e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 1.0937894036451362e-11,
+              "percent_total_variance": 0.07368289954717397,
+              "individual_output_rms_v": 3.3072487110060775e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 1.0937894036443414e-11,
+              "percent_total_variance": 0.07368289954712041,
+              "individual_output_rms_v": 3.307248711004876e-06
+            },
+            {
+              "source": "XRIP_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.301757978667872e-12,
+              "percent_total_variance": 0.05592462289071425,
+              "individual_output_rms_v": 2.881277143675678e-06
+            },
+            {
+              "source": "XRIN_XR.rhrpoly_0p35",
+              "output_variance_v2": 8.301757978661837e-12,
+              "percent_total_variance": 0.055924622890673605,
+              "individual_output_rms_v": 2.8812771436746304e-06
+            },
+            {
+              "source": "XPGA_XFP4_XR_XR.rend",
+              "output_variance_v2": 7.699594051023463e-12,
+              "percent_total_variance": 0.05186815790360695,
+              "individual_output_rms_v": 2.774814237210027e-06
+            },
+            {
+              "source": "XPGA_XFN4_XR_XR.rend",
+              "output_variance_v2": 7.699594051023263e-12,
+              "percent_total_variance": 0.05186815790360561,
+              "individual_output_rms_v": 2.774814237209991e-06
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 6.838853206376061e-14,
+            "rbps": 6.83585540630153e-14,
+            "rbpb": 2.7343715010938985e-13,
+            "rbdb": 6.844879589576158e-14,
+            "rbsb": 6.836719300958521e-14,
+            "id": 1.756245555100089e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 7.490530281857115e-09,
+            "flicker_noise": 0.0,
+            "thermal_noise": 5.457225266216916e-09,
+            "rn": 1.400007724882833e-10
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 0.00046069794801811863,
+            "rbps": 0.0004604960018290094,
+            "rbpb": 0.001842003771185948,
+            "rbdb": 0.00046110391409027627,
+            "rbsb": 0.00046055419791595105,
+            "id": 11.830912274827108,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 50.45980409700569,
+            "flicker_noise": 0.0,
+            "thermal_noise": 36.762486430835594,
+            "rn": 0.9431123414985743
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 66.31522983018093,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 6.870346851653232e-09,
+            "pmos_load_pair_fn_variance_v2": 5.995300687037568e-10,
+            "other_variance_frozen_v2": 7.374671955530555e-09,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 8.587591021660588e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 8.918492670252536e-05,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.00011018684268614752,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        }
+      }
+    },
+    "g16_front": {
+      "output": "FP-FN",
+      "state": "DC-fixed acquisition ON proxy",
+      "sample_count": 401,
+      "output_units": "V/sqrt(Hz)",
+      "struct_contribution_units": "V^2/Hz",
+      "max_device_member_sum_error": 9.206442502954865e-16,
+      "max_total_contribution_vs_out_squared_relative_error": 1.3343441893378512e-15,
+      "bands": {
+        "1Hz_50kHz": {
+          "low_hz": 1.0,
+          "high_hz": 50000.0,
+          "output_variance_v2": 6.21279546740866e-08,
+          "output_rms_v": 0.00024925479869821284,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.555349426686323e-08,
+              "percent_total_variance": 41.1304289685904,
+              "individual_output_rms_v": 0.00015985460352102227
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.555349426686195e-08,
+              "percent_total_variance": 41.13042896858835,
+              "individual_output_rms_v": 0.00015985460352101828
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.9904671644353107e-09,
+              "percent_total_variance": 4.813400312504777,
+              "individual_output_rms_v": 5.468516402494657e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.9904671644222086e-09,
+              "percent_total_variance": 4.813400312483688,
+              "individual_output_rms_v": 5.468516402482678e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.1339621807517295e-09,
+              "percent_total_variance": 3.4347858253923804,
+              "individual_output_rms_v": 4.619482850657343e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.1339621807515988e-09,
+              "percent_total_variance": 3.43478582539217,
+              "individual_output_rms_v": 4.6194828506572015e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.3506657556899746e-10,
+              "percent_total_variance": 0.2174006472248045,
+              "individual_output_rms_v": 1.162181464182756e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.3506657556898919e-10,
+              "percent_total_variance": 0.21740064722479122,
+              "individual_output_rms_v": 1.1621814641827204e-05
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 7.374117451512122e-11,
+              "percent_total_variance": 0.11869242260099457,
+              "individual_output_rms_v": 8.587268163689848e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 7.374117451511672e-11,
+              "percent_total_variance": 0.11869242260098732,
+              "individual_output_rms_v": 8.587268163689587e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.244406600701198e-11,
+              "percent_total_variance": 0.11660462087806055,
+              "individual_output_rms_v": 8.511407992042913e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.244406600700385e-11,
+              "percent_total_variance": 0.11660462087804746,
+              "individual_output_rms_v": 8.511407992042435e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.244405576137756e-11,
+              "percent_total_variance": 0.11660460438687802,
+              "individual_output_rms_v": 8.511407390166303e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.244405576136942e-11,
+              "percent_total_variance": 0.1166046043868649,
+              "individual_output_rms_v": 8.511407390165826e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.61017220423178e-11,
+              "percent_total_variance": 0.0420128461966007,
+              "individual_output_rms_v": 5.108984443342708e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.6101722038555394e-11,
+              "percent_total_variance": 0.04201284619054481,
+              "individual_output_rms_v": 5.1089844429744934e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN1_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.780383957751302e-12,
+              "percent_total_variance": 0.004475254291464697,
+              "individual_output_rms_v": 1.667448337356004e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN2_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.780383957041956e-12,
+              "percent_total_variance": 0.004475254290322946,
+              "individual_output_rms_v": 1.6674483371433e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 9.720279291443595e-13,
+              "percent_total_variance": 0.0015645580709094061,
+              "individual_output_rms_v": 9.859147676875316e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 9.720279290044022e-13,
+              "percent_total_variance": 0.0015645580706841334,
+              "individual_output_rms_v": 9.859147676165532e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 5.146072032534867e-14,
+            "rbps": 5.146069890855644e-14,
+            "rbpb": 2.0584279728511344e-13,
+            "rbdb": 5.146075830745189e-14,
+            "rbsb": 5.146070432991916e-14,
+            "id": 1.3121788128998404e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 5.583013903176705e-08,
+            "flicker_noise": 0.0,
+            "thermal_noise": 4.83774279036804e-09,
+            "rn": 1.4748235337251784e-10
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.28302180480646e-05,
+            "rbps": 8.283018357599425e-05,
+            "rbpb": 0.0003313207369612152,
+            "rbdb": 8.283027918335131e-05,
+            "rbsb": 8.283019230211884e-05,
+            "id": 2.112058605153385,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 89.86315310819921,
+            "flicker_noise": 0.0,
+            "thermal_noise": 7.786740792846106,
+            "rn": 0.23738485219123484
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 60.09802930632639,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 5.0105181962446235e-08,
+            "pmos_load_pair_fn_variance_v2": 5.671025899010247e-09,
+            "other_variance_frozen_v2": 6.3517468126301165e-09,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.969784697612676e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.00010440822362264175,
+            "conditional_remaining_total_noise_error_budget_rms_v": 9.588542272963642e-05,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "one_fft_bin_50kHz": {
+          "low_hz": 6.103515625,
+          "high_hz": 50000.0,
+          "output_variance_v2": 5.7553247652888365e-08,
+          "output_rms_v": 0.00023990257950444878,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.374266438751689e-08,
+              "percent_total_variance": 41.25338769883535,
+              "individual_output_rms_v": 0.00015408654836654914
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.374266438751571e-08,
+              "percent_total_variance": 41.25338769883329,
+              "individual_output_rms_v": 0.00015408654836654532
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.5162277548729175e-09,
+              "percent_total_variance": 4.37199959600653,
+              "individual_output_rms_v": 5.0162015059932724e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.5162277548618883e-09,
+              "percent_total_variance": 4.371999595987368,
+              "individual_output_rms_v": 5.0162015059822786e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.1337437664469277e-09,
+              "percent_total_variance": 3.707425477213437,
+              "individual_output_rms_v": 4.6192464390276126e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.1337437664467975e-09,
+              "percent_total_variance": 3.7074254772132105,
+              "individual_output_rms_v": 4.6192464390274717e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.3505275129766268e-10,
+              "percent_total_variance": 0.23465704683110952,
+              "individual_output_rms_v": 1.1621219871324295e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.350527512976544e-10,
+              "percent_total_variance": 0.23465704683109515,
+              "individual_output_rms_v": 1.162121987132394e-05
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 7.373362699271794e-11,
+              "percent_total_variance": 0.12811375552152277,
+              "individual_output_rms_v": 8.586828692405476e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 7.373362699271342e-11,
+              "percent_total_variance": 0.1281137555215149,
+              "individual_output_rms_v": 8.586828692405213e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.243665124337151e-11,
+              "percent_total_variance": 0.1258602323890513,
+              "individual_output_rms_v": 8.510972402926208e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.243665124336337e-11,
+              "percent_total_variance": 0.12586023238903715,
+              "individual_output_rms_v": 8.51097240292573e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.243664099773711e-11,
+              "percent_total_variance": 0.12586021458704216,
+              "individual_output_rms_v": 8.510971801018795e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.243664099772894e-11,
+              "percent_total_variance": 0.12586021458702798,
+              "individual_output_rms_v": 8.510971801018315e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.4226165734536093e-11,
+              "percent_total_variance": 0.04209348164094486,
+              "individual_output_rms_v": 4.9220083029730955e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.4226165731043148e-11,
+              "percent_total_variance": 0.04209348163487579,
+              "individual_output_rms_v": 4.922008302618267e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN1_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.7800993817446993e-12,
+              "percent_total_variance": 0.0048304821971331055,
+              "individual_output_rms_v": 1.6673630023917106e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN2_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.780099381035426e-12,
+              "percent_total_variance": 0.004830482195900728,
+              "individual_output_rms_v": 1.6673630021790174e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 8.185187978867072e-13,
+              "percent_total_variance": 0.0014221939356460086,
+              "individual_output_rms_v": 9.047202870980108e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 8.185187977688004e-13,
+              "percent_total_variance": 0.0014221939354411431,
+              "individual_output_rms_v": 9.047202870328489e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 5.145545328135528e-14,
+            "rbps": 5.145543186469144e-14,
+            "rbpb": 2.0582172910965423e-13,
+            "rbdb": 5.1455491263715645e-14,
+            "rbsb": 5.145543728605452e-14,
+            "id": 1.3120445100704011e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 5.125607660068794e-08,
+            "flicker_noise": 0.0,
+            "thermal_noise": 4.837247640259971e-09,
+            "rn": 1.474672583272684e-10
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.940495172694732e-05,
+            "rbps": 8.940491451503537e-05,
+            "rbpb": 0.0003576196609285955,
+            "rbdb": 8.940501772211165e-05,
+            "rbsb": 8.940492393476978e-05,
+            "id": 2.27970542684841,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 89.05853047567437,
+            "flicker_noise": 0.0,
+            "thermal_noise": 8.404821339421337,
+            "rn": 0.2562275185870725
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 60.430201516771625,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 4.648362473999241e-08,
+            "pmos_load_pair_fn_variance_v2": 4.722578799428689e-09,
+            "other_variance_frozen_v2": 6.3470441134672685e-09,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.966833821203546e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.00010214164361108532,
+            "conditional_remaining_total_noise_error_budget_rms_v": 9.829636866386609e-05,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "1Hz_100MHz": {
+          "low_hz": 1.0,
+          "high_hz": 100000000.0,
+          "output_variance_v2": 1.588298249712347e-07,
+          "output_rms_v": 0.0003985345969564433,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.4169634633837647e-08,
+              "percent_total_variance": 27.809408366367656,
+              "individual_output_rms_v": 0.00021016573134989834
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.416963463383572e-08,
+              "percent_total_variance": 27.809408366366444,
+              "individual_output_rms_v": 0.00021016573134989376
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.514782878755258e-08,
+              "percent_total_variance": 15.833190518283981,
+              "individual_output_rms_v": 0.00015858066965286966
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.5147828787551084e-08,
+              "percent_total_variance": 15.83319051828304,
+              "individual_output_rms_v": 0.00015858066965286494
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.248307301573401e-09,
+              "percent_total_variance": 3.30435880195921,
+              "individual_output_rms_v": 7.24452020604084e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.248307301547785e-09,
+              "percent_total_variance": 3.3043588019430823,
+              "individual_output_rms_v": 7.24452020602316e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.5917016468087785e-09,
+              "percent_total_variance": 1.0021427947156951,
+              "individual_output_rms_v": 3.9896135737797696e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.591701646808684e-09,
+              "percent_total_variance": 1.0021427947156356,
+              "individual_output_rms_v": 3.989613573779651e-05
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 8.690081052096238e-10,
+              "percent_total_variance": 0.5471315638401086,
+              "individual_output_rms_v": 2.9478943420849124e-05
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 8.690081052095723e-10,
+              "percent_total_variance": 0.5471315638400762,
+              "individual_output_rms_v": 2.947894342084825e-05
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 8.531746092014926e-10,
+              "percent_total_variance": 0.5371627207648243,
+              "individual_output_rms_v": 2.9209152832656627e-05
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 8.531746092014227e-10,
+              "percent_total_variance": 0.5371627207647802,
+              "individual_output_rms_v": 2.920915283265543e-05
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 8.529266840522235e-10,
+              "percent_total_variance": 0.5370066259323115,
+              "individual_output_rms_v": 2.920490856092899e-05
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 8.529266840521607e-10,
+              "percent_total_variance": 0.537006625932272,
+              "individual_output_rms_v": 2.9204908560927916e-05
+            },
+            {
+              "source": "XTGP_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 2.287728095932976e-10,
+              "percent_total_variance": 0.14403642995560192,
+              "individual_output_rms_v": 1.5125237505351696e-05
+            },
+            {
+              "source": "XTGN_XN.msky130_fd_pr__nfet_01v8_lvt",
+              "output_variance_v2": 2.287728095917035e-10,
+              "percent_total_variance": 0.14403642995459826,
+              "individual_output_rms_v": 1.5125237505298999e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 1.490792925951223e-10,
+              "percent_total_variance": 0.09386101925260051,
+              "individual_output_rms_v": 1.2209803134986341e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 1.4907929257933458e-10,
+              "percent_total_variance": 0.09386101924266048,
+              "individual_output_rms_v": 1.2209803134339823e-05
+            },
+            {
+              "source": "XTGP_XP.msky130_fd_pr__pfet_01v8_lvt",
+              "output_variance_v2": 8.332322611846876e-11,
+              "percent_total_variance": 0.05246069252645668,
+              "individual_output_rms_v": 9.128155680008354e-06
+            },
+            {
+              "source": "XTGN_XP.msky130_fd_pr__pfet_01v8_lvt",
+              "output_variance_v2": 8.33232261178881e-11,
+              "percent_total_variance": 0.052460692526091104,
+              "individual_output_rms_v": 9.128155679976548e-06
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 6.253791094369269e-13,
+            "rbps": 6.249265098635008e-13,
+            "rbpb": 2.499765189090838e-12,
+            "rbdb": 6.268016096138483e-13,
+            "rbsb": 6.252812019838069e-13,
+            "id": 1.635448734740123e-08,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 8.350582817571919e-08,
+            "flicker_noise": 0.0,
+            "thermal_noise": 5.722648066050571e-08,
+            "rn": 1.7380266339885943e-09
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 0.0003937416096442767,
+            "rbps": 0.00039345665083788877,
+            "rbpb": 0.0015738638442393076,
+            "rbdb": 0.00039463722240288743,
+            "rbsb": 0.0003936799666542792,
+            "id": 10.296861657036489,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 52.57565963498526,
+            "flicker_noise": 0.0,
+            "thermal_noise": 36.030059638276285,
+            "rn": 1.0942696904081863
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 56.02157929680353,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 7.647886719216327e-08,
+            "pmos_load_pair_fn_variance_v2": 6.827607795290713e-09,
+            "other_variance_frozen_v2": 7.552334998378073e-08,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 0.0002748151196418798,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.0002863741977415452,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.0,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        }
+      }
+    },
+    "g16_track": {
+      "output": "HP-HN",
+      "state": "DC-fixed acquisition ON proxy",
+      "sample_count": 401,
+      "output_units": "V/sqrt(Hz)",
+      "struct_contribution_units": "V^2/Hz",
+      "max_device_member_sum_error": 9.561884284751042e-16,
+      "max_total_contribution_vs_out_squared_relative_error": 9.501808683266578e-16,
+      "bands": {
+        "1Hz_50kHz": {
+          "low_hz": 1.0,
+          "high_hz": 50000.0,
+          "output_variance_v2": 6.21245389907602e-08,
+          "output_rms_v": 0.00024924794681352983,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.5552052231000403e-08,
+              "percent_total_variance": 41.130369168293974,
+              "individual_output_rms_v": 0.00015985009299653347
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.5552052230999126e-08,
+              "percent_total_variance": 41.13036916829192,
+              "individual_output_rms_v": 0.00015985009299652949
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.9903572141905497e-09,
+              "percent_total_variance": 4.813487975557141,
+              "individual_output_rms_v": 5.4684158713383805e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.9903572141774484e-09,
+              "percent_total_variance": 4.813487975536052,
+              "individual_output_rms_v": 5.4684158713264015e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.1335438157091893e-09,
+              "percent_total_variance": 3.4343012445154915,
+              "individual_output_rms_v": 4.619030001752737e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.13354381570906e-09,
+              "percent_total_variance": 3.434301244515283,
+              "individual_output_rms_v": 4.619030001752597e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.350400956556497e-10,
+              "percent_total_variance": 0.21736997625967777,
+              "individual_output_rms_v": 1.1620675352820494e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.350400956556415e-10,
+              "percent_total_variance": 0.21736997625966456,
+              "individual_output_rms_v": 1.162067535282014e-05
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 7.372671749714254e-11,
+              "percent_total_variance": 0.1186756774293455,
+              "individual_output_rms_v": 8.586426351931433e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 7.372671749713807e-11,
+              "percent_total_variance": 0.1186756774293383,
+              "individual_output_rms_v": 8.586426351931172e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.242986329172504e-11,
+              "percent_total_variance": 0.11658817025989932,
+              "individual_output_rms_v": 8.510573617079229e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.24298632917169e-11,
+              "percent_total_variance": 0.11658817025988621,
+              "individual_output_rms_v": 8.510573617078751e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.242985304970654e-11,
+              "percent_total_variance": 0.11658815377363049,
+              "individual_output_rms_v": 8.510573015356049e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.242985304969838e-11,
+              "percent_total_variance": 0.11658815377361738,
+              "individual_output_rms_v": 8.51057301535557e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.6100289402762633e-11,
+              "percent_total_variance": 0.042012850037638966,
+              "individual_output_rms_v": 5.1088442335583725e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.6100289399000402e-11,
+              "percent_total_variance": 0.042012850031583025,
+              "individual_output_rms_v": 5.108844233190165e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN1_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.779838860329871e-12,
+              "percent_total_variance": 0.0044746229195251125,
+              "individual_output_rms_v": 1.6672848767771723e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN2_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.7798388596206717e-12,
+              "percent_total_variance": 0.004474622918383536,
+              "individual_output_rms_v": 1.6672848765644914e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 9.719912633877673e-13,
+              "percent_total_variance": 0.0015645850724660215,
+              "individual_output_rms_v": 9.85896172721939e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 9.719912632478138e-13,
+              "percent_total_variance": 0.0015645850722407425,
+              "individual_output_rms_v": 9.858961726509612e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 5.145063134787688e-14,
+            "rbps": 5.145060993844527e-14,
+            "rbpb": 2.058024414041106e-13,
+            "rbdb": 5.145066931623199e-14,
+            "rbsb": 5.145061535791508e-14,
+            "id": 1.3125902695676578e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 5.5827289327028857e-08,
+            "flicker_noise": 0.0,
+            "thermal_noise": 4.8367943464626725e-09,
+            "rn": 1.474534427336681e-10
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.281853223173077e-05,
+            "rbps": 8.281849776961328e-05,
+            "rbpb": 0.0003312739937349389,
+            "rbdb": 8.281859334824885e-05,
+            "rbsb": 8.281850649317067e-05,
+            "id": 2.1128370381354133,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 89.86350681062127,
+            "flicker_noise": 0.0,
+            "thermal_noise": 7.785642235803231,
+            "rn": 0.23735136731654283
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 60.09826808019356,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 5.010249429603267e-08,
+            "pmos_load_pair_fn_variance_v2": 5.670866756419113e-09,
+            "other_variance_frozen_v2": 6.351177938308417e-09,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.969427795211158e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.00010440450431334481,
+            "conditional_remaining_total_noise_error_budget_rms_v": 9.58894724730583e-05,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "one_fft_bin_50kHz": {
+          "low_hz": 6.103515625,
+          "high_hz": 50000.0,
+          "output_variance_v2": 5.7549836904907635e-08,
+          "output_rms_v": 0.00023989547078864917,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.3741224332362595e-08,
+              "percent_total_variance": 41.25333034668954,
+              "individual_output_rms_v": 0.00015408187541811203
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.374122433236141e-08,
+              "percent_total_variance": 41.25333034668748,
+              "individual_output_rms_v": 0.00015408187541810818
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.5161183233571135e-09,
+              "percent_total_variance": 4.372068556014532,
+              "individual_output_rms_v": 5.016092426737284e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 2.5161183233460843e-09,
+              "percent_total_variance": 4.372068555995368,
+              "individual_output_rms_v": 5.0160924267262905e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.133325401643292e-09,
+              "percent_total_variance": 3.7069182405647623,
+              "individual_output_rms_v": 4.618793567202687e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.1333254016431627e-09,
+              "percent_total_variance": 3.706918240564537,
+              "individual_output_rms_v": 4.6187935672025465e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.3502627139943613e-10,
+              "percent_total_variance": 0.23462494189609354,
+              "individual_output_rms_v": 1.1620080524653696e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.350262713994279e-10,
+              "percent_total_variance": 0.23462494189607927,
+              "individual_output_rms_v": 1.1620080524653344e-05
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 7.371916998299485e-11,
+              "percent_total_variance": 0.12809622745726384,
+              "individual_output_rms_v": 8.585986838039926e-06
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 7.371916998299035e-11,
+              "percent_total_variance": 0.12809622745725602,
+              "individual_output_rms_v": 8.585986838039664e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.242244853619494e-11,
+              "percent_total_variance": 0.12584301264982217,
+              "individual_output_rms_v": 8.510137985731778e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.24224485361868e-11,
+              "percent_total_variance": 0.12584301264980802,
+              "individual_output_rms_v": 8.5101379857313e-06
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.242243829417644e-11,
+              "percent_total_variance": 0.12584299485304107,
+              "individual_output_rms_v": 8.510137383977795e-06
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.242243829416831e-11,
+              "percent_total_variance": 0.12584299485302694,
+              "individual_output_rms_v": 8.510137383977317e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.422473514648804e-11,
+              "percent_total_variance": 0.04209349052807176,
+              "individual_output_rms_v": 4.921862975184096e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 2.422473514299527e-11,
+              "percent_total_variance": 0.04209349052200263,
+              "individual_output_rms_v": 4.921862974829274e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN1_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.7795542846345408e-12,
+              "percent_total_variance": 0.004829821306404972,
+              "individual_output_rms_v": 1.6671995335395642e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN2_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.7795542839254136e-12,
+              "percent_total_variance": 0.004829821305172776,
+              "individual_output_rms_v": 1.6671995333268942e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 8.184823000403094e-13,
+              "percent_total_variance": 0.0014222148038277277,
+              "individual_output_rms_v": 9.047001160828429e-07
+            },
+            {
+              "source": "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 8.184822999224067e-13,
+              "percent_total_variance": 0.001422214803622857,
+              "individual_output_rms_v": 9.047001160176817e-07
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 5.144536430964464e-14,
+            "rbps": 5.144534290034143e-14,
+            "rbpb": 2.057813732516959e-13,
+            "rbdb": 5.1445402278256894e-14,
+            "rbsb": 5.14453483198116e-14,
+            "id": 1.3124558983591385e-09,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 5.125323189911667e-08,
+            "flicker_noise": 0.0,
+            "thermal_noise": 4.836299196896203e-09,
+            "rn": 1.4743834770458243e-10
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 8.939271955653027e-05,
+            "rbps": 8.939268235520293e-05,
+            "rbpb": 0.0003575707322884657,
+            "rbdb": 8.939278553171681e-05,
+            "rbsb": 8.939269177220645e-05,
+            "id": 2.280555374166868,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 89.0588655947103,
+            "flicker_noise": 0.0,
+            "thermal_noise": 8.403671421150076,
+            "rn": 0.2561924683612951
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 60.43045889806307,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 4.648094103488375e-08,
+            "pmos_load_pair_fn_variance_v2": 4.722420694260775e-09,
+            "other_variance_frozen_v2": 6.346475175763109e-09,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 7.966476746820459e-05,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.00010213784393655732,
+            "conditional_remaining_total_noise_error_budget_rms_v": 9.830031682587857e-05,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        },
+        "1Hz_100MHz": {
+          "low_hz": 1.0,
+          "high_hz": 100000000.0,
+          "output_variance_v2": 1.508346369221686e-07,
+          "output_rms_v": 0.00038837435152461934,
+          "top20_sources": [
+            {
+              "source": "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.327585678078972e-08,
+              "percent_total_variance": 28.690927802690485,
+              "individual_output_rms_v": 0.00020802849992438468
+            },
+            {
+              "source": "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 4.32758567807877e-08,
+              "percent_total_variance": 28.69092780268915,
+              "individual_output_rms_v": 0.00020802849992437983
+            },
+            {
+              "source": "XPGA_XRINP_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.3088722249884818e-08,
+              "percent_total_variance": 15.307307871068572,
+              "individual_output_rms_v": 0.00015194973593226418
+            },
+            {
+              "source": "XPGA_XRINN_XR.rhrpoly_0p35",
+              "output_variance_v2": 2.3088722249883458e-08,
+              "percent_total_variance": 15.307307871067671,
+              "individual_output_rms_v": 0.0001519497359322597
+            },
+            {
+              "source": "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.078093316600725e-09,
+              "percent_total_variance": 3.3666626049698687,
+              "individual_output_rms_v": 7.126074176291406e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8",
+              "output_variance_v2": 5.078093316577559e-09,
+              "percent_total_variance": 3.3666626049545103,
+              "individual_output_rms_v": 7.126074176275153e-05
+            },
+            {
+              "source": "XPGA_XRINP_XR.rend",
+              "output_variance_v2": 1.4613729693452693e-09,
+              "percent_total_variance": 0.9688576835964704,
+              "individual_output_rms_v": 3.8227908252286956e-05
+            },
+            {
+              "source": "XPGA_XRINN_XR.rend",
+              "output_variance_v2": 1.461372969345183e-09,
+              "percent_total_variance": 0.9688576835964132,
+              "individual_output_rms_v": 3.822790825228583e-05
+            },
+            {
+              "source": "RSP",
+              "output_variance_v2": 7.97853641509913e-10,
+              "percent_total_variance": 0.5289591686567385,
+              "individual_output_rms_v": 2.8246303147667183e-05
+            },
+            {
+              "source": "RSN",
+              "output_variance_v2": 7.978536415098661e-10,
+              "percent_total_variance": 0.5289591686567074,
+              "individual_output_rms_v": 2.8246303147666353e-05
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.837096066324207e-10,
+              "percent_total_variance": 0.5195819890074842,
+              "individual_output_rms_v": 2.7994813923875628e-05
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_02.rhrpoly_0p35",
+              "output_variance_v2": 7.837096066323361e-10,
+              "percent_total_variance": 0.519581989007428,
+              "individual_output_rms_v": 2.7994813923874117e-05
+            },
+            {
+              "source": "XPGA_XFN16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.836590425584888e-10,
+              "percent_total_variance": 0.5195484661542698,
+              "individual_output_rms_v": 2.799391081214786e-05
+            },
+            {
+              "source": "XPGA_XFP16_XR_XR_SEG_01.rhrpoly_0p35",
+              "output_variance_v2": 7.836590425584063e-10,
+              "percent_total_variance": 0.519548466154215,
+              "individual_output_rms_v": 2.7993910812146385e-05
+            },
+            {
+              "source": "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 7.237541358307446e-11,
+              "percent_total_variance": 0.04798328491380963,
+              "individual_output_rms_v": 8.507374070950122e-06
+            },
+            {
+              "source": "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8",
+              "output_variance_v2": 7.23754135735335e-11,
+              "percent_total_variance": 0.04798328490748419,
+              "individual_output_rms_v": 8.507374070389376e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN1_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.010975704148941e-11,
+              "percent_total_variance": 0.01996209733777938,
+              "individual_output_rms_v": 5.487235828856767e-06
+            },
+            {
+              "source": "XPGA_XOTA_XRN2_XR.rhrpoly_0p35",
+              "output_variance_v2": 3.010975703048187e-11,
+              "percent_total_variance": 0.019962097330481626,
+              "individual_output_rms_v": 5.4872358278537535e-06
+            },
+            {
+              "source": "XRIN_XR.rend",
+              "output_variance_v2": 9.729262710008276e-12,
+              "percent_total_variance": 0.006450284171154018,
+              "individual_output_rms_v": 3.1191766076976588e-06
+            },
+            {
+              "source": "XRIP_XR.rend",
+              "output_variance_v2": 9.729262709913602e-12,
+              "percent_total_variance": 0.006450284171091252,
+              "individual_output_rms_v": 3.119176607682483e-06
+            }
+          ],
+          "mechanism_variance_v2": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 5.587457395851755e-13,
+            "rbps": 5.586462019725576e-13,
+            "rbpb": 2.23459382084797e-12,
+            "rbdb": 5.589471492433863e-13,
+            "rbsb": 5.586739462444294e-13,
+            "id": 1.4235582741741008e-08,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 8.264139843325525e-08,
+            "flicker_noise": 0.0,
+            "thermal_noise": 5.23574785671926e-08,
+            "rn": 1.5957075731218516e-09
+          },
+          "mechanism_percent_total_variance": {
+            "rd": 0.0,
+            "rs": 0.0,
+            "rgbi": 0.0,
+            "rbpd": 0.00037043596284419143,
+            "rbps": 0.0003703699716271547,
+            "rbpb": 0.0014814858618985712,
+            "rbdb": 0.0003705694929552592,
+            "rbsb": 0.0003703883654605857,
+            "id": 9.437873841329056,
+            "igs": 0.0,
+            "igd": 0.0,
+            "igb": 0.0,
+            "fn": 54.78940389262091,
+            "flicker_noise": 0.0,
+            "thermal_noise": 34.71184048675061,
+            "rn": 1.0579185296446494
+          },
+          "noise_only_sine_to_rms_ratio_db_not_SNDR": 56.24588904762707,
+          "r5_area_sensitivity_NOT_SIMULATED": {
+            "input_pair_fn_variance_v2": 7.570279540057153e-08,
+            "pmos_load_pair_fn_variance_v2": 6.800079104754419e-09,
+            "other_variance_frozen_v2": 6.833176241684265e-08,
+            "conditional_floor_if_only_these_four_fn_removed_rms_v": 0.0002614034475993816,
+            "conditional_area16_input_area4_load_estimated_rms_v": 0.0002734286139115052,
+            "conditional_remaining_total_noise_error_budget_rms_v": 0.0,
+            "assumptions": "All transfer functions, bias, thermal/other components unchanged; selected flicker PSD scales inversely with area. Not a true bound for a changed circuit."
+          }
+        }
+      }
+    }
+  },
+  "static_temperature": {
+    "1": {
+      "fixed27_coefficients": [
+        1.0007458207325473,
+        -8.159156727482907e-16
+      ],
+      "temperature": {
+        "27": {
+          "max78_error_lsb": 0.035366157624139305,
+          "output_diff_endpoints_v": [
+            -0.39969499173582423,
+            0.399694991735808
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        },
+        "-20": {
+          "max78_error_lsb": 2.891424960593554,
+          "output_diff_endpoints_v": [
+            -0.4002662046036837,
+            0.4002662046029569
+          ],
+          "adc_range_exceeded_count": 2,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        },
+        "85": {
+          "max78_error_lsb": 1.942383257625977,
+          "output_diff_endpoints_v": [
+            -0.39932280517119756,
+            0.39932280504301576
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        }
+      }
+    },
+    "4": {
+      "fixed27_coefficients": [
+        1.0034535988118733,
+        1.5763805389410113e-15
+      ],
+      "temperature": {
+        "27": {
+          "max78_error_lsb": 0.45560137597590256,
+          "output_diff_endpoints_v": [
+            -0.39853463660877386,
+            0.3985346366087752
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        },
+        "-20": {
+          "max78_error_lsb": 3.7742441958423,
+          "output_diff_endpoints_v": [
+            -0.3993579349797438,
+            0.39935792439054885
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        },
+        "85": {
+          "max78_error_lsb": 1.0108007893745707,
+          "output_diff_endpoints_v": [
+            -0.3984265724336512,
+            0.3984265724336514
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        }
+      }
+    },
+    "16": {
+      "fixed27_coefficients": [
+        1.0027234496419282,
+        1.0127603481620102e-14
+      ],
+      "temperature": {
+        "27": {
+          "max78_error_lsb": 0.3177706154127691,
+          "output_diff_endpoints_v": [
+            -0.398851682953565,
+            0.398851682953569
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        },
+        "-20": {
+          "max78_error_lsb": 2.834720877752659,
+          "output_diff_endpoints_v": [
+            -0.39836142629477356,
+            0.3983614262947768
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": true,
+          "overall_pass": false
+        },
+        "85": {
+          "max78_error_lsb": 4.659891779973577,
+          "output_diff_endpoints_v": [
+            -0.39982124209463843,
+            0.3998212420946481
+          ],
+          "adc_range_exceeded_count": 0,
+          "temperature_4lsb_numeric_screen_met": false,
+          "overall_pass": false
+        }
+      }
+    }
+  },
+  "logs": {
+    "spectre_noise_screen_20260923T110907590483Z": {
+      "errors_warnings_notices": [
+        "0",
+        "2",
+        "11"
+      ],
+      "bad_pivoting_notice_present": true,
+      "gmin_notice_present": true
+    },
+    "spectre_three_gain_20260923T110840899589Z": {
+      "errors_warnings_notices": [
+        "0",
+        "2",
+        "47"
+      ],
+      "bad_pivoting_notice_present": true,
+      "gmin_notice_present": true
+    },
+    "spectre_three_gain_20260923T110850521882Z": {
+      "errors_warnings_notices": [
+        "0",
+        "2",
+        "32"
+      ],
+      "bad_pivoting_notice_present": true,
+      "gmin_notice_present": true
+    },
+    "spectre_three_gain_20260923T110859261509Z": {
+      "errors_warnings_notices": [
+        "0",
+        "2",
+        "39"
+      ],
+      "bad_pivoting_notice_present": true,
+      "gmin_notice_present": true
+    }
+  },
+  "integration_method": "Trapezoid integration of PSD over linear frequency, linearly interpolating band edges; square out ASD exactly once. Same weights for device contributions preserve variance closure.",
+  "noise_signal_reference": {
+    "sine_dbfs": -1,
+    "signal_rms_v": 0.25208383283729746,
+    "sndr_target_db": 65,
+    "total_allowed_noise_and_distortion_rms_v": 0.00014175715661678828,
+    "note": "Whole-chain allowance; all of it cannot be assigned to the front end."
+  },
+  "finite_record_scope": "100k/16384=6.103515625Hz lower band is a sensitivity study, not the exact weighting/window of a sampled noisy FFT; lower-frequency fluctuations cannot simply be discarded for acceptance.",
+  "sampling_scope": "Fixed conduction proxy only. Actual ADC bottom-plate network, time-varying noise transfer/folding and quantitative control tests remain required.",
+  "parser_validation": {
+    "tests": 5,
+    "final_failures": 0,
+    "initial_fixture_issue": "First test fixture omitted SWEEP content; fixture corrected and all five tests rerun successfully."
+  },
+  "hashes": {
+    "v2/analog/frontend/cadence_20260923/review_r4_noise.py": "c1fbe21e14e1bd5e65e106b1673df83b19f4bccdece658acea2047730be81984",
+    "v2/analog/frontend/cadence_20260923/parse_noise_psf.py": "4a18182f0e907b66f78aaa4f14b0e29481b2a05a2de75c14be42af5df9d85a89",
+    "v2/analog/frontend/cadence_20260923/test_noise_psf.py": "4ba21f7e75fb55d7ed1c7c242cdcfe454182a8d9ffd537d106e347e86c5034ec",
+    "v2/config/spec.json": "9a9ab5d48326208d39925265bf455ec15fa297a6cdad3a1ca78759e4c69ae30e",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g1_front.noise": "8c967ae28cf163e9d6a1980ad844b7df29add780cb01d5fb28201a7bbe8ab321",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g1_track.noise": "1ae383157c8dc28319142377e9b356901bad7960702c7d24622d06ca282e0acc",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g4_front.noise": "f5cd5c733f25d4a9a6da203bbe5e0b8ec3ac039557d12b5b8a1b4676878c9777",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g4_track.noise": "7e350803f6374d46e2414ab27013163520c648378d1b20b59b5ff2b66515303b",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g16_front.noise": "61748cff3aa0b1e88a3b8ef197c1d75cf2ddd60343de810cf4edcbf3f8004987",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g16_track.noise": "c48787d804f878cf244a5bb0bd0c4e174f9af41512cd512bace0fcd9612f3c12",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/input.raw/g1_dc.dc": "89fbf20a4dac3d8c0b70cc6cbdc026b6d4d8980096a7158884f5d823501aa416",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/input.raw/g1_dc.dc": "59363191519739e987f71144e9ad05bb6d161109f30724ca4945c10549288684",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/input.raw/g1_dc.dc": "bb1ee902d02896419163f0e6193db6b83d402e9339e1c27a6de0912909a64242",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/input.raw/g4_dc.dc": "f47dd492496eb3edf8591d4a577f1f4ff7330d849514a287782615ba7e207f49",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/input.raw/g4_dc.dc": "46d9b3413b271add152d65c8e83b7c655f85f5da3e2b05cf2f383922b6114802",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/input.raw/g4_dc.dc": "6717ff4be39bf1c6dd5ba1641768efbf5712d4eee50f1c822272cc98d8e905f4",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/input.raw/g16_dc.dc": "72115f04651a1a5baa57041532474a587e52014cbb9133a025bb8dae91f2a61b",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/input.raw/g16_dc.dc": "9567f916469c36b1c50eb9592220e88e516d2710d86527a87e02a5ab0c2adc9e",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/input.raw/g16_dc.dc": "089ff23135771e80e69c3c7320fc1e3554ea13e1fe0d089a94e4b923968222dc",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/native_netlist": "356b502ece93ea04558d59abff51259ee90c20a21c678dd7529f87b14ecbe695",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.scs": "122bdffbd29eb7211e60fa89454aaaeebb10ae9c4df3e19f9ba9897be74daab2",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/provenance.json": "d0c7d6db4ddad904f1fb70c7b711d2e772ff5271dfc4882b6da893fbde7574f8",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/spectre.out": "3abb82a0d2b67c7b72032d0b295a11b978a13ebbdf96ac9d12d4aa57f869f633",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/native_netlist": "356b502ece93ea04558d59abff51259ee90c20a21c678dd7529f87b14ecbe695",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/input.scs": "4a00a83ea8504a564238e93b968d8678953f7a49183d972977520179ce3d3b79",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/provenance.json": "e211c77a05917bc58c3b93fc00fa89e6e781cd25cbd6546b44bde890b6586703",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110840899589Z/spectre.out": "2391fac4189cb108550fc83310870f43d7e6b02d86d9b78a2bce729b083eaacc",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/native_netlist": "356b502ece93ea04558d59abff51259ee90c20a21c678dd7529f87b14ecbe695",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/input.scs": "5bf08eaa48065620d802f965d5b69e2db3f23b4081958c3d4edde7ad8d69dae1",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/provenance.json": "46df0c1e43135c8649b56c74adcd830f6b2f0039a008495f1ae4d4ea75ac8cbd",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110850521882Z/spectre.out": "7364d3564a670bc64d5e7e6e6eaf24f644d18899875a8d7054492c3e356088a0",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/native_netlist": "356b502ece93ea04558d59abff51259ee90c20a21c678dd7529f87b14ecbe695",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/input.scs": "71f832cc4003569f321f28f58ce9ffd0aa1e5861f5e1e78c9f288a89f8f0e599",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/provenance.json": "a1db7796c5f35ba830baffe7112e4c2481679880d957b54a36a63bd1481b697d",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T110859261509Z/spectre.out": "b7d5b32543349051b298a04139de4b810d09fb123070ca092e9bf85bb07ff340"
+  }
+}

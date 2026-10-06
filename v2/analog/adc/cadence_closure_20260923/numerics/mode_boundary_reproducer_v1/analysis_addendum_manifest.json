@@ -1,0 +1,13 @@
+{
+  "status": "ADDITIONAL_LOCAL_ANALYSIS_AND_PREPARED_TRAP_ONLY",
+  "original_frozen_manifest_sha256": "f354b89be70a3594cc79d20d51267dff3500aaf30caed3b64043a7d7dd7c9eac",
+  "files": {
+    "review.py": "74b4fd159aeac4f9fb8a00d2bc9c76166a839fea97fd1409199903aa82a61f48",
+    "test_review.py": "7152f62a645eac0adeb39dc7eb57d3138fcf1bb01962bab92c5be2752484fcf2",
+    "psf_stream.py": "5f32f36c44c806db556bd0efd5e8de9239884440ae21c65a71b4554dc6375938",
+    "traponly_manifest.json": "475888aa2e538e6f89473d13cb4b84478c88a4594512cfcab5a5ee0a5df601a5",
+    "cases/matched/strict_traponly/input.scs": "fd6bd0be7578654046df10f4aac90ea4f56931abd4ba896b40afc7180ac9b690"
+  },
+  "frozen_original_EDA_inputs_unchanged": true,
+  "note": "Original run_case raw gzip probe is optional; raw may be mode_boundary.tran rather than mode_boundary.tran.tran. Collect all input.raw files; review resolves a unique matching raw and never substitutes missing data."
+}

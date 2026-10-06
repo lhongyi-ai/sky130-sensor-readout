@@ -1,0 +1,68 @@
+{
+  "status": "INDEPENDENT_GRAPH_AUDIT_COMPLETE_PHYSICAL_REPAIR_NOT_RUN",
+  "source_sha256": {
+    "v2/physical/cdac_route_20260911/artifacts/cdac_diff_routed_flat_rc.spice": "7281fb098ddbcad91ee5079031114830a7f1d51e8b719b6b7ca6d3f3dbbbce11",
+    "v2/environment/results/device_qualification.json": "121ca2bd199db5e1e33587fbc38fac1a17aa9b191957fa27e99c3a4f068b8e73",
+    "v2/physical/cdac_route_20260911/generate_routed_cdac.py": "9b8a09f706716e069666ff266f368e6e38b6ac6d3320be083584b6dcd84eae74",
+    "v2/analog/adc/cdac_pex_linearity_20260911/qualification.json": "0e32c313978376eeb9e67de697b8688b4a8dd9856c8a5c5d91537baab2e73a71",
+    "v2/physical/cdac_route_20260911/artifacts/cdac_side_p_routed_flat.cap.spice": "60a1ef02d9eb1c80e0b996dd91f1745581820e5d1dc023532d43f99ff0018e6e",
+    "v2/physical/cdac_route_20260911/artifacts/cdac_side_n_routed_flat.cap.spice": "1561ce1028e8e9b5ad0d4643da878901af61e3920a988cc76e1ead253429ec73"
+  },
+  "unit_capacitance_ff": "19.845",
+  "unit_scope": "Existing open PDK 3x3 only; not school 4x4",
+  "graph": {
+    "components": 31,
+    "ports": 30,
+    "counts": {
+      "X": 8712,
+      "X_self_loop": 520,
+      "R": 26210,
+      "C": 17732
+    },
+    "excluded_self_loop_capacitance_ff": {
+      "X": "10319.400"
+    },
+    "all_components_reach_exactly_one_port_or_substrate": true,
+    "duplicate_element_ids": false,
+    "symmetric_matrix": true,
+    "charge_conservation_row_sums_zero": true,
+    "all_nonnegative_capacitor_edges": true,
+    "cross_side_top_coupling_zero": true
+  },
+  "original_static": {
+    "max_abs_inl_lsb": 3.5620710270991087,
+    "min_dnl_lsb": -3.854471719252156,
+    "max_dnl_lsb": 0.3243001319824828,
+    "nonpositive_transition_count": 255,
+    "pass_static_limits": false
+  },
+  "cap_only_independent_checks": [
+    {
+      "side": "P",
+      "max_cap_only_vs_rc_top_bit_difference_ff": 0.0,
+      "all_12_couplings_exactly_equal": true,
+      "interpretation": "Both views contain the same low-bit excess before and after RC subdivision"
+    },
+    {
+      "side": "N",
+      "max_cap_only_vs_rc_top_bit_difference_ff": 0.0,
+      "all_12_couplings_exactly_equal": true,
+      "interpretation": "Both views contain the same low-bit excess before and after RC subdivision"
+    }
+  ],
+  "counterfactual": {
+    "scope": "Sensitivity calculation only. Remove lower-bit excess vs B8 per-unit slope; no new layout or PEX.",
+    "apparent_static": {
+      "max_abs_inl_lsb": 0.11973402685195975,
+      "min_dnl_lsb": -0.2394680537039195,
+      "max_dnl_lsb": 0.009862052819514662,
+      "nonpositive_transition_count": 0,
+      "pass_static_limits": true
+    },
+    "physical_implementation_validated": false
+  },
+  "mechanism": "Non-proportional TOP-to-small-bit capacitance exists before RC subdivision. Internal low-bit M5 trunks cross TOP, whereas high-bit trunks are outside array. This is a leading physical hypothesis, not an isolated geometry experiment.",
+  "school_gate": "School CDF reportedly minimum 4x4: preserve old 3x3 evidence, obtain actual school unit geometry/model before new native layout.",
+  "full_adc_pass": false,
+  "layout_repair_pass": false
+}

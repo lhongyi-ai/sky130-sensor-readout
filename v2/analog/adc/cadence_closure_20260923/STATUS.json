@@ -1,0 +1,435 @@
+{
+  "task": "Real native ADC + original RTL reset integration and numerical closure",
+  "stage": "CONTROLLED_DIAGNOSTICS_COMPLETE_NUMERICAL_CLOSURE_UNRESOLVED",
+  "remote_connection": "CONNECTED_ACTUAL_SCHOOL_SPECTRE_AND_PVS_EXECUTED",
+  "two_frames": "FUNCTIONAL_PASS_PRECISION_NOT_QUALIFIED",
+  "twelve_frames": "GATED_NOT_RUN",
+  "numerical_qualification": "NOT_PASSED",
+  "full_code_noise_pvt_mismatch": "GATED_NOT_RUN",
+  "formal_ADC_PEX_allowed": false,
+  "remote_concurrency": 1,
+  "preserve_old_cells_and_failures": true,
+  "comparator_diagnostics": {
+    "strict_expanded_log": {
+      "errors": 0,
+      "LTE_ignored": 144,
+      "LTE_relaxed": 9
+    },
+    "ltethstep_zero": {
+      "errors": 0,
+      "LTE_ignored": 153,
+      "LTE_relaxed": 0
+    },
+    "robust": {
+      "errors": 0,
+      "LTE_ignored_warnings_printed": 1000,
+      "warnings_suppressed": 4084
+    },
+    "sigglobal": {
+      "errors": 0,
+      "LTE_relaxed": 1,
+      "accuracy": "NOT_QUALIFIED"
+    }
+  },
+  "two_frame_attempts": [
+    {
+      "run": "runs/task_20260924T021748693597Z",
+      "result": "ELABORATION_FAILED_FATAL_TASK_UNSUPPORTED",
+      "simulated": false
+    },
+    {
+      "run": "runs/task_20260924T022119055671Z",
+      "result": "TIMEOUT_300S_AT_RESET_RELEASE",
+      "compiled_bound": true,
+      "selected_saved_voltage_nodes": 74
+    },
+    {
+      "run": "runs/task_20260924T022747927763Z",
+      "result": "TIME_BUDGET_300S_ENDED_DURING_SECOND_FRAME",
+      "completed_frames": 1,
+      "completed_raw_codes": [
+        5
+      ],
+      "first_frame_true_decisions": 12,
+      "first_frame_real_SR_Q_checks": "PASS",
+      "reached_approx_s": 2.29088e-05
+    }
+  ],
+  "latest_input": "numerics/mode_boundary_reproducer_v1/ac_boundary_v1",
+  "array_work": "Complete old 3um capacitance-only static candidate: DRC/LVS pass, INL 0.327236855 LSB, DNL -0.177831638 to +0.171533035, no reverse steps. Not school 4um or formal RC dynamic PEX.",
+  "selected_save_actual_nodes": 74,
+  "two_frame_baseline_run": "runs/task_20260924T050345927509Z",
+  "two_frame_baseline": {
+    "raw_codes": [
+      5,
+      4090
+    ],
+    "input_differential_V": [
+      -0.399,
+      0.399
+    ],
+    "real_decisions": 24,
+    "reset_abort": true,
+    "gain_metadata_checks": true,
+    "simulator_errors": 0,
+    "simulator_LTE_warnings": 2,
+    "elapsed_s": 331.062
+  },
+  "strict_comparison": "V4_PARTIAL_NUMERICAL_FAIL",
+  "open_3um_static_reroute_pass": true,
+  "strict_v4": {
+    "run": "runs/task_20260924T051121445887Z",
+    "simulator_exit_code": 124,
+    "transport_exit_code": 255,
+    "recovered_after_transport_drop": true,
+    "completed_frames": 2,
+    "reset_abort_incomplete": true,
+    "max_TP_minus_TN_difference_V": 0.014374193160669235,
+    "RP_max_difference_V": 9.35654880018788e-07,
+    "RN_max_difference_V": 9.36050292832391e-07,
+    "LTE_relaxation_warnings": 20,
+    "formal_pass": false
+  },
+  "v5_diagnostic_run": "runs/task_20260924T052949205285Z",
+  "school_4um_array": "LOCAL_GEOMETRY_MAPPING_PREPARED; M4 common plate differs from old 3um M3 common plate, cannot reuse physical success",
+  "v5_allglobal_diagnostic": {
+    "run": "runs/task_20260924T052949205285Z",
+    "functional_pass": true,
+    "raw_codes": [
+      5,
+      4090
+    ],
+    "reset_abort": true,
+    "Spectre_errors": 0,
+    "LTE_warnings": 2,
+    "elapsed_s": 329.9,
+    "conclusion": "NO_NUMERICAL_CLOSURE; strict v5 not run"
+  },
+  "first_body_probe": {
+    "run": "runs/task_20260924T053814697817Z",
+    "stop_s": 4.1e-06,
+    "purpose": "diagnostic only, not complete two-frame protocol",
+    "Spectre_exit": 0,
+    "qualification_exit": 2,
+    "saved_voltage_signals": 76,
+    "new_internal_body_save_accepted": true,
+    "review": "COMPLETE_DIAGNOSTIC_ONLY",
+    "body_transition_V": -0.000449092,
+    "body_transition_time_step_s": 2.01302e-13,
+    "cause_status": "VDS_ZERO_CROSSING_CORRELATED; MODEL_BUG_NOT_PROVEN"
+  },
+  "new_tool_version_probe": {
+    "run": "runs/task_20260924T055010908278Z",
+    "Spectre": "25.1.0.156.isr2",
+    "Xcelium": "25.03-s006",
+    "simulator_exit": 0,
+    "qualification_exit": 2,
+    "stop_s": 4.1e-06,
+    "warnings": 26,
+    "internal_body_save": "REJECTED_BY_TOOL",
+    "same_LTE_warning_persists": true,
+    "conclusion": "NO_NUMERICAL_FIX",
+    "review": "numerics/version25_probe_review.md"
+  },
+  "school_4um_access_control": {
+    "run": "runs/task_20260924T055458193458Z",
+    "native_cells_created": 3,
+    "good_LVS": "MATCH",
+    "open_LVS": "MISMATCH",
+    "short_LVS": "MISMATCH",
+    "school_DRC_results_each": 0,
+    "project_MIM_DRC_results_each": 0,
+    "status": "TOPOLOGY_CONTROLS_PASS_PHYSICAL_RC_NOT_QUALIFIED",
+    "PEX_qualified": false,
+    "school_DRC_checks_each": 279,
+    "project_MIM_DRC_checks_each": 9,
+    "extracted_MIM_count_each": 2,
+    "black_box_count_each": 0,
+    "review": "../../../physical/cdac_closure_20260923/school4um_preparation/access_tile/README.md"
+  },
+  "qualified_candidate": null,
+  "two_frame_functional_evidence": "integration/reset1_2frames_baseline_v4",
+  "forced_points_diagnostic": {
+    "run": "runs/task_20260924T060049125228Z",
+    "simulator_exit_codes": [
+      0,
+      0
+    ],
+    "scope": "4.1us short probe only; not a complete conversion",
+    "requested_points": 2001,
+    "exact_saved_baseline_points": 1997,
+    "exact_saved_strict_points": 1976,
+    "exact_common_saved_points": 1974,
+    "strict_breakpoint_stepped_over": true,
+    "direct_common_cdac_delta_V": 1.16047659215468e-05,
+    "shared_actual_interval_s": [
+      2e-09,
+      4.1e-06
+    ],
+    "shared_actual_cdac_max_delta_V": 0.0008549889867762658,
+    "same_interval_old_delta_V": 0.000854869,
+    "conclusion": "NO_NUMERICAL_QUALIFICATION_OR_IMPROVEMENT",
+    "review": "numerics/first_phase_commonpoints_pair_review_v2/README.md"
+  },
+  "body_network_probe": {
+    "run": "runs/task_20260924T060914240241Z",
+    "simulator_exit": 0,
+    "qualification_exit": 2,
+    "stop_s": 4.1e-06,
+    "review": "numerics/body_network_probe_review/README.md",
+    "original_run_manifest_preserved": true,
+    "scope": "diagnostic only, expected completed frames 0",
+    "saved_observability": "ALL_REQUESTED_SIGNALS_PRESENT",
+    "shared_76_voltage_channels_and_time_grid": "EXACTLY_EQUAL_TO_OLD_PROBE",
+    "observed_reversed_transition": [
+      1,
+      0
+    ],
+    "cause_status": "CORRELATION_LOCALIZED_NOT_MODEL_BUG_PROVEN",
+    "deployed_manifest_sha256": "29a62bea864a40e95b02ef9614f0e1166948afaa7158a31441f4280f911f3a6e",
+    "scope_clarification_manifest_sha256": "b3de2d522876e0a89796ce56db41ab1d0297882f48767548a3811cd8c6914a51",
+    "review_status": "COMPLETE_OBSERVABILITY_PASS_ACCURACY_NOT_QUALIFIED"
+  },
+  "active_remote_EDA_jobs": 0,
+  "local_analysis_checks": {
+    "PSF_voltage_current_enum_parser": "14_TESTS_PASS",
+    "forced_point_analyzer_json_boundary": "REGRESSION_PASS_ORIGINAL_FAILURE_PRESERVED"
+  },
+  "next_gate": "Traponly controlled pair and single-device numerical localization; only after valid fix rerun full two-frame precision and reset. Twelve frames still gated.",
+  "mode_boundary_matrix": {
+    "run": "runs/task_20260924T071339938962Z",
+    "eight_simulator_exits": 0,
+    "review": "COMPLETE_DIAGNOSTIC_NOT_REPAIR",
+    "report": "numerics/mode_boundary_matrix_review_v1/README.md"
+  },
+  "cthresh_diagnostic": {
+    "run": "runs/task_20260924T070754684209Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "CDAC_max_delta_V": 0.000854441,
+    "warnings": [
+      2,
+      84
+    ],
+    "strict_ignored_LTE": 5,
+    "conclusion": "NOT_EFFECTIVE_FIX",
+    "report": "integration/cthresh_4p1us_review_r1/review.json"
+  },
+  "school_4um_access_2x2": {
+    "run": "runs/task_20260924T071455411070Z",
+    "native_cells_created": 3,
+    "LVS": [
+      "MATCH",
+      "MISMATCH",
+      "MISMATCH"
+    ],
+    "school_DRC_checks_each": 279,
+    "project_MIM_checks_each": 9,
+    "DRC_results_each": 0,
+    "review": "TOPOLOGY_CONTROLS_PASS_PHYSICAL_RC_NOT_QUALIFIED",
+    "formal_PEX": false,
+    "report": "../../../physical/cdac_closure_20260923/school4um_preparation/access_2x2_r2/README.md"
+  },
+  "traponly_diagnostic": {
+    "run": "runs/task_20260924T071725254673Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "CDAC_max_delta_V": 0.000344021,
+    "warnings": [
+      2,
+      80
+    ],
+    "strict_ignored_LTE": 6,
+    "trapezoidal_ringing": true,
+    "conclusion": "REJECTED_AS_FIX",
+    "report": "integration/traponly_4p1us_review_r1/review.json"
+  },
+  "lteratio1_diagnostic": {
+    "run": "runs/task_20260924T072218194124Z",
+    "simulator_exits": [
+      0,
+      124
+    ],
+    "strict_last_time_s": 4.063280441059132e-06,
+    "strict_ignored_LTE": 18,
+    "strict_warnings": 102,
+    "conclusion": "TIMEOUT_INCOMPLETE_NOT_FIX",
+    "report": "integration/lteratio1_4p1us_review_r1/README.md"
+  },
+  "adaptive_trap_diagnostic": {
+    "run": "runs/task_20260924T073009937369Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "CDAC_max_delta_V": 0.000344418,
+    "warnings": [
+      1,
+      55
+    ],
+    "strict_ignored_LTE": 4,
+    "strict_relaxed_LTE": 1,
+    "conclusion": "FULL_SHORT_DOMAIN_FAIL",
+    "report": "integration/adaptive_trap_4p1us_review_r1/README.md"
+  },
+  "closed_phase_load_diagnostic": {
+    "run": "runs/task_20260924T073403971296Z",
+    "retained_native_instances": 654,
+    "CONV_gate_loads": 104,
+    "removed_instances": 87,
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "warnings": [
+      1,
+      5
+    ],
+    "baseline_warning_node": "XLOAD.XADC_XDP_NL",
+    "strict_skipped_source_breakpoint": true,
+    "original_CONV_PFET_warning_reproduced": false,
+    "scope": "reduced diagnostic with no RTL/comparator; not ADC qualification",
+    "review": "COMPLETE_REDUCED_NETWORK_FAIL_NOT_ORIGINAL_SAME_NODE_WARNING",
+    "report": "numerics/closed_phase_load_review_v1/README.md"
+  },
+  "native_reference_control": {
+    "run": "runs/task_20260924T073606929136Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "CDAC_max_delta_V": 0.000854568911,
+    "strict_Newton_rejects": 11,
+    "prior_cthresh_strict_Newton_rejects": 218,
+    "strict_LTE_ignored": 0,
+    "strict_LTE_relaxed": 1,
+    "exact_2R_2C_added_old_four_contributions_removed": true,
+    "deterministic_transient_equivalence_only": true,
+    "noise_equivalence_not_claimed": true,
+    "conclusion": "MATRIX_CONVERGENCE_IMPROVED_WAVEFORM_GATE_FAILED",
+    "report": "integration/native_ref_cthresh_4p1us_review_r1/README.md"
+  },
+  "halfsine_control": {
+    "run": "runs/task_20260924T074135693318Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "actual_smoother_command_confirmed": true,
+    "changes_boundary_shape": true,
+    "strict_LTE_relaxed": 4,
+    "CDAC_max_delta_V": 0.001127887,
+    "conclusion": "BREAKPOINT_SKIP_REMOVED_BUT_WAVEFORM_GATE_FAILED",
+    "report": "numerics/closed_phase_load_halfsine_review_v1/README.md"
+  },
+  "public_model_investigation": {
+    "report": "numerics/bsim4_public_mode_review.md",
+    "specific_supported_fix_found": false,
+    "model_bug_proven": false
+  },
+  "active_run": null,
+  "native_reference_LTE1": {
+    "run": "runs/task_20260924T074416052775Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "complete_short_domain": true,
+    "CDAC_max_delta_V": 0.00018297447302381697,
+    "strict_warnings": 103,
+    "strict_LTE_ignored": 23,
+    "strict_LTE_relaxed": 4,
+    "conclusion": "ERROR_REDUCED_BUT_GATE_FAILED_AND_WARNINGS_UNRESOLVED",
+    "report": "integration/native_ref_lte1_4p1us_review_r1/README.md"
+  },
+  "native_reference_finer": {
+    "run": "runs/task_20260924T075605661855Z",
+    "simulator_exit": 124,
+    "budget_s": 300,
+    "conclusion": "TIMEOUT_NO_QUALIFICATION",
+    "report": "integration/native_ref_lte1_4p1us_review_r1/strict_to_finer_review_r1/README.md",
+    "last_time_s": 4.062500225443528e-06,
+    "unresolved_LTE_ignored": 85,
+    "time_correction": "Earlier narrative3.3593e-14s offset was prefix peak time; actual last savedtime2.2544e-13s after4.0625us. Rawreview unchanged."
+  },
+  "native_ground_control": {
+    "run": "runs/task_20260924T080157486770Z",
+    "simulator_exit": 124,
+    "budget_s": 300,
+    "conclusion": "TIMEOUT_FAILURE_MOVED_TO_EQUIVALENT_GROUND_BRANCH_NO_FIX",
+    "changes_only_zero_volt_ground_representation": true,
+    "last_time_s": 4.062828137323451e-06,
+    "ground_voltage_all_saved_zero": true,
+    "report": "integration/native_ground_finer_4p1us_review_r1/README.md"
+  },
+  "static_charge_control": {
+    "run": "runs/task_20260924T080723598851Z",
+    "simulator_exits": [
+      0,
+      0
+    ],
+    "status": "COMPLETE_CONTROLLED_DIAGNOSTIC_NOT_ADC_QUALIFICATION",
+    "full_ADC_pass": false,
+    "total_DC_points": 14408,
+    "simulator_errors": [
+      0,
+      0
+    ],
+    "simulator_warnings": [
+      0,
+      0
+    ],
+    "PDK_hashes_unchanged": true,
+    "report": "numerics/static_charge_review_v1/README.md",
+    "repeatable_Q_branch_slope_change": true,
+    "finite_charge_jump_proven": false,
+    "model_bug_proven": false
+  },
+  "ground_alias_control": {
+    "run": "runs/task_20260924T081210453008Z",
+    "real_exit": 137,
+    "wall_budget_s": 300,
+    "kill_after_s": 10,
+    "model_or_circuit_changed": false,
+    "conclusion": "GROUND_ALIAS_INCOMPLETE_NO_REPAIR",
+    "no_remaining_remote_EDA_after_return": true,
+    "last_time_s": 4.06318627207873e-06,
+    "report": "integration/ground_alias_finer_4p1us_review_r1/README.md",
+    "observed_LTE_ignored": 124
+  },
+  "fixed_current_finer_control": {
+    "run": "runs/task_20260924T081825369891Z",
+    "real_exit": 124,
+    "budget_s": 300,
+    "iabstol_A": 1e-14,
+    "preserves_original_strict_absolute_current_limit": true,
+    "conclusion": "DID_NOT_COMPLETE_NO_QUALIFICATION",
+    "review": "integration/native_ref_finer_fixed_i_4p1us_review_r1/README.md",
+    "last_time_s": 4.063283615652629e-06,
+    "simulator_errors": 1,
+    "simulator_warnings": 166,
+    "LTE_ignored": 81,
+    "LTE_relaxed": 6,
+    "CDAC_prefix_only_delta_V": 2.07816e-07
+  },
+  "AC_boundary_control": {
+    "run": "runs/task_20260924T082423953684Z",
+    "completed_bias_cases": 7,
+    "frequency_points_per_case": 41,
+    "simulator_errors_each": 0,
+    "simulator_warnings_each": 0,
+    "actual_external_branch_response_difference": true,
+    "model_bug_proven": false,
+    "ADC_qualification": false,
+    "report": "numerics/ac_boundary_review_v1/README.md",
+    "analysis_status": "COMPLETE_CONTROLLED_DIAGNOSTIC_NOT_ADC_QUALIFICATION",
+    "independent_review": "numerics/ac_port_cross_review_v1/README.md",
+    "report_integrity_verified": true
+  },
+  "next_required_evidence": "Supported interpretation/fix of source-drain mode-boundary response and transient numerical difficulties. No full two-frame precision qualification from these controls; 12 frames and subsequent gated tests remain not run.",
+  "on_linuxlab_connection_failure": "Stop the current remote attempt and inform user; do not repeatedly retry unavailable access."
+}

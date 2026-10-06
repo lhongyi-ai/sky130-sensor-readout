@@ -28,12 +28,12 @@ bash ~/cadence_skywater/p1_school_run_v1.sh run --job mim_ac --retry
 
 ## Repair the two generated pulse sources
 
-1. Upload `p1_fix_pulses_v1.il` to `/home/compute/l.hongyi/cadence_skywater/`. This is a single SKILL file requiring no extraction.
+1. Upload `p1_fix_pulses_v1.il` to `/home/cadence-user/cadence_skywater/`. This is a single SKILL file requiring no extraction.
 2. If schematic windows for `p1b_tb_rc` or `p1b_tb_step` are open, save and close those two editing windows first. Keep the main Virtuoso CIW window open.
 3. Run the following line in the **bottom input field of Cadence CIW**, not in the Linux terminal:
 
 ```lisp
-load("/home/compute/l.hongyi/cadence_skywater/p1_fix_pulses_v1.il")
+load("/home/cadence-user/cadence_skywater/p1_fix_pulses_v1.il")
 ```
 
 Expect two `P1_PULSE_SOURCE_SAVED` messages, followed by:

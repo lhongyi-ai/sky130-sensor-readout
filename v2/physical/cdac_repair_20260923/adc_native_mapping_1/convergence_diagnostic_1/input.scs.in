@@ -1,0 +1,35 @@
+simulator lang=spectre
+global 0
+include "__SCHOOL_MODEL_ENTRY__" section=tt
+include "adc_native_bound.scs"
+VVDD (VDD 0) vsource dc=1.8
+VVCM (VCM 0) vsource dc=.9
+VRP (RPS 0) vsource dc=1.1
+VRN (RNS 0) vsource dc=.7
+RRP (RPS RP) resistor r=1
+RRN (RNS RN) resistor r=1
+CRP (RP 0) capacitor c=10n
+CRN (RN 0) capacitor c=10n
+VINP (IPS 0) vsource dc=.7005
+VINN (INS 0) vsource dc=1.0995
+RINP (IPS INP) resistor r=350
+RINN (INS INN) resistor r=350
+VEVAL (EVAL 0) vsource dc=0
+VSAMPLE (SAMPLE_CMD 0) vsource type=pulse val0=0 val1=1.8 delay=4.058u rise=10n fall=10n width=10u period=20u
+VB0 (B0 0) vsource dc=0
+VB1 (B1 0) vsource dc=0
+VB2 (B2 0) vsource dc=0
+VB3 (B3 0) vsource dc=0
+VB4 (B4 0) vsource dc=0
+VB5 (B5 0) vsource dc=0
+VB6 (B6 0) vsource dc=0
+VB7 (B7 0) vsource dc=0
+VB8 (B8 0) vsource dc=0
+VB9 (B9 0) vsource dc=0
+VB10 (B10 0) vsource dc=0
+VB11 (B11 0) vsource dc=0
+XADC (INP INN Q QB TOP TOPB ACQ CONV EVAL B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0 RP RN VCM VDD 0) sensor_adc_candidate
+XPHASE (SAMPLE_CMD TOP TOPB ACQ CONV VDD 0) sensor_phases
+simulatorOptions options temp=27 reltol=1e-5 vabstol=1e-8 iabstol=1e-13
+saveOptions options save=allpub
+acquire tran stop=8u maxstep=2n errpreset=conservative reltol=1e-6

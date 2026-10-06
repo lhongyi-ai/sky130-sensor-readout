@@ -1,0 +1,1661 @@
+{
+  "status": "NATIVE_NETLIST_AUDIT_PASS",
+  "scope": "Flat native connectivity and requested school_r1 parameters only; no simulator/performance/physical acceptance.",
+  "errors": [],
+  "instances": [
+    {
+      "name": "XPHASE_XCMDB_XN",
+      "originalpath": "XPHASE/XCMDB/XN",
+      "kind": "mos",
+      "line": 46,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CMD_B",
+        "SAMPLE_CMD",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XCMDB_XP",
+      "originalpath": "XPHASE/XCMDB/XP",
+      "kind": "mos",
+      "line": 90,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CMD_B",
+        "SAMPLE_CMD",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCMD_XR",
+      "originalpath": "XPHASE/XDCMD/XR",
+      "kind": "resistor",
+      "line": 96,
+      "model": "res_high_po_1p41",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CMD_B",
+        "XPHASE_XDCMD_RC",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "14.9607K",
+        "l": "63.925u",
+        "w": "1.41u"
+      }
+    },
+    {
+      "name": "XPHASE_XDCMD_XC",
+      "originalpath": "XPHASE/XDCMD/XC",
+      "kind": "mim",
+      "line": 101,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPHASE_XDCMD_RC",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPHASE_XDCMD_XI1_XN",
+      "originalpath": "XPHASE/XDCMD/XI1/XN",
+      "kind": "mos",
+      "line": 44,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XDCMD_B",
+        "XPHASE_XDCMD_RC",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCMD_XI1_XP",
+      "originalpath": "XPHASE/XDCMD/XI1/XP",
+      "kind": "mos",
+      "line": 88,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XDCMD_B",
+        "XPHASE_XDCMD_RC",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCMD_XI2_XN",
+      "originalpath": "XPHASE/XDCMD/XI2/XN",
+      "kind": "mos",
+      "line": 42,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CMD_B_DELAY",
+        "XPHASE_XDCMD_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCMD_XI2_XP",
+      "originalpath": "XPHASE/XDCMD/XI2/XP",
+      "kind": "mos",
+      "line": 86,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CMD_B_DELAY",
+        "XPHASE_XDCMD_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDACQ_XR",
+      "originalpath": "XPHASE/XDACQ/XR",
+      "kind": "resistor",
+      "line": 94,
+      "model": "res_high_po_1p41",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "ACQ",
+        "XPHASE_XDACQ_RC",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "14.9607K",
+        "l": "63.925u",
+        "w": "1.41u"
+      }
+    },
+    {
+      "name": "XPHASE_XDACQ_XC",
+      "originalpath": "XPHASE/XDACQ/XC",
+      "kind": "mim",
+      "line": 100,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPHASE_XDACQ_RC",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPHASE_XDACQ_XI1_XN",
+      "originalpath": "XPHASE/XDACQ/XI1/XN",
+      "kind": "mos",
+      "line": 40,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XDACQ_B",
+        "XPHASE_XDACQ_RC",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDACQ_XI1_XP",
+      "originalpath": "XPHASE/XDACQ/XI1/XP",
+      "kind": "mos",
+      "line": 84,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XDACQ_B",
+        "XPHASE_XDACQ_RC",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDACQ_XI2_XN",
+      "originalpath": "XPHASE/XDACQ/XI2/XN",
+      "kind": "mos",
+      "line": 38,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_ACQ_DELAY",
+        "XPHASE_XDACQ_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDACQ_XI2_XP",
+      "originalpath": "XPHASE/XDACQ/XI2/XP",
+      "kind": "mos",
+      "line": 82,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_ACQ_DELAY",
+        "XPHASE_XDACQ_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCONV_XR",
+      "originalpath": "XPHASE/XDCONV/XR",
+      "kind": "resistor",
+      "line": 92,
+      "model": "res_high_po_1p41",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "CONV",
+        "XPHASE_XDCONV_RC",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "14.9607K",
+        "l": "63.925u",
+        "w": "1.41u"
+      }
+    },
+    {
+      "name": "XPHASE_XDCONV_XC",
+      "originalpath": "XPHASE/XDCONV/XC",
+      "kind": "mim",
+      "line": 98,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPHASE_XDCONV_RC",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPHASE_XDCONV_XI1_XN",
+      "originalpath": "XPHASE/XDCONV/XI1/XN",
+      "kind": "mos",
+      "line": 36,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XDCONV_B",
+        "XPHASE_XDCONV_RC",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(1u)",
+        "l": "150n",
+        "as": "265f",
+        "ad": "265f",
+        "ps": "2.53u",
+        "pd": "2.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 1.0,
+        "target_w_um": 1.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCONV_XI1_XP",
+      "originalpath": "XPHASE/XDCONV/XI1/XP",
+      "kind": "mos",
+      "line": 80,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XDCONV_B",
+        "XPHASE_XDCONV_RC",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCONV_XI2_XN",
+      "originalpath": "XPHASE/XDCONV/XI2/XN",
+      "kind": "mos",
+      "line": 34,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CONV_DELAY",
+        "XPHASE_XDCONV_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XDCONV_XI2_XP",
+      "originalpath": "XPHASE/XDCONV/XI2/XP",
+      "kind": "mos",
+      "line": 78,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CONV_DELAY",
+        "XPHASE_XDCONV_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNACQ_XN1",
+      "originalpath": "XPHASE/XNACQ/XN1",
+      "kind": "mos",
+      "line": 32,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_ACQ_RAW",
+        "XPHASE_CMD_B_DELAY",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNACQ_XN2",
+      "originalpath": "XPHASE/XNACQ/XN2",
+      "kind": "mos",
+      "line": 30,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_ACQ_RAW",
+        "XPHASE_CONV_DELAY",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNACQ_XP1",
+      "originalpath": "XPHASE/XNACQ/XP1",
+      "kind": "mos",
+      "line": 76,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XNACQ_MID",
+        "XPHASE_CMD_B_DELAY",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNACQ_XP2",
+      "originalpath": "XPHASE/XNACQ/XP2",
+      "kind": "mos",
+      "line": 73,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_ACQ_RAW",
+        "XPHASE_CONV_DELAY",
+        "XPHASE_XNACQ_MID",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNCONV_XN1",
+      "originalpath": "XPHASE/XNCONV/XN1",
+      "kind": "mos",
+      "line": 28,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CONV_RAW",
+        "SAMPLE_CMD",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNCONV_XN2",
+      "originalpath": "XPHASE/XNCONV/XN2",
+      "kind": "mos",
+      "line": 26,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CONV_RAW",
+        "XPHASE_ACQ_DELAY",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNCONV_XP1",
+      "originalpath": "XPHASE/XNCONV/XP1",
+      "kind": "mos",
+      "line": 71,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XNCONV_MID",
+        "SAMPLE_CMD",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNCONV_XP2",
+      "originalpath": "XPHASE/XNCONV/XP2",
+      "kind": "mos",
+      "line": 68,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_CONV_RAW",
+        "XPHASE_ACQ_DELAY",
+        "XPHASE_XNCONV_MID",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBACQ_XI1_XN",
+      "originalpath": "XPHASE/XBACQ/XI1/XN",
+      "kind": "mos",
+      "line": 24,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XBACQ_B",
+        "XPHASE_ACQ_RAW",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBACQ_XI1_XP",
+      "originalpath": "XPHASE/XBACQ/XI1/XP",
+      "kind": "mos",
+      "line": 66,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XBACQ_B",
+        "XPHASE_ACQ_RAW",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBACQ_XI2_XN",
+      "originalpath": "XPHASE/XBACQ/XI2/XN",
+      "kind": "mos",
+      "line": 22,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "ACQ",
+        "XPHASE_XBACQ_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(16u)",
+        "l": "150n",
+        "as": "4.24p",
+        "ad": "4.24p",
+        "ps": "32.53u",
+        "pd": "32.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 16.0,
+        "target_w_um": 16.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBACQ_XI2_XP",
+      "originalpath": "XPHASE/XBACQ/XI2/XP",
+      "kind": "mos",
+      "line": 64,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "ACQ",
+        "XPHASE_XBACQ_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "150n",
+        "as": "8.48p",
+        "ad": "8.48p",
+        "ps": "64.53u",
+        "pd": "64.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 32.0,
+        "target_w_um": 32.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBCONV_XI1_XN",
+      "originalpath": "XPHASE/XBCONV/XI1/XN",
+      "kind": "mos",
+      "line": 20,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XBCONV_B",
+        "XPHASE_CONV_RAW",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBCONV_XI1_XP",
+      "originalpath": "XPHASE/XBCONV/XI1/XP",
+      "kind": "mos",
+      "line": 62,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XBCONV_B",
+        "XPHASE_CONV_RAW",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBCONV_XI2_XN",
+      "originalpath": "XPHASE/XBCONV/XI2/XN",
+      "kind": "mos",
+      "line": 18,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "CONV",
+        "XPHASE_XBCONV_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(16u)",
+        "l": "150n",
+        "as": "4.24p",
+        "ad": "4.24p",
+        "ps": "32.53u",
+        "pd": "32.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 16.0,
+        "target_w_um": 16.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBCONV_XI2_XP",
+      "originalpath": "XPHASE/XBCONV/XI2/XP",
+      "kind": "mos",
+      "line": 60,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "CONV",
+        "XPHASE_XBCONV_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "150n",
+        "as": "8.48p",
+        "ad": "8.48p",
+        "ps": "64.53u",
+        "pd": "64.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 32.0,
+        "target_w_um": 32.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNTOP_XP1",
+      "originalpath": "XPHASE/XNTOP/XP1",
+      "kind": "mos",
+      "line": 58,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_TOP_RAW_B",
+        "SAMPLE_CMD",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNTOP_XP2",
+      "originalpath": "XPHASE/XNTOP/XP2",
+      "kind": "mos",
+      "line": 56,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_TOP_RAW_B",
+        "XPHASE_ACQ_DELAY",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNTOP_XN1",
+      "originalpath": "XPHASE/XNTOP/XN1",
+      "kind": "mos",
+      "line": 15,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_TOP_RAW_B",
+        "SAMPLE_CMD",
+        "XPHASE_XNTOP_MID",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XNTOP_XN2",
+      "originalpath": "XPHASE/XNTOP/XN2",
+      "kind": "mos",
+      "line": 13,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XNTOP_MID",
+        "XPHASE_ACQ_DELAY",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XTOPI_XN",
+      "originalpath": "XPHASE/XTOPI/XN",
+      "kind": "mos",
+      "line": 11,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_TOP_RAW",
+        "XPHASE_TOP_RAW_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XTOPI_XP",
+      "originalpath": "XPHASE/XTOPI/XP",
+      "kind": "mos",
+      "line": 54,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_TOP_RAW",
+        "XPHASE_TOP_RAW_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBTOP_XI1_XN",
+      "originalpath": "XPHASE/XBTOP/XI1/XN",
+      "kind": "mos",
+      "line": 9,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XBTOP_B",
+        "XPHASE_TOP_RAW",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBTOP_XI1_XP",
+      "originalpath": "XPHASE/XBTOP/XI1/XP",
+      "kind": "mos",
+      "line": 52,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPHASE_XBTOP_B",
+        "XPHASE_TOP_RAW",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBTOP_XI2_XN",
+      "originalpath": "XPHASE/XBTOP/XI2/XN",
+      "kind": "mos",
+      "line": 7,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "TOP",
+        "XPHASE_XBTOP_B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(16u)",
+        "l": "150n",
+        "as": "4.24p",
+        "ad": "4.24p",
+        "ps": "32.53u",
+        "pd": "32.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 16.0,
+        "target_w_um": 16.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XBTOP_XI2_XP",
+      "originalpath": "XPHASE/XBTOP/XI2/XP",
+      "kind": "mos",
+      "line": 50,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "TOP",
+        "XPHASE_XBTOP_B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "150n",
+        "as": "8.48p",
+        "ad": "8.48p",
+        "ps": "64.53u",
+        "pd": "64.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 32.0,
+        "target_w_um": 32.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XTOPB_XN",
+      "originalpath": "XPHASE/XTOPB/XN",
+      "kind": "mos",
+      "line": 5,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "TOPB",
+        "TOP",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(16u)",
+        "l": "150n",
+        "as": "4.24p",
+        "ad": "4.24p",
+        "ps": "32.53u",
+        "pd": "32.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 16.0,
+        "target_w_um": 16.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPHASE_XTOPB_XP",
+      "originalpath": "XPHASE/XTOPB/XP",
+      "kind": "mos",
+      "line": 48,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "TOPB",
+        "TOP",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "150n",
+        "as": "8.48p",
+        "ad": "8.48p",
+        "ps": "64.53u",
+        "pd": "64.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 32.0,
+        "target_w_um": 32.0,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    }
+  ],
+  "cdf_r_usage": "Recorded for traceability only; never used as actual model resistance or acceptance threshold.",
+  "headers": [],
+  "expected_count": 48,
+  "actual_count": 48,
+  "expected_counts_by_kind": {
+    "mos": 42,
+    "resistor": 3,
+    "mim": 3
+  },
+  "native_net_count": 27,
+  "error_count": 0,
+  "limitations": [
+    "Source/drain geometry is recorded and required to be nonnegative when exported; physical equivalence is not established.",
+    "MIM multiplier matches requested netlist only; actual capacitance/statistical averaging requires simulation/model evidence.",
+    "No model loading, Spectre success, waveform, stability, noise, PVT, DRC/LVS or parasitic qualification is inferred."
+  ]
+}

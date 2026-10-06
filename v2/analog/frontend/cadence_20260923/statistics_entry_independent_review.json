@@ -1,0 +1,37 @@
+{
+  "status": "ENV_UNVERIFIED",
+  "scope": "Bounded selected current top library, currently loaded four MOS families and three parameter/R-C entry files. No recursive PDK scan, no simulation.",
+  "metadata_sha256": "2f651be06955f8682f7518de68a52a807785fac15e753cc2e19c6f1949b4bad8",
+  "top_sections": [
+    "tt",
+    "sf",
+    "ff",
+    "ss",
+    "fs",
+    "ll",
+    "hh",
+    "hl",
+    "lh"
+  ],
+  "top_has_explicit_monte_carlo_section": false,
+  "selected_file_count": 17,
+  "selected_scope_has_active_Spectre_statistics_mismatch_vary": false,
+  "selected_scope_has_detected_active_random_function_calls": false,
+  "mismatch_files_present": [
+    "cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice",
+    "cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice",
+    "cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice",
+    "cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+  ],
+  "other_stat_named_file_present": "models/r+c.mrp1monte.spice",
+  "spectre_montecarlo_execution": "NOT_RUN",
+  "required_real_mismatch_samples": 200,
+  "qualified_real_mismatch_samples": 0,
+  "interpretation": [
+    "Named mismatch and monte files are loaded, but filenames alone do not establish a supported stochastic model or variance distribution.",
+    "The bounded active-syntax query found no statistics/vary/montecarlo blocks or common Gaussian/uniform random calls in the selected files. Comment keyword counts do not activate models.",
+    "This is not an exhaustive PDK audit and does not prove no separate school-approved Spectre statistical wrapper exists.",
+    "Do not add invented distributions, substitute corner variation for mismatch, or report Monte Carlo capability as verified. Need an applicable supported statistics entry and a future minimal execution check before200-sample screening."
+  ],
+  "metadata_only_no_PDK_text_copied": true
+}

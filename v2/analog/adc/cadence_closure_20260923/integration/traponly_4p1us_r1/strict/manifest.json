@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "diagnostic_only": true,
+  "expected_completed_frames": 0,
+  "stop_s": 4.1e-06,
+  "profile": "strict",
+  "change": "Explicit tran method=traponly versus original no-cthresh profile; all model/circuit/source/tolerance unchanged; cthresh diagnostic discarded after no improvement",
+  "purpose": "Test supported high-accuracy trapezoidal integration for source-drain mode boundary error; all-time diagnostic, not ADC qualification",
+  "no_strobe_cropping_or_time_alignment": true,
+  "source_manifest_sha256": "50aba848652d4419e46da79a79533c5084a08b5ea5f33cccd260a7d921a8a8e3",
+  "files_sha256": {
+    "amsdControl.scs": "aa46b9fc2009835abc185bb0f7f72cc0553ea0fe97a7d9165a67872588151492",
+    "reset1_native_bound.scs": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+    "sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "p2_ams_reset1.vams": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125",
+    "p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "profile.vh": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+    "run.sh": "16041c0f70cd970095acddee3fa3fe126611ae68bfa30e6e30394adae634156b"
+  }
+}

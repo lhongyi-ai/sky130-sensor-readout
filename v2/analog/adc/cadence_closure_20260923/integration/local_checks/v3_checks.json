@@ -1,0 +1,48 @@
+{
+  "scope": "LOCAL UNIT TESTS ONLY, NO ADC SIMULATION",
+  "checks": [
+    {
+      "frames": 2,
+      "mutation": "none",
+      "pass": true,
+      "actual_simulator_exit": 0,
+      "note": "Failure $finish legitimately exits0; run.sh requires explicit marker and noFAIL."
+    },
+    {
+      "frames": 2,
+      "mutation": "BAD_GAIN",
+      "pass": true,
+      "actual_simulator_exit": 0,
+      "note": "Failure $finish legitimately exits0; run.sh requires explicit marker and noFAIL."
+    },
+    {
+      "frames": 2,
+      "mutation": "BAD_RAIL",
+      "pass": true,
+      "actual_simulator_exit": 0,
+      "note": "Failure $finish legitimately exits0; run.sh requires explicit marker and noFAIL."
+    },
+    {
+      "frames": 12,
+      "mutation": "none",
+      "pass": true,
+      "actual_simulator_exit": 0,
+      "note": "Failure $finish legitimately exits0; run.sh requires explicit marker and noFAIL."
+    },
+    {
+      "frames": 12,
+      "mutation": "BAD_GAIN",
+      "pass": true,
+      "actual_simulator_exit": 0,
+      "note": "Failure $finish legitimately exits0; run.sh requires explicit marker and noFAIL."
+    },
+    {
+      "frames": 12,
+      "mutation": "BAD_RAIL",
+      "pass": true,
+      "actual_simulator_exit": 0,
+      "note": "Failure $finish legitimately exits0; run.sh requires explicit marker and noFAIL."
+    }
+  ],
+  "ieee1364_2001_scoreboard_syntax_pass": true
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PREPARED_NOT_SIMULATED",
+  "native_source": "p2adc_core_fix1_school_r1",
+  "native_source_sha256": "3d2eccc08319a596c91c4e9bb3f99343f40e0654b6e8ea6903641e964c38d921",
+  "selected_primitive_count": 73,
+  "selection": "All and only original XADC_XPRE_* and XADC_XCMP_* native primitives; no device parameter/topology change; line continuations normalized.",
+  "ports": [
+    "XADC_TN",
+    "XADC_TP",
+    "Q",
+    "QB",
+    "EVAL",
+    "VDD",
+    "VSS"
+  ],
+  "expected_sign_from_source": "TN > TP produces PREP > PREN and Q=1; TN < TP should produce Q=0 after evaluate. Must be measured, not injected.",
+  "first_eval_s": 5e-06,
+  "eval_period_s": 6.25e-07,
+  "input_sign_flip_s": 6.55e-06,
+  "checks": [
+    "Before first evaluation Q/QB need not be valid: no physical retention-latch reset exists.",
+    "During EVAL=0 actual StrongARM DPOS/DNEG should both precharge high.",
+    "Sample actual Q/QB 150ns after each EVAL start; complementary valid levels and expected sign.",
+    "At100ns after EVAL falls confirm Q/QB retain the previous actual decision.",
+    "Both polarities repeated; log indeterminate/incorrect decisions and all Newton/LTE warnings."
+  ],
+  "prohibited": [
+    "No nodeset/forced initial latch state",
+    "No added leakage or ideal comparator",
+    "No pre-recorded decisions",
+    "No ADC noise/linearity/12bit claim"
+  ]
+}

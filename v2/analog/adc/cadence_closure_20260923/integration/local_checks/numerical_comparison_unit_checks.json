@@ -1,0 +1,11 @@
+{
+  "scope": "LOCAL SYNTHETIC COMPARISON UNIT CHECKS, NOT ADC RESULTS",
+  "threshold_V": 9.765625000000002e-06,
+  "checks": [
+    "10uV narrow CDAC switching spike fails exact original threshold",
+    "9uV CDAC difference remains below threshold",
+    "10uV reference spike also fails",
+    "out-of-domain extrapolation rejected"
+  ],
+  "pass": true
+}

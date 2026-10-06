@@ -1,0 +1,33 @@
+#!/bin/bash
+# School configured shell only; root owns the single EDA slot.
+set -euo pipefail
+P1_PROFILE=${1:-}; P1_BUDGET=${2:-120}
+case "$P1_PROFILE" in baseline|strict) ;; *) echo 'Usage: bash run_case.sh baseline|strict [budget_seconds]'; exit 64;; esac
+case "$P1_BUDGET" in *[!0-9]*|'') exit 64;; esac
+P1_ROOT=$(cd -- "$(dirname -- "$0")" && pwd)
+P1_OUT="$P1_ROOT/results/${P1_PROFILE}_$(date -u +%Y%m%dT%H%M%SZ)_$$"
+mkdir -p "$P1_ROOT/results"
+mkdir "$P1_OUT"
+cp "$P1_ROOT/input_${P1_PROFILE}.scs" "$P1_OUT/input.scs"
+cp "$P1_ROOT/manifest.json" "$P1_OUT/package_manifest.json"
+printf '%s\n' "$P1_PROFILE" >"$P1_OUT/profile.txt"
+P1_SPECTRE=${P1_SPECTRE:-/opt/cadence/spectre/tools/bin/spectre}
+cd "$P1_OUT"
+sha256sum input.scs package_manifest.json >input_sha256.txt
+# Clear onlyPython's conflictingloader env; Spectre still inherits the actual school environment.
+env -u LD_LIBRARY_PATH /usr/bin/python3 "$P1_ROOT/limited_model_metadata.py" model_metadata_before.json
+printf '%s\n' "$P1_SPECTRE -64 input.scs +log spectre.out -format psfascii" >command.txt
+set +e
+timeout "${P1_BUDGET}s" "$P1_SPECTRE" -64 input.scs +log spectre.out -format psfascii >driver.log 2>&1
+P1_RC=$?
+set -e
+printf '%s\n' "$P1_RC" >exit_code.txt
+env -u LD_LIBRARY_PATH /usr/bin/python3 "$P1_ROOT/limited_model_metadata.py" model_metadata_after.json
+set +e
+cmp -s model_metadata_before.json model_metadata_after.json
+P1_METADATA_RC=$?
+set -e
+printf '%s\n' "$P1_METADATA_RC" >model_hash_comparison_exit.txt
+# Keep allDCandinfo raw files; do not assume time axis, schema, filename or successful OP saves.
+printf '%s\n' "$P1_OUT"
+exit "$P1_RC"

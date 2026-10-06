@@ -1,0 +1,26 @@
+--- parent/input_baseline.scs
++++ halfsine/input_baseline.scs
+@@ -15,8 +15,8 @@
+ VIN (INSRC 0) vsource dc=1.0995
+ RIP (IPSRC INP) resistor r=350
+ RIN (INSRC INN) resistor r=350
+-// Matches observed source command within 2.423pV through original 4.1us probe.
+-VCMD (SAMPLE_CMD 0) vsource type=pwl dc=0 wave=[0 0 4.0625u 0 4.0635u 1.8 4.1u 1.8]
++// Changed command shape only: same endpoints, requested smooth halfsine; must verify actual waveform.
++VCMD (SAMPLE_CMD 0) vsource type=pwl dc=0 edgetype=halfsine transitionreference=100 wave=[0 0 4.0625u 0 4.0635u 1.8 4.1u 1.8]
+ VB11 (B11 0) vsource dc=0
+ VB10 (B10 0) vsource dc=0
+ VB9 (B9 0) vsource dc=0
+--- parent/input_strict.scs
++++ halfsine/input_strict.scs
+@@ -15,8 +15,8 @@
+ VIN (INSRC 0) vsource dc=1.0995
+ RIP (IPSRC INP) resistor r=350
+ RIN (INSRC INN) resistor r=350
+-// Matches observed source command within 2.423pV through original 4.1us probe.
+-VCMD (SAMPLE_CMD 0) vsource type=pwl dc=0 wave=[0 0 4.0625u 0 4.0635u 1.8 4.1u 1.8]
++// Changed command shape only: same endpoints, requested smooth halfsine; must verify actual waveform.
++VCMD (SAMPLE_CMD 0) vsource type=pwl dc=0 edgetype=halfsine transitionreference=100 wave=[0 0 4.0625u 0 4.0635u 1.8 4.1u 1.8]
+ VB11 (B11 0) vsource dc=0
+ VB10 (B10 0) vsource dc=0
+ VB9 (B9 0) vsource dc=0

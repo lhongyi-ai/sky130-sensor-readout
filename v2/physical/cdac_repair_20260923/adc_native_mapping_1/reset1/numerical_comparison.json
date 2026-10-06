@@ -1,0 +1,2880 @@
+{
+  "status": "COMPARATOR_NUMERICAL_SENSITIVITY_ONLY",
+  "all_reported_analog_nodes_le_0_05lsb": false,
+  "actual_tolerances_tightened_10x_and_maxstep_halved": true,
+  "threshold_v": 9.765625000000002e-06,
+  "threshold_lsb": 0.05,
+  "complete_ADC_original_gate": "NOT_RUN_PHYSICAL_CDAC_RP_RN_VCM_ABSENT_FROM_87_DEVICE_FIXTURE",
+  "profiles": {
+    "baseline": {
+      "reltol": 1e-06,
+      "abstol(V)": 1e-08,
+      "abstol(I)": 1e-13,
+      "maxstep": 2e-09
+    },
+    "strict": {
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "maxstep": 1e-09
+    }
+  },
+  "logs": {
+    "baseline": {
+      "summary": {
+        "errors": 0,
+        "warnings": 5,
+        "notices": 6
+      },
+      "LTE": 5,
+      "log_sha256": "8433562042bfe2a6c6413bdbb2728e525aee913ecaf765f4bd8c88d49177f8f0"
+    },
+    "strict": {
+      "summary": {
+        "errors": 0,
+        "warnings": 5,
+        "notices": 10
+      },
+      "LTE": 5,
+      "log_sha256": "b26cc5d3bcfe21852921eac4dddf02d19c9298f03f799a1c83f4743deb2a1ca6"
+    }
+  },
+  "raw_sha256": {
+    "baseline": "5c9fa120f679776f37ef65fce738a0f281cede90f93f4539647d081748f42f55",
+    "strict": "99d0603d9bf08c572b4f019be09cd1cff700e92bf3071941471aeb4dd5184a2b"
+  },
+  "public_voltage_nodes": 101,
+  "additional_differential_channels": 2,
+  "grids": {
+    "union_accepted": 69631,
+    "common_1ns": 9201,
+    "all_pre_EVAL_10pct_minus_1ns": 7,
+    "all_RTL_capture_minus_1ns": 7
+  },
+  "pre_EVAL_times_s": [
+    4.999100000000001e-06,
+    5.624100000000001e-06,
+    6.249100000000001e-06,
+    6.874100000000001e-06,
+    7.499100000000001e-06,
+    8.1241e-06,
+    8.7491e-06
+  ],
+  "RTL_capture_times_s": [
+    5.311499999999999e-06,
+    5.936499999999999e-06,
+    6.5615e-06,
+    7.1865e-06,
+    7.8115e-06,
+    8.4365e-06,
+    9.0615e-06
+  ],
+  "channels": {
+    "VDD": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 0.0,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 0.0,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 4.999100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "TN": {
+      "union_accepted": {
+        "max_abs_error_v": 1.2212453270876722e-15,
+        "max_abs_error_lsb": 6.252776074688882e-12,
+        "worst_time_s": 6.650888684838315e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 0.0,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 4.999100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "TP": {
+      "union_accepted": {
+        "max_abs_error_v": 1.2212453270876722e-15,
+        "max_abs_error_lsb": 6.252776074688882e-12,
+        "worst_time_s": 6.650888684838315e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 0.0,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 4.999100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "EVAL": {
+      "union_accepted": {
+        "max_abs_error_v": 3.0494495817379175e-12,
+        "max_abs_error_lsb": 1.5613181858498137e-08,
+        "worst_time_s": 5.313031122538332e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.499578239361199e-12,
+        "max_abs_error_lsb": 7.677840585529339e-09,
+        "worst_time_s": 5.9380000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.1901767308514462e-13,
+        "max_abs_error_lsb": 1.1213704861959404e-09,
+        "worst_time_s": 8.1241e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "RST_N": {
+      "union_accepted": {
+        "max_abs_error_v": 1.4103098571682997e-11,
+        "max_abs_error_lsb": 7.220786468701694e-08,
+        "worst_time_s": 9.999999999999934e-07,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 7.051549285837765e-12,
+        "max_abs_error_lsb": 3.610393234348935e-08,
+        "worst_time_s": 9.99e-07,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 4.999100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "Q": {
+      "union_accepted": {
+        "max_abs_error_v": 0.05179891308294304,
+        "max_abs_error_lsb": 265.2104349846684,
+        "worst_time_s": 7.040542644822891e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.4376165225881152e-05,
+        "max_abs_error_lsb": 0.1248059659565115,
+        "worst_time_s": 5.167000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4355694410994602e-10,
+        "max_abs_error_lsb": 7.350115538429236e-07,
+        "worst_time_s": 5.624100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.1480373035842604e-11,
+        "max_abs_error_lsb": 1.0997950994351413e-07,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "QB": {
+      "union_accepted": {
+        "max_abs_error_v": 0.054317573897040505,
+        "max_abs_error_lsb": 278.1059783528474,
+        "worst_time_s": 5.16690986312356e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.140317622806347e-05,
+        "max_abs_error_lsb": 0.16078426228768497,
+        "worst_time_s": 5.167000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4572720807848327e-10,
+        "max_abs_error_lsb": 7.461233053618344e-07,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.324829300765941e-11,
+        "max_abs_error_lsb": 1.702312601992162e-07,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_R_BAR": {
+      "union_accepted": {
+        "max_abs_error_v": 0.11253516870282765,
+        "max_abs_error_lsb": 576.1800637584776,
+        "worst_time_s": 8.915446090804289e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 8.714575144774805e-05,
+        "max_abs_error_lsb": 0.44618624741247004,
+        "worst_time_s": 5.167000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.2306157748962505e-11,
+        "max_abs_error_lsb": 1.6540752767468803e-07,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.722049417466938e-12,
+        "max_abs_error_lsb": 2.417689301743072e-08,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_R_NAND": {
+      "union_accepted": {
+        "max_abs_error_v": 0.027822875973027017,
+        "max_abs_error_lsb": 142.45312498189833,
+        "worst_time_s": 8.915474639784909e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0006427967585391561,
+        "max_abs_error_lsb": 3.2911194037204794,
+        "worst_time_s": 8.915e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.074811439464145e-16,
+        "max_abs_error_lsb": 1.0623034570056422e-12,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.065237284109571e-12,
+        "max_abs_error_lsb": 3.6174014894641005e-08,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_BP": {
+      "union_accepted": {
+        "max_abs_error_v": 0.004864386316184799,
+        "max_abs_error_lsb": 24.90565793886617,
+        "worst_time_s": 8.915596974679193e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0035417762967830946,
+        "max_abs_error_lsb": 18.133894639529444,
+        "worst_time_s": 8.915e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 4.999100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 9.71794936319998e-13,
+        "max_abs_error_lsb": 4.97559007395839e-09,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_S_BAR": {
+      "union_accepted": {
+        "max_abs_error_v": 0.11015092639687235,
+        "max_abs_error_lsb": 563.9727431519864,
+        "worst_time_s": 5.790493984086574e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.524244449777393e-05,
+        "max_abs_error_lsb": 0.07804131582860252,
+        "worst_time_s": 5.167000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.184785768439724e-11,
+        "max_abs_error_lsb": 1.6306103134411387e-07,
+        "worst_time_s": 5.624100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.0709659744974764e-12,
+        "max_abs_error_lsb": 1.572334578942708e-08,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_S_NOR": {
+      "union_accepted": {
+        "max_abs_error_v": 0.02850353173367559,
+        "max_abs_error_lsb": 145.93808247641903,
+        "worst_time_s": 5.790416430678758e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0006893293746506046,
+        "max_abs_error_lsb": 3.5293663982110957,
+        "worst_time_s": 5.167000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 6.91886301737118e-11,
+        "max_abs_error_lsb": 3.542457864894044e-07,
+        "worst_time_s": 6.249100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.5013943143298847e-11,
+        "max_abs_error_lsb": 7.68713888936901e-08,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_RST_B": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0007741808865396483,
+        "max_abs_error_lsb": 3.9638061390829993,
+        "worst_time_s": 5.790449746746723e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.049268428304374e-05,
+        "max_abs_error_lsb": 0.30972254352918394,
+        "worst_time_s": 5.7900000000000005e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.8349833132331883e-11,
+        "max_abs_error_lsb": 9.395114563753924e-08,
+        "worst_time_s": 6.249100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.806618902955485e-12,
+        "max_abs_error_lsb": 1.9489888783132082e-08,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XSOR_XNOR_MID": {
+      "union_accepted": {
+        "max_abs_error_v": 0.017187353984037035,
+        "max_abs_error_lsb": 87.99925239826962,
+        "worst_time_s": 5.790525996730873e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.010043284159314325,
+        "max_abs_error_lsb": 51.421614895689345,
+        "worst_time_s": 6.415e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.5731932706375407e-05,
+        "max_abs_error_lsb": 0.08054749545664208,
+        "worst_time_s": 6.249100000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.775608727276449e-06,
+        "max_abs_error_lsb": 0.02957111668365542,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_BN": {
+      "union_accepted": {
+        "max_abs_error_v": 0.004385731611950272,
+        "max_abs_error_lsb": 22.454945853185393,
+        "worst_time_s": 5.79070305802825e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0034145265217444543,
+        "max_abs_error_lsb": 17.482375791331606,
+        "worst_time_s": 5.7900000000000005e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.578892654980791e-11,
+        "max_abs_error_lsb": 1.320393039350165e-07,
+        "worst_time_s": 6.249100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.843769912416974e-12,
+        "max_abs_error_lsb": 2.992010195157491e-08,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_BNB": {
+      "union_accepted": {
+        "max_abs_error_v": 0.000404834874293325,
+        "max_abs_error_lsb": 2.072754556381824,
+        "worst_time_s": 5.313947316942703e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.00031566022180240516,
+        "max_abs_error_lsb": 1.6161803356283144,
+        "worst_time_s": 6.4170000000000006e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.9475929141380614e-16,
+        "max_abs_error_lsb": 9.971675720386874e-13,
+        "worst_time_s": 5.624100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.938394638718478e-09,
+        "max_abs_error_lsb": 1.5044580550238607e-05,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_DNEG": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0004572947967724783,
+        "max_abs_error_lsb": 2.341349359475089,
+        "worst_time_s": 8.266363361981236e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0004039333873098183,
+        "max_abs_error_lsb": 2.0681389430262698,
+        "worst_time_s": 8.890000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4432899320127035e-14,
+        "max_abs_error_lsb": 7.389644451905042e-11,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.40558644304667e-05,
+        "max_abs_error_lsb": 0.1231660258839895,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": false
+      }
+    },
+    "XCMP.XADC_XCMP_BPB": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0004263832007900259,
+        "max_abs_error_lsb": 2.1830819880449326,
+        "worst_time_s": 7.18894637837354e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.00033231316128889965,
+        "max_abs_error_lsb": 1.7014433857991662,
+        "worst_time_s": 8.916e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 5.119742418912849e-17,
+        "max_abs_error_lsb": 2.6213081184833786e-13,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.1780426351369897e-09,
+        "max_abs_error_lsb": 1.1151578291901387e-05,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_DPOS": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0004505300669208623,
+        "max_abs_error_lsb": 2.306713942634815,
+        "worst_time_s": 5.766178409299401e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0004400551021472854,
+        "max_abs_error_lsb": 2.253082122994101,
+        "worst_time_s": 6.392000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4654943925052066e-14,
+        "max_abs_error_lsb": 7.503331289626658e-11,
+        "worst_time_s": 6.249100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.535444201670235e-05,
+        "max_abs_error_lsb": 0.18101474312551602,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": false
+      }
+    },
+    "XCMP.XADC_XCMP_XCORE_DN": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0008785685833917478,
+        "max_abs_error_lsb": 4.498271146965749,
+        "worst_time_s": 5.938101443309728e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0003305659708811026,
+        "max_abs_error_lsb": 1.6924977709112454,
+        "worst_time_s": 8.888e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.3124452635793205e-09,
+        "max_abs_error_lsb": 6.719719749526121e-06,
+        "worst_time_s": 8.1241e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.54368887730272e-05,
+        "max_abs_error_lsb": 0.18143687051789925,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": false
+      }
+    },
+    "XCMP.XADC_XCMP_XCORE_DP": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0009194058815024109,
+        "max_abs_error_lsb": 4.707358113292344,
+        "worst_time_s": 7.813100549766455e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.00035698632727942936,
+        "max_abs_error_lsb": 1.8277699956706783,
+        "worst_time_s": 6.392000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.3062675385810962e-09,
+        "max_abs_error_lsb": 6.688089797535213e-06,
+        "worst_time_s": 6.249100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.416777472814824e-05,
+        "max_abs_error_lsb": 0.12373900660811898,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": false
+      }
+    },
+    "XCMP.XADC_XPRE_START": {
+      "union_accepted": {
+        "max_abs_error_v": 3.958484240049187e-09,
+        "max_abs_error_lsb": 2.0267439309051838e-05,
+        "worst_time_s": 5.001824074205727e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.145518507989553e-09,
+        "max_abs_error_lsb": 1.6105054760906512e-05,
+        "worst_time_s": 5.0020000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 7.131881890609648e-14,
+        "max_abs_error_lsb": 3.65152352799214e-10,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.0886196378254738e-12,
+        "max_abs_error_lsb": 1.5813732545666426e-08,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_BN": {
+      "union_accepted": {
+        "max_abs_error_v": 2.7572778504847406e-09,
+        "max_abs_error_lsb": 1.4117262594481872e-05,
+        "worst_time_s": 5.001480154877555e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.6976323680140126e-09,
+        "max_abs_error_lsb": 8.691877724231745e-06,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.3076206784035094e-12,
+        "max_abs_error_lsb": 6.695017873425968e-09,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.2550297446885e-11,
+        "max_abs_error_lsb": 2.690575229280512e-07,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_BP": {
+      "union_accepted": {
+        "max_abs_error_v": 1.9329563505365854e-09,
+        "max_abs_error_lsb": 9.896736514747317e-06,
+        "worst_time_s": 5.002379121104708e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.7369781168952159e-09,
+        "max_abs_error_lsb": 8.893327958503505e-06,
+        "worst_time_s": 6.2640000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 8.796297024105115e-13,
+        "max_abs_error_lsb": 4.503704076341819e-09,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.0948243967543476e-11,
+        "max_abs_error_lsb": 1.584550091138226e-07,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XRAND_XNAND_MID": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0007612156075338383,
+        "max_abs_error_lsb": 3.897423910573252,
+        "worst_time_s": 8.500415556913143e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0001198202174719342,
+        "max_abs_error_lsb": 0.6134795134563031,
+        "worst_time_s": 8.915e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.197273924103461e-16,
+        "max_abs_error_lsb": 6.130042491409721e-13,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.505383797540288e-06,
+        "max_abs_error_lsb": 0.038427565043406275,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XRESET_MID": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0786103525886015,
+        "max_abs_error_lsb": 402.48500525363966,
+        "worst_time_s": 5.166886968423471e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 9.371222973197924e-05,
+        "max_abs_error_lsb": 0.4798066162277337,
+        "worst_time_s": 7.190000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.1007915732497153e-05,
+        "max_abs_error_lsb": 0.056360528550385425,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 6.709672128124566e-06,
+        "max_abs_error_lsb": 0.03435352129599778,
+        "worst_time_s": 7.8115e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XSET_MID": {
+      "union_accepted": {
+        "max_abs_error_v": 0.07369214168036042,
+        "max_abs_error_lsb": 377.30376540344537,
+        "worst_time_s": 7.040519583647593e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.515398731155031e-05,
+        "max_abs_error_lsb": 0.3335884150351376,
+        "worst_time_s": 5.3160000000000004e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.0900587135598272e-05,
+        "max_abs_error_lsb": 0.05581100613426315,
+        "worst_time_s": 5.624100000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 6.680121749536028e-06,
+        "max_abs_error_lsb": 0.03420222335762446,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XCORE_TAIL": {
+      "union_accepted": {
+        "max_abs_error_v": 0.0003277550594847911,
+        "max_abs_error_lsb": 1.6781059045621305,
+        "worst_time_s": 5.000428908408114e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.044203913706635e-05,
+        "max_abs_error_lsb": 0.2582632403817797,
+        "worst_time_s": 5.354000000000001e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.2041873215656862e-05,
+        "max_abs_error_lsb": 0.06165439086416313,
+        "worst_time_s": 8.1241e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.7380765458456004e-08,
+        "max_abs_error_lsb": 0.00019138951914729474,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_PREN": {
+      "union_accepted": {
+        "max_abs_error_v": 1.909421934076505e-05,
+        "max_abs_error_lsb": 0.09776240302471706,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.0281206742623894e-05,
+        "max_abs_error_lsb": 0.05263977852223434,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.425265504506612e-07,
+        "max_abs_error_lsb": 0.0007297359383073854,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.846871490357898e-07,
+        "max_abs_error_lsb": 0.004017598203063244,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_PREP": {
+      "union_accepted": {
+        "max_abs_error_v": 2.0911378125987312e-05,
+        "max_abs_error_lsb": 0.10706625600505504,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.2026342438686832e-05,
+        "max_abs_error_lsb": 0.06157487328607658,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.3985923014446797e-07,
+        "max_abs_error_lsb": 0.001228079258339676,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.409610196403179e-07,
+        "max_abs_error_lsb": 0.0017457204205584276,
+        "worst_time_s": 6.5615e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_TAIL": {
+      "union_accepted": {
+        "max_abs_error_v": 1.1266190627634565e-07,
+        "max_abs_error_lsb": 0.0005768289601348897,
+        "worst_time_s": 5.001480154877555e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.261030519039146e-08,
+        "max_abs_error_lsb": 0.00032056476257480426,
+        "worst_time_s": 5.0020000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.4360944645150937e-10,
+        "max_abs_error_lsb": 1.759280365831728e-06,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.516156588638907e-09,
+        "max_abs_error_lsb": 1.2882721733831204e-05,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_BRS": {
+      "union_accepted": {
+        "max_abs_error_v": 1.1509414393762185e-09,
+        "max_abs_error_lsb": 5.892820169606239e-06,
+        "worst_time_s": 5.001480154877555e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 8.943189799826001e-10,
+        "max_abs_error_lsb": 4.578913177510913e-06,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 6.810940700319179e-13,
+        "max_abs_error_lsb": 3.4872016385634197e-09,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.729198811390887e-11,
+        "max_abs_error_lsb": 1.3973497914321342e-07,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N7": {
+      "union_accepted": {
+        "max_abs_error_v": 1.1896949381084987e-05,
+        "max_abs_error_lsb": 0.06091238083115513,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 8.336247223184046e-06,
+        "max_abs_error_lsb": 0.042681585782702314,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.414466677118753e-07,
+        "max_abs_error_lsb": 0.0007242069386848016,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.863671082018129e-07,
+        "max_abs_error_lsb": 0.003002199593993282,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR6_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 7.774175457941901e-06,
+        "max_abs_error_lsb": 0.03980377834466253,
+        "worst_time_s": 6.651330076786836e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.641317749383035e-06,
+        "max_abs_error_lsb": 0.028883546876841137,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.3884017446841312e-07,
+        "max_abs_error_lsb": 0.0007108616932782752,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.0317130445277627e-07,
+        "max_abs_error_lsb": 0.0020642370787982145,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N6": {
+      "union_accepted": {
+        "max_abs_error_v": 5.6387677476177345e-06,
+        "max_abs_error_lsb": 0.0288704908678028,
+        "worst_time_s": 6.651512677762093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.267735290608421e-06,
+        "max_abs_error_lsb": 0.021850804687915115,
+        "worst_time_s": 6.652e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.347422119435393e-07,
+        "max_abs_error_lsb": 0.0006898801251509212,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.935256681046994e-07,
+        "max_abs_error_lsb": 0.0015028514206960608,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR5_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 4.76912939328944e-06,
+        "max_abs_error_lsb": 0.02441794249364193,
+        "worst_time_s": 6.686372515182376e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.758373761653111e-06,
+        "max_abs_error_lsb": 0.019242873659663928,
+        "worst_time_s": 6.6920000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.292027415056296e-07,
+        "max_abs_error_lsb": 0.0006615180365088236,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.415705221998522e-07,
+        "max_abs_error_lsb": 0.0017488410736632432,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N5": {
+      "union_accepted": {
+        "max_abs_error_v": 4.833669508319538e-06,
+        "max_abs_error_lsb": 0.024748387882596035,
+        "worst_time_s": 6.259863179307545e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.900909672394093e-06,
+        "max_abs_error_lsb": 0.019972657522657755,
+        "worst_time_s": 6.885e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.222859852267888e-07,
+        "max_abs_error_lsb": 0.0006261042443611586,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.6244300882781744e-07,
+        "max_abs_error_lsb": 0.0018557082051984253,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR4_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 5.266712454821132e-06,
+        "max_abs_error_lsb": 0.026965567768684195,
+        "worst_time_s": 6.261715870715172e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.926295174678685e-06,
+        "max_abs_error_lsb": 0.02522263129435487,
+        "worst_time_s": 6.2640000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.1406974964600636e-07,
+        "max_abs_error_lsb": 0.0005840371181875526,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.6237796585680826e-07,
+        "max_abs_error_lsb": 0.0018553751851868583,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N4": {
+      "union_accepted": {
+        "max_abs_error_v": 5.801191333087985e-06,
+        "max_abs_error_lsb": 0.029702099625410483,
+        "worst_time_s": 6.265364919972611e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.657436551675943e-06,
+        "max_abs_error_lsb": 0.028966075144580827,
+        "worst_time_s": 6.2640000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.0464462629755644e-07,
+        "max_abs_error_lsb": 0.000535780486643489,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.465676727820721e-07,
+        "max_abs_error_lsb": 0.0017744264846442093,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR3_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 6.323308388900273e-06,
+        "max_abs_error_lsb": 0.0323753389511694,
+        "worst_time_s": 6.266863542879008e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.1473444590287585e-06,
+        "max_abs_error_lsb": 0.03147440363022724,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 9.411308865558965e-08,
+        "max_abs_error_lsb": 0.000481859013916619,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.192123785300538e-07,
+        "max_abs_error_lsb": 0.0016343673780738754,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N3": {
+      "union_accepted": {
+        "max_abs_error_v": 6.492766761123647e-06,
+        "max_abs_error_lsb": 0.033242965816953074,
+        "worst_time_s": 6.266863542879008e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.312839040178986e-06,
+        "max_abs_error_lsb": 0.03232173588571641,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 8.258846162512157e-08,
+        "max_abs_error_lsb": 0.0004228529235206224,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.8361589010650334e-07,
+        "max_abs_error_lsb": 0.0014521133573452971,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR2_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 6.25833149636712e-06,
+        "max_abs_error_lsb": 0.032042657261399654,
+        "worst_time_s": 8.767336365034093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.028996431428624e-06,
+        "max_abs_error_lsb": 0.030868461728914554,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 7.019381165207506e-08,
+        "max_abs_error_lsb": 0.0003593923156586243,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.4230540107694765e-07,
+        "max_abs_error_lsb": 0.001240603653513972,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N2": {
+      "union_accepted": {
+        "max_abs_error_v": 5.59027742519369e-06,
+        "max_abs_error_lsb": 0.028622220416991695,
+        "worst_time_s": 8.767336365034093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.340211604698553e-06,
+        "max_abs_error_lsb": 0.02734188341605659,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 5.7060729474756045e-08,
+        "max_abs_error_lsb": 0.00029215093491075095,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.9715982113588382e-07,
+        "max_abs_error_lsb": 0.0010094582842157251,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR1_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 4.572656822077192e-06,
+        "max_abs_error_lsb": 0.023412002929035225,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.328351938642783e-06,
+        "max_abs_error_lsb": 0.022161161925851047,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 4.3328034271539195e-08,
+        "max_abs_error_lsb": 0.00022183953547028068,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.495364565506918e-07,
+        "max_abs_error_lsb": 0.0007656266575395421,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_N1": {
+      "union_accepted": {
+        "max_abs_error_v": 3.2381304657658205e-06,
+        "max_abs_error_lsb": 0.016579227984721,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.0627120142234787e-06,
+        "max_abs_error_lsb": 0.01568108551282421,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.9140420965134695e-08,
+        "max_abs_error_lsb": 0.00014919895534148964,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.0039068087941416e-07,
+        "max_abs_error_lsb": 0.0005140002861026005,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR0_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 1.6773228068700519e-06,
+        "max_abs_error_lsb": 0.008587892771174666,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.585721920216443e-06,
+        "max_abs_error_lsb": 0.008118896231508188,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4647030033287933e-08,
+        "max_abs_error_lsb": 7.499279377043422e-05,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.038671369028691e-08,
+        "max_abs_error_lsb": 0.000257979974094269,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N7": {
+      "union_accepted": {
+        "max_abs_error_v": 1.3579987553247186e-05,
+        "max_abs_error_lsb": 0.06952953627262559,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.0021539100568688e-05,
+        "max_abs_error_lsb": 0.051310280194911684,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.349468333218141e-07,
+        "max_abs_error_lsb": 0.0012029277866076882,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.083171277700302e-07,
+        "max_abs_error_lsb": 0.0010665836941825546,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR6_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 9.356361535095559e-06,
+        "max_abs_error_lsb": 0.04790457105968926,
+        "worst_time_s": 6.651330076786836e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 7.240166284394611e-06,
+        "max_abs_error_lsb": 0.03706965137610041,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.2800355281571427e-07,
+        "max_abs_error_lsb": 0.001167378190416457,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.180070781150235e-07,
+        "max_abs_error_lsb": 0.0016281962399489203,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N6": {
+      "union_accepted": {
+        "max_abs_error_v": 7.1256408352704526e-06,
+        "max_abs_error_lsb": 0.03648328107658472,
+        "worst_time_s": 6.651512677762093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.728849254094115e-06,
+        "max_abs_error_lsb": 0.02933170818096187,
+        "worst_time_s": 6.652e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.1908513747614933e-07,
+        "max_abs_error_lsb": 0.0011217159038778846,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.860336416083854e-07,
+        "max_abs_error_lsb": 0.001976492245034933,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR5_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 5.838765584909034e-06,
+        "max_abs_error_lsb": 0.029894479794734252,
+        "worst_time_s": 6.684372515182376e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.934551730118031e-06,
+        "max_abs_error_lsb": 0.025264904858204318,
+        "worst_time_s": 6.652e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.0826515201299856e-07,
+        "max_abs_error_lsb": 0.0010663175783065526,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.2087566154425105e-07,
+        "max_abs_error_lsb": 0.0021548833871065654,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N5": {
+      "union_accepted": {
+        "max_abs_error_v": 5.392760218603243e-06,
+        "max_abs_error_lsb": 0.027610932319248604,
+        "worst_time_s": 6.686372515182376e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.975784989702525e-06,
+        "max_abs_error_lsb": 0.02547601914727693,
+        "worst_time_s": 6.885e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.9563437603231648e-07,
+        "max_abs_error_lsb": 0.0010016480052854604,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.2988583603964514e-07,
+        "max_abs_error_lsb": 0.002201015480522983,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR4_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 5.49621282641688e-06,
+        "max_abs_error_lsb": 0.028140609671254424,
+        "worst_time_s": 6.886892506777703e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.284138750560885e-06,
+        "max_abs_error_lsb": 0.02705479040287173,
+        "worst_time_s": 6.888000000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.8130002277239043e-07,
+        "max_abs_error_lsb": 0.000928256116594639,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.192725118201679e-07,
+        "max_abs_error_lsb": 0.0021466752605192596,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N4": {
+      "union_accepted": {
+        "max_abs_error_v": 6.009249564620234e-06,
+        "max_abs_error_lsb": 0.030767357770855597,
+        "worst_time_s": 6.889259419102674e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.802481992001063e-06,
+        "max_abs_error_lsb": 0.029708707799045442,
+        "worst_time_s": 6.888000000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.6538479297167896e-07,
+        "max_abs_error_lsb": 0.0008467701400149963,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.941331916390567e-07,
+        "max_abs_error_lsb": 0.0020179619411919703,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR3_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 6.492550466807856e-06,
+        "max_abs_error_lsb": 0.03324185839005622,
+        "worst_time_s": 6.89064754904057e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.062391711969539e-06,
+        "max_abs_error_lsb": 0.03103944556528404,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.480257780794858e-07,
+        "max_abs_error_lsb": 0.0007578919837669673,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.5853760493864684e-07,
+        "max_abs_error_lsb": 0.0018357125372858718,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N3": {
+      "union_accepted": {
+        "max_abs_error_v": 6.657482084504451e-06,
+        "max_abs_error_lsb": 0.03408630827266279,
+        "worst_time_s": 6.892192772398397e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.267816271332549e-06,
+        "max_abs_error_lsb": 0.03209121930922265,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.2937322257933204e-07,
+        "max_abs_error_lsb": 0.00066239089960618,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.1564366564929003e-07,
+        "max_abs_error_lsb": 0.001616095568124365,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR2_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 6.371127432514001e-06,
+        "max_abs_error_lsb": 0.032620172454471685,
+        "worst_time_s": 6.892192772398397e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.023301071245157e-06,
+        "max_abs_error_lsb": 0.030839301484775206,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.095891630775725e-07,
+        "max_abs_error_lsb": 0.0005610965149571712,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.6782928230772995e-07,
+        "max_abs_error_lsb": 0.0013712859254155774,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N2": {
+      "union_accepted": {
+        "max_abs_error_v": 5.65415424391702e-06,
+        "max_abs_error_lsb": 0.028949269728855143,
+        "worst_time_s": 6.892192772398397e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.3781102848926565e-06,
+        "max_abs_error_lsb": 0.0275359246586504,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 8.884595770197734e-08,
+        "max_abs_error_lsb": 0.000454891303434124,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.1682710427128882e-07,
+        "max_abs_error_lsb": 0.0011101547738689987,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR1_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 4.615162690901897e-06,
+        "max_abs_error_lsb": 0.023629632977417714,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.387105878578268e-06,
+        "max_abs_error_lsb": 0.022461982098320732,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 6.732471513615224e-08,
+        "max_abs_error_lsb": 0.00034470254149709945,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.6385408740937635e-07,
+        "max_abs_error_lsb": 0.0008389329275360069,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_N1": {
+      "union_accepted": {
+        "max_abs_error_v": 3.2612263420883636e-06,
+        "max_abs_error_lsb": 0.01669747887149242,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.098450178429246e-06,
+        "max_abs_error_lsb": 0.01586406491355774,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 4.52136432738115e-08,
+        "max_abs_error_lsb": 0.00023149385356191488,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.0973181940876486e-07,
+        "max_abs_error_lsb": 0.0005618269153728761,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR0_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 1.6870921062395183e-06,
+        "max_abs_error_lsb": 0.008637911583946334,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.6024017095439547e-06,
+        "max_abs_error_lsb": 0.008204296752865048,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.2706335034428093e-08,
+        "max_abs_error_lsb": 0.00011625643537627184,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.499654398555265e-08,
+        "max_abs_error_lsb": 0.00028158230520602956,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRBIAS_XR_SERIES_1": {
+      "union_accepted": {
+        "max_abs_error_v": 1.3214888280876913e-09,
+        "max_abs_error_lsb": 6.7660227998089795e-06,
+        "worst_time_s": 5.001590110491924e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 7.888451142301633e-10,
+        "max_abs_error_lsb": 4.038886984858436e-06,
+        "worst_time_s": 5.0020000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.418446081759896e-13,
+        "max_abs_error_lsb": 1.7502443938610668e-09,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.3770179441152663e-11,
+        "max_abs_error_lsb": 7.050331873870164e-08,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR7_XR.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 1.1995307499956809e-05,
+        "max_abs_error_lsb": 0.06141597439977886,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 8.362827101482395e-06,
+        "max_abs_error_lsb": 0.04281767475958986,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4146142546245244e-07,
+        "max_abs_error_lsb": 0.0007242824983677565,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.890773563388407e-07,
+        "max_abs_error_lsb": 0.0030160760644548645,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 7.791257828237974e-06,
+        "max_abs_error_lsb": 0.03989124008057843,
+        "worst_time_s": 6.651330076786836e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.678146740573098e-06,
+        "max_abs_error_lsb": 0.02907211131173426,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.388757948639352e-07,
+        "max_abs_error_lsb": 0.0007110440697033482,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.0567486414566645e-07,
+        "max_abs_error_lsb": 0.002077055304425812,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR6_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.6624004790561955e-06,
+        "max_abs_error_lsb": 0.02899149045276772,
+        "worst_time_s": 6.651512677762093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.274703196527341e-06,
+        "max_abs_error_lsb": 0.021886480366219985,
+        "worst_time_s": 6.652e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.3479821481254817e-07,
+        "max_abs_error_lsb": 0.0006901668598402466,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.9239849919093786e-07,
+        "max_abs_error_lsb": 0.0014970803158576018,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 4.773440864913603e-06,
+        "max_abs_error_lsb": 0.024440017228357647,
+        "worst_time_s": 6.686372515182376e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.761209596997439e-06,
+        "max_abs_error_lsb": 0.019257393136626888,
+        "worst_time_s": 6.6920000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.292784439499428e-07,
+        "max_abs_error_lsb": 0.0006619056330237072,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.4091393963375793e-07,
+        "max_abs_error_lsb": 0.0017454793709248406,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR5_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 4.820631143265253e-06,
+        "max_abs_error_lsb": 0.024681631453518094,
+        "worst_time_s": 6.259863179307545e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.886503179617584e-06,
+        "max_abs_error_lsb": 0.01989889627964203,
+        "worst_time_s": 6.885e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.223805099481723e-07,
+        "max_abs_error_lsb": 0.0006265882109346421,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.621577646661933e-07,
+        "max_abs_error_lsb": 0.0018542477550909098,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.255681349458641e-06,
+        "max_abs_error_lsb": 0.02690908850922824,
+        "worst_time_s": 6.261715870715172e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.909336430491962e-06,
+        "max_abs_error_lsb": 0.025135802524118844,
+        "worst_time_s": 6.2640000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.1418203271773564e-07,
+        "max_abs_error_lsb": 0.0005846120075148065,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.62378855145451e-07,
+        "max_abs_error_lsb": 0.001855379738344709,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR4_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.788262643413589e-06,
+        "max_abs_error_lsb": 0.029635904734277574,
+        "worst_time_s": 6.264017093181251e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.647444751177844e-06,
+        "max_abs_error_lsb": 0.02891491712603056,
+        "worst_time_s": 6.2640000000000005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.0477343037607056e-07,
+        "max_abs_error_lsb": 0.0005364399635254813,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.467837363935189e-07,
+        "max_abs_error_lsb": 0.0017755327303348167,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 6.314432242415791e-06,
+        "max_abs_error_lsb": 0.03232989308116885,
+        "worst_time_s": 6.266863542879008e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.138731179827772e-06,
+        "max_abs_error_lsb": 0.031430303640718193,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 9.425701241738693e-08,
+        "max_abs_error_lsb": 0.0004825959035770211,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.195862179339315e-07,
+        "max_abs_error_lsb": 0.0016362814358217292,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR3_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 6.490450937146619e-06,
+        "max_abs_error_lsb": 0.03323110879819069,
+        "worst_time_s": 6.266863542879008e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.3105773859817305e-06,
+        "max_abs_error_lsb": 0.03231015621622646,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 8.274595697521647e-08,
+        "max_abs_error_lsb": 0.00042365929971310834,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.8410235253240046e-07,
+        "max_abs_error_lsb": 0.0014546040449658904,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 6.2614961608975506e-06,
+        "max_abs_error_lsb": 0.03205886034379546,
+        "worst_time_s": 8.767336365034093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.032875433881202e-06,
+        "max_abs_error_lsb": 0.030888322221471753,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 7.036319815689751e-08,
+        "max_abs_error_lsb": 0.00036025957456331525,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.42869951483371e-07,
+        "max_abs_error_lsb": 0.0012434941515948594,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR2_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.599407074008411e-06,
+        "max_abs_error_lsb": 0.028668964218923065,
+        "worst_time_s": 8.767336365034093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.349624559558563e-06,
+        "max_abs_error_lsb": 0.027390077744939845,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 5.72402061305155e-08,
+        "max_abs_error_lsb": 0.0002930698553882394,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.9777678272880905e-07,
+        "max_abs_error_lsb": 0.0010126171275715024,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 4.586485055080303e-06,
+        "max_abs_error_lsb": 0.02348280348201115,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.34152393968823e-06,
+        "max_abs_error_lsb": 0.022228602571203737,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 4.3515707037755647e-08,
+        "max_abs_error_lsb": 0.0002228004200333089,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.5018727861360048e-07,
+        "max_abs_error_lsb": 0.0007689588665016345,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR1_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 3.256368146020705e-06,
+        "max_abs_error_lsb": 0.01667260490762601,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.080008289968461e-06,
+        "max_abs_error_lsb": 0.01576964244463852,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.9334307871664578e-08,
+        "max_abs_error_lsb": 0.00015019165630292264,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.0106230963202734e-07,
+        "max_abs_error_lsb": 0.00051743902531598,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 1.6986528537099588e-06,
+        "max_abs_error_lsb": 0.008697102610994989,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.6059065137685735e-06,
+        "max_abs_error_lsb": 0.008222241350495096,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.484509737359474e-08,
+        "max_abs_error_lsb": 7.600689855280507e-05,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.107006928461999e-08,
+        "max_abs_error_lsb": 0.00026147875473725435,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRN_XR0_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 2.2922348241749546e-08,
+        "max_abs_error_lsb": 0.00011736242299775768,
+        "worst_time_s": 8.76907641656273e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.1670527594608302e-08,
+        "max_abs_error_lsb": 0.0001109531012843945,
+        "worst_time_s": 8.769e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.0016721613558275e-10,
+        "max_abs_error_lsb": 1.0248561466141837e-06,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 6.885860770466934e-10,
+        "max_abs_error_lsb": 3.52556071447907e-06,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR7_XR.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 1.3680178574060342e-05,
+        "max_abs_error_lsb": 0.07004251429918895,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.004893680789376e-05,
+        "max_abs_error_lsb": 0.05145055645641605,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.3501396617664483e-07,
+        "max_abs_error_lsb": 0.0012032715068244215,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.06117751089252e-07,
+        "max_abs_error_lsb": 0.0010553228855769703,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 9.37421417634976e-06,
+        "max_abs_error_lsb": 0.04799597658291077,
+        "worst_time_s": 6.651330076786836e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 7.2781766156104766e-06,
+        "max_abs_error_lsb": 0.03726426427192564,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.28098439913893e-07,
+        "max_abs_error_lsb": 0.0011678640123591322,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.1650805187855013e-07,
+        "max_abs_error_lsb": 0.0016205212256181767,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR6_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 7.15031500597707e-06,
+        "max_abs_error_lsb": 0.0366096128306026,
+        "worst_time_s": 6.651512677762093e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.736960020930049e-06,
+        "max_abs_error_lsb": 0.02937323530716185,
+        "worst_time_s": 6.652e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.1920701676059196e-07,
+        "max_abs_error_lsb": 0.0011223399258142308,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.8510398847613203e-07,
+        "max_abs_error_lsb": 0.001971732420997796,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.84452394458701e-06,
+        "max_abs_error_lsb": 0.02992396259628549,
+        "worst_time_s": 6.684372515182376e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.9454066256560125e-06,
+        "max_abs_error_lsb": 0.025320481923358784,
+        "worst_time_s": 6.652e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.0841301806573398e-07,
+        "max_abs_error_lsb": 0.001067074652496558,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.203995094265167e-07,
+        "max_abs_error_lsb": 0.0021524454882637656,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR5_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.398653174615298e-06,
+        "max_abs_error_lsb": 0.027641104254030324,
+        "worst_time_s": 6.686372515182376e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.962308965406059e-06,
+        "max_abs_error_lsb": 0.025407021902879023,
+        "worst_time_s": 6.885e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.958069885121816e-07,
+        "max_abs_error_lsb": 0.0010025317811823697,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.297627027582962e-07,
+        "max_abs_error_lsb": 0.0022003850381224765,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.4846922707962875e-06,
+        "max_abs_error_lsb": 0.028081624426476992,
+        "worst_time_s": 6.885888890100039e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.269111419847761e-06,
+        "max_abs_error_lsb": 0.026977850469620535,
+        "worst_time_s": 6.888000000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.8149591585192582e-07,
+        "max_abs_error_lsb": 0.0009292590891618602,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.194175544647294e-07,
+        "max_abs_error_lsb": 0.0021474178788594145,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR4_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.99807418999454e-06,
+        "max_abs_error_lsb": 0.030710139852772045,
+        "worst_time_s": 6.889259419102674e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.7953982974812135e-06,
+        "max_abs_error_lsb": 0.029672439283103813,
+        "worst_time_s": 6.888000000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.6560229121331815e-07,
+        "max_abs_error_lsb": 0.000847883731012189,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.9447674660131327e-07,
+        "max_abs_error_lsb": 0.002019720942598724,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 6.485416661483612e-06,
+        "max_abs_error_lsb": 0.03320533330679609,
+        "worst_time_s": 6.89064754904057e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.053351918833272e-06,
+        "max_abs_error_lsb": 0.030993161824426352,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4826300631654021e-07,
+        "max_abs_error_lsb": 0.0007591065923406859,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.590240551520907e-07,
+        "max_abs_error_lsb": 0.0018382031623787043,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR3_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 6.654921511417555e-06,
+        "max_abs_error_lsb": 0.03407319813845788,
+        "worst_time_s": 6.892192772398397e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.265008933192817e-06,
+        "max_abs_error_lsb": 0.032076845737947224,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.2962812823147374e-07,
+        "max_abs_error_lsb": 0.0006636960165451455,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.1622985607882015e-07,
+        "max_abs_error_lsb": 0.0016190968631235592,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 6.375040764838857e-06,
+        "max_abs_error_lsb": 0.03264020871597495,
+        "worst_time_s": 6.892192772398397e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 6.026642624057388e-06,
+        "max_abs_error_lsb": 0.030856410235173826,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.098595328041796e-07,
+        "max_abs_error_lsb": 0.0005624808079573995,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.6848271517110334e-07,
+        "max_abs_error_lsb": 0.001374631501676049,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR2_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 5.6639524221857585e-06,
+        "max_abs_error_lsb": 0.028999436401591083,
+        "worst_time_s": 6.892192772398397e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 5.386576615418193e-06,
+        "max_abs_error_lsb": 0.027579272270941146,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 8.912943538774698e-08,
+        "max_abs_error_lsb": 0.00045634270918526454,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.1752410073183626e-07,
+        "max_abs_error_lsb": 0.0011137233957470016,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 4.62934908562751e-06,
+        "max_abs_error_lsb": 0.02370226731841285,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.4006489765546775e-06,
+        "max_abs_error_lsb": 0.02253132275995995,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 6.76188249837395e-08,
+        "max_abs_error_lsb": 0.00034620838391674624,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.645780187686796e-07,
+        "max_abs_error_lsb": 0.0008426394560956396,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR1_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 3.2797292774944253e-06,
+        "max_abs_error_lsb": 0.016792213900771458,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 3.1160609867963984e-06,
+        "max_abs_error_lsb": 0.01595423225239756,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 4.551581422873596e-08,
+        "max_abs_error_lsb": 0.00023304096885112813,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.1047145531684066e-07,
+        "max_abs_error_lsb": 0.0005656138512222242,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 1.708604273398251e-06,
+        "max_abs_error_lsb": 0.008748053879799045,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.622846754312235e-06,
+        "max_abs_error_lsb": 0.008308975382078643,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.301392121317747e-08,
+        "max_abs_error_lsb": 0.00011783127661146864,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.574455785861687e-08,
+        "max_abs_error_lsb": 0.0002854121362361184,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRP_XR0_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 2.305585344863914e-08,
+        "max_abs_error_lsb": 0.0001180459696570324,
+        "worst_time_s": 6.893916254895005e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.189847192468619e-08,
+        "max_abs_error_lsb": 0.0001121201762543933,
+        "worst_time_s": 6.894e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.10305114936682e-10,
+        "max_abs_error_lsb": 1.5887621884758119e-06,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.515845723560233e-10,
+        "max_abs_error_lsb": 3.848113010462839e-06,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRBIAS_XR_SEG_2.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 1.3034293019908993e-09,
+        "max_abs_error_lsb": 6.673558026193405e-06,
+        "worst_time_s": 5.001590110491924e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 7.780647168220689e-10,
+        "max_abs_error_lsb": 3.983691350128993e-06,
+        "worst_time_s": 5.0020000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.3717473257866004e-13,
+        "max_abs_error_lsb": 1.7263346308027394e-09,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 1.35819966384787e-11,
+        "max_abs_error_lsb": 6.953982278901094e-08,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XRBIAS_XR_SEG_1.ra": {
+      "union_accepted": {
+        "max_abs_error_v": 1.1523985932182512e-09,
+        "max_abs_error_lsb": 5.900280797277446e-06,
+        "worst_time_s": 5.001480154877555e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 8.88437670654163e-10,
+        "max_abs_error_lsb": 4.548800873749315e-06,
+        "worst_time_s": 5.642e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 6.764450111163001e-13,
+        "max_abs_error_lsb": 3.4633984569154563e-09,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.7107191491460014e-11,
+        "max_abs_error_lsb": 1.3878882043627527e-07,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADN_XC.a": {
+      "union_accepted": {
+        "max_abs_error_v": 1.8832545235489127e-08,
+        "max_abs_error_lsb": 9.642263160570432e-05,
+        "worst_time_s": 5.000000001053941e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.279425420303692e-10,
+        "max_abs_error_lsb": 2.1910658151954904e-06,
+        "worst_time_s": 5.942e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 7.130674170010364e-21,
+        "max_abs_error_lsb": 3.650905175045306e-17,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 5.723334854293712e-12,
+        "max_abs_error_lsb": 2.9303474453983805e-08,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADN_XC.b1": {
+      "union_accepted": {
+        "max_abs_error_v": 1.1114245118476214e-08,
+        "max_abs_error_lsb": 5.690493500659821e-05,
+        "worst_time_s": 5.000000001053941e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.5255525736309563e-10,
+        "max_abs_error_lsb": 1.2930829176990496e-06,
+        "worst_time_s": 5.942e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 4.208250111415396e-21,
+        "max_abs_error_lsb": 2.154624057044683e-17,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 3.377692482363942e-12,
+        "max_abs_error_lsb": 1.7293785509703383e-08,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADP_XC.a": {
+      "union_accepted": {
+        "max_abs_error_v": 1.882229197825762e-08,
+        "max_abs_error_lsb": 9.6370134928679e-05,
+        "worst_time_s": 5.000000001053941e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 4.884423515266532e-10,
+        "max_abs_error_lsb": 2.5008248398164642e-06,
+        "worst_time_s": 9.067e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.1250881473619404e-21,
+        "max_abs_error_lsb": 1.0880451314493135e-17,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.631055850772278e-12,
+        "max_abs_error_lsb": 2.3711005955954063e-08,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XCMP_XLOADP_XC.b1": {
+      "union_accepted": {
+        "max_abs_error_v": 1.110819403973414e-08,
+        "max_abs_error_lsb": 5.687395348343879e-05,
+        "worst_time_s": 5.000000001053941e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.8825992202492537e-10,
+        "max_abs_error_lsb": 1.475890800767618e-06,
+        "worst_time_s": 9.067e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.2541454313695171e-21,
+        "max_abs_error_lsb": 6.421224608611928e-18,
+        "worst_time_s": 7.499100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 2.733071352766083e-12,
+        "max_abs_error_lsb": 1.3993325326162344e-08,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCN_XC.a": {
+      "union_accepted": {
+        "max_abs_error_v": 1.5202527757657486e-07,
+        "max_abs_error_lsb": 0.0007783694211920632,
+        "worst_time_s": 6.876000003927474e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.922282772316272e-10,
+        "max_abs_error_lsb": 1.4962087794259313e-06,
+        "worst_time_s": 5.9380000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.7905551137054392e-14,
+        "max_abs_error_lsb": 9.167642182171849e-11,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.152484247327089e-13,
+        "max_abs_error_lsb": 3.6620719346314695e-09,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCN_XC.b1": {
+      "union_accepted": {
+        "max_abs_error_v": 8.971948178339554e-08,
+        "max_abs_error_lsb": 0.00045936374673098516,
+        "worst_time_s": 6.876000003927474e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.7246190905631397e-10,
+        "max_abs_error_lsb": 8.830049743683275e-07,
+        "worst_time_s": 5.9380000000000006e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.0567168793711937e-14,
+        "max_abs_error_lsb": 5.410390422380512e-11,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.221121581645341e-13,
+        "max_abs_error_lsb": 2.1612142498024146e-09,
+        "worst_time_s": 7.1865e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCP_XC.a": {
+      "union_accepted": {
+        "max_abs_error_v": 1.5420150147114274e-07,
+        "max_abs_error_lsb": 0.0007895116875322508,
+        "worst_time_s": 5.001000003743802e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.883190425609983e-10,
+        "max_abs_error_lsb": 1.4761934979123112e-06,
+        "worst_time_s": 8.438000000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 2.3948339137841406e-14,
+        "max_abs_error_lsb": 1.22615496385748e-10,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.190200328969745e-13,
+        "max_abs_error_lsb": 3.6813825684325093e-09,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "XCMP.XADC_XPRE_XCP_XC.b1": {
+      "union_accepted": {
+        "max_abs_error_v": 9.100380556939836e-08,
+        "max_abs_error_lsb": 0.0004659394845153196,
+        "worst_time_s": 5.001000003743802e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 1.7015482884963505e-10,
+        "max_abs_error_lsb": 8.711927237101314e-07,
+        "worst_time_s": 8.438000000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 1.4133390257669507e-14,
+        "max_abs_error_lsb": 7.236295811926787e-11,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 4.243380164913967e-13,
+        "max_abs_error_lsb": 2.1726106444359512e-09,
+        "worst_time_s": 5.936499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "preamp_differential": {
+      "union_accepted": {
+        "max_abs_error_v": 4.000559746675236e-05,
+        "max_abs_error_lsb": 0.2048286590297721,
+        "worst_time_s": 6.650648216996685e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "common_1ns": {
+        "max_abs_error_v": 2.2307549181310726e-05,
+        "max_abs_error_lsb": 0.11421465180831092,
+        "worst_time_s": 6.651e-06,
+        "le_diagnostic_0_05lsb": false
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 3.823857805951292e-07,
+        "max_abs_error_lsb": 0.0019578151966470614,
+        "worst_time_s": 6.874100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 7.114211011405303e-07,
+        "max_abs_error_lsb": 0.003642476037839515,
+        "worst_time_s": 8.4365e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    },
+    "ideal_input_differential_not_CDAC": {
+      "union_accepted": {
+        "max_abs_error_v": 2.4424906541753444e-15,
+        "max_abs_error_lsb": 1.2505552149377763e-11,
+        "worst_time_s": 6.650888684838315e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "common_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 0.0,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_pre_EVAL_10pct_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 4.999100000000001e-06,
+        "le_diagnostic_0_05lsb": true
+      },
+      "all_RTL_capture_minus_1ns": {
+        "max_abs_error_v": 0.0,
+        "max_abs_error_lsb": 0.0,
+        "worst_time_s": 5.311499999999999e-06,
+        "le_diagnostic_0_05lsb": true
+      }
+    }
+  },
+  "edges": {
+    "Q_rising": {
+      "baseline_s": [
+        5.166890336543028e-06
+      ],
+      "strict_s": [
+        5.166891244365642e-06
+      ],
+      "same_edge_count": true,
+      "delta_s": [
+        9.07822613842302e-13
+      ],
+      "max_abs_delta_s": 9.07822613842302e-13
+    },
+    "Q_falling": {
+      "baseline_s": [
+        7.040551074697662e-06
+      ],
+      "strict_s": [
+        7.0405519406935266e-06
+      ],
+      "same_edge_count": true,
+      "delta_s": [
+        8.65995864326671e-13
+      ],
+      "max_abs_delta_s": 8.65995864326671e-13
+    },
+    "EVAL_rising": {
+      "baseline_s": [
+        5.000100000000001e-06,
+        5.6251000000000006e-06,
+        6.2501000000000005e-06,
+        6.8751000000000005e-06,
+        7.5001e-06,
+        8.125100000000001e-06,
+        8.750100000000001e-06
+      ],
+      "strict_s": [
+        5.000100000000001e-06,
+        5.6251000000000006e-06,
+        6.2501000000000005e-06,
+        6.8751000000000005e-06,
+        7.5001e-06,
+        8.125100000000001e-06,
+        8.750100000000001e-06
+      ],
+      "same_edge_count": true,
+      "delta_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_delta_s": 0.0
+    },
+    "XCMP.XADC_XCMP_S_BAR_falling": {
+      "baseline_s": [
+        5.1668505072983815e-06,
+        5.790490168534709e-06,
+        6.41549016727596e-06
+      ],
+      "strict_s": [
+        5.166851416758472e-06,
+        5.7904942474859045e-06,
+        6.415494245671455e-06
+      ],
+      "same_edge_count": true,
+      "delta_s": [
+        9.094600903126375e-13,
+        4.0789511957349945e-12,
+        4.078395494687751e-12
+      ],
+      "max_abs_delta_s": 4.0789511957349945e-12
+    },
+    "XCMP.XADC_XCMP_R_BAR_falling": {
+      "baseline_s": [
+        7.0404834860632854e-06,
+        7.665441157855618e-06,
+        8.2904411528141e-06,
+        8.91544114540089e-06
+      ],
+      "strict_s": [
+        7.040484353570768e-06,
+        7.665445225223732e-06,
+        8.290445219624789e-06,
+        8.915445216381482e-06
+      ],
+      "same_edge_count": true,
+      "delta_s": [
+        8.675074827124729e-13,
+        4.067368114201949e-12,
+        4.066810688595625e-12,
+        4.070980592831442e-12
+      ],
+      "max_abs_delta_s": 4.070980592831442e-12
+    }
+  },
+  "difference_artifacts": {
+    "union_accepted_differences.csv.gz": {
+      "sha256": "b609c0be044816af8f6a816ffb25158c8043b8d249facf34e0771a14887fcde8",
+      "rows": 69631,
+      "channels": 103
+    },
+    "common_1ns_differences.csv.gz": {
+      "sha256": "0d1ecdd5bdc5efe5b33093f9664ef1e77bad7a5e8983fffc0fc50e8eecdb6e63",
+      "rows": 9201,
+      "channels": 103
+    },
+    "all_pre_EVAL_10pct_minus_1ns_differences.csv.gz": {
+      "sha256": "acabee62943831f5771ff35040e45c2c968bee475c57635a8298a218d3fb98e2",
+      "rows": 7,
+      "channels": 103
+    },
+    "all_RTL_capture_minus_1ns_differences.csv.gz": {
+      "sha256": "16178d87a652b348a66973a53fca40d447a63b9a418a117da3bb09bc3a64bb67",
+      "rows": 7,
+      "channels": 103
+    }
+  },
+  "limitations": [
+    "All switching edges retained, no time shifts. Union-grid linear interpolation can contribute to narrow peak differences; common1nsgrid separately reported.",
+    "Ideal-driven TN/TP agreement is stimulus identity, not CDAC convergence evidence.",
+    "Even identical output decisions do not waive waveform discrepancies or LTE warnings.",
+    "The0.05LSB test on other87-device nodes is an additional conservative diagnostic, not a substitute for original fullADC observation gates."
+  ]
+}

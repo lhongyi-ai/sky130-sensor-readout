@@ -1,0 +1,15 @@
+Warning from spectre at time = 4.0632 us during transient analysis `adc_closure_tran'.
+    WARNING (AHDLLINT-8007): "<school-user-home>/cadence_skywater/project1_handoff/v2_bridge_20260923/adc_closure_r1/task_20260924T060914240241Z/design/p1_interfaces.vams" 18: p2_ams_reset1.read_sample._cds_internal_p1_e2l_: The cross/above function in the model has imposed a time step size of (605.326 fs), which is too small and might slow down the simulation. Increase the applicable tolerances and/or expression values of the function to avoid such small step size, and for faster simulation.
+
+        device bound step: p2_ams_reset1.read_sample._cds_internal_p1_e2l_ of worklib__p1_e2l__vams__0x10000001_behavioral (verilog-A)
+    adc_closure_tran: time = 4.063 us    (99.1 %), step = 698.4 ps  (limiting signal: p2_ams_reset1.phases.XPHASE_XBCONV_B = 910.561 mV 904.91 mV 888.602 mV, stepid = 2609)
+        step is rejected by error on signal: p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b = 1.79931 V 1.8 V 1.79998 V
+    adc_closure_tran: time = 4.063 us    (99.1 %), step = 303.8 fs  (limiting signal: p2_ams_reset1.phases.XPHASE_XBCONV_B = 913.396 mV 910.561 mV 904.91 mV, stepid = 2610)
+
+Warning from spectre at time = 4.0632 us during transient analysis `adc_closure_tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b. Check the design or use '+diagnose' to get more information.
+
+        step is rejected by error on signal: p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b = 1.79923 V 1.79958 V 1.80003 V
+    adc_closure_tran: time = 4.063 us    (99.1 %), step = 259.6 fs  (limiting signal: p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b = 1.79942 V 1.79958 V 1.80003 V, stepid = 2614)
+        step is rejected by error on signal: p2_ams_reset1.adc.XADC_XP0_XNL_MID = -7.2544 mV -7.29107 mV -7.73506 mV
+    adc_closure_tran: time = 4.063 us    (99.1 %), step = 78.27 ps  (limiting signal: p2_ams_reset1.adc.XADC_XDP_XNL_MID = -7.23775 mV -7.29107 mV -7.73506 mV, stepid = 2680)

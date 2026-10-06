@@ -1,0 +1,5858 @@
+{
+  "status": "REAL_THREE_GAIN_FOUR_CONDITIONAL_STB_REVIEW_NOT_MULTILOOP_PASS",
+  "scope": "school_r5_noise TT/1.8V/27C; fixed acquisition state, zero differential input; gains1/4/16",
+  "stb_run": "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z",
+  "baseline_run": "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z",
+  "loops": {
+    "g1_dm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 58.89779507863948,
+      "minimum_gain_db": -142.48283296414942,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -880.825,
+            "imag": 0.00109318
+          },
+          "gain_db": 58.89779264988838
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": -2.01985e-08,
+            "imag": 7.2372e-08
+          },
+          "gain_db": -142.48283296414942
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 860,
+          "j": 861,
+          "t": 0.4604068196928699,
+          "frequency_hz": 4023500.5793427085,
+          "frequency_interval_hz": [
+            3981071.705534871,
+            4073802.778041023
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 39.07887907230945,
+          "phase_L_principal_deg": 39.07887907230946,
+          "phase_interval_endpoint_deg": [
+            39.40269732009955,
+            38.6993666265922
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 920,
+          "j": 921,
+          "t": 0.8262579339278393,
+          "frequency_hz": 16153349.113352435,
+          "frequency_interval_hz": [
+            15848931.9246107,
+            16218100.97358885
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.08738456938193526,
+          "axis": "positive",
+          "real_range": [
+            0.0867305,
+            0.0904951
+          ],
+          "inverse_magnitude_db": 21.171304991230045
+        },
+        {
+          "i": 1057,
+          "j": 1058,
+          "t": 0.5684695789264558,
+          "frequency_hz": 376430405.71567065,
+          "frequency_interval_hz": [
+            371535229.0971612,
+            380189396.3205495
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.0015416695714923533,
+          "axis": "negative",
+          "real_range": [
+            -0.00156272,
+            -0.00152569
+          ],
+          "inverse_magnitude_db": 56.24017398685662
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 21.17015873358663,
+        "gainMarginFreq": 16151092.8903926,
+        "phaseMargin": 39.07844988040595,
+        "phaseMarginFreq": 4023582.568449251,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 4023582.568449251,
+          "interpolated_frequency_hz": 4023500.5793427085,
+          "frequency_relative_difference": -2.037714030911353e-05,
+          "value_difference": 0.0004291919035210867,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 16151092.8903926,
+          "interpolated_frequency_hz": 16153349.113352435,
+          "frequency_relative_difference": 0.00013969475472319637,
+          "value_difference": 0.0011462576434162486,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "BELOW_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 3.426829969322057,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.5512638816193203,
+        "frequency_hz": 5128613.839913514
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.5512638816193203,
+        "frequency_hz_approx": 5128613.839913514
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g1_input_cm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": -40.650269862873685,
+      "minimum_gain_db": -90.55743785860315,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": 0.00605713,
+            "imag": 1.67495e-11
+          },
+          "gain_db": -44.35466210547994
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 3.01222e-05,
+            "imag": -6.55317e-06
+          },
+          "gain_db": -90.22143397585829
+        }
+      },
+      "all_observed_unity_crossings": [],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 800,
+          "j": 801,
+          "t": 0.5076280356812414,
+          "frequency_hz": 1011757.1457155945,
+          "frequency_interval_hz": [
+            999999.9999999763,
+            1023292.99228073
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.008462745711535375,
+          "axis": "positive",
+          "real_range": [
+            0.00843009,
+            0.00849442
+          ],
+          "inverse_magnitude_db": 41.449774172068544
+        },
+        {
+          "i": 996,
+          "j": 997,
+          "t": 0.8030622895612721,
+          "frequency_hz": 92903189.2202719,
+          "frequency_interval_hz": [
+            91201083.93558832,
+            93325430.07969639
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.00022538851381650557,
+          "axis": "negative",
+          "real_range": [
+            -0.000231128,
+            -0.000223981
+          ],
+          "inverse_magnitude_db": 72.9413644022859
+        },
+        {
+          "i": 1091,
+          "j": 1092,
+          "t": 0.17645711051060362,
+          "frequency_hz": 816139826.0474823,
+          "frequency_interval_hz": [
+            812830516.1640732,
+            831763771.1026443
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.0006205573609334672,
+          "axis": "positive",
+          "real_range": [
+            0.000620069,
+            0.000620662
+          ],
+          "inverse_magnitude_db": 64.14436136999309
+        }
+      ],
+      "native_margins": {
+        "gainMargin": null,
+        "gainMarginFreq": null,
+        "phaseMargin": null,
+        "phaseMarginFreq": null,
+        "state_verbatim": "Gain(dB)is always less than zero. The circuit is always stable. No gain margin or phase margin."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": false,
+          "observed_candidate_count": 0
+        },
+        "gainMargin": {
+          "native_available": false,
+          "observed_candidate_count": 2
+        }
+      },
+      "native_conditional_pm_60deg_status": "NOT_AVAILABLE",
+      "review_flags": [
+        "gainMargin_UNAVAILABLE_DESPITE_SAVED_CROSSING"
+      ],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 4.832514656949542,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.9909703100516379,
+        "frequency_hz": 1412537.54462272
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.9909703100516379,
+        "frequency_hz_approx": 1412537.54462272
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g1_cm1": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 45.94790577294336,
+      "minimum_gain_db": -18.915046265110323,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": 198.333,
+            "imag": 8.18416e-05
+          },
+          "gain_db": 45.94789962203237
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 0.154885,
+            "imag": -0.00490494
+          },
+          "gain_db": -16.19545953112854
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 842,
+          "j": 843,
+          "t": 0.4386716307791208,
+          "frequency_hz": 2656970.4008057495,
+          "frequency_interval_hz": [
+            2630267.991895317,
+            2691534.803926849
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 80.38987179430556,
+          "phase_L_principal_deg": 80.38987179430558,
+          "phase_interval_endpoint_deg": [
+            80.2460045755152,
+            80.57396564866424
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 1387,
+          "j": 1388,
+          "t": 0.892525996407633,
+          "frequency_hz": 756702658849.2871,
+          "frequency_interval_hz": [
+            741310241300.8867,
+            758577575029.1522
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.1534253087954755,
+          "axis": "positive",
+          "real_range": [
+            0.153295,
+            0.153441
+          ],
+          "inverse_magnitude_db": 16.282059878979215
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 16.28202134055568,
+        "gainMarginFreq": 756717752474.5048,
+        "phaseMargin": 80.38944282842039,
+        "phaseMarginFreq": 2656937.704063086,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 2656937.704063086,
+          "interpolated_frequency_hz": 2656970.4008057495,
+          "frequency_relative_difference": 1.2306175870779867e-05,
+          "value_difference": 0.0004289658851917011,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 756717752474.5048,
+          "interpolated_frequency_hz": 756702658849.2871,
+          "frequency_relative_difference": -1.994617566236645e-05,
+          "value_difference": 3.853842353507275e-05,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 1.2688658302187577,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.8451292337041737,
+        "frequency_hz": 1000000000000.0
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.8451292337041737,
+        "frequency_hz_approx": 1000000000000.0
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g1_cm2": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 33.55734358685766,
+      "minimum_gain_db": -150.26895065888186,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -47.6285,
+            "imag": 1.22828e-05
+          },
+          "gain_db": 33.557338083315905
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 9.53161e-09,
+            "imag": 2.91393e-08
+          },
+          "gain_db": -150.26895065888186
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 873,
+          "j": 874,
+          "t": 0.11815440892359776,
+          "frequency_hz": 5384948.374704088,
+          "frequency_interval_hz": [
+            5370317.963702387,
+            5495408.738576102
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 124.42366478796505,
+          "phase_L_principal_deg": 124.42366478796504,
+          "phase_interval_endpoint_deg": [
+            124.42698628572289,
+            124.3988747849495
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 1064,
+          "j": 1065,
+          "t": 0.11315137683517215,
+          "frequency_hz": 437654616.3833866,
+          "frequency_interval_hz": [
+            436515832.2401525,
+            446683592.1509494
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.021366755327557954,
+          "axis": "positive",
+          "real_range": [
+            0.0208209,
+            0.0214364
+          ],
+          "inverse_magnitude_db": 33.40522846203004
+        },
+        {
+          "i": 1143,
+          "j": 1144,
+          "t": 0.7836692539474666,
+          "frequency_hz": 2740543453.4470606,
+          "frequency_interval_hz": [
+            2691534803.926825,
+            2754228703.338073
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.0013186506189244152,
+          "axis": "negative",
+          "real_range": [
+            -0.00136542,
+            -0.00130574
+          ],
+          "inverse_magnitude_db": 57.59740514097103
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 33.40453718180132,
+        "gainMarginFreq": 437631085.0703954,
+        "phaseMargin": 124.4244844056612,
+        "phaseMarginFreq": 5384929.447715986,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 5384929.447715986,
+          "interpolated_frequency_hz": 5384948.374704088,
+          "frequency_relative_difference": 3.514807071614001e-06,
+          "value_difference": -0.0008196176961519086,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 437631085.0703954,
+          "interpolated_frequency_hz": 437654616.3833866,
+          "frequency_relative_difference": 5.3769747611509544e-05,
+          "value_difference": 0.0006912802287217801,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 2.4454530234543483,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.966457002627225,
+        "frequency_hz": 194984459.9757987
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.966457002627225,
+        "frequency_hz_approx": 194984459.9757987
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g4_dm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 55.4880242552834,
+      "minimum_gain_db": -148.05652349567313,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -594.841,
+            "imag": 0.00122191
+          },
+          "gain_db": 55.488017901122014
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 1.8289e-08,
+            "imag": 3.50701e-08
+          },
+          "gain_db": -148.05652349567313
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 828,
+          "j": 829,
+          "t": 0.5226031936659935,
+          "frequency_hz": 1928528.3696104623,
+          "frequency_interval_hz": [
+            1905460.717963201,
+            1949844.599757998
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 50.109024040791844,
+          "phase_L_principal_deg": 50.10902404079184,
+          "phase_interval_endpoint_deg": [
+            50.42310809857198,
+            49.82210898186763
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 911,
+          "j": 912,
+          "t": 0.9768634402188052,
+          "frequency_hz": 13175546.38845183,
+          "frequency_interval_hz": [
+            12882495.51693099,
+            13182567.38556371
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.03697441285492756,
+          "axis": "positive",
+          "real_range": [
+            0.0369363,
+            0.0385836
+          ],
+          "inverse_magnitude_db": 28.641974275432567
+        },
+        {
+          "i": 1057,
+          "j": 1058,
+          "t": 0.5918141730908365,
+          "frequency_hz": 376632802.42209136,
+          "frequency_interval_hz": [
+            371535229.0971612,
+            380189396.3205495
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.0004249122089305317,
+          "axis": "negative",
+          "real_range": [
+            -0.000430928,
+            -0.000420763
+          ],
+          "inverse_magnitude_db": 67.43401580442837
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 28.64177844784036,
+        "gainMarginFreq": 13175244.09972975,
+        "phaseMargin": 50.10932406647976,
+        "phaseMarginFreq": 1928565.194383079,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 1928565.194383079,
+          "interpolated_frequency_hz": 1928528.3696104623,
+          "frequency_relative_difference": -1.9094388265417095e-05,
+          "value_difference": -0.0003000256879204244,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 13175244.09972975,
+          "interpolated_frequency_hz": 13175546.38845183,
+          "frequency_relative_difference": 2.294369043864819e-05,
+          "value_difference": 0.0001958275922078201,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "BELOW_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 3.9164829506464116,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.6648077186931572,
+        "frequency_hz": 2884031.503126534
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.6647679874450658,
+        "frequency_hz_approx": 2861298.585328419
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g4_input_cm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": -48.33632980219428,
+      "minimum_gain_db": -97.06151385357414,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": 0.00251921,
+            "imag": 6.30178e-12
+          },
+          "gain_db": -51.97471256873702
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 2.34536e-05,
+            "imag": -3.5056e-07
+          },
+          "gain_db": -92.59483956401789
+        }
+      },
+      "all_observed_unity_crossings": [],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 798,
+          "j": 799,
+          "t": 0.10829042908874636,
+          "frequency_hz": 957376.811517788,
+          "frequency_interval_hz": [
+            954992.5860214133,
+            977237.2209557875
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.003442686193796597,
+          "axis": "positive",
+          "real_range": [
+            0.00343981,
+            0.00346637
+          ],
+          "inverse_magnitude_db": 49.26205124218071
+        },
+        {
+          "i": 996,
+          "j": 997,
+          "t": 0.35824717530934347,
+          "frequency_hz": 91956508.2005398,
+          "frequency_interval_hz": [
+            91201083.93558832,
+            93325430.07969639
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -7.592563159276848e-05,
+          "axis": "negative",
+          "real_range": [
+            -7.68886e-05,
+            -7.42006e-05
+          ],
+          "inverse_magnitude_db": 82.39223173370247
+        },
+        {
+          "i": 1093,
+          "j": 1094,
+          "t": 0.43218195747625443,
+          "frequency_hz": 859650300.9928532,
+          "frequency_interval_hz": [
+            851138038.2023492,
+            870963589.9560527
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.00018896683235165705,
+          "axis": "positive",
+          "real_range": [
+            0.000188918,
+            0.000189004
+          ],
+          "inverse_magnitude_db": 74.47228833883433
+        },
+        {
+          "i": 1294,
+          "j": 1295,
+          "t": 0.48283881275331714,
+          "frequency_hz": 88070079449.45251,
+          "frequency_interval_hz": [
+            87096358995.60468,
+            89125093813.37108
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": 1.5036596912554175e-05,
+          "axis": "positive",
+          "real_range": [
+            1.49929e-05,
+            1.50834e-05
+          ],
+          "inverse_magnitude_db": 96.45700884580603
+        },
+        {
+          "i": 1396,
+          "j": 1397,
+          "t": 0.4219858156028369,
+          "frequency_hz": 920915660055.7286,
+          "frequency_interval_hz": [
+            912010839355.8716,
+            933254300796.952
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 2.3216462056737587e-05,
+          "axis": "positive",
+          "real_range": [
+            2.31884e-05,
+            2.32549e-05
+          ],
+          "inverse_magnitude_db": 92.6840792288172
+        }
+      ],
+      "native_margins": {
+        "gainMargin": null,
+        "gainMarginFreq": null,
+        "phaseMargin": null,
+        "phaseMarginFreq": null,
+        "state_verbatim": "Gain(dB)is always less than zero. The circuit is always stable. No gain margin or phase margin."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": false,
+          "observed_candidate_count": 0
+        },
+        "gainMargin": {
+          "native_available": false,
+          "observed_candidate_count": 4
+        }
+      },
+      "native_conditional_pm_60deg_status": "NOT_AVAILABLE",
+      "review_flags": [
+        "gainMargin_UNAVAILABLE_DESPITE_SAVED_CROSSING"
+      ],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 4.75730382601202,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.9962898203148984,
+        "frequency_hz": 1380384.264602852
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.9962898203148984,
+        "frequency_hz_approx": 1380384.264602852
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g4_cm1": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 56.48167131651472,
+      "minimum_gain_db": -18.906985695024265,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": 666.935,
+            "imag": 0.000937165
+          },
+          "gain_db": 56.4816701860788
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 0.155408,
+            "imag": -0.00521502
+          },
+          "gain_db": -16.16564486569181
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 842,
+          "j": 843,
+          "t": 0.2894790420663328,
+          "frequency_hz": 2647858.6065401603,
+          "frequency_interval_hz": [
+            2630267.991895317,
+            2691534.803926849
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 80.62097525368095,
+          "phase_L_principal_deg": 80.62097525368097,
+          "phase_interval_endpoint_deg": [
+            80.52891067982472,
+            80.84694604846165
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 1387,
+          "j": 1388,
+          "t": 0.2837605116890254,
+          "frequency_hz": 746169692469.6033,
+          "frequency_interval_hz": [
+            741310241300.8867,
+            758577575029.1522
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.15392029399265983,
+          "axis": "positive",
+          "real_range": [
+            0.15388,
+            0.154022
+          ],
+          "inverse_magnitude_db": 16.254082315783776
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 16.25403886398778,
+        "gainMarginFreq": 746200884946.0494,
+        "phaseMargin": 80.620615576675,
+        "phaseMarginFreq": 2647831.03339988,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 2647831.03339988,
+          "interpolated_frequency_hz": 2647858.6065401603,
+          "frequency_relative_difference": 1.0413481801752056e-05,
+          "value_difference": 0.00035967700597439034,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 746200884946.0494,
+          "interpolated_frequency_hz": 746169692469.6033,
+          "frequency_relative_difference": -4.180171462597748e-05,
+          "value_difference": 4.3451795995963494e-05,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 1.270398926673181,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.8446081001846953,
+        "frequency_hz": 1000000000000.0
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.8446081001846953,
+        "frequency_hz_approx": 1000000000000.0
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g4_cm2": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 38.54263417915468,
+      "minimum_gain_db": -150.07381882412264,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -84.5535,
+            "imag": 3.86766e-05
+          },
+          "gain_db": 38.54263178905488
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 8.57301e-09,
+            "imag": 3.01604e-08
+          },
+          "gain_db": -150.07381882412264
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 875,
+          "j": 876,
+          "t": 0.3774775449048189,
+          "frequency_hz": 5672503.538234478,
+          "frequency_interval_hz": [
+            5623413.251903344,
+            5754399.373371419
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 124.43239921724962,
+          "phase_L_principal_deg": 124.43239921724961,
+          "phase_interval_endpoint_deg": [
+            124.45438391670719,
+            124.39614283785544
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 1064,
+          "j": 1065,
+          "t": 0.02117914404514012,
+          "frequency_hz": 436728758.87618095,
+          "frequency_interval_hz": [
+            436515832.2401525,
+            446683592.1509494
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.021423228232295338,
+          "axis": "positive",
+          "real_range": [
+            0.0208191,
+            0.0214363
+          ],
+          "inverse_magnitude_db": 33.38230170852022
+        },
+        {
+          "i": 1143,
+          "j": 1144,
+          "t": 0.7876132887630323,
+          "frequency_hz": 2740792346.5382357,
+          "frequency_interval_hz": [
+            2691534803.926825,
+            2754228703.338073
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.0013189373627937348,
+          "axis": "negative",
+          "real_range": [
+            -0.00136595,
+            -0.00130626
+          ],
+          "inverse_magnitude_db": 57.59551657791236
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 33.38216634071961,
+        "gainMarginFreq": 436723922.526521,
+        "phaseMargin": 124.4342500404786,
+        "phaseMarginFreq": 5672500.435245395,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 5672500.435245395,
+          "interpolated_frequency_hz": 5672503.538234478,
+          "frequency_relative_difference": 5.470231547732851e-07,
+          "value_difference": -0.0018508232290059823,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 436723922.526521,
+          "interpolated_frequency_hz": 436728758.87618095,
+          "frequency_relative_difference": 1.1074157861390432e-05,
+          "value_difference": 0.00013536780060974252,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 2.4440494062364166,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.9661363015964674,
+        "frequency_hz": 190546071.796319
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.9661363015964674,
+        "frequency_hz_approx": 190546071.796319
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g16_dm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 48.23919516731167,
+      "minimum_gain_db": -146.73151681965695,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -258.202,
+            "imag": 0.00077758
+          },
+          "gain_db": 48.23919203870937
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 2.57973e-08,
+            "imag": 3.81707e-08
+          },
+          "gain_db": -146.73151681965695
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 784,
+          "j": 785,
+          "t": 0.9130352216548513,
+          "frequency_hz": 706529.5852264599,
+          "frequency_interval_hz": [
+            691830.9709189205,
+            707945.7843841215
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 66.49756309981333,
+          "phase_L_principal_deg": 66.49756309981333,
+          "phase_interval_endpoint_deg": [
+            66.80836617587404,
+            66.46795972857687
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 904,
+          "j": 905,
+          "t": 0.03480438481426727,
+          "frequency_hz": 10973572.665983364,
+          "frequency_interval_hz": [
+            10964781.96143156,
+            11220184.54301933
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.013243981450570794,
+          "axis": "positive",
+          "real_range": [
+            0.0126916,
+            0.0132639
+          ],
+          "inverse_magnitude_db": 37.55962872378807
+        },
+        {
+          "i": 1037,
+          "j": 1038,
+          "t": 0.03912662445055975,
+          "frequency_hz": 234634173.85522926,
+          "frequency_interval_hz": [
+            234422881.5319852,
+            239883291.9019418
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.00013672009944655297,
+          "axis": "negative",
+          "real_range": [
+            -0.000136893,
+            -0.000132474
+          ],
+          "inverse_magnitude_db": 77.28335268785969
+        },
+        {
+          "i": 1145,
+          "j": 1146,
+          "t": 0.9564228296098837,
+          "frequency_hz": 2881139113.150772,
+          "frequency_interval_hz": [
+            2818382931.264359,
+            2884031503.126508
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 1.1252738688888488e-06,
+          "axis": "positive",
+          "real_range": [
+            1.12242e-06,
+            1.18791e-06
+          ],
+          "inverse_magnitude_db": 118.97483532399008
+        },
+        {
+          "i": 1255,
+          "j": 1256,
+          "t": 0.7598629882596671,
+          "frequency_hz": 36107600597.165924,
+          "frequency_interval_hz": [
+            35481338923.35622,
+            36307805477.00877
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -2.6944556792439636e-07,
+          "axis": "negative",
+          "real_range": [
+            -2.69642e-07,
+            -2.68824e-07
+          ],
+          "inverse_magnitude_db": 131.39057911326918
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 37.55934775671914,
+        "gainMarginFreq": 10973211.85296926,
+        "phaseMargin": 66.49772475884187,
+        "phaseMarginFreq": 706530.6417573612,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 706530.6417573612,
+          "interpolated_frequency_hz": 706529.5852264599,
+          "frequency_relative_difference": -1.4953787407234742e-06,
+          "value_difference": -0.00016165902854936576,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 10973211.85296926,
+          "interpolated_frequency_hz": 10973572.665983364,
+          "frequency_relative_difference": 3.288125837164202e-05,
+          "value_difference": 0.000280967068931659,
+          "match": true,
+          "all_candidate_count": 2
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 5.882558837558236,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.8178081416334763,
+        "frequency_hz": 1548816.618912444
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.8178081416334763,
+        "frequency_hz_approx": 1548816.618912444
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g16_input_cm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": -58.89636620641668,
+      "minimum_gain_db": -99.5760514728251,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": 0.000753038,
+            "imag": 1.67492e-12
+          },
+          "gain_db": -62.46366215529777
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 2.14796e-05,
+            "imag": 8.80722e-08
+          },
+          "gain_db": -93.35940319539468
+        }
+      },
+      "all_observed_unity_crossings": [],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 795,
+          "j": 796,
+          "t": 0.30945135594737316,
+          "frequency_hz": 897624.1191556724,
+          "frequency_interval_hz": [
+            891250.9381337245,
+            912010.8393558882
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.0010035860986306274,
+          "axis": "positive",
+          "real_range": [
+            0.00100116,
+            0.001009
+          ],
+          "inverse_magnitude_db": 59.968907260616504
+        },
+        {
+          "i": 992,
+          "j": 993,
+          "t": 0.5339768395471785,
+          "frequency_hz": 84205366.10291412,
+          "frequency_interval_hz": [
+            83176377.11026469,
+            85113803.82023518
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -2.094715007205581e-05,
+          "axis": "negative",
+          "real_range": [
+            -2.14422e-05,
+            -2.05151e-05
+          ],
+          "inverse_magnitude_db": 93.57750111712627
+        },
+        {
+          "i": 1137,
+          "j": 1138,
+          "t": 0.6435106457216943,
+          "frequency_hz": 2379222764.019056,
+          "frequency_interval_hz": [
+            2344228815.319843,
+            2398832919.01941
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 3.287778739371724e-05,
+          "axis": "positive",
+          "real_range": [
+            3.28691e-05,
+            3.28826e-05
+          ],
+          "inverse_magnitude_db": 89.66194834516563
+        },
+        {
+          "i": 1260,
+          "j": 1261,
+          "t": 0.6753040598701733,
+          "frequency_hz": 40434589702.37895,
+          "frequency_interval_hz": [
+            39810717055.34822,
+            40738027780.40973
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": 1.0547385351453715e-05,
+          "axis": "positive",
+          "real_range": [
+            1.05355e-05,
+            1.05531e-05
+          ],
+          "inverse_magnitude_db": 99.53710373276685
+        }
+      ],
+      "native_margins": {
+        "gainMargin": null,
+        "gainMarginFreq": null,
+        "phaseMargin": null,
+        "phaseMarginFreq": null,
+        "state_verbatim": "Gain(dB)is always less than zero. The circuit is always stable. No gain margin or phase margin."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": false,
+          "observed_candidate_count": 0
+        },
+        "gainMargin": {
+          "native_available": false,
+          "observed_candidate_count": 3
+        }
+      },
+      "native_conditional_pm_60deg_status": "NOT_AVAILABLE",
+      "review_flags": [
+        "gainMargin_UNAVAILABLE_DESPITE_SAVED_CROSSING"
+      ],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 4.985680171078826,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.9989057708311375,
+        "frequency_hz": 1348962.882591621
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.9989057708311375,
+        "frequency_hz_approx": 1348962.882591621
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g16_cm1": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 71.40049203637145,
+      "minimum_gain_db": -18.90475595701161,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -3715.56,
+            "imag": 0.0292583
+          },
+          "gain_db": 71.4004855766363
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 0.155428,
+            "imag": -0.00523438
+          },
+          "gain_db": -16.16449204991697
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 842,
+          "j": 843,
+          "t": 0.22811632146153019,
+          "frequency_hz": 2644120.0125105903,
+          "frequency_interval_hz": [
+            2630267.991895317,
+            2691534.803926849
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 80.75213496041627,
+          "phase_L_principal_deg": 80.75213496041624,
+          "phase_interval_endpoint_deg": [
+            80.68064460344978,
+            80.9940389125832
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 1387,
+          "j": 1388,
+          "t": 0.24155277421115773,
+          "frequency_hz": 745444865499.0914,
+          "frequency_interval_hz": [
+            741310241300.8867,
+            758577575029.1522
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.153937300493938,
+          "axis": "positive",
+          "real_range": [
+            0.153903,
+            0.154045
+          ],
+          "inverse_magnitude_db": 16.25312267342947
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 16.25308435836939,
+        "gainMarginFreq": 745472977620.3925,
+        "phaseMargin": 80.75184240657731,
+        "phaseMarginFreq": 2644096.449382273,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 2644096.449382273,
+          "interpolated_frequency_hz": 2644120.0125105903,
+          "frequency_relative_difference": 8.91159939442332e-06,
+          "value_difference": 0.00029255383893200815,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 745472977620.3925,
+          "interpolated_frequency_hz": 745444865499.0914,
+          "frequency_relative_difference": -3.771044980160898e-05,
+          "value_difference": 3.8315060081117736e-05,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 1.273978063907947,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.8445882203286904,
+        "frequency_hz": 1000000000000.0
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.8445882203286904,
+        "frequency_hz_approx": 1000000000000.0
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    },
+    "g16_cm2": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "maximum_gain_db": 42.410506857983805,
+      "minimum_gain_db": -150.07146807831916,
+      "raw_L_endpoints": {
+        "low": {
+          "f_hz": 0.01,
+          "raw_L": {
+            "real": -131.985,
+            "imag": 9.42551e-05
+          },
+          "gain_db": 42.41049153512013
+        },
+        "high": {
+          "f_hz": 1000000000000.0,
+          "raw_L": {
+            "real": 8.44037e-09,
+            "imag": 3.02066e-08
+          },
+          "gain_db": -150.07146807831916
+        }
+      },
+      "all_observed_unity_crossings": [
+        {
+          "i": 876,
+          "j": 877,
+          "t": 0.31536850974184216,
+          "frequency_hz": 5796337.76890342,
+          "frequency_interval_hz": [
+            5754399.373371419,
+            5888436.553555735
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "interpolation": "linear_dB_vs_log_frequency",
+          "phase_L_unwrapped_deg": 124.38412031121351,
+          "phase_L_principal_deg": 124.38412031121351,
+          "phase_interval_endpoint_deg": [
+            124.4072644401397,
+            124.33387686905617
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "i": 1063,
+          "j": 1064,
+          "t": 0.8700705022061623,
+          "frequency_hz": 435211843.1346731,
+          "frequency_interval_hz": [
+            426579518.8015795,
+            436515832.2401525
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "descending",
+          "L_real": 0.021547305478988137,
+          "axis": "positive",
+          "real_range": [
+            0.0214671,
+            0.0220844
+          ],
+          "inverse_magnitude_db": 33.33214062493491
+        },
+        {
+          "i": 1143,
+          "j": 1144,
+          "t": 0.7833405257764731,
+          "frequency_hz": 2740522709.6783805,
+          "frequency_interval_hz": [
+            2691534803.926825,
+            2754228703.338073
+          ],
+          "event": "bracketed_sign_change",
+          "direction": "ascending",
+          "L_real": -0.00131901023742166,
+          "axis": "negative",
+          "real_range": [
+            -0.00136576,
+            -0.00130608
+          ],
+          "inverse_magnitude_db": 57.59503667378108
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 33.33133807542146,
+        "gainMarginFreq": 435185491.8266077,
+        "phaseMargin": 124.3857904491135,
+        "phaseMarginFreq": 5796350.797802445,
+        "state_verbatim": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_crosschecks": {
+        "phaseMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 5796350.797802445,
+          "interpolated_frequency_hz": 5796337.76890342,
+          "frequency_relative_difference": -2.2477761403294494e-06,
+          "value_difference": -0.0016701378999925964,
+          "match": true,
+          "all_candidate_count": 1
+        },
+        "gainMargin": {
+          "native_available": true,
+          "matched_candidate_index": 0,
+          "native_frequency_hz": 435185491.8266077,
+          "interpolated_frequency_hz": 435211843.1346731,
+          "frequency_relative_difference": 6.0551899271343856e-05,
+          "value_difference": 0.0008025495134447169,
+          "match": true,
+          "all_candidate_count": 1
+        }
+      },
+      "native_conditional_pm_60deg_status": "MEETS_NATIVE_CONDITIONAL_PM_TARGET",
+      "review_flags": [],
+      "zero_magnitude_samples": 0,
+      "maximum_saved_phase_increment_deg": 2.4418362610730924,
+      "max_adjacent_frequency_ratio": 1.023292992280797,
+      "nearest_saved_point_to_raw_critical_plus_one": {
+        "distance": 0.9656684327645851,
+        "frequency_hz": 186208713.6662812
+      },
+      "nearest_polyline_chord_to_raw_critical_plus_one": {
+        "distance": 0.9656684327645851,
+        "frequency_hz_approx": 186208713.6662812
+      },
+      "crossing_coverage": "Every sign change and exact zero on the saved grid is included; unresolved between-point tangent/double crossings and finite-frequency endpoints remain possible.",
+      "sign_policy": "Exported Spectre L is unchanged. Raw critical point +1; native PM checked against arg(L) at a matching unity crossing, native GM against positive-real crossing. Negative-real crossings also recorded. No ad hoc sign flips.",
+      "full_multiloop_stability_pass": false
+    }
+  },
+  "probe_equivalence": {
+    "1": {
+      "status": "NUMERICAL_EQUIVALENCE_WITHIN_TOLERANCES",
+      "gain": 1,
+      "results": {
+        "op": {
+          "shared_nodes": 159,
+          "shared_currents": 610,
+          "baseline_device_op_fields_not_saved_in_stb": [
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:vdsat"
+          ],
+          "missing_field_policy": "Explicitly not compared; baseline has additional saved MOS internal operating-point fields. All ordinary baseline nodes and branch signals must still be present.",
+          "extra_probe_signals": [
+            "CM1_GATE",
+            "CM1_PROBE:in",
+            "CM2_GATE",
+            "CM2_PROBE:in",
+            "DM_INN",
+            "DM_INP",
+            "DM_PROBE.IPRB_CM:in",
+            "DM_PROBE.IPRB_DM:in",
+            "DM_PROBE.a",
+            "DM_PROBE.b",
+            "DM_PROBE.c",
+            "DM_PROBE.d"
+          ],
+          "max_node_abs_difference": {
+            "value": 5.334371833143337e-10,
+            "signal": "HN"
+          },
+          "max_current_abs_difference": {
+            "value": 2.1092347229152882e-13,
+            "signal": "XPGA_XFP1_XSW_XN.msky130_fd_pr__nfet_01v8:d"
+          },
+          "excluded_equal_metadata": {
+            "units": "A"
+          },
+          "probe_zero_dc_drop_v": {
+            "DM_INP": 0.0,
+            "DM_INN": 0.0,
+            "CM1_GATE": 0.0,
+            "CM2_GATE": 0.0
+          },
+          "selected_nodes": {
+            "FP": {
+              "without_probe_v": 0.9161175605894784,
+              "with_probe_v": 0.9161175611228954,
+              "difference_v": 5.334170882775879e-10
+            },
+            "FN": {
+              "without_probe_v": 0.9161175605894784,
+              "with_probe_v": 0.9161175611228958,
+              "difference_v": 5.334174213444953e-10
+            },
+            "OP": {
+              "without_probe_v": 0.916117583429496,
+              "with_probe_v": 0.9161175839629139,
+              "difference_v": 5.334178654337052e-10
+            },
+            "ON": {
+              "without_probe_v": 0.916117583429496,
+              "with_probe_v": 0.9161175839629142,
+              "difference_v": 5.334181985006126e-10
+            },
+            "XPGA_XOTA_NCM": {
+              "without_probe_v": 0.643154327799418,
+              "with_probe_v": 0.6431543277946749,
+              "difference_v": -4.743094805803594e-12
+            },
+            "XPGA_XOTA_CMG": {
+              "without_probe_v": 0.9389548527882018,
+              "with_probe_v": 0.9389548527579523,
+              "difference_v": -3.02494695958444e-11
+            },
+            "XPGA_XOTA_BN": {
+              "without_probe_v": 0.6853142975079649,
+              "with_probe_v": 0.6853142975079649,
+              "difference_v": 0.0
+            }
+          },
+          "status": "PASS_WITHIN_TOLERANCES"
+        },
+        "ac": {
+          "shared_nodes": 159,
+          "shared_currents": 610,
+          "baseline_device_op_fields_not_saved_in_stb": [],
+          "missing_field_policy": "Explicitly not compared; baseline has additional saved MOS internal operating-point fields. All ordinary baseline nodes and branch signals must still be present.",
+          "extra_probe_signals": [
+            "CM1_GATE",
+            "CM1_PROBE:in",
+            "CM2_GATE",
+            "CM2_PROBE:in",
+            "DM_INN",
+            "DM_INP",
+            "DM_PROBE.IPRB_CM:in",
+            "DM_PROBE.IPRB_DM:in",
+            "DM_PROBE.a",
+            "DM_PROBE.b",
+            "DM_PROBE.c",
+            "DM_PROBE.d"
+          ],
+          "max_node_abs_difference": {
+            "value": 1.000000000001e-06,
+            "signal": "XPGA_XFP4_N"
+          },
+          "max_current_abs_difference": {
+            "value": 1.0049875621132814e-10,
+            "signal": "XTGP_XN.msky130_fd_pr__nfet_01v8_lvt:d"
+          },
+          "excluded_equal_metadata": {},
+          "diff_gain_max_abs_difference": 1.6000000000251924e-08,
+          "diff_gain_max_relative_difference": 2.979401520383838e-07,
+          "samples": 161,
+          "frequency_range_hz": [
+            1.0,
+            100000000.0
+          ],
+          "status": "PASS_WITHIN_TOLERANCES"
+        }
+      },
+      "limits": {
+        "op_node_v": 1e-08,
+        "op_current_a": 1e-12,
+        "probe_zero_dc_drop_v": 1e-10,
+        "diff_ac_gain_relative": 1e-06
+      },
+      "scope": "Zero-differential DC nodes/branch signals and saved differential AC input only. Baseline-only MOS internal OP fields are explicitly unverified. No independent common-mode excitation or large-signal equivalence inferred."
+    },
+    "4": {
+      "status": "NUMERICAL_EQUIVALENCE_WITHIN_TOLERANCES",
+      "gain": 4,
+      "results": {
+        "op": {
+          "shared_nodes": 159,
+          "shared_currents": 610,
+          "baseline_device_op_fields_not_saved_in_stb": [
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:vdsat"
+          ],
+          "missing_field_policy": "Explicitly not compared; baseline has additional saved MOS internal operating-point fields. All ordinary baseline nodes and branch signals must still be present.",
+          "extra_probe_signals": [
+            "CM1_GATE",
+            "CM1_PROBE:in",
+            "CM2_GATE",
+            "CM2_PROBE:in",
+            "DM_INN",
+            "DM_INP",
+            "DM_PROBE.IPRB_CM:in",
+            "DM_PROBE.IPRB_DM:in",
+            "DM_PROBE.a",
+            "DM_PROBE.b",
+            "DM_PROBE.c",
+            "DM_PROBE.d"
+          ],
+          "max_node_abs_difference": {
+            "value": 1.3037348978173213e-12,
+            "signal": "XPGA_XOTA_XCCP_XC1_XC3_XC.b1"
+          },
+          "max_current_abs_difference": {
+            "value": 1.404800754889468e-15,
+            "signal": "VDD_SRC:p"
+          },
+          "excluded_equal_metadata": {
+            "units": "A"
+          },
+          "probe_zero_dc_drop_v": {
+            "DM_INP": 0.0,
+            "DM_INN": 0.0,
+            "CM1_GATE": 0.0,
+            "CM2_GATE": 0.0
+          },
+          "selected_nodes": {
+            "FP": {
+              "without_probe_v": 0.9162616025438086,
+              "with_probe_v": 0.916261602542505,
+              "difference_v": -1.3036238755148588e-12
+            },
+            "FN": {
+              "without_probe_v": 0.9162616025438085,
+              "with_probe_v": 0.916261602542505,
+              "difference_v": -1.3035128532123963e-12
+            },
+            "OP": {
+              "without_probe_v": 0.91626162558783,
+              "with_probe_v": 0.9162616255865262,
+              "difference_v": -1.3037348978173213e-12
+            },
+            "ON": {
+              "without_probe_v": 0.9162616255878299,
+              "with_probe_v": 0.9162616255865262,
+              "difference_v": -1.3036238755148588e-12
+            },
+            "XPGA_XOTA_NCM": {
+              "without_probe_v": 0.6432292375059592,
+              "with_probe_v": 0.6432292375059634,
+              "difference_v": 4.218847493575595e-15
+            },
+            "XPGA_XOTA_CMG": {
+              "without_probe_v": 0.9393500109343499,
+              "with_probe_v": 0.9393500109343933,
+              "difference_v": 4.340972026284362e-14
+            },
+            "XPGA_XOTA_BN": {
+              "without_probe_v": 0.6853142975079649,
+              "with_probe_v": 0.6853142975079649,
+              "difference_v": 0.0
+            }
+          },
+          "status": "PASS_WITHIN_TOLERANCES"
+        },
+        "ac": {
+          "shared_nodes": 159,
+          "shared_currents": 610,
+          "baseline_device_op_fields_not_saved_in_stb": [],
+          "missing_field_policy": "Explicitly not compared; baseline has additional saved MOS internal operating-point fields. All ordinary baseline nodes and branch signals must still be present.",
+          "extra_probe_signals": [
+            "CM1_GATE",
+            "CM1_PROBE:in",
+            "CM2_GATE",
+            "CM2_PROBE:in",
+            "DM_INN",
+            "DM_INP",
+            "DM_PROBE.IPRB_CM:in",
+            "DM_PROBE.IPRB_DM:in",
+            "DM_PROBE.a",
+            "DM_PROBE.b",
+            "DM_PROBE.c",
+            "DM_PROBE.d"
+          ],
+          "max_node_abs_difference": {
+            "value": 1.004987562113025e-06,
+            "signal": "XPGA_XOTA_XRN2_XR.ra"
+          },
+          "max_current_abs_difference": {
+            "value": 1.0000000000157452e-09,
+            "signal": "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:d"
+          },
+          "excluded_equal_metadata": {},
+          "diff_gain_max_abs_difference": 7.99999999995249e-08,
+          "diff_gain_max_relative_difference": 6.41098279153491e-08,
+          "samples": 161,
+          "frequency_range_hz": [
+            1.0,
+            100000000.0
+          ],
+          "status": "PASS_WITHIN_TOLERANCES"
+        }
+      },
+      "limits": {
+        "op_node_v": 1e-08,
+        "op_current_a": 1e-12,
+        "probe_zero_dc_drop_v": 1e-10,
+        "diff_ac_gain_relative": 1e-06
+      },
+      "scope": "Zero-differential DC nodes/branch signals and saved differential AC input only. Baseline-only MOS internal OP fields are explicitly unverified. No independent common-mode excitation or large-signal equivalence inferred."
+    },
+    "16": {
+      "status": "FAIL",
+      "gain": 16,
+      "results": {
+        "op": {
+          "shared_nodes": 159,
+          "shared_currents": 610,
+          "baseline_device_op_fields_not_saved_in_stb": [
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XBIAS_XDBN.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMR.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XCMT.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMIN.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMIP.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMLN.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMLP.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMON.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMOP.msky130_fd_pr__nfet_01v8:vdsat",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMSN.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:id",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:region",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:vds",
+            "XPGA_XOTA_XMSP.msky130_fd_pr__pfet_01v8:vdsat",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:id",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:region",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:vds",
+            "XPGA_XOTA_XMTAIL.msky130_fd_pr__nfet_01v8:vdsat"
+          ],
+          "missing_field_policy": "Explicitly not compared; baseline has additional saved MOS internal operating-point fields. All ordinary baseline nodes and branch signals must still be present.",
+          "extra_probe_signals": [
+            "CM1_GATE",
+            "CM1_PROBE:in",
+            "CM2_GATE",
+            "CM2_PROBE:in",
+            "DM_INN",
+            "DM_INP",
+            "DM_PROBE.IPRB_CM:in",
+            "DM_PROBE.IPRB_DM:in",
+            "DM_PROBE.a",
+            "DM_PROBE.b",
+            "DM_PROBE.c",
+            "DM_PROBE.d"
+          ],
+          "max_node_abs_difference": {
+            "value": 3.2002784089435465e-07,
+            "signal": "XPGA_XN1_N"
+          },
+          "max_current_abs_difference": {
+            "value": 1.4004097360909018e-15,
+            "signal": "VDD_SRC:p"
+          },
+          "excluded_equal_metadata": {
+            "units": "A"
+          },
+          "probe_zero_dc_drop_v": {
+            "DM_INP": 0.0,
+            "DM_INN": 0.0,
+            "CM1_GATE": 0.0,
+            "CM2_GATE": 0.0
+          },
+          "selected_nodes": {
+            "FP": {
+              "without_probe_v": 0.9163298392068036,
+              "with_probe_v": 0.9163298392068033,
+              "difference_v": -2.220446049250313e-16
+            },
+            "FN": {
+              "without_probe_v": 0.9163298392068036,
+              "with_probe_v": 0.9163298392068033,
+              "difference_v": -2.220446049250313e-16
+            },
+            "OP": {
+              "without_probe_v": 0.9163298623474669,
+              "with_probe_v": 0.9163298623474668,
+              "difference_v": -1.1102230246251565e-16
+            },
+            "ON": {
+              "without_probe_v": 0.9163298623474669,
+              "with_probe_v": 0.9163298623474668,
+              "difference_v": -1.1102230246251565e-16
+            },
+            "XPGA_XOTA_NCM": {
+              "without_probe_v": 0.6432657782366412,
+              "with_probe_v": 0.6432657782366413,
+              "difference_v": 1.1102230246251565e-16
+            },
+            "XPGA_XOTA_CMG": {
+              "without_probe_v": 0.939537217598721,
+              "with_probe_v": 0.9395372175987208,
+              "difference_v": -2.220446049250313e-16
+            },
+            "XPGA_XOTA_BN": {
+              "without_probe_v": 0.6853142975079649,
+              "with_probe_v": 0.685314297507965,
+              "difference_v": 1.1102230246251565e-16
+            }
+          },
+          "status": "FAIL"
+        },
+        "ac": {
+          "shared_nodes": 159,
+          "shared_currents": 610,
+          "baseline_device_op_fields_not_saved_in_stb": [],
+          "missing_field_policy": "Explicitly not compared; baseline has additional saved MOS internal operating-point fields. All ordinary baseline nodes and branch signals must still be present.",
+          "extra_probe_signals": [
+            "CM1_GATE",
+            "CM1_PROBE:in",
+            "CM2_GATE",
+            "CM2_PROBE:in",
+            "DM_INN",
+            "DM_INP",
+            "DM_PROBE.IPRB_CM:in",
+            "DM_PROBE.IPRB_DM:in",
+            "DM_PROBE.a",
+            "DM_PROBE.b",
+            "DM_PROBE.c",
+            "DM_PROBE.d"
+          ],
+          "max_node_abs_difference": {
+            "value": 1.0000000000065512e-05,
+            "signal": "XPGA_XOTA_XRCMP_XR.ra"
+          },
+          "max_current_abs_difference": {
+            "value": 1.0000000000157452e-09,
+            "signal": "XTGP_XP.msky130_fd_pr__pfet_01v8_lvt:d"
+          },
+          "excluded_equal_metadata": {},
+          "diff_gain_max_abs_difference": 8.000000000230045e-06,
+          "diff_gain_max_relative_difference": 6.482003572972027e-07,
+          "samples": 161,
+          "frequency_range_hz": [
+            1.0,
+            100000000.0
+          ],
+          "status": "PASS_WITHIN_TOLERANCES"
+        }
+      },
+      "limits": {
+        "op_node_v": 1e-08,
+        "op_current_a": 1e-12,
+        "probe_zero_dc_drop_v": 1e-10,
+        "diff_ac_gain_relative": 1e-06
+      },
+      "scope": "Zero-differential DC nodes/branch signals and saved differential AC input only. Baseline-only MOS internal OP fields are explicitly unverified. No independent common-mode excitation or large-signal equivalence inferred."
+    }
+  },
+  "native_core_audit": {
+    "status": "NATIVE_NETLIST_AUDIT_PASS",
+    "scope": "Flat native connectivity and requested school_r1 parameters only; no simulator/performance/physical acceptance.",
+    "errors": [],
+    "instances": [
+      {
+        "name": "XPGA_XI0_XN",
+        "originalpath": "XPGA/XI0/XN",
+        "kind": "mos",
+        "line": 55,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_S0B",
+          "SEL0",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XI0_XP",
+        "originalpath": "XPGA/XI0/XP",
+        "kind": "mos",
+        "line": 97,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_S0B",
+          "SEL0",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XI1_XN",
+        "originalpath": "XPGA/XI1/XN",
+        "kind": "mos",
+        "line": 53,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_S1B",
+          "SEL1",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XI1_XP",
+        "originalpath": "XPGA/XI1/XP",
+        "kind": "mos",
+        "line": 95,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_S1B",
+          "SEL1",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN1_XN0",
+        "originalpath": "XPGA/XN1/XN0",
+        "kind": "mos",
+        "line": 51,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E1B",
+          "XPGA_S0B",
+          "XPGA_XN1_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN1_XN1",
+        "originalpath": "XPGA/XN1/XN1",
+        "kind": "mos",
+        "line": 49,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XN1_N",
+          "XPGA_S1B",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN1_XP0",
+        "originalpath": "XPGA/XN1/XP0",
+        "kind": "mos",
+        "line": 93,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E1B",
+          "XPGA_S0B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN1_XP1",
+        "originalpath": "XPGA/XN1/XP1",
+        "kind": "mos",
+        "line": 91,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E1B",
+          "XPGA_S1B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN4_XN0",
+        "originalpath": "XPGA/XN4/XN0",
+        "kind": "mos",
+        "line": 47,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E4B",
+          "SEL0",
+          "XPGA_XN4_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN4_XN1",
+        "originalpath": "XPGA/XN4/XN1",
+        "kind": "mos",
+        "line": 45,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XN4_N",
+          "XPGA_S1B",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN4_XP0",
+        "originalpath": "XPGA/XN4/XP0",
+        "kind": "mos",
+        "line": 89,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E4B",
+          "SEL0",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN4_XP1",
+        "originalpath": "XPGA/XN4/XP1",
+        "kind": "mos",
+        "line": 87,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E4B",
+          "XPGA_S1B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN16_XN0",
+        "originalpath": "XPGA/XN16/XN0",
+        "kind": "mos",
+        "line": 43,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E16B",
+          "XPGA_S0B",
+          "XPGA_XN16_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN16_XN1",
+        "originalpath": "XPGA/XN16/XN1",
+        "kind": "mos",
+        "line": 41,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XN16_N",
+          "SEL1",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN16_XP0",
+        "originalpath": "XPGA/XN16/XP0",
+        "kind": "mos",
+        "line": 85,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E16B",
+          "XPGA_S0B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XN16_XP1",
+        "originalpath": "XPGA/XN16/XP1",
+        "kind": "mos",
+        "line": 83,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E16B",
+          "SEL1",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XIE1_XN",
+        "originalpath": "XPGA/XIE1/XN",
+        "kind": "mos",
+        "line": 39,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E1",
+          "XPGA_E1B",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XIE1_XP",
+        "originalpath": "XPGA/XIE1/XP",
+        "kind": "mos",
+        "line": 81,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E1",
+          "XPGA_E1B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XIE4_XN",
+        "originalpath": "XPGA/XIE4/XN",
+        "kind": "mos",
+        "line": 37,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E4",
+          "XPGA_E4B",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XIE4_XP",
+        "originalpath": "XPGA/XIE4/XP",
+        "kind": "mos",
+        "line": 79,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E4",
+          "XPGA_E4B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XIE16_XN",
+        "originalpath": "XPGA/XIE16/XN",
+        "kind": "mos",
+        "line": 35,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E16",
+          "XPGA_E16B",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XIE16_XP",
+        "originalpath": "XPGA/XIE16/XP",
+        "kind": "mos",
+        "line": 77,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_E16",
+          "XPGA_E16B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XRINP_XR",
+        "originalpath": "XPGA/XRINP/XR",
+        "kind": "resistor",
+        "line": 173,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "IP",
+          "XPGA_SUMPOS",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "10.7185K",
+          "l": "9.105u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XRINN_XR",
+        "originalpath": "XPGA/XRINN/XR",
+        "kind": "resistor",
+        "line": 171,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "IN",
+          "XPGA_SUMNEG",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "10.7185K",
+          "l": "9.105u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFP1_XR_XR",
+        "originalpath": "XPGA/XFP1/XR/XR",
+        "kind": "resistor",
+        "line": 169,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XFP1_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "11.0466K",
+          "l": "9.4u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFP1_XSW_XN",
+        "originalpath": "XPGA/XFP1/XSW/XN",
+        "kind": "mos",
+        "line": 33,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMPOS",
+          "XPGA_E1",
+          "XPGA_XFP1_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(48u)",
+          "l": "150n",
+          "as": "9.72p",
+          "ad": "6.72p",
+          "ps": "72.405u",
+          "pd": "48.28u",
+          "m": "(1)*(4)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 12.0,
+          "target_w_um": 192.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 16.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFP1_XSW_XP",
+        "originalpath": "XPGA/XFP1/XSW/XP",
+        "kind": "mos",
+        "line": 75,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMPOS",
+          "XPGA_E1B",
+          "XPGA_XFP1_N",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(48u)",
+          "l": "150n",
+          "as": "8.22p",
+          "ad": "6.72p",
+          "ps": "60.3425u",
+          "pd": "48.28u",
+          "m": "(1)*(8)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 24.0,
+          "target_w_um": 384.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 16.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFN1_XR_XR",
+        "originalpath": "XPGA/XFN1/XR/XR",
+        "kind": "resistor",
+        "line": 167,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XFN1_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "11.0466K",
+          "l": "9.4u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFN1_XSW_XN",
+        "originalpath": "XPGA/XFN1/XSW/XN",
+        "kind": "mos",
+        "line": 31,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMNEG",
+          "XPGA_E1",
+          "XPGA_XFN1_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(48u)",
+          "l": "150n",
+          "as": "9.72p",
+          "ad": "6.72p",
+          "ps": "72.405u",
+          "pd": "48.28u",
+          "m": "(1)*(4)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 12.0,
+          "target_w_um": 192.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 16.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFN1_XSW_XP",
+        "originalpath": "XPGA/XFN1/XSW/XP",
+        "kind": "mos",
+        "line": 73,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMNEG",
+          "XPGA_E1B",
+          "XPGA_XFN1_N",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(48u)",
+          "l": "150n",
+          "as": "8.22p",
+          "ad": "6.72p",
+          "ps": "60.3425u",
+          "pd": "48.28u",
+          "m": "(1)*(8)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 24.0,
+          "target_w_um": 384.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 16.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFP4_XR_XR",
+        "originalpath": "XPGA/XFP4/XR/XR",
+        "kind": "resistor",
+        "line": 165,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XFP4_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "43.9184K",
+          "l": "38.95u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFP4_XSW_XN",
+        "originalpath": "XPGA/XFP4/XSW/XN",
+        "kind": "mos",
+        "line": 29,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMPOS",
+          "XPGA_E4",
+          "XPGA_XFP4_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(12u)",
+          "l": "150n",
+          "as": "3.18p",
+          "ad": "3.18p",
+          "ps": "24.53u",
+          "pd": "24.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 12.0,
+          "target_w_um": 12.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFP4_XSW_XP",
+        "originalpath": "XPGA/XFP4/XSW/XP",
+        "kind": "mos",
+        "line": 71,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMPOS",
+          "XPGA_E4B",
+          "XPGA_XFP4_N",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(24u)",
+          "l": "150n",
+          "as": "6.36p",
+          "ad": "6.36p",
+          "ps": "48.53u",
+          "pd": "48.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 24.0,
+          "target_w_um": 24.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFN4_XR_XR",
+        "originalpath": "XPGA/XFN4/XR/XR",
+        "kind": "resistor",
+        "line": 163,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XFN4_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "43.9184K",
+          "l": "38.95u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFN4_XSW_XN",
+        "originalpath": "XPGA/XFN4/XSW/XN",
+        "kind": "mos",
+        "line": 27,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMNEG",
+          "XPGA_E4",
+          "XPGA_XFN4_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(12u)",
+          "l": "150n",
+          "as": "3.18p",
+          "ad": "3.18p",
+          "ps": "24.53u",
+          "pd": "24.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 12.0,
+          "target_w_um": 12.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFN4_XSW_XP",
+        "originalpath": "XPGA/XFN4/XSW/XP",
+        "kind": "mos",
+        "line": 69,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMNEG",
+          "XPGA_E4B",
+          "XPGA_XFN4_N",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(24u)",
+          "l": "150n",
+          "as": "6.36p",
+          "ad": "6.36p",
+          "ps": "48.53u",
+          "pd": "48.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 24.0,
+          "target_w_um": 24.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFP16_XR_XR_SEG_01",
+        "originalpath": "XPGA/XFP16/XR/XR",
+        "kind": "resistor",
+        "line": 161,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XFP16_XR_XR_SERIES_NODE_01",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "88.9432K",
+          "l": "79.425u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFP16_XR_XR_SEG_02",
+        "originalpath": "XPGA/XFP16/XR/XR",
+        "kind": "resistor",
+        "line": 159,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XFP16_XR_XR_SERIES_NODE_01",
+          "XPGA_XFP16_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "88.9432K",
+          "l": "79.425u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFP16_XSW_XN",
+        "originalpath": "XPGA/XFP16/XSW/XN",
+        "kind": "mos",
+        "line": 25,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMPOS",
+          "XPGA_E16",
+          "XPGA_XFP16_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(12u)",
+          "l": "150n",
+          "as": "3.18p",
+          "ad": "3.18p",
+          "ps": "24.53u",
+          "pd": "24.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 12.0,
+          "target_w_um": 12.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFP16_XSW_XP",
+        "originalpath": "XPGA/XFP16/XSW/XP",
+        "kind": "mos",
+        "line": 67,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMPOS",
+          "XPGA_E16B",
+          "XPGA_XFP16_N",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(24u)",
+          "l": "150n",
+          "as": "6.36p",
+          "ad": "6.36p",
+          "ps": "48.53u",
+          "pd": "48.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 24.0,
+          "target_w_um": 24.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFN16_XR_XR_SEG_01",
+        "originalpath": "XPGA/XFN16/XR/XR",
+        "kind": "resistor",
+        "line": 157,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XFN16_XR_XR_SERIES_NODE_01",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "88.9432K",
+          "l": "79.425u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFN16_XR_XR_SEG_02",
+        "originalpath": "XPGA/XFN16/XR/XR",
+        "kind": "resistor",
+        "line": 155,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XFN16_XR_XR_SERIES_NODE_01",
+          "XPGA_XFN16_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "88.9432K",
+          "l": "79.425u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XFN16_XSW_XN",
+        "originalpath": "XPGA/XFN16/XSW/XN",
+        "kind": "mos",
+        "line": 23,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMNEG",
+          "XPGA_E16",
+          "XPGA_XFN16_N",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(12u)",
+          "l": "150n",
+          "as": "3.18p",
+          "ad": "3.18p",
+          "ps": "24.53u",
+          "pd": "24.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 12.0,
+          "target_w_um": 12.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XFN16_XSW_XP",
+        "originalpath": "XPGA/XFN16/XSW/XP",
+        "kind": "mos",
+        "line": 65,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_SUMNEG",
+          "XPGA_E16B",
+          "XPGA_XFN16_N",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(24u)",
+          "l": "150n",
+          "as": "6.36p",
+          "ad": "6.36p",
+          "ps": "48.53u",
+          "pd": "48.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 24.0,
+          "target_w_um": 24.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBN_XR",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBN/XR",
+        "kind": "resistor",
+        "line": 153,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "VDD",
+          "XPGA_XOTA_BN",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "26.3979K",
+          "l": "23.2u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XDBN",
+        "originalpath": "XPGA/XOTA/XBIAS/XDBN",
+        "kind": "mos",
+        "line": 21,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_BN",
+          "XPGA_XOTA_BN",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(20u)",
+          "l": "1u",
+          "as": "5.3p",
+          "ad": "5.3p",
+          "ps": "40.53u",
+          "pd": "40.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 20.0,
+          "target_w_um": 20.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 150,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_BP",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 147,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 144,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 141,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 138,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 135,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 132,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 129,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 126,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 123,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11",
+        "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+        "kind": "resistor",
+        "line": 121,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10",
+          "XPGA_XOTA_BN",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "101.352K",
+          "l": "90.58u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMIP",
+        "originalpath": "XPGA/XOTA/XMIP",
+        "kind": "mos",
+        "line": 19,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N1",
+          "XPGA_SUMPOS",
+          "XPGA_XOTA_TAIL",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(40u)",
+          "l": "4u",
+          "as": "6.85p",
+          "ad": "5.6p",
+          "ps": "50.3425u",
+          "pd": "40.28u",
+          "m": "(1)*(8)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 80.0,
+          "target_w_um": 320.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 4.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMIN",
+        "originalpath": "XPGA/XOTA/XMIN",
+        "kind": "mos",
+        "line": 17,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N2",
+          "XPGA_SUMNEG",
+          "XPGA_XOTA_TAIL",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(40u)",
+          "l": "4u",
+          "as": "6.85p",
+          "ad": "5.6p",
+          "ps": "50.3425u",
+          "pd": "40.28u",
+          "m": "(1)*(8)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 80.0,
+          "target_w_um": 320.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 4.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMTAIL",
+        "originalpath": "XPGA/XOTA/XMTAIL",
+        "kind": "mos",
+        "line": 15,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_TAIL",
+          "XPGA_XOTA_BN",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(40u)",
+          "l": "1u",
+          "as": "10.6p",
+          "ad": "10.6p",
+          "ps": "80.53u",
+          "pd": "80.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 40.0,
+          "target_w_um": 40.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMLP",
+        "originalpath": "XPGA/XOTA/XMLP",
+        "kind": "mos",
+        "line": 63,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N1",
+          "XPGA_XOTA_NCM",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(32u)",
+          "l": "2u",
+          "as": "6.48p",
+          "ad": "4.48p",
+          "ps": "48.405u",
+          "pd": "32.28u",
+          "m": "(1)*(4)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 64.0,
+          "target_w_um": 128.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 2.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMLN",
+        "originalpath": "XPGA/XOTA/XMLN",
+        "kind": "mos",
+        "line": 61,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N2",
+          "XPGA_XOTA_NCM",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(32u)",
+          "l": "2u",
+          "as": "6.48p",
+          "ad": "4.48p",
+          "ps": "48.405u",
+          "pd": "32.28u",
+          "m": "(1)*(4)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 64.0,
+          "target_w_um": 128.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 2.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRN1_XR",
+        "originalpath": "XPGA/XOTA/XRN1/XR",
+        "kind": "resistor",
+        "line": 119,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N1",
+          "XPGA_XOTA_NCM",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "111.536K",
+          "l": "99.735u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRN2_XR",
+        "originalpath": "XPGA/XOTA/XRN2/XR",
+        "kind": "resistor",
+        "line": 117,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N2",
+          "XPGA_XOTA_NCM",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "111.536K",
+          "l": "99.735u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCN1_XC",
+        "originalpath": "XPGA/XOTA/XCN1/XC",
+        "kind": "mim",
+        "line": 221,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N1",
+          "XPGA_XOTA_NCM"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCN2_XC",
+        "originalpath": "XPGA/XOTA/XCN2/XC",
+        "kind": "mim",
+        "line": 219,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N2",
+          "XPGA_XOTA_NCM"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMSP",
+        "originalpath": "XPGA/XOTA/XMSP",
+        "kind": "mos",
+        "line": 59,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XOTA_N1",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(45u)",
+          "l": "1u",
+          "as": "9.1125p",
+          "ad": "6.3p",
+          "ps": "67.905u",
+          "pd": "45.28u",
+          "m": "(1)*(4)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 180.0,
+          "target_w_um": 180.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMSN",
+        "originalpath": "XPGA/XOTA/XMSN",
+        "kind": "mos",
+        "line": 57,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XOTA_N2",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(45u)",
+          "l": "1u",
+          "as": "9.1125p",
+          "ad": "6.3p",
+          "ps": "67.905u",
+          "pd": "45.28u",
+          "m": "(1)*(4)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 180.0,
+          "target_w_um": 180.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMOP",
+        "originalpath": "XPGA/XOTA/XMOP",
+        "kind": "mos",
+        "line": 13,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XOTA_CMG",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(9u)",
+          "l": "1u",
+          "as": "2.385p",
+          "ad": "2.385p",
+          "ps": "18.53u",
+          "pd": "18.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 9.0,
+          "target_w_um": 9.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XMON",
+        "originalpath": "XPGA/XOTA/XMON",
+        "kind": "mos",
+        "line": 11,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XOTA_CMG",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(9u)",
+          "l": "1u",
+          "as": "2.385p",
+          "ad": "2.385p",
+          "ps": "18.53u",
+          "pd": "18.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 9.0,
+          "target_w_um": 9.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRZP_XR",
+        "originalpath": "XPGA/XOTA/XRZP/XR",
+        "kind": "resistor",
+        "line": 225,
+        "model": "res_high_po_0p69",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N1",
+          "XPGA_XOTA_CZP",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "810.013",
+          "l": "855n",
+          "w": "690n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRZN_XR",
+        "originalpath": "XPGA/XOTA/XRZN/XR",
+        "kind": "resistor",
+        "line": 223,
+        "model": "res_high_po_0p69",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_N2",
+          "XPGA_XOTA_CZN",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "810.013",
+          "l": "855n",
+          "w": "690n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC0_XC0_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC0/XC0/XC",
+        "kind": "mim",
+        "line": 217,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC0_XC1_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC0/XC1/XC",
+        "kind": "mim",
+        "line": 215,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC0_XC2_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC0/XC2/XC",
+        "kind": "mim",
+        "line": 213,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC0_XC3_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC0/XC3/XC",
+        "kind": "mim",
+        "line": 211,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC1_XC0_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC1/XC0/XC",
+        "kind": "mim",
+        "line": 209,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC1_XC1_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC1/XC1/XC",
+        "kind": "mim",
+        "line": 207,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC1_XC2_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC1/XC2/XC",
+        "kind": "mim",
+        "line": 205,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCP_XC1_XC3_XC",
+        "originalpath": "XPGA/XOTA/XCCP/XC1/XC3/XC",
+        "kind": "mim",
+        "line": 203,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZP",
+          "OP"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC0_XC0_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC0/XC0/XC",
+        "kind": "mim",
+        "line": 201,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC0_XC1_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC0/XC1/XC",
+        "kind": "mim",
+        "line": 199,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC0_XC2_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC0/XC2/XC",
+        "kind": "mim",
+        "line": 197,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC0_XC3_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC0/XC3/XC",
+        "kind": "mim",
+        "line": 195,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC1_XC0_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC1/XC0/XC",
+        "kind": "mim",
+        "line": 193,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC1_XC1_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC1/XC1/XC",
+        "kind": "mim",
+        "line": 191,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC1_XC2_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC1/XC2/XC",
+        "kind": "mim",
+        "line": 189,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCCN_XC1_XC3_XC",
+        "originalpath": "XPGA/XOTA/XCCN/XC1/XC3/XC",
+        "kind": "mim",
+        "line": 187,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CZN",
+          "ON"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRCMP_XR",
+        "originalpath": "XPGA/XOTA/XRCMP/XR",
+        "kind": "resistor",
+        "line": 115,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XOTA_CMS",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "111.536K",
+          "l": "99.735u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRCMN_XR",
+        "originalpath": "XPGA/XOTA/XRCMN/XR",
+        "kind": "resistor",
+        "line": 113,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XOTA_CMS",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "111.536K",
+          "l": "99.735u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCSMP_XC",
+        "originalpath": "XPGA/XOTA/XCSMP/XC",
+        "kind": "mim",
+        "line": 186,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "OP",
+          "XPGA_XOTA_CMS"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCSMN_XC",
+        "originalpath": "XPGA/XOTA/XCSMN/XC",
+        "kind": "mim",
+        "line": 185,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "ON",
+          "XPGA_XOTA_CMS"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCMS",
+        "originalpath": "XPGA/XOTA/XCMS",
+        "kind": "mos",
+        "line": 9,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_DS",
+          "XPGA_XOTA_CMS",
+          "XPGA_XOTA_CS",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(20u)",
+          "l": "1u",
+          "as": "5.3p",
+          "ad": "5.3p",
+          "ps": "40.53u",
+          "pd": "40.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 20.0,
+          "target_w_um": 20.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCMR",
+        "originalpath": "XPGA/XOTA/XCMR",
+        "kind": "mos",
+        "line": 7,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CMG",
+          "VCM",
+          "XPGA_XOTA_CR",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(20u)",
+          "l": "1u",
+          "as": "5.3p",
+          "ad": "5.3p",
+          "ps": "40.53u",
+          "pd": "40.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 20.0,
+          "target_w_um": 20.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRSCS_XR",
+        "originalpath": "XPGA/XOTA/XRSCS/XR",
+        "kind": "resistor",
+        "line": 111,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CS",
+          "XPGA_XOTA_CTAIL",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "10.7185K",
+          "l": "9.105u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRSCR_XR",
+        "originalpath": "XPGA/XOTA/XRSCR/XR",
+        "kind": "resistor",
+        "line": 109,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CR",
+          "XPGA_XOTA_CTAIL",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "10.7185K",
+          "l": "9.105u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XCMT",
+        "originalpath": "XPGA/XOTA/XCMT",
+        "kind": "mos",
+        "line": 5,
+        "model": "nfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_CTAIL",
+          "XPGA_XOTA_BN",
+          "0",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(9.2u)",
+          "l": "1u",
+          "as": "2.438p",
+          "ad": "2.438p",
+          "ps": "18.93u",
+          "pd": "18.93u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 8.0,
+          "target_w_um": 9.2,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": true,
+          "target_over_original": 1.15,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRDS_XR_SEG_01",
+        "originalpath": "XPGA/XOTA/XRDS/XR",
+        "kind": "resistor",
+        "line": 107,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "VDD",
+          "XPGA_XOTA_XRDS_XR_SERIES_NODE_01",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "58.3241K",
+          "l": "51.9u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRDS_XR_SEG_02",
+        "originalpath": "XPGA/XOTA/XRDS/XR",
+        "kind": "resistor",
+        "line": 105,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XRDS_XR_SERIES_NODE_01",
+          "XPGA_XOTA_DS",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "58.3241K",
+          "l": "51.9u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRCMG_XR_SEG_01",
+        "originalpath": "XPGA/XOTA/XRCMG/XR",
+        "kind": "resistor",
+        "line": 103,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "VDD",
+          "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "58.3241K",
+          "l": "51.9u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XPGA_XOTA_XRCMG_XR_SEG_02",
+        "originalpath": "XPGA/XOTA/XRCMG/XR",
+        "kind": "resistor",
+        "line": 101,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+          "XPGA_XOTA_CMG",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "58.3241K",
+          "l": "51.9u",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XRIP_XR",
+        "originalpath": "XRIP/XR",
+        "kind": "resistor",
+        "line": 100,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "OP",
+          "FP",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "1.19625K",
+          "l": "545n",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XRIN_XR",
+        "originalpath": "XRIN/XR",
+        "kind": "resistor",
+        "line": 99,
+        "model": "res_high_po_0p35",
+        "terminal_order": [
+          "PLUS",
+          "MINUS",
+          "B"
+        ],
+        "nodes": [
+          "ON",
+          "FN",
+          "0"
+        ],
+        "exported_parameters": {
+          "r": "1.19625K",
+          "l": "545n",
+          "w": "350n"
+        }
+      },
+      {
+        "name": "XCFP_XC0_XC",
+        "originalpath": "XCFP/XC0/XC",
+        "kind": "mim",
+        "line": 184,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FP",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFP_XC1_XC",
+        "originalpath": "XCFP/XC1/XC",
+        "kind": "mim",
+        "line": 183,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FP",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFP_XC2_XC",
+        "originalpath": "XCFP/XC2/XC",
+        "kind": "mim",
+        "line": 182,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FP",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFP_XC3_XC",
+        "originalpath": "XCFP/XC3/XC",
+        "kind": "mim",
+        "line": 181,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FP",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFN_XC0_XC",
+        "originalpath": "XCFN/XC0/XC",
+        "kind": "mim",
+        "line": 180,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FN",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFN_XC1_XC",
+        "originalpath": "XCFN/XC1/XC",
+        "kind": "mim",
+        "line": 179,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FN",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFN_XC2_XC",
+        "originalpath": "XCFN/XC2/XC",
+        "kind": "mim",
+        "line": 178,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FN",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XCFN_XC3_XC",
+        "originalpath": "XCFN/XC3/XC",
+        "kind": "mim",
+        "line": 177,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "FN",
+          "0"
+        ],
+        "exported_parameters": {
+          "l": "22.215u",
+          "w": "22.215u",
+          "m": "1"
+        }
+      },
+      {
+        "name": "XTGP_XN",
+        "originalpath": "XTGP/XN",
+        "kind": "mos",
+        "line": 233,
+        "model": "nfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HP",
+          "ACQ",
+          "FP",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGP_XP",
+        "originalpath": "XTGP/XP",
+        "kind": "mos",
+        "line": 241,
+        "model": "pfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HP",
+          "ACQB",
+          "FP",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(8u)",
+          "l": "350n",
+          "as": "2.12p",
+          "ad": "2.12p",
+          "ps": "16.53u",
+          "pd": "16.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 8.0,
+          "target_w_um": 8.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGP_XND",
+        "originalpath": "XTGP/XND",
+        "kind": "mos",
+        "line": 231,
+        "model": "nfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HP",
+          "ACQB",
+          "HP",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGP_XPD",
+        "originalpath": "XTGP/XPD",
+        "kind": "mos",
+        "line": 239,
+        "model": "pfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HP",
+          "ACQ",
+          "HP",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "350n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGN_XN",
+        "originalpath": "XTGN/XN",
+        "kind": "mos",
+        "line": 229,
+        "model": "nfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HN",
+          "ACQ",
+          "FN",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "150n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGN_XP",
+        "originalpath": "XTGN/XP",
+        "kind": "mos",
+        "line": 237,
+        "model": "pfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HN",
+          "ACQB",
+          "FN",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(8u)",
+          "l": "350n",
+          "as": "2.12p",
+          "ad": "2.12p",
+          "ps": "16.53u",
+          "pd": "16.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 8.0,
+          "target_w_um": 8.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGN_XND",
+        "originalpath": "XTGN/XND",
+        "kind": "mos",
+        "line": 227,
+        "model": "nfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HN",
+          "ACQB",
+          "HN",
+          "0"
+        ],
+        "exported_parameters": {
+          "w": "(2u)",
+          "l": "150n",
+          "as": "530f",
+          "ad": "530f",
+          "ps": "4.53u",
+          "pd": "4.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 2.0,
+          "target_w_um": 2.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XTGN_XPD",
+        "originalpath": "XTGN/XPD",
+        "kind": "mos",
+        "line": 235,
+        "model": "pfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "HN",
+          "ACQ",
+          "HN",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(4u)",
+          "l": "350n",
+          "as": "1.06p",
+          "ad": "1.06p",
+          "ps": "8.53u",
+          "pd": "8.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 4.0,
+          "target_w_um": 4.0,
+          "target_field": "source_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      {
+        "name": "XCP_XC",
+        "originalpath": "XCP/XC",
+        "kind": "mim",
+        "line": 176,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "HP",
+          "VCM"
+        ],
+        "exported_parameters": {
+          "l": "4u",
+          "w": "4u",
+          "m": "4096"
+        }
+      },
+      {
+        "name": "XCN_XC",
+        "originalpath": "XCN/XC",
+        "kind": "mim",
+        "line": 175,
+        "model": "cap_mim_m3_1",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "HN",
+          "VCM"
+        ],
+        "exported_parameters": {
+          "l": "4u",
+          "w": "4u",
+          "m": "4096"
+        }
+      },
+      {
+        "name": "RSP",
+        "originalpath": "RSP",
+        "kind": "testbench_resistor",
+        "line": 246,
+        "model": "resistor",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "VINP",
+          "IP"
+        ],
+        "exported_parameters": {
+          "r": "350"
+        }
+      },
+      {
+        "name": "RSN",
+        "originalpath": "RSN",
+        "kind": "testbench_resistor",
+        "line": 245,
+        "model": "resistor",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "VINN",
+          "IN"
+        ],
+        "exported_parameters": {
+          "r": "350"
+        }
+      },
+      {
+        "name": "RLEAKP",
+        "originalpath": "RLEAKP",
+        "kind": "testbench_resistor",
+        "line": 244,
+        "model": "resistor",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "HP",
+          "VCM"
+        ],
+        "exported_parameters": {
+          "r": "1G"
+        }
+      },
+      {
+        "name": "RLEAKN",
+        "originalpath": "RLEAKN",
+        "kind": "testbench_resistor",
+        "line": 243,
+        "model": "resistor",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "HN",
+          "VCM"
+        ],
+        "exported_parameters": {
+          "r": "1G"
+        }
+      },
+      {
+        "name": "VDD_SRC",
+        "originalpath": "VDD",
+        "kind": "testbench_source",
+        "line": 254,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "VDD",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "1.8",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VCM",
+        "originalpath": "VCM",
+        "kind": "testbench_source",
+        "line": 253,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "VCM",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "0.9",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VACQ",
+        "originalpath": "VACQ",
+        "kind": "testbench_source",
+        "line": 252,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "ACQ",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "1.8",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VACQB",
+        "originalpath": "VACQB",
+        "kind": "testbench_source",
+        "line": 251,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "ACQB",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "0",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VSEL0",
+        "originalpath": "VSEL0",
+        "kind": "testbench_source",
+        "line": 250,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "SEL0",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "1.8",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VSEL1",
+        "originalpath": "VSEL1",
+        "kind": "testbench_source",
+        "line": 249,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "SEL1",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "0",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VINP",
+        "originalpath": "BSP",
+        "kind": "testbench_source",
+        "line": 248,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "VINP",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "0.9+SW/8",
+          "mag": ".125",
+          "phase": "0",
+          "type": "dc"
+        }
+      },
+      {
+        "name": "VINN",
+        "originalpath": "BSN",
+        "kind": "testbench_source",
+        "line": 247,
+        "model": "vsource",
+        "terminal_order": [
+          "PLUS",
+          "MINUS"
+        ],
+        "nodes": [
+          "VINN",
+          "0"
+        ],
+        "exported_parameters": {
+          "dc": "0.9-SW/8",
+          "mag": ".125",
+          "phase": "180",
+          "type": "dc"
+        }
+      }
+    ],
+    "cdf_r_usage": "Recorded for traceability only; never used as actual model resistance or acceptance threshold.",
+    "headers": [],
+    "expected_count": 133,
+    "actual_count": 133,
+    "expected_counts_by_kind": {
+      "mos": 55,
+      "resistor": 36,
+      "mim": 30,
+      "testbench_resistor": 4,
+      "testbench_source": 8
+    },
+    "native_net_count": 64,
+    "error_count": 0,
+    "limitations": [
+      "Source/drain geometry is recorded and required to be nonnegative when exported; physical equivalence is not established.",
+      "MIM multiplier matches requested netlist only; actual capacitance/statistical averaging requires simulation/model evidence.",
+      "No model loading, Spectre success, waveform, stability, noise, PVT, DRC/LVS or parasitic qualification is inferred."
+    ],
+    "inputs": {
+      "sky130-two-stage-ota/v2/cadence/linuxlab_20260923/runs/p2fe_c06_stb_school_r5_noise_20260923T114036975112Z/probe_contracted_netlist": {
+        "sha256": "ae729a752076a764d8b5036987f2be5391de7c9480efa0338575e3b2a210915a",
+        "size_bytes": 14169
+      },
+      "sky130-two-stage-ota/v2/cadence/linuxlab_20260923/native_school_r5_noise_objects.json": {
+        "sha256": "13ba6c300c8d01ac19392c165143a31d63e466ed468324ba7cbaa200c8c43e59",
+        "size_bytes": 91791
+      }
+    }
+  },
+  "spectre_logs": {
+    "spectre_stb_three_gain_20260923T114133990513Z": {
+      "errors": 0,
+      "warnings": 2,
+      "notices": 26,
+      "warning_lines": [
+        "Warning from spectre during alter `g1_s1'.",
+        "    WARNING (SPECTRE-16939): The alter statement is ignored because the altered value is the same as the original value. Correct the alter statement and run the simulation again. ",
+        "Warning from spectre during alter `g4_s1'.",
+        "    WARNING (SPECTRE-16939): The alter statement is ignored because the altered value is the same as the original value. Correct the alter statement and run the simulation again. "
+      ]
+    },
+    "spectre_three_gain_20260923T112630358378Z": {
+      "errors": 0,
+      "warnings": 2,
+      "notices": 31,
+      "warning_lines": [
+        "Warning from spectre during alter `g1_s1'.",
+        "    WARNING (SPECTRE-16939): The alter statement is ignored because the altered value is the same as the original value. Correct the alter statement and run the simulation again. ",
+        "Warning from spectre during alter `g4_s1'.",
+        "    WARNING (SPECTRE-16939): The alter statement is ignored because the altered value is the same as the original value. Correct the alter statement and run the simulation again. "
+      ]
+    }
+  },
+  "source_sha256": {
+    "v2/analog/frontend/cadence_20260923/review_stb_results.py": "9d062c2729dd22cc1a61235cd90f50acd66826f8cea57f9294503ed3e6d92794",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.scs": "5c9a3a3e802d5a79ee7a6f57d0f6b035d7f6cbf97a3ebe57ea20a459bf307bca",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/native_netlist": "54ec94b3497f3836c06b8900a03852d985770bfa95a3929d96aca8c1488111ac",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/provenance.json": "a6f9456953d8ac418c6eec0331bbae5568703eb0b2dcfb4f2431cecd92dfdc9c",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/completion.json": "b1f7c2222cf243c7a13bc9c0c7b53b614c0215329ed99869bb5f0f555d1e6740",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/spectre.out": "373ab9e27b3715514508dbe92178b7b8c754b60fc9efa2277c2952debca3f8ac",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.scs": "de7af4de9ddead04176aa7e422ac81be611aa3dc4beb650ecfff5d4f3b25612a",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/native_netlist": "ce1b6e67040589717125c88692168865f45fcbd0df2e5a670c7e9c1d7b96c317",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/provenance.json": "9ef19f195e11cd430c326e6d43193b2c4f48daf2b0c2c4539721fb5775f0010f",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/completion.json": "8b0f723b7586c603f5af1612630c3307689c7431734b47219506638d5d0811f2",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/spectre.out": "5f7b86291a8214b06454c4f5aa59dcca81c456737fa8924c9960f38699795a60",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_dm.stb": "79bb39f022e58aa1dc49f52fe17d8539b5b02981208dc75b8181e5c441d9ac59",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_dm.margin.stb": "f8388c8088a27fa1431a79ecdd152cffbc124fb72e8356df93843de2a564a880",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_input_cm.stb": "b1f1502dda2eb7c8c06a0ebe54b86af9e39541497009b1d292d78242e98302b5",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_input_cm.margin.stb": "02f6115285a6d93bb2c38f82772523089aff220d8b4730d8e447aa9e81ba5302",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_cm1.stb": "fd76293044afd2a84845a97c3d8bc4ea76312755ee9bd792cf09648bda0d6a2f",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_cm1.margin.stb": "1a636e428184f7a805317f0186ea8271af0e312cdbeea336c9ca44ea6ef1f771",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_cm2.stb": "9bc3f50ceeb4822ca66319fc431cc089ccbbf7c55fb17e00ef5cbba38ea9068a",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_cm2.margin.stb": "076363a3da272e5e27ceb56ac676df98a75eea6370f0f4af02ad0eb9ba4a4a68",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_dm.stb": "d06c086feb19a497b0cdd118c1f12e3fa7da9dc7d7c81fcb479bc0300afb1851",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_dm.margin.stb": "99b351137af06b99a56258ec808c9a8f3a2474539c2dea204efac0a295a64985",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_input_cm.stb": "0c7bd4f14424c862209d80c666428ccfb265aa265a70ba18a25df38728496295",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_input_cm.margin.stb": "d7712fd9e9884619965a93352ab84767679b660151e9851cb3c3a22f54878804",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_cm1.stb": "53c45fb941060690869555a59eeb4d13870a52c81c195cb0e0ace6e286cdc899",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_cm1.margin.stb": "7658fe911969af66a09b22bd678964b8cfedf6e72bd5aea4ecae352c8b57da8d",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_cm2.stb": "d7e99441a11bb7fbffd59d4a4891d28fda39d225a128045329cfd22f822037a3",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_cm2.margin.stb": "4afd6200420b82df8df4b86c831e468aaa6be2f6a84403c4dc3f5dc497d4aa1e",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_dm.stb": "125762b021f2c10df32e87fd6b279111646db33e7907dfe28a55ddf2287a0453",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_dm.margin.stb": "6a400310ab72fb489eae008914dd0a8caeda911f5d67fac6d97fbbd612f881f9",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_input_cm.stb": "93a460d33710ad54cac844ea071ebd37b857c0868dc00a339d28f0f5c0b8b003",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_input_cm.margin.stb": "a052aeb6952fd9c5489a96a7299fbd6bc22cbf5c93593ecf564e8afff77651ae",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_cm1.stb": "6590a6997c029d6de47488e0ff998a38780003328128c01f02b9131efc9b4e17",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_cm1.margin.stb": "0dd3e9dc401d260db3bf40fee9c8234fe0d68ae663236d5190899a8a7a1d0b46",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_cm2.stb": "a70dc0d85a218ae0f02f5c152cade54480048d8250a12d4a09490773cf32fade",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_cm2.margin.stb": "e5ffff837dfb5acb4d6fdec43eec2d8660c2bee3a91da40b22ee0790f21c5999",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.raw/g1_op.dc": "56aefee672ccaf2a07e76e5a987ada19b33231bd71abd25211fef08de037c8c9",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_op.dc": "77fc0b1f8e8a395f2bc35d332867639a482cce8f0fddaeff146027fe2e8ca9bf",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.raw/g1_ac.ac": "c14acac458a44e9dd0a71626c66bb1a795e916049c6a991463849e9d2ef36f8d",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g1_ac.ac": "da0cb006bccd399edbf5287be9c5e30e87ef98725ea343eb216939d95b0f6c62",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.raw/g4_op.dc": "3744672c60a389bfa644ebf3a46bf0a3c843493285ee44648cf88964708984c6",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_op.dc": "9d6586f2e81e99aa62e8df6a2ad6790c36ea65585b1cb05c4711a006030924c4",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.raw/g4_ac.ac": "b855cbda86a291fe376ccd8f0fdc7e7cd4981c2f7f264e3af80143363edb5ab5",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g4_ac.ac": "e2a4447806d411e9fa581cf30029f9de31cd29d559f58c06566ef08122bfe3b9",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.raw/g16_op.dc": "01c2b66135a1026946e550164bc4acbc6b044d6f740b2ce052b6c8bf99ba15eb",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_op.dc": "d6cb616dfa2f05e14f242a7171ee3bafe9a666ac8b4c55a7cd39e056eab82fc7",
+    "v2/cadence/linuxlab_20260923/runs/spectre_three_gain_20260923T112630358378Z/input.raw/g16_ac.ac": "4cd50bf7b8250556cba0b495a24ac72c9bc7847732d8ac32ea4434fae6c0758a",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_three_gain_20260923T114133990513Z/input.raw/g16_ac.ac": "fd335202daf235647d7b830e1770682ba3d823ab887ca7dd38429a06bf365a87",
+    "v2/cadence/linuxlab_20260923/runs/p2fe_c06_stb_school_r5_noise_20260923T114036975112Z/core_audit.json": "b329e44d9296896fd30d22ccaa2d448b1503876f1a1bac227aaa6d6560f337bf"
+  },
+  "full_multiloop_stability_pass": false,
+  "pvt_pass": false,
+  "dynamic_noise_pass": false,
+  "pex_pass": false
+}

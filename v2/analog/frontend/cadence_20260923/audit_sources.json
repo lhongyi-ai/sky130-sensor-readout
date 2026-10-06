@@ -1,0 +1,26 @@
+{
+  "audit_date": "2026-09-23",
+  "scope": "Local read-only source/evidence audit; no new circuit simulation, no remote operations.",
+  "source_files": {
+    "v2/analog/frontend/qualification_20260913/candidate_06.spice": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+    "v2/analog/frontend/qualification_20260913/sampling_switch.spice": "f8595a6f9b00daf91298a3b8fe2c625bf30168e9834114163b0a23a34a396f45",
+    "v2/analog/frontend/qualification_20260913/adc_blocks.spice": "255fe052f96de8e784bc337ac5b696e88294639c6817fd45e989d865d9ec3591",
+    "v2/analog/frontend/qualification_20260913/run_qualification.py": "5d55815dbf49e57bfed251328ea4aea7109bc70a59313eca5bb21ebb7fac63f7",
+    "v2/analog/frontend/qualification_20260913/run_multiport.py": "d00f13aa845ec04180664076cb67e0e3386bd4e7eb077fc541757ac734994b3d",
+    "v2/analog/frontend/qualification_20260913/run_canary.py": "6d4e98a96432ab8c3008faadd0565b13d95fb45cad2bcbf4faea2391cc499947",
+    "v2/analog/frontend/qualification_20260913/qualification.json": "c1a6280e59fad62d2216f5dae427e98dded3d0123454df4dc5c2ef5dc866d584",
+    "v2/analog/frontend/qualification_20260913/CADENCE_CANARY.md": "556fd5a9e9abadce45895dafebb3acc46ec637f08ff2f92d2468ae5a59c90052",
+    "v2/analog/frontend/qualification_20260913/delivery_manifest.json": "f14603cbc60de790d5dff06a67d35d212a23049481368dc2c032a23e0dc61143",
+    "v2/analog/frontend/dynamic_20260911/qualification.json": "44d6f30e4d9d08d9b96ca79a0a60dbc3d06a6343a8b1d977d6ecc0d7cfa8d5af",
+    "v2/analog/frontend/dynamic_20260911/candidate_06.spice": "a4ed567d6a5b1f8853124602fd3f0503118e77c751a6fc3152f772b89483a5f1",
+    "v2/config/spec.json": "9a9ab5d48326208d39925265bf455ec15fa297a6cdad3a1ca78759e4c69ae30e"
+  },
+  "delivery_manifest_file_count": 415,
+  "delivery_manifest_mismatches": [],
+  "school_cadence_run_by_this_audit": false,
+  "method_integrity_tests": {
+    "exit_code": 0,
+    "log": "audit_validation.log",
+    "scope": "Method conventions, frozen sources, evidence hashes and exported noise integration only; no new simulations."
+  }
+}

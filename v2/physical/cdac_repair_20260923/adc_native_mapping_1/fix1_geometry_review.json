@@ -1,0 +1,19 @@
+{
+  "status": "NEW_VARIANT_REQUIRES_NATIVE_AND_SIMULATION_VALIDATION",
+  "source_manifest_sha256": "9fab7f1a35843c4b8b32dc8f62ab89749bf229cab8ecbdd2dbff6914ca74242e",
+  "new_manifest_sha256": "7c41fc00cee27860b0a334b910797f29c4e818dcb4ec653ab1005cdba9c2684f",
+  "changes": [
+    {
+      "instance": "XADC_XPRE_XSTPU",
+      "source_W_um": ".42",
+      "previous_requested_W_um": ".42",
+      "new_requested_W_um": ".55",
+      "evidence": "native_001_cdf_review.json",
+      "reason": "Observed school pfet_01v8 minimum550nm",
+      "topology_changes": false
+    }
+  ],
+  "old_failed_cell": "p2adc_core_school_r1",
+  "new_cell": "p2adc_core_fix1_school_r1",
+  "other_objects_unchanged": true
+}

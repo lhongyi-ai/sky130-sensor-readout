@@ -1,0 +1,6 @@
+simulator lang=spectre
+// External bench only. Same 1 ohm and 10 nF as removed VAMS branch contributions.
+subckt p2_reference_fixture (SRC REF VSS)
+RREF (SRC REF) resistor r=1
+CREF (REF VSS) capacitor c=10n
+ends p2_reference_fixture

@@ -1,0 +1,108 @@
+{
+  "status": "REFERENCE_BINDING_CONFIRMED_BY_COMBINED_EVIDENCE",
+  "source_readback_sha256": "da34149dc3991c0da075c47330a03f23871b7a6b21b71ea0192a9f2b90fccbc0",
+  "source_readback": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T073606929136Z/reference_fixture_binding_v2.json",
+  "profiles": {
+    "baseline": {
+      "checks": {
+        "portbind_sha256_matches": true,
+        "named_ports_match": true
+      },
+      "actual_portbind_mapping": {
+        "SRC": [
+          "SRC",
+          "inout"
+        ],
+        "REF": [
+          "REF",
+          "inout"
+        ],
+        "VSS": [
+          "VSS",
+          "inout"
+        ]
+      },
+      "portbind_sha256": "9e111cd5a6b2b504a547f2b20d587fabcf1296a53fbfa2eab5bb2364d148bced",
+      "actual_fixture_inventory": {
+        "nodes": 515,
+        "bsim4": 673,
+        "bsource_9334e6": 3,
+        "bsource_ceb90a": 32,
+        "bsource_d18ca2": 35,
+        "capacitor": 105,
+        "resistor": 68,
+        "worklib__p1_e2l__vams__0x10000001_behavioral": 17,
+        "worklib__p1_l2e__vams__0x10000001_behavioral": 15,
+        "worklib__p2_ams_reset1__vams__0x10000001_behavioral": 1
+      },
+      "only_inventory_change_two_R_two_C": true,
+      "initial_saved_operating_point": {
+        "time": 0.0,
+        "p2_ams_reset1.rp": 1.099999999952622,
+        "p2_ams_reset1.rn": 0.7000000000463391,
+        "p2_ams_reset1.vcm": 0.9,
+        "p2_ams_reset1.rp_source": 1.1,
+        "p2_ams_reset1.rn_source": 0.7,
+        "p2_ams_reset1.vss": 0.0,
+        "p2_ams_reset1.vdd": 1.8
+      },
+      "generated_ams_file_unavailable_after_run": true
+    },
+    "strict": {
+      "checks": {
+        "portbind_sha256_matches": true,
+        "named_ports_match": true
+      },
+      "actual_portbind_mapping": {
+        "SRC": [
+          "SRC",
+          "inout"
+        ],
+        "REF": [
+          "REF",
+          "inout"
+        ],
+        "VSS": [
+          "VSS",
+          "inout"
+        ]
+      },
+      "portbind_sha256": "9e111cd5a6b2b504a547f2b20d587fabcf1296a53fbfa2eab5bb2364d148bced",
+      "actual_fixture_inventory": {
+        "nodes": 515,
+        "bsim4": 673,
+        "bsource_9334e6": 3,
+        "bsource_ceb90a": 32,
+        "bsource_d18ca2": 35,
+        "capacitor": 105,
+        "resistor": 68,
+        "worklib__p1_e2l__vams__0x10000001_behavioral": 17,
+        "worklib__p1_l2e__vams__0x10000001_behavioral": 15,
+        "worklib__p2_ams_reset1__vams__0x10000001_behavioral": 1
+      },
+      "only_inventory_change_two_R_two_C": true,
+      "initial_saved_operating_point": {
+        "time": 0.0,
+        "p2_ams_reset1.rp": 1.099999999952622,
+        "p2_ams_reset1.rn": 0.7000000000463391,
+        "p2_ams_reset1.vcm": 0.9,
+        "p2_ams_reset1.rp_source": 1.1,
+        "p2_ams_reset1.rn_source": 0.7,
+        "p2_ams_reset1.vss": 0.0,
+        "p2_ams_reset1.vdd": 1.8
+      },
+      "generated_ams_file_unavailable_after_run": true
+    }
+  },
+  "basis": [
+    "Actual generated portbind maps SRC/REF/VSS identically as inout.",
+    "Actual log confirms creation/use of this portbind.",
+    "Frozen HDL named refp/refn connections exactly audited against original.",
+    "Actual inventory adds exactly two native resistors and two native capacitors; all other primitive counts unchanged.",
+    "Saved DC source and reference voltages are consistent with stated topology."
+  ],
+  "limit": "Generated flattened temporary amsdControl.ams was deleted after run; no direct post-run flattened per-instance inspection is claimed. No EDA rerun was made to reconstruct it.",
+  "initial_review_binding_pending_superseded_by_this_addendum": true,
+  "numerical_gate_still": "FAIL",
+  "noise_equivalence": false
+}

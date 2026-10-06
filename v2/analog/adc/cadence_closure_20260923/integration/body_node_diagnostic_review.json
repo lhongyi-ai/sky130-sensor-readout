@@ -1,0 +1,493 @@
+{
+  "status": "READ_ONLY_BODY_NODE_DIAGNOSTIC_REVIEW_NOT_ROOT_CAUSE_PROVEN",
+  "baseline_run": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z",
+  "baseline_functional_status": "BOUNDED_FUNCTIONAL_PASS_PRECISION_NOT_QUALIFIED",
+  "actual_solver": {
+    "PSFversion": "1.00",
+    "simulator": "spectre",
+    "version": "21.1.0.132.isr1",
+    "date": "12:04:35 AM, Thur Sep 24, 2026",
+    "design": "//",
+    "analysis type": "tran",
+    "analysis name": "adc_closure_tran",
+    "analysis description": "Transient Analysis `adc_closure_tran': time = (0 s -> 40 us)",
+    "xVecSorted": "ascending",
+    "tolerance.relative": 1e-05,
+    "start": 0.0,
+    "outputstart": 0.0,
+    "stop": 4e-05,
+    "step": 4e-08,
+    "istep": 0.001,
+    "maxstep": 2e-09,
+    "ic": "all",
+    "useprevic": "no",
+    "skipdc": "no",
+    "reltol": 1e-06,
+    "abstol(V)": 1e-08,
+    "abstol(I)": 1e-13,
+    "temp": 27.0,
+    "tnom": 27.0,
+    "tempeffects": "all",
+    "errpreset": "conservative",
+    "method": "gear2only",
+    "lteratio": 10.0,
+    "relref": "sigglobal",
+    "cmin": 0.0,
+    "gmin": 1e-12
+  },
+  "source_sha256": {
+    "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/reset1_native_bound.scs": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+    "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/p2_ams_reset1.vams": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125",
+    "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/xrun.log": "0b65c799f83079f26cbcf792c6999cebe1241e2cb9588ec50420a90f16a805b8",
+    "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/amsdControl.raw/adc_closure_tran.tran.tran": "7652c30352e7da406eb07af1dcdfc3362352f971ccb7151a9a0d223d8eeccb4a"
+  },
+  "warnings": [
+    {
+      "time_s": 4.0632e-06,
+      "solver_identifier": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b",
+      "public_instance_audit": {
+        "name": "XPHASE_XBCONV_XI2_XP",
+        "originalpath": "XPHASE/XBCONV/XI2/XP",
+        "kind": "mos",
+        "line": 60,
+        "model": "pfet_01v8",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "CONV",
+          "XPHASE_XBCONV_B",
+          "VDD",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(32u)",
+          "l": "150n",
+          "as": "8.48p",
+          "ad": "8.48p",
+          "ps": "64.53u",
+          "pd": "64.53u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 32.0,
+          "target_w_um": 32.0,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      "warning_is_internal_solver_quantity_not_proven_floating_external_bulk": true
+    },
+    {
+      "time_s": 1.40751e-05,
+      "solver_identifier": "p2_ams_reset1.adc.XADC_XP2_XCM_XP.msky130_fd_pr__pfet_01v8_lvt:int_b",
+      "public_instance_audit": {
+        "name": "XADC_XP2_XCM_XP",
+        "originalpath": "XADC/XP2/XCM/XP",
+        "kind": "mos",
+        "line": 303,
+        "model": "pfet_01v8_lvt",
+        "terminal_order": [
+          "D",
+          "G",
+          "S",
+          "B"
+        ],
+        "nodes": [
+          "INP",
+          "XADC_XP2_ACQB",
+          "XADC_BP2",
+          "VDD"
+        ],
+        "exported_parameters": {
+          "w": "(3.36u)",
+          "l": "350n",
+          "as": "890.4f",
+          "ad": "890.4f",
+          "ps": "7.25u",
+          "pd": "7.25u",
+          "m": "(1)*(1)"
+        },
+        "width_mapping": {
+          "original_source_w_um": 3.36,
+          "target_w_um": 3.36,
+          "target_field": "mapped_parameters.W",
+          "intentional_width_change": false,
+          "target_over_original": 1.0,
+          "units": "um; explicit design values, not a physical-equivalence claim"
+        }
+      },
+      "warning_is_internal_solver_quantity_not_proven_floating_external_bulk": true
+    }
+  ],
+  "existing_waveform_context": [
+    {
+      "reported_warning_time_s": 4.0632e-06,
+      "note": "Warning timestamps are rounded in simulator log; interpolated sample is context, not exact internal failure state.",
+      "window_s": [
+        4.058e-06,
+        4.075e-06
+      ],
+      "points": 1342,
+      "values_at_reported_time": {
+        "time": 4.0632e-06,
+        "vdd": 1.8,
+        "vss": 0.0,
+        "inp": 0.7004950624742757,
+        "inn": 1.0994945214944292,
+        "rp": 1.0999999844407855,
+        "rn": 0.6999999773214691,
+        "vcm": 0.9,
+        "rst_n_e": 1.8,
+        "eval_e": 0.0,
+        "sample_cmd_e": 1.2600000000003402,
+        "top_e": -2.0119961694153486e-05,
+        "topb_e": 1.7999880324510376,
+        "acq_e": -3.0363868931460063e-05,
+        "conv_e": 1.8026574667196555,
+        "ip_source": 0.7005,
+        "in_source": 1.0995,
+        "adc.XADC_TP": 0.8989673724580982,
+        "adc.XADC_BP2": 0.6997081880528133,
+        "phases.XPHASE_ACQ_DELAY": -0.0002933991834017754,
+        "phases.XPHASE_CONV_DELAY": 1.7999998894766582,
+        "phases.XPHASE_ACQ_RAW": -1.0695731248234457e-07,
+        "phases.XPHASE_CONV_RAW": 0.008350127459135692
+      },
+      "ranges": {
+        "vdd": {
+          "min": 1.8,
+          "max": 1.8
+        },
+        "vss": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sample_cmd_e": {
+          "min": 0.0,
+          "max": 1.8
+        },
+        "conv_e": {
+          "min": 0.002152381857968248,
+          "max": 1.836345725006745
+        },
+        "acq_e": {
+          "min": -0.01451632795267186,
+          "max": 0.2986750534318827
+        },
+        "top_e": {
+          "min": -0.0006702369271890239,
+          "max": 0.0005326879260555853
+        },
+        "topb_e": {
+          "min": 1.799614979198253,
+          "max": 1.800300160756241
+        },
+        "eval_e": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "rst_n_e": {
+          "min": 1.8,
+          "max": 1.8
+        },
+        "inp": {
+          "min": 0.6991203827928401,
+          "max": 0.7407372163072339
+        },
+        "inn": {
+          "min": 1.098151003087939,
+          "max": 1.138450405542748
+        },
+        "ip_source": {
+          "min": 0.7005,
+          "max": 0.7005
+        },
+        "in_source": {
+          "min": 1.0995,
+          "max": 1.0995
+        },
+        "rp": {
+          "min": 1.099999240235199,
+          "max": 1.100016673914314
+        },
+        "rn": {
+          "min": 0.6999962834976631,
+          "max": 0.7000039405221197
+        },
+        "vcm": {
+          "min": 0.9,
+          "max": 0.9
+        },
+        "adc.XADC_BP2": {
+          "min": 0.6137092441959495,
+          "max": 0.7108069982524797
+        },
+        "adc.XADC_TP": {
+          "min": 0.8164173369506238,
+          "max": 0.9082308995291528
+        },
+        "phases.XPHASE_CONV_RAW": {
+          "min": 5.797941588376801e-06,
+          "max": 1.807812824104232
+        },
+        "phases.XPHASE_ACQ_RAW": {
+          "min": -0.02031283938746109,
+          "max": 1.764240690966191
+        },
+        "phases.XPHASE_ACQ_DELAY": {
+          "min": -0.01111904297120583,
+          "max": 0.0004230017933183461
+        },
+        "phases.XPHASE_CONV_DELAY": {
+          "min": 0.0203484182092188,
+          "max": 1.802421911774322
+        }
+      },
+      "half_supply_crossings": {
+        "sample_cmd_e": [
+          {
+            "time_s": 4.063e-06,
+            "direction": "rise"
+          }
+        ],
+        "conv_e": [
+          {
+            "time_s": 4.063269705024839e-06,
+            "direction": "fall"
+          }
+        ],
+        "acq_e": [],
+        "top_e": [],
+        "phases.XPHASE_CONV_RAW": [
+          {
+            "time_s": 4.063089479038961e-06,
+            "direction": "fall"
+          }
+        ],
+        "phases.XPHASE_ACQ_RAW": [
+          {
+            "time_s": 4.074872290776389e-06,
+            "direction": "rise"
+          }
+        ]
+      }
+    },
+    {
+      "reported_warning_time_s": 1.40751e-05,
+      "note": "Warning timestamps are rounded in simulator log; interpolated sample is context, not exact internal failure state.",
+      "window_s": [
+        1.4055e-05,
+        1.4095e-05
+      ],
+      "points": 3237,
+      "values_at_reported_time": {
+        "time": 1.40751e-05,
+        "vdd": 1.8,
+        "vss": 0.0,
+        "inp": 0.9642290370038892,
+        "inn": 0.8311381750570075,
+        "rp": 1.1000040408055762,
+        "rn": 0.6999990358771402,
+        "vcm": 0.9,
+        "rst_n_e": 1.8,
+        "eval_e": 0.0,
+        "sample_cmd_e": 1.8,
+        "top_e": 0.0007284778660034511,
+        "topb_e": 1.8003748397498345,
+        "acq_e": 1.5651720267230045,
+        "conv_e": 0.002129266636286228,
+        "ip_source": 1.0995,
+        "in_source": 0.7005,
+        "adc.XADC_TP": 0.9576913140239672,
+        "adc.XADC_BP2": 0.9362554766247055,
+        "phases.XPHASE_ACQ_DELAY": 7.569933730151496e-07,
+        "phases.XPHASE_CONV_DELAY": 0.0065407200295743515,
+        "phases.XPHASE_ACQ_RAW": 1.796289837990419,
+        "phases.XPHASE_CONV_RAW": 5.597704977945318e-06
+      },
+      "ranges": {
+        "vdd": {
+          "min": 1.8,
+          "max": 1.8
+        },
+        "vss": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "sample_cmd_e": {
+          "min": 0.0,
+          "max": 1.8
+        },
+        "conv_e": {
+          "min": 0.0005923799941270786,
+          "max": 1.824658622151708
+        },
+        "acq_e": {
+          "min": -0.01462032934900818,
+          "max": 1.798708906415505
+        },
+        "top_e": {
+          "min": -0.0200614264046001,
+          "max": 1.800081482503277
+        },
+        "topb_e": {
+          "min": -0.0001770160861973913,
+          "max": 1.911164075684772
+        },
+        "eval_e": {
+          "min": 0.0,
+          "max": 1.8
+        },
+        "rst_n_e": {
+          "min": 1.8,
+          "max": 1.8
+        },
+        "inp": {
+          "min": 0.8405049300928752,
+          "max": 1.213388581927585
+        },
+        "inn": {
+          "min": 0.699104603621862,
+          "max": 0.9287431151808011
+        },
+        "ip_source": {
+          "min": 1.0995,
+          "max": 1.0995
+        },
+        "in_source": {
+          "min": 0.7005,
+          "max": 0.7005
+        },
+        "rp": {
+          "min": 1.099998274842044,
+          "max": 1.100015979336504
+        },
+        "rn": {
+          "min": 0.6999968945782502,
+          "max": 0.7000047963058884
+        },
+        "vcm": {
+          "min": 0.9,
+          "max": 0.9
+        },
+        "adc.XADC_BP2": {
+          "min": 0.8038701666182678,
+          "max": 1.112811598634882
+        },
+        "adc.XADC_TP": {
+          "min": 0.8170622565012499,
+          "max": 1.307512097306478
+        },
+        "phases.XPHASE_CONV_RAW": {
+          "min": 7.145611742758453e-10,
+          "max": 1.807855202733799
+        },
+        "phases.XPHASE_ACQ_RAW": {
+          "min": -0.0522468183947153,
+          "max": 1.80004718681583
+        },
+        "phases.XPHASE_ACQ_DELAY": {
+          "min": -0.01075969702864688,
+          "max": 1.799999220386862
+        },
+        "phases.XPHASE_CONV_DELAY": {
+          "min": -3.03075870414051e-06,
+          "max": 1.802424447501882
+        }
+      },
+      "half_supply_crossings": {
+        "sample_cmd_e": [
+          {
+            "time_s": 1.4063000000000004e-05,
+            "direction": "rise"
+          }
+        ],
+        "conv_e": [
+          {
+            "time_s": 1.4063269493558951e-05,
+            "direction": "fall"
+          }
+        ],
+        "acq_e": [
+          {
+            "time_s": 1.4075041687153656e-05,
+            "direction": "rise"
+          }
+        ],
+        "top_e": [
+          {
+            "time_s": 1.4085792584715042e-05,
+            "direction": "rise"
+          }
+        ],
+        "phases.XPHASE_CONV_RAW": [
+          {
+            "time_s": 1.4063089481121237e-05,
+            "direction": "fall"
+          }
+        ],
+        "phases.XPHASE_ACQ_RAW": [
+          {
+            "time_s": 1.4074880413094853e-05,
+            "direction": "rise"
+          }
+        ]
+      }
+    }
+  ],
+  "body_topology_audit": {
+    "native_MOS_count": 673,
+    "PMOS_count": 335,
+    "NMOS_count": 338,
+    "all_PMOS_external_B_on_VDD_all_NMOS_external_B_on_VSS": true,
+    "external_body_rail_mismatches": [],
+    "caveat": "PDK primitive int_b is below the native cell boundary; external rail ties do not prove its internal network or its numerical continuity."
+  },
+  "stimulus_and_drive_review": {
+    "ideal_dynamic_voltage_drives_use_finite_edges": true,
+    "L2E_rise_fall_s": 1e-09,
+    "input_transition_rise_fall_s": 1e-09,
+    "constant_ideal_VDD_VSS_VCM_sources": true,
+    "finite_source_impedances_ohm": {
+      "input_each": 350,
+      "RP_each": 1,
+      "RN_each": 1
+    },
+    "duplicate_ideal_driving_of_Q_QB_or_phase_outputs_found": false,
+    "E2L_has_no_analog_contribution": true,
+    "input_differential_update_time_s": 8.135e-06,
+    "note": "Input polarity change occurs after first acquisition; neither warning is at that stimulus transition. Complementary MOS pull-up/down are intended CMOS drivers, not duplicate ideal sources. Bottom plate charge-hold intervals are intentional and do not mean the bulk is floating."
+  },
+  "additional_public_save_nodes_minimum": [
+    "p2_ams_reset1.phases.XPHASE_XBCONV_B",
+    "p2_ams_reset1.adc.XADC_XP2_ACQB"
+  ],
+  "additional_public_save_nodes_for_reference_TG_overlap": [
+    "p2_ams_reset1.adc.XADC_XP2_NL",
+    "p2_ams_reset1.adc.XADC_XP2_NLB",
+    "p2_ams_reset1.adc.XADC_XP2_PH",
+    "p2_ams_reset1.adc.XADC_XP2_PHB"
+  ],
+  "internal_body_observables_requiring_school_tool_syntax_and_trace_verification": [
+    {
+      "reported_identifier": "p2_ams_reset1.phases.XPHASE_XBCONV_XI2_XP.msky130_fd_pr__pfet_01v8:int_b",
+      "status": "SAVE_SYNTAX_UNVERIFIED_DO_NOT_ASSUME_COLON_IS_NODE_OR_PUBLIC_BULK",
+      "next_read_only_check": "Use installed spectre -h save and primitive help/elaborated hierarchy to determine selectable internal quantity; verify actual output trace before interpreting. No PDK edit."
+    },
+    {
+      "reported_identifier": "p2_ams_reset1.adc.XADC_XP2_XCM_XP.msky130_fd_pr__pfet_01v8_lvt:int_b",
+      "status": "SAVE_SYNTAX_UNVERIFIED_DO_NOT_ASSUME_COLON_IS_NODE_OR_PUBLIC_BULK",
+      "next_read_only_check": "Use installed spectre -h save and primitive help/elaborated hierarchy to determine selectable internal quantity; verify actual output trace before interpreting. No PDK edit."
+    }
+  ],
+  "no_remote_run_or_circuit_change": true,
+  "twelve_frame_gate": "PREPARE_ONLY_WAIT_FULL_ADC_SAME_METHOD_NUMERIC_REVIEW"
+}

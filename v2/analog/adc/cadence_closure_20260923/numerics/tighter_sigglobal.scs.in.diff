@@ -1,0 +1,11 @@
+--- strict_sigglobal.scs.in
++++ tighter_sigglobal.scs.in
+@@ -8,6 +8,6 @@
+ VEVAL (EVAL 0) vsource type=pulse val0=0 val1=1.8 delay=5u rise=1n fall=1n width=311.5n period=625n
+ VRST (RST_N 0) vsource type=pwl wave=[0 0 1u 0 1.001u 1.8 8.30u 1.8 8.301u 0 8.5u 0 8.501u 1.8]
+ XCMP (TN TP Q QB EVAL VDD 0 RST_N) p1_actual_cmp_reset1
+-simulatorOptions options temp=27 reltol=1e-6 vabstol=1e-9 iabstol=1e-14 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
++simulatorOptions options temp=27 reltol=1e-7 vabstol=1e-10 iabstol=1e-15 maxwarns=1000 maxwarnstologfile=1000 maxnotes=1000 maxnotestologfile=1000
+ saveOptions options save=allpub
+-reset_decide tran stop=9.2u maxstep=1n errpreset=conservative relref=sigglobal
++reset_decide tran stop=9.2u maxstep=0.5n errpreset=conservative relref=sigglobal

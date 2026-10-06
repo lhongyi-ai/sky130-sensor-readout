@@ -1,3 +1,5 @@
+> Latest checkpoint: [October 6 publication](../docs/progress_20261006.md). This file retains the earlier architecture/status record. See the latest checkpoint for actual school ADC, numerical and MIM qualification status.
+
 # SKY130 Calibratable Sensor Readout Core — V2
 
 **2026-09-13 update:** Work in the school's Cadence environment has resumed. Local additions include a corresponding 32-item characterization of the legacy OTA, stability/noise diagnostics for the same frontend source, 12 real continuous ADC conversion frames, a GDS assembly of real macros, and release checks for the new school package. [Results and actual unfinished work in this round](docs/local_preparation_20260913.md).

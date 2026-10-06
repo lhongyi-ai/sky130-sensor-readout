@@ -1,0 +1,474 @@
+{
+  "status": "REAL_SPECTRE_FOUR_CONDITIONAL_LOOPS_REVIEWED_NOT_M2_PASS",
+  "data_policy": "Each named raw PSF analysis separately read; margin nan parsed as null, never as a passing value.",
+  "scope": "School_r1 TT 1.8V 27C gain4 zero input fixed acquisition; new physical MIM bank geometry",
+  "sign_convention": "Raw exported L retained. Native PM matches arg(L) at these three unity crossings; native GM matches positive-real L crossing. Equivalent T=-L puts the critical point at T=-1, but no per-loop ad hoc sign flip is allowed.",
+  "loops": {
+    "dm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "raw_loop_gain_first": {
+        "real": -425.615,
+        "imag": 0.000673565
+      },
+      "raw_loop_gain_last": {
+        "real": 1.49928e-08,
+        "imag": 5.26596e-08
+      },
+      "maximum_gain_db": 52.58034088860378,
+      "minimum_gain_db": -145.2319480602134,
+      "all_observed_unity_crossings": [
+        {
+          "frequency_hz": 2212011.488350796,
+          "phase_L_unwrapped_deg": 82.87064157334804,
+          "phase_L_principal_deg": 82.87064157334805,
+          "direction": "descending",
+          "bracket_hz": [
+            2187761.623949499,
+            2238721.138568284
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "frequency_hz": 69141443.45318025,
+          "L_real": 0.015456388065862647,
+          "axis": "positive",
+          "inverse_magnitude_db": 36.21783973789484,
+          "bracket_hz": [
+            67608297.53919622,
+            69183097.09189165
+          ]
+        },
+        {
+          "frequency_hz": 708263718.9052799,
+          "L_real": -0.00028151923853639646,
+          "axis": "negative",
+          "inverse_magnitude_db": 71.00983841733968,
+          "bracket_hz": [
+            707945784.3841156,
+            724435960.0749671
+          ]
+        },
+        {
+          "frequency_hz": 36871831066.103264,
+          "L_real": 9.192293068472251e-07,
+          "axis": "positive",
+          "inverse_magnitude_db": 120.73152275865095,
+          "bracket_hz": [
+            36307805477.00877,
+            37153522909.71586
+          ]
+        },
+        {
+          "frequency_hz": 225004966131.52014,
+          "L_real": -9.755747772472461e-08,
+          "axis": "negative",
+          "inverse_magnitude_db": 140.21478873141263,
+          "bracket_hz": [
+            223872113856.825,
+            229086765276.7681
+          ]
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 36.21767141961943,
+        "gainMarginFreq": 69140135.97648707,
+        "phaseMargin": 82.87102256700034,
+        "phaseMarginFreq": 2212007.412186561,
+        "state_verbatim_from_simulator": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_interpolation_crosschecks": {
+        "pm_difference_deg": -0.00038099365228561055,
+        "pm_frequency_relative_difference": 1.842744383528938e-06,
+        "gm_difference_db": 0.00016831827541352595,
+        "gm_frequency_relative_difference": 1.8910531122351415e-05
+      },
+      "sampling_limitation": "All sign-changing crossings on the saved 100 points/decade grid; does not certify absence of an unsampled tangent or pair of crossings.",
+      "formal_multiloop_pass": false
+    },
+    "cm1": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "raw_loop_gain_first": {
+        "real": 1228.38,
+        "imag": 0.00294641
+      },
+      "raw_loop_gain_last": {
+        "real": 0.0950226,
+        "imag": -0.00112603
+      },
+      "maximum_gain_db": 61.786687674397946,
+      "minimum_gain_db": -22.946134491222907,
+      "all_observed_unity_crossings": [
+        {
+          "frequency_hz": 4377378.941609885,
+          "phase_L_unwrapped_deg": 95.63632213243169,
+          "phase_L_principal_deg": 95.6363221324317,
+          "direction": "descending",
+          "bracket_hz": [
+            4365158.322401547,
+            4466835.921509515
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "frequency_hz": 875989355744.099,
+          "L_real": 0.09485569597187611,
+          "axis": "positive",
+          "inverse_magnitude_db": 20.458731702489793,
+          "bracket_hz": [
+            870963589956.0442,
+            891250938133.7083
+          ]
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 20.45871251370424,
+        "gainMarginFreq": 875998414595.2576,
+        "phaseMargin": 95.63599939921515,
+        "phaseMarginFreq": 4377369.637692072,
+        "state_verbatim_from_simulator": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_interpolation_crosschecks": {
+        "pm_difference_deg": 0.000322733216549409,
+        "pm_frequency_relative_difference": 2.1254585704788553e-06,
+        "gm_difference_db": 1.91887855542916e-05,
+        "gm_frequency_relative_difference": -1.0341173006245263e-05
+      },
+      "sampling_limitation": "All sign-changing crossings on the saved 100 points/decade grid; does not certify absence of an unsampled tangent or pair of crossings.",
+      "formal_multiloop_pass": false
+    },
+    "cm2": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "raw_loop_gain_first": {
+        "real": -82.5053,
+        "imag": 4.23783e-05
+      },
+      "raw_loop_gain_last": {
+        "real": 1.13085e-08,
+        "imag": 3.48553e-08
+      },
+      "maximum_gain_db": 38.3296387716468,
+      "minimum_gain_db": -148.71997040856309,
+      "all_observed_unity_crossings": [
+        {
+          "frequency_hz": 6239515.40641427,
+          "phase_L_unwrapped_deg": 118.68176131342963,
+          "phase_L_principal_deg": 118.68176131342966,
+          "direction": "descending",
+          "bracket_hz": [
+            6165950.01861466,
+            6309573.444801766
+          ]
+        }
+      ],
+      "all_observed_real_axis_crossings": [
+        {
+          "frequency_hz": 458760008.0547047,
+          "L_real": 0.01902667674895221,
+          "axis": "positive",
+          "inverse_magnitude_db": 34.41274120286431,
+          "bracket_hz": [
+            457088189.614861,
+            467735141.2871838
+          ]
+        },
+        {
+          "frequency_hz": 2754719657.830741,
+          "L_real": -0.0012999638192621576,
+          "axis": "negative",
+          "inverse_magnitude_db": 57.72137469714724,
+          "bracket_hz": [
+            2754228703.338073,
+            2818382931.264359
+          ]
+        }
+      ],
+      "native_margins": {
+        "gainMargin": 34.41180294826318,
+        "gainMarginFreq": 458729578.8713514,
+        "phaseMargin": 118.6825520607719,
+        "phaseMarginFreq": 6239512.699091053,
+        "state_verbatim_from_simulator": "The circuit is stable. Gain and phase margin are both found."
+      },
+      "native_interpolation_crosschecks": {
+        "pm_difference_deg": -0.0007907473422363864,
+        "pm_frequency_relative_difference": 4.338997847685988e-07,
+        "gm_difference_db": 0.00093825460113095,
+        "gm_frequency_relative_difference": 6.633359773355885e-05
+      },
+      "sampling_limitation": "All sign-changing crossings on the saved 100 points/decade grid; does not certify absence of an unsampled tangent or pair of crossings.",
+      "formal_multiloop_pass": false
+    },
+    "input_cm": {
+      "samples": 1401,
+      "range_hz": [
+        0.01,
+        1000000000000.0
+      ],
+      "raw_loop_gain_first": {
+        "real": 0.00315863,
+        "imag": -1.12793e-11
+      },
+      "raw_loop_gain_last": {
+        "real": 1.14063e-05,
+        "imag": -3.19581e-06
+      },
+      "maximum_gain_db": -50.01002432835894,
+      "minimum_gain_db": -100.85486599886406,
+      "all_observed_unity_crossings": [],
+      "all_observed_real_axis_crossings": [
+        {
+          "frequency_hz": 317371612.0843191,
+          "L_real": -0.000429868745431611,
+          "axis": "negative",
+          "inverse_magnitude_db": 67.3332826017318,
+          "bracket_hz": [
+            316227766.0168282,
+            323593656.9296184
+          ]
+        },
+        {
+          "frequency_hz": 1498320312.9695506,
+          "L_real": 0.00040124620229955033,
+          "axis": "positive",
+          "inverse_magnitude_db": 67.93178130124446,
+          "bracket_hz": [
+            1479108388.168159,
+            1513561248.436158
+          ]
+        }
+      ],
+      "native_margins": {
+        "gainMargin": null,
+        "gainMarginFreq": null,
+        "phaseMargin": null,
+        "phaseMarginFreq": null,
+        "state_verbatim_from_simulator": "Gain(dB)is always less than zero. The circuit is always stable. No gain margin or phase margin."
+      },
+      "native_interpolation_crosschecks": {},
+      "sampling_limitation": "All sign-changing crossings on the saved 100 points/decade grid; does not certify absence of an unsampled tangent or pair of crossings.",
+      "formal_multiloop_pass": false
+    }
+  },
+  "probe_equivalence": {
+    "spectre_stb_20260923T102355388855Z": {
+      "status": "NUMERICAL_EQUIVALENCE_WITHIN_REPORTED_TOLERANCES",
+      "results": {
+        "dcOp.dc": {
+          "shared_node_voltage_count": 159,
+          "shared_current_count": 610,
+          "excluded_parser_metadata": {
+            "units": "A"
+          },
+          "max_node_voltage_difference": {
+            "abs": 2.2261787968602675e-09,
+            "signal": "XPGA_XOTA_XRCMP_XR.ra"
+          },
+          "max_current_difference": {
+            "abs": 2.603940639636171e-13,
+            "signal": "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:d"
+          },
+          "selected_nodes": {
+            "FP": {
+              "baseline_v": 0.8472790733490176,
+              "with_probe_v": 0.847279071122842,
+              "difference_v": -2.2261756882357986e-09
+            },
+            "FN": {
+              "baseline_v": 0.8472790733490176,
+              "with_probe_v": 0.847279071122842,
+              "difference_v": -2.2261756882357986e-09
+            },
+            "XPGA_XOTA_NCM": {
+              "baseline_v": 0.6641840189879161,
+              "with_probe_v": 0.6641840189974428,
+              "difference_v": 9.526712752006006e-12
+            },
+            "XPGA_XOTA_CMG": {
+              "baseline_v": 0.8970377853762229,
+              "with_probe_v": 0.8970377854452567,
+              "difference_v": 6.90337786934947e-11
+            },
+            "XPGA_XOTA_BN": {
+              "baseline_v": 0.6853142975079649,
+              "with_probe_v": 0.6853142975079649,
+              "difference_v": 0.0
+            }
+          },
+          "probe_zero_dc_drop_v": {
+            "DM_INP": 0.0,
+            "DM_INN": 0.0,
+            "CM1_GATE": 0.0,
+            "CM2_GATE": 0.0
+          }
+        },
+        "ac.ac": {
+          "shared_node_voltage_count": 159,
+          "shared_current_count": 610,
+          "excluded_parser_metadata": {},
+          "max_node_voltage_difference": {
+            "abs": 1.0000000000287557e-06,
+            "signal": "XPGA_XOTA_XRCMP_XR.ra"
+          },
+          "max_current_difference": {
+            "abs": 1.0049875621014817e-09,
+            "signal": "XCP_XC.rs2:1"
+          },
+          "diff_gain_max_abs_difference": 8.000000000230045e-07,
+          "diff_gain_max_relative_difference": 5.316541123528356e-07,
+          "frequency_range_hz": [
+            1.0,
+            100000000.0
+          ],
+          "limitation": "Saved complex AC values are rounded to about six significant digits; this check does not demand bitwise identical underlying solutions."
+        }
+      },
+      "limits": {
+        "op_node_abs_v": 1e-08,
+        "op_current_abs_a": 1e-12,
+        "diff_ac_gain_relative": 1e-06
+      },
+      "scope": "Zero differential OP and original differential AC excitation only; no independent common-mode AC excitation or large-signal equivalence claimed."
+    },
+    "spectre_stb_input_cm_20260923T102452043895Z": {
+      "status": "NUMERICAL_EQUIVALENCE_WITHIN_REPORTED_TOLERANCES",
+      "results": {
+        "dcOp.dc": {
+          "shared_node_voltage_count": 159,
+          "shared_current_count": 610,
+          "excluded_parser_metadata": {
+            "units": "A"
+          },
+          "max_node_voltage_difference": {
+            "abs": 2.2261787968602675e-09,
+            "signal": "XPGA_XOTA_XRCMP_XR.ra"
+          },
+          "max_current_difference": {
+            "abs": 2.603940639636171e-13,
+            "signal": "XPGA_XOTA_XCMS.msky130_fd_pr__nfet_01v8:d"
+          },
+          "selected_nodes": {
+            "FP": {
+              "baseline_v": 0.8472790733490176,
+              "with_probe_v": 0.847279071122842,
+              "difference_v": -2.2261756882357986e-09
+            },
+            "FN": {
+              "baseline_v": 0.8472790733490176,
+              "with_probe_v": 0.847279071122842,
+              "difference_v": -2.2261756882357986e-09
+            },
+            "XPGA_XOTA_NCM": {
+              "baseline_v": 0.6641840189879161,
+              "with_probe_v": 0.6641840189974428,
+              "difference_v": 9.526712752006006e-12
+            },
+            "XPGA_XOTA_CMG": {
+              "baseline_v": 0.8970377853762229,
+              "with_probe_v": 0.8970377854452567,
+              "difference_v": 6.90337786934947e-11
+            },
+            "XPGA_XOTA_BN": {
+              "baseline_v": 0.6853142975079649,
+              "with_probe_v": 0.6853142975079649,
+              "difference_v": 0.0
+            }
+          },
+          "probe_zero_dc_drop_v": {
+            "DM_INP": 0.0,
+            "DM_INN": 0.0,
+            "CM1_GATE": 0.0,
+            "CM2_GATE": 0.0
+          }
+        },
+        "ac.ac": {
+          "shared_node_voltage_count": 159,
+          "shared_current_count": 610,
+          "excluded_parser_metadata": {},
+          "max_node_voltage_difference": {
+            "abs": 1.0000000000287557e-06,
+            "signal": "XPGA_XOTA_XRCMP_XR.ra"
+          },
+          "max_current_difference": {
+            "abs": 1.0049875621014817e-09,
+            "signal": "XCP_XC.rs2:1"
+          },
+          "diff_gain_max_abs_difference": 8.000000000230045e-07,
+          "diff_gain_max_relative_difference": 5.316541123528356e-07,
+          "frequency_range_hz": [
+            1.0,
+            100000000.0
+          ],
+          "limitation": "Saved complex AC values are rounded to about six significant digits; this check does not demand bitwise identical underlying solutions."
+        }
+      },
+      "limits": {
+        "op_node_abs_v": 1e-08,
+        "op_current_abs_a": 1e-12,
+        "diff_ac_gain_relative": 1e-06
+      },
+      "scope": "Zero differential OP and original differential AC excitation only; no independent common-mode AC excitation or large-signal equivalence claimed."
+    }
+  },
+  "spectre_errors_warnings_notices": {
+    "spectre_canary_20260923T100631141401Z": [
+      "0",
+      "0",
+      "8"
+    ],
+    "spectre_stb_20260923T102355388855Z": [
+      "0",
+      "0",
+      "9"
+    ],
+    "spectre_stb_input_cm_20260923T102452043895Z": [
+      "0",
+      "0",
+      "8"
+    ]
+  },
+  "formal_multiloop_stability_pass": false,
+  "sampled_noise_pass": false,
+  "pvt_45_pass": false,
+  "source_sha256": {
+    "v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.raw/dcOp.dc": "abceeb1deb38d5d6c612878ec4eb528f4e2b8cc39535213e264a22946d7b9f75",
+    "v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.raw/ac.ac": "3dbaac60a328830d3c4bb91043624a3764d32b1ccf778b9382edd087367795b1",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/dcOp.dc": "e4f7e316d2bdfcc3293c9ff5d337701f2a44762b7e0c987842186c3dd41169a4",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/ac.ac": "a13ab5028ab58d6e5020dbe641dd149f660d0f583bd4bc4b9be19f5797f578d4",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/input.raw/dcOp.dc": "c79aad2b0698fe97887e8dd9d9de37dc7003a681ff50d3ff1770672754696882",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/input.raw/ac.ac": "daf7a0bf700d1fd8eea45f3d1a24a3471bb24eee46f95696340c4c4409a8be23",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/stb_dm.stb": "23593dc10ff21e1b132ad395f15452961444c78215b8d2b4740f30925df68013",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/stb_dm.margin.stb": "8ce234598f3e7715d007fef1fcfc875e0ffcf4b7dc232219d6d0f84d121c73a2",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/stb_cm1.stb": "0174d67a23d254074b87901b8a4e1526c7d494b2c77fee8a68cbe6c27a4cbed7",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/stb_cm1.margin.stb": "b349ccafe67b83209ac5fd63001c98bfe10d9859d2d99896973c0dabfc53122f",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/stb_cm2.stb": "ae57d67e85dc81bb56ea38f42e14a107495e1ed8a6dca6869d9cf5a2b91f9c4b",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.raw/stb_cm2.margin.stb": "556433d3a5f040daa9490354758b1874dee864a5cded2497439955efe9ee32e8",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/input.raw/stb_input_cm.stb": "fed2abfd92c87ff94a36ffcb8981c78c51a0b143de04b7766e95b2827c83fcf0",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/input.raw/stb_input_cm.margin.stb": "2e632c7eeb39b4e46efe0d47ac6970d4a226ec3b13ae4d8f17215b1ddb59e63b",
+    "v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/input.scs": "3e15e1242ff7ed31d2d0ef30ed84278f9d9e99dae4be6ef0a314b23e85243547",
+    "v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/native_netlist": "ca24be0b4cb73bb1b047eb2b6c025d3b2dcafc3410d4625a64b45951a3c22d75",
+    "v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/provenance.json": "5d7dcd6c2b499aa3767ff767c49a3a1c604b3099fa959a4190f5cf92afdacb18",
+    "v2/cadence/linuxlab_20260923/runs/spectre_canary_20260923T100631141401Z/spectre.out": "6805c55c920f56c2192fce8f61873f92203c0d3ee9fdfa0663bf34d83e1c41dc",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/input.scs": "1240a6ef1a8c3037d857521bbe494e3f85b8c4a354732b85a574205ee228e0c1",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/native_netlist": "598ec67ff7e66b9e8f54ab26b1bf2626690df3093286b4ada25597f080a163f8",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/provenance.json": "9f1ac150588dd8c71eb60cb34977def1dfbae0168bb9ecad2384bcdd7ad91cf5",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_20260923T102355388855Z/spectre.out": "e2ef59e9f84fe7b7426be171fe9d373306198d5ad9635a114ce0c842159110e9",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/input.scs": "7a316c757dbf02a087bb636c23e0b5a9bbf58d6a7dbcb06b30282b519e64dbbe",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/native_netlist": "598ec67ff7e66b9e8f54ab26b1bf2626690df3093286b4ada25597f080a163f8",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/provenance.json": "869575e95a97fd825abc5b2bc091002217c87b204a00eeb5877b018561161e99",
+    "v2/cadence/linuxlab_20260923/runs/spectre_stb_input_cm_20260923T102452043895Z/spectre.out": "a45d42fda2749954bb1184cb5a6cfe338507c3c75161e94f3be86b6686010ad3"
+  }
+}

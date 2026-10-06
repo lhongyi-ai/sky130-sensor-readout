@@ -1,0 +1,110 @@
+{
+  "status": "ACTUAL_NATIVE_GDS_READBACK_MATCH",
+  "cell": "p1ma_array4_r1",
+  "body_bbox_um": [
+    -0.4,
+    -0.4,
+    4.4,
+    4.4
+  ],
+  "capm_dimensions_um": [
+    4,
+    4
+  ],
+  "body_center_um": [
+    2,
+    2
+  ],
+  "gds_database_unit_m": 1e-09,
+  "via3_count": 81,
+  "via3_grid": [
+    9,
+    9
+  ],
+  "via3_cut_um": [
+    0.2,
+    0.2
+  ],
+  "via3_pitch_um": [
+    0.4,
+    0.4
+  ],
+  "via3_first_lower_left_um": [
+    0.3,
+    0.3
+  ],
+  "via3_last_upper_right_um": [
+    3.7,
+    3.7
+  ],
+  "bottom_enclosure_um": 0.4,
+  "top_plate_bbox_um": [
+    0.1,
+    0.1,
+    3.9,
+    3.9
+  ],
+  "drawing_layers": {
+    "met3": [
+      70,
+      20
+    ],
+    "capm": [
+      89,
+      44
+    ],
+    "met4": [
+      71,
+      20
+    ],
+    "via3": [
+      70,
+      44
+    ]
+  },
+  "pins": {
+    "PLUS": {
+      "layer": "met4",
+      "gds": [
+        71,
+        16
+      ],
+      "bbox_um": [
+        0.39,
+        0.39,
+        0.41,
+        0.41
+      ],
+      "label_um": [
+        0.4,
+        0.4
+      ],
+      "orientation": "R0",
+      "meaning": "top electrode"
+    },
+    "MINUS": {
+      "layer": "met3",
+      "gds": [
+        70,
+        16
+      ],
+      "bbox_um": [
+        -0.21,
+        -0.21,
+        -0.19,
+        -0.19
+      ],
+      "label_um": [
+        -0.2,
+        -0.2
+      ],
+      "orientation": "R0",
+      "meaning": "bottom electrode"
+    }
+  },
+  "model": "p1_mim_public_r1",
+  "outer_multiplier_supported": false,
+  "model_scope": "TT nominal isolated public wrapper; no statistics/full-PVT equivalence to school cap_mim_m3_1 asserted",
+  "internal_effective_contact_count_is_not_81": true,
+  "formal_ADC_PEX_allowed": false
+}

@@ -1,16 +1,21 @@
-# SKY130 Sensor Readout — Completed Work Checkpoint
+# SKY130 Sensor Readout — Engineering Checkpoint
 
-As of 2026-09-13, this repository contains completed code, reports, and results for the original two-stage OTA, the V2 calibratable sensor readout core, and Cadence migration and verification. **This is an engineering checkpoint; the complete chip has not passed qualification.**
+Published on **October 6, 2026**, with actual engineering evidence through **September 24, 2026**. The original OTA, programmable frontend, real SAR ADC/RTL integration and controlled MIM/layout work are retained. **The complete chip core has not passed qualification.**
 
-| Area | Entry point | Current scope |
-|---|---|---|
-| V2 frontend, ADC, digital control, and partial layout | [V2 overview](v2/README.md) | Retains unfinished stability, sampled-noise, full-code, and top-level parasitic work |
-| Latest completed local work | [2026-09-13 record](v2/docs/local_preparation_20260913.md) | Submodule results do not imply system qualification; the latest Cadence reports supersede earlier statements awaiting school results |
-| Native Cadence OTA and school-result review | [Cadence status](cadence/project1/README.md) | All 87 entry points have execution evidence; performance failures and review items remain explicit |
-| Original OTA design and five-day results | Below and [final report](docs/sky130_two_stage_ota_report.pdf) | Retains schematic-level core PVT success and PSRR/ICMR failures |
-| Publication scope and checks | [Checkpoint notes](docs/github_checkpoint_20260913.md) | Large raw waveforms, original school-return packages, and local compiled artifacts remain in the original project |
+Two actual ADC frames and reset interruption pass functional checks. Numerical precision remains unqualified, and formal top-level PEX remains incomplete. The publication preserves these failures and the original design targets.
 
-The original Git history is retained. The current checkout is the English publication edition. Historical measurements and qualification outcomes are not upgraded by translation; [English-edition notes](docs/english_publication_20260913.md) describe filename mappings and artifact integrity.
+| Entry point | Contents |
+| --- | --- |
+| [Latest progress](docs/progress_20261006.md) | Completed evidence, unresolved gates and next steps |
+| [Actual ADC results](v2/analog/adc/cadence_closure_20260923/RESULTS.md) | Native school ADC, original RTL, numerical controls and retained failures |
+| [Frontend stability review](v2/analog/frontend/stability_method_review_20260923/method_review.md) | Conditional loop results and limits of coupled-loop claims |
+| [School 4 µm MIM controls](v2/physical/cdac_closure_20260923/school4um_preparation/access_2x2_r2/README.md) | Actual DRC/LVS and deliberate connectivity failures |
+| [MIM physical qualification](v2/physical/mim_qualification_r3_20260923/README.md) | RC boundary, resistance provenance and coupling gaps |
+| [V2 overview](v2/README.md) | Architecture, frozen specifications and earlier work |
+| [Native OTA migration](cadence/project1/README.md) | Historical school OTA execution and performance reviews |
+| [Publication scope](docs/publication_20261006.md) | English edition, privacy exclusions and integrity checks |
+
+Current publication files and retained delivery archives use English. Original local execution records remain the provenance source; translated or anonymized bytes have separate hashes. The Git history is retained. Historical results and qualifications are not upgraded by translation.
 
 ---
 

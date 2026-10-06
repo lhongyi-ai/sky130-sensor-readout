@@ -1,0 +1,3077 @@
+{
+  "status": "NATIVE_NETLIST_AUDIT_PASS",
+  "scope": "Flat native connectivity and requested school_r1 parameters only; no simulator/performance/physical acceptance.",
+  "errors": [],
+  "instances": [
+    {
+      "name": "XPGA_XI0_XN",
+      "originalpath": "XPGA/XI0/XN",
+      "kind": "mos",
+      "line": 55,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_S0B",
+        "SEL0",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XI0_XP",
+      "originalpath": "XPGA/XI0/XP",
+      "kind": "mos",
+      "line": 97,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_S0B",
+        "SEL0",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XI1_XN",
+      "originalpath": "XPGA/XI1/XN",
+      "kind": "mos",
+      "line": 53,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_S1B",
+        "SEL1",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XI1_XP",
+      "originalpath": "XPGA/XI1/XP",
+      "kind": "mos",
+      "line": 95,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_S1B",
+        "SEL1",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN1_XN0",
+      "originalpath": "XPGA/XN1/XN0",
+      "kind": "mos",
+      "line": 51,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E1B",
+        "XPGA_S0B",
+        "XPGA_XN1_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN1_XN1",
+      "originalpath": "XPGA/XN1/XN1",
+      "kind": "mos",
+      "line": 49,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XN1_N",
+        "XPGA_S1B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN1_XP0",
+      "originalpath": "XPGA/XN1/XP0",
+      "kind": "mos",
+      "line": 93,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E1B",
+        "XPGA_S0B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN1_XP1",
+      "originalpath": "XPGA/XN1/XP1",
+      "kind": "mos",
+      "line": 91,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E1B",
+        "XPGA_S1B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN4_XN0",
+      "originalpath": "XPGA/XN4/XN0",
+      "kind": "mos",
+      "line": 47,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E4B",
+        "SEL0",
+        "XPGA_XN4_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN4_XN1",
+      "originalpath": "XPGA/XN4/XN1",
+      "kind": "mos",
+      "line": 45,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XN4_N",
+        "XPGA_S1B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN4_XP0",
+      "originalpath": "XPGA/XN4/XP0",
+      "kind": "mos",
+      "line": 89,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E4B",
+        "SEL0",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN4_XP1",
+      "originalpath": "XPGA/XN4/XP1",
+      "kind": "mos",
+      "line": 87,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E4B",
+        "XPGA_S1B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN16_XN0",
+      "originalpath": "XPGA/XN16/XN0",
+      "kind": "mos",
+      "line": 43,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E16B",
+        "XPGA_S0B",
+        "XPGA_XN16_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN16_XN1",
+      "originalpath": "XPGA/XN16/XN1",
+      "kind": "mos",
+      "line": 41,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XN16_N",
+        "SEL1",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN16_XP0",
+      "originalpath": "XPGA/XN16/XP0",
+      "kind": "mos",
+      "line": 85,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E16B",
+        "XPGA_S0B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XN16_XP1",
+      "originalpath": "XPGA/XN16/XP1",
+      "kind": "mos",
+      "line": 83,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E16B",
+        "SEL1",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XIE1_XN",
+      "originalpath": "XPGA/XIE1/XN",
+      "kind": "mos",
+      "line": 39,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E1",
+        "XPGA_E1B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XIE1_XP",
+      "originalpath": "XPGA/XIE1/XP",
+      "kind": "mos",
+      "line": 81,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E1",
+        "XPGA_E1B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XIE4_XN",
+      "originalpath": "XPGA/XIE4/XN",
+      "kind": "mos",
+      "line": 37,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E4",
+        "XPGA_E4B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XIE4_XP",
+      "originalpath": "XPGA/XIE4/XP",
+      "kind": "mos",
+      "line": 79,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E4",
+        "XPGA_E4B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XIE16_XN",
+      "originalpath": "XPGA/XIE16/XN",
+      "kind": "mos",
+      "line": 35,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E16",
+        "XPGA_E16B",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(2u)",
+        "l": "150n",
+        "as": "530f",
+        "ad": "530f",
+        "ps": "4.53u",
+        "pd": "4.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 2.0,
+        "target_w_um": 2.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XIE16_XP",
+      "originalpath": "XPGA/XIE16/XP",
+      "kind": "mos",
+      "line": 77,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_E16",
+        "XPGA_E16B",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(4u)",
+        "l": "150n",
+        "as": "1.06p",
+        "ad": "1.06p",
+        "ps": "8.53u",
+        "pd": "8.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 4.0,
+        "target_w_um": 4.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XRINP_XR",
+      "originalpath": "XPGA/XRINP/XR",
+      "kind": "resistor",
+      "line": 173,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "IP",
+        "XPGA_SUMPOS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "10.7185K",
+        "l": "9.105u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XRINN_XR",
+      "originalpath": "XPGA/XRINN/XR",
+      "kind": "resistor",
+      "line": 171,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "IN",
+        "XPGA_SUMNEG",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "10.7185K",
+        "l": "9.105u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFP1_XR_XR",
+      "originalpath": "XPGA/XFP1/XR/XR",
+      "kind": "resistor",
+      "line": 169,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XFP1_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "10.4849K",
+        "l": "8.895u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFP1_XSW_XN",
+      "originalpath": "XPGA/XFP1/XSW/XN",
+      "kind": "mos",
+      "line": 33,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMPOS",
+        "XPGA_E1",
+        "XPGA_XFP1_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(12u)",
+        "l": "150n",
+        "as": "3.18p",
+        "ad": "3.18p",
+        "ps": "24.53u",
+        "pd": "24.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 12.0,
+        "target_w_um": 12.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFP1_XSW_XP",
+      "originalpath": "XPGA/XFP1/XSW/XP",
+      "kind": "mos",
+      "line": 75,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMPOS",
+        "XPGA_E1B",
+        "XPGA_XFP1_N",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(24u)",
+        "l": "150n",
+        "as": "6.36p",
+        "ad": "6.36p",
+        "ps": "48.53u",
+        "pd": "48.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 24.0,
+        "target_w_um": 24.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFN1_XR_XR",
+      "originalpath": "XPGA/XFN1/XR/XR",
+      "kind": "resistor",
+      "line": 167,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XFN1_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "10.4849K",
+        "l": "8.895u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFN1_XSW_XN",
+      "originalpath": "XPGA/XFN1/XSW/XN",
+      "kind": "mos",
+      "line": 31,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMNEG",
+        "XPGA_E1",
+        "XPGA_XFN1_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(12u)",
+        "l": "150n",
+        "as": "3.18p",
+        "ad": "3.18p",
+        "ps": "24.53u",
+        "pd": "24.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 12.0,
+        "target_w_um": 12.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFN1_XSW_XP",
+      "originalpath": "XPGA/XFN1/XSW/XP",
+      "kind": "mos",
+      "line": 73,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMNEG",
+        "XPGA_E1B",
+        "XPGA_XFN1_N",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(24u)",
+        "l": "150n",
+        "as": "6.36p",
+        "ad": "6.36p",
+        "ps": "48.53u",
+        "pd": "48.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 24.0,
+        "target_w_um": 24.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFP4_XR_XR",
+      "originalpath": "XPGA/XFP4/XR/XR",
+      "kind": "resistor",
+      "line": 165,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XFP4_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "43.9184K",
+        "l": "38.95u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFP4_XSW_XN",
+      "originalpath": "XPGA/XFP4/XSW/XN",
+      "kind": "mos",
+      "line": 29,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMPOS",
+        "XPGA_E4",
+        "XPGA_XFP4_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(12u)",
+        "l": "150n",
+        "as": "3.18p",
+        "ad": "3.18p",
+        "ps": "24.53u",
+        "pd": "24.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 12.0,
+        "target_w_um": 12.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFP4_XSW_XP",
+      "originalpath": "XPGA/XFP4/XSW/XP",
+      "kind": "mos",
+      "line": 71,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMPOS",
+        "XPGA_E4B",
+        "XPGA_XFP4_N",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(24u)",
+        "l": "150n",
+        "as": "6.36p",
+        "ad": "6.36p",
+        "ps": "48.53u",
+        "pd": "48.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 24.0,
+        "target_w_um": 24.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFN4_XR_XR",
+      "originalpath": "XPGA/XFN4/XR/XR",
+      "kind": "resistor",
+      "line": 163,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XFN4_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "43.9184K",
+        "l": "38.95u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFN4_XSW_XN",
+      "originalpath": "XPGA/XFN4/XSW/XN",
+      "kind": "mos",
+      "line": 27,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMNEG",
+        "XPGA_E4",
+        "XPGA_XFN4_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(12u)",
+        "l": "150n",
+        "as": "3.18p",
+        "ad": "3.18p",
+        "ps": "24.53u",
+        "pd": "24.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 12.0,
+        "target_w_um": 12.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFN4_XSW_XP",
+      "originalpath": "XPGA/XFN4/XSW/XP",
+      "kind": "mos",
+      "line": 69,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMNEG",
+        "XPGA_E4B",
+        "XPGA_XFN4_N",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(24u)",
+        "l": "150n",
+        "as": "6.36p",
+        "ad": "6.36p",
+        "ps": "48.53u",
+        "pd": "48.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 24.0,
+        "target_w_um": 24.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFP16_XR_XR_SEG_01",
+      "originalpath": "XPGA/XFP16/XR/XR",
+      "kind": "resistor",
+      "line": 161,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XFP16_XR_XR_SERIES_NODE_01",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "88.9432K",
+        "l": "79.425u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFP16_XR_XR_SEG_02",
+      "originalpath": "XPGA/XFP16/XR/XR",
+      "kind": "resistor",
+      "line": 159,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XFP16_XR_XR_SERIES_NODE_01",
+        "XPGA_XFP16_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "88.9432K",
+        "l": "79.425u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFP16_XSW_XN",
+      "originalpath": "XPGA/XFP16/XSW/XN",
+      "kind": "mos",
+      "line": 25,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMPOS",
+        "XPGA_E16",
+        "XPGA_XFP16_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(12u)",
+        "l": "150n",
+        "as": "3.18p",
+        "ad": "3.18p",
+        "ps": "24.53u",
+        "pd": "24.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 12.0,
+        "target_w_um": 12.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFP16_XSW_XP",
+      "originalpath": "XPGA/XFP16/XSW/XP",
+      "kind": "mos",
+      "line": 67,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMPOS",
+        "XPGA_E16B",
+        "XPGA_XFP16_N",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(24u)",
+        "l": "150n",
+        "as": "6.36p",
+        "ad": "6.36p",
+        "ps": "48.53u",
+        "pd": "48.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 24.0,
+        "target_w_um": 24.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFN16_XR_XR_SEG_01",
+      "originalpath": "XPGA/XFN16/XR/XR",
+      "kind": "resistor",
+      "line": 157,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XFN16_XR_XR_SERIES_NODE_01",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "88.9432K",
+        "l": "79.425u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFN16_XR_XR_SEG_02",
+      "originalpath": "XPGA/XFN16/XR/XR",
+      "kind": "resistor",
+      "line": 155,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XFN16_XR_XR_SERIES_NODE_01",
+        "XPGA_XFN16_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "88.9432K",
+        "l": "79.425u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XFN16_XSW_XN",
+      "originalpath": "XPGA/XFN16/XSW/XN",
+      "kind": "mos",
+      "line": 23,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMNEG",
+        "XPGA_E16",
+        "XPGA_XFN16_N",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(12u)",
+        "l": "150n",
+        "as": "3.18p",
+        "ad": "3.18p",
+        "ps": "24.53u",
+        "pd": "24.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 12.0,
+        "target_w_um": 12.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XFN16_XSW_XP",
+      "originalpath": "XPGA/XFN16/XSW/XP",
+      "kind": "mos",
+      "line": 65,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_SUMNEG",
+        "XPGA_E16B",
+        "XPGA_XFN16_N",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(24u)",
+        "l": "150n",
+        "as": "6.36p",
+        "ad": "6.36p",
+        "ps": "48.53u",
+        "pd": "48.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 24.0,
+        "target_w_um": 24.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBN_XR",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBN/XR",
+      "kind": "resistor",
+      "line": 153,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "VDD",
+        "XPGA_XOTA_BN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "26.3979K",
+        "l": "23.2u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XDBN",
+      "originalpath": "XPGA/XOTA/XBIAS/XDBN",
+      "kind": "mos",
+      "line": 21,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_BN",
+        "XPGA_XOTA_BN",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(20u)",
+        "l": "1u",
+        "as": "5.3p",
+        "ad": "5.3p",
+        "ps": "40.53u",
+        "pd": "40.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 20.0,
+        "target_w_um": 20.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 150,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_BP",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 147,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 144,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 141,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 138,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 135,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 132,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 129,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 126,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 123,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11",
+      "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+      "kind": "resistor",
+      "line": 121,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10",
+        "XPGA_XOTA_BN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "101.352K",
+        "l": "90.58u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMIP",
+      "originalpath": "XPGA/XOTA/XMIP",
+      "kind": "mos",
+      "line": 19,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N1",
+        "XPGA_SUMPOS",
+        "XPGA_XOTA_TAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(40u)",
+        "l": "1u",
+        "as": "10.6p",
+        "ad": "5.6p",
+        "ps": "80.53u",
+        "pd": "40.28u",
+        "m": "(1)*(2)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 80.0,
+        "target_w_um": 80.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMIN",
+      "originalpath": "XPGA/XOTA/XMIN",
+      "kind": "mos",
+      "line": 17,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N2",
+        "XPGA_SUMNEG",
+        "XPGA_XOTA_TAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(40u)",
+        "l": "1u",
+        "as": "10.6p",
+        "ad": "5.6p",
+        "ps": "80.53u",
+        "pd": "40.28u",
+        "m": "(1)*(2)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 80.0,
+        "target_w_um": 80.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMTAIL",
+      "originalpath": "XPGA/XOTA/XMTAIL",
+      "kind": "mos",
+      "line": 15,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_TAIL",
+        "XPGA_XOTA_BN",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(40u)",
+        "l": "1u",
+        "as": "10.6p",
+        "ad": "10.6p",
+        "ps": "80.53u",
+        "pd": "80.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 40.0,
+        "target_w_um": 40.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMLP",
+      "originalpath": "XPGA/XOTA/XMLP",
+      "kind": "mos",
+      "line": 63,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N1",
+        "XPGA_XOTA_NCM",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "1u",
+        "as": "8.48p",
+        "ad": "4.48p",
+        "ps": "64.53u",
+        "pd": "32.28u",
+        "m": "(1)*(2)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 64.0,
+        "target_w_um": 64.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMLN",
+      "originalpath": "XPGA/XOTA/XMLN",
+      "kind": "mos",
+      "line": 61,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N2",
+        "XPGA_XOTA_NCM",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(32u)",
+        "l": "1u",
+        "as": "8.48p",
+        "ad": "4.48p",
+        "ps": "64.53u",
+        "pd": "32.28u",
+        "m": "(1)*(2)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 64.0,
+        "target_w_um": 64.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRN1_XR",
+      "originalpath": "XPGA/XOTA/XRN1/XR",
+      "kind": "resistor",
+      "line": 119,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N1",
+        "XPGA_XOTA_NCM",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "111.536K",
+        "l": "99.735u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRN2_XR",
+      "originalpath": "XPGA/XOTA/XRN2/XR",
+      "kind": "resistor",
+      "line": 117,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N2",
+        "XPGA_XOTA_NCM",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "111.536K",
+        "l": "99.735u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCN1_XC",
+      "originalpath": "XPGA/XOTA/XCN1/XC",
+      "kind": "mim",
+      "line": 219,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N1",
+        "XPGA_XOTA_NCM"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCN2_XC",
+      "originalpath": "XPGA/XOTA/XCN2/XC",
+      "kind": "mim",
+      "line": 217,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N2",
+        "XPGA_XOTA_NCM"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMSP",
+      "originalpath": "XPGA/XOTA/XMSP",
+      "kind": "mos",
+      "line": 59,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XOTA_N1",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(45u)",
+        "l": "1u",
+        "as": "9.1125p",
+        "ad": "6.3p",
+        "ps": "67.905u",
+        "pd": "45.28u",
+        "m": "(1)*(4)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 180.0,
+        "target_w_um": 180.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMSN",
+      "originalpath": "XPGA/XOTA/XMSN",
+      "kind": "mos",
+      "line": 57,
+      "model": "pfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XOTA_N2",
+        "VDD",
+        "VDD"
+      ],
+      "exported_parameters": {
+        "w": "(45u)",
+        "l": "1u",
+        "as": "9.1125p",
+        "ad": "6.3p",
+        "ps": "67.905u",
+        "pd": "45.28u",
+        "m": "(1)*(4)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 180.0,
+        "target_w_um": 180.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMOP",
+      "originalpath": "XPGA/XOTA/XMOP",
+      "kind": "mos",
+      "line": 13,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XOTA_CMG",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(9u)",
+        "l": "1u",
+        "as": "2.385p",
+        "ad": "2.385p",
+        "ps": "18.53u",
+        "pd": "18.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 9.0,
+        "target_w_um": 9.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XMON",
+      "originalpath": "XPGA/XOTA/XMON",
+      "kind": "mos",
+      "line": 11,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XOTA_CMG",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(9u)",
+        "l": "1u",
+        "as": "2.385p",
+        "ad": "2.385p",
+        "ps": "18.53u",
+        "pd": "18.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 9.0,
+        "target_w_um": 9.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRZP_XR",
+      "originalpath": "XPGA/XOTA/XRZP/XR",
+      "kind": "resistor",
+      "line": 223,
+      "model": "res_high_po_0p69",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N1",
+        "XPGA_XOTA_CZP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "810.013",
+        "l": "855n",
+        "w": "690n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRZN_XR",
+      "originalpath": "XPGA/XOTA/XRZN/XR",
+      "kind": "resistor",
+      "line": 221,
+      "model": "res_high_po_0p69",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_N2",
+        "XPGA_XOTA_CZN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "810.013",
+        "l": "855n",
+        "w": "690n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC0_XC0_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC0/XC0/XC",
+      "kind": "mim",
+      "line": 215,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC0_XC1_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC0/XC1/XC",
+      "kind": "mim",
+      "line": 213,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC0_XC2_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC0/XC2/XC",
+      "kind": "mim",
+      "line": 211,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC0_XC3_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC0/XC3/XC",
+      "kind": "mim",
+      "line": 209,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC1_XC0_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC1/XC0/XC",
+      "kind": "mim",
+      "line": 207,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC1_XC1_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC1/XC1/XC",
+      "kind": "mim",
+      "line": 205,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC1_XC2_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC1/XC2/XC",
+      "kind": "mim",
+      "line": 203,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCP_XC1_XC3_XC",
+      "originalpath": "XPGA/XOTA/XCCP/XC1/XC3/XC",
+      "kind": "mim",
+      "line": 201,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZP",
+        "OP"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC0_XC0_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC0/XC0/XC",
+      "kind": "mim",
+      "line": 199,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC0_XC1_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC0/XC1/XC",
+      "kind": "mim",
+      "line": 197,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC0_XC2_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC0/XC2/XC",
+      "kind": "mim",
+      "line": 195,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC0_XC3_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC0/XC3/XC",
+      "kind": "mim",
+      "line": 193,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC1_XC0_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC1/XC0/XC",
+      "kind": "mim",
+      "line": 191,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC1_XC1_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC1/XC1/XC",
+      "kind": "mim",
+      "line": 189,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC1_XC2_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC1/XC2/XC",
+      "kind": "mim",
+      "line": 187,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCCN_XC1_XC3_XC",
+      "originalpath": "XPGA/XOTA/XCCN/XC1/XC3/XC",
+      "kind": "mim",
+      "line": 185,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CZN",
+        "ON"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRCMP_XR",
+      "originalpath": "XPGA/XOTA/XRCMP/XR",
+      "kind": "resistor",
+      "line": 115,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XOTA_CMS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "111.536K",
+        "l": "99.735u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRCMN_XR",
+      "originalpath": "XPGA/XOTA/XRCMN/XR",
+      "kind": "resistor",
+      "line": 113,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XOTA_CMS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "111.536K",
+        "l": "99.735u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCSMP_XC",
+      "originalpath": "XPGA/XOTA/XCSMP/XC",
+      "kind": "mim",
+      "line": 184,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "OP",
+        "XPGA_XOTA_CMS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCSMN_XC",
+      "originalpath": "XPGA/XOTA/XCSMN/XC",
+      "kind": "mim",
+      "line": 183,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "ON",
+        "XPGA_XOTA_CMS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCMS",
+      "originalpath": "XPGA/XOTA/XCMS",
+      "kind": "mos",
+      "line": 9,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_DS",
+        "XPGA_XOTA_CMS",
+        "XPGA_XOTA_CS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(20u)",
+        "l": "1u",
+        "as": "5.3p",
+        "ad": "5.3p",
+        "ps": "40.53u",
+        "pd": "40.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 20.0,
+        "target_w_um": 20.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCMR",
+      "originalpath": "XPGA/XOTA/XCMR",
+      "kind": "mos",
+      "line": 7,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CMG",
+        "VCM",
+        "XPGA_XOTA_CR",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(20u)",
+        "l": "1u",
+        "as": "5.3p",
+        "ad": "5.3p",
+        "ps": "40.53u",
+        "pd": "40.53u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 20.0,
+        "target_w_um": 20.0,
+        "target_field": "source_parameters.W",
+        "intentional_width_change": false,
+        "target_over_original": 1.0,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRSCS_XR",
+      "originalpath": "XPGA/XOTA/XRSCS/XR",
+      "kind": "resistor",
+      "line": 111,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CS",
+        "XPGA_XOTA_CTAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "10.7185K",
+        "l": "9.105u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRSCR_XR",
+      "originalpath": "XPGA/XOTA/XRSCR/XR",
+      "kind": "resistor",
+      "line": 109,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CR",
+        "XPGA_XOTA_CTAIL",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "10.7185K",
+        "l": "9.105u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XCMT",
+      "originalpath": "XPGA/XOTA/XCMT",
+      "kind": "mos",
+      "line": 5,
+      "model": "nfet_01v8",
+      "terminal_order": [
+        "D",
+        "G",
+        "S",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_CTAIL",
+        "XPGA_XOTA_BN",
+        "VSS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "w": "(9.2u)",
+        "l": "1u",
+        "as": "2.438p",
+        "ad": "2.438p",
+        "ps": "18.93u",
+        "pd": "18.93u",
+        "m": "(1)*(1)"
+      },
+      "width_mapping": {
+        "original_source_w_um": 8.0,
+        "target_w_um": 9.2,
+        "target_field": "mapped_parameters.W",
+        "intentional_width_change": true,
+        "target_over_original": 1.15,
+        "units": "um; explicit design values, not a physical-equivalence claim"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRDS_XR_SEG_01",
+      "originalpath": "XPGA/XOTA/XRDS/XR",
+      "kind": "resistor",
+      "line": 107,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "VDD",
+        "XPGA_XOTA_XRDS_XR_SERIES_NODE_01",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "58.3241K",
+        "l": "51.9u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRDS_XR_SEG_02",
+      "originalpath": "XPGA/XOTA/XRDS/XR",
+      "kind": "resistor",
+      "line": 105,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XRDS_XR_SERIES_NODE_01",
+        "XPGA_XOTA_DS",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "58.3241K",
+        "l": "51.9u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRCMG_XR_SEG_01",
+      "originalpath": "XPGA/XOTA/XRCMG/XR",
+      "kind": "resistor",
+      "line": 103,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "VDD",
+        "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "58.3241K",
+        "l": "51.9u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XPGA_XOTA_XRCMG_XR_SEG_02",
+      "originalpath": "XPGA/XOTA/XRCMG/XR",
+      "kind": "resistor",
+      "line": 101,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+        "XPGA_XOTA_CMG",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "58.3241K",
+        "l": "51.9u",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XRIP_XR",
+      "originalpath": "XRIP/XR",
+      "kind": "resistor",
+      "line": 100,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "OP",
+        "FP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "1.19625K",
+        "l": "545n",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XRIN_XR",
+      "originalpath": "XRIN/XR",
+      "kind": "resistor",
+      "line": 99,
+      "model": "res_high_po_0p35",
+      "terminal_order": [
+        "PLUS",
+        "MINUS",
+        "B"
+      ],
+      "nodes": [
+        "ON",
+        "FN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "r": "1.19625K",
+        "l": "545n",
+        "w": "350n"
+      }
+    },
+    {
+      "name": "XCFP_XC0_XC",
+      "originalpath": "XCFP/XC0/XC",
+      "kind": "mim",
+      "line": 182,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFP_XC1_XC",
+      "originalpath": "XCFP/XC1/XC",
+      "kind": "mim",
+      "line": 181,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFP_XC2_XC",
+      "originalpath": "XCFP/XC2/XC",
+      "kind": "mim",
+      "line": 180,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFP_XC3_XC",
+      "originalpath": "XCFP/XC3/XC",
+      "kind": "mim",
+      "line": 179,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FP",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFN_XC0_XC",
+      "originalpath": "XCFN/XC0/XC",
+      "kind": "mim",
+      "line": 178,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFN_XC1_XC",
+      "originalpath": "XCFN/XC1/XC",
+      "kind": "mim",
+      "line": 177,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFN_XC2_XC",
+      "originalpath": "XCFN/XC2/XC",
+      "kind": "mim",
+      "line": 176,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    },
+    {
+      "name": "XCFN_XC3_XC",
+      "originalpath": "XCFN/XC3/XC",
+      "kind": "mim",
+      "line": 175,
+      "model": "cap_mim_m3_1",
+      "terminal_order": [
+        "PLUS",
+        "MINUS"
+      ],
+      "nodes": [
+        "FN",
+        "VSS"
+      ],
+      "exported_parameters": {
+        "l": "22.215u",
+        "w": "22.215u",
+        "m": "1"
+      }
+    }
+  ],
+  "cdf_r_usage": "Recorded for traceability only; never used as actual model resistance or acceptance threshold.",
+  "headers": [],
+  "expected_count": 111,
+  "actual_count": 111,
+  "expected_counts_by_kind": {
+    "mos": 47,
+    "resistor": 36,
+    "mim": 28
+  },
+  "native_net_count": 58,
+  "error_count": 0,
+  "limitations": [
+    "Source/drain geometry is recorded and required to be nonnegative when exported; physical equivalence is not established.",
+    "MIM multiplier matches requested netlist only; actual capacitance/statistical averaging requires simulation/model evidence.",
+    "No model loading, Spectre success, waveform, stability, noise, PVT, DRC/LVS or parasitic qualification is inferred."
+  ],
+  "inputs": {
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/private_runtime/si_frontend_001/netlist": {
+      "sha256": "d60e36be06f2efc9b4f3374f2fe97710d520ad344ba677ab1da0512fce933b6a",
+      "size_bytes": 12909
+    },
+    "v2/physical/cdac_repair_20260923/adc_native_mapping_1/frontend_school_r3_objects.json": {
+      "sha256": "6e9e3e4b13c991e5608ced1f9c782c73bce2bff3ac3206db4bd5d2b80a24e091",
+      "size_bytes": 79640
+    }
+  }
+}

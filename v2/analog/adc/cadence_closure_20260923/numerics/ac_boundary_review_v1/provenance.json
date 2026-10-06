@@ -1,0 +1,30 @@
+{
+  "status": "ACTUAL_RESULTS_REVIEW_FROZEN",
+  "actual_results_directory": "sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T082423953684Z/design/results",
+  "claims": "External three-port D-excitation AC branch response observed; no model fault, transient repair, ADC accuracy or PEX qualification claim.",
+  "scope_no_EDA": true,
+  "reference_files": {
+    "numerics/mode_boundary_reproducer_v1/ac_boundary_v1/manifest.json": "838c6fb56ececc2c51f09471124c1f553fd913c2f858b7c7e747a3716af3bc66",
+    "numerics/mode_boundary_reproducer_v1/ac_boundary_v1/SHA256SUMS": "771d08204bbd56a611af986667108bd87f33d1be75c90b6258ed8852d48d605b",
+    "numerics/mode_boundary_reproducer_v1/ac_boundary_v1/analyze_ac.py": "0a0906cf4cee8576ef3e729fec018866f7582ea574786edda3c882a1f0bfad7a",
+    "numerics/static_charge_review_v1/branch_analysis.json": "f03bb88a3f8db34b5d5fd15cfe6f74b21ca5c432ecf0650bda7029117c5bd336",
+    "numerics/static_charge_review_v1/metadata_review.json": "b1142235873dd646a6c33d371e1fff15f0f2d0fe34ac19268a9426200644fd39",
+    "numerics/ac_port_cross_review_v1/README.md": "0501cebdf15a0e4a5fe29672222aa0dd8945b2d88a8f26fdffa0d9edd22e5161",
+    "numerics/ac_port_cross_review_v1/review.json": "8ce12d5aa174b7d76342e4947b106fd0447d8914b0d225b5a689d04d2bef94bc"
+  },
+  "report_data_files": {
+    "README.md": "8835eca8ac7f8e9e2e8138a41d47d5e72b25a90ef212a4a295330e72dcf6934c",
+    "d0_external_response.json": "9f166522746ee2615f30def602aadd1f98c231391adc45586a60310618068ad0",
+    "dn1u_external_response.json": "e03f04bc91c869dcc0ed1b877e2be12254e797419172a994c170a497a355df7c",
+    "dn20u_external_response.json": "c0ea2653c047a742999f3ff363fc611c9e1a4528128e4ee284428679d3f32d27",
+    "dn5u_external_response.json": "f0c7928fa7ffbedfc08e7300fbf92bc0ff372e5669f746e446d47f7fbc37e904",
+    "dp1u_external_response.json": "04894d9224b669e569a2a6847f157fc39ad235aace7efd52f16ea60690b88456",
+    "dp20u_external_response.json": "3033035daedf8171c3dd710c4deca0dac3935277f45196729b8008796c45ef2d",
+    "dp5u_external_response.json": "75fa3bb668c9fc6f0c829d38917cb627083c7d24f68f4effa4924c366e139b3a",
+    "review_actual.py": "41a9c3c8a02dc2150fcfa1233b76ff54a6945169bbb21885d719a7046a2d5db6",
+    "summary.json": "aeafe0dd3d3936e0ab0f8bd13d82d50b6a00f0ba879051d927e7cc4879393286"
+  },
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false,
+  "formal_ADC_PEX_allowed": false
+}

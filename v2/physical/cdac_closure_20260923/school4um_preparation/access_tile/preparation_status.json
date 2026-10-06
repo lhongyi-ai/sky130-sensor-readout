@@ -1,0 +1,22 @@
+{
+  "status": "SCOPED_ACCESS_GEOMETRY_AND_LVS_VERIFIED",
+  "local_geometry_checks": "PASS_INTENT_ONLY",
+  "native_cell_creation": "ACTUALLY_EXECUTED_BY_ROOT",
+  "DRC": "ZERO_RESULTS_FOR_EXECUTED_SCHOOL_279_AND_MIM_9_CHECKS_EACH_CASE",
+  "LVS": "GOOD_MATCH_OPEN_AND_SHORT_MISMATCH_VERIFIED",
+  "PEX": "NOT_RUN",
+  "formal_ADC_PEX_allowed": false,
+  "proposed_unit_origin_separation_um": 12,
+  "final_array_pitch_um": null,
+  "model_change": "None. References use isolated project probe primitive; current ADC untouched.",
+  "Copper_branch": "No Copper selection or areaid.mt marker added. Runtime branch must be recorded; do not claim .2/.210 alone proves violation.",
+  "source_hashes": {
+    "v2/physical/mim_adaptation_20260923/array_geometry_manifest.json": "bbd7aabf2fa9125a32c3410f71de6f12476b3cb45ea388ff128db99e1c526e16",
+    "v2/physical/mim_adaptation_20260923/pvs_research/mim_layers.pvl": "0de905845c8708a68b23d210a07f68022aa29f6ff8f1383536de50fd1d05aa37",
+    "v2/physical/mim_adaptation_20260923/pvs_research/mim_lvs.pvl": "9c51653895c3fc4e3ea0868a033cfe94a577479e03c4b7ea672899635ac46175",
+    "v2/physical/mim_adaptation_20260923/pvs_research/mim_drc.pvl": "f952d0876371fff7a6d079ec4c155606cb46a0e978c5f4a5255b290310866531"
+  },
+  "initial_preparation_status": "PREPARED_NOT_RUN",
+  "actual_review": "actual_execution_review.json",
+  "geometry_repair_required_for_this_tile": false
+}

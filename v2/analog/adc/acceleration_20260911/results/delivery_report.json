@@ -20,7 +20,7 @@
     "source_gate": "PASS"
   },
   "known_trace_real_spice": {
-    "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082551662858Z_known",
+    "directory": "/path/to/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082551662858Z_known",
     "status": "NUMERICAL_GATE_FAIL",
     "wall_seconds": 178.0863857299846,
     "fixed_shim_reference_wall_seconds": 180.2837227449927,
@@ -81,7 +81,7 @@
     }
   },
   "independent_prediction": {
-    "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T083114860787Z_predicted",
+    "directory": "/path/to/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T083114860787Z_predicted",
     "status": "PREDICTED_TRACE_ACCEPTED",
     "input_differential_v": [
       0.18603515625,
@@ -110,17 +110,17 @@
     "claim_limit": "Finite six-input conditional trace certificate, not all-code or live-RTL-in-loop signoff."
   },
   "preserved_failures": {
-    "no_process_launch": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082521485574Z_known",
+    "no_process_launch": "/path/to/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082521485574Z_known",
     "actual_spice_aborts": [
       {
-        "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082931655937Z_predicted",
+        "directory": "/path/to/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T082931655937Z_predicted",
         "status": "INCOMPLETE",
         "wall_seconds": 7.658931833982933,
         "failure": "Timestep too small; time = 3.503e-06, timestep = 2.5e-21",
         "waveform_sha256": "39a0fb829163295ec7a7c4606be4fca08efe437f62954593c9d8f3eefdd082b8"
       },
       {
-        "directory": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T083032868118Z_predicted",
+        "directory": "/path/to/sky130-two-stage-ota/v2/analog/adc/acceleration_20260911/results/20260911T083032868118Z_predicted",
         "status": "INCOMPLETE",
         "wall_seconds": 7.764876227010973,
         "failure": "Timestep too small; time = 3.503e-06, timestep = 2.5e-21",
@@ -154,7 +154,7 @@
     ]
   },
   "source_binding": {
-    "fixed_shim_reference": "/Users/stanley/Documents/ChatGPT/Analog Circuit Project/sky130-two-stage-ota/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed",
+    "fixed_shim_reference": "/path/to/sky130-two-stage-ota/v2/analog/adc/closure_20260911/results/20260911T081221912898Z_bridge_fixed",
     "fixed_shim_reference_hashes": {
       "adc.spice": "6ff666b4a9d0b43df00967152126dea203aa976f9dae35578dcd5a04faa98cfe",
       "waveform.dat": "94781ba52d17e220f35138f8222c7935beee1b499d03bf9a73d2c26b465c4862",

@@ -1,0 +1,2985 @@
+[
+  {
+    "name": "XPGA_XI0_XN",
+    "originalpath": "XPGA/XI0/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_S0B",
+      "G": "SEL0",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XI0_XP",
+    "originalpath": "XPGA/XI0/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_S0B",
+      "G": "SEL0",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XI1_XN",
+    "originalpath": "XPGA/XI1/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_S1B",
+      "G": "SEL1",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XI1_XP",
+    "originalpath": "XPGA/XI1/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_S1B",
+      "G": "SEL1",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN1_XN0",
+    "originalpath": "XPGA/XN1/XN0",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E1B",
+      "G": "XPGA_S0B",
+      "S": "XPGA_XN1_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN1_XN1",
+    "originalpath": "XPGA/XN1/XN1",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XN1_N",
+      "G": "XPGA_S1B",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN1_XP0",
+    "originalpath": "XPGA/XN1/XP0",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E1B",
+      "G": "XPGA_S0B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN1_XP1",
+    "originalpath": "XPGA/XN1/XP1",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E1B",
+      "G": "XPGA_S1B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN4_XN0",
+    "originalpath": "XPGA/XN4/XN0",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E4B",
+      "G": "SEL0",
+      "S": "XPGA_XN4_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN4_XN1",
+    "originalpath": "XPGA/XN4/XN1",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XN4_N",
+      "G": "XPGA_S1B",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN4_XP0",
+    "originalpath": "XPGA/XN4/XP0",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E4B",
+      "G": "SEL0",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN4_XP1",
+    "originalpath": "XPGA/XN4/XP1",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E4B",
+      "G": "XPGA_S1B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN16_XN0",
+    "originalpath": "XPGA/XN16/XN0",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E16B",
+      "G": "XPGA_S0B",
+      "S": "XPGA_XN16_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN16_XN1",
+    "originalpath": "XPGA/XN16/XN1",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XN16_N",
+      "G": "SEL1",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN16_XP0",
+    "originalpath": "XPGA/XN16/XP0",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E16B",
+      "G": "XPGA_S0B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XN16_XP1",
+    "originalpath": "XPGA/XN16/XP1",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E16B",
+      "G": "SEL1",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XIE1_XN",
+    "originalpath": "XPGA/XIE1/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E1",
+      "G": "XPGA_E1B",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XIE1_XP",
+    "originalpath": "XPGA/XIE1/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E1",
+      "G": "XPGA_E1B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XIE4_XN",
+    "originalpath": "XPGA/XIE4/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E4",
+      "G": "XPGA_E4B",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XIE4_XP",
+    "originalpath": "XPGA/XIE4/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E4",
+      "G": "XPGA_E4B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XIE16_XN",
+    "originalpath": "XPGA/XIE16/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "2u",
+      "fw": "2u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E16",
+      "G": "XPGA_E16B",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 2
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XIE16_XP",
+    "originalpath": "XPGA/XIE16/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "4u",
+      "fw": "4u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_E16",
+      "G": "XPGA_E16B",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 4
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XRINP_XR",
+    "originalpath": "XPGA/XRINP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "9.105u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "IP",
+      "MINUS": "XPGA_SUMPOS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 9.102719033232628
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XRINN_XR",
+    "originalpath": "XPGA/XRINN/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "9.105u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "IN",
+      "MINUS": "XPGA_SUMNEG",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 9.102719033232628
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XFP1_XR_XR",
+    "originalpath": "XPGA/XFP1/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "8.895u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "ON",
+      "MINUS": "XPGA_XFP1_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 9.455186304128903
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XFP1_XSW_XN",
+    "originalpath": "XPGA/XFP1/XSW/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "12u",
+      "fw": "12u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMPOS",
+      "G": "XPGA_E1",
+      "S": "XPGA_XFP1_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 12
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFP1_XSW_XP",
+    "originalpath": "XPGA/XFP1/XSW/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "24u",
+      "fw": "24u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMPOS",
+      "G": "XPGA_E1B",
+      "S": "XPGA_XFP1_N",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 24
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFN1_XR_XR",
+    "originalpath": "XPGA/XFN1/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "8.895u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "OP",
+      "MINUS": "XPGA_XFN1_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 9.455186304128903
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XFN1_XSW_XN",
+    "originalpath": "XPGA/XFN1/XSW/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "12u",
+      "fw": "12u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMNEG",
+      "G": "XPGA_E1",
+      "S": "XPGA_XFN1_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 12
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFN1_XSW_XP",
+    "originalpath": "XPGA/XFN1/XSW/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "24u",
+      "fw": "24u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMNEG",
+      "G": "XPGA_E1B",
+      "S": "XPGA_XFN1_N",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 24
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFP4_XR_XR",
+    "originalpath": "XPGA/XFP4/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "38.95u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "ON",
+      "MINUS": "XPGA_XFP4_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 40.72406847935549
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XFP4_XSW_XN",
+    "originalpath": "XPGA/XFP4/XSW/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "12u",
+      "fw": "12u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMPOS",
+      "G": "XPGA_E4",
+      "S": "XPGA_XFP4_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 12
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFP4_XSW_XP",
+    "originalpath": "XPGA/XFP4/XSW/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "24u",
+      "fw": "24u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMPOS",
+      "G": "XPGA_E4B",
+      "S": "XPGA_XFP4_N",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 24
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFN4_XR_XR",
+    "originalpath": "XPGA/XFN4/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "38.95u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "OP",
+      "MINUS": "XPGA_XFN4_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 40.72406847935549
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XFN4_XSW_XN",
+    "originalpath": "XPGA/XFN4/XSW/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "12u",
+      "fw": "12u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMNEG",
+      "G": "XPGA_E4",
+      "S": "XPGA_XFN4_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 12
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFN4_XSW_XP",
+    "originalpath": "XPGA/XFN4/XSW/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "24u",
+      "fw": "24u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMNEG",
+      "G": "XPGA_E4B",
+      "S": "XPGA_XFN4_N",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 24
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFP16_XR_XR_SEG_01",
+    "originalpath": "XPGA/XFP16/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "79.425u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "ON",
+      "MINUS": "XPGA_XFP16_XR_XR_SERIES_NODE_01",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 165.79959718026183
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XFP16_XR_XR_SEG_02",
+    "originalpath": "XPGA/XFP16/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "79.425u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XFP16_XR_XR_SERIES_NODE_01",
+      "MINUS": "XPGA_XFP16_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 165.79959718026183
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XFP16_XSW_XN",
+    "originalpath": "XPGA/XFP16/XSW/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "12u",
+      "fw": "12u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMPOS",
+      "G": "XPGA_E16",
+      "S": "XPGA_XFP16_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 12
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFP16_XSW_XP",
+    "originalpath": "XPGA/XFP16/XSW/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "24u",
+      "fw": "24u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMPOS",
+      "G": "XPGA_E16B",
+      "S": "XPGA_XFP16_N",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 24
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFN16_XR_XR_SEG_01",
+    "originalpath": "XPGA/XFN16/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "79.425u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "OP",
+      "MINUS": "XPGA_XFN16_XR_XR_SERIES_NODE_01",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 165.79959718026183
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XFN16_XR_XR_SEG_02",
+    "originalpath": "XPGA/XFN16/XR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "79.425u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XFN16_XR_XR_SERIES_NODE_01",
+      "MINUS": "XPGA_XFN16_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 165.79959718026183
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent.",
+      "Intentional school_r3 feedback tuning from school r2 measured low-frequency resistance, switch resistance and finite core gain; all gains still require calibration and full specification validation."
+    ],
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XFN16_XSW_XN",
+    "originalpath": "XPGA/XFN16/XSW/XN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "12u",
+      "fw": "12u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMNEG",
+      "G": "XPGA_E16",
+      "S": "XPGA_XFN16_N",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 12
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XFN16_XSW_XP",
+    "originalpath": "XPGA/XFN16/XSW/XP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "24u",
+      "fw": "24u",
+      "l": "0.15u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_SUMNEG",
+      "G": "XPGA_E16B",
+      "S": "XPGA_XFN16_N",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 0.15,
+      "W": 24
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBN_XR",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBN/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "23.2u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "VDD",
+      "MINUS": "XPGA_XOTA_BN",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 23.201409869083584
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XDBN",
+    "originalpath": "XPGA/XOTA/XBIAS/XDBN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "20u",
+      "fw": "20u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_BN",
+      "G": "XPGA_XOTA_BN",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 20
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_01",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_BP",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_02",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_01",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_03",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_02",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 3,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_04",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_03",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 4,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_05",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_04",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 5,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_06",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_05",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 6,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_07",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_06",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 7,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_08",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_07",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 8,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_09",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_08",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 9,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_10",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_09",
+      "MINUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 10,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XBIAS_XRBP_XR_SEG_11",
+    "originalpath": "XPGA/XOTA/XBIAS/XRBP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "90.58u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XBIAS_XRBP_XR_SERIES_NODE_10",
+      "MINUS": "XPGA_XOTA_BN",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 1006.0815709969788
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 11,
+    "mapping_segment_count": 11
+  },
+  {
+    "name": "XPGA_XOTA_XMIP",
+    "originalpath": "XPGA/XOTA/XMIP",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "80u",
+      "fw": "40u",
+      "l": "1u",
+      "fingers": "2",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_N1",
+      "G": "XPGA_SUMPOS",
+      "S": "XPGA_XOTA_TAIL",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 80
+    },
+    "mapping_notes": [
+      "Requested total W preserved via fingers; school simW=fw,simM=m*fingers. Source/drain area, perimeter and other native geometry effects still require audit."
+    ]
+  },
+  {
+    "name": "XPGA_XOTA_XMIN",
+    "originalpath": "XPGA/XOTA/XMIN",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "80u",
+      "fw": "40u",
+      "l": "1u",
+      "fingers": "2",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_N2",
+      "G": "XPGA_SUMNEG",
+      "S": "XPGA_XOTA_TAIL",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 80
+    },
+    "mapping_notes": [
+      "Requested total W preserved via fingers; school simW=fw,simM=m*fingers. Source/drain area, perimeter and other native geometry effects still require audit."
+    ]
+  },
+  {
+    "name": "XPGA_XOTA_XMTAIL",
+    "originalpath": "XPGA/XOTA/XMTAIL",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "40u",
+      "fw": "40u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_TAIL",
+      "G": "XPGA_XOTA_BN",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 40
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XMLP",
+    "originalpath": "XPGA/XOTA/XMLP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "64u",
+      "fw": "32u",
+      "l": "1u",
+      "fingers": "2",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_N1",
+      "G": "XPGA_XOTA_NCM",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 64
+    },
+    "mapping_notes": [
+      "Requested total W preserved via fingers; school simW=fw,simM=m*fingers. Source/drain area, perimeter and other native geometry effects still require audit."
+    ]
+  },
+  {
+    "name": "XPGA_XOTA_XMLN",
+    "originalpath": "XPGA/XOTA/XMLN",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "64u",
+      "fw": "32u",
+      "l": "1u",
+      "fingers": "2",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_N2",
+      "G": "XPGA_XOTA_NCM",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 64
+    },
+    "mapping_notes": [
+      "Requested total W preserved via fingers; school simW=fw,simM=m*fingers. Source/drain area, perimeter and other native geometry effects still require audit."
+    ]
+  },
+  {
+    "name": "XPGA_XOTA_XRN1_XR",
+    "originalpath": "XPGA/XOTA/XRN1/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "99.735u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_N1",
+      "MINUS": "XPGA_XOTA_NCM",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 99.73716012084593
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XRN2_XR",
+    "originalpath": "XPGA/XOTA/XRN2/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "99.735u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_N2",
+      "MINUS": "XPGA_XOTA_NCM",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 99.73716012084593
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XCN1_XC",
+    "originalpath": "XPGA/XOTA/XCN1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_N1",
+      "MINUS": "XPGA_XOTA_NCM"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCN2_XC",
+    "originalpath": "XPGA/XOTA/XCN2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_N2",
+      "MINUS": "XPGA_XOTA_NCM"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XMSP",
+    "originalpath": "XPGA/XOTA/XMSP",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "180u",
+      "fw": "45u",
+      "l": "1u",
+      "fingers": "4",
+      "m": "1"
+    },
+    "nets": {
+      "D": "OP",
+      "G": "XPGA_XOTA_N1",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 180
+    },
+    "mapping_notes": [
+      "Requested total W preserved via fingers; school simW=fw,simM=m*fingers. Source/drain area, perimeter and other native geometry effects still require audit."
+    ]
+  },
+  {
+    "name": "XPGA_XOTA_XMSN",
+    "originalpath": "XPGA/XOTA/XMSN",
+    "library": "sky130_fd_pr_main",
+    "cell": "pfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "180u",
+      "fw": "45u",
+      "l": "1u",
+      "fingers": "4",
+      "m": "1"
+    },
+    "nets": {
+      "D": "ON",
+      "G": "XPGA_XOTA_N2",
+      "S": "VDD",
+      "B": "VDD"
+    },
+    "original_model": "sky130_fd_pr__pfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 180
+    },
+    "mapping_notes": [
+      "Requested total W preserved via fingers; school simW=fw,simM=m*fingers. Source/drain area, perimeter and other native geometry effects still require audit."
+    ]
+  },
+  {
+    "name": "XPGA_XOTA_XMOP",
+    "originalpath": "XPGA/XOTA/XMOP",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "9u",
+      "fw": "9u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "OP",
+      "G": "XPGA_XOTA_CMG",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 9
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XMON",
+    "originalpath": "XPGA/XOTA/XMON",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "9u",
+      "fw": "9u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "ON",
+      "G": "XPGA_XOTA_CMG",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 9
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XRZP_XR",
+    "originalpath": "XPGA/XOTA/XRZP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p69",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "0.855u",
+      "segW": "0.69u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_N1",
+      "MINUS": "XPGA_XOTA_CZP",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p69",
+    "source_parameters": {
+      "L": 0.8551774666232498
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XRZN_XR",
+    "originalpath": "XPGA/XOTA/XRZN/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p69",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "0.855u",
+      "segW": "0.69u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_N2",
+      "MINUS": "XPGA_XOTA_CZN",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p69",
+    "source_parameters": {
+      "L": 0.8551774666232498
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC0_XC0_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC0/XC0/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC0_XC1_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC0/XC1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC0_XC2_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC0/XC2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC0_XC3_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC0/XC3/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC1_XC0_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC1/XC0/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC1_XC1_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC1/XC1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC1_XC2_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC1/XC2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCP_XC1_XC3_XC",
+    "originalpath": "XPGA/XOTA/XCCP/XC1/XC3/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZP",
+      "MINUS": "OP"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC0_XC0_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC0/XC0/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC0_XC1_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC0/XC1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC0_XC2_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC0/XC2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC0_XC3_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC0/XC3/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC1_XC0_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC1/XC0/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC1_XC1_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC1/XC1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC1_XC2_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC1/XC2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCCN_XC1_XC3_XC",
+    "originalpath": "XPGA/XOTA/XCCN/XC1/XC3/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CZN",
+      "MINUS": "ON"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XRCMP_XR",
+    "originalpath": "XPGA/XOTA/XRCMP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "99.735u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "OP",
+      "MINUS": "XPGA_XOTA_CMS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 99.73716012084593
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XRCMN_XR",
+    "originalpath": "XPGA/XOTA/XRCMN/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "99.735u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "ON",
+      "MINUS": "XPGA_XOTA_CMS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 99.73716012084593
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XCSMP_XC",
+    "originalpath": "XPGA/XOTA/XCSMP/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "OP",
+      "MINUS": "XPGA_XOTA_CMS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCSMN_XC",
+    "originalpath": "XPGA/XOTA/XCSMN/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "ON",
+      "MINUS": "XPGA_XOTA_CMS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCMS",
+    "originalpath": "XPGA/XOTA/XCMS",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "20u",
+      "fw": "20u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_DS",
+      "G": "XPGA_XOTA_CMS",
+      "S": "XPGA_XOTA_CS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 20
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XCMR",
+    "originalpath": "XPGA/XOTA/XCMR",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "20u",
+      "fw": "20u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_CMG",
+      "G": "VCM",
+      "S": "XPGA_XOTA_CR",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 20
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XPGA_XOTA_XRSCS_XR",
+    "originalpath": "XPGA/XOTA/XRSCS/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "9.105u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CS",
+      "MINUS": "XPGA_XOTA_CTAIL",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 9.102719033232628
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XRSCR_XR",
+    "originalpath": "XPGA/XOTA/XRSCR/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "9.105u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_CR",
+      "MINUS": "XPGA_XOTA_CTAIL",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 9.102719033232628
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XPGA_XOTA_XCMT",
+    "originalpath": "XPGA/XOTA/XCMT",
+    "library": "sky130_fd_pr_main",
+    "cell": "nfet_01v8",
+    "view": "symbol",
+    "kind": "mos",
+    "props": {
+      "w": "9.2u",
+      "fw": "9.2u",
+      "l": "1u",
+      "fingers": "1",
+      "m": "1"
+    },
+    "nets": {
+      "D": "XPGA_XOTA_CTAIL",
+      "G": "XPGA_XOTA_BN",
+      "S": "VSS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__nfet_01v8",
+    "source_parameters": {
+      "L": 1,
+      "W": 8
+    },
+    "mapping_notes": [
+      "Intentional school_r3 CM servo tail-width tuning. Original source W=8um retained; not width-preserving mapping."
+    ],
+    "mapped_parameters": {
+      "L": 1,
+      "W": 9.2
+    }
+  },
+  {
+    "name": "XPGA_XOTA_XRDS_XR_SEG_01",
+    "originalpath": "XPGA/XOTA/XRDS/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "51.9u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "VDD",
+      "MINUS": "XPGA_XOTA_XRDS_XR_SERIES_NODE_01",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 104.77240684793554
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XOTA_XRDS_XR_SEG_02",
+    "originalpath": "XPGA/XOTA/XRDS/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "51.9u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XRDS_XR_SERIES_NODE_01",
+      "MINUS": "XPGA_XOTA_DS",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 104.77240684793554
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XOTA_XRCMG_XR_SEG_01",
+    "originalpath": "XPGA/XOTA/XRCMG/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "51.9u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "VDD",
+      "MINUS": "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 104.77240684793554
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XPGA_XOTA_XRCMG_XR_SEG_02",
+    "originalpath": "XPGA/XOTA/XRCMG/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "51.9u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "XPGA_XOTA_XRCMG_XR_SERIES_NODE_01",
+      "MINUS": "XPGA_XOTA_CMG",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 104.77240684793554
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 2,
+    "mapping_segment_count": 2
+  },
+  {
+    "name": "XRIP_XR",
+    "originalpath": "XRIP/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "0.545u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "OP",
+      "MINUS": "FP",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 0.5427995971802618
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XRIN_XR",
+    "originalpath": "XRIN/XR",
+    "library": "sky130_fd_pr_main",
+    "cell": "res_high_po_0p35",
+    "view": "symbol",
+    "kind": "resistor",
+    "props": {
+      "segL": "0.545u",
+      "segW": "0.35u",
+      "segments": 1,
+      "connection": "Series"
+    },
+    "nets": {
+      "PLUS": "ON",
+      "MINUS": "FN",
+      "B": "VSS"
+    },
+    "original_model": "sky130_fd_pr__res_high_po_0p35",
+    "source_parameters": {
+      "L": 0.5427995971802618
+    },
+    "mapping_notes": [
+      "New school_r1 geometry: source target resistance allocated using model-derived end and per-length estimates, then length rounded to nearest 5nm. Not based on CDF r and not measured resistance.",
+      "Every segment is a separate physical primitive with segments=1; native geometry and connectivity readback required. Added end parasitics and bias dependence are not guaranteed equivalent."
+    ],
+    "mapping_segment_index": 1,
+    "mapping_segment_count": 1
+  },
+  {
+    "name": "XCFP_XC0_XC",
+    "originalpath": "XCFP/XC0/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FP",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFP_XC1_XC",
+    "originalpath": "XCFP/XC1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FP",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFP_XC2_XC",
+    "originalpath": "XCFP/XC2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FP",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFP_XC3_XC",
+    "originalpath": "XCFP/XC3/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FP",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFN_XC0_XC",
+    "originalpath": "XCFN/XC0/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FN",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFN_XC1_XC",
+    "originalpath": "XCFN/XC1/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FN",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFN_XC2_XC",
+    "originalpath": "XCFN/XC2/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FN",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  },
+  {
+    "name": "XCFN_XC3_XC",
+    "originalpath": "XCFN/XC3/XC",
+    "library": "sky130_fd_pr_main",
+    "cell": "cap_mim_m3__base",
+    "view": "symbol",
+    "kind": "mim",
+    "props": {
+      "w": "22.215u",
+      "l": "22.215u",
+      "m": "1"
+    },
+    "nets": {
+      "PLUS": "FN",
+      "MINUS": "VSS"
+    },
+    "original_model": "sky130_fd_pr__cap_mim_m3_1",
+    "source_parameters": {
+      "W": 22.215,
+      "L": 22.215
+    },
+    "mapping_notes": []
+  }
+]

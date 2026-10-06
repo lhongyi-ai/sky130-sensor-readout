@@ -1,0 +1,6 @@
+simulator lang=spectre
+// External ideal testbench ground branch only; no circuit or source value change.
+global 0
+subckt p2_ground_fixture (VSS)
+VGND (VSS 0) vsource dc=0 type=dc
+ends p2_ground_fixture

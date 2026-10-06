@@ -1,0 +1,28 @@
+{
+  "status": "V4_PREPARED_DELTA_AUDIT_PASS_NO_REMOTE_RUN_BY_SUBAGENT",
+  "files": {
+    "analyze.py": "5e13b5a5610d52cf46947d19e85eb9cda5199932c009fba78dc2e5a0a59a289b",
+    "build.py": "42309a22116e6ef35f47972b94c2266ae22144bc6aeb4cffae84d9ef3a81d43e",
+    "compare_full_adc.py": "80e15b094d63d6e7767397aa0624141402751960b65fa3671ac50e0666c439dc",
+    "review_library_warnings.py": "4c582efa3f999fd318f151519728954cdb960f8824d4b6a1b56de98498778b28",
+    "README.md": "f7ddefc25c9bbb420d797985719cf5ce7c98355f094a8312212444b4b8f189e6",
+    "run.sh": "e677be0a3f59c857a16fe649f0581ac274b8840fbbc96ee6faa76158002c904f",
+    "p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "reset1_2frames_baseline_v4/manifest.json": "51379dc73731a3c73ae8eed77140d69a61420c46a41888f4512a97de0cfa8696",
+    "reset1_2frames_strict_v4/manifest.json": "1cf751d68b01eeaefdb7f2cbb23150e49261d4273e08ca7ac58d09570b91eb27",
+    "v4_delta_review.json": "83043344734b22a6f7553808473874a7afae605663a1a42fccb5f5ef185ddf2a",
+    "v2_library_warning_review.json": "359b61d12af7c7ec3d146a231d86dee0977cab0ab0626dec797ac2639472b6b1",
+    "observed_library_warning_lines.json": "07b3844532ced2a69b2323c71eef25917cd7d1491717f390837f91abe10b9959",
+    "body_node_diagnostic_review.json": "f6dd749308573ab62ba37a8eb893a87e5e71023ea4b1f531025bbce0ffdecc49",
+    "body_node_diagnostic_review.md": "dca40f1cfba265752304c02fa3eeb8d00517bdd8c0d2f3f929b589c9e475f7fd",
+    "reset1_12frames_baseline_v4_GATED/manifest.json": "cffddf38c2a804ceeaa7974e89c005865f6fac81ea9344a685170fd3ed790b6d"
+  },
+  "preferred_dispatch": "reset1_2frames_baseline_v4",
+  "after_baseline_review": "reset1_2frames_strict_v4",
+  "twelve_frames": "reset1_12frames_baseline_v4_GATED; prepare only; no dispatch before numerical/LTE review",
+  "prior_preserved": [
+    "v1 incorrect extra10xrequested relative tolerance, not executed",
+    "v2 incompatible$fatal school compile failure",
+    "v3 school compile/bind/save74works; reset release recovery blocks conversion"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "scope": "Ideal rectangle connectivity only; not DRC/LVS",
+  "cases": {
+    "good": {
+      "status": "STATIC_RECTANGLE_CONNECTIVITY_MATCHES_INTENT",
+      "ports": {
+        "TOP": 5,
+        "BITA": 12,
+        "BITB": 15
+      },
+      "MIM_terminals": [
+        {
+          "PLUS_component": 5,
+          "MINUS_component": 12
+        },
+        {
+          "PLUS_component": 5,
+          "MINUS_component": 15
+        }
+      ],
+      "MIM_devices": 2,
+      "MIM_via3_count": 162,
+      "ordinary_via3_count": 2,
+      "via4_count": 2,
+      "expected_PVS_LVS": "MATCH",
+      "actual_PVS_LVS": "NOT_RUN",
+      "actual_DRC": "NOT_RUN"
+    },
+    "open": {
+      "status": "STATIC_RECTANGLE_CONNECTIVITY_MATCHES_INTENT",
+      "ports": {
+        "TOP": 5,
+        "BITA": 12,
+        "BITB": 15
+      },
+      "MIM_terminals": [
+        {
+          "PLUS_component": 5,
+          "MINUS_component": 12
+        },
+        {
+          "PLUS_component": 5,
+          "MINUS_component": 14
+        }
+      ],
+      "MIM_devices": 2,
+      "MIM_via3_count": 162,
+      "ordinary_via3_count": 2,
+      "via4_count": 1,
+      "expected_PVS_LVS": "MISMATCH",
+      "actual_PVS_LVS": "NOT_RUN",
+      "actual_DRC": "NOT_RUN"
+    },
+    "short": {
+      "status": "STATIC_RECTANGLE_CONNECTIVITY_MATCHES_INTENT",
+      "ports": {
+        "TOP": 5,
+        "BITA": 15,
+        "BITB": 15
+      },
+      "MIM_terminals": [
+        {
+          "PLUS_component": 5,
+          "MINUS_component": 15
+        },
+        {
+          "PLUS_component": 5,
+          "MINUS_component": 15
+        }
+      ],
+      "MIM_devices": 2,
+      "MIM_via3_count": 162,
+      "ordinary_via3_count": 2,
+      "via4_count": 2,
+      "expected_PVS_LVS": "MISMATCH",
+      "actual_PVS_LVS": "NOT_RUN",
+      "actual_DRC": "NOT_RUN"
+    }
+  }
+}

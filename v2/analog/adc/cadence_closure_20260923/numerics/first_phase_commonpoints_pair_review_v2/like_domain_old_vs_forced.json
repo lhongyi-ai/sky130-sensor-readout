@@ -1,0 +1,104 @@
+{
+  "status": "LIKE_DOMAIN_PARTIAL_DIAGNOSTIC_NOT_FULL_GATE",
+  "meta": {
+    "old_baseline": {
+      "raw_path": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T050345927509Z/design/amsdControl.raw/adc_closure_tran.tran.tran",
+      "prefix_records": 4951,
+      "actual_header": {
+        "version": "21.1.0.132.isr1",
+        "method": "gear2only",
+        "relref": "sigglobal",
+        "reltol": 1e-06,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "maxstep": 2e-09,
+        "temp": 27.0
+      }
+    },
+    "old_strict": {
+      "raw_path": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T051121445887Z/design/amsdControl.raw/adc_closure_tran.tran.tran",
+      "prefix_records": 11236,
+      "actual_header": {
+        "version": "21.1.0.132.isr1",
+        "method": "gear2only",
+        "relref": "sigglobal",
+        "reltol": 1e-07,
+        "abstol(V)": 1e-09,
+        "abstol(I)": 1e-14,
+        "maxstep": 1e-09,
+        "temp": 27.0
+      }
+    },
+    "forced_baseline": {
+      "raw_path": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T060049125228Z/design/baseline/amsdControl.raw/adc_closure_tran.tran.tran",
+      "prefix_records": 6685,
+      "actual_header": {
+        "version": "21.1.0.132.isr1",
+        "method": "gear2only",
+        "relref": "sigglobal",
+        "reltol": 1e-06,
+        "abstol(V)": 1e-08,
+        "abstol(I)": 1e-13,
+        "maxstep": 2e-09,
+        "temp": 27.0
+      }
+    },
+    "forced_strict": {
+      "raw_path": "v2/analog/adc/cadence_closure_20260923/runs/task_20260924T060049125228Z/design/strict/amsdControl.raw/adc_closure_tran.tran.tran",
+      "prefix_records": 12891,
+      "actual_header": {
+        "version": "21.1.0.132.isr1",
+        "method": "gear2only",
+        "relref": "sigglobal",
+        "reltol": 1e-07,
+        "abstol(V)": 1e-09,
+        "abstol(I)": 1e-14,
+        "maxstep": 1e-09,
+        "temp": 27.0
+      }
+    }
+  },
+  "comparisons": {
+    "same_short_shared_domain": {
+      "domain_s": [
+        2e-09,
+        4.1e-06
+      ],
+      "common_comparison_grid_points": 26028,
+      "pairs": {
+        "old": {
+          "max_abs_cdac_delta_V": 0.0008548689936710568,
+          "time_s": 4.075079405182808e-06
+        },
+        "forced": {
+          "max_abs_cdac_delta_V": 0.0008549889867762658,
+          "time_s": 4.075079408288156e-06
+        }
+      }
+    },
+    "same_local_window": {
+      "domain_s": [
+        4.06315e-06,
+        4.06335e-06
+      ],
+      "common_comparison_grid_points": 4525,
+      "pairs": {
+        "old": {
+          "max_abs_cdac_delta_V": 9.902133076071865e-06,
+          "time_s": 4.063291537827021e-06
+        },
+        "forced": {
+          "max_abs_cdac_delta_V": 1.16047659215468e-05,
+          "time_s": 4.063319500000001e-06
+        }
+      }
+    }
+  },
+  "complete_ADC_qualified": false,
+  "long_campaign_allowed": false,
+  "limits": [
+    "Common comparison grid is union of all four sets of accepted prefix times. Linear interpolation used without time alignment.",
+    "Old two-frame worst event at16.586us is outside this short diagnostic and cannot be compared to its peak.",
+    "All original full-domain fail statuses retained. This does not provide missing t0 or absent forced-time results."
+  ]
+}

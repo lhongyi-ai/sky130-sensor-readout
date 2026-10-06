@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "diagnostic_only": true,
+  "profile": "baseline",
+  "stop_s": 4.1e-06,
+  "expected_completed_frames": 0,
+  "expected_completed_decisions": 0,
+  "requested_method": "trap",
+  "expected_actual_method": "trap",
+  "expected_actual_reltol": 1e-06,
+  "original_four_channel_gate_V": 9.765625000000002e-06,
+  "no_time_alignment_or_edge_exclusion": true,
+  "cthresh_override": false,
+  "lteratio_override": false,
+  "source_manifest_sha256": "23cf648ecc64478938a1b6de1638cd23ff92ce2bce792ca4aa4b10465a8b8f59",
+  "original_gear_control_sha256": "a5e17cde38edfa01826bf79ec7de2bfcfde69cc7073cbe1ddf6cd71ea70e49e4",
+  "files_sha256": {
+    "amsdControl.scs": "410329de076a6d4fa449b549e9113cf9414f580c54089d220e4e4168dfb3f5eb",
+    "reset1_native_bound.scs": "3cc3232fcddaa52332568ea9cb14b01f1497551169edc0795b40838c56d11fe6",
+    "sar_controller.v": "5e65a4cff94ae8507d5830cd7c0c669be50ea6e1730b8d20b0893afc39e4dadf",
+    "p1_interfaces.vams": "07e4dd5bc9e8ebe03881ee4bea686763891e59ff6d8e7e41c541c403d1803084",
+    "p2_ams_reset1.vams": "0b6ba627e4867db250d28aa6fb6c09b2013e1d312ba63297bb325c36e677f125",
+    "p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "profile.vh": "7ba0dc3f5fc2f5edee3309708623bb126255756b9ecd7184776a6526d792fa6c",
+    "run.sh": "16041c0f70cd970095acddee3fa3fe126611ae68bfa30e6e30394adae634156b"
+  },
+  "single_factor": "method=trap only; original profile tolerances, inputs and circuit unchanged."
+}

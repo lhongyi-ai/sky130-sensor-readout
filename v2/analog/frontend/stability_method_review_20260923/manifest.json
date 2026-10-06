@@ -1,0 +1,44 @@
+{
+  "status": "METHOD_REVIEW_ONLY_NOT_FRONTEND_PASS",
+  "inputs": [
+    {
+      "path": "v2/cadence/linuxlab_20260923/doc_cache/stb_help.txt",
+      "sha256": "526415f97598450236ecfddd2233b70ab549ebb8d7af92a5934e0aabd1bd43e2"
+    },
+    {
+      "path": "v2/cadence/linuxlab_20260923/doc_cache/pz_help.txt",
+      "sha256": "5888ee0bb4af71041d609d0248162c3ea0054bea37b20217f18ed8203e79c15e"
+    },
+    {
+      "path": "v2/cadence/linuxlab_20260923/runs/p2fe_c06_stb_school_r1_20260923T101912237473Z/netlist",
+      "sha256": "598ec67ff7e66b9e8f54ab26b1bf2626690df3093286b4ada25597f080a163f8"
+    },
+    {
+      "path": "v2/analog/frontend/qualification_20260913/run_multiport.py",
+      "sha256": "d00f13aa845ec04180664076cb67e0e3386bd4e7eb077fc541757ac734994b3d"
+    },
+    {
+      "path": "v2/analog/frontend/cadence_20260923/stb_probes_and_global_stability_scope.md",
+      "sha256": "763ae400d9b027a626627c6f61d80fa57a478c505e7edcdf3856ac47d3191d60"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "synthetic_method_checks.json",
+      "sha256": "2ad2580f94bb221bfbbb6d230a166a2f7308ccb6b19876c66bdce42405055230"
+    },
+    {
+      "path": "verify_rank_update.py",
+      "sha256": "1d4de7ee0e2151618b48208058a06a44484de790b36849437466a073a9e5bfa9"
+    },
+    {
+      "path": "method_review.md",
+      "sha256": "859abc180fa88dc9ae1dcc210155e5c10b5e152c108df8fef827236c9c3977dd"
+    }
+  ],
+  "sources": [
+    "https://kenkundert.com/docs/cd2001-01.pdf",
+    "https://doi.org/10.1109/101.900125"
+  ],
+  "license_note": "Local Cadence help inputs are not included in this directory. Do not redistribute licensed help files."
+}

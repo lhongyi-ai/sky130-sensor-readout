@@ -1,0 +1,57 @@
+{
+  "status": "LOCAL_INPUT_DELTA_AUDIT_PASS_REMOTE_NOT_RUN",
+  "allowed_changes": [
+    "tran relref=sigglobal",
+    "maxwarns/maxwarnstologfile/maxnotes/maxnotestologfile=1000"
+  ],
+  "circuits_stimuli_RTL_save_tolerances_unchanged_from_v3": true,
+  "profiles": {
+    "baseline": {
+      "manifest_sha256": "51379dc73731a3c73ae8eed77140d69a61420c46a41888f4512a97de0cfa8696",
+      "identical_payload_except_control_and_manifest": [
+        "sar_controller.v",
+        "profile.vh",
+        "run.sh",
+        "reset1_native_bound.scs",
+        "p2_ams_reset1.vams",
+        "p2_sequence.sv",
+        "p1_interfaces.vams",
+        "analyze.py",
+        "audits/adc_native_audit.json",
+        "audits/phase_native_audit.json",
+        "audits/native_views_review.json"
+      ],
+      "control_expected_delta_pass": true,
+      "requested_solver": {
+        "reltol": "1e-5",
+        "vabstol": "1e-8",
+        "iabstol": "1e-13",
+        "maxstep": "2n"
+      }
+    },
+    "strict": {
+      "manifest_sha256": "1cf751d68b01eeaefdb7f2cbb23150e49261d4273e08ca7ac58d09570b91eb27",
+      "identical_payload_except_control_and_manifest": [
+        "sar_controller.v",
+        "profile.vh",
+        "run.sh",
+        "reset1_native_bound.scs",
+        "p2_ams_reset1.vams",
+        "p2_sequence.sv",
+        "p1_interfaces.vams",
+        "analyze.py",
+        "audits/adc_native_audit.json",
+        "audits/phase_native_audit.json",
+        "audits/native_views_review.json"
+      ],
+      "control_expected_delta_pass": true,
+      "requested_solver": {
+        "reltol": "1e-6",
+        "vabstol": "1e-9",
+        "iabstol": "1e-14",
+        "maxstep": "1n"
+      }
+    }
+  },
+  "same_method_compare": "compare_full_adc.py compares identical-control-method pairs and now checks actual PSF method/relref/errpreset fields; threshold unchanged."
+}

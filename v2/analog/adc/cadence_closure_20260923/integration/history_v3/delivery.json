@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_LOCAL_AUDITS_PASS_V3_SCHOOL_EXECUTION_BY_ROOT_PENDING",
+  "files": {
+    "analyze.py": "5e13b5a5610d52cf46947d19e85eb9cda5199932c009fba78dc2e5a0a59a289b",
+    "build.py": "81cd08b1407a89218c064a89698e7fda0c9bd9f32827460a6314282fab1ab64c",
+    "compare_full_adc.py": "fd5c9187327ce2f491e3b8026141a8d106b4b81ce2ae3615f698e49d0a2c5831",
+    "README.md": "b7850a65e19501d08827ece6c322e4c5a7b75377e0662023965269c0e7cfeb21",
+    "run.sh": "e677be0a3f59c857a16fe649f0581ac274b8840fbbc96ee6faa76158002c904f",
+    "p2_sequence.sv": "6fddc959ba418bbd23584e8b6dce3137f378ca0be34f60315f5fb51869864505",
+    "reset1_2frames_baseline_v3/manifest.json": "8a969d788bfa9db6204097967f873fdf2c8ba99aea7dba841ea4171bdb3b05f8",
+    "reset1_2frames_strict_v3/manifest.json": "4fd585e8a14192f9f7d6162b52b5788bad7e30dd262b2c9de37377df64940818",
+    "reset1_12frames_baseline_v3/manifest.json": "d72e90fcce144c2eb0d61daa1375b8fddabacb9255cc7ec7b984e34f47f53893"
+  },
+  "preferred_dispatch": "reset1_2frames_baseline_v3",
+  "after_baseline_review": "reset1_2frames_strict_v3",
+  "after_two_frame_review": "reset1_12frames_baseline_v3",
+  "preserved_preparation_failures": [
+    "v1 extra10x reltol tightening request, not executed",
+    "v2 school xmelab NOTSYT fatal unsupported in1364-2001, no transient"
+  ]
+}

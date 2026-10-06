@@ -4,7 +4,7 @@
 # Download this file to ~/cadence_skywater/ and invoke it with bash.
 set -euo pipefail
 
-p1_cadence_root="${P1_SCHOOL_CADENCE_ROOT:-/project/engineering/cadence21}"
+p1_cadence_root="${P1_SCHOOL_CADENCE_ROOT:-/opt/cadence}"
 p1_package_dir="${P1_BASIC_PACKAGE_DIR:-$HOME/cadence_skywater/project1_handoff/basic_design_v1_0_4}"
 export CDSHOME="$p1_cadence_root/ic"
 export PATH="$CDSHOME/bin:$p1_cadence_root/spectre/tools/bin:$PATH"
@@ -12,7 +12,7 @@ export PATH="$CDSHOME/bin:$p1_cadence_root/spectre/tools/bin:$PATH"
 # The working GUI had CDS_LIC_FILE unset and used LM_LICENSE_FILE.
 # This is a server locator, not a license file or key.
 unset CDS_LIC_FILE
-export LM_LICENSE_FILE="${P1_SCHOOL_LICENSE_SERVER:-27021@licensing02.seas.wustl.edu}"
+export LM_LICENSE_FILE="${P1_SCHOOL_LICENSE_SERVER:-27000@license-server.example.invalid}"
 
 # Reconstruct the known-working GUI shared-library search path. p1_run.sh will
 # remove it before starting system Python; run.py passes it only to tool children.

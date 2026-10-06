@@ -1,0 +1,141 @@
+{
+  "status": "MATCHED_NUMERICAL_CONTROL_NO_SAVED_RESULT_CHANGE",
+  "old_run": "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z",
+  "new_run": "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z",
+  "input_change": "Exactly one setting added: dc_pivot_check=yes. All other deck bytes identical.",
+  "native_netlist_identical": true,
+  "raw_body_exact_equal": {
+    "dcOp.dc": true,
+    "dcOpInfo.info": true,
+    "ac.ac": true,
+    "g1_front.noise": true,
+    "g1_track.noise": true,
+    "g4_front.noise": true,
+    "g4_track.noise": true,
+    "g16_front.noise": true,
+    "g16_track.noise": true
+  },
+  "op_scope": "Initial dcOp/DC device information only. The initial deck gain is 4. Noise-internal DC solutions at each other gain are not separately exported; do not claim their independent OP equality.",
+  "noise": {
+    "g1_front.noise": {
+      "saved_frequency_count": 401,
+      "all_ASD_and_every_device_PSD_values_exactly_equal": true,
+      "rms_v_both_runs": {
+        "1Hz_50kHz": 2.885790618976581e-05,
+        "one_fft_bin_50kHz": 2.7735409645615438e-05,
+        "1Hz_100MHz": 6.383730060688901e-05
+      }
+    },
+    "g1_track.noise": {
+      "saved_frequency_count": 401,
+      "all_ASD_and_every_device_PSD_values_exactly_equal": true,
+      "rms_v_both_runs": {
+        "1Hz_50kHz": 2.8868610327909047e-05,
+        "one_fft_bin_50kHz": 2.7746546844171696e-05,
+        "1Hz_100MHz": 4.699828644929038e-05
+      }
+    },
+    "g4_front.noise": {
+      "saved_frequency_count": 401,
+      "all_ASD_and_every_device_PSD_values_exactly_equal": true,
+      "rms_v_both_runs": {
+        "1Hz_50kHz": 7.288617351442839e-05,
+        "one_fft_bin_50kHz": 7.011898199690322e-05,
+        "1Hz_100MHz": 0.00013544273333588369
+      }
+    },
+    "g4_track.noise": {
+      "saved_frequency_count": 401,
+      "all_ASD_and_every_device_PSD_values_exactly_equal": true,
+      "rms_v_both_runs": {
+        "1Hz_50kHz": 7.288842019039013e-05,
+        "one_fft_bin_50kHz": 7.012131993107075e-05,
+        "1Hz_100MHz": 0.00012183820778346809
+      }
+    },
+    "g16_front.noise": {
+      "saved_frequency_count": 401,
+      "all_ASD_and_every_device_PSD_values_exactly_equal": true,
+      "rms_v_both_runs": {
+        "1Hz_50kHz": 0.00024925479869821284,
+        "one_fft_bin_50kHz": 0.00023990257950444878,
+        "1Hz_100MHz": 0.0003985345969564433
+      }
+    },
+    "g16_track.noise": {
+      "saved_frequency_count": 401,
+      "all_ASD_and_every_device_PSD_values_exactly_equal": true,
+      "rms_v_both_runs": {
+        "1Hz_50kHz": 0.00024924794681352983,
+        "one_fft_bin_50kHz": 0.00023989547078864917,
+        "1Hz_100MHz": 0.00038837435152461934
+      }
+    }
+  },
+  "logs": {
+    "spectre_noise_screen_20260923T110907590483Z": {
+      "errors_warnings_notices": [
+        0,
+        2,
+        11
+      ],
+      "bad_pivoting_notice": true,
+      "gmin_dc_notice_count": 4,
+      "warning_codes": [
+        "SPECTRE-16939",
+        "SPECTRE-16939"
+      ]
+    },
+    "spectre_noise_screen_20260923T112542186497Z": {
+      "errors_warnings_notices": [
+        0,
+        2,
+        10
+      ],
+      "bad_pivoting_notice": false,
+      "gmin_dc_notice_count": 4,
+      "warning_codes": [
+        "SPECTRE-16939",
+        "SPECTRE-16939"
+      ]
+    }
+  },
+  "interpretation": [
+    "Bad-pivot notice is removed by the recommended option without any change in saved OP, AC, noise ASD or device PSD values at written precision.",
+    "This control supports robustness to this one solver option only. Gmin dependence and model/noise control qualification remain separate.",
+    "Two unchanged warnings are SPECTRE-16939 no-op alter statements. Four GminDC notices remain.",
+    "No new circuit pass: r4 range and temperature failures remain; these are fixed-state proxy CT noise data, not dynamic SNDR."
+  ],
+  "hashes": {
+    "v2/analog/frontend/cadence_20260923/review_r4_pivot_control.py": "d836fd1a8a16a3a3d0515cdc2c2b391048177f44b7c93cc3e34498715f6289a6",
+    "v2/analog/frontend/cadence_20260923/parse_noise_psf.py": "4a18182f0e907b66f78aaa4f14b0e29481b2a05a2de75c14be42af5df9d85a89",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.scs": "122bdffbd29eb7211e60fa89454aaaeebb10ae9c4df3e19f9ba9897be74daab2",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.scs": "3d3cc1a5925c38cc213ec8cd7c1c372b1c29097da1eadab6a96dfee07ba4edf0",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/native_netlist": "356b502ece93ea04558d59abff51259ee90c20a21c678dd7529f87b14ecbe695",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/native_netlist": "356b502ece93ea04558d59abff51259ee90c20a21c678dd7529f87b14ecbe695",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/dcOp.dc": "1301b29bb8abf9c2e8edbe6699e1c5b19db2adf8ca006c964bbcafd76c7f94b9",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/dcOp.dc": "0810ef17370947f5b445cfa61cc6756831134136f90cc20ba1fb9afae2bc7fe3",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/dcOpInfo.info": "58e910db825bfe214485d4f6bff424188eba3b0bce70463bb48b3980568b78e5",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/dcOpInfo.info": "7cf4ed215e1848758abf54b0a2fbfb5e6578506f4a28d92ab55afdc0cb7b534b",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/ac.ac": "1a8d05b1e1a0d86b08272aee518f490dc900bafd8f5f8e1612fde776d014e528",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/ac.ac": "2fdf8c2806a485057b5658c7cd52771a937c164e10d06bf63dd1142de734eed4",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g1_front.noise": "8c967ae28cf163e9d6a1980ad844b7df29add780cb01d5fb28201a7bbe8ab321",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/g1_front.noise": "649b4705708e3b9f5342d864f7e7baa3f190ada16f75a013d47837924d284eba",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g1_track.noise": "1ae383157c8dc28319142377e9b356901bad7960702c7d24622d06ca282e0acc",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/g1_track.noise": "79de171d40c216d9a89a8d40035b51322884ef84fd222cbc643eadad80cbfa2d",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g4_front.noise": "f5cd5c733f25d4a9a6da203bbe5e0b8ec3ac039557d12b5b8a1b4676878c9777",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/g4_front.noise": "9787f5fc1bc555950dd983071ab7a8390de6197af817953a8f07d9a540639201",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g4_track.noise": "7e350803f6374d46e2414ab27013163520c648378d1b20b59b5ff2b66515303b",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/g4_track.noise": "8f7685be77579e989a0df5b661809bcaa66954270c7584f8ea717f87e069ea51",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g16_front.noise": "61748cff3aa0b1e88a3b8ef197c1d75cf2ddd60343de810cf4edcbf3f8004987",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/g16_front.noise": "33b39abdb9fd20d39e5e83186a73a2fa776e5584f0283e0ef226f2e546a51576",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/input.raw/g16_track.noise": "c48787d804f878cf244a5bb0bd0c4e174f9af41512cd512bace0fcd9612f3c12",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/input.raw/g16_track.noise": "245050c0824bfd7de36f502e5bc586b26bea4ccaa9961bdad4ff67a5ddfd1993",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/spectre.out": "3abb82a0d2b67c7b72032d0b295a11b978a13ebbdf96ac9d12d4aa57f869f633",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/provenance.json": "d0c7d6db4ddad904f1fb70c7b711d2e772ff5271dfc4882b6da893fbde7574f8",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T110907590483Z/completion.json": "0e47ac7602d87bfb026b4aa8ab95f8f2bc441f8bbcd05d3bcf456bc20e9a9ffc",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/spectre.out": "c62c31a6b67a02c4fca087b1376eb2cee178741c788395bb2d9c6370cce3dcc2",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/provenance.json": "931324a89450c07672a35d63e68cf2c95c76933ed9323fb297a3d147fc55a2fb",
+    "v2/cadence/linuxlab_20260923/runs/spectre_noise_screen_20260923T112542186497Z/completion.json": "d26b42565e5e30fa1093b04a4bb203d10475e4c615038042c61336f4ebab8b7d"
+  }
+}

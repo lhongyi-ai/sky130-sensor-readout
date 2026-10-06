@@ -1,0 +1,33 @@
+{
+  "status": "PREPARED_NOT_SIMULATED",
+  "source_fixture": "input.scs.in",
+  "changed_stimulus": {
+    "input_flip_s": 6.65e-06,
+    "eval_command_high_time_s": 3.125e-07,
+    "spectre_flat_width_s": 3.115e-07,
+    "reason": "Spectre pulse flatwidth plus1ns rise gives fallstart at originalRTL312.5ns command interval.",
+    "midrun_reset_assert_s": 8.3e-06,
+    "reset_release_complete_s": 8.501e-06,
+    "stop_s": 9.2e-06
+  },
+  "capture_offset_s": 3.115e-07,
+  "capture_reason": "1ns before originalRTL next rising-clock capture boundary.",
+  "actual_decisions_to_validate": 5,
+  "decision_sequence": [
+    "positive",
+    "positive",
+    "positive",
+    "negative",
+    "negative"
+  ],
+  "required_output_transitions": [
+    "Initial resetQ0 to firstpositiveQ1",
+    "Held positiveQ1 to firstnegativeQ0 without interveningreset"
+  ],
+  "not_counted_as_conversion": [
+    "EVAL interrupted byglobalreset at8.30us",
+    "Postreset preloaded Q0"
+  ],
+  "same_real_native_body_sha256": "b31685852281b695ae41293f43801e2e4da28a0ac7d230b508650c8770d8a706",
+  "no_solver_parameter_changes": true
+}

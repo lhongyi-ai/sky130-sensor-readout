@@ -1,0 +1,22 @@
+{
+  "run": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T060914240241Z/design",
+  "status": "DIAGNOSTIC_SCOPE_CLARIFICATION_ONLY",
+  "actual_run_manifest_sha256": "29a62bea864a40e95b02ef9614f0e1166948afaa7158a31441f4280f911f3a6e",
+  "local_clarified_manifest_sha256": "b3de2d522876e0a89796ce56db41ab1d0297882f48767548a3811cd8c6914a51",
+  "both_EDA_control_sha256": "a5e17cde38edfa01826bf79ec7de2bfcfde69cc7073cbe1ddf6cd71ea70e49e4",
+  "original_run_manifest_unchanged": true,
+  "legacy_manifest_fields": {
+    "frames": 2,
+    "expected_completed_decisions": 24,
+    "expected_additional_aborted_frame": 1
+  },
+  "legacy_field_meaning": "Inherited full source testbench expectation; not the expected completion of this intentional short diagnostic.",
+  "expected_diagnostic_stop_s": 4.1e-06,
+  "expected_completed_frames": 0,
+  "expected_completed_decisions": 0,
+  "expected_completed_reset_abort_checks": 0,
+  "simulator_exit_code": 0,
+  "qualification_exit_code": 2,
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false
+}

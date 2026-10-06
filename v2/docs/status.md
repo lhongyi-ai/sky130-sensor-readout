@@ -1,3 +1,5 @@
+> Latest checkpoint: [October 6 publication](../../docs/progress_20261006.md). This file retains the earlier architecture/status record. See the latest checkpoint for actual school ADC, numerical and MIM qualification status.
+
 # Implementation Status
 
 **Current status, 2026-09-13:** The user has resumed work in the school's Cadence environment and requested continued local verification and more reliable school upload packages. Additions include a corresponding 32-item local characterization of the legacy OTA, same-source frontend dual-injection/coupling-matrix and noise diagnostics, 12 real continuous ADC conversion frames, reusable macro-assembly GDS, and new-package release checks. The complete chip has not passed acceptance. Start with [Local progress and school delivery preparation](local_preparation_20260913.md).

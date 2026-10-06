@@ -1,0 +1,2668 @@
+{
+  "status": "ACTUAL_AC_EXTERNAL_PORT_RESPONSE_ONLY",
+  "case": "dn1u",
+  "requested_delta_D_minus_SB_V": -1e-06,
+  "run": "/path/to/sky130-two-stage-ota/v2/analog/adc/cadence_closure_20260923/runs/task_20260924T082423953684Z/design/results/dn1u_20260924T082431Z_2425991",
+  "input_sha256": "61541b8be5acd6330e0ffd451415f91def3ebf0c20919c4a1201b25bf800f1eb",
+  "raw_sha256": "1718939af5252c7c62211d7bf3bb40ea97eecace6ce8d19d00af784df2927963",
+  "actual_trace_schema": {
+    "XTEST.msky130_fd_pr__pfet_01v8:d": "I",
+    "XTEST.msky130_fd_pr__pfet_01v8:g": "I",
+    "XTEST.msky130_fd_pr__pfet_01v8:s": "I",
+    "XTEST.msky130_fd_pr__pfet_01v8:b": "I",
+    "VS:p": "I",
+    "VG:p": "I",
+    "VD:p": "I",
+    "XTEST.msky130_fd_pr__pfet_01v8:dbnode": "V",
+    "XTEST.msky130_fd_pr__pfet_01v8:sbnode": "V",
+    "XTEST.msky130_fd_pr__pfet_01v8:int_b": "V",
+    "SB": "V",
+    "G": "V",
+    "D": "V"
+  },
+  "actual_frequency_points": 41,
+  "log_completion": [
+    "spectre completes with 0 errors, 0 warnings, and 1 notice."
+  ],
+  "model_metadata_before_after_equal": true,
+  "OP_bias_and_reversed_review": "ACTUAL_DC_NODES_AND_OP_REVIEWED_IN_SUMMARY",
+  "rows": [
+    {
+      "frequency_Hz": 1000.0,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            2.49682e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            2.49682e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738124501070613e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-19,
+            -1.02561e-10
+          ],
+          "Y_kD_S": [
+            2.16571e-19,
+            -1.02561e-10
+          ],
+          "G_kD_S": 2.16571e-19,
+          "C_effective_kD_F": -1.632309011844788e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.47121e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.47121e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415034382622733e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.168404344971009e-19,
+        -2.5849394142282115e-26
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0110901890649924e-16,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141199925794435e-12,
+          2.5849394142282115e-26
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1258.925411794167,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.14331e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.14331e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812264677517e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-19,
+            -1.29116e-10
+          ],
+          "Y_kD_S": [
+            3.43242e-19,
+            -1.29116e-10
+          ],
+          "G_kD_S": 3.43242e-19,
+          "C_effective_kD_F": -1.632300805094319e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.85215e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.85215e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415114595831986e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        4.336808689942018e-19,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 2.0221803530910158e-16,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141199925794435e-12,
+          3.000000000180832e-16
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1584.893192461114,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.95719e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.95719e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973809416619536e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-19,
+            -1.62548e-10
+          ],
+          "Y_kD_S": [
+            5.44002e-19,
+            -1.62548e-10
+          ],
+          "G_kD_S": 5.44002e-19,
+          "C_effective_kD_F": -1.6323066950352963e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.33172e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.33172e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415127635822653e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        6.505213034913027e-19,
+        -1.0000000000085785e-15
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.662831344499736e-13,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141299672394304e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1995.26231496888,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            4.98181e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            4.98181e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.97381176949158e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-19,
+            -2.04635e-10
+          ],
+          "Y_kD_S": [
+            8.62186e-19,
+            -2.04635e-10
+          ],
+          "G_kD_S": 8.62186e-19,
+          "C_effective_kD_F": -1.6323002512137347e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.93546e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.93546e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415115182778455e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.673617379884035e-19,
+        5.169878828456423e-26
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.044360563766866e-16,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141299672394304e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 2511.88643150958,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            6.27173e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            6.27173e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973813539961096e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-18,
+            -2.57621e-10
+          ],
+          "Y_kD_S": [
+            1.36647e-18,
+            -2.57621e-10
+          ],
+          "G_kD_S": 1.36647e-18,
+          "C_effective_kD_F": -1.632305309664666e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -3.69552e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -3.69552e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.34150823029643e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3010426069826053e-18,
+        5.169878828456423e-26
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 6.066540695767215e-16,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141299672394304e-12,
+          -5.169878828456423e-26
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 3162.277660168379,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            7.89564e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            7.89564e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973813402606721e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-18,
+            -3.24325e-10
+          ],
+          "Y_kD_S": [
+            2.16571e-18,
+            -3.24325e-10
+          ],
+          "G_kD_S": 2.16571e-18,
+          "C_effective_kD_F": -1.6323021715787762e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -4.65239e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -4.65239e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415112310279447e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.168404344971009e-18,
+        5.169878828456423e-26
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0110900845132575e-15,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141299672394304e-12,
+          5.169878828456423e-26
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 3981.071705534973,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            9.94002e-10
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            9.94002e-10
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812667661342e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-18,
+            -4.08301e-10
+          ],
+          "Y_kD_S": [
+            3.43242e-18,
+            -4.08301e-10
+          ],
+          "G_kD_S": 3.43242e-18,
+          "C_effective_kD_F": -1.6323022348232633e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -5.85701e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -5.85701e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341510432838078e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.469446951953614e-18,
+        1.0339757656912846e-25
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.617744071875712e-15,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141399418994173e-12,
+          1.0339757656912846e-25
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 5011.872336272723,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.25137e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.25137e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973798767688076e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-18,
+            -5.14021e-10
+          ],
+          "Y_kD_S": [
+            5.44002e-18,
+            -5.14021e-10
+          ],
+          "G_kD_S": 5.44002e-18,
+          "C_effective_kD_F": -1.6323038081189355e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -7.37354e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -7.37354e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.34151083736215e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.421010862427522e-18,
+        -4.999999999939495e-15
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 2.3314161670950315e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141499165594041e-12,
+          1.0000000001119761e-15
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 6309.573444801933,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.57539e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.57539e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973820227167699e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-18,
+            -6.47114e-10
+          ],
+          "Y_kD_S": [
+            8.62186e-18,
+            -6.47114e-10
+          ],
+          "G_kD_S": 8.62186e-18,
+          "C_effective_kD_F": -1.632303558156011e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -9.28273e-10
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -9.28273e-10
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415091017041125e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.673617379884035e-18,
+        3.0000000001291332e-15
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.3988546378793157e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5141700827198123e-12,
+          1.0000000000085785e-15
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 7943.282347242816,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.98329e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.98329e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738031872213404e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-17,
+            -8.14668e-10
+          ],
+          "Y_kD_S": [
+            1.36647e-17,
+            -8.14668e-10
+          ],
+          "G_kD_S": 1.36647e-17,
+          "C_effective_kD_F": -1.632303039357449e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.16863e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.16863e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415161770000727e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3660947373317356e-17,
+        -7.999999999861833e-15
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 3.73026859059244e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.514190032039786e-12,
+          -4.999999999939495e-15
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 10000.0,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            2.49682e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            2.49682e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738124501070613e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-17,
+            -1.02561e-09
+          ],
+          "Y_kD_S": [
+            2.16571e-17,
+            -1.02561e-09
+          ],
+          "G_kD_S": 2.16571e-17,
+          "C_effective_kD_F": -1.6323090118447877e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.47121e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.47121e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415034382622733e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.168404344971009e-17,
+        2.0679515313825692e-25
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.011089753888002e-14,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5142299306797335e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 12589.25411794167,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.14331e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.14331e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812264677518e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-17,
+            -1.29116e-09
+          ],
+          "Y_kD_S": [
+            3.43242e-17,
+            -1.29116e-09
+          ],
+          "G_kD_S": 3.43242e-17,
+          "C_effective_kD_F": -1.632300805094319e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.85215e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.85215e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341511459583199e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.426078865054194e-17,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.597521613333958e-14,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5142999701400761e-12,
+          3.0000000001291332e-15
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 15848.93192461114,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.95719e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.95719e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973809416619535e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-17,
+            -1.62548e-09
+          ],
+          "Y_kD_S": [
+            5.44002e-17,
+            -1.62548e-09
+          ],
+          "G_kD_S": 5.44002e-17,
+          "C_effective_kD_F": -1.632306695035296e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.33172e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.33172e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341512763582265e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.442694905877232e-17,
+        -1.000000000029258e-14
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.662896240053921e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5143999335803793e-12,
+          4.1359030627651384e-25
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 19952.6231496888,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            4.98181e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            4.98181e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.97381176949158e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-17,
+            -2.04635e-09
+          ],
+          "Y_kD_S": [
+            8.62186e-17,
+            -2.04635e-09
+          ],
+          "G_kD_S": 8.62186e-17,
+          "C_effective_kD_F": -1.6323002512137347e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.93546e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.93546e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415115182778458e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.630249292984615e-17,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.024135305150842e-14,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5145599618210381e-12,
+          -4.1359030627651384e-25
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 25118.86431509581,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            6.27173e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            6.27173e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738135399610944e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-16,
+            -2.57621e-09
+          ],
+          "Y_kD_S": [
+            1.36647e-16,
+            -2.57621e-09
+          ],
+          "G_kD_S": 1.36647e-16,
+          "C_effective_kD_F": -1.6323053096646653e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -3.69552e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -3.69552e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341508230296429e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3660947373317356e-16,
+        -4.1359030627651384e-25
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 6.369860843907433e-14,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5148099788420133e-12,
+          -4.1359030627651384e-25
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 31622.77660168381,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            7.89564e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            7.89564e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973813402606718e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-16,
+            -3.24325e-09
+          ],
+          "Y_kD_S": [
+            2.16571e-16,
+            -3.24325e-09
+          ],
+          "G_kD_S": 2.16571e-16,
+          "C_effective_kD_F": -1.632302171578775e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -4.65239e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -4.65239e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415112310279434e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.1662359406260379e-16,
+        -8.271806125530277e-25
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0100776196492816e-13,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5152100494436604e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 39810.71705534975,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            9.94002e-09
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            9.94002e-09
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812667661339e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-16,
+            -4.08301e-09
+          ],
+          "Y_kD_S": [
+            3.43242e-16,
+            -4.08301e-09
+          ],
+          "G_kD_S": 3.43242e-16,
+          "C_effective_kD_F": -1.6323022348232624e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -5.85701e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -5.85701e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415104328380767e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.432584078089107e-16,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.6005527985921445e-13,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5158499455658614e-12,
+          8.271806125530277e-25
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 50118.72336272726,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.25137e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.25137e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973798767688074e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-16,
+            -5.14021e-09
+          ],
+          "Y_kD_S": [
+            5.44002e-16,
+            -5.14021e-09
+          ],
+          "G_kD_S": 5.44002e-16,
+          "C_effective_kD_F": -1.632303808118935e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -7.37354e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -7.37354e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415108373621488e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.440526501532261e-16,
+        -4.999999999939495e-14
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 2.3315477798353048e-11,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5168599883097489e-12,
+          9.99999999987899e-15
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 63095.73444801936,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.57539e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.57539e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973820227167698e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-16,
+            -6.47114e-09
+          ],
+          "Y_kD_S": [
+            8.62186e-16,
+            -6.47114e-09
+          ],
+          "G_kD_S": 8.62186e-16,
+          "C_effective_kD_F": -1.6323035581560104e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -9.28273e-09
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -9.28273e-09
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415091017041112e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.621575675604731e-16,
+        3.000000000129133e-14
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.399422530711305e-11,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.518460053875903e-12,
+          9.99999999987899e-15
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 79432.82347242821,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.98329e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.98329e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738031872213385e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-15,
+            -8.14668e-09
+          ],
+          "Y_kD_S": [
+            1.36647e-15,
+            -8.14668e-09
+          ],
+          "G_kD_S": 1.36647e-15,
+          "C_effective_kD_F": -1.6323030393574482e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.16863e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.16863e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415161770000714e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3665284182007298e-15,
+        -7.999999999903192e-14
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 3.730794567436936e-11,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5209999058851675e-12,
+          -4.999999999939495e-14
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 100000.0000000001,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            2.49682e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            2.49682e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812450107057e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-15,
+            -1.02561e-08
+          ],
+          "Y_kD_S": [
+            2.16571e-15,
+            -1.02561e-08
+          ],
+          "G_kD_S": 2.16571e-15,
+          "C_effective_kD_F": -1.6323090118447862e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.47121e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.47121e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341503438262271e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.1658022597570437e-15,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0098720994919041e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5250301022007307e-12,
+          1.6543612251060553e-24
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 125892.5411794168,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.14331e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.14331e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812264677515e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-15,
+            -1.29116e-08
+          ],
+          "Y_kD_S": [
+            3.43242e-15,
+            -1.29116e-08
+          ],
+          "G_kD_S": 3.43242e-15,
+          "C_effective_kD_F": -1.6323008050943178e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.85215e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.85215e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341511459583197e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.43236723765461e-15,
+        -3.308722450212111e-24
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.6004451009289799e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5314099814645044e-12,
+          2.999999999632825e-14
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 158489.3192461115,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.95719e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.95719e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973809416619534e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-15,
+            -1.62548e-08
+          ],
+          "Y_kD_S": [
+            5.44002e-15,
+            -1.62548e-08
+          ],
+          "G_kD_S": 5.44002e-15,
+          "C_effective_kD_F": -1.6323066950352954e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.33172e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.33172e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341512763582264e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.440092820663267e-15,
+        -1.0000000000209863e-13
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.669689951528507e-11,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5415199498824972e-12,
+          -3.308722450212111e-24
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 199526.2314968881,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            4.98181e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            4.98181e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973811769491578e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-15,
+            -2.04635e-08
+          ],
+          "Y_kD_S": [
+            8.62186e-15,
+            -2.04635e-08
+          ],
+          "G_kD_S": 8.62186e-15,
+          "C_effective_kD_F": -1.6323002512137337e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.93546e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.93546e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415115182778442e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.621792516039228e-15,
+        3.308722450212111e-24
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.020157530601244e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5575399043427085e-12,
+          3.308722450212111e-24
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 251188.6431509582,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            6.27173e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            6.27173e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973813539961092e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-14,
+            -2.57621e-08
+          ],
+          "Y_kD_S": [
+            1.36647e-14,
+            -2.57621e-08
+          ],
+          "G_kD_S": 1.36647e-14,
+          "C_effective_kD_F": -1.6323053096646643e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -3.69552e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -3.69552e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341508230296428e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3664633660703807e-14,
+        -6.617444900424222e-24
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 6.371510804460433e-12,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.5829299676584085e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 316227.7660168383,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            7.89564e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            7.89564e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738134026067156e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-14,
+            -3.24325e-08
+          ],
+          "Y_kD_S": [
+            2.16571e-14,
+            -3.24325e-08
+          ],
+          "G_kD_S": 2.16571e-14,
+          "C_effective_kD_F": -1.632302171578774e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -4.65239e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -4.65239e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341511231027942e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.1657155235832448e-14,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0098212124302642e-11,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.623180105950195e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 398107.1705534977,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            9.94002e-08
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            9.94002e-08
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812667661337e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-14,
+            -4.08301e-08
+          ],
+          "Y_kD_S": [
+            3.43242e-14,
+            -4.08301e-08
+          ],
+          "G_kD_S": 3.43242e-14,
+          "C_effective_kD_F": -1.6323022348232617e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -5.85701e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -5.85701e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415104328380755e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.4324106057415094e-14,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.6004444841043248e-11,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.6869600334701307e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 501187.2336272728,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.25137e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.25137e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973798767688072e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-14,
+            -5.14021e-08
+          ],
+          "Y_kD_S": [
+            5.44002e-14,
+            -5.14021e-08
+          ],
+          "G_kD_S": 5.44002e-14,
+          "C_effective_kD_F": -1.632303808118934e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -7.37354e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -7.37354e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341510837362148e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.440027768532918e-14,
+        -5.00000000000567e-13
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 2.3451176757395963e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.7880499598305066e-12,
+          1.0000000000540735e-13
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 630957.3444801939,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.57539e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.57539e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738202271676954e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-14,
+            -6.47114e-08
+          ],
+          "Y_kD_S": [
+            8.62186e-14,
+            -6.47114e-08
+          ],
+          "G_kD_S": 8.62186e-14,
+          "C_effective_kD_F": -1.6323035581560095e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -9.28273e-08
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -9.28273e-08
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415091017041102e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.621857568169577e-14,
+        2.9999999998975226e-13
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.455428955712215e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.948270104273897e-12,
+          1.0000000000540735e-13
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 794328.2347242824,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.98329e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.98329e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738031872213366e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-13,
+            -8.14668e-08
+          ],
+          "Y_kD_S": [
+            1.36647e-13,
+            -8.14668e-08
+          ],
+          "G_kD_S": 1.36647e-13,
+          "C_effective_kD_F": -1.6323030393574473e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.16863e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.16863e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415161770000708e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3664698712834156e-13,
+        -8.000000000035541e-13
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 3.7841459545610815e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          2.2022000108895545e-12,
+          -5.000000000138018e-13
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1000000.000000001,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            2.49682e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            2.49682e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738124501070575e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-13,
+            -1.02561e-07
+          ],
+          "Y_kD_S": [
+            2.16571e-13,
+            -1.02561e-07
+          ],
+          "G_kD_S": 2.16571e-13,
+          "C_effective_kD_F": -1.6323090118447862e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.47121e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.47121e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415034382622714e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.16570901837021e-13,
+        -2.6469779601696886e-23
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.009785143406205e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          2.6046500026244424e-12,
+          -2.6469779601696886e-23
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1258925.411794169,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.14331e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.14331e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738122646775116e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-13,
+            -1.29116e-07
+          ],
+          "Y_kD_S": [
+            3.43242e-13,
+            -1.29116e-07
+          ],
+          "G_kD_S": 3.43242e-13,
+          "C_effective_kD_F": -1.6323008050943165e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.85215e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.85215e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341511459583195e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.432419279358889e-13,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.6003826062558938e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          3.2424900438254856e-12,
+          3.0000000000298715e-13
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1584893.192461115,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            3.95719e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            3.95719e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973809416619534e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-13,
+            -1.62548e-07
+          ],
+          "Y_kD_S": [
+            5.44002e-13,
+            -1.62548e-07
+          ],
+          "G_kD_S": 5.44002e-13,
+          "C_effective_kD_F": -1.632306695035295e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.33172e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.33172e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415127635822637e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.440019094915538e-13,
+        -9.999999999746641e-13
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 5.307730191535099e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          4.253409907270522e-12,
+          2.6469779601696886e-23
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 1995262.314968882,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            4.98181e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            4.98181e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973811769491576e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-13,
+            -2.04635e-07
+          ],
+          "Y_kD_S": [
+            8.62186e-13,
+            -2.04635e-07
+          ],
+          "G_kD_S": 8.62186e-13,
+          "C_effective_kD_F": -1.632300251213733e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -2.93546e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -2.93546e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341511518277843e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.621859736573922e-13,
+        -5.293955920339377e-23
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.0198433798139723e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          5.855600076001832e-12,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 2511886.431509583,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            6.27173e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            6.27173e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973813539961091e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-12,
+            -2.57621e-07
+          ],
+          "Y_kD_S": [
+            1.36647e-12,
+            -2.57621e-07
+          ],
+          "G_kD_S": 1.36647e-12,
+          "C_effective_kD_F": -1.6323053096646637e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -3.69552e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -3.69552e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415082302964272e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.36647008812385e-12,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 6.370852664634673e-10,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          8.394890034860159e-12,
+          -5.293955920339377e-23
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 3162277.660168383,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            7.89564e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            7.89564e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738134026067156e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-12,
+            -3.24325e-07
+          ],
+          "Y_kD_S": [
+            2.16571e-12,
+            -3.24325e-07
+          ],
+          "G_kD_S": 2.16571e-12,
+          "C_effective_kD_F": -1.632302171578774e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -4.65239e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -4.65239e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341511231027942e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.1657101025723824e-12,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0096810821275414e-09,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.2419399926869024e-11,
+          5.293955920339377e-23
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 3981071.705534978,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            9.94002e-07
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            9.94002e-07
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973812667661336e-14
+        },
+        "G": {
+          "I_device_A": [
+            3.43242e-12,
+            -4.08301e-07
+          ],
+          "Y_kD_S": [
+            3.43242e-12,
+            -4.08301e-07
+          ],
+          "G_kD_S": 3.43242e-12,
+          "C_effective_kD_F": -1.632302234823261e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -5.85701e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -5.85701e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.341510432838075e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        3.4324199298801927e-12,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.6001741958890416e-09,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.8797799905198587e-11,
+          0.0
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 5011872.33627273,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.25137e-06
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.25137e-06
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973798767688071e-14
+        },
+        "G": {
+          "I_device_A": [
+            5.44002e-12,
+            -5.14021e-07
+          ],
+          "Y_kD_S": [
+            5.44002e-12,
+            -5.14021e-07
+          ],
+          "G_kD_S": 5.44002e-12,
+          "C_effective_kD_F": -1.6323038081189336e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -7.37354e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -7.37354e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415108373621473e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        5.440019962277276e-12,
+        -5.000000000032139e-12
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 3.4444279188679087e-09,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          2.8907000057531995e-11,
+          1.0000000000276037e-12
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 6309573.444801942,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.57539e-06
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.57539e-06
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973820227167693e-14
+        },
+        "G": {
+          "I_device_A": [
+            8.62186e-12,
+            -6.47114e-07
+          ],
+          "Y_kD_S": [
+            8.62186e-12,
+            -6.47114e-07
+          ],
+          "G_kD_S": 8.62186e-12,
+          "C_effective_kD_F": -1.6323035581560086e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -9.28273e-07
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -9.28273e-07
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415091017041087e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        8.621859953414357e-12,
+        2.999999999976932e-12
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 4.255355590413568e-09,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          4.492890001012162e-11,
+          1.0000000000276037e-12
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 7943282.347242827,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            1.98329e-06
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            1.98329e-06
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.973803187221335e-14
+        },
+        "G": {
+          "I_device_A": [
+            1.36647e-11,
+            -8.14668e-07
+          ],
+          "Y_kD_S": [
+            1.36647e-11,
+            -8.14668e-07
+          ],
+          "G_kD_S": 1.36647e-11,
+          "C_effective_kD_F": -1.6323030393574466e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.16863e-06
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.16863e-06
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.34151617700007e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        1.3664700013876763e-11,
+        -8.000000000009071e-12
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 7.38043878700534e-09,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          7.032180003238575e-11,
+          -4.99999999992626e-12
+        ]
+      }
+    },
+    {
+      "frequency_Hz": 10000000.0,
+      "actual_D_excitation_V": [
+        1.0,
+        0.0
+      ],
+      "ports": {
+        "D": {
+          "I_device_A": [
+            0.00107231,
+            2.49682e-06
+          ],
+          "Y_kD_S": [
+            0.00107231,
+            2.49682e-06
+          ],
+          "G_kD_S": 0.00107231,
+          "C_effective_kD_F": 3.9738124501070613e-14
+        },
+        "G": {
+          "I_device_A": [
+            2.16571e-11,
+            -1.02561e-06
+          ],
+          "Y_kD_S": [
+            2.16571e-11,
+            -1.02561e-06
+          ],
+          "G_kD_S": 2.16571e-11,
+          "C_effective_kD_F": -1.6323090118447877e-14
+        },
+        "SB": {
+          "I_device_A": [
+            -0.00107231,
+            -1.47121e-06
+          ],
+          "Y_kD_S": [
+            -0.00107231,
+            -1.47121e-06
+          ],
+          "G_kD_S": -0.00107231,
+          "C_effective_kD_F": -2.3415034382622733e-14
+        }
+      },
+      "KCL_sum_external_device_currents_A": [
+        2.165709994152165e-11,
+        0.0
+      ],
+      "KCL_residual_fraction_of_sum_magnitudes": 1.0093493684787465e-08,
+      "source_vs_direct_device_current_residual_A": {
+        "D": [
+          0.0,
+          0.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "SB": [
+          1.1056700000011688e-10,
+          -2.117582368135751e-22
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "complete Y matrix",
+    "individual source/body separation",
+    "Q field interpretation resolved",
+    "physical model correctness",
+    "transient LTE repair",
+    "ADC accuracy",
+    "MIM/PEX qualification"
+  ],
+  "complete_ADC": false,
+  "full_ADC_accuracy_pass": false,
+  "formal_ADC_PEX_allowed": false,
+  "OP_review_reference": "summary.json / cases / dn1u"
+}

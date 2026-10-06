@@ -1,0 +1,100 @@
+{
+  "status": "MODE_CHANGE_AND_BODY_EVENT_OBSERVED_NOT_MODEL_BUG_PROOF",
+  "raw_points": 4951,
+  "actual_types": {
+    "V": 79,
+    "-enum": 1,
+    "I": 4
+  },
+  "comparison_with_original_probe": {
+    "old_points": 4951,
+    "common_voltage_trace_count": 76,
+    "time_grid_exactly_identical": true,
+    "every_common_voltage_value_exactly_identical": true,
+    "old_raw_sha256": "3ef33020b514827023eefd71ab332b2016b4f3079a46056301de11b8e7c42946",
+    "meaning": "Adding save observations did not change any recorded common voltage or accepted time. This is observation reproducibility, not tighter-accuracy convergence."
+  },
+  "mode_change_near_warning": {
+    "before": {
+      "time_s": 4.063200570147047e-06,
+      "external_VDD_V": 1.8,
+      "CONV_V": 1.800267269545344,
+      "local_gate_V": 0.9158791157155736,
+      "int_b_V": 1.800026937087833,
+      "dbnode_V": 1.798225938547222,
+      "sbnode_V": 1.800004115923393,
+      "saved_OP_vds_V": -0.0002672695453438401,
+      "saved_reversed_enum": 1.0,
+      "d_current_A": -0.0002781666914040577,
+      "g_current_A": 0.0003933581822112564,
+      "s_current_A": -0.0001500516596411386,
+      "b_current_A": 3.486016883395723e-05,
+      "accepted_row": 2612,
+      "external_signed_VDS_V": 0.0002672695453440621,
+      "all_terminal_current_sum_A": 1.734723475976807e-17
+    },
+    "after": {
+      "time_s": 4.063200771449065e-06,
+      "external_VDD_V": 1.8,
+      "CONV_V": 1.799406645059815,
+      "local_gate_V": 0.9176386768923617,
+      "int_b_V": 1.799577844778028,
+      "dbnode_V": 1.798160196651727,
+      "sbnode_V": 1.799958057966765,
+      "saved_OP_vds_V": -0.0005933549401855309,
+      "saved_reversed_enum": 0.0,
+      "d_current_A": -0.0002956660692217355,
+      "g_current_A": 0.0004145169459623399,
+      "s_current_A": -0.0001649288915908326,
+      "b_current_A": 4.60780148502282e-05,
+      "accepted_row": 2613,
+      "external_signed_VDS_V": -0.0005933549401850868,
+      "all_terminal_current_sum_A": 1.3552527156068805e-20
+    },
+    "elapsed_s": 2.0130201826740364e-13,
+    "changes": {
+      "int_b": -0.00044909230980505477,
+      "dbnode": -6.574189549479748e-05,
+      "sbnode": -4.605795662815382e-05,
+      "vds": -0.0003260853948416908,
+      "reversed": -1.0,
+      "d_current_A": -1.749937781767778e-05,
+      "g_current_A": 2.1158763751083498e-05,
+      "s_current_A": -1.4877231949694017e-05,
+      "b_current_A": 1.1217846016270966e-05
+    },
+    "external_signed_VDS_zero_interpolated_s": 4.0632006326619995e-06,
+    "logged_LTE_time_literal": "4.0632 us",
+    "logged_time_limit": "Rounded log time does not identify the exact rejected Newton/LTE iterate; all adjacent accepted points are preserved."
+  },
+  "terminal_currents": {
+    "positive_direction": "Into the device; actual :currents output, not resistive-only ids/ibulk.",
+    "ranges_A": {
+      "d": [
+        -0.0003479812607932494,
+        2.560155964171002e-07
+      ],
+      "g": [
+        -5.17586658110164e-06,
+        0.0004971747132585871
+      ],
+      "s": [
+        -0.000426364461362463,
+        4.962449564408206e-06
+      ],
+      "b": [
+        -2.663781204892545e-05,
+        0.0001481013568260888
+      ]
+    },
+    "all_terminal_sum_max_abs_A": 2.275953812349782e-15,
+    "all_terminal_sum_RMS_A": 6.357527514309931e-17,
+    "scope": "Includes simulator total terminal currents during switching, including displacement contributions. Tiny terminal-sum residual checks model/solver charge/current self-consistency, not physical correctness of the body model and not ADC precision.",
+    "bulk_resistance_network_crosscheck": {
+      "assumption_source": "Actual school TT bin metadata all rbpb/rbdb/rbsb=50 ohm; installed bsim4 help defines their endpoints.",
+      "expression_A": "((VDD-int_b)+(VDD-dbnode)+(VDD-sbnode))/50",
+      "max_difference_from_saved_bulk_terminal_A": 8.158267600363932e-10,
+      "limitations": "This is a simplified resistive crosscheck, not a full decomposition of all model bulk contributions. The residual is not attributed to gbmin: that alone is too small. Its contribution and solver/stamping effects remain unseparated; no exact model-RC boundary or physical accuracy is claimed."
+    }
+  }
+}

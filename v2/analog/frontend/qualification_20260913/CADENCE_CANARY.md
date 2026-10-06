@@ -7,11 +7,11 @@ Recorded environment boundaries:
 | Item | Actual local use | Existing university record |
 |---|---|---|
 | Solver | ngspice 47 | Spectre 21.1 |
-| Solver path | `/foss/tools/ngspice/bin/ngspice` | `/project/engineering/cadence21/spectre/tools/bin/spectre` |
+| Solver path | `/foss/tools/ngspice/bin/ngspice` | `/opt/cadence/spectre/tools/bin/spectre` |
 | Native design tool | Not used | Virtuoso IC6.1.8 |
-| Model entry point | `/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice` | `/project/engineering/cadence21/CDK/sky130_release_0.0.3/models/sky130.lib.spice` |
-| OCEAN | Not used | `/project/engineering/cadence21/ic/tools/dfII/bin/ocean` |
-| Working directory | `/repo/v2/analog/frontend/qualification_20260913` | `/home/compute/l.hongyi/cadence_skywater` |
+| Model entry point | `/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice` | `/opt/cadence/CDK/sky130_release_0.0.3/models/sky130.lib.spice` |
+| OCEAN | Not used | `/opt/cadence/ic/tools/dfII/bin/ocean` |
+| Working directory | `/repo/v2/analog/frontend/qualification_20260913` | `/home/cadence-user/cadence_skywater` |
 
 The university OCEAN, Spectre, model, and working-directory entries each come from the latest site report, `cadence/project1/reports/basic_20260913T023544Z_5cc09eef/received/site.json`. Its working directory is the report's `workdir`, not a subdirectory of the upload package. The actual OCEAN path includes `tools/dfII/bin` and supersedes the old path in earlier instructions. This round did not rerun the university environment. Similar model paths do not establish equivalent model versions, CDF parameters, or passive dimensions. The main task should reference the currently verified university launch script rather than deriving a path from local `/foss`.
 

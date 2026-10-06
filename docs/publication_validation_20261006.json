@@ -1,0 +1,110 @@
+{
+  "publication_date": "2026-10-06",
+  "engineering_evidence_through": "2026-09-24",
+  "status": "PUBLICATION_CHECKS_PASS_WITH_LOCAL_RAW_EVIDENCE_TEST_UNAVAILABLE",
+  "scope": "English current tree; excludes Git history and licensed EDA requalification.",
+  "scan": {
+    "counts": {
+      "files": 8877,
+      "text_files_or_archive_members": 9152,
+      "python_files_or_archive_members": 543,
+      "sidecar_bindings": 15,
+      "archives": 12,
+      "archive_manifest_bindings": 423
+    },
+    "issues": {
+      "han": [],
+      "private": [],
+      "syntax": [],
+      "missing": [],
+      "archive_hash": [],
+      "sidecar_hash": []
+    }
+  },
+  "manual_technical_report_editions": 83,
+  "code_non_text_AST_checks": {
+    "files": 12,
+    "status": "PASS"
+  },
+  "design_and_RTL_byte_identity": {
+    "files": 70,
+    "status": "PASS"
+  },
+  "new_JSON_numeric_boolean_identity": {
+    "files": 381,
+    "status": "PASS"
+  },
+  "visual_English_review": {
+    "new_PNGs": 8,
+    "status": "PASS_MANUAL_VIEW",
+    "automatic_OCR": "UNAVAILABLE_VISION_SERVICE"
+  },
+  "local_tests": {
+    "behavioral_analysis_and_model": {
+      "tests": 44,
+      "status": "PASS"
+    },
+    "school_launcher": {
+      "tests": 4,
+      "status": "PASS"
+    },
+    "ADC_analysis_fixtures": {
+      "tests": 34,
+      "passed": 33,
+      "missing_private_raw_fixture": 1,
+      "status": "33_PASS_1_UNAVAILABLE",
+      "unavailable_test": "test_actual_metadata_sentinels_not_reported_as_options",
+      "reason": "Unpublished element.info from a historical school run is required. No substitute was generated."
+    }
+  },
+  "package_installs": [
+    {
+      "patch": "p1",
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "P1_RUNTIME_PATCH_APPLIED: 1.0.4p1\nExisting site.json, cells, created.txt and runs preserved.\nNext, in the same configured Linux terminal:\nbash p1_run.sh run --group passives --retry\n",
+      "stderr": ""
+    },
+    {
+      "patch": "p1",
+      "attempt": 2,
+      "exit": 0,
+      "stdout": "P1_RUNTIME_PATCH_ALREADY_APPLIED: 1.0.4p1\n",
+      "stderr": ""
+    },
+    {
+      "patch": "p2",
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "P1_RUNTIME_PATCH_APPLIED: 1.0.4p2\nExisting site.json, cells, created.txt and runs preserved.\nNext, in the Linux terminal:\nbash ~/cadence_skywater/p1_school_run_v1.sh recheck-passives\n",
+      "stderr": ""
+    },
+    {
+      "patch": "p2",
+      "attempt": 2,
+      "exit": 0,
+      "stdout": "P1_RUNTIME_PATCH_ALREADY_APPLIED: 1.0.4p2\n",
+      "stderr": ""
+    },
+    {
+      "patch": "p3",
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "P1_RUNTIME_PATCH_APPLIED: 1.0.4p3\nExisting site.json, cells, created.txt and runs preserved.\nNext, in the Linux terminal:\nbash ~/cadence_skywater/p1_school_run_v1.sh recheck-passives\n",
+      "stderr": ""
+    },
+    {
+      "patch": "p3",
+      "attempt": 2,
+      "exit": 0,
+      "stdout": "P1_RUNTIME_PATCH_ALREADY_APPLIED: 1.0.4p3\n",
+      "stderr": ""
+    }
+  ],
+  "qualification": {
+    "edited_packages_school_execution": "NOT_RUN",
+    "complete_ADC_numeric_gate": "FAIL_OR_INCOMPLETE",
+    "formal_ADC_PEX_allowed": false,
+    "fabrication_and_silicon_measurement": "NOT_DONE"
+  }
+}

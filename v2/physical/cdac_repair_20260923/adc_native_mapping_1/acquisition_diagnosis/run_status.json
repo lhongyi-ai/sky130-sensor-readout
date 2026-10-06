@@ -1,0 +1,55 @@
+[
+  {
+    "run": "ams_adc_004",
+    "kind": "ACTUAL_RTL_PLUS_ADC_TWO_FRAME_ATTEMPT",
+    "simulator_exit": 124,
+    "spectre_summary": {
+      "errors": 1,
+      "warnings": 0,
+      "notices": 13
+    },
+    "log_sha256": "bece59b6f183b656136921889f198a0eaa07b793010fd8f64b244c9cc77d5a9b",
+    "automatic_lte_relaxation": false,
+    "solver_qualification": "NOT_PASSED",
+    "simulation_status": "TIMEOUT_AT_FIRST_ACQUISITION",
+    "requested_stop_s": 4e-05,
+    "last_logged_time_s": 4.06327e-06,
+    "wall_limit_s": 300,
+    "actual_conversion_decisions": 0,
+    "adc_two_frames": "NOT_PASSED"
+  },
+  {
+    "run": "pure_spectre_acquire_001",
+    "kind": "ACQUISITION_ISOLATION_PURE",
+    "simulator_exit": 0,
+    "spectre_summary": {
+      "errors": 0,
+      "warnings": 3,
+      "notices": 11
+    },
+    "log_sha256": "f527edd4f62a56d042e77c7256c2de030b71266b0acc64be17738f4cb98f74e2",
+    "automatic_lte_relaxation": true,
+    "solver_qualification": "NOT_PASSED",
+    "simulation_status": "REACHED_8US_WITH_AUTOMATIC_LTE_RELAXATION",
+    "stop_s": 8e-06,
+    "accepted_steps": 12552,
+    "spectre_elapsed_s": 86.2
+  },
+  {
+    "run": "ams_acquire_alignment_001",
+    "kind": "IDENTICAL_ACQUISITION_ISOLATION_AMS",
+    "simulator_exit": 0,
+    "spectre_summary": {
+      "errors": 0,
+      "warnings": 5,
+      "notices": 12
+    },
+    "log_sha256": "a86ca6cfb116098fc9a6c03c5b87971d7cea6a5c1255ef8c9e0ef6ed495b4f8d",
+    "automatic_lte_relaxation": true,
+    "solver_qualification": "NOT_PASSED",
+    "simulation_status": "REACHED_8US_WITH_AUTOMATIC_LTE_RELAXATION",
+    "stop_s": 8e-06,
+    "accepted_steps": 12611,
+    "spectre_elapsed_s": 86.0
+  }
+]

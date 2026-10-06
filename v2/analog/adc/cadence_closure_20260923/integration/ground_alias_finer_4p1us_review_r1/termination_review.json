@@ -1,0 +1,14 @@
+{
+  "exit_code": 137,
+  "source_task_sha256": "550e34f8fa3895be5d8352e54b72b11b5ef070fec59c937cf353ab6f9af0afd8",
+  "source_terminal_sha256": "8ad797441abcbae546a099395b4a532e0371b68e8ea5d4c2746d42cfaf55f8b5",
+  "source_log_sha256": "ccd8280498e023f9980270e777e9e26c1b824a5551f92bdd524c2e4f1217a0b8",
+  "source_driver_sha256": "cf7aa0c7699f4e73afa33015dd221fddc53f84a44a71028cb872a6bd9555c9b1",
+  "task_requests_300_seconds": true,
+  "wrapper_TERM_KILL10": true,
+  "terminal_timeout_command_killed": true,
+  "external_stop_SPECTRE25": true,
+  "complete_final_spectre_summary_present": false,
+  "OOM_related_text_in_returned_logs": [],
+  "interpretation": "Recorded exit137 and shell killed message are consistent with the configured deadline escalation. No returned OOM evidence; no kernel log inspection or claim of memory fault."
+}

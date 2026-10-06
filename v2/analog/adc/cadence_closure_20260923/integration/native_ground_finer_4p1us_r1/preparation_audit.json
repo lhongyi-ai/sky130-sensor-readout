@@ -1,0 +1,37 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "checks": {
+    "original_input_hashes_match": true,
+    "all_other_inputs_unchanged": true,
+    "exactly_one_original_zero_volt_contribution": true,
+    "old_zero_volt_contribution_removed": true,
+    "all_other_analog_contributions_identical": true,
+    "exactly_one_new_ground_instance": true,
+    "ground_negative_terminal_is_global_zero": true,
+    "no_new_ground_port_on_chip": true,
+    "same_source_voltage_no_resistor_or_noise_element_added": true,
+    "exact_original_finer_analysis_settings": true
+  },
+  "unchanged_files": {
+    "reset1_native_bound.scs": true,
+    "sar_controller.v": true,
+    "p1_interfaces.vams": true,
+    "p2_sequence.sv": true,
+    "profile.vh": true,
+    "reference_fixture.scs": true
+  },
+  "remaining_analog_contributions": [
+    "    V(vdd,vss) <+ 1.8;",
+    "    V(vcm,vss) <+ 0.9;",
+    "    V(rp_source,vss) <+ 1.1;",
+    "    V(rn_source,vss) <+ 0.7;",
+    "    V(ip_source,vss) <+ transition(0.9+input_diff/2.0,0,1n,1n);",
+    "    V(in_source,vss) <+ transition(0.9-input_diff/2.0,0,1n,1n);",
+    "    I(ip_source,inp) <+ V(ip_source,inp)/350.0;",
+    "    I(in_source,inn) <+ V(in_source,inn)/350.0;"
+  ],
+  "single_factor_diff_sha256": "a6c6c1b5d13a1d531ae81a4ce6b91ea45b97e7379a46da83ae4896ecb80399a1",
+  "manifest_sha256": "a9c599a80aad4ebe1211c1f2d0b3194dfeea55652432fa28e1748934245ec214",
+  "EDA_started": false,
+  "builder_sha256": "2a3329730a4a591ed48ffd48d8f809635118d35625ed1dc78bfe00e1a78dd42f"
+}

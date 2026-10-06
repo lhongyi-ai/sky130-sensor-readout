@@ -24,7 +24,7 @@ VERSION = "1.1.0"
 TOOLS = ("virtuoso", "spectre", "ocean", "xrun", "irun", "amsDesigner",
          "pvs", "pegasus", "assura", "qrc", "quantus", "strmIn", "strmOut")
 SENSITIVE = re.compile(r"password|passwd|token|secret|license|licen[cs]e|270\d+@", re.I)
-KNOWN_PDK = Path("/project/engineering/cadence21/CDK/sky130_release_0.0.3")
+KNOWN_PDK = Path("/opt/cadence/CDK/sky130_release_0.0.3")
 
 
 def write_json(path, data):
