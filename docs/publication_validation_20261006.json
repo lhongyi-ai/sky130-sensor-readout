@@ -106,5 +106,46 @@
     "complete_ADC_numeric_gate": "FAIL_OR_INCOMPLETE",
     "formal_ADC_PEX_allowed": false,
     "fabrication_and_silicon_measurement": "NOT_DONE"
+  },
+  "subsequent_20261006_diagnostic": {
+    "current_tree_scan": {
+      "counts": {
+        "files": 8889,
+        "text_files_or_archive_members": 9164,
+        "python_files_or_archive_members": 547,
+        "sidecar_bindings": 15,
+        "archives": 12,
+        "archive_manifest_bindings": 423
+      },
+      "issues": {
+        "han": [],
+        "private": [],
+        "syntax": [],
+        "missing": [],
+        "archive_hash": [],
+        "sidecar_hash": []
+      }
+    },
+    "focused_local_tests": {
+      "tests": 12,
+      "status": "PASS"
+    },
+    "shell_syntax": "PASS",
+    "actual_school_runs": {
+      "baseline": {
+        "exit": 0,
+        "complete_0_to_4p1us": true,
+        "warnings": 0
+      },
+      "strict": {
+        "exit": 0,
+        "complete_0_to_4p1us": true,
+        "warnings": 11,
+        "sample_edge_coverage": "FAIL"
+      }
+    },
+    "original_RTL_simulated": false,
+    "full_ADC_numeric_qualified": false,
+    "formal_ADC_PEX_allowed": false
   }
 }
