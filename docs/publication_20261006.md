@@ -1,6 +1,6 @@
 # English publication and privacy scope — October 6, 2026
 
-This edition publishes the latest project-owned design sources, analysis programs, result summaries and engineering reports. Engineering results in this checkpoint were produced through September 24, 2026. Translation, anonymization and local package checks on October 6 are publication work, not new Cadence qualification.
+This edition publishes the latest project-owned design sources, analysis programs, result summaries and engineering reports. The initial English checkpoint contains engineering evidence through September 24, 2026. Translation, anonymization and package checks are publication work. A subsequent complete-load first-edge control was actually run in school Spectre on October 6 and is published separately; it does not qualify the original RTL or complete ADC.
 
 ## English edition
 
@@ -29,3 +29,7 @@ The original RTL has produced two frames with the actual ADC and completed the r
 MIM geometric and connectivity controls have advanced, but CAPM coupling references, internal/external RC reference planes and resistance-temperature provenance remain unresolved. `formal_ADC_PEX_allowed=false`. Public-tool CDAC results are kept separate from school extraction and from actual ADC full-code testing.
 
 See [current progress](progress_20261006.md), [publication inventory](publication_inventory_20261006.json) and [local validation record](publication_validation_20261006.json). No fabrication, silicon measurement, complete-core qualification or production yield is claimed.
+
+## Subsequent October 6 diagnostic
+
+The complete native boundary-control sources and summary were checked for English-only content and private environment strings before publication. Twelve focused local checks passed; two serial school Spectre runs completed. The strict run missed the sample edge and is explicitly failed. Raw school runs remain local. The earlier publication inventory and validation records describe the initial checkpoint; this additional diagnostic is bound by its own input/reference/raw hashes in review.json.

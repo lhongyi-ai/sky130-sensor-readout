@@ -1,0 +1,359 @@
+{
+  "scope": "FULL_NATIVE_FIRST_EDGE_DIAGNOSIS_ONLY",
+  "baseline": {
+    "profile": "baseline",
+    "input_sha256": "85d1ff1c656a4378567519a76fab7dbef90494eb0281e3c7e7e3c737fecc7613",
+    "raw_sha256": "0f2b3fb4227ad622b7ec640e085cbd63faf623117558e2aab4bcd92059b4356f",
+    "exit_code": 0,
+    "domain_s": [
+      0.0,
+      4.1e-06
+    ],
+    "points": 4944,
+    "complete_domain": true,
+    "actual_solver_header": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "21.1.0.132.isr1",
+      "date": "5:05:35 PM, Tue Oct 6, 2026",
+      "design": "// Complete native devices; first-edge diagnosis only, no RTL conversion.",
+      "analysis type": "tran",
+      "analysis name": "full_boundary",
+      "analysis description": "Transient Analysis `full_boundary': time = (0 s -> 4.1 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-05,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 4.1e-06,
+      "step": 4.1e-09,
+      "istep": 0.001,
+      "maxstep": 2e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-06,
+      "abstol(V)": 1e-08,
+      "abstol(I)": 1e-13,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "inst",
+      "units": "s",
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "source_edge_checks": {
+      "RST_N": {
+        "accepted_points_per_edge_quarter": [
+          31,
+          96,
+          171,
+          23
+        ],
+        "every_quarter_resolved": true,
+        "max_source_error_at_saved_points_V": 1.0036416142611415e-12
+      },
+      "SAMPLE_CMD": {
+        "accepted_points_per_edge_quarter": [
+          34,
+          44,
+          157,
+          658
+        ],
+        "every_quarter_resolved": true,
+        "max_source_error_at_saved_points_V": 2.41007214185629e-12
+      }
+    },
+    "warning_lines": [],
+    "completion_summary": [
+      "spectre completes with 0 errors, 0 warnings, and 8 notices."
+    ],
+    "diagnostic_integrity_pass": true
+  },
+  "strict": {
+    "profile": "strict",
+    "input_sha256": "ff5f934d2a82df792ac86778c86c91305c5d444c9dfd95f49cc40beff6deef98",
+    "raw_sha256": "c149ba561c5357ebb15a2ea63e3130baade4ac4c49950ce7846cd4ea7e5c2f6d",
+    "exit_code": 0,
+    "domain_s": [
+      0.0,
+      4.1e-06
+    ],
+    "points": 8818,
+    "complete_domain": true,
+    "actual_solver_header": {
+      "PSFversion": "1.00",
+      "simulator": "spectre",
+      "version": "21.1.0.132.isr1",
+      "date": "5:06:08 PM, Tue Oct 6, 2026",
+      "design": "// Complete native devices; first-edge diagnosis only, no RTL conversion.",
+      "analysis type": "tran",
+      "analysis name": "full_boundary",
+      "analysis description": "Transient Analysis `full_boundary': time = (0 s -> 4.1 us)",
+      "xVecSorted": "ascending",
+      "tolerance.relative": 1e-06,
+      "start": 0.0,
+      "outputstart": 0.0,
+      "stop": 4.1e-06,
+      "step": 4.1e-09,
+      "istep": 0.001,
+      "maxstep": 1e-09,
+      "ic": "all",
+      "useprevic": "no",
+      "skipdc": "no",
+      "reltol": 1e-07,
+      "abstol(V)": 1e-09,
+      "abstol(I)": 1e-14,
+      "temp": 27.0,
+      "tnom": 27.0,
+      "tempeffects": "all",
+      "errpreset": "conservative",
+      "method": "gear2only",
+      "lteratio": 10.0,
+      "relref": "sigglobal",
+      "cmin": 0.0,
+      "gmin": 1e-12,
+      "key": "inst",
+      "units": "s",
+      "tolerance": 1e-14,
+      "sweep_direction": 0.0,
+      "plot": 0.0,
+      "grid": 1.0
+    },
+    "source_edge_checks": {
+      "RST_N": {
+        "accepted_points_per_edge_quarter": [
+          60,
+          217,
+          388,
+          44
+        ],
+        "every_quarter_resolved": true,
+        "max_source_error_at_saved_points_V": 1.0051959264956167e-12
+      },
+      "SAMPLE_CMD": {
+        "accepted_points_per_edge_quarter": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "every_quarter_resolved": false,
+        "max_source_error_at_saved_points_V": 0.0
+      }
+    },
+    "warning_lines": [
+      "Warning from spectre at time = 4.0625 us during transient analysis `full_boundary'.",
+      "WARNING (AHDLLINT-8014): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRN_XR7_XR.rend: The static matrix element for branch `bs_p1_bs_p2' has changed dramatically and is unstable. This might cause convergence difficulties and slow down the simulation. Optimize the design to make the static matrix element change smoothly, and rerun the simulation.",
+      "WARNING (AHDLLINT-8014): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRN_XR7_XR.rhrpoly_5p73: The static matrix element for branch `bs_p1_bs_p2' has changed dramatically and is unstable. This might cause convergence difficulties and slow down the simulation. Optimize the design to make the static matrix element change smoothly, and rerun the simulation.",
+      "Warning from spectre at time = 4.0633 us during transient analysis `full_boundary'.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XPHASE.XPHASE_XDCMD_XR.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XPHASE.XPHASE_XDCONV_XR.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRN_XR7_XR.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRP_XR6_XR_SEG_2.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRP_XR7_XR.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRN_XR6_XR_SEG_2.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRP_XR6_XR_SEG_1.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "WARNING (AHDLLINT-8010): \"Internal (bsource)\" 0: XADC.XADC_XPRE_XRN_XR6_XR_SEG_1.rend: Detected discontinuity in conductance in the analog signal contribution, which might cause convergence difficulties and slow down simulation. Redefine the model to improve the convergence.",
+      "Warning from spectre at time = 4.0641 us during transient analysis `full_boundary'.",
+      "WARNING (SPECTRE-16266): Local truncation error requirements were not satisfied and ignored because of convergence difficulties."
+    ],
+    "completion_summary": [
+      "spectre completes with 0 errors, 11 warnings, and 9 notices."
+    ],
+    "diagnostic_integrity_pass": false
+  },
+  "baseline_vs_original_AMS": {
+    "common_domain_s": [
+      0.0,
+      4.1e-06
+    ],
+    "complete_0_to_4p1us": true,
+    "union_points": 8947,
+    "signals": {
+      "CONV": {
+        "max_abs_difference_V": 9.352199745937817e-05,
+        "worst_time_s": 4.063200000277778e-06
+      },
+      "SAMPLE_CMD": {
+        "max_abs_difference_V": 3.036904061559653e-12,
+        "worst_time_s": 4.063485391790772e-06
+      },
+      "RST_N": {
+        "max_abs_difference_V": 2.2535306953841427e-12,
+        "worst_time_s": 1.885865935272599e-06
+      },
+      "EVAL": {
+        "max_abs_difference_V": 0.0,
+        "worst_time_s": 4.1e-06
+      },
+      "TOP": {
+        "max_abs_difference_V": 0.0003167409435616553,
+        "worst_time_s": 4.085767114383474e-06
+      },
+      "TOPB": {
+        "max_abs_difference_V": 0.0003120006409198517,
+        "worst_time_s": 4.085795948862384e-06
+      },
+      "ACQ": {
+        "max_abs_difference_V": 0.00011562360087254142,
+        "worst_time_s": 4.074976461162462e-06
+      },
+      "VDD": {
+        "max_abs_difference_V": 0.0,
+        "worst_time_s": 4.1e-06
+      },
+      "RP": {
+        "max_abs_difference_V": 9.99677007840205e-10,
+        "worst_time_s": 4.063292144233769e-06
+      },
+      "RN": {
+        "max_abs_difference_V": 7.28789584236722e-10,
+        "worst_time_s": 4.063292144233769e-06
+      },
+      "VCM": {
+        "max_abs_difference_V": 0.0,
+        "worst_time_s": 4.1e-06
+      },
+      "Q": {
+        "max_abs_difference_V": 2.2503459211561542e-06,
+        "worst_time_s": 1.88562586402924e-06
+      },
+      "QB": {
+        "max_abs_difference_V": 3.0954838161179055e-05,
+        "worst_time_s": 1.885639101891615e-06
+      },
+      "XADC.XADC_TP": {
+        "max_abs_difference_V": 5.470116041239592e-06,
+        "worst_time_s": 4.074976461162462e-06
+      },
+      "XADC.XADC_TN": {
+        "max_abs_difference_V": 7.888095930330685e-06,
+        "worst_time_s": 4.063527415959649e-06
+      },
+      "XADC.XADC_PREP": {
+        "max_abs_difference_V": 1.7768838562082223e-05,
+        "worst_time_s": 4.06839460375826e-06
+      },
+      "XADC.XADC_PREN": {
+        "max_abs_difference_V": 1.658256050046658e-05,
+        "worst_time_s": 4.06839460375826e-06
+      },
+      "TP_minus_TN": {
+        "max_abs_difference_V": 7.253533432477477e-06,
+        "worst_time_s": 4.063527415959649e-06
+      }
+    },
+    "short_numeric_control_pass": true,
+    "method": "Every union accepted time; linear interpolation, no alignment, edge removal or extrapolation."
+  },
+  "strict_vs_baseline": {
+    "common_domain_s": [
+      0.0,
+      4.1e-06
+    ],
+    "complete_0_to_4p1us": true,
+    "union_points": 13742,
+    "signals": {
+      "CONV": {
+        "max_abs_difference_V": 0.8263962411627833,
+        "worst_time_s": 4.063346115019768e-06
+      },
+      "SAMPLE_CMD": {
+        "max_abs_difference_V": 0.6774385140813526,
+        "worst_time_s": 4.0635e-06
+      },
+      "RST_N": {
+        "max_abs_difference_V": 1.0786964582636269e-10,
+        "worst_time_s": 1.885e-06
+      },
+      "EVAL": {
+        "max_abs_difference_V": 0.0,
+        "worst_time_s": 4.1e-06
+      },
+      "TOP": {
+        "max_abs_difference_V": 1.8199375117743417,
+        "worst_time_s": 4.085721402354829e-06
+      },
+      "TOPB": {
+        "max_abs_difference_V": 1.9145423737094465,
+        "worst_time_s": 4.085781496222264e-06
+      },
+      "ACQ": {
+        "max_abs_difference_V": 1.8049872077855786,
+        "worst_time_s": 4.074942101665858e-06
+      },
+      "VDD": {
+        "max_abs_difference_V": 0.0,
+        "worst_time_s": 4.1e-06
+      },
+      "RP": {
+        "max_abs_difference_V": 1.3109004510569733e-05,
+        "worst_time_s": 4.063431047745826e-06
+      },
+      "RN": {
+        "max_abs_difference_V": 5.722162505161776e-06,
+        "worst_time_s": 4.063338002816518e-06
+      },
+      "VCM": {
+        "max_abs_difference_V": 0.0,
+        "worst_time_s": 4.1e-06
+      },
+      "Q": {
+        "max_abs_difference_V": 5.916172324326916e-06,
+        "worst_time_s": 1.885639127383439e-06
+      },
+      "QB": {
+        "max_abs_difference_V": 4.1864762333254646e-05,
+        "worst_time_s": 1.885615248415364e-06
+      },
+      "XADC.XADC_TP": {
+        "max_abs_difference_V": 0.12412240096636873,
+        "worst_time_s": 4.074598452369769e-06
+      },
+      "XADC.XADC_TN": {
+        "max_abs_difference_V": 0.16577193638560206,
+        "worst_time_s": 4.074559280128744e-06
+      },
+      "XADC.XADC_PREP": {
+        "max_abs_difference_V": 0.12443305128255855,
+        "worst_time_s": 4.074638491170105e-06
+      },
+      "XADC.XADC_PREN": {
+        "max_abs_difference_V": 0.11344438769870663,
+        "worst_time_s": 4.074722809010586e-06
+      },
+      "TP_minus_TN": {
+        "max_abs_difference_V": 0.14074394624751063,
+        "worst_time_s": 4.0747693951553e-06
+      }
+    },
+    "short_numeric_control_pass": false,
+    "method": "Every union accepted time; linear interpolation, no alignment, edge removal or extrapolation."
+  },
+  "original_reference_sha256": "8e2fb292ef4b13e7db360e24e058928c6b11704cbdd634e1cdb447f7c50bb5a7",
+  "diagnostic_success": false,
+  "numeric_limit_V": 9.765625e-06,
+  "completed_frames": 0,
+  "original_RTL_simulated": false,
+  "full_ADC_numeric_qualified": false,
+  "formal_ADC_PEX_allowed": false,
+  "model_entry_fingerprint_after_run": {
+    "sha256": "b7144180bb5d548a57113182e6244d991d1953beb1b0f6e5676b94d6884bdd67",
+    "scope": "Entry file fingerprint only; not a fingerprint of every included model or proof of unchanged installation since the historical run."
+  },
+  "local_validation": {
+    "builder_tests": 9,
+    "analyzer_tests": 3,
+    "status": "PASS",
+    "actual_simulator": "21.1.0.132.isr1"
+  }
+}
